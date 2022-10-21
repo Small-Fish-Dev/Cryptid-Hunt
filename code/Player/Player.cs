@@ -12,12 +12,25 @@ public partial class Player : AnimatedEntity
 
 	public override void Spawn()
 	{
-		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
 
 		EyeLocalPosition = Vector3.Up * maxs.z;
 		Controller ??= new PlayerController();
 
+		SetModel( "models/citizen/citizen.vmdl" ); // Movements are choppy without a model set?
+		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
+
+		EnableDrawing = false; // Singleplayer awww yea
+
 		Respawn();
+	}
+
+	public override void ClientSpawn()
+	{
+
+		base.ClientSpawn();
+
+		EnableDrawing = false;
+
 	}
 
 	public void Respawn()
