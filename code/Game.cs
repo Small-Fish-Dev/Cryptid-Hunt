@@ -1,51 +1,73 @@
-﻿using Sandbox;
-using Sandbox.UI.Construct;
-using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿global using Sandbox;
+global using Sandbox.UI;
+global using Sandbox.UI.Construct;
+global using System;
+global using System.Linq;
 
-//
-// You don't need to put things in a namespace, but it doesn't hurt.
-//
-namespace Sandbox;
+namespace SpookyJam2022;
 
-/// <summary>
-/// This is your game class. This is an entity that is created serverside when
-/// the game starts, and is replicated to the client. 
-/// 
-/// You can use this to create things like HUDs and declare which player class
-/// to use for spawned players.
-/// </summary>
-public partial class MyGame : Sandbox.Game
+public partial class Game : GameBase
 {
-	public MyGame()
+	public static Game Instance { get; private set; }
+	
+	public Game()
 	{
+		Instance = this;
 	}
 
-	/// <summary>
-	/// A client has joined the server. Make them a pawn to play with
-	/// </summary>
 	public override void ClientJoined( Client client )
 	{
-		base.ClientJoined( client );
-
-		// Create a pawn for this client to play with
-		var pawn = new Pawn();
+		var pawn = new Player();
 		client.Pawn = pawn;
+		pawn.Respawn();
+	}
 
-		// Get all of the spawnpoints
-		var spawnpoints = Entity.All.OfType<SpawnPoint>();
+	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
+	{
+		cl.Pawn?.Delete();
+		cl.Pawn = null;
+	}
 
-		// chose a random one
-		var randomSpawnPoint = spawnpoints.OrderBy( x => Guid.NewGuid() ).FirstOrDefault();
+	public override CameraSetup BuildCamera( CameraSetup camSetup )
+	{
+		Local.Pawn?.PostCameraSetup( ref camSetup );
+		return camSetup;
+	}
 
-		// if it exists, place the pawn there
-		if ( randomSpawnPoint != null )
-		{
-			var tx = randomSpawnPoint.Transform;
-			tx.Position = tx.Position + Vector3.Up * 50.0f; // raise it up
-			pawn.Transform = tx;
-		}
+	public override void Simulate( Client cl )
+	{
+		if ( !cl.Pawn.IsValid() ) return;
+		if ( !cl.Pawn.IsAuthority ) return;
+
+		cl.Pawn?.Simulate( cl );
+	}
+
+	public override void FrameSimulate( Client cl )
+	{
+		if ( !cl.Pawn.IsValid() ) return;
+		if ( !cl.Pawn.IsAuthority ) return;
+
+		cl.Pawn?.FrameSimulate( cl );
+	}
+
+	public override void BuildInput( InputBuilder input )
+	{
+		base.BuildInput( input );
+		Local.Pawn?.BuildInput( input );
+	}
+
+	public override void Shutdown()
+	{
+		
+	}
+
+	public override bool CanHearPlayerVoice( Client source, Client receiver )
+	{
+		return false;
+	}
+
+	public override void PostLevelLoaded()
+	{
+		
 	}
 }
