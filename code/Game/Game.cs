@@ -3,6 +3,7 @@ global using Sandbox.UI;
 global using Sandbox.UI.Construct;
 global using System;
 global using System.Linq;
+global using System.Collections.Generic;
 
 namespace SpookyJam2022;
 
