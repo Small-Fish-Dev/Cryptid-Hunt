@@ -12,7 +12,7 @@ Layer0
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/rock/rock01_color.jpg"
+	TextureColor "materials/rock/rock_color.jpg"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -28,10 +28,10 @@ Layer0
 	g_flMetalness "0.000"
 
 	//---- Normal ----
-	TextureNormal "materials/rock/rock01_normal.jpg"
+	TextureNormal "materials/rock/rock_normal.jpg"
 
 	//---- Roughness ----
-	TextureRoughness "materials/default/default_rough.tga"
+	TextureRoughness "materials/rock/rock_rough.jpg"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
