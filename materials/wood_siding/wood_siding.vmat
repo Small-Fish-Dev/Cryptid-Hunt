@@ -1,0 +1,11 @@
+
+Layer0
+{
+	shader "complex.vfx"
+
+	TextureColor "materials/wood_siding/wood_siding_color.jpg"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "materials/wood_siding/wood_siding_normal.jpg"
+	TextureRoughness "materials/wood_siding/wood_siding_rough.jpg"
+
+}
