@@ -3,6 +3,7 @@ code/Properties/*
 code/spookyjam2022.csproj
 code/obj/*
 code/.vs/*
+shaders/vfx/*
 
 *.vmdl_c
 *.vtex_c
