@@ -1,7 +1,7 @@
 {
   "Title": "Spooky Jam 2022",
   "Type": "game",
-  "Org": "local",
+  "Org": "fish",
   "Ident": "spookyjam2022",
   "Schema": 1,
   "HasAssets": true,
