@@ -13,6 +13,7 @@ public partial class Game : GameBase
 	public Game()
 	{
 		Instance = this;
+		Event.Run( "GameStart" ); //TODO: Set this on the menu
 	}
 
 	public override void ClientJoined( Client client )

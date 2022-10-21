@@ -1,0 +1,65 @@
+﻿NotePage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .page {
+        height: 77%;
+        aspect-ratio: 0.73;
+        background-image: url(ui/paper-note.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 9.8% 3.3% 4% 3%;
+        align-content: center;
+        justify-items: center;
+
+        .textContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .text {
+                font-family: Arial;
+                font-size: 22%;
+            }
+        }
+    }
+
+    .container {
+
+
+        .titleContainer {
+            position: absolute;
+            top: -57px;
+
+            .title {
+                max-width: 400px;
+                font-family: Sketchnote;
+                font-size: 36px;
+                color: white;
+                font-weight: bold;
+                text-stroke: 5px black;
+            }
+        }
+
+        .textContainer {
+            .text {
+                max-width: 400px;
+                font-family: Sketchnote;
+                font-size: 18px;
+                color: black;
+                font-weight: bold;
+                bottom: 15px;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+    }
+}
