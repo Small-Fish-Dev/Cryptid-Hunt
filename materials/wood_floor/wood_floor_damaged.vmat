@@ -1,0 +1,11 @@
+
+Layer0
+{
+	shader "complex.vfx"
+
+	TextureColor "materials/wood_floor/wood_floor_color.jpg"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "materials/wood_floor/wood_floor_normal.jpg"
+	TextureRoughness "materials/wood_floor/wood_floor_rough.jpg"
+
+}
