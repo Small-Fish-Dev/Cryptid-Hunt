@@ -9,7 +9,6 @@ public partial class PlayerController : PawnController
 
 	public override void Simulate()
 	{
-		Pawn.EyePosition = Position + EyeLocalPosition;
 		EyeRotation = Input.Rotation;
 
 		var wishVelocity = new Vector3( Input.Forward, Input.Left, 0 );
@@ -18,7 +17,8 @@ public partial class PlayerController : PawnController
 			* Rotation.FromYaw( Input.Rotation.Yaw() )
 			* MoveSpeed;
 
-		Velocity = wishVelocity.WithZ( Velocity.z );
+		Velocity = Vector3.Lerp( Velocity, wishVelocity, 12f * Time.Delta )
+			.WithZ( Velocity.z );
 
 		if ( GroundEntity == null )
 			Velocity += gravity * Time.Delta;
@@ -57,7 +57,6 @@ public partial class PlayerController : PawnController
 
 	public override void FrameSimulate()
 	{
-		Pawn.EyePosition = Position + EyeLocalPosition;
-		EyeRotation = Input.Rotation;
+		
 	}
 }

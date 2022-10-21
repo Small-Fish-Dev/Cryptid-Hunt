@@ -39,6 +39,8 @@ public partial class Player : AnimatedEntity
 	public override void FrameSimulate( Client cl )
 	{
 		Controller?.FrameSimulate( cl, this, null );
+		EyePosition = Position + EyeLocalPosition;
+		EyeRotation = Input.Rotation;
 	}
 
 	public override void BuildInput( InputBuilder input )
