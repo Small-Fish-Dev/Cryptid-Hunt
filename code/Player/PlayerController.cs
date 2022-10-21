@@ -12,7 +12,7 @@ public partial class PlayerController : PawnController
 		EyeRotation = Input.Rotation;
 
 		var wishVelocity = new Vector3( Input.Forward, Input.Left, 0 );
-		wishVelocity = wishVelocity
+		wishVelocity = wishVelocity.Normal
 			* wishVelocity.Length.Clamp( 0, 1 )
 			* Rotation.FromYaw( Input.Rotation.Yaw() )
 			* MoveSpeed;
