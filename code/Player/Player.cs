@@ -48,9 +48,34 @@ public partial class Player : AnimatedEntity
 		ResetInterpolation();
 	}
 
+	bool sillyNoteToggle = false; // REMOVE THIS WHEN IMPLEMENTED PHYSICAL NOTES
+
 	public override void Simulate( Client cl )
 	{
 		Controller?.Simulate( cl, this, null );
+
+		if ( Host.IsServer ) return;
+		
+		if ( Input.Pressed( InputButton.Use ) )
+		{
+
+			if ( sillyNoteToggle )
+			{
+
+				Event.Run( "HideNotePage" );
+
+			}
+			else
+			{
+
+				Event.Run( "CreateNotePage", "Help!!!\nI am going to die here\nTHE MONSTER IS COMING\nIt comes from that damn Ape Tavern\nOH NO THEY FOUND ME!\n\n\nHEEELP\nOH NOOOO\nAAACK\n\n\nugh\noof\nack\nWAAAAA!!!", true );
+
+			}
+
+			sillyNoteToggle = !sillyNoteToggle;
+
+		}
+
 	}
 
 	public override void FrameSimulate( Client cl )

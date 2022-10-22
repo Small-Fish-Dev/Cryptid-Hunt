@@ -4,15 +4,42 @@ class NotePage : Panel
 {
 
 	public Label Text;
+	public Panel HandPrint;
 
-	public NotePage()
+	public NotePage( string text, bool handPrint = false )
 	{
 
-		Text = AddChild<Panel>( "page" )
-			.AddChild<Panel>( "textContainer" )
+		var page = AddChild<Panel>( "page" );
+
+		if ( handPrint )
+		{
+
+			HandPrint = page.AddChild<Panel>( "handPrint" );
+
+		}
+
+		Text = page.AddChild<Panel>( "textContainer" )
 			.AddChild<Label>( "text" );
 
-		Text.SetText( "Help!!!\nI am going to die here\nTHE MONSTER IS COMING\nIt comes from that damn Ape Tavern" );
+		Text.SetText( text );
+
+	}
+	
+	[Event( "CreateNotePage" )]
+	public static void CreateNotePage( string text, bool handPrint = false )
+	{
+
+		NotePage page = new NotePage( text, handPrint );
+
+		HUD.Instance.AddChild( page );
+
+	}
+
+	[Event( "HideNotePage" )]
+	public void HideNotePage()
+	{
+
+		Delete();
 
 	}
 
