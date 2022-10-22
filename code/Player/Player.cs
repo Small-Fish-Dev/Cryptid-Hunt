@@ -9,6 +9,7 @@ public partial class Player : AnimatedEntity
 	public static BBox CollisionBox = new BBox( mins, maxs );
 
 	[Net, Predicted] public PawnController Controller { get; set; }
+	public PlayerSpawn CurrentCheckpoint { get; set; }
 
 	public override void Spawn()
 	{
@@ -35,11 +36,14 @@ public partial class Player : AnimatedEntity
 
 	public void Respawn()
 	{
+
+		CurrentCheckpoint ??= PlayerSpawn.Initial;
+
 		EnableAllCollisions = true;
 		EnableDrawing = true;
-		
-		Position = Vector3.Up * 300f;
-		Rotation = Transform.Zero.Rotation;
+
+		Position = CurrentCheckpoint.Position;
+		Rotation = CurrentCheckpoint.Rotation;
 
 		ResetInterpolation();
 	}

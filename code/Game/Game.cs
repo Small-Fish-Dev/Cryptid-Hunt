@@ -2,8 +2,16 @@
 global using Sandbox.UI;
 global using Sandbox.UI.Construct;
 global using System;
-global using System.Linq;
 global using System.Collections.Generic;
+global using System.Linq;
+global using System.Text.Json.Serialization;
+global using System.ComponentModel.DataAnnotations;
+global using SandboxEditor;
+global using System.IO;
+global using System.Threading.Tasks;
+global using System.Text.Json;
+global using Sandbox.Effects;
+global using Sandbox.Component;
 
 namespace SpookyJam2022;
 
