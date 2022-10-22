@@ -50,6 +50,7 @@ public partial class Player : AnimatedEntity
 		EnableDrawing = false; // Singleplayer awww yea
 
 		Respawn();
+
 	}
 
 	public override void ClientSpawn()
@@ -128,9 +129,8 @@ public partial class Player : AnimatedEntity
 
 	public override void FrameSimulate( Client cl )
 	{
-
 		Controller?.FrameSimulate( cl, this, null );
-
+		EyeRotation = Input.Rotation;
 	}
 
 	public override void BuildInput( InputBuilder input )

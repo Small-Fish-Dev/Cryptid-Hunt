@@ -23,4 +23,12 @@ public partial class Game
 
 	}
 
+	[ConCmd.Server]
+	public static void GiveItem( string resourceName )
+	{
+		if ( ConsoleSystem.Caller.Pawn is not Player pawn ) return;
+		if ( pawn.Inventory == null ) return;
+
+		pawn.Inventory.Insert( Item.FromResource( resourceName ) );
+	}
 }

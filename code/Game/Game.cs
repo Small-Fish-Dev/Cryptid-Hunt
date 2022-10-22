@@ -30,6 +30,7 @@ public partial class Game : GameBase
 		var pawn = new Player();
 		client.Pawn = pawn;
 		pawn.Respawn();
+		pawn.Inventory = new( "Backpack", 6, 8, target: client );
 	}
 
 	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
