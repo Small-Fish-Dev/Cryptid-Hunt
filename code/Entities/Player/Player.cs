@@ -8,6 +8,33 @@ public partial class Player : AnimatedEntity
 	private static Vector3 maxs = new Vector3( 16f, 16f, 72f );
 	public static BBox CollisionBox = new BBox( mins, maxs );
 
+	[Net] public bool LockInputs { get; set; } = false;
+
+	public BaseInteractable FirstInteractable
+	{
+		get
+		{
+
+			var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 100f )
+				.WorldAndEntities()
+				.Ignore( this )
+				.Run();
+
+			if ( trace.Entity is BaseInteractable firstInteractable ) return firstInteractable;
+
+			var secondInteractable = FindInSphere( trace.EndPosition, 20f )
+				.OfType<BaseInteractable>()
+				.FirstOrDefault();
+
+			if ( secondInteractable != null ) return secondInteractable;
+
+			return null;
+
+		}
+	}
+
+	public BaseInteractable InteractingWith { get; set; }
+
 	[Net, Predicted] public PawnController Controller { get; set; }
 	public PlayerSpawn CurrentCheckpoint { get; set; }
 
@@ -56,31 +83,35 @@ public partial class Player : AnimatedEntity
 		ResetInterpolation();
 	}
 
-	bool sillyNoteToggle = false; // REMOVE THIS WHEN IMPLEMENTED PHYSICAL NOTES
-
 	public override void Simulate( Client cl )
 	{
+
 		Controller?.Simulate( cl, this, null );
 
-		if ( Host.IsServer ) return;
+		if ( Host.IsClient ) return;
 		
 		if ( Input.Pressed( InputButton.Use ) )
 		{
 
-			if ( sillyNoteToggle )
+			if ( InteractingWith != null )
 			{
 
-				Event.Run( "HideNotePage" );
+				InteractingWith.Interact( this );
 
 			}
 			else
 			{
 
-				Event.Run( "CreateNotePage", "Help!!!\nI am going to die here\nTHE MONSTER IS COMING\nIt comes from that damn Ape Tavern\nOH NO THEY FOUND ME!\n\n\nHEEELP\nOH NOOOO\nAAACK\n\n\nugh\noof\nack\nWAAAAA!!!", true );
+				var availableInteractable = FirstInteractable;
+
+				if ( availableInteractable != null )
+				{
+
+					availableInteractable.Interact( this );
+
+				}
 
 			}
-
-			sillyNoteToggle = !sillyNoteToggle;
 
 		}
 
@@ -88,15 +119,19 @@ public partial class Player : AnimatedEntity
 
 	public override void FrameSimulate( Client cl )
 	{
+
 		Controller?.FrameSimulate( cl, this, null );
-		EyePosition = Position + EyeLocalPosition;
-		EyeRotation = Input.Rotation;
+
 	}
 
 	public override void BuildInput( InputBuilder input )
 	{
+
+		if ( LockInputs ) return;
+
 		input.ViewAngles += input.AnalogLook;
 		input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
 		input.InputDirection = input.AnalogMove;
+
 	}
 }
