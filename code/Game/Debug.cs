@@ -14,7 +14,7 @@ public partial class Game
 			.Ignore( pawn )
 			.Run();
 
-		var ent = new InteractableNotePage()
+		var ent = new NotePage()
 		{
 
 			Position = tr.EndPosition,
