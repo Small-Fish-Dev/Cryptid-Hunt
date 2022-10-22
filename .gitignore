@@ -19,3 +19,4 @@ tools_asset_info.bin
 *.vpcf_c
 *.los
 *.assbin
+*.sln
