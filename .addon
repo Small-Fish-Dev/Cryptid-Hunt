@@ -40,6 +40,11 @@
     },
     "ControlModes": {
       "Keyboard": true
+    },
+    "Compiler": {
+      "RootNamespace": "SpookyJam2022",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;"
     }
   }
 }
