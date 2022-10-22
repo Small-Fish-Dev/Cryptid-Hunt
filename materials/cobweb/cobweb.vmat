@@ -18,7 +18,7 @@ Layer0
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/grass/grass_set01_color.jpg"
+	TextureColor "materials/cobweb/cobweb_color.jpg"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -34,10 +34,10 @@ Layer0
 	g_flMetalness "0.000"
 
 	//---- Normal ----
-	TextureNormal "materials/grass/grass_set01_normal.jpg"
+	TextureNormal "materials/default/default_normal.tga"
 
 	//---- Roughness ----
-	TextureRoughness "materials/grass/grass_set01_rough.jpg"
+	TextureRoughness "materials/default/default_rough.tga"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
@@ -48,5 +48,5 @@ Layer0
 
 	//---- Translucent ----
 	g_flOpacityScale "1.000"
-	TextureTranslucency "materials/grass/grass_set01_trans.jpg"
+	TextureTranslucency "materials/cobweb/cobweb_color.jpg"
 }
