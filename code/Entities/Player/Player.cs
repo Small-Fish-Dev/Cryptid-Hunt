@@ -33,6 +33,8 @@ public partial class Player : AnimatedEntity
 		}
 	}
 
+	public BaseInteractable InteractingWith { get; set; }
+
 	[Net, Predicted] public PawnController Controller { get; set; }
 	public PlayerSpawn CurrentCheckpoint { get; set; }
 
@@ -91,12 +93,23 @@ public partial class Player : AnimatedEntity
 		if ( Input.Pressed( InputButton.Use ) )
 		{
 
-			var availableInteractable = FirstInteractable;
-
-			if ( availableInteractable != null )
+			if ( InteractingWith != null )
 			{
 
-				availableInteractable.Interact( this );
+				InteractingWith.Interact( this );
+
+			}
+			else
+			{
+
+				var availableInteractable = FirstInteractable;
+
+				if ( availableInteractable != null )
+				{
+
+					availableInteractable.Interact( this );
+
+				}
 
 			}
 

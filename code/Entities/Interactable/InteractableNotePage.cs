@@ -22,6 +22,7 @@ public partial class InteractableNotePage : BaseInteractable
 
 			IsOpen = true;
 			player.LockInputs = true;
+			player.InteractingWith = this;
 			
 		}
 		else
@@ -31,6 +32,7 @@ public partial class InteractableNotePage : BaseInteractable
 
 			IsOpen = false;
 			player.LockInputs = false;
+			player.InteractingWith = null;
 
 		}
 
@@ -43,6 +45,8 @@ public partial class InteractableNotePage : BaseInteractable
 		Event.Run( "HideNotePage" );
 		Event.Run( "CreateNotePage", Text, BloodyPrint );
 
+		Sound.FromScreen( "sounds/items/page_open.sound" );
+
 	}
 
 	[ClientRpc]
@@ -50,6 +54,8 @@ public partial class InteractableNotePage : BaseInteractable
 	{
 
 		Event.Run( "HideNotePage" );
+
+		Sound.FromScreen( "sounds/items/page_close.sound" );
 
 	}
 
