@@ -1,12 +1,12 @@
 ﻿namespace SpookyJam2022;
 
-class NotePage : Panel
+class NotePanel : Panel
 {
 
 	public Label Text;
 	public Panel HandPrint;
 
-	public NotePage( string text, bool handPrint = false )
+	public NotePanel( string text, bool handPrint = false )
 	{
 
 		var page = AddChild<Panel>( "page" );
@@ -29,7 +29,7 @@ class NotePage : Panel
 	public static void CreateNotePage( string text, bool handPrint = false )
 	{
 
-		NotePage page = new NotePage( text, handPrint );
+		NotePanel page = new NotePanel( text, handPrint );
 
 		HUD.Instance.AddChild( page );
 

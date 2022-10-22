@@ -1,16 +1,30 @@
 ﻿namespace SpookyJam2022;
 
-public partial class InteractableNotePage : BaseInteractable
+[HammerEntity]
+[EditorModel( "models/placeholders/placeholder_page.vmdl" )]
+[Display( Name = "Note Page", GroupName = "Items", Description = "Player can read this note by interacting with it" )]
+public partial class NotePage : BaseInteractable
 {
 
 	public override string ModelPath => "models/placeholders/placeholder_page.vmdl";
 	public override string UseDescription => "Read";
 	public override Vector3 PromptOffset3D => new Vector3( 0f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 0f );
-	public string Text => "Help!!!\nI am going to die here\nTHE MONSTER IS COMING\nIt comes from that damn Ape Tavern\nOH NO THEY FOUND ME!\n\n\nHEEELP\nOH NOOOO\nAAACK\n\n\nugh\noof\nack\nWAAAAA!!!";
-	public bool BloodyPrint => true;
+	[Net, Property, Description( "What's written in the note, you can use line breaks" ), DefaultValue( "Hello World" )]
+	public string Text { get; set; }
+	[Net, Property, Description( "Does it have a bloody handprint on it?" ), DefaultValue( false )]
+	public bool BloodyPrint { get; set; }
 
 	public bool IsOpen = false;
+
+	public override void Spawn()
+	{
+
+		base.Spawn();
+
+		Text = Text.Replace( @"\n", "\n" ); // Silly hammer new line
+
+	}
 
 	public override void Interact( Player player )
 	{
