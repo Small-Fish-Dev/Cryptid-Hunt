@@ -83,6 +83,8 @@ public partial class Player : AnimatedEntity
 		ResetInterpolation();
 	}
 
+	public TimeSince LastInteraction = 0;
+
 	public override void Simulate( Client cl )
 	{
 
@@ -93,23 +95,30 @@ public partial class Player : AnimatedEntity
 		if ( Input.Pressed( InputButton.Use ) )
 		{
 
-			if ( InteractingWith != null )
+			if ( LastInteraction >= 0.5f )
 			{
 
-				InteractingWith.Interact( this );
-
-			}
-			else
-			{
-
-				var availableInteractable = FirstInteractable;
-
-				if ( availableInteractable != null )
+				if ( InteractingWith != null )
 				{
 
-					availableInteractable.Interact( this );
+					InteractingWith.Interact( this );
 
 				}
+				else
+				{
+
+					var availableInteractable = FirstInteractable;
+
+					if ( availableInteractable != null )
+					{
+
+						availableInteractable.Interact( this );
+
+					}
+
+				}
+
+				LastInteraction = 0;
 
 			}
 
