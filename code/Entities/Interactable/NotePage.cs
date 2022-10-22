@@ -9,7 +9,7 @@ public partial class NotePage : BaseInteractable
 	public override string ModelPath => "models/placeholders/placeholder_page.vmdl";
 	public override string UseDescription => "Read";
 	public override Vector3 PromptOffset3D => new Vector3( 0f );
-	public override Vector2 PromptOffset2D => new Vector2( 20f, 0f );
+	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
 	[Net, Property, Description( "What's written in the note, you can use line breaks" ), DefaultValue( "Hello World" )]
 	public string Text { get; set; }
 	[Net, Property, Description( "Does it have a bloody handprint on it?" ), DefaultValue( false )]

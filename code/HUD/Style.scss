@@ -57,3 +57,53 @@
         transform: translateY( 30% );
     }
 }
+
+ItemPrompt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: all 1s ease-in;
+    opacity: 1;
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 6%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .image {
+            height: 100%;
+            aspect-ratio: 1;
+            background-image: url(ui/hand.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .promptContainer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: center;
+
+            .prompt {
+                font-family: GochiHand-Regular;
+                font-size: 30%;
+                color: rgb(120, 0, 0);
+                text-stroke: 3px rgb(50, 0, 0);
+            }
+        }
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
