@@ -24,6 +24,7 @@ public partial class Player : AnimatedEntity
 
 			var secondInteractable = FindInSphere( trace.EndPosition, 20f )
 				.OfType<BaseInteractable>()
+				.OrderBy( x => x.Position.Distance( trace.EndPosition ) )
 				.FirstOrDefault();
 
 			if ( secondInteractable != null ) return secondInteractable;
