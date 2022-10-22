@@ -1,4 +1,3 @@
 "settings"
 {
-	"brightness"		"2.000000"
 }
