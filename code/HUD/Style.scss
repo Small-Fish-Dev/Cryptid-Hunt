@@ -16,8 +16,8 @@
         background-size: contain;
         background-repeat: no-repeat;
         padding: 9.8% 3.3% 4% 3%;
-        align-content: center;
-        justify-items: center;
+        align-items: center;
+        justify-content: center;
 
         .textContainer {
             width: 100%;
@@ -27,7 +27,7 @@
             text-align: center;
 
             .text {
-                font-family: Arial;
+                font-family: GochiHand-Regular;
                 font-size: 22%;
             }
         }
