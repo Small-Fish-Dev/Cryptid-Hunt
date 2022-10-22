@@ -14,9 +14,9 @@
     "MaxPlayers": 1,
     "MinPlayers": 1,
     "GameNetworkType": "Singleplayer",
-    "MapSelect": "Unrestricted",
+    "MapSelect": "Hidden",
     "MapList": [
-      "facepunch.flatgrass"
+      "forest_rework"
     ],
     "RankType": "None",
     "PerMapRanking": false,
