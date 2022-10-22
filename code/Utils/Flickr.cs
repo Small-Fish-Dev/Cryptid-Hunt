@@ -43,9 +43,6 @@ public static partial class Flickr
 
 		var imageN = Random.Shared.Int( 0, Math.Min( 10, feed.Items.Length ) - 1 );
 		var imageUrl = feed.Items[imageN].Media.FirstOrDefault().Value;
-		if ( imageUrl == default ) // found no sources of the image. very unlikely
-			return null;
-
 		return imageUrl;
 	}
 
