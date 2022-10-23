@@ -13,7 +13,7 @@ Layer0
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.000"
 	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureAmbientOcclusion "[1.000000 1.000000 1.000000 0.000000]"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
