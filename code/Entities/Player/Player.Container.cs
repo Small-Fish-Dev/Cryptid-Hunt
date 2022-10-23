@@ -84,12 +84,7 @@ public partial class Player
 				}
 
 				if ( Local.Pawn is Player player && player.Inventory == null )
-				{
 					player.Inventory = container;
-
-					if ( !ContainerDisplay.All.ContainsKey( player.Inventory ) )
-						HUD.Instance.AddChild( new ContainerDisplay( player.Inventory ) );
-				}
 
 				if ( ContainerDisplay.All.TryGetValue( container, out var display ) )
 					display.Refresh( update );
