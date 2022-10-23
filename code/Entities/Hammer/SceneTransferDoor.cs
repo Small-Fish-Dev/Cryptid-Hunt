@@ -43,6 +43,10 @@ public partial class SceneTransferDoor : BaseInteractable
 
 			}
 
+			await Task.DelaySeconds( 3f );
+
+			Sound.FromScreen( "sounds/music/piano_intro.sound" );
+
 		} );
 
 		
