@@ -8,7 +8,7 @@ public partial class SceneTransferDoor : BaseInteractable
 
 	public override string ModelPath => "models/bedroom/door.vmdl";
 	public override string UseDescription => "Exit";
-	public override Vector3 PromptOffset3D => new Vector3( 18f, 0f, -5f );
+	public override Vector3 PromptOffset3D => new Vector3( -18f, 0f, -5f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 0f );
 	[Net, Property, Description( "The ID of the Checkpoint which the player will be transported" ), DefaultValue( 0 )]
 	public int CheckpoindIDTarget { get; set; }
