@@ -33,7 +33,7 @@ class ItemPrompt : Panel
 
 		Prompt.SetText( interactable.UseDescription );
 
-		var offsetPosition = interactable.Position + interactable.PromptOffset3D;
+		var offsetPosition = interactable.Transform.PointToWorld( interactable.PromptOffset3D );
 		var screenPosition = offsetPosition.ToScreen();
 
 		container.Style.Top = Length.Fraction( screenPosition.y );
