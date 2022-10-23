@@ -2,10 +2,13 @@
 
 public partial class PlayerController : PawnController
 {
-	[Net] public float MoveSpeed { get; set; } = 200f;
+	[Net] public float MoveSpeed { get; set; } = 80f;
+	[Net] public float SprintSpeed { get; set; } = 160f;
 
 	private Vector3 gravity => new Vector3( 0, 0, -700f );
 	private float stepSize => 16f;
+
+	TimeSince lastStep = 0f;
 
 	public override void Simulate()
 	{
@@ -15,7 +18,7 @@ public partial class PlayerController : PawnController
 		wishVelocity = wishVelocity.Normal
 			* wishVelocity.Length.Clamp( 0, 1 )
 			* Rotation.FromYaw( Input.Rotation.Yaw() )
-			* MoveSpeed;
+			* ( Input.Down( InputButton.Run ) ? SprintSpeed : MoveSpeed );
 
 		Velocity = Vector3.Lerp( Velocity, wishVelocity, 12f * Time.Delta )
 			.WithZ( Velocity.z );
@@ -53,6 +56,17 @@ public partial class PlayerController : PawnController
 			}
 		}
 		else GroundEntity = null;
+
+		if ( Host.IsClient ) return;
+
+		if ( Velocity.Length > 0f && lastStep >= 70 / Velocity.Length && GroundEntity != null )
+		{
+
+			Sound.FromEntity( "sounds/items/door_open.sound", Pawn ).SetVolume( Velocity.Length / 160f );
+			lastStep = 0f;
+
+		}
+
 	}
 
 	public override void FrameSimulate()
