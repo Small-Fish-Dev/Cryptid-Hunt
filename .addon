@@ -19,7 +19,7 @@
     "GameNetworkType": "Singleplayer",
     "MapSelect": "Hidden",
     "MapList": [
-      "forest_rework"
+      "forest_rework2"
     ],
     "RankType": "None",
     "PerMapRanking": false,

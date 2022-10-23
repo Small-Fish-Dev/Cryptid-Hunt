@@ -45,6 +45,8 @@ public partial class Player : AnimatedEntity
 		EyeLocalPosition = Vector3.Up * maxs.z;
 		Controller ??= new PlayerController();
 
+		Tags.Add( "player" );
+
 		SetModel( "models/citizen/citizen.vmdl" ); // Movements are choppy without a model set?
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
 
