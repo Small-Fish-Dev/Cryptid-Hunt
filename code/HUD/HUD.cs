@@ -30,4 +30,12 @@ class HUD : RootPanel
 
 	}
 
+	[Event("BlackScreen")]
+	public void AddBlackScreen()
+	{
+
+		AddChild( new BlackScreen() );
+
+	}
+
 }

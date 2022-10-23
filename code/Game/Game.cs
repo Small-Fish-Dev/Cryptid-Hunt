@@ -81,4 +81,14 @@ public partial class Game : GameBase
 	{
 		
 	}
+
+	[ClientRpc]
+	public void StartBlackScreen()
+	{
+
+		Event.Run( "BlackScreen" );
+
+	}
+
+
 }

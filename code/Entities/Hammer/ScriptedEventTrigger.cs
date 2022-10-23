@@ -14,7 +14,7 @@ public partial class ScriptedEventTrigger : BaseTrigger
 	[Net, Property, DefaultValue( true ), Description( "Lock the player's inputs")]
 	public bool LockInputs { get; set; }
 
-	[Net] public ScriptedEventCamera EndCamera { get; set }
+	[Net] public ScriptedEventCamera EndCamera { get; set; }
 	[Net] public bool Active { get; set; } = false;
 	[Net] public bool Activateable { get; set; } = true;
 
