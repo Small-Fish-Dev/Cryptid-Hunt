@@ -6,6 +6,28 @@
 		children = 
 		[
 			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 50.0
+						meshes = 
+						[
+							"LOD1",
+						]
+					},
+				]
+			},
+			{
 				_class = "MaterialGroupList"
 				children = 
 				[
@@ -14,11 +36,11 @@
 						remaps = 
 						[
 							{
-								from = "mat_concrete01.vmat"
+								from = "mat_concrete01.001.vmat"
 								to = "materials/concrete/concrete.vmat"
 							},
 							{
-								from = "mat_woodplank03.vmat"
+								from = "mat_woodplank03.003.vmat"
 								to = "materials/wood_floor/wood_floor_damaged.vmat"
 							},
 						]
@@ -33,6 +55,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						name = "LOD0"
 						filename = "models/environment/game/horrorforest/meshes/sm_church01_shack01.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
@@ -46,8 +69,27 @@
 							exclude_by_default = true
 							exception_list = 
 							[
-								"Sm_Church01_shack01",
-								"Sm_Church01_shack02",
+								"Sm_Church01_shack01_LOD0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD1"
+						filename = "models/environment/game/horrorforest/meshes/sm_church01_shack01.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"Sm_Church01_shack01_LOD1",
 							]
 						}
 					},
