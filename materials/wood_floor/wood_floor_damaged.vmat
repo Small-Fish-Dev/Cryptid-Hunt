@@ -44,5 +44,6 @@ Layer0
 	{
 		WorldMappingWidth "128"
 		WorldMappingHeight "128"
+		PhysicsSurfaceProperties "wood"
 	}
 }

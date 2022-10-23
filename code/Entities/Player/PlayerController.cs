@@ -59,10 +59,17 @@ public partial class PlayerController : PawnController
 
 		if ( Host.IsClient ) return;
 
-		if ( Velocity.Length > 0f && lastStep >= 70 / Velocity.Length && GroundEntity != null )
+		if ( Velocity.Length > 0f && lastStep >= 50 / Velocity.Length && GroundEntity != null )
 		{
 
-			Sound.FromEntity( "sounds/items/door_open.sound", Pawn ).SetVolume( Velocity.Length / 160f );
+			var trace = Trace.Ray( Position, Position + Vector3.Down * 10f )
+				.Ignore( Pawn )
+				.Run();
+
+			var surface = trace.Surface;
+			var sound = surface.Sounds.FootLand;
+
+			Sound.FromEntity( sound, Pawn ).SetVolume( Velocity.Length / 80f );
 			lastStep = 0f;
 
 		}
