@@ -7,8 +7,24 @@ public partial class Player
 	ScriptedEventTrigger overrideTrigger;
 	bool scriptedEvent = false;
 
+	float walkBob = 0f;
+
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
+
+		Player pawn = Client.Pawn as Player;
+
+		var speed = pawn.Velocity.Length / 160f;
+		var left = setup.Rotation.Left;
+		var up = setup.Rotation.Up;
+
+		if ( pawn.GroundEntity != null )
+		{
+			walkBob += Time.Delta * speed * 20f;
+		}
+
+		var upOffset = up * MathF.Sin( walkBob ) * speed * -2;
+		var sideOffset = left * MathF.Sin( walkBob * 0.5f ) * speed * -3f;
 
 		if ( scriptedEvent )
 		{
@@ -20,10 +36,13 @@ public partial class Player
 		else
 		{
 
-			setup.Position = Vector3.Lerp( setup.Position, EyePosition, Time.Delta * 30f );
+			setup.Position = Vector3.Lerp( setup.Position - upOffset - sideOffset, EyePosition, Time.Delta * 30f );
 			setup.Rotation = Rotation.Lerp( setup.Rotation, EyeRotation, Time.Delta * 30f );
 
 		}
+
+		setup.Position += upOffset;
+		setup.Position += sideOffset;
 
 	}
 
