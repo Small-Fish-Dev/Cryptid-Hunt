@@ -22,8 +22,14 @@ public partial class SceneTransferDoor : BaseInteractable
 
 		player.LockInputs = true;
 
+		Sound.FromEntity( "sounds/items/door_open.sound", this );
+
 		GameTask.RunInThreadAsync( async () =>
 		{
+
+			await Task.DelaySeconds( 2f );
+
+			Sound.FromScreen( "sounds/misc/car_intro.sound", 0.5f, 1f );
 
 			await Task.DelaySeconds( 2.5f );
 

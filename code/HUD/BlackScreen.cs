@@ -4,7 +4,7 @@ class BlackScreen : Panel
 {
 
 	TimeSince startTime = 0f;
-	float duration = 3f;
+	float duration = 5.5f;
 
 	public BlackScreen()
 	{
