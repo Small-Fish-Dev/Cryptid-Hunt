@@ -15,7 +15,7 @@ class HUD : RootPanel
 		if ( Instance != null )
 		{
 
-			Instance.Delete();
+			Instance.Delete( true );
 
 		}
 

@@ -17,6 +17,7 @@ public partial class Player
 			using ( var reader = new BinaryReader( stream ) )
 			{
 				var id = reader.ReadInt32();
+				List<(int, int)> update = null;
 				Container container = null;
 
 				if ( type != Container.Update.Initialize
@@ -47,9 +48,14 @@ public partial class Player
 						var item = Item.FromResource( reader.ReadString() );
 						var res = item.Resource;
 
+						update = new();
+
 						for ( int i = y; i < y + res.Height; i++ )
 							for ( int j = x; j < x + res.Width; j++ )
+							{
 								container.Items[i, j] = item;
+								update.Add( (j, i) );
+							}
 
 						// todo: read item data
 
@@ -61,9 +67,14 @@ public partial class Player
 						var w = reader.ReadInt32();
 						var h = reader.ReadInt32();
 
+						update = new();
+
 						for ( int i = ry; i < ry + h; i++ )
 							for ( int j = rx; j < rx + w; j++ )
+							{
 								container.Items[i, j] = null;
+								update.Add( (j, i) );
+							}
 
 						break;
 
@@ -75,7 +86,8 @@ public partial class Player
 				if ( Local.Pawn is Player player && player.Inventory == null )
 					player.Inventory = container;
 
-				// todo: check if container is displayed, update display
+				if ( ContainerDisplay.All.TryGetValue( container, out var display ) )
+					display.Refresh( update );
 			}
 		}
 	}

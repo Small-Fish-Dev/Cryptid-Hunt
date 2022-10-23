@@ -18,6 +18,7 @@ namespace SpookyJam2022;
 public partial class Game : GameBase
 {
 	public static Game Instance { get; private set; }
+	public static Player Player { get; private set; }
 	
 	public Game()
 	{
@@ -27,10 +28,17 @@ public partial class Game : GameBase
 
 	public override void ClientJoined( Client client )
 	{
-		var pawn = new Player();
-		client.Pawn = pawn;
-		pawn.Respawn();
-		pawn.Inventory = new( "Backpack", 6, 8, target: client );
+		// Limit to one player only.
+		if ( Player != null )
+		{
+			client.Kick();
+			return;
+		}
+
+		Player = new Player();
+		client.Pawn = Player;
+		Player.Respawn();
+		Player.Inventory = new( "Backpack", 6, 8, target: client );
 	}
 
 	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
