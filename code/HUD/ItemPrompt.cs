@@ -4,15 +4,13 @@ class ItemPrompt : Panel
 {
 
 	Panel container;
-	public Panel Image;
 	public Label Prompt;
 
 	public ItemPrompt()
 	{
 
 		container = AddChild<Panel>( "container" );
-
-		Image = container.AddChild<Panel>( "image" );
+		container.AddChild<Panel>( "image" );
 
 		Prompt = container.AddChild<Panel>( "promptContainer" )
 			.AddChild<Label>( "prompt" );
@@ -44,8 +42,7 @@ class ItemPrompt : Panel
 		transform.AddTranslateY( Length.Pixels( interactable.PromptOffset2D.y ) );
 
 		container.Style.Transform = transform;
-
-		Image.Style.SetBackgroundImage( interactable.Locked ? "ui/lock.png" : "ui/hand.png" );
+		container.Style.Dirty();
 
 	}
 
