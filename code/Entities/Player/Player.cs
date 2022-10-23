@@ -13,7 +13,7 @@ public partial class Player : AnimatedEntity
 		get
 		{
 
-			var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 100f )
+			var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 80f )
 				.WorldAndEntities()
 				.Ignore( this )
 				.Run();
