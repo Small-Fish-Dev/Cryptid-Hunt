@@ -1,6 +1,4 @@
-﻿using static Sandbox.Event;
-
-namespace SpookyJam2022;
+﻿namespace SpookyJam2022;
 
 public partial class Player : AnimatedEntity
 {

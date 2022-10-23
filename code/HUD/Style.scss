@@ -127,3 +127,12 @@ BlackScreen {
         opacity: 0;
     }
 }
+
+ContainerDisplay {
+    position: absolute;
+    background-color: black;
+
+    .grid {
+        background-color: white;
+    }
+}
