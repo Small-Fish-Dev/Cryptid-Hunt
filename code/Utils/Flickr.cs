@@ -41,7 +41,7 @@ public static partial class Flickr
 		if ( feed.Items.Length == 0 )
 			return null;
 
-		var imageN = Random.Shared.Int( 0, Math.Min( 10, feed.Items.Length ) - 1 );
+		var imageN = Random.Shared.Int( 0, Math.Min( 4, feed.Items.Length ) - 1 );
 		var imageUrl = feed.Items[imageN].Media.FirstOrDefault().Value;
 		return imageUrl;
 	}
@@ -66,6 +66,6 @@ public static partial class Flickr
 	[ConCmd.Admin( "debug_get_fear" )]
 	public static void DebugGetFear( string fear )
 	{
-		Log.Info( $"{Get( fear ).Result.Height}" );
+		Log.Info( $"{GetUrl( fear ).Result}" );
 	}
 }
