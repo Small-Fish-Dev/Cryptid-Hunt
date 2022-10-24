@@ -21,7 +21,7 @@ public partial class BaseInteractable : ModelEntity
 	public virtual void Interact( Player player )
 	{
 
-		Log.Info( "Hello you have interacted with me" );
+		player.ChangeHolding( this );
 
 	}
 

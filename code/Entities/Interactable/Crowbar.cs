@@ -15,6 +15,8 @@ public partial class Crowbar : BaseInteractable
 	{
 
 
+		base.Interact( player );
+
 	}
 
 

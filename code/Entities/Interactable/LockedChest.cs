@@ -16,6 +16,7 @@ public partial class LockedChest : BaseInteractable
 	{
 
 
+
 	}
 
 
