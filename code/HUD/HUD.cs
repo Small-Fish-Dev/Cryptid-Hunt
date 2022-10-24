@@ -28,6 +28,7 @@ class HUD : RootPanel
 
 		SetTemplate( "/HUD/Layout.html" );
 
+		
 	}
 
 	[Event("BlackScreen")]
