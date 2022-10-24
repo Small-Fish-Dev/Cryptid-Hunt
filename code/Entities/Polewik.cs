@@ -72,7 +72,9 @@ public partial class Polewik : AnimatedEntity
 
 		SetModel( ModelName );
 
-		SetupPhysicsFromSphere( PhysicsMotionType.Keyframed, Position + Vector3.Backward * 15f + Vector3.Up * 40f, 40f );
+		CollisionBox = new BBox( new Vector3( -40f, -20f, 1f ), new Vector3( 20f, 20f, 70f ) );
+
+		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, CollisionBox.Mins, CollisionBox.Maxs );
 
 	}
 
