@@ -125,6 +125,10 @@ public partial class Container
 		if ( data != null )
 			item.OverrideData( data );
 
+		item.Container = this;
+		item.X = x;
+		item.Y = y;
+
 		using ( var stream = new MemoryStream() )
 		{
 			using ( var writer = new BinaryWriter( stream ) )
@@ -157,6 +161,7 @@ public partial class Container
 
 		var item = Items[y, x];
 		if ( item == null ) return false;
+		item.Container = null;
 
 		var res = item.Resource;
 		for ( int i = y; i < y + res.Height; i++ )
