@@ -45,6 +45,8 @@ public partial class Player
 		setup.Position += sideOffset;
 		setup.FieldOfView = 70;
 
+		Event.Run( "PostCameraSetup" );
+
 	}
 
 	[Event( "ScriptedEventStart" )]

@@ -15,6 +15,8 @@ public partial class Medkit : BaseInteractable
 	{
 
 
+		base.Interact( player );
+
 	}
 
 }

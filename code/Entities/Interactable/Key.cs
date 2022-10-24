@@ -14,6 +14,8 @@ public partial class Key : BaseInteractable
 	public override void Interact( Player player )
 	{
 
+		base.Interact( player );
+
 
 	}
 
