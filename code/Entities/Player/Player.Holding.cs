@@ -19,11 +19,16 @@ public partial class Player
 
 		}
 
-		Holding = entity;
-		Holding.EnableDrawing = false;
-		Holding.EnableAllCollisions = false;
-		Holding.Position = Position;
-		Holding.Parent = this;
+		if ( entity != null )
+		{
+
+			Holding = entity;
+			Holding.EnableDrawing = false;
+			Holding.EnableAllCollisions = false;
+			Holding.Position = Position;
+			Holding.Parent = this;
+
+		}
 
 	}
 
@@ -31,7 +36,19 @@ public partial class Player
 	void computeHolding()
 	{
 
-		if ( Holding == null ) return;
+		if ( Holding == null )
+		{
+
+			ViewModel.EnableDrawing = false;
+			return;
+
+		}
+		else
+		{
+
+			ViewModel.EnableDrawing = true;
+
+		}
 
 		ViewModel ??= new ModelEntity();
 		

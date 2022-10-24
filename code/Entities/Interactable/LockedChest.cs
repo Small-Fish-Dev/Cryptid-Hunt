@@ -15,6 +15,22 @@ public partial class LockedChest : BaseInteractable
 	public override void Interact( Player player )
 	{
 
+		if ( !Locked )
+		{
+
+
+			player.Holding.Delete();
+			player.ChangeHolding( null );
+
+			new Shotgun()
+			{
+				Position = Position,
+				Rotation = Rotation
+			};
+
+			Delete();
+
+		}
 
 	}
 

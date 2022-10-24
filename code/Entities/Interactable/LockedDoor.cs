@@ -15,6 +15,15 @@ public partial class LockedDoor : BaseInteractable
 	public override void Interact( Player player )
 	{
 
+		if ( !Locked )
+		{
+
+			player.Holding.Delete();
+			player.ChangeHolding( null );
+
+			Delete();
+
+		}
 
 	}
 
