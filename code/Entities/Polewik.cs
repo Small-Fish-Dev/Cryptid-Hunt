@@ -36,10 +36,8 @@ public partial class Polewik : AnimatedEntity
 
 		}
 	}
-	[Net] public GenericPathEntity PatrolPath { get; set; } = Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
+	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
 	public virtual string ModelName => "models/polewik/polewik.vmdl";
-	public virtual Vector3 Mins => new Vector3( -30f, -30f, 0f );
-	public virtual Vector3 Maxs => new Vector3( 30f, 30f, 70f );
 	public virtual float MoveSpeed => 300f;
 	public virtual float SprintSpeed => 450f;
 	public virtual float Gravity => 700f;
@@ -74,9 +72,7 @@ public partial class Polewik : AnimatedEntity
 
 		SetModel( ModelName );
 
-		CollisionBox = new BBox( Mins, Maxs );
-
-		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, Mins, Maxs );
+		SetupPhysicsFromSphere( PhysicsMotionType.Keyframed, Position + Vector3.Backward * 15f + Vector3.Up * 40f, 40f );
 
 	}
 
@@ -127,7 +123,23 @@ public partial class Polewik : AnimatedEntity
 
 		if ( Velocity.Length > 0 )
 		{
-			WishRotation = Rotation.LookAt( Velocity );
+
+			var hindTrace = Trace.Ray( Transform.PointToWorld( new Vector3( 20f, 0f, 20f ) ), Transform.PointToWorld( new Vector3( 20f, 0f, -3000f ) ) )
+				.Size( 5f )
+				.Ignore( this )
+				.Run();
+
+			var backTrace = Trace.Ray( Transform.PointToWorld( new Vector3( -30f, 0f, 20f ) ), Transform.PointToWorld( new Vector3( -30f, 0f, -3000f ) ) )
+				.Size( 5f )
+				.Ignore( this )
+				.Run();
+
+			var standAngles = ( hindTrace.HitPosition - backTrace.HitPosition ).Normal.EulerAngles
+				.WithRoll( 0 )
+				.WithYaw( Velocity.WithZ( 0 ).EulerAngles.yaw );
+
+			WishRotation = Rotation.From( standAngles );
+
 		}
 
 		ComputeMoveHelper();
