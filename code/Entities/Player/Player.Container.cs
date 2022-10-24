@@ -46,6 +46,10 @@ public partial class Player
 						var y = reader.ReadInt32();
 
 						var item = Item.FromResource( reader.ReadString() );
+						item.X = x;
+						item.Y = y;
+						item.Container = container;
+
 						var res = item.Resource;
 
 						update = new();
