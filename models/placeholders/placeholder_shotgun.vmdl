@@ -11,7 +11,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models\\placeholders\\dmx\\mesh\\placeholder_locked_chest.dmx"
+						filename = "models\\placeholders\\dmx\\mesh\\placeholder_shotgun.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -33,7 +33,7 @@
 				[
 					{
 						_class = "PhysicsMeshFile"
-						name = "placeholder_locked_chest"
+						name = "placeholder_shotgun"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
@@ -43,7 +43,7 @@
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						filename = "models/placeholders/dmx/mesh/placeholder_locked_chest.dmx"
+						filename = "models/placeholders/dmx/mesh/placeholder_shotgun.dmx"
 						import_scale = 1.0
 						maxMeshVertices = 0
 						qemError = 0.0
