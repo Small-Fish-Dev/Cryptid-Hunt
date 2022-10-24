@@ -20,8 +20,6 @@ public class PlayerSpawn : Entity
 	public int CheckpointID { get; set; } = 0;
 	public static PlayerSpawn Initial => Entity.All.OfType<PlayerSpawn>().Where( x => x.Type == PlayerSpawnType.Initial ).FirstOrDefault();
 
-	public PlayerSpawn() { }
-
 	[Event.Tick]
 	void findPlayer()
 	{
@@ -40,6 +38,16 @@ public class PlayerSpawn : Entity
 			}
 
 		}
+
+	}
+
+	public static PlayerSpawn WithID( int id )
+	{
+
+		return Entity.All
+			.OfType<PlayerSpawn>()
+			.Where( x => x.CheckpointID == id )
+			.FirstOrDefault();
 
 	}
 

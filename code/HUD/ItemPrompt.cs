@@ -4,13 +4,15 @@ class ItemPrompt : Panel
 {
 
 	Panel container;
+	public Panel Image;
 	public Label Prompt;
 
 	public ItemPrompt()
 	{
 
 		container = AddChild<Panel>( "container" );
-		container.AddChild<Panel>( "image" );
+
+		Image = container.AddChild<Panel>( "image" );
 
 		Prompt = container.AddChild<Panel>( "promptContainer" )
 			.AddChild<Label>( "prompt" );
@@ -31,7 +33,7 @@ class ItemPrompt : Panel
 
 		Prompt.SetText( interactable.UseDescription );
 
-		var offsetPosition = interactable.Position + interactable.PromptOffset3D;
+		var offsetPosition = interactable.Transform.PointToWorld( interactable.PromptOffset3D );
 		var screenPosition = offsetPosition.ToScreen();
 
 		container.Style.Top = Length.Fraction( screenPosition.y );
@@ -42,7 +44,8 @@ class ItemPrompt : Panel
 		transform.AddTranslateY( Length.Pixels( interactable.PromptOffset2D.y ) );
 
 		container.Style.Transform = transform;
-		container.Style.Dirty();
+
+		Image.Style.SetBackgroundImage( interactable.Locked ? "ui/lock.png" : "ui/hand.png" );
 
 	}
 

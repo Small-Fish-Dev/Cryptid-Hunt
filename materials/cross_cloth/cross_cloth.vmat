@@ -1,0 +1,11 @@
+
+Layer0
+{
+	shader "complex.vfx"
+
+	TextureColor "materials/cross_cloth/cross_cloth_color.jpg"
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+	TextureNormal "materials/cross_cloth/cross_cloth_normal.jpg"
+	TextureRoughness "materials/default/default_rough.tga"
+
+}

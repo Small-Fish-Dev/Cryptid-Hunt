@@ -19,7 +19,7 @@
     "GameNetworkType": "Singleplayer",
     "MapSelect": "Hidden",
     "MapList": [
-      "forest_rework"
+      "forest_rework2"
     ],
     "RankType": "None",
     "PerMapRanking": false,
@@ -40,6 +40,11 @@
     },
     "ControlModes": {
       "Keyboard": true
+    },
+    "Compiler": {
+      "RootNamespace": "SpookyJam2022",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;"
     }
   }
 }

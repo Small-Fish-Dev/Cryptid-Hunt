@@ -15,7 +15,7 @@ class HUD : RootPanel
 		if ( Instance != null )
 		{
 
-			Instance.Delete();
+			Instance.Delete( true );
 
 		}
 
@@ -27,6 +27,14 @@ class HUD : RootPanel
 	{
 
 		SetTemplate( "/HUD/Layout.html" );
+
+	}
+
+	[Event("BlackScreen")]
+	public void AddBlackScreen()
+	{
+
+		AddChild( new BlackScreen() );
 
 	}
 

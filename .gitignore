@@ -9,7 +9,6 @@ shaders/vfx/*
 *.vtex_c
 *.vmat_c
 *.bin
-*.vpk
 tools_asset_info.bin
 *.bin
 *.bin

@@ -1,6 +1,4 @@
-﻿using static Sandbox.Event;
-
-namespace SpookyJam2022;
+﻿namespace SpookyJam2022;
 
 public partial class Player : AnimatedEntity
 {
@@ -15,7 +13,7 @@ public partial class Player : AnimatedEntity
 		get
 		{
 
-			var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 100f )
+			var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 80f )
 				.WorldAndEntities()
 				.Ignore( this )
 				.Run();
@@ -24,6 +22,7 @@ public partial class Player : AnimatedEntity
 
 			var secondInteractable = FindInSphere( trace.EndPosition, 20f )
 				.OfType<BaseInteractable>()
+				.OrderBy( x => x.Position.Distance( trace.EndPosition ) )
 				.FirstOrDefault();
 
 			if ( secondInteractable != null ) return secondInteractable;
@@ -44,12 +43,15 @@ public partial class Player : AnimatedEntity
 		EyeLocalPosition = Vector3.Up * maxs.z;
 		Controller ??= new PlayerController();
 
+		Tags.Add( "player" );
+
 		SetModel( "models/citizen/citizen.vmdl" ); // Movements are choppy without a model set?
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
 
 		EnableDrawing = false; // Singleplayer awww yea
 
 		Respawn();
+
 	}
 
 	public override void ClientSpawn()
@@ -128,9 +130,8 @@ public partial class Player : AnimatedEntity
 
 	public override void FrameSimulate( Client cl )
 	{
-
 		Controller?.FrameSimulate( cl, this, null );
-
+		EyeRotation = Input.Rotation;
 	}
 
 	public override void BuildInput( InputBuilder input )
