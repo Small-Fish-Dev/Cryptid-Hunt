@@ -1,17 +1,52 @@
 ﻿namespace SpookyJam2022;
 
+public enum PolewikState
+{
+	Idle,
+	Patrolling,
+	Stalking,
+	Following,
+	Attacking
+}
+
+
+
+[HammerEntity]
+[EditorModel( "models/polewik/polewik.vmdl" )]
+[Display( Name = "Polewik", GroupName = "Monster", Description = "the monster" )]
 public partial class Polewik : AnimatedEntity
 {
 
-	[Net] public GenericPathEntity PatrolPath { get; set; } = Entity.All.OfType<GenericPathEntity>().FirstOrDefault();
+	[Net, Change] PolewikState currentState { get; set; } = PolewikState.Patrolling;
+	public PolewikState CurrentState
+	{
+		get => currentState;
+		set
+		{
+
+			currentState = value;
+
+			if ( value == PolewikState.Patrolling ) // Yea yea, ugly!!! Don't have time.
+			{
+
+				NavigateTo( NearestNode.WorldPosition );
+				CurrentPathId = PatrolPath.PathNodes.IndexOf( NearestNode );
+
+			}
+
+		}
+	}
+	[Net] public GenericPathEntity PatrolPath { get; set; } = Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
 	public virtual string ModelName => "models/polewik/polewik.vmdl";
-	public virtual Vector3 Mins => new Vector3( -35f, -25f, 0f );
-	public virtual Vector3 Maxs => new Vector3( 35f, 25f, 70f );
-	public virtual float MoveSpeed => 200f;
-	public virtual float SprintSpeed => 350f;
+	public virtual Vector3 Mins => new Vector3( -30f, -30f, 0f );
+	public virtual Vector3 Maxs => new Vector3( 30f, 30f, 70f );
+	public virtual float MoveSpeed => 300f;
+	public virtual float SprintSpeed => 450f;
 	public virtual float Gravity => 700f;
 	public virtual NavAgentHull Agent => NavAgentHull.Agent1;
 	public virtual Vector3 TargetPosition { get; set; }
+	public bool ReachedTarget { get; set; } = true;
+	public int CurrentPathId { get; set; } = 0;
 
 	public BBox CollisionBox;
 
@@ -150,14 +185,8 @@ public partial class Polewik : AnimatedEntity
 		PathIndex = 0;
 		PathPoints = path.Segments.Select( segment => segment.Position ).ToArray();
 
-		foreach ( var point in PathPoints )
-		{
-
-			DebugOverlay.Sphere( point, 10f, Color.Blue, 2f );
-
-		}
-
 		TargetPosition = pos;
+		ReachedTarget = false;
 
 		return true;
 
@@ -178,8 +207,8 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				PathPoints = null;
-				Velocity = 0;
 				WishVelocity = 0;
+				ReachedTarget = true;
 				return;
 
 			}
@@ -197,16 +226,46 @@ public partial class Polewik : AnimatedEntity
 
 	}
 
+	public void OncurrentStateChanged( PolewikState oldState, PolewikState newState )
+	{
+	
+	}
+
+	public BasePathNode NearestNode => PatrolPath.PathNodes.OrderBy( x => x.Position.Distance( Position ) ).FirstOrDefault();
+
 	[Event.Tick.Server]
 	private void computeAI()
 	{
+
 		if ( !IsValid )
 		{
 			Delete();
 			return;
 		}
 
+		if ( Disabled ) return;
+
 		ComputeAI();
+
+		if ( CurrentState == PolewikState.Patrolling )
+		{
+
+			if ( ReachedTarget )
+			{
+
+				if ( PatrolPath != null )
+				{
+
+					CurrentPathId = (CurrentPathId + 1) % PatrolPath.PathNodes.Count;
+
+					NavigateTo( PatrolPath.PathNodes[CurrentPathId].WorldPosition );
+
+				}
+
+			}
+
+		}
+
 	}
 
 }

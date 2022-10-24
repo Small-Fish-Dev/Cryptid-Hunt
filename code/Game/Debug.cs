@@ -73,4 +73,24 @@ public partial class Game
 
 	}
 
+	[ConCmd.Server]
+	public static void Patrol()
+	{
+
+		if ( ConsoleSystem.Caller.Pawn is not Player pawn ) return;
+
+		var tr = Trace.Ray( pawn.EyePosition, pawn.EyePosition + pawn.EyeRotation.Forward * 50000f )
+			.WorldAndEntities()
+			.Ignore( pawn )
+			.Run();
+
+		foreach ( var polewik in Entity.All.OfType<Polewik>() )
+		{
+
+			polewik.CurrentState = PolewikState.Patrolling;
+
+		}
+
+	}
+
 }
