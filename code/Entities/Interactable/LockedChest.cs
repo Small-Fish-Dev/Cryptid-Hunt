@@ -16,6 +16,31 @@ public partial class LockedChest : BaseInteractable
 	{
 
 
+	}
+
+	[Event.Tick] //this is real bad xD
+	void checkForKey()
+	{
+
+		foreach ( var player in Entity.All.OfType<Player>() )
+		{
+
+			if ( player.FirstInteractable == this )
+			{
+
+				if ( player.Holding is Key )
+				{
+
+					Locked = false;
+					return;
+
+				}
+
+			}
+
+			Locked = true;
+
+		}
 
 	}
 

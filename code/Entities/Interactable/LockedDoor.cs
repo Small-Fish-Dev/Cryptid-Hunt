@@ -18,5 +18,31 @@ public partial class LockedDoor : BaseInteractable
 
 	}
 
+	[Event.Tick] //this is real bad xD
+	void checkForCrowbar()
+	{
+
+		foreach ( var player in Entity.All.OfType<Player>() )
+		{
+
+			if ( player.FirstInteractable == this )
+			{
+
+				if ( player.Holding is Crowbar )
+				{
+
+					Locked = false;
+					return;
+
+				}
+
+			}
+
+			Locked = true;
+
+		}
+
+	}
+
 
 }
