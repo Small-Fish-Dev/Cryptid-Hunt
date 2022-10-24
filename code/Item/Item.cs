@@ -3,6 +3,8 @@
 public partial class Item
 {
 	public Container Container { get; set; }
+	public int X { get; set; }
+	public int Y { get; set; }
 
 	private Item() { }
 

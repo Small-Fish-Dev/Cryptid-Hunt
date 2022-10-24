@@ -3,7 +3,7 @@
 public partial class PlayerController : PawnController
 {
 	[Net] public float MoveSpeed { get; set; } = 80f;
-	[Net] public float SprintSpeed { get; set; } = 160f;
+	[Net] public float SprintSpeed { get; set; } = 1600f; // Set to 160
 
 	private Vector3 gravity => new Vector3( 0, 0, -700f );
 	private float stepSize => 16f;

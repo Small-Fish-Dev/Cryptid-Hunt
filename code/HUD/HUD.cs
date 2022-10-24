@@ -28,6 +28,11 @@ class HUD : RootPanel
 
 		SetTemplate( "/HUD/Layout.html" );
 
+		/*try
+		{
+			AddChild( new ContainerDisplay( (Local.Pawn as Player).Inventory ) );
+		}
+		catch { }*/ 
 	}
 
 	[Event("BlackScreen")]

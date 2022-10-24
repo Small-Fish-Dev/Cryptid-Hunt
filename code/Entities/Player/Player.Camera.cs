@@ -43,6 +43,7 @@ public partial class Player
 
 		setup.Position += upOffset;
 		setup.Position += sideOffset;
+		setup.FieldOfView = 70;
 
 	}
 

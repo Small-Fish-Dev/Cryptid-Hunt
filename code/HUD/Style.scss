@@ -128,11 +128,30 @@ BlackScreen {
     }
 }
 
+$gradient-first: rgba(45, 45, 45, 1);
+$gradient-second: rgba(55, 55, 55, 1);
+$gradient-third: rgba(75, 75, 75, 1);
+
 ContainerDisplay {
     position: absolute;
     background-color: black;
 
     .grid {
-        background-color: white;
+        position: absolute;
+        background-image: linear-gradient(45deg, $gradient-first 0%, $gradient-first 20%, $gradient-second 20%, $gradient-second 25%, $gradient-third 25%, $gradient-third 35%, $gradient-second 35%, $gradient-second 40%);
+        background-size: 12px 12px;
+        background-repeat: repeat;
+        background-position: top;
+
+        .tint {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.25;
+        }
+
+        .title {
+
+        }
     }
 }

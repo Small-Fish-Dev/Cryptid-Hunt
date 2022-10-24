@@ -12,6 +12,7 @@ public partial class Item
 
 		public int Width { get; set; } = 1;
 		public int Height { get; set; } = 1;
+		public Color Color { get; set; } = Color.White;
 
 		protected override void PostLoad()
 		{
