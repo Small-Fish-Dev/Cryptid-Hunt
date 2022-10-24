@@ -10,11 +10,14 @@ public partial class SceneTransferDoor : BaseInteractable
 	public override string UseDescription => "Exit";
 	public override Vector3 PromptOffset3D => new Vector3( -18f, 0f, -5f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 0f );
+	public override bool Locked { get; set; } = true;
 	[Net, Property, Description( "The ID of the Checkpoint which the player will be transported" ), DefaultValue( 0 )]
 	public int CheckpoindIDTarget { get; set; }
 
 	public override void Interact( Player player )
 	{
+
+		if ( Locked ) return;
 
 		var target = PlayerSpawn.WithID( CheckpoindIDTarget );
 

@@ -10,6 +10,7 @@ public partial class LockedChest : BaseInteractable
 	public override string UseDescription => "Locked Chest";
 	public override Vector3 PromptOffset3D => new Vector3( 0f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
+	public override bool Locked { get; set; } = true;
 
 	public override void Interact( Player player )
 	{

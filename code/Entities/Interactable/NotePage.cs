@@ -48,6 +48,9 @@ public partial class NotePage : BaseInteractable
 			player.LockInputs = false;
 			player.InteractingWith = null;
 
+			var door = Entity.All.OfType<SceneTransferDoor>().Where( x => x.CheckpoindIDTarget == 1 ).FirstOrDefault(); // The first door haha, don't care
+			door.Unlock();
+
 		}
 
 	}
