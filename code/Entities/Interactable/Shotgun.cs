@@ -42,7 +42,16 @@ public partial class Shotgun : BaseInteractable
 			{
 
 				polewik.HP -= DamagePerBullet * force;
+
 				Log.Info( polewik.HP );
+
+				if ( polewik.HP <= 0 )
+				{
+
+					polewik.Delete();
+					return;
+
+				}
 
 			}
 
