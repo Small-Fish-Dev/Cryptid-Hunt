@@ -36,7 +36,7 @@ public partial class Player
 	}
 
 	[Event( "PostCameraSetup" )]
-	void computeHolding()
+	void computeHolding( Vector3 posDiff, Rotation rotDiff )
 	{
 		ViewModel ??= new ModelEntity();
 
@@ -133,8 +133,9 @@ public partial class Player
 
 		}
 
-		ViewModel.Position = EyePosition + EyeRotation.Forward * 30f + EyeRotation.Right * 10f + EyeRotation.Down * 10f;
-		ViewModel.Rotation = EyeRotation;
+		ViewModel.Rotation = EyeRotation - rotDiff;
+		ViewModel.Position = EyePosition + ViewModel.Rotation.Forward * 30f + EyeRotation.Right * 10f + EyeRotation.Down * 10f;
+		
 
 	}
 

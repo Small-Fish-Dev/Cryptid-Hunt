@@ -26,6 +26,9 @@ public partial class Player
 		var upOffset = up * MathF.Sin( walkBob ) * speed * -2;
 		var sideOffset = left * MathF.Sin( walkBob * 0.5f ) * speed * -3f;
 
+		var posDiff = Vector3.Zero;
+		var rotDiff = new Rotation();
+
 		if ( ScriptedEvent )
 		{
 
@@ -48,16 +51,25 @@ public partial class Player
 		else
 		{
 
-			setup.Position = Vector3.Lerp( setup.Position - upOffset - sideOffset, EyePosition, Time.Delta * 30f );
-			setup.Rotation = Rotation.Lerp( setup.Rotation, EyeRotation, Time.Delta * 30f );
+			var newPos = Vector3.Lerp( setup.Position - upOffset - sideOffset, EyePosition, Time.Delta * 30f );
+			posDiff = EyePosition - newPos;
+			var newRot = Rotation.Lerp( setup.Rotation, EyeRotation, Time.Delta * 30f );
+			rotDiff = EyeRotation - newRot;
+
+			setup.Position = newPos;
+			setup.Rotation = newRot;
 
 		}
 
 		setup.Position += upOffset;
 		setup.Position += sideOffset;
+
+		posDiff += upOffset;
+		posDiff += sideOffset;
+
 		setup.FieldOfView = 70;
 
-		Event.Run( "PostCameraSetup" );
+		Event.Run( "PostCameraSetup", posDiff, rotDiff );
 
 	}
 
