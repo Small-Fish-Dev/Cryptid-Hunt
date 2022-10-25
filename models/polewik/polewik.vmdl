@@ -196,7 +196,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/polewik/polewik_temp.fbx"
+						filename = "models/polewik/polewik.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -500,6 +500,83 @@
 						enable_twist_limit = true
 						min_twist_angle = -15.0
 						max_twist_angle = 15.0
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "polewik_breath"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 1
+								frames_from_end = 1
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 5
+								event_keys = 
+								{
+									name = ""
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 13
+								event_keys = 
+								{
+									name = ""
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/polewik/polewik_breath.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "mouth"
+						parent_bone = "head"
+						relative_origin = [ -0.000156, 18.539005, -12.934029 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
 					},
 				]
 			},

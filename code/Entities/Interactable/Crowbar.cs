@@ -8,12 +8,14 @@ public partial class Crowbar : BaseInteractable
 
 	public override string ModelPath => "models/placeholders/placeholder_crowbar.vmdl";
 	public override string UseDescription => "Take Crowbar";
-	public override Vector3 PromptOffset3D => new Vector3( 0f );
-	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
+	public override Vector3 PromptOffset3D => new Vector3( 0f, -10f );
+	public override Vector2 PromptOffset2D => new Vector2( 0f, 0f );
 
 	public override void Interact( Player player )
 	{
 
+
+		base.Interact( player );
 
 	}
 
