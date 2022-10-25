@@ -17,7 +17,6 @@ public partial class Player
 			using ( var reader = new BinaryReader( stream ) )
 			{
 				var id = reader.ReadInt32();
-				List<(int, int)> update = null;
 				Container container = null;
 
 				if ( type != Container.Update.Initialize
@@ -31,58 +30,56 @@ public partial class Player
 				{
 					case Container.Update.Initialize:
 						var name = reader.ReadString();
+						var maxWeight = reader.ReadSingle();
 
-						var width = reader.ReadInt32();
-						var height = reader.ReadInt32();
-
-						container = new( name, width, height, id );
+						container = new( name, maxWeight, id );
 
 						// todo: initialization might include items, read through them
 
 						break;
 
 					case Container.Update.Insert:
-						var x = reader.ReadInt32();
-						var y = reader.ReadInt32();
+						var index = reader.ReadInt32();
 
 						var item = Item.FromResource( reader.ReadString() );
-						item.X = x;
-						item.Y = y;
+						item.Index = index;
 						item.Container = container;
 
-						var res = item.Resource;
+						var amount = reader.ReadSingle();
+						item.Amount = amount;
 
-						update = new();
-
-						for ( int i = y; i < y + res.Height; i++ )
-							for ( int j = x; j < x + res.Width; j++ )
-							{
-								container.Items[i, j] = item;
-								update.Add( (j, i) );
-							}
-
-						// todo: read item data
+						container.Items.Insert( index, item );
+						container.Weight += amount * item.Resource.Weight;
 
 						break;
 
 					case Container.Update.Remove:
-						var rx = reader.ReadInt32();
-						var ry = reader.ReadInt32();
-						var w = reader.ReadInt32();
-						var h = reader.ReadInt32();
+						var rindex = reader.ReadInt32();
+						var ritem = container.Items.ElementAtOrDefault( rindex );
+						if ( ritem == null )
+						{
+							Log.Error( "Trying to remove non-existing item on client." );
+							return;
+						}
 
-						update = new();
-
-						for ( int i = ry; i < ry + h; i++ )
-							for ( int j = rx; j < rx + w; j++ )
-							{
-								container.Items[i, j] = null;
-								update.Add( (j, i) );
-							}
+						container.Weight -= ritem.Amount * ritem.Resource.Weight;
+						container.Items.RemoveAt( rindex );
 
 						break;
 
-					case Container.Update.Data:
+					case Container.Update.Amount:
+						var aindex = reader.ReadInt32();
+						var aamount = reader.ReadSingle();
+
+						var aitem = container.Items.ElementAtOrDefault( aindex );
+						if ( aitem == null )
+						{
+							Log.Error( "Trying to change the amount of a non-existing item on client." );
+							return;
+						}
+
+						container.Weight += (aamount - aitem.Amount) * aitem.Resource.Weight;
+						aitem.Amount = aamount;
 
 						break;
 				}
@@ -90,8 +87,7 @@ public partial class Player
 				if ( Local.Pawn is Player player && player.Inventory == null )
 					player.Inventory = container;
 
-				if ( ContainerDisplay.All.TryGetValue( container, out var display ) )
-					display.Refresh( update );
+				Log.Error( container.ToString() );
 			}
 		}
 	}

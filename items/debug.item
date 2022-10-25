@@ -3,8 +3,8 @@
 	data = 
 	{
 		Title = "Piss"
-		Width = 2
-		Height = 2
+		Weight = 5.2
+		MaxAmount = 3.2
 		Color = "0.20899,0.94211,0.86466,1"
 	}
 }
