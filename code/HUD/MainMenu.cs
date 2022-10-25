@@ -40,6 +40,23 @@ class MainMenu : Panel
 
 		quitButton = AddChild<Button>( "Button" );
 		quitButton.SetText( "Quit" );
+		quitButton.AddEventListener( "onclick", () =>
+		{
+
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				QuitGame();
+
+			} );
+
+		} );
 
 
 	}
@@ -49,6 +66,21 @@ class MainMenu : Panel
 	{
 
 		Event.Run( "BeginGame" );
+
+	}
+
+	[ConCmd.Server]
+	public static void QuitGame()
+	{
+
+		var clients = Client.All.ToArray();
+
+		foreach( var client in clients )
+		{
+
+			client.Kick();
+
+		}
 
 	}
 
