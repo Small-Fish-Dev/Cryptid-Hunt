@@ -20,7 +20,21 @@ public partial class Key : BaseInteractable
 	public override void Use( Player player )
 	{
 
-		// TODO: Also open stuff with this, just to make sure the player isn't confused
+		if ( player.FirstInteractable is LockedChest chest )
+		{
+
+			new Shotgun()
+			{
+				Position = chest.Position,
+				Rotation = chest.Rotation
+			};
+
+			chest.Delete();
+
+			player.ChangeHolding( null );
+			Delete();
+
+		}
 
 	}
 
