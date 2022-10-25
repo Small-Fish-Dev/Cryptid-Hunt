@@ -28,11 +28,11 @@ Layer0
 	g_flTintColorB "[1.000000 1.000000 1.000000 0.000000]"
 	g_vTexCoordScale2 "[1.000 1.000]"
 	TextureAmbientOcclusionB "materials/default/default_ao.tga"
-	TextureBlendMaskB "materials/dirt/dirt_path_normal.jpg"
-	TextureColorB "materials/dirt/dirt_path_color.jpg"
+	TextureBlendMaskB "materials/dirt/dirt02_normal.jpg"
+	TextureColorB "materials/dirt/dirt02_color.jpg"
 	TextureMetalnessB "materials/default/default_metal.tga"
-	TextureNormalB "materials/dirt/dirt_path_normal.jpg"
-	TextureRoughnessB "materials/dirt/dirt_path_rough.jpg"
+	TextureNormalB "materials/dirt/dirt02_normal.jpg"
+	TextureRoughnessB "[0.513000 0.513000 0.513000 0.000000]"
 	TextureTintMaskB "materials/default/default.tga"
 
 	//---- Material C ----
@@ -40,11 +40,11 @@ Layer0
 	g_flTintColorC "[1.000000 1.000000 1.000000 0.000000]"
 	g_vTexCoordScale3 "[1.000 1.000]"
 	TextureAmbientOcclusionC "materials/default/default_ao.tga"
-	TextureBlendMaskC "materials/default/default_blend.tga"
-	TextureColorC "materials/dirt/dirt02_color.jpg"
+	TextureBlendMaskC "materials/dirt/dirt_path_normal.jpg"
+	TextureColorC "materials/dirt/dirt_path_color.jpg"
 	TextureMetalnessC "materials/default/default_metal.tga"
-	TextureNormalC "materials/dirt/dirt02_normal.jpg"
-	TextureRoughnessC "materials/default/default_rough.tga"
+	TextureNormalC "materials/dirt/dirt_path_normal.jpg"
+	TextureRoughnessC "materials/dirt/dirt_path_rough.jpg"
 	TextureTintMaskC "materials/default/default.tga"
 
 	//---- Texture Coordinates ----
