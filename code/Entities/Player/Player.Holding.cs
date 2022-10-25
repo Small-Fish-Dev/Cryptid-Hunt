@@ -35,6 +35,7 @@ public partial class Player
 	[Event( "PostCameraSetup" )]
 	void computeHolding()
 	{
+		ViewModel ??= new ModelEntity();
 
 		if ( Holding == null )
 		{
@@ -49,8 +50,6 @@ public partial class Player
 			ViewModel.EnableDrawing = true;
 
 		}
-
-		ViewModel ??= new ModelEntity();
 		
 		if ( ViewModel.GetModelName() != Holding.GetModelName() )
 		{
