@@ -48,6 +48,8 @@ public partial class Polewik : AnimatedEntity
 
 	public BBox CollisionBox;
 
+	[Net] public float HP { get; set; } = 100f;
+
 	[Net] bool disabled { get; set; } = false;
 	public bool Disabled
 	{

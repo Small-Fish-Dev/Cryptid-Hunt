@@ -39,14 +39,25 @@ public partial class Player
 		if ( Holding == null )
 		{
 
-			ViewModel.EnableDrawing = false;
+			if ( ViewModel != null )
+			{
+
+				ViewModel.EnableDrawing = false;
+
+			}
+
 			return;
 
 		}
 		else
 		{
 
-			ViewModel.EnableDrawing = true;
+			if ( ViewModel != null )
+			{
+
+				ViewModel.EnableDrawing = true;
+
+			}
 
 		}
 

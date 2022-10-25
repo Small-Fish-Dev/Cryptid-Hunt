@@ -19,5 +19,11 @@ public partial class Crowbar : BaseInteractable
 
 	}
 
+	public override void Use( Player player )
+	{
+
+		// TODO Also open with this
+
+	}
 
 }

@@ -25,6 +25,13 @@ public partial class BaseInteractable : ModelEntity
 
 	}
 
+	public virtual void Use( Player player )
+	{
+
+
+
+	}
+
 	public void Unlock()
 	{
 

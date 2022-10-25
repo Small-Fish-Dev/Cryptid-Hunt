@@ -17,5 +17,11 @@ public partial class BearTrap : BaseInteractable
 		base.Interact( player );
 
 	}
+	public override void Use( Player player )
+	{
+
+		Log.Info( "placed" );
+
+	}
 
 }

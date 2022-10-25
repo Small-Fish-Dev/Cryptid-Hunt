@@ -16,6 +16,11 @@ public partial class Key : BaseInteractable
 
 		base.Interact( player );
 
+	}
+	public override void Use( Player player )
+	{
+
+		// TODO: Also open stuff with this, just to make sure the player isn't confused
 
 	}
 

@@ -61,14 +61,6 @@ public partial class Player : AnimatedEntity
 
 		EnableDrawing = false;
 
-		#region TESTING
-		var viewModel = new PlayerViewModel();
-		viewModel.Position = Position;
-		viewModel.Owner = this;
-		viewModel.EnableViewmodelRendering = true;
-		viewModel.SetModel( "models/first_person/first_person_arms.vmdl" );
-		#endregion
-
 	}
 
 	public void Respawn()
@@ -121,6 +113,25 @@ public partial class Player : AnimatedEntity
 				}
 
 				LastInteraction = 0;
+
+			}
+
+		}
+
+		if ( Input.Pressed( InputButton.PrimaryAttack ) )
+		{
+
+			if ( LastInteraction >= 0.5f )
+			{
+
+				if ( Holding != null )
+				{
+
+					Holding.Use( this );
+
+					LastInteraction = 0;
+
+				}
 
 			}
 
