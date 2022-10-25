@@ -83,7 +83,6 @@ public partial class Player : AnimatedEntity
 
 	public override void Simulate( Client cl )
 	{
-
 		Controller?.Simulate( cl, this, null );
 
 		if ( Host.IsClient ) return;
@@ -148,7 +147,7 @@ public partial class Player : AnimatedEntity
 		LockInputs = false;
 		OverrideCamera = null;
 		ScriptedEvent = false;
-
+		
 	}
 
 	public override void FrameSimulate( Client cl )

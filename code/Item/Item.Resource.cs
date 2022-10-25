@@ -9,7 +9,9 @@ public partial class Item
 		public static IReadOnlyDictionary<string, ItemResource> All => all;
 
 		public string Title { get; set; }
-		public float Weight { get; set; }
+		public string Description { get; set; } = "Empty description.";
+
+		public float Weight { get; set; } = 1;
 		public float MaxAmount { get; set; } = 1;
 		public Color Color { get; set; } = Color.White;
 

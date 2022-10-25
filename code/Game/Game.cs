@@ -87,7 +87,7 @@ public partial class Game : GameBase
 
 	public override void BuildInput( InputBuilder input )
 	{
-		base.BuildInput( input );
+		Event.Run( "BuildInput", input );
 		Local.Pawn?.BuildInput( input );
 	}
 

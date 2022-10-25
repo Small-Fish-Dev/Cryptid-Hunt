@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace SpookyJam2022;
+﻿namespace SpookyJam2022;
 
 public partial class Container
 {
@@ -11,7 +9,13 @@ public partial class Container
 	public int ID { get; private set; }
 
 	public float MaxWeight { get; private set; }
-	public float Weight { get; set; }
+
+	private float weight;
+	public float Weight 
+	{ 
+		get => weight;
+		set => weight = Math.Max( value, 0 );
+	}
 
 	public List<Item> Items { get; private set; }
 
@@ -31,6 +35,9 @@ public partial class Container
 		
 		Items = new List<Item>();
 		MaxWeight = maxWeight;
+
+		if ( all.ContainsKey( ID ) )
+			all.Remove( ID );
 
 		all.Add( ID, this );
 
