@@ -7,6 +7,7 @@ public partial class Player : AnimatedEntity
 	public static BBox CollisionBox = new BBox( mins, maxs );
 
 	[Net] public bool LockInputs { get; set; } = false;
+	[Net] public int HP { get; set; } = 3;
 
 	public BaseInteractable FirstInteractable
 	{

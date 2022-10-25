@@ -21,7 +21,10 @@ public partial class Medkit : BaseInteractable
 	public override void Use( Player player )
 	{
 
-		Log.Info( "heal" );
+		player.HP = 3;
+
+		player.ChangeHolding( null );
+		Delete();
 
 	}
 
