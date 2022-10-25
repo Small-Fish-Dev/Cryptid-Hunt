@@ -6,7 +6,7 @@ public partial class Player : AnimatedEntity
 	private static Vector3 maxs = new Vector3( 16f, 16f, 72f );
 	public static BBox CollisionBox = new BBox( mins, maxs );
 
-	[Net] public bool LockInputs { get; set; } = false;
+	[Net] public bool LockInputs { get; set; } = true;
 	[Net] public int HP { get; set; } = 3;
 
 	public BaseInteractable FirstInteractable
@@ -74,6 +74,7 @@ public partial class Player : AnimatedEntity
 
 		Position = CurrentCheckpoint.Position;
 		Rotation = CurrentCheckpoint.Rotation;
+		EyeRotation = CurrentCheckpoint.Rotation;
 
 		ResetInterpolation();
 	}
