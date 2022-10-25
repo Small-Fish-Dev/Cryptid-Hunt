@@ -114,5 +114,13 @@ public partial class Game : GameBase
 
 	}
 
+	[ClientRpc]
+	public void StartZoneHint( string Name )
+	{
+
+		Event.Run( "ShowArea", Name );
+
+	}
+
 
 }

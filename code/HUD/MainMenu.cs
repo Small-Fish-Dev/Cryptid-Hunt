@@ -17,6 +17,8 @@ class MainMenu : Panel
 		startButton.AddEventListener( "onclick", () =>
 		{
 
+			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
 			Style.PointerEvents = PointerEvents.None;
 
 			Game.Instance.StartBlackScreen();
@@ -37,9 +39,34 @@ class MainMenu : Panel
 
 		creditsButton = AddChild<Button>( "Button" );
 		creditsButton.SetText( "Credits" );
+		creditsButton.AddEventListener( "onclick", () =>
+		{
+
+			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
+		} );
 
 		quitButton = AddChild<Button>( "Button" );
 		quitButton.SetText( "Quit" );
+		quitButton.AddEventListener( "onclick", () =>
+		{
+
+			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				QuitGame();
+
+			} );
+
+		} );
 
 
 	}
@@ -49,6 +76,21 @@ class MainMenu : Panel
 	{
 
 		Event.Run( "BeginGame" );
+
+	}
+
+	[ConCmd.Server]
+	public static void QuitGame()
+	{
+
+		var clients = Client.All.ToArray();
+
+		foreach( var client in clients )
+		{
+
+			client.Kick();
+
+		}
 
 	}
 
