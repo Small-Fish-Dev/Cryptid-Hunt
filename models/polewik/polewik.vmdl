@@ -647,6 +647,23 @@
 						take = 0
 						reverse = false
 					},
+					{
+						_class = "AnimBindPose"
+						name = "bind"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						frame_count = 1
+						frame_rate = 30
+					},
 				]
 				default_root_bone_name = ""
 			},
@@ -659,7 +676,7 @@
 						name = "mouth"
 						parent_bone = "head"
 						relative_origin = [ -0.000156, 18.539005, -12.934029 ]
-						relative_angles = [ -0.0, 0.0, 0.0 ]
+						relative_angles = [ -0.0, 90.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
 					},
@@ -698,6 +715,31 @@
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "LookAtChain"
+						name = "lookat"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "head"
+									weight = 1.0
+								},
+								{
+									name = "neck"
+									weight = 0.5
+								},
+							]
+						}
 					},
 				]
 			},
