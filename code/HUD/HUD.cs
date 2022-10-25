@@ -32,7 +32,7 @@ class HUD : RootPanel
 		{
 			AddChild( new ContainerDisplay( (Local.Pawn as Player).Inventory ) );
 		}
-		catch { }*/ 
+		catch { }*/
 	}
 
 	[Event("BlackScreen")]

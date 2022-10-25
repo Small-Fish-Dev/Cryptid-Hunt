@@ -2,6 +2,57 @@
 
 public class ContainerDisplay : Panel
 {
+	private class Borders : Panel
+	{
+		private ContainerDisplay display;
+
+		public Borders( ContainerDisplay display )
+		{
+			this.display = display;
+
+			Style.ZIndex = 2;
+			Style.Overflow = OverflowMode.Visible;
+		}
+
+		public override void DrawBackground( ref RenderState state )
+		{
+			if ( display == null )
+			{
+				Delete( true );
+				return;
+			}
+
+			var left = display.Box.Left;
+			var top = display.Box.Top;
+
+			foreach ( var pair in display.grids )
+			{
+				var pos = pair.Key;
+				var item = display.Container?.Items?[pos.y, pos.x];
+
+				var posAdd = item != null ? 0 : 1;
+				var sizeAdd = item != null ? 1 : -1;
+				var size = new Vector2( item?.Resource.Width ?? 1, item?.Resource.Height ?? 1 );
+
+				var rect = new Rect(
+					left + pos.x * display.GridSize.x * ScaleToScreen + posAdd,
+					top + pos.y * display.GridSize.y * ScaleToScreen + posAdd,
+					size.x * display.GridSize.x * ScaleToScreen + sizeAdd,
+					size.y * display.GridSize.y * ScaleToScreen + sizeAdd ).Floor();
+
+				Extensions.DrawOutline( rect, item == null ? new Color( 0.7f, 0.7f, 0.7f ) : Color.Black, 1 );
+			}
+
+			var sizeRect = new Rect(
+				left,
+				top,
+				display.Container.Width * display.GridSize.x * ScaleToScreen + 1,
+				display.Container.Height * display.GridSize.y * ScaleToScreen + 1 ).Floor();
+
+			Extensions.DrawOutline( sizeRect, Color.Black, 1 );
+		}
+	}
+
 	public static Dictionary<Container, ContainerDisplay> All { get; } = new();
 
 	public Container Container { get; set; }
@@ -13,6 +64,7 @@ public class ContainerDisplay : Panel
 	{
 		Container = container;
 		Refresh();
+		AddChild( new Borders( this ) );
 
 		if ( All.ContainsKey( container ) )
 			All.Remove( container );
