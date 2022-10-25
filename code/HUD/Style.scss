@@ -96,7 +96,7 @@ ItemPrompt {
 
             .prompt {
                 font-family: GochiHand-Regular;
-                font-size: 30%;
+                font-size: 40%;
                 color: rgb(120, 0, 0);
                 text-stroke: 3px rgb(50, 0, 0);
             }
@@ -127,6 +127,47 @@ BlackScreen {
         opacity: 0;
     }
 }
+
+MainMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all;
+    cursor: default;
+
+    .Logo {
+        height: 30%;
+        margin-bottom: 6%;
+        aspect-ratio: 2;
+        background-image: url(ui/hand.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: red;
+    }
+
+    Button {
+        height: 10%;
+        aspect-ratio: 4;
+        margin: 0.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: GochiHand-Regular;
+        font-size: 60px;
+        color: rgb(120, 0, 0);
+        text-stroke: 3px rgb(50, 0, 0);
+        cursor: pointer;
+    }
+}
+
 
 $gradient-first: rgba(45, 45, 45, 1);
 $gradient-second: rgba(55, 55, 55, 1);

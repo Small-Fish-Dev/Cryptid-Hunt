@@ -23,7 +23,7 @@ public partial class Game : GameBase
 	public Game()
 	{
 		Instance = this;
-		Event.Run( "GameStart" ); //TODO: Set this on the menu
+		Event.Run( "GameStart" ); 
 	}
 
 	public override void ClientJoined( Client client )
@@ -39,6 +39,22 @@ public partial class Game : GameBase
 		client.Pawn = Player;
 		Player.Respawn();
 		Player.Inventory = new( "Backpack", 6, 8, target: client );
+
+		foreach ( var ent in Entity.All ) // Find camera (shitt)
+		{
+
+			if ( ent is not ScriptedEventCamera camera ) continue;
+
+			if ( camera.Name == "MainMenu" )
+			{
+
+				Player.OverrideCamera = camera;
+				Player.ScriptedEvent = true;
+				Player.LockInputs = true;
+
+			}
+
+		}
 	}
 
 	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
