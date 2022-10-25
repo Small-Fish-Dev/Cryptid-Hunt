@@ -18,5 +18,14 @@ public partial class Medkit : BaseInteractable
 		base.Interact( player );
 
 	}
+	public override void Use( Player player )
+	{
+
+		player.HP = 3;
+
+		player.ChangeHolding( null );
+		Delete();
+
+	}
 
 }

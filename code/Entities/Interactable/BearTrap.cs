@@ -17,5 +17,28 @@ public partial class BearTrap : BaseInteractable
 		base.Interact( player );
 
 	}
+	public override void Use( Player player )
+	{
+
+		var trace = Trace.Ray( player.EyePosition, player.EyePosition + player.EyeRotation.Forward * 130f )
+			.Ignore( player )
+			.Run();
+
+
+		if ( trace.Hit && trace.Normal.z >= 0.4f )
+		{
+
+			Parent = null;
+			EnableAllCollisions = true;
+			Position = trace.HitPosition;
+			Rotation = Rotation.LookAt( trace.Normal ).RotateAroundAxis( Vector3.Right, -90f );
+			EnableDrawing = true;
+			EnableShadowCasting = true;
+
+			player.Holding = null;
+
+		}
+
+	}
 
 }

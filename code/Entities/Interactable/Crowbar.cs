@@ -19,5 +19,19 @@ public partial class Crowbar : BaseInteractable
 
 	}
 
+	public override void Use( Player player )
+	{
+
+		if ( player.FirstInteractable is LockedDoor door )
+		{
+
+			door.Delete();
+
+			player.ChangeHolding( null );
+			Delete();
+
+		}
+
+	}
 
 }

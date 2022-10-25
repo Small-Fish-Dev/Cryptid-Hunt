@@ -5,6 +5,7 @@ public partial class Player
 
 	[Net] public BaseInteractable Holding { get; set; }
 	public ModelEntity ViewModel { get; set; }
+	public ModelEntity GhostEntity { get; set; }
 
 	public void ChangeHolding( BaseInteractable entity )
 	{
@@ -16,6 +17,7 @@ public partial class Player
 			Holding.EnableAllCollisions = false;
 			Holding.Position = Position;
 			Holding.Parent = this;
+			Holding.EnableShadowCasting = false;
 
 		}
 
@@ -27,6 +29,7 @@ public partial class Player
 			Holding.EnableAllCollisions = false;
 			Holding.Position = Position;
 			Holding.Parent = this;
+			Holding.EnableShadowCasting = false;
 
 		}
 
@@ -35,22 +38,93 @@ public partial class Player
 	[Event( "PostCameraSetup" )]
 	void computeHolding()
 	{
+		ViewModel ??= new ModelEntity();
 
 		if ( Holding == null )
 		{
 
-			ViewModel.EnableDrawing = false;
+			if ( ViewModel != null )
+			{
+
+				ViewModel.EnableDrawing = false;
+
+			}
+
+			if ( GhostEntity != null )
+			{
+
+				GhostEntity.EnableDrawing = false;
+
+			}
+
 			return;
 
 		}
 		else
 		{
 
-			ViewModel.EnableDrawing = true;
+			if ( ViewModel != null )
+			{
+
+				ViewModel.EnableDrawing = true;
+
+			}
+
+			if ( Holding is BearTrap trap )
+			{
+
+				var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 130f )
+				.Ignore( this )
+				.Run();
+
+
+				if ( trace.Hit && trace.Normal.z >= 0.4f )
+				{
+
+					GhostEntity ??= new ModelEntity( trap.GetModelName() );
+
+					if ( GhostEntity != null )
+					{
+
+						GhostEntity.SetMaterialOverride( "materials/dev/primary_white_emissive.vmat" );
+						GhostEntity.RenderColor = Color.Gray.WithAlpha( 0.7f );
+
+						GhostEntity.EnableDrawing = true;
+						GhostEntity.Position = trace.HitPosition;
+						GhostEntity.Rotation = Rotation.LookAt( trace.Normal ).RotateAroundAxis( Vector3.Right, -90f );
+
+						GhostEntity.ResetInterpolation();
+
+					}
+
+				}
+				else
+				{
+
+					if ( GhostEntity != null )
+					{
+
+						GhostEntity.EnableDrawing = false;
+
+					}
+
+				}
+			}
+			else
+			{
+
+
+
+				if ( GhostEntity != null )
+				{
+
+					GhostEntity.EnableDrawing = false;
+
+				}
+
+			}
 
 		}
-
-		ViewModel ??= new ModelEntity();
 		
 		if ( ViewModel.GetModelName() != Holding.GetModelName() )
 		{

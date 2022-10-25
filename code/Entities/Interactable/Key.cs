@@ -16,6 +16,25 @@ public partial class Key : BaseInteractable
 
 		base.Interact( player );
 
+	}
+	public override void Use( Player player )
+	{
+
+		if ( player.FirstInteractable is LockedChest chest )
+		{
+
+			new Shotgun()
+			{
+				Position = chest.Position,
+				Rotation = chest.Rotation
+			};
+
+			chest.Delete();
+
+			player.ChangeHolding( null );
+			Delete();
+
+		}
 
 	}
 

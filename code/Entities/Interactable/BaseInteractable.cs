@@ -21,7 +21,15 @@ public partial class BaseInteractable : ModelEntity
 	public virtual void Interact( Player player )
 	{
 
+		// TODO: Add to inventory, ChangeHolding should only be called when selecting them from the inventory
 		player.ChangeHolding( this );
+
+	}
+
+	public virtual void Use( Player player )
+	{
+
+
 
 	}
 
