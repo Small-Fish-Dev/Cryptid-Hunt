@@ -1,6 +1,6 @@
 .editorconfig
 code/Properties/*
-code/spookyjam2022.csproj
+code/*.csproj
 code/obj/*
 code/.vs/*
 shaders/vfx/*
