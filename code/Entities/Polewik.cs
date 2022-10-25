@@ -99,6 +99,8 @@ public partial class Polewik : AnimatedEntity
 		if ( Disabled ) return;
 		if ( !IsAuthority ) return;
 
+		SetAnimParameter( "speed", Velocity.Length / 3 );
+
 		Rotation = Rotation.Lerp( Rotation, WishRotation, 5f * Time.Delta );
 
 	}
