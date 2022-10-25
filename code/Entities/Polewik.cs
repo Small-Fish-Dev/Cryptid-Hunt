@@ -97,10 +97,6 @@ public partial class Polewik : AnimatedEntity
 	{
 
 		if ( Disabled ) return;
-
-		var animHelper = new CitizenAnimationHelper( this );
-		animHelper.WithVelocity( Velocity );
-
 		if ( !IsAuthority ) return;
 
 		Rotation = Rotation.Lerp( Rotation, WishRotation, 5f * Time.Delta );

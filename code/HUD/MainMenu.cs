@@ -45,7 +45,7 @@ class MainMenu : Panel
 	}
 
 	[ConCmd.Server]
-	public void NetworkStart()
+	public static void NetworkStart()
 	{
 
 		Event.Run( "BeginGame" );
