@@ -61,4 +61,12 @@ class HUD : RootPanel
 
 	}
 
+	[Event( "ShowArea" )]
+	public void AddZoneHint( string Name )
+	{
+
+		AddChild( new ZoneHint( Name ));
+
+	}
+
 }

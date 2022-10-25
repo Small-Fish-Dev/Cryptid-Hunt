@@ -96,7 +96,7 @@ ItemPrompt {
 
             .prompt {
                 font-family: GochiHand-Regular;
-                font-size: 40%;
+                font-size: 40px;
                 color: rgb(120, 0, 0);
                 text-stroke: 3px rgb(50, 0, 0);
             }
@@ -116,7 +116,12 @@ BlackScreen {
     height: 100%;
     background-color: black;
     opacity: 1;
-    z-index: 10;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
     transition: all 2s ease-in;
 
     &:intro {
@@ -127,6 +132,35 @@ BlackScreen {
         opacity: 0;
     }
 }
+
+ZoneHint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s ease-in;
+
+    .hint {
+        font-family: GochiHand-Regular;
+        font-size: 70px;
+        color: white;
+        text-stroke: 3px rgb(50, 0, 0);
+    }
+
+    &:intro {
+        opacity: 0;
+    }
+
+    &:outro {
+        opacity: 0;
+    }
+}
+
 
 MainMenu {
     position: absolute;
