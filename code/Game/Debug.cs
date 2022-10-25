@@ -30,7 +30,19 @@ public partial class Game
 		if ( pawn.Inventory == null ) return;
 
 		pawn.Inventory.Insert( Item.FromResource( resourceName ) );
+		Log.Error( pawn.Inventory.ToString() );
 	}
+
+	[ConCmd.Server]
+	public static void RemoveItem( int index, float? amount = null )
+	{
+		if ( ConsoleSystem.Caller.Pawn is not Player pawn ) return;
+		if ( pawn.Inventory == null ) return;
+
+		pawn.Inventory.Remove( index, amount );
+		Log.Error( pawn.Inventory.ToString() );
+	}
+
 	[ConCmd.Server]
 	public static void Polewik()
 	{

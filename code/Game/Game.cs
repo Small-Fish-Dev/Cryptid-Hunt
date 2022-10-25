@@ -38,7 +38,7 @@ public partial class Game : GameBase
 		Player = new Player();
 		client.Pawn = Player;
 		Player.Respawn();
-		Player.Inventory = new( "Backpack", 6, 8, target: client );
+		Player.Inventory = new( "Backpack", 30, target: client );
 
 		foreach ( var ent in Entity.All ) // Find camera (shitt)
 		{

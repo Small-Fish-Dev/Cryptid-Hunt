@@ -9,9 +9,8 @@ public partial class Item
 		public static IReadOnlyDictionary<string, ItemResource> All => all;
 
 		public string Title { get; set; }
-
-		public int Width { get; set; } = 1;
-		public int Height { get; set; } = 1;
+		public float Weight { get; set; }
+		public float MaxAmount { get; set; } = 1;
 		public Color Color { get; set; } = Color.White;
 
 		protected override void PostLoad()
