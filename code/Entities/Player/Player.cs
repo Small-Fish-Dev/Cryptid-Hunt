@@ -140,6 +140,16 @@ public partial class Player : AnimatedEntity
 
 	}
 
+	[Event( "BeginGame" )]
+	public void StartGame()
+	{
+
+		LockInputs = false;
+		OverrideCamera = null;
+		ScriptedEvent = false;
+
+	}
+
 	public override void FrameSimulate( Client cl )
 	{
 		Controller?.FrameSimulate( cl, this, null );

@@ -3,9 +3,9 @@
 public partial class Player
 {
 
-	ScriptedEventCamera overrideCamera;
-	ScriptedEventTrigger overrideTrigger;
-	bool scriptedEvent = false;
+	[Net] public ScriptedEventCamera OverrideCamera { get; set; }
+	[Net] public ScriptedEventTrigger OverrideTrigger { get; set; }
+	[Net] public bool ScriptedEvent { get; set; }
 
 	float walkBob = 0f;
 
@@ -26,11 +26,23 @@ public partial class Player
 		var upOffset = up * MathF.Sin( walkBob ) * speed * -2;
 		var sideOffset = left * MathF.Sin( walkBob * 0.5f ) * speed * -3f;
 
-		if ( scriptedEvent )
+		if ( ScriptedEvent )
 		{
 
-			setup.Position = Vector3.Lerp( setup.Position, overrideCamera.Position, Time.Delta * overrideTrigger.TransitionSpeed );
-			setup.Rotation = Rotation.Lerp( setup.Rotation, overrideCamera.Rotation, Time.Delta * overrideTrigger.TransitionSpeed );
+			if ( OverrideTrigger != null )
+			{
+
+				setup.Position = Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta * OverrideTrigger.TransitionSpeed );
+				setup.Rotation = Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta * OverrideTrigger.TransitionSpeed );
+
+			}
+			else
+			{
+
+				setup.Position = OverrideCamera.Position;
+				setup.Rotation = OverrideCamera.Rotation;
+
+			}
 
 		}
 		else
@@ -53,7 +65,7 @@ public partial class Player
 	void startScriptedEvent( string name, ScriptedEventTrigger trigger )
 	{
 
-		scriptedEvent = true;
+		ScriptedEvent = true;
 
 		foreach ( var ent in Entity.All ) // FindByName doesn't work????
 		{
@@ -63,13 +75,13 @@ public partial class Player
 			if ( camera.Name == name )
 			{
 
-				overrideCamera = camera;
+				OverrideCamera = camera;
 
 			}
 
 		}
 
-		overrideTrigger = trigger;
+		OverrideTrigger = trigger;
 
 	}
 
@@ -77,7 +89,7 @@ public partial class Player
 	void endScriptedEvent()
 	{
 
-		scriptedEvent = false;
+		ScriptedEvent = false;
 
 	}
 
