@@ -19,7 +19,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 15.26976
+						switch_threshold = 442.077942
 						meshes = 
 						[
 							"Medium",
@@ -27,7 +27,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 56.51413
+						switch_threshold = 575.385315
 						meshes = 
 						[
 							"Low",
@@ -59,7 +59,7 @@
 				[
 					{
 						_class = "PhysicsMeshFile"
-						name = "concrete_pile_large_col"
+						name = "concrete_pile_large_lod0"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
@@ -69,7 +69,7 @@
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						filename = "models/environment/rubble/concrete_pile_large/concrete_pile_large_col.fbx"
+						filename = "models/environment/rubble/concrete_pile_large/concrete_pile_large_lod0.fbx"
 						import_scale = 0.3937
 						maxMeshVertices = 0
 						qemError = 0.0
