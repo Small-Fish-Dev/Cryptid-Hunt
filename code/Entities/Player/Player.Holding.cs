@@ -135,6 +135,9 @@ public partial class Player
 
 		ViewModel.Rotation = EyeRotation - rotDiff;
 		ViewModel.Position = EyePosition + ViewModel.Rotation.Forward * 30f + EyeRotation.Right * 10f + EyeRotation.Down * 10f;
+
+		ViewModel.Rotation = ViewModel.Transform.RotationToWorld( Holding.OffsetRotation );
+		ViewModel.Position = ViewModel.Transform.PointToWorld( Holding.OffsetPosition );
 		
 
 	}

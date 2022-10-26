@@ -81,6 +81,31 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( value == PolewikState.Attacking )
+			{
+
+				SetAnimParameter( "leap", true );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 0.05f );
+
+					SetAnimParameter( "leap", false );
+
+					await GameTask.DelaySeconds( 0.9f );
+
+					if ( CurrentState  == PolewikState.Attacking )
+					{
+
+						CurrentState = PolewikState.Following;
+
+					}
+
+				} );
+
+			}
+
 		}
 	}
 	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
@@ -133,6 +158,7 @@ public partial class Polewik : AnimatedEntity
 	TimeSince lastCalculatedPath;
 	TimeSince startedStalking;
 	TimeSince startedFollowing;
+	TimeSince startedAttacking;
 
 	public virtual void ComputeAI()
 	{
@@ -148,7 +174,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Patrolling )
+		if ( CurrentState == PolewikState.Patrolling && PatrolPath != null )
 		{
 
 			if ( ClosestPlayer.Position.Distance( Position ) <= 2000f )
@@ -160,7 +186,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Stalking )
+		if ( CurrentState == PolewikState.Stalking && Victim != null && PatrolPath != null )
 		{
 
 			if ( lastCalculatedPath >= 2f )
@@ -180,7 +206,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Following && Victim != null )
+		if ( CurrentState == PolewikState.Following && Victim != null && PatrolPath != null )
 		{
 
 			if ( lastCalculatedPath >= 0.5f )
@@ -194,6 +220,27 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				CurrentState = PolewikState.Patrolling;
+
+			}
+
+			if ( Victim.Position.Distance( Position ) <= 600f )
+			{
+
+				CurrentState = PolewikState.Attacking;
+
+			}
+
+		}
+
+		if ( CurrentState == PolewikState.Attacking && Victim != null )
+		{
+
+			if ( Victim.Position.Distance( Position ) <= 100f )
+			{
+
+				Victim.HP -= 1;
+
+				CurrentState = PolewikState.Fleeing;
 
 			}
 
@@ -342,7 +389,10 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * (CurrentState == PolewikState.Fleeing ? SprintSpeed : MoveSpeed);
+		bool shouldSprint = CurrentState == PolewikState.Fleeing;
+		bool shouldJump = CurrentState == PolewikState.Attacking;
+
+		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * ( shouldSprint ? SprintSpeed : shouldJump ? 1800f : MoveSpeed );
 
 		if ( GroundEntity == null )
 		{
