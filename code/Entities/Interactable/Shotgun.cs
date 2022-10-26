@@ -18,8 +18,8 @@ public partial class Shotgun : BaseInteractable
 
 	}
 
-	public int BulletsPerShot => 20;
-	public float Spread => 12f; // Degrees
+	public int BulletsPerShot => 22;
+	public float Spread => 8f; // Degrees
 	public float DamagePerBullet => 1f;
 	public float DamageFalloff => 2000f; // How far until bullets deal no damage, Shotgun max range
 
