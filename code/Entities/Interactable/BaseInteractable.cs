@@ -9,6 +9,9 @@ public partial class BaseInteractable : ModelEntity
 
 	public virtual Vector3 PromptOffset3D => new Vector3( 0f );
 	public virtual Vector2 PromptOffset2D => new Vector2( 0f );
+	public virtual Vector3 OffsetPosition => new Vector3( 0f );
+	public virtual Rotation OffsetRotation => new Rotation();
+
 
 	public override void Spawn()
 	{

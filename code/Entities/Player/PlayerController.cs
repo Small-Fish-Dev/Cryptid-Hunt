@@ -97,7 +97,7 @@ public partial class PlayerController : PawnController
 			helper.TryUnstuck();
 			helper.TryMoveWithStep( Time.Delta, stepSize );
 
-			DebugOverlay.ScreenText( $"{Velocity} {helper.Velocity}" );
+			//DebugOverlay.ScreenText( $"{Velocity} {helper.Velocity}" );
 			
 			Position = helper.Position;
 			Velocity = helper.Velocity;
