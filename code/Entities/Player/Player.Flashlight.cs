@@ -4,6 +4,7 @@ public partial class Player
 {
 
 	public SpotLightEntity FlashLight { get; set; }
+	[Net] public bool FlashLightOn { get; set; } = false;
 
 	private SpotLightEntity CreateLight() //thanks sandbox
 	{
@@ -32,7 +33,7 @@ public partial class Player
 	{
 
 		FlashLight ??= CreateLight();
-		FlashLight.Enabled = true;
+		FlashLight.Enabled = FlashLightOn;
 
 		var endPos = EyePosition + EyeRotation.Forward * 30f + EyeRotation.Right * -10f + EyeRotation.Down * 10f;
 
@@ -44,6 +45,28 @@ public partial class Player
 		FlashLight.Position = trace.EndPosition - EyeRotation.Forward * 5f;
 		FlashLight.Rotation = EyeRotation - rotDiff;
 
+
+	}
+
+	[Event("FlashLight")]
+	public void SetFlashLight( bool on )
+	{
+
+		if ( FlashLightOn != on )
+		{
+
+			FlashLightOn = on;
+			PlaySound( "sounds/ui/button_click.sound" );
+
+		}
+
+	}
+
+	[ConCmd.Server]
+	public static void flashlight( bool on )
+	{
+
+		Event.Run( "FlashLight", on );
 
 	}
 
