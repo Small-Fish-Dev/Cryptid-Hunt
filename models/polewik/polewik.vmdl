@@ -30,163 +30,182 @@
 					{
 						_class = "PhysicsShapeCapsule"
 						parent_bone = "hip"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 6.811197
-						point0 = [ 13.622394, 0.0, 0.0 ]
-						point1 = [ -13.622396, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "torso"
+						radius = 14.0
+						point0 = [ -9.497519, -1.640573, -3.866856 ]
+						point1 = [ 9.547873, -1.640578, -3.866855 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "spine1"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "torso"
+						radius = 13.0
+						point0 = [ -7.600923, -0.046882, -9.70341 ]
+						point1 = [ 7.574364, -0.046886, -9.703409 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "spine2"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "torso"
+						radius = 18.0
+						point0 = [ -5.40051, 6.607726, -9.737471 ]
+						point1 = [ 4.75527, 6.607721, -9.737476 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "chest"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "torso"
+						radius = 18.0
+						point0 = [ -2.469577, 7.342254, -7.539513 ]
+						point1 = [ 2.558439, 7.342251, -7.539526 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "clavicle_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "upperarm_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "arm_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "paw_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000002, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "clavicle_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000013, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "upperarm_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "arm_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000004, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
-						parent_bone = "paw_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
-					},
-					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "neck"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "torso"
+						radius = 11.0
+						point0 = [ 0.000002, 2.691756, -2.945559 ]
+						point1 = [ 0.000009, 4.047457, -11.442101 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "head"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "head"
+						radius = 10.0
+						point0 = [ 0.000003, 7.518337, 1.23259 ]
+						point1 = [ 0.00001, 12.521997, -12.301844 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "clavicle_L"
+						surface_prop = "flesh"
+						collision_tags = "left arm"
+						radius = 10.0
+						point0 = [ 1.008395, 23.390785, -3.170922 ]
+						point1 = [ -1.762652, 5.25752, 0.838476 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "upperarm_L"
+						surface_prop = "flesh"
+						collision_tags = "left arm"
+						radius = 9.0
+						point0 = [ 1.381969, 35.071888, 2.797667 ]
+						point1 = [ -1.402401, 3.223966, 3.384543 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "arm_L"
+						surface_prop = "flesh"
+						collision_tags = "left arm"
+						radius = 7.0
+						point0 = [ 0.784816, 21.059484, 0.797696 ]
+						point1 = [ -1.108822, 7.128082, 1.088658 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "paw_L"
+						surface_prop = "flesh"
+						collision_tags = "left arm"
+						origin = [ 0.65452, 8.783503, 0.798742 ]
+						angles = [ 0.0, 0.0, 6.71872 ]
+						dimensions = [ 11.30905, 17.569403, 5.249554 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "thigh_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000002, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "left leg"
+						radius = 10.0
+						point0 = [ 0.447346, 19.844198, -0.390057 ]
+						point1 = [ -0.905668, 4.759912, 0.151161 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "shin_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "left leg"
+						radius = 6.5
+						point0 = [ 0.458043, 17.404774, 0.244364 ]
+						point1 = [ 0.211192, 1.885564, -0.970271 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeBox"
 						parent_bone = "foot_L"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "left leg"
+						origin = [ 1.355626, 5.815108, -0.588366 ]
+						angles = [ -0.281139, -0.019532, 8.45795 ]
+						dimensions = [ 10.247211, 19.985979, 4.699303 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "clavicle_R"
+						surface_prop = "flesh"
+						collision_tags = "right arm"
+						radius = 10.0
+						point0 = [ -1.00839, 23.3908, -3.17092 ]
+						point1 = [ 1.76265, 5.25752, 0.838476 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "upperarm_R"
+						surface_prop = "flesh"
+						collision_tags = "right arm"
+						radius = 9.0
+						point0 = [ -1.38197, 35.071899, 2.79767 ]
+						point1 = [ 1.4024, 3.22397, 3.38454 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "arm_R"
+						surface_prop = "flesh"
+						collision_tags = "right arm"
+						radius = 7.0
+						point0 = [ -0.784816, 21.0595, 0.797696 ]
+						point1 = [ 1.10882, 7.12808, 1.08866 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "paw_R"
+						surface_prop = "flesh"
+						collision_tags = "right arm"
+						origin = [ -0.65452, 8.7835, 0.798742 ]
+						angles = [ 0.0, 0.0, 6.71872 ]
+						dimensions = [ 11.30905, 17.569403, 5.249554 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "thigh_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ 0.0, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "right leg"
+						radius = 10.0
+						point0 = [ -0.447346, 19.8442, -0.390057 ]
+						point1 = [ 0.905668, 4.75991, 0.151161 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeCapsule"
 						parent_bone = "shin_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000004, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "right leg"
+						radius = 6.5
+						point0 = [ -0.458043, 17.4048, 0.244364 ]
+						point1 = [ -0.211192, 1.88556, -0.970271 ]
 					},
 					{
-						_class = "PhysicsShapeSphere"
+						_class = "PhysicsShapeBox"
 						parent_bone = "foot_R"
-						surface_prop = "default"
-						collision_tags = "solid"
-						radius = 7.0
-						center = [ -0.000002, 0.0, 0.0 ]
+						surface_prop = "flesh"
+						collision_tags = "right leg"
+						origin = [ -1.35563, 5.81511, -0.588366 ]
+						angles = [ -0.281139, -0.019532, 8.45795 ]
+						dimensions = [ 10.247211, 19.985979, 4.699303 ]
 					},
 				]
 			},
@@ -223,13 +242,13 @@
 						anchor_origin = [ 0.000004, 12.987036, 0.000015 ]
 						anchor_angles = [ -5.95735, -90.000015, -90.000061 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
 						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -238,13 +257,13 @@
 						anchor_origin = [ -0.000001, 11.71944, -0.000015 ]
 						anchor_angles = [ -5.244389, 90.000008, -90.000008 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
 						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -253,13 +272,13 @@
 						anchor_origin = [ 0.0, 11.200568, 0.000008 ]
 						anchor_angles = [ 3.15776, -90.0, -89.999954 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
 						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -268,12 +287,12 @@
 						anchor_origin = [ -0.000013, 18.990871, 0.000008 ]
 						anchor_angles = [ 21.279507, -150.871292, -78.566902 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
+						min_twist_angle = -45.0
 						max_twist_angle = 15.0
 					},
 					{
@@ -283,28 +302,25 @@
 						anchor_origin = [ 0.000006, 23.495129, 0.0 ]
 						anchor_angles = [ -59.509949, -79.971489, 146.736282 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 45.0
 					},
 					{
-						_class = "PhysicsJointConical"
+						_class = "PhysicsJointRevolute"
 						parent_body = "upperarm_L"
 						child_body = "arm_L"
 						anchor_origin = [ -0.000042, 36.941494, -0.000023 ]
 						anchor_angles = [ -35.776417, 92.749245, -90.258568 ]
 						collision_enabled = false
-						friction = 0.1
-						enable_swing_limit = true
-						swing_limit = 30.0
-						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
-						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						friction = 0.3
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 15.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -313,13 +329,13 @@
 						anchor_origin = [ -0.00005, 25.598402, -0.000011 ]
 						anchor_angles = [ -52.186234, 89.298698, -93.130119 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 90.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -328,12 +344,12 @@
 						anchor_origin = [ -0.000013, 18.990871, 0.000008 ]
 						anchor_angles = [ 21.279507, -29.128767, -101.433121 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
+						min_twist_angle = -45.0
 						max_twist_angle = 15.0
 					},
 					{
@@ -343,28 +359,25 @@
 						anchor_origin = [ -0.000032, 23.495119, -0.000019 ]
 						anchor_angles = [ 59.509972, 79.971497, 146.736252 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 45.0
 					},
 					{
-						_class = "PhysicsJointConical"
+						_class = "PhysicsJointRevolute"
 						parent_body = "upperarm_R"
 						child_body = "arm_R"
 						anchor_origin = [ -0.000019, 36.941521, -0.000036 ]
 						anchor_angles = [ -35.776371, 87.250801, -89.741478 ]
 						collision_enabled = false
-						friction = 0.1
-						enable_swing_limit = true
-						swing_limit = 30.0
-						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
-						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						friction = 0.3
+						enable_limit = true
+						min_angle = -90.0
+						max_angle = 15.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -373,13 +386,13 @@
 						anchor_origin = [ -0.000019, 25.598433, -0.000019 ]
 						anchor_angles = [ -52.18623, 90.701302, -86.869881 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 90.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -388,13 +401,13 @@
 						anchor_origin = [ -0.000013, 18.990871, 0.000008 ]
 						anchor_angles = [ -0.425137, 90.000008, -89.999969 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -45.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -403,13 +416,13 @@
 						anchor_origin = [ -0.000015, 10.124111, -0.000015 ]
 						anchor_angles = [ 13.590899, 90.0, -90.000053 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
-						swing_limit = 30.0
+						swing_limit = 45.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -45.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -418,28 +431,25 @@
 						anchor_origin = [ -13.622389, -6.807858, -8.984623 ]
 						anchor_angles = [ 80.665131, -90.453979, 89.553879 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
-						swing_limit = 30.0
+						swing_limit = 45.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 60.0
 					},
 					{
-						_class = "PhysicsJointConical"
+						_class = "PhysicsJointRevolute"
 						parent_body = "thigh_L"
 						child_body = "shin_L"
 						anchor_origin = [ -0.000004, 26.816879, -0.000023 ]
 						anchor_angles = [ 9.991107, 89.365242, -90.015541 ]
 						collision_enabled = false
-						friction = 0.1
-						enable_swing_limit = true
-						swing_limit = 30.0
-						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
-						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						friction = 0.3
+						enable_limit = true
+						min_angle = -10.0
+						max_angle = 90.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -448,13 +458,13 @@
 						anchor_origin = [ 0.000004, 22.443697, -0.000034 ]
 						anchor_angles = [ 80.725204, 1.013706, 0.970321 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -90.0
+						max_twist_angle = 45.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -463,28 +473,25 @@
 						anchor_origin = [ 13.622398, -6.807848, -8.984631 ]
 						anchor_angles = [ -80.665123, 90.453941, 89.553879 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
-						swing_limit = 30.0
+						swing_limit = 45.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -60.0
+						max_twist_angle = 60.0
 					},
 					{
-						_class = "PhysicsJointConical"
+						_class = "PhysicsJointRevolute"
 						parent_body = "thigh_R"
 						child_body = "shin_R"
 						anchor_origin = [ 0.000023, 26.816881, -0.000042 ]
-						anchor_angles = [ -9.991114, -89.365242, -90.015541 ]
+						anchor_angles = [ -9.99111, -89.365196, 90.015503 ]
 						collision_enabled = false
-						friction = 0.1
-						enable_swing_limit = true
-						swing_limit = 30.0
-						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
-						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						friction = 0.3
+						enable_limit = true
+						min_angle = -10.0
+						max_angle = 90.0
 					},
 					{
 						_class = "PhysicsJointConical"
@@ -493,13 +500,13 @@
 						anchor_origin = [ 0.000015, 22.443714, -0.000031 ]
 						anchor_angles = [ 80.725204, 178.986313, 179.029709 ]
 						collision_enabled = false
-						friction = 0.1
+						friction = 0.3
 						enable_swing_limit = true
 						swing_limit = 30.0
 						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
 						enable_twist_limit = true
-						min_twist_angle = -15.0
-						max_twist_angle = 15.0
+						min_twist_angle = -90.0
+						max_twist_angle = 45.0
 					},
 				]
 			},

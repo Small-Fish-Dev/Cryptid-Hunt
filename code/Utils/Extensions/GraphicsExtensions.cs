@@ -1,6 +1,6 @@
 ﻿namespace SpookyJam2022;
 
-public partial class Extensions
+public static partial class Extensions
 {
 	/// <summary>
 	/// Draws an outline box.
