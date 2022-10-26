@@ -70,7 +70,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -384.0, -48.0 ]
+					m_vecPosition = [ -128.0, 32.0 ]
 					m_nNodeID = 
 					{
 						m_id = 96911607
@@ -92,7 +92,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -384.0, 64.0 ]
+					m_vecPosition = [ 320.0, 112.0 ]
 					m_nNodeID = 
 					{
 						m_id = 237207682
@@ -169,7 +169,7 @@
 							{
 								m_nodeID = 
 								{
-									m_id = 1037925444
+									m_id = 1920785495
 								}
 								m_outputID = 
 								{
@@ -271,7 +271,7 @@
 				{
 					_class = "CSingleFrameAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -384.0, 16.0 ]
+					m_vecPosition = [ 320.0, 64.0 ]
 					m_nNodeID = 
 					{
 						m_id = 450889435
@@ -314,7 +314,7 @@
 				{
 					_class = "CAddAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 96.0, -16.0 ]
+					m_vecPosition = [ 816.0, 32.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1037925444
@@ -325,7 +325,7 @@
 					{
 						m_nodeID = 
 						{
-							m_id = 1920785495
+							m_id = 87783558
 						}
 						m_outputID = 
 						{
@@ -354,68 +354,13 @@
 			{
 				key = 
 				{
-					m_id = 1406879311
-				}
-				value = 
-				{
-					_class = "CBlend2DAnimNode"
-					m_sName = "Unnamed"
-					m_vecPosition = [ -160.0, -16.0 ]
-					m_nNodeID = 
-					{
-						m_id = 1406879311
-					}
-					m_networkMode = "ServerAuthoritative"
-					m_sNote = ""
-					m_items = 
-					[
-						{
-							_class = "CBlend2DItem"
-							m_tagSpans = [  ]
-							m_sequenceName = "polewik_run"
-							m_blendValue = [ 50.0, 100.0 ]
-						},
-						{
-							_class = "CBlend2DItem"
-							m_tagSpans = [  ]
-							m_sequenceName = "bind"
-							m_blendValue = [ 0.0, 50.0 ]
-						},
-					]
-					m_blendSourceX = "Parameter"
-					m_paramX = 
-					{
-						m_id = 1010061815
-					}
-					m_blendSourceY = "Parameter"
-					m_paramY = 
-					{
-						m_id = 1010061815
-					}
-					m_bLoop = true
-					m_bLockBlendOnReset = false
-					m_bLockWhenWaning = true
-					m_playbackSpeed = 1.0
-					m_damping = 
-					{
-						_class = "CAnimInputDamping"
-						m_speedFunction = "NoDamping"
-						m_fSpeedScale = 1.0
-						m_fMinSpeed = 10.0
-						m_fMaxTension = 1000.0
-					}
-				}
-			},
-			{
-				key = 
-				{
 					m_id = 1488536905
 				}
 				value = 
 				{
 					_class = "CSubtractAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -160.0, 48.0 ]
+					m_vecPosition = [ 576.0, 96.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1488536905
@@ -461,7 +406,7 @@
 				{
 					_class = "CSingleFrameAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -384.0, -96.0 ]
+					m_vecPosition = [ -128.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1615174648
@@ -482,7 +427,7 @@
 				{
 					_class = "CRootAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 752.0, -16.0 ]
+					m_vecPosition = [ 1056.0, 32.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1910253141
@@ -493,7 +438,7 @@
 					{
 						m_nodeID = 
 						{
-							m_id = 87783558
+							m_id = 1037925444
 						}
 						m_outputID = 
 						{
@@ -511,7 +456,7 @@
 				{
 					_class = "CBlendAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -160.0, -96.0 ]
+					m_vecPosition = [ 96.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1920785495
