@@ -6,7 +6,9 @@ public enum PolewikState
 	Patrolling,
 	Stalking,
 	Following,
-	Attacking
+	Attacking,
+	Fleeing,
+	Pain
 }
 
 
@@ -31,6 +33,37 @@ public partial class Polewik : AnimatedEntity
 
 				NavigateTo( NearestNode.WorldPosition );
 				CurrentPathId = PatrolPath.PathNodes.IndexOf( NearestNode );
+
+			}
+
+			if ( value == PolewikState.Pain )
+			{
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 1f );
+
+					CurrentState = PolewikState.Fleeing;
+
+				} );
+
+			}
+
+			if ( value == PolewikState.Fleeing )
+			{
+
+				NavigateTo( FurthestNode.WorldPosition );
+				CurrentPathId = PatrolPath.PathNodes.IndexOf( FurthestNode );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( Rand.Float( 15f, 30f ) );
+
+					CurrentState = PolewikState.Patrolling;
+
+				} );
 
 			}
 
@@ -86,7 +119,13 @@ public partial class Polewik : AnimatedEntity
 		if ( Disabled ) return;
 
 		ComputeAnimation();
-		ComputeMovement();
+
+		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
+		{
+
+			ComputeMovement();
+
+		}
 
 	}
 
@@ -245,7 +284,8 @@ public partial class Polewik : AnimatedEntity
 	
 	}
 
-	public BasePathNode NearestNode => PatrolPath.PathNodes.OrderBy( x => x.Position.Distance( Position ) ).FirstOrDefault();
+	public BasePathNode NearestNode => PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).FirstOrDefault();
+	public BasePathNode FurthestNode => PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).LastOrDefault();
 
 	[Event.Tick.Server]
 	private void computeAI()
