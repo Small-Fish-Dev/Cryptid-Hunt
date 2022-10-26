@@ -5,8 +5,8 @@ public partial class Item
 	public enum AmountType
 	{
 		Liters,
-		Kilograms,
-		Amount
+		Float,
+		Integer
 	}
 
 	[GameResource( "Item", "item", "An item resource." )]
@@ -23,7 +23,7 @@ public partial class Item
 		[Category( "Icon" )] public Vector3 Position { get; set; }
 
 		[Category( "Amount" )] public float MaxAmount { get; set; } = 1;
-		[Category( "Amount" )] public AmountType AmountType { get; set; } = AmountType.Amount;
+		[Category( "Amount" )] public AmountType AmountType { get; set; } = AmountType.Integer;
 
 		[Category( "Other" )] public float Weight { get; set; } = 1;
 
