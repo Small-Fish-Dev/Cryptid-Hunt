@@ -48,7 +48,7 @@ public class Inventory : Panel
 	[Event.BuildInput]
 	private void buildInput( InputBuilder input )
 	{
-		if ( input.Released( InputButton.Score ) )
+		if ( input.Released( InputButton.Score ) && MainMenu.Instance == null )
 			Active = !Active;
 	}
 
