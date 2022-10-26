@@ -19,10 +19,18 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 20.008274
+						switch_threshold = 122.669334
 						meshes = 
 						[
 							"Low",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 261.544128
+						meshes = 
+						[
+							"",
 						]
 					},
 				]
@@ -62,7 +70,7 @@
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
 						filename = "models/environment/rubble/concrete_pile_small/concrete_pile_small_col.fbx"
-						import_scale = 0.3937
+						import_scale = 1.0
 						maxMeshVertices = 0
 						qemError = 0.0
 						import_filter = 
@@ -87,7 +95,7 @@
 						filename = "models/environment/rubble/concrete_pile_small/concrete_pile_small_lod0.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 0.3937
+						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -108,7 +116,7 @@
 						filename = "models/environment/rubble/concrete_pile_small/concrete_pile_small_lod1.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
-						import_scale = 0.3937
+						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
