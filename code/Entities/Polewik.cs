@@ -67,6 +67,20 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( value == PolewikState.Stalking )
+			{
+
+				startedStalking = 0f;
+
+			}
+
+			if ( value == PolewikState.Following )
+			{
+
+				startedFollowing = 0f;
+
+			}
+
 		}
 	}
 	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
@@ -100,6 +114,8 @@ public partial class Polewik : AnimatedEntity
 		}
 	}
 
+	public Player Victim;
+
 	public override void Spawn()
 	{
 
@@ -113,6 +129,11 @@ public partial class Polewik : AnimatedEntity
 
 	}
 
+	public Player ClosestPlayer => Entity.All.OfType<Player>().OrderBy( x => x.Position.Distance( this.Position ) ).FirstOrDefault();
+	TimeSince lastCalculatedPath;
+	TimeSince startedStalking;
+	TimeSince startedFollowing;
+
 	public virtual void ComputeAI()
 	{
 
@@ -124,6 +145,57 @@ public partial class Polewik : AnimatedEntity
 		{
 
 			ComputeMovement();
+
+		}
+
+		if ( CurrentState == PolewikState.Patrolling )
+		{
+
+			if ( ClosestPlayer.Position.Distance( Position ) <= 2000f )
+			{
+
+				CurrentState = PolewikState.Stalking;
+
+			}
+
+		}
+
+		if ( CurrentState == PolewikState.Stalking )
+		{
+
+			if ( lastCalculatedPath >= 2f )
+			{
+
+				NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
+
+			}
+
+			if ( ClosestPlayer.Position.Distance( Position ) <= 1000f || startedStalking >= 45f )
+			{
+
+				Victim = ClosestPlayer;
+				CurrentState = PolewikState.Following;
+
+			}
+
+		}
+
+		if ( CurrentState == PolewikState.Following && Victim != null )
+		{
+
+			if ( lastCalculatedPath >= 0.5f )
+			{
+
+				NavigateTo( Victim.Position );
+
+			}
+
+			if ( startedFollowing >= 15f )
+			{
+
+				CurrentState = PolewikState.Patrolling;
+
+			}
 
 		}
 
@@ -241,6 +313,8 @@ public partial class Polewik : AnimatedEntity
 		TargetPosition = pos;
 		ReachedTarget = false;
 
+		lastCalculatedPath = 0f;
+
 		return true;
 
 	}
@@ -268,7 +342,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * MoveSpeed;
+		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * (CurrentState == PolewikState.Fleeing ? SprintSpeed : MoveSpeed);
 
 		if ( GroundEntity == null )
 		{
@@ -284,7 +358,14 @@ public partial class Polewik : AnimatedEntity
 	
 	}
 
-	public BasePathNode NearestNode => PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).FirstOrDefault();
+	public BasePathNode ClosestNodeTo( Vector3 pos )
+	{
+
+		return PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( pos ) ).FirstOrDefault();
+
+	}
+
+	public BasePathNode NearestNode => ClosestNodeTo( Position );
 	public BasePathNode FurthestNode => PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).LastOrDefault();
 
 	[Event.Tick.Server]
