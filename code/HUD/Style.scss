@@ -280,13 +280,57 @@ Inventory {
     .itemContainer {
         position: absolute;
         top: 175px;
-        width: 900px;
-        aspect-ratio: 1;
+        width: 1100px;
+        height: 900px;
         background-image: url(ui/brushes4.png);
-        background-image-tint: rgba(300, 300, 300, 0.9);
-        background-size: cover;
-        padding: 20px;
-        margin: -20px;
+        background-image-tint: rgba(350, 350, 350, 1);
+        background-size: 99%;
+        background-repeat: no-repeat;
+        padding: 60px;
+        margin: -60px;
         left: 0px;
+
+        .slotContainer {
+            overflow: scroll;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .slot {
+                background-image: url(ui/slot_background.png);
+                background-size: cover;
+                width: 200px;
+                aspect-ratio: 1;
+                left: 80px;
+
+                .weight {
+                    position: absolute;
+                    right: 5px;
+                    bottom: 5px;
+                    flex-direction: row;
+                    font-family: ComicNeue-Bold;
+                    color: rgba(150, 150, 150, 1);
+                    background-image: url(ui/brushes2.png);
+                    padding: 10px;
+                    background-image-tint: rgba(300, 300, 300, 0.5);
+                    background-size: 100%;
+
+                    .icon {
+                        background-image: url(ui/weight.png);
+                        background-size: cover;
+                        width: 10px;
+                        height: 25px;
+                        background-image-tint: rgba(150, 150, 150, 1);
+                        padding-right: 15px;
+                    }
+
+                    .text {
+                        top: 2px;
+                        font-size: 18px;
+                        padding-left: 5px;
+                        text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                    }
+                }
+            }
+        }
     }
 }

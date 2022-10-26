@@ -18,7 +18,8 @@ public class Inventory : Panel
 	Label weightNumber;
 	Label weightOver;
 
-	Panel itemContainer;
+	Dictionary<int, Panel> slots = new();
+	Panel slotContainer;
 
 	public Inventory()
 	{
@@ -38,7 +39,8 @@ public class Inventory : Panel
 		weightNumber = weightContainer.AddChild<Label>( "weight" );
 		weightOver = weightContainer.AddChild<Label>( "weight" );
 
-		itemContainer = AddChild<Panel>( "itemContainer" );
+		var itemContainer = AddChild<Panel>( "itemContainer" );
+		slotContainer = itemContainer.AddChild<Panel>( "slotContainer" );
 
 		Refresh();
 	}
@@ -48,6 +50,26 @@ public class Inventory : Panel
 	{
 		if ( input.Released( InputButton.Score ) )
 			Active = !Active;
+	}
+
+	private void refreshSlot( Container container, int index )
+	{
+		Panel panel;
+		if ( !slots.TryGetValue( index, out panel ) )
+			slots.Add( index, panel = new Panel( slotContainer, "slot" ) );
+		panel.DeleteChildren( true );
+
+		var item = container[index];
+		if ( item != null )
+		{
+			var weight = panel.AddChild<Panel>( "weight" );
+			weight.AddChild<Panel>( "icon" );
+			var text = weight.AddChild<Label>( "text" );
+			text.Text = $"{(item.Amount * item.Resource.Weight):N1} KG";
+		}
+
+		panel.Style.SetBackgroundImage( item != null ? "/ui/slot_background_outline.png" : "/ui/slot_background.png" );
+		panel.Style.BackgroundTint = Color.Gray.WithAlpha( 0.75f );
 	}
 
 	public void Refresh()
@@ -65,5 +87,8 @@ public class Inventory : Panel
 
 		weightOver.Text = $"({(inventory.MaxWeight - inventory.Weight):N1} KG)";
 		weightOver.Style.FontColor = len == 1f ? new Color( 0.8f, 0.4f, 0.4f ) : new Color( 0.4f, 0.8f, 0.4f );
+
+		for ( int i = 0; i < 24; i++ )
+			refreshSlot( inventory, i );
 	}
 }
