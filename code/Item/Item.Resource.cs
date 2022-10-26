@@ -19,6 +19,7 @@ public partial class Item
 		[Category( "Visual" )] public string Description { get; set; } = "Empty description.";
 		[Category( "Visual" )] public Color Color { get; set; } = Color.White;
 
+		[Category( "Icon" ), ResourceType( "vmdl" )] public string Model { get; set; }
 		[Category( "Icon" )] public Angles Angles { get; set; }
 		[Category( "Icon" )] public Vector3 Position { get; set; }
 
@@ -27,10 +28,38 @@ public partial class Item
 
 		[Category( "Other" )] public float Weight { get; set; } = 1;
 
+		[HideInEditor, JsonIgnore] public Texture Icon { get; private set; }
+
 		protected override void PostLoad()
 		{
 			if ( !all.ContainsKey( ResourceName ) )
+			{
 				all.Add( ResourceName, this );
+
+				if ( Host.IsServer ) return;
+
+				var world = new SceneWorld();
+
+				var model = Sandbox.Model.Load( Model ) 
+					?? Sandbox.Model.Load( "models/dev/error.vmdl" );
+				var obj = new SceneModel(
+					world,
+					model,
+					new Transform( Position, Angles.ToRotation(), 1f ) );
+
+				var camera = new SceneCamera( "itemIcon" )
+				{
+					World = world,
+					Position = Vector3.Forward * 100f,
+					Rotation = Rotation.From( 0, 180, 0 ),
+					FieldOfView = 60f,
+					AmbientLightColor = Color.White,
+				};
+				var size = new Vector2( 256f, 256f );
+				var render = camera.Render( size );
+
+				Icon = render.Texture;
+			}
 		}
 	}
 

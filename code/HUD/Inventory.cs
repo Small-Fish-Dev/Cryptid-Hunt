@@ -66,6 +66,10 @@ public class Inventory : Panel
 			weight.AddChild<Panel>( "icon" );
 			var text = weight.AddChild<Label>( "text" );
 			text.Text = $"{(item.Amount * item.Resource.Weight):N1} KG";
+
+			var iconContainer = panel.AddChild<Panel>( "iconContainer" );
+			var icon = iconContainer.AddChild<Panel>( "itemIcon" );
+			icon.Style.BackgroundImage = item.Resource.Icon;
 		}
 
 		panel.Style.SetBackgroundImage( item != null ? "/ui/slot_background_outline.png" : "/ui/slot_background.png" );
