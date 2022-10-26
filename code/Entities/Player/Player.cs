@@ -144,9 +144,13 @@ public partial class Player : AnimatedEntity
 	public void StartGame()
 	{
 
+		if ( Host.IsClient ) return;
+
 		LockInputs = false;
 		OverrideCamera = null;
 		ScriptedEvent = false;
+
+		Sound.FromWorld( "sounds/misc/glass_break_intro.sound", PlayerSpawn.Initial.Transform.PointToWorld( new Vector3( -50f, 30f, 72f ) ) ).SetVolume( 15 );
 		
 	}
 
