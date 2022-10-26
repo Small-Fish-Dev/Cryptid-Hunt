@@ -174,7 +174,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Patrolling )
+		if ( CurrentState == PolewikState.Patrolling && PatrolPath != null )
 		{
 
 			if ( ClosestPlayer.Position.Distance( Position ) <= 2000f )
@@ -186,7 +186,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Stalking )
+		if ( CurrentState == PolewikState.Stalking && Victim != null && PatrolPath != null )
 		{
 
 			if ( lastCalculatedPath >= 2f )
@@ -206,7 +206,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Following && Victim != null )
+		if ( CurrentState == PolewikState.Following && Victim != null && PatrolPath != null )
 		{
 
 			if ( lastCalculatedPath >= 0.5f )
