@@ -20,6 +20,7 @@ public partial class SceneTransferDoor : BaseInteractable
 	{
 
 		if ( Locked ) return;
+		if ( Open ) return;
 
 		var target = PlayerSpawn.WithID( CheckpoindIDTarget );
 
@@ -50,7 +51,11 @@ public partial class SceneTransferDoor : BaseInteractable
 
 			}
 
-			await Task.DelaySeconds( 3f );
+			await Task.DelaySeconds( 2.5f );
+
+			Event.Run( "FlashLight", true );
+
+			await Task.DelaySeconds( 1f );
 
 			Sound.FromScreen( "sounds/music/piano_intro.sound" );
 

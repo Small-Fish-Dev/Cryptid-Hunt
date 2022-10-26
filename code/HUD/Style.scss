@@ -330,6 +330,21 @@ Inventory {
                         text-shadow: 0px 0px 4px rgb(30, 30, 30);
                     }
                 }
+
+                .iconContainer {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    margin: 10px;
+
+                    .itemIcon {
+                        position: absolute;
+                        background-size: 100%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }

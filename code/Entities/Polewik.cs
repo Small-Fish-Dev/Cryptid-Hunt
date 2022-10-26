@@ -117,6 +117,8 @@ public partial class Polewik : AnimatedEntity
 	public virtual Vector3 TargetPosition { get; set; }
 	public bool ReachedTarget { get; set; } = true;
 	public int CurrentPathId { get; set; } = 0;
+	public NavPath CurrentPath;
+	public float PathLength;
 
 	public BBox CollisionBox;
 
@@ -180,27 +182,45 @@ public partial class Polewik : AnimatedEntity
 			if ( ClosestPlayer.Position.Distance( Position ) <= 2000f )
 			{
 
+				Victim = ClosestPlayer;
 				CurrentState = PolewikState.Stalking;
 
 			}
 
 		}
 
-		if ( CurrentState == PolewikState.Stalking && Victim != null && PatrolPath != null )
+		if ( CurrentState == PolewikState.Stalking && PatrolPath != null )
 		{
 
-			if ( lastCalculatedPath >= 2f )
+			if ( Victim != null )
 			{
 
-				NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
+				if ( lastCalculatedPath >= 2f )
+				{
+
+					NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
+
+				}
+
+				if ( Victim.Position.Distance( Position ) <= 1000f || startedStalking >= 45f )
+				{
+
+					CurrentState = PolewikState.Following;
+
+				}
+
+				if ( PathLength >= 2500f )
+				{
+
+					CurrentState = PolewikState.Fleeing;
+
+				}
 
 			}
-
-			if ( ClosestPlayer.Position.Distance( Position ) <= 1000f || startedStalking >= 45f )
+			else
 			{
 
-				Victim = ClosestPlayer;
-				CurrentState = PolewikState.Following;
+				CurrentState = PolewikState.Patrolling;
 
 			}
 
@@ -223,10 +243,19 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= 600f )
+			if ( Victim.Position.Distance( Position ) <= 600f && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
 			{
 
 				CurrentState = PolewikState.Attacking;
+
+			}
+
+			Log.Info( PathLength );
+
+			if ( PathLength >= 2500f )
+			{
+
+				CurrentState = PolewikState.Fleeing;
 
 			}
 
@@ -239,6 +268,13 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				Victim.HP -= 1;
+
+				CurrentState = PolewikState.Fleeing;
+
+			}
+
+			if ( PathLength >= 2500f )
+			{
 
 				CurrentState = PolewikState.Fleeing;
 
@@ -353,6 +389,17 @@ public partial class Polewik : AnimatedEntity
 			.Build( pos );
 
 		if ( path == null ) return false;
+
+		CurrentPath = path;
+
+		PathLength = 0f;
+
+		for ( int i = 1; i < path.Segments.Count; i++ )
+		{
+
+			PathLength += path.Segments[i - 1].Position.Distance( path.Segments[i].Position );
+
+		}
 
 		PathIndex = 0;
 		PathPoints = path.Segments.Select( segment => segment.Position ).ToArray();
