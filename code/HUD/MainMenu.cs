@@ -2,6 +2,7 @@
 
 class MainMenu : Panel
 {
+	public static MainMenu Instance { get; private set; }
 
 	Button startButton;
 	Button creditsButton;
@@ -9,6 +10,7 @@ class MainMenu : Panel
 
 	public MainMenu()
 	{
+		Instance = this;
 
 		AddChild<Panel>( "Logo" );
 

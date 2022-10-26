@@ -123,4 +123,10 @@ public partial class Game : GameBase
 	}
 
 
+	public override void RenderHud()
+	{
+		base.RenderHud();
+		Event.Run( "Render" );
+	}
+
 }
