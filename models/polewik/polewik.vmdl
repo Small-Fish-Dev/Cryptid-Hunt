@@ -791,6 +791,43 @@
 						reverse = false
 					},
 					{
+						_class = "AnimFile"
+						name = "polewik_howl"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 16
+								event_keys = 
+								{
+									name = "car_intro"
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/polewik/polewik_howl.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
 						_class = "AnimBindPose"
 						name = "bind"
 						activity_name = ""
