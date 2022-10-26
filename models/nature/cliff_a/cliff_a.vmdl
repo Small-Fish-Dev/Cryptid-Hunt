@@ -19,7 +19,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 23.090666
+						switch_threshold = 183.575974
 						meshes = 
 						[
 							"medium",
@@ -27,7 +27,7 @@
 					},
 					{
 						_class = "LODGroup"
-						switch_threshold = 61.581493
+						switch_threshold = 594.11322
 						meshes = 
 						[
 							"low",
