@@ -71,7 +71,6 @@ public partial class ScriptedEventTrigger : BaseTrigger
 
 	}
 
-	[ClientRpc]
 	public void StartScriptedEvent( string camera, ScriptedEventTrigger trigger )
 	{
 
@@ -79,7 +78,6 @@ public partial class ScriptedEventTrigger : BaseTrigger
 
 	}
 
-	[ClientRpc]
 	public void EndScriptedEvent()
 	{
 

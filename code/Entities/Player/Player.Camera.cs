@@ -77,8 +77,6 @@ public partial class Player
 	void startScriptedEvent( string name, ScriptedEventTrigger trigger )
 	{
 
-		ScriptedEvent = true;
-
 		foreach ( var ent in Entity.All ) // FindByName doesn't work????
 		{
 
@@ -88,12 +86,12 @@ public partial class Player
 			{
 
 				OverrideCamera = camera;
+				OverrideTrigger = trigger;
+				ScriptedEvent = true;
 
 			}
 
 		}
-
-		OverrideTrigger = trigger;
 
 	}
 

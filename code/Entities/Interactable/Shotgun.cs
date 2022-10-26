@@ -26,6 +26,9 @@ public partial class Shotgun : BaseInteractable
 	public override void Use( Player player )
 	{
 
+		var totalDamage = 0f;
+		Polewik victim = null;
+
 		for ( int i = 0; i < BulletsPerShot; i++ )
 		{
 
@@ -34,29 +37,47 @@ public partial class Shotgun : BaseInteractable
 				.Ignore( player )
 				.Run();
 
-			var force = ( 1f - trace.StartPosition.Distance( trace.EndPosition ) / DamageFalloff );
+			//DebugOverlay.Sphere( trace.EndPosition, 5f, new Color( force, 0, 0 ), 2f );
 
-			DebugOverlay.Sphere( trace.EndPosition, 5f, new Color( force, 0, 0 ), 2f );
 			
 			if ( trace.Entity is Polewik polewik )
 			{
 
-				polewik.HP -= DamagePerBullet * force;
+				totalDamage += DamagePerBullet;
 
-				Log.Info( polewik.HP );
-
-				if ( polewik.HP <= 0 )
-				{
-
-					polewik.Delete();
-					return;
-
-				}
+				victim = polewik;
 
 			}
 
 
 		}
+
+		if ( victim != null )
+		{
+
+			victim.HP -= totalDamage;
+
+			if ( victim.HP <= 0 )
+			{
+
+				victim.Delete();
+
+			}
+
+			if ( totalDamage >= 10 )
+			{
+
+				if ( victim.CurrentState != PolewikState.Pain && victim.CurrentState != PolewikState.Fleeing )
+				{
+
+					victim.CurrentState = PolewikState.Pain;
+
+				}
+
+			}
+
+		}
+
 
 	}
 
