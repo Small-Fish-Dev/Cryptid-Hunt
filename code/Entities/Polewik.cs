@@ -8,7 +8,10 @@ public enum PolewikState
 	Following,
 	Attacking,
 	Fleeing,
-	Pain
+	Pain,
+	Yell,
+	AttackPersistent,
+	Jumpscare
 }
 
 
@@ -45,6 +48,21 @@ public partial class Polewik : AnimatedEntity
 					await GameTask.DelaySeconds( 1f );
 
 					CurrentState = PolewikState.Fleeing;
+
+				} );
+
+			}
+
+			if ( value == PolewikState.Yell )
+			{
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 1f );
+
+					Victim = ClosestPlayer;
+					CurrentState = PolewikState.AttackPersistent;
 
 				} );
 
@@ -109,12 +127,25 @@ public partial class Polewik : AnimatedEntity
 		}
 	}
 	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
-	public virtual string ModelName => "models/polewik/polewik.vmdl";
-	public virtual float MoveSpeed => 300f;
-	public virtual float SprintSpeed => 450f;
-	public virtual float Gravity => 700f;
-	public virtual NavAgentHull Agent => NavAgentHull.Agent1;
-	public virtual Vector3 TargetPosition { get; set; }
+	public string ModelName => "models/polewik/polewik.vmdl";
+	public float Gravity => 700f;
+	public Dictionary<PolewikState, float> Speeds = new()
+	{
+		{ PolewikState.Idle, 0f },
+		{ PolewikState.Patrolling, 300f },
+		{ PolewikState.Stalking, 300f },
+		{ PolewikState.Following, 300f },
+		{ PolewikState.Attacking, 1800f },
+		{ PolewikState.Fleeing, 450f },
+		{ PolewikState.Pain, 0f },
+		{ PolewikState.Yell, 0f },
+		{ PolewikState.AttackPersistent, 300f },
+		{ PolewikState.Jumpscare, 0f }
+
+	};
+	public float CurrentSpeed => Speeds[CurrentState];
+	public NavAgentHull Agent => NavAgentHull.Agent1;
+	public Vector3 TargetPosition { get; set; }
 	public bool ReachedTarget { get; set; } = true;
 	public int CurrentPathId { get; set; } = 0;
 	public NavPath CurrentPath;
@@ -249,8 +280,6 @@ public partial class Polewik : AnimatedEntity
 				CurrentState = PolewikState.Attacking;
 
 			}
-
-			Log.Info( PathLength );
 
 			if ( PathLength >= 2500f )
 			{
@@ -436,10 +465,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		bool shouldSprint = CurrentState == PolewikState.Fleeing;
-		bool shouldJump = CurrentState == PolewikState.Attacking;
-
-		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * ( shouldSprint ? SprintSpeed : shouldJump ? 1800f : MoveSpeed );
+		WishVelocity = (NextPosition.WithZ( 0 ) - Position.WithZ( 0 )).Normal * CurrentSpeed;
 
 		if ( GroundEntity == null )
 		{
