@@ -204,7 +204,7 @@ MainMenu {
 
 Inventory {
     position: absolute;
-    background-color: rgba(black, 0.9);
+    background-color: rgba(black, 0.98);
     backdrop-filter: blur(5px);
     width: 100%;
     height: 100%;
@@ -212,11 +212,11 @@ Inventory {
     transition: opacity 0.5s ease-in-out;
     pointer-events: all;
 
-    .titleContainer {
+    .container {
         position: absolute;
         left: 20px;
         top: 20px;
-        font-family: 'Comic Sans MS';
+        font-family: ComicNeue-Bold;
         flex-direction: column;
 
         .title {
@@ -225,27 +225,27 @@ Inventory {
             font-weight: 500;
             text-shadow: 0px 0px 8px white;
             background-image: url(ui/brushes2.png);
-            background-image-tint: rgba(500, 500, 500, 0.1);
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
-            padding: 5px;
+            padding: 20px 30px 20px 20px;
+            margin: -20px -30px -20px -15px;
+            font-family: Neucha-Regular;
         }
 
         .weightBarContainer {
             background-image: url(ui/brushes2.png);
-            background-image-tint: rgba(500, 500, 500, 0.1);
             background-position: center;
             background-size: 100%;
-            background-repeat: no-repeat;
-            padding: 20px 20px 20px 0px;
-            margin: -20px -20px -20px 0px;
+            padding: 30px 45px 30px 20px;
+            margin: -25px -45px -30px -20px;
 
             .weightBar {
                 width: 300px;
                 height: 25px;
                 background-image: url(ui/bar.png);
-                background-image-tint: black;
+                background-size: 100%;
+                background-image-tint: rgb(50, 50, 50);
 
                 .inner {
                     position: absolute;
@@ -260,15 +260,20 @@ Inventory {
             }
         }
 
-        .weight {
-            color: rgb(120, 120, 120);
-            font-size: 24px;
-            text-shadow: 0px 0px 4px rgb(20, 20, 20);
-            background-image: url(ui/brushes6.png);
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            padding: 5px;
+        .weightContainer {
+            flex-direction: row;
+
+            .weight {
+                color: rgb(120, 120, 120);
+                font-size: 20px;
+                text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                padding: 5px;
+                font-weight: 600;
+                background-image: url(ui/brushes6.png);
+                background-image-tint: rgba(350, 350, 350, 1);
+                background-position: center;
+                background-size: 100%;
+            }
         }
     }
 
@@ -278,9 +283,10 @@ Inventory {
         width: 900px;
         aspect-ratio: 1;
         background-image: url(ui/brushes4.png);
-        background-image-tint: rgba(500, 500, 500, 0.5);
+        background-image-tint: rgba(300, 300, 300, 0.9);
         background-size: cover;
         padding: 20px;
         margin: -20px;
+        left: 0px;
     }
 }

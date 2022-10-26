@@ -16,6 +16,7 @@ public class Inventory : Panel
 
 	Panel weightDisplay;
 	Label weightNumber;
+	Label weightOver;
 
 	Panel itemContainer;
 
@@ -23,16 +24,19 @@ public class Inventory : Panel
 	{
 		Instance = this;
 
-		var titleContainer = AddChild<Panel>( "titleContainer" );
+		var container = AddChild<Panel>( "container" );
+
+		var titleContainer = container.AddChild<Panel>( "titleContainer" );
 		var title = titleContainer.AddChild<Label>( "title" );
 		title.Text = "BACKPACK";
 
-		var weightBarContainer = titleContainer.AddChild<Panel>( "weightBarContainer" );
+		var weightBarContainer = container.AddChild<Panel>( "weightBarContainer" );
 		var weightBar = weightBarContainer.AddChild<Panel>( "weightBar" );
 		weightDisplay = weightBar.AddChild<Panel>( "inner" );
 
-		var weightContainer = titleContainer.AddChild<Panel>( "weightContainer" );
+		var weightContainer = container.AddChild<Panel>( "weightContainer" );
 		weightNumber = weightContainer.AddChild<Label>( "weight" );
+		weightOver = weightContainer.AddChild<Label>( "weight" );
 
 		itemContainer = AddChild<Panel>( "itemContainer" );
 
@@ -57,5 +61,9 @@ public class Inventory : Panel
 
 		var len = MathF.Min( inventory.Weight / inventory.MaxWeight, 1f );
 		weightDisplay.Style.Width = Length.Fraction( len );
+		weightDisplay.Style.BackgroundTint = len == 1f ? new Color( 0.8f, 0.4f, 0.4f ) : Color.White;
+
+		weightOver.Text = $"({(inventory.MaxWeight - inventory.Weight):N1} KG)";
+		weightOver.Style.FontColor = len == 1f ? new Color( 0.8f, 0.4f, 0.4f ) : new Color( 0.4f, 0.8f, 0.4f );
 	}
 }
