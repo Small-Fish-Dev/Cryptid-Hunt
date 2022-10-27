@@ -12,7 +12,7 @@ public partial class Player
 		{
 			Enabled = true,
 			DynamicShadows = true,
-			Range = 512,
+			Range = 2048,
 			Falloff = 1.0f,
 			LinearAttenuation = 0.0f,
 			QuadraticAttenuation = 1.0f,
@@ -24,6 +24,8 @@ public partial class Player
 			Owner = Owner,
 			LightCookie = Texture.Load( "materials/effects/lightcookie.vtex" )
 		};
+
+		light.Transmit = TransmitType.Always;
 
 		return light;
 	}

@@ -33,7 +33,7 @@ public partial class ScriptedEventCamera : Entity
 		if ( Target != null )
 		{
 
-			Position = Target.Transform.PointToWorld( new Vector3( 60f, 0f, 72f ) );
+			Position = Target.Transform.PointToWorld( new Vector3( 70f, 0f, 72f ) );
 			Rotation = Rotation.LookAt( Target.GetBoneTransform( Target.GetBoneIndex( "camera" ) ).Position - Position );
 
 		}

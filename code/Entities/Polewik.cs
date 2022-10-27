@@ -150,6 +150,25 @@ public partial class Polewik : AnimatedEntity
 
 				SetAnimParameter( "attack", true );
 
+				var light = new SpotLightEntity
+				{
+					Enabled = true,
+					DynamicShadows = true,
+					Range = 256,
+					Falloff = 1.0f,
+					LinearAttenuation = 0.0f,
+					QuadraticAttenuation = 1.0f,
+					Brightness = 0.01f,
+					Color = new Color( 240, 120, 120 ),
+					InnerConeAngle = 20,
+					OuterConeAngle = 90,
+					FogStrength = 1.0f
+				};
+
+				light.Position = Transform.PointToWorld( new Vector3( 80, 0, 72 ) );
+				light.Rotation = Rotation.LookAt( Position - Transform.PointToWorld( new Vector3( 80, 0, 72 ) ) );
+				light.Enabled = true;
+
 				GameTask.RunInThreadAsync( async () =>
 				{
 
@@ -160,6 +179,8 @@ public partial class Polewik : AnimatedEntity
 					// TODO: Maybe code here for the attack HP
 
 					await GameTask.DelaySeconds( 1.6f );
+
+					light.Delete();
 
 					if ( CurrentState == PolewikState.Jumpscare )
 					{
