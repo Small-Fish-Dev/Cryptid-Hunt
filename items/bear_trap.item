@@ -1,0 +1,15 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	data = 
+	{
+		Title = "Bear Trap"
+		Description = "Looks sharp, better be careful with it."
+		Color = "0.79474,0.44967,0.21827,1"
+		Model = resource:"models/items/beartrap.vmdl"
+		Angles = "45,0,0"
+		Position = "20,0,0"
+		MaxAmount = 1
+		AmountType = "Integer"
+		Weight = 4.2
+	}
+}
