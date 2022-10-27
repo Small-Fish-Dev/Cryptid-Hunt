@@ -82,7 +82,7 @@ public partial class Player
 
 			if ( ent is not ScriptedEventCamera camera ) continue;
 
-			if ( camera.Name == name )
+			if ( camera.Name == name || camera.Name.Contains( name ) )
 			{
 
 				OverrideCamera = camera;

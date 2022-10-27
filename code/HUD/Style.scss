@@ -296,7 +296,17 @@ Inventory {
             flex-wrap: wrap;
 
             .slot {
+                &.hasItem {
+                    background-image: url(ui/slot_background_outline.png);
+                }
+
+                &.selected {
+                    background-image-tint: rgba(white, 0.8);
+                    //panel.Style.BackgroundTint = Color.Gray.WithAlpha( 0.75f );
+                }
+
                 background-image: url(ui/slot_background.png);
+                background-image-tint: rgba(gray, 0.75);
                 background-size: cover;
                 width: 200px;
                 aspect-ratio: 1;
@@ -304,8 +314,8 @@ Inventory {
 
                 .weight {
                     position: absolute;
-                    right: 5px;
-                    bottom: 5px;
+                    right: 10px;
+                    bottom: 10px;
                     flex-direction: row;
                     font-family: ComicNeue-Bold;
                     color: rgba(150, 150, 150, 1);
@@ -324,7 +334,7 @@ Inventory {
                     }
 
                     .text {
-                        top: 2px;
+                        top: 3px;
                         font-size: 18px;
                         padding-left: 5px;
                         text-shadow: 0px 0px 4px rgb(30, 30, 30);

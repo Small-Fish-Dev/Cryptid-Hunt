@@ -31,7 +31,7 @@ public partial class ScriptedEventTrigger : BaseTrigger
 
 			if ( ent is not ScriptedEventCamera camera ) continue;
 
-			if ( camera.Name == EndCameraRef )
+			if ( camera.Name == EndCameraRef || camera.Name.Contains( EndCameraRef ) )
 			{
 
 				EndCamera = camera;

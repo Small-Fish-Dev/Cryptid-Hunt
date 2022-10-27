@@ -126,7 +126,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 	}
-	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name == "Monster").FirstOrDefault();
+	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name.Contains( "Monster" )).FirstOrDefault();
 	public string ModelName => "models/polewik/polewik.vmdl";
 	public float Gravity => 700f;
 	public Dictionary<PolewikState, float> Speeds = new()

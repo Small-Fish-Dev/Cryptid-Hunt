@@ -22,7 +22,7 @@ public partial class Player
 				if ( type != Container.Update.Initialize
 					&& !Container.All.TryGetValue( id, out container ) )
 				{
-					Log.Error( $"Failed to update non existing container ({id})." );
+					//Log.Error( $"Failed to update non existing container ({id})." );
 					return;
 				}
 
@@ -58,7 +58,7 @@ public partial class Player
 						var ritem = container.Items.ElementAtOrDefault( rindex );
 						if ( ritem == null )
 						{
-							Log.Error( "Trying to remove non-existing item on client." );
+							//Log.Error( "Trying to remove non-existing item on client." );
 							return;
 						}
 
@@ -74,7 +74,7 @@ public partial class Player
 						var aitem = container.Items.ElementAtOrDefault( aindex );
 						if ( aitem == null )
 						{
-							Log.Error( "Trying to change the amount of a non-existing item on client." );
+							//Log.Error( "Trying to change the amount of a non-existing item on client." );
 							return;
 						}
 
@@ -88,7 +88,7 @@ public partial class Player
 					player.Inventory = container;
 
 				SpookyJam2022.Inventory.Instance?.Refresh();
-				Log.Error( container.ToString() );
+				//Log.Error( container.ToString() );
 			}
 		}
 	}

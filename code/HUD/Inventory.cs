@@ -21,6 +21,18 @@ public class Inventory : Panel
 	Dictionary<int, Panel> slots = new();
 	Panel slotContainer;
 
+	Item _selected;
+	Item selected 
+	{ 
+		get => _selected;
+		set
+		{
+			_selected = value;
+			// reset item view
+		}
+	}
+	Panel selectedPanel;
+
 	public Inventory()
 	{
 		Instance = this;
@@ -48,7 +60,7 @@ public class Inventory : Panel
 	[Event.BuildInput]
 	private void buildInput( InputBuilder input )
 	{
-		if ( input.Released( InputButton.Score ) && MainMenu.Instance == null )
+		if ( input.Released( InputButton.Score ) )
 			Active = !Active;
 	}
 
@@ -56,7 +68,25 @@ public class Inventory : Panel
 	{
 		Panel panel;
 		if ( !slots.TryGetValue( index, out panel ) )
+		{
 			slots.Add( index, panel = new Panel( slotContainer, "slot" ) );
+			panel.AddEventListener( "onclick", () =>
+			{
+				if ( container[index] == null )
+				{
+					selectedPanel?.SetClass( "selected", false );
+					selected = null;
+
+					return;
+				}
+
+				selectedPanel?.SetClass( "selected", false );
+				selected = container[index];
+				selectedPanel = panel;
+
+				panel.SetClass( "selected", true );
+			} );
+		}
 		panel.DeleteChildren( true );
 
 		var item = container[index];
@@ -72,8 +102,11 @@ public class Inventory : Panel
 			icon.Style.BackgroundImage = item.Resource.Icon;
 		}
 
-		panel.Style.SetBackgroundImage( item != null ? "/ui/slot_background_outline.png" : "/ui/slot_background.png" );
-		panel.Style.BackgroundTint = Color.Gray.WithAlpha( 0.75f );
+		panel.SetClass( "hasItem", item != null );
+		panel.SetClass( "selected", item == selected );
+
+		if ( item == selected )
+			selectedPanel = panel;
 	}
 
 	public void Refresh()
