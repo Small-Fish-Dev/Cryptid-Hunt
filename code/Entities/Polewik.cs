@@ -153,7 +153,39 @@ public partial class Polewik : AnimatedEntity
 
 	public BBox CollisionBox;
 
-	[Net] public float HP { get; set; } = 100f;
+	[Net] public float hp { get; set; } = 100f;
+	public float HP
+	{
+		get => hp;
+		set
+		{
+
+			var damage = hp - value;
+
+			hp = value;
+
+			if ( HP <= 0 )
+			{
+
+				Delete();
+
+			}
+
+			if ( damage >= 10 )
+			{
+
+				if ( CurrentState != PolewikState.Pain && CurrentState != PolewikState.Fleeing )
+				{
+
+					CurrentState = PolewikState.Pain;
+
+				}
+
+			}
+
+		}
+
+	}
 
 	[Net] bool disabled { get; set; } = false;
 	public bool Disabled

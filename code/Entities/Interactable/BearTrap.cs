@@ -17,6 +17,7 @@ public partial class BearTrap : BaseInteractable
 	{
 
 		base.Interact( player );
+		Transmit = TransmitType.Always;
 
 	}
 	public override void Use( Player player )
@@ -38,6 +39,20 @@ public partial class BearTrap : BaseInteractable
 			EnableShadowCasting = true;
 
 			player.Holding = null;
+
+		}
+
+	}
+
+	[Event.Tick.Server]
+	void calcLogic()
+	{
+
+		foreach ( var polewik in FindInSphere( Position, 70f ).OfType<Polewik>() )
+		{
+
+			polewik.HP -= 10;
+			Delete();
 
 		}
 

@@ -57,25 +57,6 @@ public partial class Shotgun : BaseInteractable
 
 			victim.HP -= totalDamage;
 
-			if ( victim.HP <= 0 )
-			{
-
-				victim.Delete();
-
-			}
-
-			if ( totalDamage >= 10 )
-			{
-
-				if ( victim.CurrentState != PolewikState.Pain && victim.CurrentState != PolewikState.Fleeing )
-				{
-
-					victim.CurrentState = PolewikState.Pain;
-
-				}
-
-			}
-
 		}
 
 
