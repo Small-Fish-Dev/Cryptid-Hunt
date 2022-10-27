@@ -32,18 +32,31 @@ public partial class Player
 		if ( ScriptedEvent )
 		{
 
-			if ( OverrideTrigger != null )
+			if ( OverrideTrigger != null && OverrideCamera != null )
 			{
 
 				setup.Position = Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta * OverrideTrigger.TransitionSpeed );
 				setup.Rotation = Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta * OverrideTrigger.TransitionSpeed );
 
 			}
-			else
+			else if ( OverrideTrigger == null && OverrideCamera != null )
 			{
 
-				setup.Position = OverrideCamera.Position;
-				setup.Rotation = OverrideCamera.Rotation;
+				if ( OverrideCamera.Target != null )
+				{
+
+					setup.Position = Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta * OverrideCamera.TransitionSpeed );
+					setup.Rotation = Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta * OverrideCamera.TransitionSpeed );
+					setup.FieldOfView = 40f;
+
+				}
+				else
+				{
+
+					setup.Position = OverrideCamera.Position;
+					setup.Rotation = OverrideCamera.Rotation;
+
+				}
 
 			}
 

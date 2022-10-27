@@ -139,6 +139,15 @@ public partial class Polewik : AnimatedEntity
 			if ( value == PolewikState.Jumpscare )
 			{
 
+				Velocity = 0f;
+				WishVelocity = 0f;
+				Rotation = Rotation.LookAt( Victim.Position );
+
+
+				Victim.LockInputs = true;
+				Victim.OverrideCamera = new ScriptedEventCamera( this, 50f );
+				Victim.ScriptedEvent = true;
+
 				SetAnimParameter( "attack", true );
 
 				GameTask.RunInThreadAsync( async () =>
@@ -148,7 +157,9 @@ public partial class Polewik : AnimatedEntity
 
 					SetAnimParameter( "attack", false );
 
-					await GameTask.DelaySeconds( 0.9f );
+					// TODO: Maybe code here for the attack HP
+
+					await GameTask.DelaySeconds( 1.6f );
 
 					if ( CurrentState == PolewikState.Jumpscare )
 					{
@@ -156,6 +167,11 @@ public partial class Polewik : AnimatedEntity
 						CurrentState = PolewikState.Fleeing;
 
 					}
+
+					Victim.OverrideCamera.Delete();
+					Victim.LockInputs = false;
+					Victim.OverrideCamera = null;
+					Victim.ScriptedEvent = false;
 
 				} );
 
