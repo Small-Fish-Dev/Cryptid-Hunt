@@ -45,7 +45,13 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( 1f );
+					SetAnimParameter( "growl", true );
+
+					await GameTask.DelaySeconds( 0.1f );
+
+					SetAnimParameter( "growl", false );
+
+					await GameTask.DelaySeconds( 0.9f );
 
 					CurrentState = PolewikState.Fleeing;
 
@@ -59,7 +65,13 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( 1f );
+					SetAnimParameter( "howl", true );
+
+					await GameTask.DelaySeconds( 0.05f );
+
+					SetAnimParameter( "howl", false );
+
+					await GameTask.DelaySeconds( 0.9f );
 
 					Victim = ClosestPlayer;
 					CurrentState = PolewikState.AttackPersistent;
@@ -113,10 +125,35 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 0.9f );
 
-					if ( CurrentState  == PolewikState.Attacking )
+					if ( CurrentState == PolewikState.Attacking )
 					{
 
 						CurrentState = PolewikState.Following;
+
+					}
+
+				} );
+
+			}
+
+			if ( value == PolewikState.Jumpscare )
+			{
+
+				SetAnimParameter( "attack", true );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 0.05f );
+
+					SetAnimParameter( "attack", false );
+
+					await GameTask.DelaySeconds( 0.9f );
+
+					if ( CurrentState == PolewikState.Jumpscare )
+					{
+
+						CurrentState = PolewikState.Fleeing;
 
 					}
 
@@ -322,15 +359,41 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
+		if ( CurrentState == PolewikState.AttackPersistent && Victim != null && PatrolPath != null )
+		{
+
+			if ( lastCalculatedPath >= 0.5f )
+			{
+
+				NavigateTo( Victim.Position );
+
+			}
+
+			if ( Victim.Position.Distance( Position ) <= 600f && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			{
+
+				CurrentState = PolewikState.Attacking;
+
+			}
+
+			if ( PathLength >= 5000f )
+			{
+
+				CurrentState = PolewikState.Fleeing;
+
+			}
+
+		}
+
 		if ( CurrentState == PolewikState.Attacking && Victim != null )
 		{
 
 			if ( Victim.Position.Distance( Position ) <= 100f )
 			{
 
-				Victim.HP -= 1;
+				CurrentState = PolewikState.Jumpscare;
+				Victim.HP -= 1; // TODO: Make it happen only with the animation event
 
-				CurrentState = PolewikState.Fleeing;
 
 			}
 
@@ -360,7 +423,7 @@ public partial class Polewik : AnimatedEntity
 		{
 
 			var local = Transform.PointToLocal( Victim.Position );
-			SetAnimParameter( "lookat", local.WithX( Math.Max( local.x, 0 ) ) + Rotation.Forward * 30f );
+			SetAnimParameter( "lookat", local.WithX( Math.Max( local.x, 0 ) ) + Vector3.Forward * 300f );
 
 		}
 
