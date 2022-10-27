@@ -15,7 +15,7 @@
 				{
 					_class = "CLookAtAnimNode"
 					m_sName = ""
-					m_vecPosition = [ 560.0, -16.0 ]
+					m_vecPosition = [ 560.0, -112.0 ]
 					m_nNodeID = 
 					{
 						m_id = 87783558
@@ -70,7 +70,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -128.0, 32.0 ]
+					m_vecPosition = [ -128.0, -128.0 ]
 					m_nNodeID = 
 					{
 						m_id = 96911607
@@ -229,6 +229,40 @@
 									m_bForceFootPlant = false
 									m_bDisabled = false
 								},
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 399750976
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 95415459
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
 							]
 							m_tags = [  ]
 							m_tagBehaviors = [  ]
@@ -318,7 +352,7 @@
 							{
 								m_id = 1613418237
 							}
-							m_position = [ -80.0, 176.0 ]
+							m_position = [ -80.0, 160.0 ]
 							m_bIsStartState = false
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
@@ -388,7 +422,7 @@
 							{
 								m_id = 762567599
 							}
-							m_position = [ 64.0, 96.0 ]
+							m_position = [ 64.0, 16.0 ]
 							m_bIsStartState = false
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
@@ -458,7 +492,77 @@
 							{
 								m_id = 1967970721
 							}
-							m_position = [ 96.0, -48.0 ]
+							m_position = [ -224.0, 16.0 ]
+							m_bIsStartState = false
+							m_bIsEndtState = false
+							m_bIsPassthrough = false
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
+						{
+							_class = "CAnimState"
+							m_transitions = 
+							[
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 1
+											m_paramID = 
+											{
+												m_id = 399750976
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
+										},
+										{
+											_class = "CFinishedCondition"
+											m_comparisonOp = 0
+											m_option = "FinishedConditionOption_OnAlmostFinished"
+											m_bIsFinished = true
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 1832495930
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+							]
+							m_tags = [  ]
+							m_tagBehaviors = [  ]
+							m_name = "growl"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 618187406
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 95415459
+							}
+							m_position = [ -80.0, -128.0 ]
 							m_bIsStartState = false
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
@@ -494,6 +598,39 @@
 			{
 				key = 
 				{
+					m_id = 618187406
+				}
+				value = 
+				{
+					_class = "CSequenceAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ 96.0, 32.0 ]
+					m_nNodeID = 
+					{
+						m_id = 618187406
+					}
+					m_networkMode = "ServerAuthoritative"
+					m_sNote = ""
+					m_tagSpans = 
+					[
+						{
+							_class = "CAnimTagSpan"
+							m_id = 
+							{
+								m_id = 1857341856
+							}
+							m_fStartCycle = 0.961654
+							m_fDuration = 0.038346
+						},
+					]
+					m_sequenceName = "polewik_growl"
+					m_playbackSpeed = 1.0
+					m_bLoop = false
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 893286387
 				}
 				value = 
@@ -519,7 +656,7 @@
 									[
 										{
 											_class = "CParameterAnimCondition"
-											m_comparisonOp = 1
+											m_comparisonOp = 0
 											m_paramID = 
 											{
 												m_id = 1251114783
@@ -530,16 +667,45 @@
 												m_data = true
 											}
 										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 700223227
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
 										{
-											_class = "CTimeCondition"
-											m_comparisonOp = 3
-											m_comparisonValue = 3.0
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 399750976
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
 										},
 									]
 									m_blendDuration = 0.2
 									m_destState = 
 									{
-										m_id = 993696865
+										m_id = 934306050
 									}
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
@@ -555,12 +721,12 @@
 							]
 							m_tags = [  ]
 							m_tagBehaviors = [  ]
-							m_name = "howling"
+							m_name = "lookat"
 							m_inputConnection = 
 							{
 								m_nodeID = 
 								{
-									m_id = 279201376
+									m_id = 87783558
 								}
 								m_outputID = 
 								{
@@ -569,10 +735,10 @@
 							}
 							m_stateID = 
 							{
-								m_id = 1550857665
+								m_id = 993696865
 							}
-							m_position = [ -48.0, -32.0 ]
-							m_bIsStartState = false
+							m_position = [ -32.0, 96.0 ]
+							m_bIsStartState = true
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
 							m_bIsRootMotionExclusive = false
@@ -603,7 +769,7 @@
 									m_blendDuration = 0.2
 									m_destState = 
 									{
-										m_id = 1550857665
+										m_id = 130031031
 									}
 									m_bReset = true
 									m_resetCycleOption = "Beginning"
@@ -619,12 +785,12 @@
 							]
 							m_tags = [  ]
 							m_tagBehaviors = [  ]
-							m_name = "not howling"
+							m_name = "howl passthrough"
 							m_inputConnection = 
 							{
 								m_nodeID = 
 								{
-									m_id = 87783558
+									m_id = 4294967295
 								}
 								m_outputID = 
 								{
@@ -633,10 +799,134 @@
 							}
 							m_stateID = 
 							{
-								m_id = 993696865
+								m_id = 700223227
 							}
-							m_position = [ -48.0, 96.0 ]
-							m_bIsStartState = true
+							m_position = [ -96.0, -64.0 ]
+							m_bIsStartState = false
+							m_bIsEndtState = false
+							m_bIsPassthrough = true
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
+						{
+							_class = "CAnimState"
+							m_transitions = 
+							[
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CParameterAnimCondition"
+											m_comparisonOp = 0
+											m_paramID = 
+											{
+												m_id = 399750976
+											}
+											m_comparisonValue = 
+											{
+												m_nType = 1
+												m_data = true
+											}
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 130031031
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+							]
+							m_tags = [  ]
+							m_tagBehaviors = [  ]
+							m_name = "growl passthrough"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 4294967295
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 934306050
+							}
+							m_position = [ 32.0, -64.0 ]
+							m_bIsStartState = false
+							m_bIsEndtState = false
+							m_bIsPassthrough = true
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
+						{
+							_class = "CAnimState"
+							m_transitions = 
+							[
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CTagCondition"
+											m_comparisonOp = 0
+											m_tagID = 
+											{
+												m_id = 1857341856
+											}
+											m_comparisonValue = true
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 993696865
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+								},
+							]
+							m_tags = [  ]
+							m_tagBehaviors = [  ]
+							m_name = "Disable Lookat"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 279201376
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 130031031
+							}
+							m_position = [ -32.0, -224.0 ]
+							m_bIsStartState = false
 							m_bIsEndtState = false
 							m_bIsPassthrough = false
 							m_bIsRootMotionExclusive = false
@@ -656,7 +946,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 96.0, 48.0 ]
+					m_vecPosition = [ 96.0, -112.0 ]
 					m_nNodeID = 
 					{
 						m_id = 985017532
@@ -724,7 +1014,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 96.0, 96.0 ]
+					m_vecPosition = [ 96.0, -64.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1234495931
@@ -792,7 +1082,7 @@
 				{
 					_class = "CSingleFrameAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -128.0, -16.0 ]
+					m_vecPosition = [ -128.0, -176.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1615174648
@@ -842,7 +1132,7 @@
 				{
 					_class = "CBlendAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 96.0, -16.0 ]
+					m_vecPosition = [ 96.0, -176.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1920785495
@@ -911,14 +1201,25 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 96.0, 144.0 ]
+					m_vecPosition = [ 96.0, -16.0 ]
 					m_nNodeID = 
 					{
 						m_id = 2106780100
 					}
 					m_networkMode = "ServerAuthoritative"
 					m_sNote = ""
-					m_tagSpans = [  ]
+					m_tagSpans = 
+					[
+						{
+							_class = "CAnimTagSpan"
+							m_id = 
+							{
+								m_id = 1857341856
+							}
+							m_fStartCycle = 0.926316
+							m_fDuration = 0.073684
+						},
+					]
 					m_sequenceName = "polewik_howl"
 					m_playbackSpeed = 1.0
 					m_bLoop = false
@@ -1005,12 +1306,36 @@
 				m_bPredicted = false
 				m_bDefaultValue = false
 			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "growl"
+				m_id = 
+				{
+					m_id = 399750976
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bNetwork = true
+				m_bUseMostRecentValue = false
+				m_bAutoReset = true
+				m_bPredicted = false
+				m_bDefaultValue = false
+			},
 		]
 	}
 	m_pTagManager = 
 	{
 		_class = "CAnimTagManager"
-		m_tags = [  ]
+		m_tags = 
+		[
+			{
+				_class = "CStringAnimTag"
+				m_name = "lookat resume"
+				m_tagID = 
+				{
+					m_id = 1857341856
+				}
+			},
+		]
 	}
 	m_pMovementManager = 
 	{
