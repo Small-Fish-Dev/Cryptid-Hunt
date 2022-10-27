@@ -45,7 +45,7 @@ public partial class Game : GameBase
 
 			if ( ent is not ScriptedEventCamera camera ) continue;
 
-			if ( camera.Name == "MainMenu" )
+			if ( camera.Name.Contains( "MainMenu" ) )
 			{
 
 				Player.OverrideCamera = camera;
