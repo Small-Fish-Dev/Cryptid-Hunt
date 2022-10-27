@@ -1,0 +1,15 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	data = 
+	{
+		Title = "Shotgun Ammo"
+		Description = "Basic 12 gauge shotgun rounds."
+		Color = "0.45263,0.13547,0.13547,1"
+		Model = resource:"models/items/ammo.vmdl"
+		Angles = "0,90,0"
+		Position = "30,0,-12"
+		MaxAmount = 8
+		AmountType = "Integer"
+		Weight = 0.3
+	}
+}
