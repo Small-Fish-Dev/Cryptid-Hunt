@@ -356,6 +356,14 @@ public partial class Polewik : AnimatedEntity
 
 		SetAnimParameter( "speed", Velocity.Length / 3 );
 
+		if ( Victim != null )
+		{
+
+			var local = Transform.PointToLocal( Victim.Position );
+			SetAnimParameter( "lookat", local.WithX( Math.Max( local.x, 0 ) ) + Rotation.Forward * 30f );
+
+		}
+
 		Rotation = Rotation.Lerp( Rotation, WishRotation, 5f * Time.Delta );
 
 	}
