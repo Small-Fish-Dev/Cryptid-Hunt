@@ -149,7 +149,13 @@ ZoneHint {
         font-family: GochiHand-Regular;
         font-size: 70px;
         color: white;
-        text-stroke: 3px rgb(50, 0, 0);
+        text-stroke: 3px rgb(50, 0, 0, 0.6);
+        text-shadow: 0px 0px 12px rgb(black, 0.8);
+        background-image: url(ui/brushes2.png);
+        background-image-tint: rgba(500, 500, 500, 0.4);
+        padding: 30px;
+        margin: -30px;
+        background-size: 100%;
     }
 
     &:intro {
@@ -302,7 +308,6 @@ Inventory {
 
                 &.selected {
                     background-image-tint: rgba(white, 0.8);
-                    //panel.Style.BackgroundTint = Color.Gray.WithAlpha( 0.75f );
                 }
 
                 background-image: url(ui/slot_background.png);
