@@ -30,7 +30,7 @@ public partial class Game
 		if ( pawn.Inventory == null ) return;
 
 		pawn.Inventory.Insert( Item.FromResource( resourceName ) );
-		Log.Error( pawn.Inventory.ToString() );
+		//Log.Error( pawn.Inventory.ToString() );
 	}
 
 	[ConCmd.Server]
@@ -40,7 +40,7 @@ public partial class Game
 		if ( pawn.Inventory == null ) return;
 
 		pawn.Inventory.Remove( index, amount );
-		Log.Error( pawn.Inventory.ToString() );
+		//Log.Error( pawn.Inventory.ToString() );
 	}
 
 	[ConCmd.Server]
