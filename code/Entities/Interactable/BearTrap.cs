@@ -1,15 +1,17 @@
 ﻿namespace SpookyJam2022;
 
 [HammerEntity]
-[EditorModel( "models/placeholders/placeholder_beartrap.vmdl" )]
+[EditorModel( "models/items/beartrap.vmdl" )]
 [Display( Name = "Bear Trap", GroupName = "Items", Description = "Bear trap to trap bears or cryptids" )]
 public partial class BearTrap : BaseInteractable
 {
 
-	public override string ModelPath => "models/placeholders/placeholder_beartrap.vmdl";
+	public override string ModelPath => "models/items/beartrap.vmdl";
 	public override string UseDescription => "Take Bear Trap";
-	public override Vector3 PromptOffset3D => new Vector3( 0f );
-	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
+	public override Vector3 PromptOffset3D => new Vector3( 0f, 20f, 0f );
+	public override Vector2 PromptOffset2D => new Vector2( -20f, 0f );
+	public override Rotation OffsetRotation => Rotation.From( new Angles( 0f, -70f, 0f ) );
+	public override Vector3 OffsetPosition => new Vector3( 5f, -5f, -5f );
 
 	public override void Interact( Player player )
 	{
