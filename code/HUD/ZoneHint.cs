@@ -2,30 +2,26 @@
 
 class ZoneHint : Panel
 {
+	private static ZoneHint current;
 
 	TimeSince startTime = 0f;
 	float duration = 5.5f;
 
 	public ZoneHint( string Name, float duration = 5f )
 	{
+		current?.Delete();
+		current = this;
 
-		AddChild<Label>( "hint" ).SetText( Name );
+		var hint = AddChild<Panel>( "hint" );
+		hint.AddChild<Label>().SetText( Name );
 
 		startTime = 0f;
-
 	}
 
 	[Event.Frame]
 	void calculateLife()
 	{
-
 		if ( startTime >= duration )
-		{
-
 			Delete();
-
-		}
-
 	}
-
 }
