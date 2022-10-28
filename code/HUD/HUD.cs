@@ -34,7 +34,7 @@ class HUD : RootPanel
 	public HUD()
 	{
 
-		SetTemplate( "/HUD/Credits.html" );
+		SetTemplate( "/HUD/Layout.html" );
 
 		/*try
 		{

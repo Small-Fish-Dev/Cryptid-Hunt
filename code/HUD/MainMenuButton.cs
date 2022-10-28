@@ -1,4 +1,5 @@
-﻿namespace SpookyJam2022;
+﻿using SpookyJam2022.States;
+namespace SpookyJam2022;
 
 class MainMenuButton : Panel
 {
@@ -18,14 +19,24 @@ class MainMenuButton : Panel
 			GameTask.RunInThreadAsync( async () =>
 			{
 
-				//await GameTask.DelaySeconds( 2.5f );
+				await GameTask.DelaySeconds( 2.5f );
 
-				//Delete();
+				NetworkMainMenu();
+
+				HUD.Instance.Children.Where( x => x.ElementName == "credits" )
+				.FirstOrDefault()
+				.Delete();
 
 			} );
 
 		} );
 
+	}
+
+	[ConCmd.Server]
+	private static void NetworkMainMenu()
+	{
+		Game.State = new MainMenuState();
 	}
 
 }

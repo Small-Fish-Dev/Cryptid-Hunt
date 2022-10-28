@@ -47,6 +47,21 @@ class MainMenu : Panel
 
 			Sound.FromScreen( "sounds/ui/button_click.sound" );
 
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				NetworkCredits();
+
+				Delete();
+
+			} );
+
 		} );
 
 		quitButton = AddChild<Button>( "Button" );
@@ -72,6 +87,12 @@ class MainMenu : Panel
 		} );
 
 
+	}
+
+	[ConCmd.Server]
+	private static void NetworkCredits()
+	{
+		Game.State = new CreditsMenuState();
 	}
 
 	[ConCmd.Server]

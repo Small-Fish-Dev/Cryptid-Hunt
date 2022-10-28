@@ -17,6 +17,6 @@ public partial class MainMenuState : BaseState
 	[ClientRpc]
 	public static void ShowMenu()
 	{
-		//HUD.Instance.AddChild<SpookyJam2022.MainMenu>();
+		HUD.Instance.AddChild<SpookyJam2022.MainMenu>();
 	}
 }
