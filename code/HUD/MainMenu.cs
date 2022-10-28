@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using SpookyJam2022.States;
+
+namespace SpookyJam2022;
 
 class MainMenu : Panel
 {
@@ -30,7 +32,6 @@ class MainMenu : Panel
 
 				await GameTask.DelaySeconds( 2.5f );
 
-				Event.Run( "BeginGame" );
 				NetworkStart();
 
 				Delete();
@@ -45,6 +46,21 @@ class MainMenu : Panel
 		{
 
 			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				NetworkCredits();
+
+				Delete();
+
+			} );
 
 		} );
 
@@ -74,15 +90,19 @@ class MainMenu : Panel
 	}
 
 	[ConCmd.Server]
-	public static void NetworkStart()
+	private static void NetworkCredits()
 	{
-
-		Event.Run( "BeginGame" );
-
+		Game.State = new CreditsMenuState();
 	}
 
 	[ConCmd.Server]
-	public static void QuitGame()
+	private static void NetworkStart()
+	{
+		Game.State = new NextBotState();
+	}
+
+	[ConCmd.Server]
+	private static void QuitGame()
 	{
 
 		var clients = Client.All.ToArray();

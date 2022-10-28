@@ -66,7 +66,7 @@ ItemPrompt {
     width: 100%;
     display: flex;
     transition: all 1s ease-in;
-    opacity: 1;
+    opacity: 0;
 
     .container {
         position: absolute;
@@ -286,6 +286,7 @@ Inventory {
     .itemContainer {
         position: absolute;
         top: 175px;
+        left: 50px;
         width: 1100px;
         height: 900px;
         background-image: url(ui/brushes4.png);
@@ -294,7 +295,6 @@ Inventory {
         background-repeat: no-repeat;
         padding: 60px;
         margin: -60px;
-        left: 0px;
 
         .slotContainer {
             overflow: scroll;
@@ -323,7 +323,7 @@ Inventory {
                     bottom: 10px;
                     flex-direction: row;
                     font-family: ComicNeue-Bold;
-                    color: rgba(150, 150, 150, 1);
+                    color: rgba(120, 120, 120, 1);
                     background-image: url(ui/brushes2.png);
                     padding: 10px;
                     background-image-tint: rgba(300, 300, 300, 0.5);
@@ -346,6 +346,24 @@ Inventory {
                     }
                 }
 
+                .amount {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    flex-direction: row;
+                    font-family: ComicNeue-Bold;
+                    color: rgba(120, 120, 120, 1);
+                    background-image: url(ui/brushes2.png);
+                    padding: 10px;
+                    background-image-tint: rgba(300, 300, 300, 0.5);
+                    background-size: 100%;
+
+                    .text {
+                        font-size: 18px;
+                        text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                    }
+                }
+
                 .iconContainer {
                     position: absolute;
                     width: 100%;
@@ -360,6 +378,200 @@ Inventory {
                         height: 100%;
                     }
                 }
+            }
+        }
+    }
+
+    .viewContainer {
+        position: absolute;
+        top: 175px;
+        right: 50px;
+        width: 1100px;
+        height: 900px;
+
+        .titleContainer {
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            font-family: Neucha-Regular;
+
+            .title {
+                color: rgba(240, 240, 240, 1);
+                font-size: 48px;
+                text-shadow: 0px 0px 6px rgba(white, 0.8);
+            }
+
+            .description {
+                color: rgba(140, 140, 140, 1);
+                margin-top: 10px;
+                font-size: 32px;
+                text-shadow: 0px 0px 4px rgba(white, 0.6);
+            }
+        }
+
+        .view {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: all;
+        }
+    }
+}
+
+Credits {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    cursor: default;
+
+    Container {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        align-content: stretch;
+
+        Tweet {
+            width: 80%;
+            aspect-ratio: 0.736;
+            background-image: url(ui/tweet.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        Forest {
+            width: 80%;
+            aspect-ratio: 0.736;
+            background-image: url(ui/forest.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    ContainerWide {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: stretch;
+
+        Names {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: stretch;
+            text-align: center;
+            font-family: Neucha-Regular;
+            color: white;
+
+            .GameTitle {
+                font-size: 6vmin;
+            }
+
+            .Subtitle {
+                font-size: 4vmin;
+                margin-bottom: 3vmin;
+            }
+
+            .NameCredit {
+                font-size: 3vmin;
+            }
+        }
+
+        ModelViewContainer {
+            width: 80%;
+            height: 40%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: stretch;
+            text-align: center;
+            color: white;
+
+            PreviousModelPreview {
+                width: 10%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-content: stretch;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                pointer-events: all;
+
+                .PreviousModelPreviewTitle {
+                    font-size: 20vmin;
+                }
+            }
+
+            ModelPreviewer {
+                width: 80%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                text-align: center;
+                color: white;
+                font-family: Neucha-Regular;
+
+                .ModelInfo {
+                    font-size: 4vmin;
+                }
+            }
+
+            NextModelPreview {
+                width: 10%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-content: stretch;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                pointer-events: all;
+
+                .NextModelPreviewTitle {
+                    font-size: 20vmin;
+                }
+            }
+        }
+
+        MainMenuButton {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: stretch;
+            text-align: center;
+            font-family: Neucha-Regular;
+            color: white;
+            cursor: pointer;
+            pointer-events: all;
+
+            .MenuButtonText {
+                font-size: 6vmin;
             }
         }
     }

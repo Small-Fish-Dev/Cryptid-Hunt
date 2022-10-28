@@ -6,21 +6,35 @@ public static partial class Extensions
 	{
 		public Texture Texture { get; private set; }
 		public SceneCamera Camera { get; private set; }
+		public bool RenderOnce { get; private set; }
+		public int Framerate { get; private set; }
 
-		public SceneRender( SceneCamera camera, Texture renderTarget )
+		public float FrameTime { get; set; } = 0f;
+		public bool Deleting { get; private set; }
+
+		public SceneRender( SceneCamera camera, Texture renderTarget, bool renderOnce, int targetFramerate )
 		{
 			Texture = renderTarget;
 			Camera = camera;
+			RenderOnce = renderOnce;
+			Framerate = targetFramerate;
+		}
+
+		public void Delete()
+		{
+			Deleting = true;
 		}
 	}
 
 	private static List<SceneRender> renderQueue = new();
 
-	public static SceneRender Render( this SceneCamera camera, Vector2 size )
+	public static SceneRender Render( this SceneCamera camera, Vector2 size, bool renderOnce = true, int targetFramerate = 30 )
 	{
 		var result = new SceneRender( 
 			camera, 
-			Texture.CreateRenderTarget( "sceneRender", ImageFormat.RGBA8888, size ) 
+			Texture.CreateRenderTarget( "sceneRender", ImageFormat.RGBA8888, size ),
+			renderOnce,
+			targetFramerate
 		);
 		renderQueue.Add( result );
 		return result;
@@ -38,8 +52,16 @@ public static partial class Extensions
 				continue;
 			}
 
-			Graphics.RenderToTexture( render.Camera, render.Texture );
-			renderQueue.RemoveAt( i );
+			if ( render.RenderOnce || render.FrameTime > 1f / render.Framerate )
+			{
+				Graphics.RenderToTexture( render.Camera, render.Texture );
+				render.FrameTime = 0;
+			}
+
+			render.FrameTime += Time.Delta;
+
+			if ( render.RenderOnce || render.Deleting )
+				renderQueue.RemoveAt( i );
 		}
 	}
 }

@@ -1,0 +1,15 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	data = 
+	{
+		Title = "Medkit"
+		Description = "Looks like I can patch myself up with this in case I get hurt."
+		Color = "0.44447,0.77368,0.32418,1"
+		Model = resource:"models/items/medkit.vmdl"
+		Angles = "45,0,0"
+		Position = "40,0,0"
+		MaxAmount = 1
+		AmountType = "Integer"
+		Weight = 0.8
+	}
+}

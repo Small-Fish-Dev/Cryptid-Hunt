@@ -10,6 +10,6 @@
 		Position = "50,-7,0"
 		MaxAmount = 1
 		AmountType = "Integer"
-		Weight = 3
+		Weight = 3.1
 	}
 }

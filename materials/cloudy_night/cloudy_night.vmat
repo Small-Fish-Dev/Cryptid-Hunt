@@ -5,10 +5,10 @@ Layer0
 	shader "sky.vfx"
 
 	//---- Format ----
-	F_TEXTURE_FORMAT2 6 // BC6H (HDR compressed - recommended)
+	F_TEXTURE_FORMAT2 5 // RGBM (8-bit uncompressed)
 
 	//---- Texture ----
-	g_flBrightnessExposureBias "0.000"
+	g_flBrightnessExposureBias "-2.477"
 	g_flRenderOnlyExposureBias "0.000"
 	SkyTexture "materials/cloudy_night/cloudy_night.jpg"
 }

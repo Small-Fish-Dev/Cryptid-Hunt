@@ -12,49 +12,57 @@ global using System.Threading.Tasks;
 global using System.Text.Json;
 global using Sandbox.Effects;
 global using Sandbox.Component;
+using SpookyJam2022.States;
 
 namespace SpookyJam2022;
 
 public partial class Game : GameBase
 {
+	public enum GameState
+	{
+		MainMenu,
+		NextBot,
+		Gameplay
+	}
+
 	public static Game Instance { get; private set; }
-	public static Player Player { get; private set; }
-	
+	public static Client PlayerClient { get; private set; }
+	public static BasePlayer Player { get; set; }
+
+	public static BaseState State
+	{
+		get => _state;
+		set
+		{
+			Host.AssertServer();
+			
+			if (_state is not null)
+				_state.CleanUp();
+
+			_state = value;
+			_state.Init();
+		}
+	}
+
+	private static BaseState _state = null;
+
 	public Game()
 	{
 		Instance = this;
-		Event.Run( "GameStart" ); 
+		Event.Run( "GameStart" );
 	}
 
 	public override void ClientJoined( Client client )
 	{
 		// Limit to one player only.
-		if ( Player != null )
+		if ( PlayerClient != null )
 		{
 			client.Kick();
 			return;
 		}
 
-		Player = new Player();
-		client.Pawn = Player;
-		Player.Respawn();
-		Player.Inventory = new( "Backpack", 30, target: client );
-
-		foreach ( var ent in Entity.All ) // Find camera (shitt)
-		{
-
-			if ( ent is not ScriptedEventCamera camera ) continue;
-
-			if ( camera.Name.Contains( "MainMenu" ) )
-			{
-
-				Player.OverrideCamera = camera;
-				Player.ScriptedEvent = true;
-				Player.LockInputs = true;
-
-			}
-
-		}
+		PlayerClient = client;
+		State = new MainMenuState();
 	}
 
 	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
@@ -93,7 +101,6 @@ public partial class Game : GameBase
 
 	public override void Shutdown()
 	{
-		
 	}
 
 	public override bool CanHearPlayerVoice( Client source, Client receiver )
@@ -103,23 +110,18 @@ public partial class Game : GameBase
 
 	public override void PostLevelLoaded()
 	{
-		
 	}
 
 	[ClientRpc]
 	public void StartBlackScreen()
 	{
-
 		Event.Run( "BlackScreen" );
-
 	}
 
 	[ClientRpc]
 	public void StartZoneHint( string Name )
 	{
-
 		Event.Run( "ShowArea", Name );
-
 	}
 
 
@@ -128,5 +130,4 @@ public partial class Game : GameBase
 		base.RenderHud();
 		Event.Run( "Render" );
 	}
-
 }

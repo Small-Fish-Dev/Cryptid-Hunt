@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using SpookyJam2022.States;
+
+namespace SpookyJam2022;
 
 public enum PolewikState
 {
@@ -21,6 +23,14 @@ public enum PolewikState
 [Display( Name = "Polewik", GroupName = "Monster", Description = "the monster" )]
 public partial class Polewik : AnimatedEntity
 {
+
+	public float JumpscareDistance => 150f;
+	public float DetectDistance => 1200f;
+	public float StalkingDistance => 600f;
+	public float AttackDistance => 400f;
+	public float GiveUpDistance => 2400f;
+	public float GiveUpAfter => 15f;
+	public float AttackAfterStalking => 20f;
 
 	[Net, Change] PolewikState currentState { get; set; } = PolewikState.Patrolling;
 	public PolewikState CurrentState
@@ -150,16 +160,35 @@ public partial class Polewik : AnimatedEntity
 
 				SetAnimParameter( "attack", true );
 
+				var light = new SpotLightEntity
+				{
+					Enabled = true,
+					DynamicShadows = true,
+					Range = 256,
+					Falloff = 1.0f,
+					LinearAttenuation = 0.0f,
+					QuadraticAttenuation = 1.0f,
+					Brightness = 0.05f,
+					Color = new Color( 1f, 0.7f, 0.7f ),
+					InnerConeAngle = 20,
+					OuterConeAngle = 90,
+					FogStrength = 1.0f
+				};
+
+				light.Position = Transform.PointToWorld( new Vector3( 80, 0, 72 ) );
+				light.Rotation = Rotation.LookAt( Position - Transform.PointToWorld( new Vector3( 80, 0, 72 ) ) );
+				light.Enabled = true;
+
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( 0.05f );
-
-					SetAnimParameter( "attack", false );
+					await GameTask.DelaySeconds( 0.2f );
 
 					// TODO: Maybe code here for the attack HP
 
-					await GameTask.DelaySeconds( 1.6f );
+					await GameTask.DelaySeconds( 1.45f );
+
+					light.Delete();
 
 					if ( CurrentState == PolewikState.Jumpscare )
 					{
@@ -197,7 +226,7 @@ public partial class Polewik : AnimatedEntity
 
 	};
 	public float CurrentSpeed => Speeds[CurrentState];
-	public NavAgentHull Agent => NavAgentHull.Agent1;
+	public NavAgentHull Agent => NavAgentHull.Default;
 	public Vector3 TargetPosition { get; set; }
 	public bool ReachedTarget { get; set; } = true;
 	public int CurrentPathId { get; set; } = 0;
@@ -266,7 +295,7 @@ public partial class Polewik : AnimatedEntity
 
 		SetModel( ModelName );
 
-		CollisionBox = new BBox( new Vector3( -40f, -20f, 1f ), new Vector3( 20f, 20f, 70f ) );
+		CollisionBox = new BBox( new Vector3( -20f, -20f, 0f ), new Vector3( 20f, 20f, 70f ) );
 
 		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, CollisionBox.Mins, CollisionBox.Maxs );
 
@@ -280,10 +309,18 @@ public partial class Polewik : AnimatedEntity
 
 	public virtual void ComputeAI()
 	{
+		if ( Game.State is not GameplayState )
+			return;
 
 		if ( Disabled ) return;
 
 		ComputeAnimation();
+
+		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red );
+		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
+		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
+		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
+		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );
 
 		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
 		{
@@ -295,7 +332,7 @@ public partial class Polewik : AnimatedEntity
 		if ( CurrentState == PolewikState.Patrolling && PatrolPath != null )
 		{
 
-			if ( ClosestPlayer.Position.Distance( Position ) <= 2000f )
+			if ( ClosestPlayer.Position.Distance( Position ) <= DetectDistance )
 			{
 
 				Victim = ClosestPlayer;
@@ -311,21 +348,32 @@ public partial class Polewik : AnimatedEntity
 			if ( Victim != null )
 			{
 
-				if ( lastCalculatedPath >= 2f )
+				if ( lastCalculatedPath >= 0.5f )
 				{
 
-					NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
+					if ( Position.Distance( TargetPosition ) >= 50f )
+					{
+
+						NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
+
+					}
+					else
+					{
+
+						WishRotation = Rotation.LookAt( Victim.Position );
+
+					}
 
 				}
 
-				if ( Victim.Position.Distance( Position ) <= 1000f || startedStalking >= 45f )
+				if ( Victim.Position.Distance( Position ) <= StalkingDistance || startedStalking >= AttackAfterStalking )
 				{
 
 					CurrentState = PolewikState.Following;
 
 				}
 
-				if ( PathLength >= 2500f )
+				if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 400f )
 				{
 
 					CurrentState = PolewikState.Fleeing;
@@ -345,28 +393,28 @@ public partial class Polewik : AnimatedEntity
 		if ( CurrentState == PolewikState.Following && Victim != null && PatrolPath != null )
 		{
 
-			if ( lastCalculatedPath >= 0.5f )
+			if ( lastCalculatedPath >= 0.2f )
 			{
 
 				NavigateTo( Victim.Position );
 
 			}
 
-			if ( startedFollowing >= 15f )
+			if ( startedFollowing >= GiveUpAfter )
 			{
 
 				CurrentState = PolewikState.Patrolling;
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= 600f && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
 			{
 
 				CurrentState = PolewikState.Attacking;
 
 			}
 
-			if ( PathLength >= 2500f )
+			if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 400f )
 			{
 
 				CurrentState = PolewikState.Fleeing;
@@ -385,14 +433,14 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= 600f && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			if ( Victim.Position.Distance( Position ) <= AttackAfterStalking && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
 			{
 
 				CurrentState = PolewikState.Attacking;
 
 			}
 
-			if ( PathLength >= 5000f )
+			if ( PathLength >= GiveUpDistance * 2f || Math.Abs( Victim.Position.z - Position.z ) > 400f )
 			{
 
 				CurrentState = PolewikState.Fleeing;
@@ -413,7 +461,7 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( PathLength >= 2500f )
+			if ( PathLength >= GiveUpDistance )
 			{
 
 				CurrentState = PolewikState.Fleeing;
