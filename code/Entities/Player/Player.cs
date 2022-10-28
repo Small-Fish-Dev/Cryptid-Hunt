@@ -1,6 +1,6 @@
 ﻿namespace SpookyJam2022;
 
-public partial class Player : AnimatedEntity
+public partial class Player : BasePlayer
 {
 	private static Vector3 mins = new Vector3( -16f, -16f, 0f );
 	private static Vector3 maxs = new Vector3( 16f, 16f, 72f );
@@ -22,20 +22,14 @@ public partial class Player : AnimatedEntity
 			if ( trace.Entity is BaseInteractable firstInteractable ) return firstInteractable;
 
 			var secondInteractable = FindInSphere( trace.EndPosition, 20f )
-				.OfType<BaseInteractable>()
-				.OrderBy( x => x.Position.Distance( trace.EndPosition ) )
-				.FirstOrDefault();
+				.OfType<BaseInteractable>().MinBy(x => x.Position.Distance( trace.EndPosition ));
 
-			if ( secondInteractable != null ) return secondInteractable;
-
-			return null;
-
+			return secondInteractable;
 		}
 	}
 
 	public BaseInteractable InteractingWith { get; set; }
 
-	[Net, Predicted] public PawnController Controller { get; set; }
 	public PlayerSpawn CurrentCheckpoint { get; set; }
 
 	public override void Spawn()
@@ -43,8 +37,6 @@ public partial class Player : AnimatedEntity
 
 		EyeLocalPosition = Vector3.Up * maxs.z;
 		Controller ??= new PlayerController();
-
-		Tags.Add( "player" );
 
 		SetModel( "models/citizen/citizen.vmdl" ); // Movements are choppy without a model set?
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
@@ -64,7 +56,7 @@ public partial class Player : AnimatedEntity
 
 	}
 
-	public void Respawn()
+	public override void Respawn()
 	{
 
 		CurrentCheckpoint ??= PlayerSpawn.Initial;
@@ -104,12 +96,7 @@ public partial class Player : AnimatedEntity
 
 					var availableInteractable = FirstInteractable;
 
-					if ( availableInteractable != null )
-					{
-
-						availableInteractable.Interact( this );
-
-					}
+					availableInteractable?.Interact( this );
 
 				}
 

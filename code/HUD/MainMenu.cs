@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using SpookyJam2022.States;
+
+namespace SpookyJam2022;
 
 class MainMenu : Panel
 {
@@ -30,7 +32,6 @@ class MainMenu : Panel
 
 				await GameTask.DelaySeconds( 2.5f );
 
-				Event.Run( "BeginGame" );
 				NetworkStart();
 
 				Delete();
@@ -74,15 +75,13 @@ class MainMenu : Panel
 	}
 
 	[ConCmd.Server]
-	public static void NetworkStart()
+	private static void NetworkStart()
 	{
-
-		Event.Run( "BeginGame" );
-
+		Game.State = new NextBotState();
 	}
 
 	[ConCmd.Server]
-	public static void QuitGame()
+	private static void QuitGame()
 	{
 
 		var clients = Client.All.ToArray();

@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using SpookyJam2022.States;
+
+namespace SpookyJam2022;
 
 public enum PolewikState
 {
@@ -309,6 +311,8 @@ public partial class Polewik : AnimatedEntity
 
 	public virtual void ComputeAI()
 	{
+		if ( Game.State is not GameplayState )
+			return;
 
 		if ( Disabled ) return;
 
