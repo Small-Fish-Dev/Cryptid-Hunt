@@ -11,15 +11,10 @@ class HUD : RootPanel
 
 		if ( Host.IsServer ) return;
 
-		if ( Instance != null )
-		{
-
-			Instance.Delete( true );
-
-		}
+		Instance?.Delete( true );
 
 		Instance = new HUD();
-		Instance.ChildrenOfType<MainMenu>().FirstOrDefault().Delete();
+		//Instance.ChildrenOfType<MainMenu>().FirstOrDefault().Delete();
 
 	}
 
@@ -30,12 +25,7 @@ class HUD : RootPanel
 
 		if ( Host.IsServer ) return;
 
-		if ( Instance != null )
-		{
-
-			Instance.Delete( true );
-
-		}
+		Instance?.Delete( true );
 
 		Instance = new HUD();
 
