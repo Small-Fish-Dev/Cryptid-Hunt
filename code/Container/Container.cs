@@ -144,13 +144,13 @@ public partial class Container
 		Weight -= item.Amount * item.Resource.Weight;
 		Items.RemoveAt( index );
 		Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
-
+		
 		return true;
 	}
 
 	public override string ToString()
 	{
-		var result = $"[{(Host.IsServer ? "SV" : "CL")}] ";
+		var result = $"[{(Host.IsServer ? "SV" : "CL")}] {Name}\n";
 		for ( int i = 0; i < Items.Count; i++ )
 			result += $"{Items?[i]?.Resource.Title} " +
 				$"({Items?[i]?.Amount}/{Items?[i]?.Resource.MaxAmount})" +
