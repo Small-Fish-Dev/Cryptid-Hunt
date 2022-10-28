@@ -21,17 +21,16 @@ public partial class NextBotPlayer : BasePlayer
 		Controller ??= new WalkController();
 		
 		SetModel( "models/citizen/citizen.vmdl" );
-		
-		EnableDrawing = true;
-		EnableHideInFirstPerson = true;
-		EnableShadowInFirstPerson = true;
-		
+
+		EnableShadowCasting = false;
+
 		_clothing.LoadFromClient( Game.PlayerClient );
 		_clothing.DressEntity( this );
 	}
 
 	public override void Respawn()
 	{
+		EnableDrawing = true;
 		LifeState = LifeState.Alive;
 		Health = 1f;
 		
@@ -67,7 +66,8 @@ public partial class NextBotPlayer : BasePlayer
 	public override void OnKilled()
 	{
 		LifeState = LifeState.Dead;
-		
+		EnableDrawing = false;
+
 		BecomeRagdollOnClient( Velocity, _lastDamage.Flags, _lastDamage.Position, _lastDamage.Force,
 			_lastDamage.BoneIndex );
 
@@ -161,6 +161,7 @@ public partial class NextBotPlayer : BasePlayer
 	Extensions.SceneRender render;
 	ModelEntity computer;
 	Texture lastFrame;
+	SceneLight light;
 
 	[Event.Frame]
 	private void onFrame()
@@ -169,10 +170,14 @@ public partial class NextBotPlayer : BasePlayer
 
 		lastFrame = render.Texture;
 		view.Style.BackgroundImage = lastFrame;
+		view.SetClass( "paused", true );
+		view.AddChild<Label>( "pause" ).Text = "PAUSED";
 
 		render.Delete();
 		camera.World = null;
 		camera = null;
+
+		light.Delete();
 	}
 
 	public override void PostCameraSetup( ref CameraSetup setup )
@@ -213,6 +218,12 @@ public partial class NextBotPlayer : BasePlayer
 
 			render = camera.Render( new Vector2( 459, 272 ), false, 20 );
 			view.Style.BackgroundImage = render.Texture;
+
+			light = new( Map.Scene )
+			{
+				LightColor = Color.White,
+				Radius = 100f
+			};
 		}
 
 		camera.Position = corpse?.IsValid() ?? false && LifeState == LifeState.Dead
@@ -231,5 +242,8 @@ public partial class NextBotPlayer : BasePlayer
 
 		screen.Rotation = setup.Rotation.Inverse;
 		screen.Position = attachmentPos - Vector3.Right * 0.01f;
+
+		light.Position = camera.Position + Vector3.Up * 10f;
+		light.Rotation = Rotation.From( 89, 0, 0 );
 	}
 }

@@ -136,8 +136,6 @@ public partial class Player : BasePlayer
 		OverrideCamera = null;
 		ScriptedEvent = false;
 
-		Sound.FromWorld( "sounds/misc/glass_break_intro.sound", PlayerSpawn.Initial.Transform.PointToWorld( new Vector3( -50f, 30f, 72f ) ) ).SetVolume( 10 );
-		
 	}
 
 	public override void FrameSimulate( Client cl )
