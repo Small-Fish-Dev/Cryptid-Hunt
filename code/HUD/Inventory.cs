@@ -2,6 +2,57 @@
 
 public class Inventory : Panel
 {
+	private class ItemViewer : ScenePanel
+	{
+		SceneModel obj;
+		Vector2 oldPos;
+		bool shouldMove = false;
+
+		float pitch;
+		float yaw;
+
+		public ItemViewer( Item item )
+		{
+			var world = new SceneWorld();
+			var model = Model.Load( item.Resource.Model )
+					?? Model.Load( "models/dev/error.vmdl" );
+			obj = new SceneModel(
+				world,
+				model,
+				new Transform( item.Resource.Position, item.Resource.Angles.ToRotation(), 1f ) );
+			var light = new SceneLight( world, Vector3.Forward * 100f + Vector3.Up * 20f, 100f, Color.White * 0.5f );
+
+			pitch = obj.Rotation.Pitch();
+			yaw = obj.Rotation.Yaw();
+
+			Camera.World = world;
+			Camera.Position = Vector3.Forward * 100f;
+			Camera.Rotation = Rotation.From( 0, 180, 0 );
+			Camera.FieldOfView = 60f;
+
+			AddEventListener( "onmousedown", () => shouldMove = true );
+			AddEventListener( "onmouseup", () => shouldMove = false );
+		}
+
+		[Event.Frame]
+		private void onFrame()
+		{
+			if ( !HasHovered )
+				shouldMove = false;
+
+			if ( shouldMove )
+			{				
+				var deltaPos = Mouse.Position - oldPos;
+				pitch = (pitch + deltaPos.y) % 360;
+				yaw = (yaw + deltaPos.x) % 360;
+
+				obj.Rotation = Rotation.From( pitch, yaw, 0 );
+			}
+
+			oldPos = Mouse.Position;
+		}
+	}
+
 	public static Inventory Instance { get; private set; }
 
 	private bool active = false;
@@ -21,6 +72,8 @@ public class Inventory : Panel
 	Dictionary<int, Panel> slots = new();
 	Panel slotContainer;
 
+	Panel viewContainer;
+
 	Item _selected;
 	Item selected 
 	{ 
@@ -28,7 +81,11 @@ public class Inventory : Panel
 		set
 		{
 			_selected = value;
-			// reset item view
+
+			viewContainer?.Delete( true );
+
+			if ( value != null )
+				createView( value );
 		}
 	}
 	Panel selectedPanel;
@@ -97,6 +154,18 @@ public class Inventory : Panel
 			var text = weight.AddChild<Label>( "text" );
 			text.Text = $"{(item.Amount * item.Resource.Weight):N1} KG";
 
+			if ( item.Resource.MaxAmount != 1 )
+			{
+				var amount = panel.AddChild<Panel>( "amount" );
+				var amountText = amount.AddChild<Label>( "text" );
+				amountText.Text = item.Resource.AmountType switch
+				{
+					Item.AmountType.Integer => $"{item.Amount:N0}/{item.Resource.MaxAmount:N0}",
+					Item.AmountType.Float => $"{item.Amount:N1}/{item.Resource.MaxAmount:N1}",
+					_ => "",
+				};
+			}
+
 			var iconContainer = panel.AddChild<Panel>( "iconContainer" );
 			var icon = iconContainer.AddChild<Panel>( "itemIcon" );
 			icon.Style.BackgroundImage = item.Resource.Icon;
@@ -107,6 +176,18 @@ public class Inventory : Panel
 
 		if ( item == selected )
 			selectedPanel = panel;
+	}
+
+	private void createView( Item item )
+	{
+		viewContainer = AddChild<Panel>( "viewContainer" );
+		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
+		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
+		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
+
+		var viewer = new ItemViewer( item );
+		viewer.AddClass( "view" );
+		viewContainer.AddChild( viewer );
 	}
 
 	public void Refresh()

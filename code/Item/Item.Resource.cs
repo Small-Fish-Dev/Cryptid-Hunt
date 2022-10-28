@@ -4,9 +4,8 @@ public partial class Item
 {
 	public enum AmountType
 	{
-		Liters,
-		Float,
-		Integer
+		Float = 0,
+		Integer = 1
 	}
 
 	[GameResource( "Item", "item", "An item resource." )]
@@ -46,14 +45,14 @@ public partial class Item
 					world,
 					model,
 					new Transform( Position, Angles.ToRotation(), 1f ) );
+				var light = new SceneLight( world, Vector3.Forward * 100f + Vector3.Up * 20f, 100f, Color.White * 0.5f );
 
 				var camera = new SceneCamera( "itemIcon" )
 				{
 					World = world,
 					Position = Vector3.Forward * 100f,
 					Rotation = Rotation.From( 0, 180, 0 ),
-					FieldOfView = 60f,
-					AmbientLightColor = Color.White,
+					FieldOfView = 60f
 				};
 				var size = new Vector2( 256f, 256f );
 				var render = camera.Render( size );

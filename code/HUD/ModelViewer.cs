@@ -6,6 +6,9 @@ public class ModelViewer : ScenePanel
 	Vector2 oldPos;
 	bool shouldMove = false;
 
+	float pitch;
+	float yaw;
+
 	public ModelViewer( Model mdl, Transform transform )
 	{
 		var world = new SceneWorld();
@@ -14,6 +17,9 @@ public class ModelViewer : ScenePanel
 			mdl,
 			transform );
 		var light = new SceneLight( world, Vector3.Forward * 100f + Vector3.Up * 20f, 100f, Color.White * 0.5f );
+
+		pitch = obj.Rotation.Pitch();
+		yaw = obj.Rotation.Yaw();
 
 		Camera.World = world;
 		Camera.Position = Vector3.Forward * 100f;
@@ -30,9 +36,9 @@ public class ModelViewer : ScenePanel
 		if ( shouldMove )
 		{
 			var deltaPos = Mouse.Position - oldPos;
-			var pitch = obj.Rotation.Pitch() + deltaPos.y;
-			var yaw = obj.Rotation.Yaw() + deltaPos.x;
-			Log.Error( (pitch, yaw) );
+			pitch = (pitch + deltaPos.y) % 360;
+			yaw = (yaw + deltaPos.x) % 360;
+
 			obj.Rotation = Rotation.From( pitch, yaw, 0 );
 		}
 
