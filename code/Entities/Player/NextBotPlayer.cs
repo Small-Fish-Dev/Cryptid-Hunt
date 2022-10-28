@@ -138,4 +138,50 @@ public partial class NextBotPlayer : BasePlayer
 
 		ent.DeleteAsync( 10.0f );
 	}
+
+	WorldPanel screen;
+	Panel view;
+	SceneCamera camera;
+	Extensions.SceneRender render;
+	ModelEntity computer;
+
+	public override void PostCameraSetup( ref CameraSetup setup )
+	{
+		if ( computer == null )
+		{
+			/*computer = Entity.All
+				.Where( ent => (ent as ModelEntity)?.GetModelName() == "models/bedroom/computer/computer.vmdl" ) 
+				as ModelEntity;*/
+			// i don't really know please make the computer possible to get from code!!!
+
+			return;
+		}
+
+		if ( screen == null )
+		{
+			screen = new();
+			screen.StyleSheet = HUD.Instance.StyleSheet;
+			screen.WorldScale = 0.3f;
+
+			var size = new Vector2( 480, 360 ) * (1f / screen.WorldScale);
+			screen.PanelBounds = new Rect( -size / 2f, size );
+
+			view = screen.AddChild<Panel>( "Screen" );
+
+			camera = new SceneCamera( "nextBotCamera" )
+			{
+
+				FieldOfView = 60f,
+				World = Map.Scene
+			};
+
+			render = camera.Render( new Vector2( 480, 360 ), false, 24 );
+		}
+
+		setup.Viewer = this;
+		setup.Position = computer?.GetAttachment( "screen" )?.Position ?? Vector3.Zero; // needs some moving
+		setup.Rotation = Transform.Zero.Rotation; // actually rotate towards screen from camera pos
+
+		view.Style.BackgroundImage = render.Texture;
+	}
 }
