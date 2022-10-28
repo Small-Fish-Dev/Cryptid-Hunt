@@ -58,7 +58,6 @@ public partial class Player : BasePlayer
 
 	public override void Respawn()
 	{
-
 		CurrentCheckpoint ??= PlayerSpawn.Initial;
 
 		EnableAllCollisions = true;
@@ -75,8 +74,8 @@ public partial class Player : BasePlayer
 
 	public override void Simulate( Client cl )
 	{
-		Controller?.Simulate( cl, this, null );
-
+		base.Simulate( cl );
+		
 		if ( Host.IsClient ) return;
 		
 		if ( Input.Pressed( InputButton.Use ) )

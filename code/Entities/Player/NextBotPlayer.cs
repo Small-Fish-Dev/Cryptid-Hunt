@@ -32,13 +32,23 @@ public partial class NextBotPlayer : BasePlayer
 
 	public override void Respawn()
 	{
-		Health = float.Epsilon; // Smallest health possible
+		LifeState = LifeState.Alive;
+		Health = 1f;
 		
 		var randomSpawnPoint = _spawnPoints.MinBy(x => Guid.NewGuid());
 		Position = randomSpawnPoint.Position;
 		Rotation = randomSpawnPoint.Rotation;
 		
 		Event.Run( "nextbot.player.respawn" );
+	}
+
+	[ConCmd.Admin( "debug_commit_die" )]
+	public static void CommitDie()
+	{
+		if ( Game.PlayerClient.Pawn is not NextBotPlayer player )
+			throw new Exception("Pawn is not NextBot player");
+
+		player.TakeDamage( DamageInfo.Generic( 50f ) );
 	}
 	
 	public override void TakeDamage( DamageInfo info )
@@ -50,14 +60,18 @@ public partial class NextBotPlayer : BasePlayer
 
 	public override void OnKilled()
 	{
-		base.OnKilled();
-
-		NextBotState.Deaths++;
+		LifeState = LifeState.Dead;
 		
 		BecomeRagdollOnClient( Velocity, _lastDamage.Flags, _lastDamage.Position, _lastDamage.Force,
 			_lastDamage.BoneIndex );
 
 		Event.Run( "nextbot.player.dead" );
+
+		GameTask.RunInThreadAsync( async () =>
+		{
+			await GameTask.DelaySeconds( 2.0f );
+			Respawn();
+		} );
 	}
 	
 	[ClientRpc]

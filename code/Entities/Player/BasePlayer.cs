@@ -12,4 +12,11 @@ public abstract partial class BasePlayer : AnimatedEntity
 	}
 
 	public abstract void Respawn();
+
+	public override void Simulate( Client cl )
+	{
+		base.Simulate( cl );
+		
+		Controller?.Simulate( cl, this, null );
+	}
 }

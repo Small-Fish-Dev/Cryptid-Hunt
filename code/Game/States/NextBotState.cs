@@ -17,4 +17,13 @@ public class NextBotState : BaseState
 	{
 		Log.Error( "TODO: Remove every instance of NextBot" );
 	}
+	
+	[Event("nextbot.player.dead")]
+	public void OnPlayerDeath()
+	{
+		Deaths++;
+
+		if ( Deaths == 2 )
+			Game.State = new GameplayState();
+	}
 }
