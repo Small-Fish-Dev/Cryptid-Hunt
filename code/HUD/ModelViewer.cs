@@ -16,7 +16,25 @@ public class ModelViewer : ScenePanel
 			world,
 			mdl,
 			transform );
-		var light = new SceneLight( world, Vector3.Forward * 100f + Vector3.Up * 20f, 100f, Color.White * 0.5f );
+
+
+		var lightWarm = new SceneSpotLight( world, Vector3.Forward * 100f + Vector3.Up * 30f + Vector3.Left * 100f, new Color( 1f, 0.95f, 0.8f ) * 15f );
+		lightWarm.Rotation = Rotation.LookAt( -lightWarm.Position );
+		lightWarm.Radius = 200f;
+		lightWarm.ConeInner = 90f;
+		lightWarm.ConeOuter = 90f;
+
+		var lightBlue = new SceneSpotLight( world, Vector3.Backward * 80f + Vector3.Down * 30f + Vector3.Right * 150f, new Color( 0.4f, 0.4f, 1f ) * 20f );
+		lightBlue.Rotation = Rotation.LookAt( -lightBlue.Position );
+		lightBlue.Radius = 200f;
+		lightBlue.ConeInner = 90f;
+		lightBlue.ConeOuter = 90f;
+
+		var lightAmbient = new SceneSpotLight( world, Vector3.Forward * 100f, new Color( 1f, 1f, 1f ) * 1f );
+		lightBlue.Rotation = Rotation.LookAt( -lightBlue.Position );
+		lightBlue.Radius = 200f;
+		lightBlue.ConeInner = 90f;
+		lightBlue.ConeOuter = 90f;
 
 		pitch = obj.Rotation.Pitch();
 		yaw = obj.Rotation.Yaw();
@@ -35,14 +53,27 @@ public class ModelViewer : ScenePanel
 	{
 		if ( shouldMove )
 		{
+
+			if ( oldPos == 0f )
+			{
+
+				oldPos = Mouse.Position;
+
+			}
+
 			var deltaPos = Mouse.Position - oldPos;
 			pitch = (pitch + deltaPos.y) % 360;
-			yaw = (yaw + deltaPos.x) % 360;
+			yaw = (yaw - deltaPos.x ) % 360;
+			
+			Camera.Rotation = Rotation.From( pitch, (yaw + 180) % 360, 0 );
+			Camera.Position = Camera.Rotation.Forward * -100f;
 
-			obj.Rotation = Rotation.From( pitch, yaw, 0 );
+			oldPos = Mouse.Position;
+
 		}
 
 		obj?.Update( Time.Delta );
-		oldPos = Mouse.Position;
+
 	}
+
 }

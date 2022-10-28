@@ -184,8 +184,6 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 0.2f );
 
-					SetAnimParameter( "attack", false );
-
 					// TODO: Maybe code here for the attack HP
 
 					await GameTask.DelaySeconds( 1.45f );
