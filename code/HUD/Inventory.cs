@@ -117,6 +117,7 @@ public class Inventory : Panel
 	[Event.BuildInput]
 	private void buildInput( InputBuilder input )
 	{
+		if ( Local.Pawn is not Player pawn ) return;
 		if ( input.Released( InputButton.Score ) )
 			Active = !Active;
 	}
