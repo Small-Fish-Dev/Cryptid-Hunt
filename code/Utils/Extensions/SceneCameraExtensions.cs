@@ -56,8 +56,8 @@ public static partial class Extensions
 			{
 				Graphics.RenderToTexture( render.Camera, render.Texture );
 				render.FrameTime = 0;
-				Log.Error( "render" );
 			}
+
 			render.FrameTime += Time.Delta;
 
 			if ( render.RenderOnce || render.Deleting )
