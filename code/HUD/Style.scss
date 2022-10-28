@@ -182,13 +182,12 @@ MainMenu {
     cursor: default;
 
     .Logo {
-        height: 30%;
+        height: 20%;
         margin-bottom: 6%;
-        aspect-ratio: 2;
-        background-image: url(ui/hand.png);
+        aspect-ratio: 4.74;
+        background-image: url(ui/logo.png);
         background-size: cover;
         background-repeat: no-repeat;
-        background-color: red;
     }
 
     Button {
