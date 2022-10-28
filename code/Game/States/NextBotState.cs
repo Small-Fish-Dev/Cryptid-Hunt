@@ -15,7 +15,9 @@ public class NextBotState : BaseState
 	
 	public override void CleanUp()
 	{
-		Log.Error( "TODO: Remove every instance of NextBot" );
+		foreach ( var ent in Entity.All )
+			if ( ent is NextBot || ent is NextBotPlayer )
+				ent.Delete();
 	}
 	
 	[Event("nextbot.player.dead")]
@@ -23,7 +25,7 @@ public class NextBotState : BaseState
 	{
 		Deaths++;
 
-		if ( Deaths == 2 )
+		if ( Deaths == 3 )
 			Game.State = new GameplayState();
 	}
 }

@@ -42,6 +42,12 @@ public partial class NextBotPlayer : BasePlayer
 		Event.Run( "nextbot.player.respawn" );
 	}
 
+	public override void FrameSimulate( Client cl )
+	{
+		base.FrameSimulate( cl );
+		EyeRotation = Input.Rotation;
+	}
+
 	[ConCmd.Admin( "debug_commit_die" )]
 	public static void CommitDie()
 	{
@@ -69,32 +75,35 @@ public partial class NextBotPlayer : BasePlayer
 
 		GameTask.RunInThreadAsync( async () =>
 		{
-			await GameTask.DelaySeconds( 2.0f );
-			Respawn();
+			await GameTask.DelaySeconds( 1.0f );
+			if ( this != null && IsValid )
+				Respawn();
 		} );
 	}
-	
+
+	ModelEntity corpse;
+
 	[ClientRpc]
 	private void BecomeRagdollOnClient( Vector3 velocity, DamageFlags damageFlags, Vector3 forcePos, Vector3 force, int bone )
 	{
-		var ent = new ModelEntity();
-		ent.Tags.Add( "ragdoll", "solid", "debris" );
-		ent.Position = Position;
-		ent.Rotation = Rotation;
-		ent.Scale = Scale;
-		ent.UsePhysicsCollision = true;
-		ent.EnableAllCollisions = true;
-		ent.SetModel( GetModelName() );
-		ent.CopyBonesFrom( this );
-		ent.CopyBodyGroups( this );
-		ent.CopyMaterialGroup( this );
-		ent.CopyMaterialOverrides( this );
-		ent.TakeDecalsFrom( this );
-		ent.EnableAllCollisions = true;
-		ent.SurroundingBoundsMode = SurroundingBoundsType.Physics;
-		ent.RenderColor = RenderColor;
-		ent.PhysicsGroup.Velocity = velocity;
-		ent.PhysicsEnabled = true;
+		corpse = new ModelEntity();
+		corpse.Tags.Add( "ragdoll", "solid", "debris" );
+		corpse.Position = Position;
+		corpse.Rotation = Rotation;
+		corpse.Scale = Scale;
+		corpse.UsePhysicsCollision = true;
+		corpse.EnableAllCollisions = true;
+		corpse.SetModel( GetModelName() );
+		corpse.CopyBonesFrom( this );
+		corpse.CopyBodyGroups( this );
+		corpse.CopyMaterialGroup( this );
+		corpse.CopyMaterialOverrides( this );
+		corpse.TakeDecalsFrom( this );
+		corpse.EnableAllCollisions = true;
+		corpse.SurroundingBoundsMode = SurroundingBoundsType.Physics;
+		corpse.RenderColor = RenderColor;
+		corpse.PhysicsGroup.Velocity = velocity;
+		corpse.PhysicsEnabled = true;
 
 		foreach ( var child in Children )
 		{
@@ -105,7 +114,7 @@ public partial class NextBotPlayer : BasePlayer
 
 			var clothing = new ModelEntity();
 			clothing.SetModel( model );
-			clothing.SetParent( ent, true );
+			clothing.SetParent( corpse, true );
 			clothing.RenderColor = e.RenderColor;
 			clothing.CopyBodyGroups( e );
 			clothing.CopyMaterialGroup( e );
@@ -114,7 +123,7 @@ public partial class NextBotPlayer : BasePlayer
 		if ( damageFlags.HasFlag( DamageFlags.Bullet ) ||
 		     damageFlags.HasFlag( DamageFlags.PhysicsImpact ) )
 		{
-			PhysicsBody body = bone > 0 ? ent.GetBonePhysicsBody( bone ) : null;
+			PhysicsBody body = bone > 0 ? corpse.GetBonePhysicsBody( bone ) : null;
 
 			if ( body != null )
 			{
@@ -122,21 +131,28 @@ public partial class NextBotPlayer : BasePlayer
 			}
 			else
 			{
-				ent.PhysicsGroup.ApplyImpulse( force );
+				corpse.PhysicsGroup.ApplyImpulse( force );
 			}
 		}
 
 		if ( damageFlags.HasFlag( DamageFlags.Blast ) )
 		{
-			if ( ent.PhysicsGroup != null )
+			if ( corpse.PhysicsGroup != null )
 			{
-				ent.PhysicsGroup.AddVelocity( (Position - (forcePos + Vector3.Down * 100.0f)).Normal * (force.Length * 0.2f) );
+				corpse.PhysicsGroup.AddVelocity( (Position - (forcePos + Vector3.Down * 100.0f)).Normal * (force.Length * 0.2f) );
 				var angularDir = (Rotation.FromYaw( 90 ) * force.WithZ( 0 ).Normal).Normal;
-				ent.PhysicsGroup.AddAngularVelocity( angularDir * (force.Length * 0.02f) );
+				corpse.PhysicsGroup.AddAngularVelocity( angularDir * (force.Length * 0.02f) );
 			}
 		}
 
-		ent.DeleteAsync( 10.0f );
+		corpse.DeleteAsync( 10.0f );
+	}
+
+	public override void BuildInput( InputBuilder input )
+	{
+		input.ViewAngles += input.AnalogLook;
+		input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
+		input.InputDirection = input.AnalogMove;
 	}
 
 	WorldPanel screen;
@@ -144,15 +160,33 @@ public partial class NextBotPlayer : BasePlayer
 	SceneCamera camera;
 	Extensions.SceneRender render;
 	ModelEntity computer;
+	Texture lastFrame;
+
+	[Event.Frame]
+	private void onFrame()
+	{
+		if ( Local.Pawn is NextBotPlayer || lastFrame != null ) return;
+
+		lastFrame = render.Texture;
+		view.Style.BackgroundImage = lastFrame;
+
+		render.Delete();
+		camera.World = null;
+		camera = null;
+	}
 
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
 		if ( computer == null )
 		{
-			/*computer = Entity.All
-				.Where( ent => (ent as ModelEntity)?.GetModelName() == "models/bedroom/computer/computer.vmdl" ) 
-				as ModelEntity;*/
-			// i don't really know please make the computer possible to get from code!!!
+			foreach ( var ent in Entity.All ) // find by name doesn't work x 
+			{
+				if ( ent is not ModelEntity mdl ) continue;
+				if ( !ent.Name.Contains( "computer" ) ) continue;
+
+				computer = mdl;
+				break;
+			}
 
 			return;
 		}
@@ -163,25 +197,39 @@ public partial class NextBotPlayer : BasePlayer
 			screen.StyleSheet = HUD.Instance.StyleSheet;
 			screen.WorldScale = 0.3f;
 
-			var size = new Vector2( 480, 360 ) * (1f / screen.WorldScale);
-			screen.PanelBounds = new Rect( -size / 2f, size );
+			var panelSize = new Vector2( 540, 320 ) * (1f / screen.WorldScale);
+			screen.PanelBounds = new Rect( -panelSize / 2f, panelSize );
 
 			view = screen.AddChild<Panel>( "Screen" );
+			view.AddChild<Label>( "watermark" ).Text = "MADE BY MONKEY BAR";
 
 			camera = new SceneCamera( "nextBotCamera" )
 			{
-
-				FieldOfView = 60f,
-				World = Map.Scene
+				FieldOfView = 70f,
+				World = Map.Scene,
+				Position = Position + Vector3.Up * 64f,
+				Rotation = EyeRotation
 			};
 
-			render = camera.Render( new Vector2( 480, 360 ), false, 24 );
+			render = camera.Render( new Vector2( 459, 272 ), false, 20 );
+			view.Style.BackgroundImage = render.Texture;
 		}
 
-		setup.Viewer = this;
-		setup.Position = computer?.GetAttachment( "screen" )?.Position ?? Vector3.Zero; // needs some moving
-		setup.Rotation = Transform.Zero.Rotation; // actually rotate towards screen from camera pos
+		camera.Position = corpse?.IsValid() ?? false && LifeState == LifeState.Dead
+			? Vector3.Lerp( camera.Position, corpse.Position + Vector3.Up * 80f, 10f * Time.Delta )
+			: Position + Vector3.Up * 64f;
+		camera.Rotation = corpse?.IsValid() ?? false && LifeState == LifeState.Dead
+			? Rotation.Lerp( camera.Rotation, Rotation.From( 89, 0, 0 ), 10f * Time.Delta )
+			: EyeRotation;
 
-		view.Style.BackgroundImage = render.Texture;
+		var attachmentPos = computer?.GetAttachment( "screen" )?.Position ?? Vector3.Zero;
+		setup.Viewer = this;
+		setup.Position = attachmentPos
+			+ Vector3.Right * 25f;
+		setup.Rotation = Rotation.LookAt( attachmentPos - setup.Position );
+		setup.FieldOfView = 65f;
+
+		screen.Rotation = setup.Rotation.Inverse;
+		screen.Position = attachmentPos - Vector3.Right * 0.01f;
 	}
 }
