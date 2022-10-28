@@ -68,12 +68,11 @@ public class ModelViewer : ScenePanel
 			Camera.Rotation = Rotation.From( pitch, (yaw + 180) % 360, 0 );
 			Camera.Position = Camera.Rotation.Forward * -100f;
 
-			oldPos = Mouse.Position;
 
 		}
 
 		obj?.Update( Time.Delta );
-
+		oldPos = Mouse.Position;
 	}
 
 }
