@@ -23,6 +23,8 @@ class ItemPrompt : Panel
 	void computePrompt()
 	{
 
+		SetClass( "hidden", true );
+
 		if ( Local.Pawn is not Player player ) return;
 
 		var interactable = player.FirstInteractable;

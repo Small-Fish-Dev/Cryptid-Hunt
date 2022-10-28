@@ -20,6 +20,7 @@ public struct ModelPreview
 		new ModelPreview { Name = "Key", Path = "models/items/key.vmdl", Author = "Luke", Rotation = new Angles( 0, 30, 180 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 4f },
 		new ModelPreview { Name = "Lock", Path = "models/items/lock.vmdl", Author = "Luke", Rotation = new Angles( 0, 235, 0 ), Offset = new Vector3( 0, 0, 15 ), Zoom = 5f },
 		new ModelPreview { Name = "Medkit", Path = "models/items/medkit.vmdl", Author = "Luke", Rotation = new Angles( -20, 225, 0 ), Offset = new Vector3( 0, 0, -10 ), Zoom = 1.8f },
+		new ModelPreview { Name = "Bed", Path = "models/items/bed.vmdl", Author = "Luke", Rotation = new Angles( -20, 0, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
 		new ModelPreview { Name = "Page", Path = "models/items/page.vmdl", Author = "Luke", Rotation = new Angles( 60, 20, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 2.6f },
 		new ModelPreview { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f }
 		/*
@@ -83,6 +84,12 @@ class ModelPreviewer : Panel
 		viewer.Delete();
 
 		currentSelected = (currentSelected - 1) % ModelPreview.All.Count();
+		if ( currentSelected <= 1 )
+		{
+
+			currentSelected = ModelPreview.All.Count() - 1;
+
+		}
 		var currentPreview = ModelPreview.All[currentSelected];
 
 		viewer = new ModelViewer( Model.Load( currentPreview.Path ), new Transform( currentPreview.Offset, Rotation.From( currentPreview.Rotation ), currentPreview.Zoom ) );
