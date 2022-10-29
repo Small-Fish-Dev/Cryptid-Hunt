@@ -199,6 +199,8 @@ public class Inventory : Panel
 
 	private void createView( Item item )
 	{
+		if ( Local.Pawn is not Player pawn ) return;
+
 		viewContainer = AddChild<Panel>( "viewContainer" );
 
 		var viewer = new ItemViewer( item );
@@ -211,7 +213,7 @@ public class Inventory : Panel
 
 		var buttonContainer = viewContainer.AddChild<Panel>( "buttonContainer" );
 		var equipButton = buttonContainer.AddChild<Panel>( "button" );
-		equipButton.AddEventListener( "onclick", () => Player.Equip( item.Index ) );
+		equipButton.AddEventListener( "onclick", () => Player.Equip( pawn.Inventory.Items.IndexOf( selected ) ) );
 		equipButton.AddChild<Label>( "text" ).Text = "Equip";
 	}
 
