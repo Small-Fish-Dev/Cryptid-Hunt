@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using Sandbox;
+
+namespace SpookyJam2022;
 
 [HammerEntity]
 [EditorModel( "models/items/shotgun.vmdl" )]
@@ -10,6 +12,8 @@ public partial class Shotgun : BaseInteractable
 	public override string UseDescription => "Take Shotgun";
 	public override Vector3 PromptOffset3D => new Vector3( 0f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
+	public override Rotation OffsetRotation => Rotation.From( new Angles( 0f, 90f, 0f ) );
+	public override Vector3 OffsetPosition => new Vector3( 0f, 0f, -10f );
 
 	public override void Interact( Player player )
 	{
@@ -29,6 +33,10 @@ public partial class Shotgun : BaseInteractable
 		var totalDamage = 0f;
 		Polewik victim = null;
 
+		PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.shoot.sound" ).SetVolume( 3 );
+
+		CreateParticle( player );
+
 		for ( int i = 0; i < BulletsPerShot; i++ )
 		{
 
@@ -39,7 +47,6 @@ public partial class Shotgun : BaseInteractable
 
 			//DebugOverlay.Sphere( trace.EndPosition, 5f, new Color( force, 0, 0 ), 2f );
 
-			
 			if ( trace.Entity is Polewik polewik )
 			{
 
@@ -52,6 +59,16 @@ public partial class Shotgun : BaseInteractable
 
 		}
 
+		GameTask.RunInThreadAsync( async () =>
+		{
+
+			await Task.DelaySeconds( 0.4f );
+			PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.pump.sound" ).SetVolume( 3 );
+
+		} );
+
+		player.LastInteraction = -1f;
+
 		if ( victim != null )
 		{
 
@@ -59,6 +76,15 @@ public partial class Shotgun : BaseInteractable
 
 		}
 
+
+	}
+
+	[ClientRpc]
+	public void CreateParticle( Player player )
+	{
+
+		Particles.Create( "particles/pistol_muzzleflash.vpcf", player.ViewModel, "muzzle" );
+		Event.Run( "ScreenShake", 0.3f, 10f );
 
 	}
 

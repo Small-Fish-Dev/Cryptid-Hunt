@@ -115,9 +115,8 @@ public partial class Player : BasePlayer
 				if ( Holding != null )
 				{
 
-					Holding.Use( this );
-
 					LastInteraction = 0;
+					Holding.Use( this );
 
 				}
 
