@@ -5,9 +5,9 @@
 		Title = "Shotgun"
 		Description = "Be careful with this thing."
 		Color = "0.27895,0.08643,0.08643,1"
-		Model = resource:"weapons/rust_shotgun/rust_shotgun.vmdl"
-		Angles = "-15,90,0"
-		Position = "50,-7,0"
+		Model = resource:"models/items/shotgun.vmdl"
+		Angles = "0,0,-30"
+		Position = "40,-5,-8"
 		MaxAmount = 1
 		AmountType = "Integer"
 		Weight = 3.1

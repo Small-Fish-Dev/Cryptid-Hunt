@@ -19,8 +19,25 @@ public class Inventory : Panel
 			obj = new SceneModel(
 				world,
 				model,
-				new Transform( item.Resource.Position, item.Resource.Angles.ToRotation(), 1f ) );
-			var light = new SceneLight( world, Vector3.Forward * 100f + Vector3.Up * 20f, 100f, Color.White * 0.5f );
+				new Transform( Vector3.Up * item.Resource.Position.z, item.Resource.Angles.ToRotation(), 1f ) );
+
+			var lightWarm = new SceneSpotLight( world, Vector3.Forward * 100f + Vector3.Up * 30f + Vector3.Left * 100f, new Color( 1f, 0.95f, 0.8f ) * 15f );
+			lightWarm.Rotation = Rotation.LookAt( -lightWarm.Position );
+			lightWarm.Radius = 200f;
+			lightWarm.ConeInner = 90f;
+			lightWarm.ConeOuter = 90f;
+
+			var lightBlue = new SceneSpotLight( world, Vector3.Backward * 80f + Vector3.Down * 30f + Vector3.Right * 150f, new Color( 0.4f, 0.4f, 1f ) * 20f );
+			lightBlue.Rotation = Rotation.LookAt( -lightBlue.Position );
+			lightBlue.Radius = 200f;
+			lightBlue.ConeInner = 90f;
+			lightBlue.ConeOuter = 90f;
+
+			var lightAmbient = new SceneSpotLight( world, Vector3.Forward * 100f, new Color( 1f, 1f, 1f ) * 1f );
+			lightBlue.Rotation = Rotation.LookAt( -lightBlue.Position );
+			lightBlue.Radius = 200f;
+			lightBlue.ConeInner = 90f;
+			lightBlue.ConeOuter = 90f;
 
 			pitch = obj.Rotation.Pitch();
 			yaw = obj.Rotation.Yaw();
@@ -46,7 +63,8 @@ public class Inventory : Panel
 				pitch = (pitch + deltaPos.y) % 360;
 				yaw = (yaw + deltaPos.x) % 360;
 
-				obj.Rotation = Rotation.From( pitch, yaw, 0 );
+				Camera.Rotation = Rotation.From( pitch, (yaw + 180) % 360, 0 );
+				Camera.Position = Camera.Rotation.Forward * -100f;
 			}
 
 			oldPos = Mouse.Position;
@@ -150,6 +168,10 @@ public class Inventory : Panel
 		var item = container[index];
 		if ( item != null )
 		{
+			var iconContainer = panel.AddChild<Panel>( "iconContainer" );
+			var icon = iconContainer.AddChild<Panel>( "itemIcon" );
+			icon.Style.BackgroundImage = item.Resource.Icon;
+
 			var weight = panel.AddChild<Panel>( "weight" );
 			weight.AddChild<Panel>( "icon" );
 			var text = weight.AddChild<Label>( "text" );
@@ -166,10 +188,6 @@ public class Inventory : Panel
 					_ => "",
 				};
 			}
-
-			var iconContainer = panel.AddChild<Panel>( "iconContainer" );
-			var icon = iconContainer.AddChild<Panel>( "itemIcon" );
-			icon.Style.BackgroundImage = item.Resource.Icon;
 		}
 
 		panel.SetClass( "hasItem", item != null );
@@ -181,14 +199,22 @@ public class Inventory : Panel
 
 	private void createView( Item item )
 	{
+		if ( Local.Pawn is not Player pawn ) return;
+
 		viewContainer = AddChild<Panel>( "viewContainer" );
-		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
-		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
-		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
 
 		var viewer = new ItemViewer( item );
 		viewer.AddClass( "view" );
 		viewContainer.AddChild( viewer );
+
+		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
+		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
+		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
+
+		var buttonContainer = viewContainer.AddChild<Panel>( "buttonContainer" );
+		var equipButton = buttonContainer.AddChild<Panel>( "button" );
+		equipButton.AddEventListener( "onclick", () => Player.Equip( pawn.Inventory.Items.IndexOf( selected ) ) );
+		equipButton.AddChild<Label>( "text" ).Text = "Equip";
 	}
 
 	public void Refresh()
