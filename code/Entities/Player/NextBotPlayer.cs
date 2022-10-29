@@ -147,11 +147,19 @@ public partial class NextBotPlayer : BasePlayer
 		corpse.DeleteAsync( 10.0f );
 	}
 
+	private FearEntry fearEntry;
+
 	public override void BuildInput( InputBuilder input )
 	{
-		input.ViewAngles += input.AnalogLook;
-		input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
-		input.InputDirection = input.AnalogMove;
+		if ( fearEntry is not null && fearEntry.IsValid )
+		{
+			if ( input.Pressed( InputButton.PrimaryAttack ) )
+				fearEntry.Focus();
+		} else {
+			input.ViewAngles += input.AnalogLook;
+			input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
+			input.InputDirection = input.AnalogMove;
+		}
 	}
 
 	WorldPanel screen;
@@ -218,6 +226,12 @@ public partial class NextBotPlayer : BasePlayer
 			view.Style.BackgroundImage = render.Texture;
 
 			view.AddChild<Label>( "watermark" ).Text = "MADE BY MONKEY BAR";
+
+			var fearContainer = screen.AddChild<Panel>( "fear" );
+			fearContainer.Add.Label( "Welcome to the NextBot Personalised!\nWhat or who do you fear the most?.." );
+			fearContainer.Add.Label( "(press Primary Attack button to focus)", "techtip" );
+			fearEntry = fearContainer.AddChild<FearEntry>();
+			fearEntry.Focus();
 		}
 
 		if ( light == null )
