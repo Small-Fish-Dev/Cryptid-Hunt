@@ -236,8 +236,8 @@
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "fur"
-						filename = "models/polewik/polewik_fur2.fbx"
+						name = "naked"
+						filename = "models/polewik/polewik_naked.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -1061,7 +1061,7 @@
 				[
 					{
 						_class = "BodyGroup"
-						name = "body"
+						name = "fur"
 						children = 
 						[
 							{
@@ -1071,24 +1071,12 @@
 									"polewik",
 								]
 							},
-						]
-						hidden_in_tools = false
-					},
-					{
-						_class = "BodyGroup"
-						name = "fur"
-						children = 
-						[
 							{
 								_class = "BodyGroupChoice"
 								meshes = 
 								[
-									"fur",
+									"naked",
 								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = [  ]
 							},
 						]
 						hidden_in_tools = false
