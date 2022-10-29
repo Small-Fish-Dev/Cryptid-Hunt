@@ -12,6 +12,13 @@ public partial class Ammo : BaseInteractable
 	public override Vector3 PromptOffset3D => new Vector3( 0f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
 
+	public override void Spawn()
+	{
+		base.Spawn();
+
+		Amount = Rand.Int( 3, 5 );
+	}
+
 	public override void Interact( Player player )
 	{
 

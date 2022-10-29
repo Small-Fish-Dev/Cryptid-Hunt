@@ -34,8 +34,13 @@ public partial class Shotgun : BaseInteractable
 		var totalDamage = 0f;
 		Polewik victim = null;
 
-		PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.shoot.sound" ).SetVolume( 3 );
+		var ammoIndex = player.Inventory?.Find( "shotgun_ammo" ) ?? - 1;
+		if ( ammoIndex == -1 ) return;
 
+		var success = player.Inventory?.Remove( ammoIndex, 1 ) ?? false;
+		if ( !success ) return;
+
+		PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.shoot.sound" ).SetVolume( 3 );
 		CreateParticle( player );
 
 		for ( int i = 0; i < BulletsPerShot; i++ )
