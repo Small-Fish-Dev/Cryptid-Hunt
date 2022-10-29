@@ -6,6 +6,27 @@
 		children = 
 		[
 			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "LookAtChain"
+						name = "eye"
+						lookat_chain = 
+						{
+							name = ""
+							bones = 
+							[
+								{
+									name = "eye"
+									weight = 1.0
+								},
+							]
+						}
+					},
+				]
+			},
+			{
 				_class = "MaterialGroupList"
 				children = 
 				[
@@ -20,6 +41,21 @@
 						]
 						use_global_default = false
 						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "eye"
+						parent_bone = "eye"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 90.0, 180.0 ]
+						weight = 1.0
+						ignore_rotation = false
 					},
 				]
 			},
@@ -73,13 +109,35 @@
 						take = 0
 						reverse = false
 					},
+					{
+						_class = "MorphFrame"
+						name = "iris"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						morph_weights = 
+						[
+							{
+								morph = "iris"
+								weight = 1.0
+							},
+						]
+					},
 				]
 				default_root_bone_name = ""
 			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "models/brain/brain_anim.vanmgrph"
 		base_model_name = ""
 	}
 }
