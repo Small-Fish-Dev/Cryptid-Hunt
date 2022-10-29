@@ -23,8 +23,8 @@
 				m_nScalarAttribute = 3
 				m_nVectorAttribute = 6
 				m_nVectorComponent = 0
-				m_flRandomMin = 2.0
-				m_flRandomMax = 3.0
+				m_flRandomMin = 0.5
+				m_flRandomMax = 1.0
 				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
 				m_flLOD0 = 0.0
 				m_flLOD1 = 0.0
@@ -1164,21 +1164,21 @@
 					[
 						{
 							x = 0.0
-							y = 1.0
-							m_flSlopeIncoming = 0.888144
-							m_flSlopeOutgoing = 0.888144
+							y = 0.0
+							m_flSlopeIncoming = 1.223525
+							m_flSlopeOutgoing = 1.223525
 						},
 						{
-							x = 0.545858
-							y = 1.4848
-							m_flSlopeIncoming = 2.0
-							m_flSlopeOutgoing = 2.0
+							x = 0.376421
+							y = 0.46056
+							m_flSlopeIncoming = 0.75144
+							m_flSlopeOutgoing = 0.75144
 						},
 						{
 							x = 1.0
-							y = 3.0
-							m_flSlopeIncoming = 3.336399
-							m_flSlopeOutgoing = 3.336399
+							y = 0.75144
+							m_flSlopeIncoming = 0.466469
+							m_flSlopeOutgoing = 0.466469
 						},
 					]
 					m_tangents = 
@@ -1196,7 +1196,7 @@
 							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
 						},
 					]
-					m_vDomainMins = [ 0.0, 1.0 ]
+					m_vDomainMins = [ 0.0, 0.0 ]
 					m_vDomainMaxs = [ 1.0, 3.0 ]
 				}
 			}
