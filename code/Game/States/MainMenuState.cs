@@ -1,7 +1,11 @@
-﻿namespace SpookyJam2022.States;
+﻿using Sandbox.Internal;
+
+namespace SpookyJam2022.States;
 
 public partial class MainMenuState : BaseState
 {
+
+	PointLightEntity light;
 	public override void Init()
 	{
 		NextBotState.Deaths = 0;
@@ -26,12 +30,11 @@ public partial class MainMenuState : BaseState
 
 				}
 
-				// TODO REMOVE!!
-				var light = new PointLightEntity();
+				light = new PointLightEntity();
 				light.Position = camera.Position;
-				light.SetLightBrightness( 3f );
+				light.SetLightBrightness( 1f );
 				light.SetLightColor( new Color( 1f, 0.95f, 0.8f ) );
-				light.Range = 2500;
+				light.Range = 3000;
 
 			}
 
@@ -41,6 +44,7 @@ public partial class MainMenuState : BaseState
 	public override void CleanUp()
 	{
 		// The menu hides itself.
+		light.Delete();
 	}
 	
 	[ClientRpc]
