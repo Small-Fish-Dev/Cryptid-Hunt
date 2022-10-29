@@ -15,14 +15,11 @@ public partial class Player
 			Enabled = true,
 			DynamicShadows = true,
 			Range = 2048,
-			Falloff = 1.0f,
-			LinearAttenuation = 0.0f,
-			QuadraticAttenuation = 1.0f,
-			Brightness = parent != null ? 0.2f : 2f,
+			Brightness = parent != null ? 0.2f : 5f,
 			Color = Color.White,
 			InnerConeAngle = 20,
 			OuterConeAngle = 40,
-			FogStrength = 1.0f,
+			FogStrength = 0.0f,
 			Owner = Owner,
 			LightCookie = Texture.Load( "materials/effects/lightcookie.vtex" )
 		};
@@ -53,7 +50,6 @@ public partial class Player
 		var trace = Trace.Ray( EyePosition, endPos )
 			.Ignore( this )
 			.Run();
-
 
 		FlashLight.Position = trace.EndPosition - EyeRotation.Forward * 5f;
 		FlashLight.Rotation = EyeRotation - rotDiff;
