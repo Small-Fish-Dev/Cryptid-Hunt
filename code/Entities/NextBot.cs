@@ -12,17 +12,26 @@ public partial class NextBot : ModelEntity
 	private WorldPanel panel;
 
 	private TimeSince lastKilled = 0f;
+
+	public Sound Music;
 	
 	public override void Spawn()
 	{
 		Position = All.OfType<NextbotSpawn>().FirstOrDefault()?.Position ?? Vector3.Zero;
 		Transmit = TransmitType.Always;
+		Music = Sound.FromScreen( "sounds/music/dayofchaos.sound" );
 	}
 
 	public override void ClientSpawn()
 	{
 		base.ClientSpawn();
 		NextBotState.Nextbot = this;
+	}
+
+	protected override void OnDestroy()
+	{
+		Music.Stop();
+		base.OnDestroy();
 	}
 
 	[Event.Tick]
