@@ -3,6 +3,7 @@
 [HammerEntity]
 [EditorModel( "models/items/beartrap.vmdl" )]
 [Display( Name = "Bear Trap", GroupName = "Items", Description = "Bear trap to trap bears or cryptids" )]
+[Item( "bear_trap" )]
 public partial class BearTrap : BaseInteractable
 {
 

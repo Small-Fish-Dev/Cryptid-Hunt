@@ -28,6 +28,9 @@ public partial class Item
 		[Category( "Other" )] public float Weight { get; set; } = 1;
 
 		[HideInEditor, JsonIgnore] public Texture Icon { get; private set; }
+		[HideInEditor, JsonIgnore] public TypeDescription Interactable { get; private set; }
+
+		private IEnumerable<(TypeDescription type, ItemAttribute attribute)> types = null;
 
 		protected override void PostLoad()
 		{
@@ -35,6 +38,13 @@ public partial class Item
 			{
 				all.Add( ResourceName, this );
 
+				if ( types == null )
+					types = TypeLibrary.GetTypesWithAttribute<ItemAttribute>();
+
+				var boundType = types.Where( tuple => tuple.attribute.Resource == ResourceName ).FirstOrDefault();
+				if ( boundType != default )
+					Interactable = boundType.type;
+				
 				if ( Host.IsServer ) return;
 
 				var world = new SceneWorld();
@@ -63,4 +73,30 @@ public partial class Item
 	}
 
 	public ItemResource Resource { get; protected set; }
+
+	/// <summary>
+	/// Get ItemResource by name.
+	/// </summary>
+	/// <param name="resourceName"></param>
+	/// <returns></returns>
+	public static ItemResource Get( string resourceName )
+	{
+		if ( !ItemResource.All.TryGetValue( resourceName, out var resource ) )
+			return null;
+
+		return resource;
+	}
+
+	/// <summary>
+	/// Get ItemResource by BaseInteractable type.
+	/// </summary>
+	/// <param name="type"></param>
+	/// <returns></returns>
+	public static ItemResource GetByType( Type type )
+	{
+		var resource = ItemResource.All.Values.Where( res => res?.Interactable?.ClassName == type.Name )
+			.FirstOrDefault();
+
+		return resource;
+	}
 }

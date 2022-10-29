@@ -3,6 +3,7 @@
 [HammerEntity]
 [EditorModel( "models/items/medkit.vmdl" )]
 [Display( Name = "Medkit", GroupName = "Items", Description = "Heals the player to full hp" )]
+[Item( "medkit" )]
 public partial class Medkit : BaseInteractable
 {
 

@@ -129,6 +129,10 @@ public partial class Game : GameBase
 
 	public override void Shutdown()
 	{
+		if ( Instance == this )
+			Instance = null;
+
+		Instance?.Delete();
 	}
 
 	public override bool CanHearPlayerVoice( Client source, Client receiver )

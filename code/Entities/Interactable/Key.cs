@@ -3,6 +3,7 @@
 [HammerEntity]
 [EditorModel( "models/items/key.vmdl" )]
 [Display( Name = "Key", GroupName = "Items", Description = "To open locked chest" )]
+[Item( "key" )]
 public partial class Key : BaseInteractable
 {
 

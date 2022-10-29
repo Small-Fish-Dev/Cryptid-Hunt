@@ -6,6 +6,7 @@ namespace SpookyJam2022;
 [HammerEntity]
 [EditorModel( "models/items/shotgun.vmdl" )]
 [Display( Name = "Shotgun", GroupName = "Items", Description = "Shotgun shoot pew" )]
+[Item( "shotgun" )]
 public partial class Shotgun : BaseInteractable
 {
 

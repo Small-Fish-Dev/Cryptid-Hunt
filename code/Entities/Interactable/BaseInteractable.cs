@@ -7,6 +7,8 @@ public partial class BaseInteractable : ModelEntity
 	public virtual string UseDescription => "Take";
 	public virtual bool Locked { get; set; } = false;
 
+	public int Amount { get; set; } = 1;
+
 	public virtual Vector3 PromptOffset3D => new Vector3( 0f );
 	public virtual Vector2 PromptOffset2D => new Vector2( 0f );
 	public virtual Vector3 OffsetPosition => new Vector3( 0f );
@@ -23,10 +25,16 @@ public partial class BaseInteractable : ModelEntity
 
 	public virtual void Interact( Player player )
 	{
+		var resource = Item.GetByType( GetType() );
+		if ( resource != null )
+		{
+			player.Inventory?.Insert( Item.FromResource( resource.ResourceName ), Amount );
+			Delete();
 
-		// TODO: Add to inventory, ChangeHolding should only be called when selecting them from the inventory
+			return;
+		}
+
 		player.ChangeHolding( this );
-
 	}
 
 	public virtual void Use( Player player )

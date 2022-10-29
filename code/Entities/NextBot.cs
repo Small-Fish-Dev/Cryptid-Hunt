@@ -19,7 +19,8 @@ public partial class NextBot : ModelEntity
 	{
 		Position = All.OfType<NextbotSpawn>().FirstOrDefault()?.Position ?? Vector3.Zero;
 		Transmit = TransmitType.Always;
-		Music = Sound.FromScreen( "sounds/music/dayofchaos.sound" );
+		Music = Sound.FromScreen( "sounds/music/dayofchaos.sound" )
+			.SetVolume( 0.2f );
 	}
 
 	public override void ClientSpawn()
@@ -51,12 +52,14 @@ public partial class NextBot : ModelEntity
 		var maxDistanceSound = 1500f;
 		var distance = Target.Position.Distance( Position );
 
-		if ( Time.Tick % 30 == 0 )
+		if ( Time.Tick % 30 == 0 && Target != null )
 		{
-
-			Sound.FromScreen( "sounds/scary/creepy_sound.sound" ).SetVolume( MathF.Max( ( maxDistanceSound - distance ) / maxDistanceSound, 0 ) );
-
+			var volume = MathF.Max( (maxDistanceSound - distance) / maxDistanceSound, 0 );
+			Sound.FromScreen( "sounds/scary/creepy_sound.sound" )
+				.SetVolume( volume )
+				.SetPitch( Rand.Float( 0.8f, 1.2f ) );
 		}
+
 		if ( Target == null && Target.LifeState == LifeState.Alive ) return;
 
 		ComputeMovement();
@@ -65,6 +68,10 @@ public partial class NextBot : ModelEntity
 		{
 			Target.TakeDamage( DamageInfo.Generic( 999f ) );
 			lastKilled = 0f;
+
+			Sound.FromScreen( "sounds/scary/creepy_sound.sound" )
+				.SetVolume( 4f )
+				.SetPitch( Rand.Float( 0.8f, 1.2f ) );
 		}
 
 	}
@@ -103,7 +110,16 @@ public partial class NextBot : ModelEntity
 	public virtual void ComputePath()
 	{
 
-		if ( PathPoints == null ) return;
+		if ( PathPoints == null )
+		{
+			if ( Target != null )
+			{
+				var normal = (Target.Position - Position).Normal.WithZ( 0f );
+				Position += normal * Speed * Time.Delta;
+			}
+
+			return;
+		}
 
 		NextPosition = PathPoints[Math.Clamp( PathIndex + 1, 0, PathPoints.Length - 1 )];
 
@@ -123,7 +139,6 @@ public partial class NextBot : ModelEntity
 		}
 
 		var dir = (NextPosition - Position).Normal.WithZ( 0f );
-
 		Position += dir * Speed * Time.Delta;
 
 	}

@@ -1,0 +1,15 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+	data = 
+	{
+		Title = "Crowbar"
+		Description = "I bet this thing can do a lot of damage."
+		Color = "0.15211,0.56842,0.37493,1"
+		Model = resource:"models/items/crowbar.vmdl"
+		Angles = "-90,0,0"
+		Position = "30,0,-14"
+		MaxAmount = 1
+		AmountType = "Integer"
+		Weight = 3.7
+	}
+}

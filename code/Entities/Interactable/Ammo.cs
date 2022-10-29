@@ -3,6 +3,7 @@
 [HammerEntity]
 [EditorModel( "models/items/ammo.vmdl" )]
 [Display( Name = "Ammo Box", GroupName = "Items", Description = "Ammo Box for shotgun" )]
+[Item( "shotgun_ammo" )]
 public partial class Ammo : BaseInteractable
 {
 

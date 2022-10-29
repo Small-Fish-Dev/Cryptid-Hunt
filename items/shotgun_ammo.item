@@ -3,7 +3,7 @@
 	data = 
 	{
 		Title = "Shotgun Ammo"
-		Description = "Basic 12 gauge shotgun rounds."
+		Description = "Basic 12-gauge shotgun shells."
 		Color = "0.45263,0.13547,0.13547,1"
 		Model = resource:"models/items/ammo.vmdl"
 		Angles = "0,90,0"
