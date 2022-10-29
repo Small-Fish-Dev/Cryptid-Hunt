@@ -7,15 +7,15 @@ public partial class ScriptedEventCamera : Entity
 {
 
 	[Net] public Polewik Target { get; set; }
-	[Net] public float TransitionSpeed { get; set; } = 1;
+	[Net] public bool DoNotLerp { get; set; } = false;
 
 	public ScriptedEventCamera() { }
 
-	public ScriptedEventCamera( Polewik target, float transSpeed = 1f )
+	public ScriptedEventCamera( Polewik target, bool doNotLerp = false )
 	{
 
 		Target = target;
-		TransitionSpeed = transSpeed;
+		DoNotLerp = doNotLerp;
 
 	}
 

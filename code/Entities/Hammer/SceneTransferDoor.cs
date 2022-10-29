@@ -53,7 +53,7 @@ public partial class SceneTransferDoor : BaseInteractable
 
 			await Task.DelaySeconds( 2.5f );
 
-			Event.Run( "FlashLight", true );
+			Event.Run( "FlashLight", true, true );
 
 			await Task.DelaySeconds( 1f );
 

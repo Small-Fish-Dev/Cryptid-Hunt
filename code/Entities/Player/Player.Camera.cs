@@ -45,8 +45,8 @@ public partial class Player
 				if ( OverrideCamera.Target != null )
 				{
 
-					setup.Position = Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta * OverrideCamera.TransitionSpeed );
-					setup.Rotation = Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta * OverrideCamera.TransitionSpeed );
+					setup.Position = OverrideCamera.DoNotLerp ? OverrideCamera.Position : Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta );
+					setup.Rotation = OverrideCamera.DoNotLerp ? OverrideCamera.Rotation : Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta );
 					setup.FieldOfView = 40f;
 
 				}
