@@ -602,6 +602,19 @@
 									Volume = 2.0
 								}
 							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 9
+								event_keys = 
+								{
+									name = "breathe"
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -634,10 +647,10 @@
 							{
 								_class = "AnimEvent"
 								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
-								event_frame = 5
+								event_frame = 4
 								event_keys = 
 								{
-									name = ""
+									name = "breathe"
 									attachment = "mouth"
 									stop_on_seq_change = false
 									use_layer_sequence = false
@@ -647,10 +660,10 @@
 							{
 								_class = "AnimEvent"
 								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
-								event_frame = 13
+								event_frame = 12
 								event_keys = 
 								{
-									name = ""
+									name = "breathe"
 									attachment = "mouth"
 									stop_on_seq_change = false
 									use_layer_sequence = false
@@ -672,7 +685,7 @@
 						source_filename = "models/polewik/polewik_breath.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = -1.0
+						framerate = 16.0
 						take = 0
 						reverse = false
 					},
@@ -747,6 +760,19 @@
 									Volume = 1.0
 								}
 							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 0
+								event_keys = 
+								{
+									name = "jump"
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -793,6 +819,19 @@
 								root_bone_name = ""
 								motion_type = "Uniform"
 							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 4
+								event_keys = 
+								{
+									name = "jumpscare"
+									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -808,7 +847,7 @@
 						source_filename = "models/polewik/polewik_attack.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = -1.0
+						framerate = 20.0
 						take = 0
 						reverse = false
 					},
@@ -820,10 +859,10 @@
 							{
 								_class = "AnimEvent"
 								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
-								event_frame = 16
+								event_frame = 6
 								event_keys = 
 								{
-									name = "car_intro"
+									name = "howl_far"
 									attachment = "mouth"
 									stop_on_seq_change = false
 									use_layer_sequence = false
@@ -845,7 +884,7 @@
 						source_filename = "models/polewik/polewik_howl.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = -1.0
+						framerate = 20.0
 						take = 0
 						reverse = false
 					},
@@ -860,7 +899,7 @@
 								event_frame = 9
 								event_keys = 
 								{
-									name = "door_open"
+									name = "scream_scare"
 									attachment = "mouth"
 									stop_on_seq_change = false
 									use_layer_sequence = false
