@@ -1,7 +1,4 @@
-﻿using Sandbox;
-using System.Numerics;
-
-namespace SpookyJam2022.States;
+﻿namespace SpookyJam2022.States;
 
 public partial class MainMenuState : BaseState
 {
