@@ -34,8 +34,6 @@ class HUD : RootPanel
 	public HUD()
 	{
 
-		SetTemplate( "/HUD/Layout.html" );
-
 		/*try
 		{
 			AddChild( new ContainerDisplay( (Local.Pawn as Player).Inventory ) );
