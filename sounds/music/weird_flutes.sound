@@ -10,7 +10,7 @@
 		Decibels = 70
 		Sounds = 
 		[
-			resource:"sounds/ambient/ambient_wind_loop.vsnd",
+			resource:"sounds/music/weird_flutes.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 1143.9335

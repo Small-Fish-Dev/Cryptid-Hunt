@@ -10,7 +10,7 @@
 		Decibels = 70
 		Sounds = 
 		[
-			resource:"sounds/ambient/ambient_wind_loop.vsnd",
+			resource:"sounds/scary/static_loop.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 1143.9335

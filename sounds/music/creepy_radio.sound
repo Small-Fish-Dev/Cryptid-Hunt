@@ -10,7 +10,7 @@
 		Decibels = 70
 		Sounds = 
 		[
-			resource:"sounds/ambient/ambient_wind_loop.vsnd",
+			resource:"sounds/music/creepy_radio.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 1143.9335

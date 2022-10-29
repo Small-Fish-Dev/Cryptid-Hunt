@@ -6,11 +6,11 @@
 		Volume = 1
 		VolumeRandom = 0
 		Pitch = 1
-		PitchRandom = 0
+		PitchRandom = 0.1
 		Decibels = 70
 		Sounds = 
 		[
-			resource:"sounds/ambient/ambient_wind_loop.vsnd",
+			resource:"sounds/scary/door_slam.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 1143.9335
