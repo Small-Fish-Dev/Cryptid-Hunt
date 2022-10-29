@@ -7,7 +7,7 @@
 		Color = "0.27895,0.08643,0.08643,1"
 		Model = resource:"models/items/shotgun.vmdl"
 		Angles = "0,0,-30"
-		Position = "40,-3,-8"
+		Position = "40,-5,-8"
 		MaxAmount = 1
 		AmountType = "Integer"
 		Weight = 3.1
