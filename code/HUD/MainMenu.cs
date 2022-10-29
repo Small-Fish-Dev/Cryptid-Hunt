@@ -32,7 +32,32 @@ class MainMenu : Panel
 
 				await GameTask.DelaySeconds( 2.5f );
 
-				NetworkStart();
+				NetworkStartNextbot();
+
+				Delete();
+
+			} );
+
+		} );
+
+
+		startButton = AddChild<Button>( "Button" );
+		startButton.SetText( "SKIP NEXTBOT" );
+		startButton.AddEventListener( "onclick", () =>
+		{
+
+			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				NetworkStartGame();
 
 				Delete();
 
@@ -96,9 +121,17 @@ class MainMenu : Panel
 	}
 
 	[ConCmd.Server]
-	private static void NetworkStart()
+	private static void NetworkStartNextbot()
 	{
 		Game.State = new NextBotState();
+	}
+
+
+
+	[ConCmd.Server]
+	private static void NetworkStartGame()
+	{
+		Game.State = new GameplayState();
 	}
 
 	[ConCmd.Server]
