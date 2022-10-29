@@ -1307,11 +1307,11 @@
 					[
 						{
 							m_flPosition = 0.0
-							m_Color = [ 228, 248, 251, 255 ]
+							m_Color = [ 195, 222, 226, 255 ]
 						},
 						{
 							m_flPosition = 1.0
-							m_Color = [ 180, 213, 224, 255 ]
+							m_Color = [ 113, 153, 167, 255 ]
 						},
 					]
 				}
@@ -1497,7 +1497,7 @@
 			{
 				m_nType = "PVEC_TYPE_LITERAL_COLOR"
 				m_vLiteralValue = [ 0.0, 0.0, 0.0 ]
-				m_LiteralColor = [ 255, 255, 255, 255 ]
+				m_LiteralColor = [ 155, 178, 185, 255 ]
 				m_nVectorAttribute = 6
 				m_vVectorAttributeScale = [ 1.0, 1.0, 1.0 ]
 				m_nControlPoint = 0
