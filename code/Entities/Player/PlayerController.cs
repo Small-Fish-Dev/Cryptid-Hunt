@@ -134,7 +134,7 @@ public partial class PlayerController : PawnController
 			var sound = surface.Sounds.FootLand;
 
 			Sound.FromEntity( sound, Pawn )
-				.SetVolume( (surface.ResourceName == "wood" ? 3 : 1) * Velocity.Length / 80f );
+				.SetVolume( (surface.ResourceName == "wood" ? 3 : 0.3f) * Velocity.Length / 80f );
 			lastStep = 0f;
 				
 		}

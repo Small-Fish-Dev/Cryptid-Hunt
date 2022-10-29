@@ -42,6 +42,7 @@ public partial class Player : BasePlayer
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
 
 		EnableDrawing = false; // Singleplayer awww yea
+		Tags.Add( "player" );
 
 		Respawn();
 
