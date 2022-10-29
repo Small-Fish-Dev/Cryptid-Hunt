@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using System.Diagnostics;
 
 namespace SpookyJam2022;
 
@@ -42,10 +43,11 @@ public partial class Shotgun : BaseInteractable
 
 			var randomDir = new Vector3( 0f, Rand.Float( -Spread, Spread ) * (float)Math.Cos( Rand.Float( 0f, 2f * (float)Math.PI ) ), Rand.Float( -Spread, Spread ) * (float)Math.Sin( Rand.Float( 0f, 2f * (float)Math.PI ) ) );
 			var trace = Trace.Ray( player.EyePosition, player.EyePosition + player.EyeRotation.RotateAroundAxis( Vector3.Up, randomDir.y ).RotateAroundAxis( Vector3.Right, randomDir.z ).Forward * DamageFalloff )
+				.UseHitboxes()
 				.Ignore( player )
 				.Run();
 
-			//DebugOverlay.Sphere( trace.EndPosition, 5f, new Color( force, 0, 0 ), 2f );
+			trace.Surface.DoBulletImpact( trace );
 
 			if ( trace.Entity is Polewik polewik )
 			{
@@ -53,6 +55,8 @@ public partial class Shotgun : BaseInteractable
 				totalDamage += DamagePerBullet;
 
 				victim = polewik;
+
+				CreateBlood( trace.EndPosition );
 
 			}
 
@@ -62,7 +66,7 @@ public partial class Shotgun : BaseInteractable
 		GameTask.RunInThreadAsync( async () =>
 		{
 
-			await Task.DelaySeconds( 0.4f );
+			await Task.DelaySeconds( 0.6f );
 			PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.pump.sound" ).SetVolume( 3 );
 
 		} );
@@ -84,7 +88,26 @@ public partial class Shotgun : BaseInteractable
 	{
 
 		Particles.Create( "particles/pistol_muzzleflash.vpcf", player.ViewModel, "muzzle" );
-		Event.Run( "ScreenShake", 0.3f, 10f );
+		Event.Run( "ScreenShake", 0.2f, 15f );
+
+
+		GameTask.RunInThreadAsync( async () =>
+		{
+
+			await Task.DelaySeconds( 0.6f );
+
+			Event.Run( "ScreenShake", 0.3f, 5f );
+
+		} );
+
+	}
+
+
+	[ClientRpc]
+	public void CreateBlood( Vector3 position )
+	{
+
+		Particles.Create( "particles/bigblood.vpcf", position );
 
 	}
 
