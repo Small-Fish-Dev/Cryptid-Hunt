@@ -254,7 +254,7 @@ public partial class Polewik : AnimatedEntity
 
 	}
 
-	[Net] bool disabled { get; set; } = false;
+	[Net] bool disabled { get; set; } = true;
 	public bool Disabled
 	{
 		get { return disabled; }
