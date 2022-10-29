@@ -200,7 +200,6 @@ public partial class NextBotPlayer : BasePlayer
 			screen = new();
 			screen.StyleSheet = HUD.Instance.StyleSheet;
 			screen.WorldScale = 0.3f;
-			screen.SetTemplate( "/HUD/NextBot.html" );
 
 			var panelSize = new Vector2( 540, 320 ) * (1f / screen.WorldScale);
 			screen.PanelBounds = new Rect( -panelSize / 2f, panelSize );
@@ -214,7 +213,11 @@ public partial class NextBotPlayer : BasePlayer
 			};
 
 			render = camera.Render( new Vector2( 459, 272 ), false, 20 );
+
+			view = screen.AddChild<Panel>( "Screen" );
 			view.Style.BackgroundImage = render.Texture;
+
+			view.AddChild<Label>( "watermark" ).Text = "MADE BY MONKEY BAR";
 		}
 
 		if ( light == null )
@@ -224,6 +227,11 @@ public partial class NextBotPlayer : BasePlayer
 				LightColor = Color.White,
 				Radius = 100f
 			};
+		} 
+		else
+		{
+			light.Position = camera.Position + Vector3.Up * 10f;
+			light.Rotation = Rotation.From( 89, 0, 0 );
 		}
 
 		camera.Position = (corpse?.IsValid() ?? false) && LifeState == LifeState.Dead
@@ -242,8 +250,5 @@ public partial class NextBotPlayer : BasePlayer
 
 		screen.Rotation = setup.Rotation.Inverse;
 		screen.Position = attachmentPos - Vector3.Right * 0.01f;
-		
-		light.Position = camera.Position + Vector3.Up * 10f;
-		light.Rotation = Rotation.From( 89, 0, 0 );
 	}
 }

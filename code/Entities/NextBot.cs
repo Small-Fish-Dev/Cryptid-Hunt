@@ -3,15 +3,12 @@ using SpookyJam2022.Utils;
 
 namespace SpookyJam2022;
 
-[HammerEntity]
-[EditorModel( "models/polewik/polewik.vmdl" )]
-[Display( Name = "Polewik", GroupName = "Monster", Description = "the monster" )]
 public partial class NextBot : ModelEntity
 {
-	public float Speed => 300f;
+	public float Speed => 400f;
 	public NavAgentHull Agent => NavAgentHull.Agent1;
 
-	public NextBotPlayer Target => All.OfType<NextBotPlayer>().MinBy(x => x.Position.Distance( Position ));
+	public NextBotPlayer Target => All.OfType<NextBotPlayer>().FirstOrDefault();
 	private WorldPanel panel;
 
 	private TimeSince lastKilled = 0f;
@@ -61,31 +58,20 @@ public partial class NextBot : ModelEntity
 
 	public void ComputeMovement()
 	{
+		ComputePath();
 
-		if ( PathPoints != null )
-		{
-
-			ComputePath();
-
-		}
-
-		if ( lastCalculatedPath <= 0.2f )
-		{
-
+		if ( lastCalculatedPath > 0.2f )
 			NavigateTo( Target.Position );
-
-		}
-
 	}
 
-	public virtual bool NavigateTo( Vector3 pos )
+	public bool NavigateTo( Vector3 pos )
 	{
 
 		var path = NavMesh.PathBuilder( Position )
 			.WithAgentHull( Agent )
 			.Build( pos );
 
-		if ( path == null ) return false;
+		if ( path == null || path.Segments.Count == 0 ) return false;
 
 		PathIndex = 0;
 		PathPoints = path.Segments.Select( segment => segment.Position ).ToArray();
