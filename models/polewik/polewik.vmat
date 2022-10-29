@@ -37,7 +37,7 @@ Layer0
 	TextureNormal "models/polewik/polewik_normal.png"
 
 	//---- Roughness ----
-	TextureRoughness "materials/default/default_rough.tga"
+	TextureRoughness "models/polewik/polewik_rough.png"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
