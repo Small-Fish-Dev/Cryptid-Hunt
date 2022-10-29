@@ -39,11 +39,20 @@ public partial class NextBot : ModelEntity
 			return;
 		}
 
+		var maxDistanceSound = 1500f;
+		var distance = Target.Position.Distance( Position );
+
+		if ( Time.Tick % 30 == 0 )
+		{
+
+			Sound.FromScreen( "sounds/scary/creepy_sound.sound" ).SetVolume( MathF.Max( ( maxDistanceSound - distance ) / maxDistanceSound, 0 ) );
+
+		}
 		if ( Target == null && Target.LifeState == LifeState.Alive ) return;
 
 		ComputeMovement();
 
-		if ( Target.Position.Distance( Position ) <= 100f && lastKilled > 5f )
+		if ( distance <= 100f && lastKilled > 5f )
 		{
 			Target.TakeDamage( DamageInfo.Generic( 999f ) );
 			lastKilled = 0f;

@@ -10,15 +10,16 @@
 		Decibels = 70
 		Sounds = 
 		[
-			resource:"sounds/scary/creepy01.vsnd",
-			resource:"sounds/scary/creepy02.vsnd",
-			resource:"sounds/scary/creepy03.vsnd",
-			resource:"sounds/scary/creepy04.vsnd",
-			resource:"sounds/scary/creepy05.vsnd",
-			resource:"sounds/scary/creepy06.vsnd",
-			resource:"sounds/scary/creepy07.vsnd",
-			resource:"sounds/scary/creepy08.vsnd",
-			resource:"sounds/scary/creepy09.vsnd",
+			resource:"sounds/scary/scary09.vsnd",
+			resource:"sounds/scary/scary08.vsnd",
+			resource:"sounds/scary/scary07.vsnd",
+			resource:"sounds/scary/scary06.vsnd",
+			resource:"sounds/scary/scary05.vsnd",
+			resource:"sounds/scary/scary04.vsnd",
+			resource:"sounds/scary/scary03.vsnd",
+			resource:"sounds/scary/scary02.vsnd",
+			resource:"sounds/scary/scary01.vsnd",
+			resource:"sounds/scary/scary0.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 1143.9335
