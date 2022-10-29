@@ -128,30 +128,13 @@
 				children = 
 				[
 					{
-						_class = "PhysicsMeshFile"
-						name = "sm_tree08"
+						_class = "PhysicsShapeCylinder"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
-						recenter_on_parent_bone = false
-						offset_origin = [ 0.0, 0.0, 0.0 ]
-						offset_angles = [ 0.0, 0.0, 0.0 ]
-						align_origin_x_type = "None"
-						align_origin_y_type = "None"
-						align_origin_z_type = "None"
-						filename = "models/environment/trees/FBX/sm_tree08.FBX"
-						import_scale = 1.0
-						maxMeshVertices = 0
-						qemError = 0.0
-						import_filter = 
-						{
-							exclude_by_default = false
-							exception_list = 
-							[
-								"sm_tree08_LOD0",
-								"sm_tree08_LOD1",
-							]
-						}
+						radius = 14.124458
+						point0 = [ -2.23645, -8.253745, 185.928772 ]
+						point1 = [ 0.097892, -5.787132, -4.887772 ]
 					},
 				]
 			},
