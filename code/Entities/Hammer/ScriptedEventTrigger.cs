@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using Sandbox.Internal;
+
+namespace SpookyJam2022;
 
 [HammerEntity]
 [Display( Name = "Scripted Event Trigger", GroupName = "Cinematic", Description = "Entering this zone will trigger a scripted event, link it to a Scripted Event Camera" )]

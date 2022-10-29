@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using Sandbox.Internal;
+
+namespace SpookyJam2022;
 
 [HammerEntity]
 [EditorModel( "models/editor/camera.vmdl" )]
@@ -26,6 +28,8 @@ public partial class ScriptedEventCamera : Entity
 		Transmit = TransmitType.Always;
 	}
 
+	SpotLightEntity light { get; set; }
+
 	[Event.Tick.Server]
 	void calcTarget()
 	{
@@ -35,6 +39,69 @@ public partial class ScriptedEventCamera : Entity
 
 			Position = Target.Transform.PointToWorld( new Vector3( 70f, 0f, 72f ) );
 			Rotation = Rotation.LookAt( Target.GetBoneTransform( Target.GetBoneIndex( "camera" ) ).Position - Position );
+
+		}
+
+		if ( light == null && Name.Contains( "Lake" ) )
+		{
+			light = new SpotLightEntity
+			{
+				Enabled = true,
+				DynamicShadows = true,
+				Range = 4000,
+				Brightness = 10f,
+				Color = Color.White,
+				InnerConeAngle = 20,
+				OuterConeAngle = 30,
+				FogStrength = 0.0f,
+				Owner = Owner,
+				LightCookie = Texture.Load( "materials/effects/lightcookie.vtex" )
+
+			};
+
+			light.SetLightEnabled( true );
+			light.Transmit = TransmitType.Always;
+			light.Position = Position;
+			light.Rotation = Rotation;
+
+			light.Parent = this;
+
+			foreach ( var polewik in Entity.All.OfType<Polewik>())
+			{
+
+				polewik.SetAnimParameter( "howl", true );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 0.1f );
+
+					polewik.SetAnimParameter( "howl", false );
+
+				} );
+
+			}
+
+		}
+
+	}
+
+	[Event("ScriptedEventEnd")]
+	void removeLight()
+	{
+
+		if ( light != null && Name.Contains( "Lake" ) )
+		{
+
+			light.Delete(); 
+			
+			foreach ( var polewik in Entity.All.OfType<Polewik>() )
+			{
+
+				polewik.Disabled = false;
+				polewik.CurrentState = PolewikState.AttackPersistent;
+
+			}
 
 		}
 
