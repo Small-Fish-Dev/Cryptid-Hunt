@@ -11,7 +11,9 @@ public partial class MainMenuState : BaseState
 		
 		ShowMenu(To.Everyone);
 
-		foreach ( var camera in Entity.All.OfType<ScriptedEventCamera>() ) // Find camera (shitt)
+		var cameras = Entity.All.OfType<ScriptedEventCamera>(); // collection was modified error waaa waa
+
+		foreach ( var camera in cameras ) // Find camera (shitt)
 		{
 			if ( camera.Name.Contains( "MainMenu" ) )
 			{
@@ -23,6 +25,13 @@ public partial class MainMenuState : BaseState
 					ply.LockInputs = true;
 
 				}
+
+				// TODO REMOVE!!
+				var light = new PointLightEntity();
+				light.Position = camera.Position;
+				light.SetLightBrightness( 3f );
+				light.SetLightColor( new Color( 1f, 0.95f, 0.8f ) );
+				light.Range = 2500;
 
 			}
 

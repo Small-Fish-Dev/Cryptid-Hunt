@@ -805,7 +805,7 @@
 								{
 									Attachment = "foot_L"
 									Foot = "0"
-									Volume = 1.0
+									Volume = 2.0
 								}
 							},
 							{
@@ -827,6 +827,19 @@
 								{
 									name = "jumpscare"
 									attachment = "mouth"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
+								event_frame = 30
+								event_keys = 
+								{
+									name = "impact-bullet-flesh"
+									attachment = "paw_R"
 									stop_on_seq_change = false
 									use_layer_sequence = false
 									tags = ""
