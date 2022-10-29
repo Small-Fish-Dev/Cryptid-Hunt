@@ -179,11 +179,12 @@ public partial class NextBotPlayer : BasePlayer
 		view.Style.BackgroundImage = lastFrame;
 		view.SetClass( "paused", true );
 		view.AddChild<Label>( "pause" ).Text = "PAUSED";
+		fearEntry.Delete( true );
 
 		render.Delete();
 		camera.World = null;
 		camera = null;
-
+		
 		light.Delete();
 	}
 
@@ -229,7 +230,7 @@ public partial class NextBotPlayer : BasePlayer
 
 			var fearContainer = screen.AddChild<Panel>( "fear" );
 			fearContainer.Add.Label( "Welcome to the NextBot Personalised!\nWhat or who do you fear the most?.." );
-			fearContainer.Add.Label( "(press Primary Attack button to focus)", "techtip" );
+			fearContainer.Add.Label( $"(press {Input.GetButtonOrigin( InputButton.PrimaryAttack )} to focus)", "techtip" );
 			fearEntry = fearContainer.AddChild<FearEntry>();
 			fearEntry.Focus();
 		}

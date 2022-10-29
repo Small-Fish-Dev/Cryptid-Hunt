@@ -7,7 +7,7 @@ public partial class BaseInteractable : ModelEntity
 	public virtual string UseDescription => "Take";
 	public virtual bool Locked { get; set; } = false;
 
-	public int Amount { get; set; } = 1;
+	public float Amount { get; set; } = 1;
 
 	public virtual Vector3 PromptOffset3D => new Vector3( 0f );
 	public virtual Vector2 PromptOffset2D => new Vector2( 0f );

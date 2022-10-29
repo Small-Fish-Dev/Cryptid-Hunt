@@ -58,8 +58,11 @@ public partial class Container
 	{
 		for ( int i = 0; i < Items.Count; i++ )
 		{
-			if ( Items[i]?.Resource.ResourceName == resourceName 
-				&& (!ignoreMax || ( ignoreMax && Items[i].Amount < Items[i].Resource.MaxAmount ) ) ) return i;
+			var item = Items[i];
+			if ( item?.Resource.ResourceName != resourceName
+				|| (ignoreMax && item.Amount >= item.Resource.MaxAmount) ) continue;
+
+			return i;
 		}
 
 		return null;
@@ -84,26 +87,27 @@ public partial class Container
 
 			if ( index != null )
 			{
-				var existing = Items.ElementAtOrDefault( index ?? Items.Count );
-				if ( existing != null )
+				var found = Items.ElementAtOrDefault( index.Value );
+				if ( found != null )
 				{
-					var fit = Math.Min( item.Amount, existing.Resource.MaxAmount - existing.Amount );
+					var fit = Math.Min( amountToAdd, found.Resource.MaxAmount - found.Amount );
 					if ( fit > 0f )
 					{
-						existing.Amount += fit;
+						found.Amount += fit;
 						amountToAdd -= fit;
 						item.Amount -= fit;
 
-						Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( existing ) );
+						Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( found ) );
 						continue;
 					}
 				}
 			}
 
-			var i = index ?? Items.Count;
+			var i = Items.Count;
 			Items.Insert( i, item );
 			item.Index = i;
 			item.Container = this;
+			item.Amount = amountToAdd;
 
 			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Insert, getInsertUpdate( item ) );
 
