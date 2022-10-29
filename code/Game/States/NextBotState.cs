@@ -15,11 +15,11 @@ public class NextBotState : BaseState
 	public override void CleanUp()
 	{
 		foreach ( var ent in Entity.All )
-			if ( ent is NextBot || ent is NextBotPlayer )
+			if ( ent is NextBot or NextBotPlayer )
 				ent.Delete();
 	}
 
-	[ConCmd.Server]
+	[ConCmd.Server("debug_select_fear")]
 	public static void SelectFear( string fear )
 	{
 		if ( Nextbot != null ) return;

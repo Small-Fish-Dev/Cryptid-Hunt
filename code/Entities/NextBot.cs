@@ -11,7 +11,7 @@ public partial class NextBot : ModelEntity
 	public float Speed => 300f;
 	public NavAgentHull Agent => NavAgentHull.Agent1;
 
-	public NextBotPlayer Target => All.OfType<NextBotPlayer>().OrderBy( x => x.Position.Distance( Position ) ).FirstOrDefault();
+	public NextBotPlayer Target => All.OfType<NextBotPlayer>().MinBy(x => x.Position.Distance( Position ));
 	private WorldPanel panel;
 
 	private TimeSince lastKilled = 0f;
@@ -35,8 +35,9 @@ public partial class NextBot : ModelEntity
 		{
 			if ( panel == null ) return;
 
+			var eyeRot = Local.Pawn.EyeRotation;
 			panel.Position = Position + Vector3.Up * 50f;
-			panel.Rotation = Rotation.FromYaw( Rotation.LookAt( Local.Pawn.Position - Position ).Yaw() );
+			panel.Rotation = eyeRot.RotateAroundAxis( Vector3.Up, 180 ); //Rotation.FromYaw( Rotation.LookAt( Local.Pawn.Position - Position ).Yaw() );
 
 			return;
 		}
