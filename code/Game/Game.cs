@@ -61,8 +61,10 @@ public partial class Game : GameBase
 			return;
 		}
 
+		client.Pawn = new Player();
 		PlayerClient = client;
 		State = new MainMenuState();
+
 	}
 
 	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )

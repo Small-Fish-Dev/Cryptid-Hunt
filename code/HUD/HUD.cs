@@ -34,7 +34,7 @@ class HUD : RootPanel
 	public HUD()
 	{
 
-		SetTemplate( "/HUD/Layout.html" );
+		SetTemplate( "/HUD/GameUI.html" );
 
 		/*try
 		{
