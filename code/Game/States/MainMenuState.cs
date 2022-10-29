@@ -11,10 +11,13 @@ public partial class MainMenuState : BaseState
 		
 		ShowMenu(To.Everyone);
 
-		var cameras = Entity.All.OfType<ScriptedEventCamera>(); // collection was modified error waaa waa
+		var cameras = Entity.All.OfType<ScriptedEventCamera>().ToList(); // collection was modified error waaa waa
 
-		foreach ( var camera in cameras ) // Find camera (shitt)
+		for ( int i = 0; i < cameras.Count; i++ )
 		{
+			var camera = cameras[i];
+			if ( camera == null ) continue;
+
 			if ( camera.Name.Contains( "MainMenu" ) )
 			{
 
