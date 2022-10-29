@@ -1,4 +1,5 @@
-﻿using SpookyJam2022.States;
+﻿using Sandbox;
+using SpookyJam2022.States;
 
 namespace SpookyJam2022;
 
@@ -234,6 +235,7 @@ public partial class Polewik : AnimatedEntity
 			if ( HP <= 0 )
 			{
 
+				RagdollModel( this );
 				Delete();
 
 			}
@@ -627,6 +629,30 @@ public partial class Polewik : AnimatedEntity
 		}
 
 	}
+	public ModelEntity RagdollModel( ModelEntity modelEnt )
+	{
+		var ent = new ModelEntity();
+		ent.Position = modelEnt.Position;
+		ent.Rotation = modelEnt.Rotation;
+		ent.Scale = modelEnt.Scale;
+		ent.UsePhysicsCollision = true;
+		ent.EnableAllCollisions = true;
+		ent.SetModel( modelEnt.GetModelName() );
+		ent.SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
+		ent.CopyBonesFrom( modelEnt );
+		ent.CopyBodyGroups( modelEnt );
+		ent.CopyMaterialGroup( modelEnt );
+		ent.TakeDecalsFrom( modelEnt );
+		ent.CopyMaterialOverrides( modelEnt );
+		ent.EnableHitboxes = true;
+		ent.EnableAllCollisions = true;
+		ent.SurroundingBoundsMode = SurroundingBoundsType.Physics;
+		ent.RenderColor = modelEnt.RenderColor;
+		ent.PhysicsGroup.Velocity = modelEnt.Velocity;
+
+		return ent;
+	}
+
 
 	public void OncurrentStateChanged( PolewikState oldState, PolewikState newState )
 	{
