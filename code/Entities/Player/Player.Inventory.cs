@@ -92,4 +92,24 @@ public partial class Player
 			}
 		}
 	}
+
+	[ConCmd.Server]
+	public static void Equip( int index )
+	{
+		if ( ConsoleSystem.Caller.Pawn is not Player pawn ) return;
+
+		var type = pawn.Inventory[index]
+			?.Resource
+			?.Interactable
+			?.TargetType;
+
+		var interactable = TypeLibrary.Create<BaseInteractable>( type );
+		if ( interactable == null )
+		{
+			// failed ?? why
+			return;
+		}
+
+		pawn.ChangeHolding( interactable );
+	}
 }
