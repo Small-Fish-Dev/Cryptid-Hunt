@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using System.Runtime.CompilerServices;
+
+namespace SpookyJam2022;
 
 public partial class Player
 {
@@ -6,7 +8,7 @@ public partial class Player
 	public SpotLightEntity FlashLight { get; set; }
 	[Net] public bool FlashLightOn { get; set; } = false;
 
-	private SpotLightEntity CreateLight() //thanks sandbox
+	public SpotLightEntity CreateLight( Entity parent = null) //thanks sandbox
 	{
 		var light = new SpotLightEntity
 		{
@@ -16,7 +18,7 @@ public partial class Player
 			Falloff = 1.0f,
 			LinearAttenuation = 0.0f,
 			QuadraticAttenuation = 1.0f,
-			Brightness = 2,
+			Brightness = parent != null ? 0.2f : 2f,
 			Color = Color.White,
 			InnerConeAngle = 20,
 			OuterConeAngle = 40,
@@ -26,6 +28,15 @@ public partial class Player
 		};
 
 		light.Transmit = TransmitType.Always;
+
+		if ( parent != null )
+		{
+
+			light.Position = parent.Position - parent.Rotation.Forward * 30f;
+			light.Rotation = parent.Rotation;
+			light.SetParent( parent );
+
+		}
 
 		return light;
 	}
@@ -51,24 +62,22 @@ public partial class Player
 	}
 
 	[Event("FlashLight")]
-	public void SetFlashLight( bool on )
+	public void SetFlashLight( bool on, bool sound = false )
 	{
 
 		if ( FlashLightOn != on )
 		{
 
 			FlashLightOn = on;
-			PlaySound( "sounds/ui/button_click.sound" );
+
+			if ( sound )
+			{
+
+				PlaySound( "sounds/ui/button_click.sound" );
+
+			}
 
 		}
-
-	}
-
-	[ConCmd.Server]
-	public static void flashlight( bool on )
-	{
-
-		Event.Run( "FlashLight", on );
 
 	}
 

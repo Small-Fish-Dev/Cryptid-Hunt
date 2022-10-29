@@ -155,29 +155,13 @@ public partial class Polewik : AnimatedEntity
 
 
 				Victim.LockInputs = true;
-				Victim.OverrideCamera = new ScriptedEventCamera( this, 50f );
+				Victim.OverrideCamera = new ScriptedEventCamera( this, true );
 				Victim.ScriptedEvent = true;
 
 				SetAnimParameter( "attack", true );
 
-				var light = new SpotLightEntity
-				{
-					Enabled = true,
-					DynamicShadows = true,
-					Range = 256,
-					Falloff = 1.0f,
-					LinearAttenuation = 0.0f,
-					QuadraticAttenuation = 1.0f,
-					Brightness = 0.05f,
-					Color = new Color( 1f, 0.7f, 0.7f ),
-					InnerConeAngle = 20,
-					OuterConeAngle = 90,
-					FogStrength = 1.0f
-				};
-
-				light.Position = Transform.PointToWorld( new Vector3( 80, 0, 72 ) );
-				light.Rotation = Rotation.LookAt( Position - Transform.PointToWorld( new Vector3( 80, 0, 72 ) ) );
-				light.Enabled = true;
+				var flashlight = Victim.CreateLight( Victim.OverrideCamera );
+				Victim.FlashLightOn = false;
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -188,7 +172,8 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 1.45f );
 
-					light.Delete();
+					flashlight.Delete();
+					Victim.FlashLightOn = true;
 
 					if ( CurrentState == PolewikState.Jumpscare )
 					{
@@ -269,7 +254,7 @@ public partial class Polewik : AnimatedEntity
 
 	}
 
-	[Net] bool disabled { get; set; } = true;
+	[Net] bool disabled { get; set; } = false;
 	public bool Disabled
 	{
 		get { return disabled; }
