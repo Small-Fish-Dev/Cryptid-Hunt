@@ -40,7 +40,7 @@
 			{
 				m_nType = "PF_TYPE_LITERAL"
 				m_nMapType = "PF_MAP_TYPE_DIRECT"
-				m_flLiteralValue = 3.0
+				m_flLiteralValue = 1.0
 				m_nControlPoint = 0
 				m_nScalarAttribute = 3
 				m_nVectorAttribute = 6
@@ -423,15 +423,15 @@
 					[
 						{
 							x = 0.0
-							y = 0.18584
-							m_flSlopeIncoming = 0.81416
-							m_flSlopeOutgoing = 0.81416
+							y = 0.50904
+							m_flSlopeIncoming = 0.49096
+							m_flSlopeOutgoing = 0.49096
 						},
 						{
 							x = 1.0
 							y = 1.0
-							m_flSlopeIncoming = 0.81416
-							m_flSlopeOutgoing = 0.81416
+							m_flSlopeIncoming = 0.49096
+							m_flSlopeOutgoing = 0.49096
 						},
 					]
 					m_tangents = 
@@ -1256,8 +1256,14 @@
 							m_flSlopeOutgoing = 2.116381
 						},
 						{
+							x = 0.424871
+							y = 0.58984
+							m_flSlopeIncoming = 1.038712
+							m_flSlopeOutgoing = 1.038712
+						},
+						{
 							x = 1.0
-							y = 0.84032
+							y = 1.0
 							m_flSlopeIncoming = 0.134113
 							m_flSlopeOutgoing = 0.134113
 						},
@@ -1267,6 +1273,10 @@
 						{
 							m_nIncomingTangent = "CURVE_TANGENT_FREE"
 							m_nOutgoingTangent = "CURVE_TANGENT_MIRROR"
+						},
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_MIRROR"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
 						},
 						{
 							m_nIncomingTangent = "CURVE_TANGENT_FREE"
@@ -1327,15 +1337,21 @@
 					[
 						{
 							x = 0.0
-							y = 0.35552
-							m_flSlopeIncoming = -2.67791
-							m_flSlopeOutgoing = -2.67791
+							y = 0.0
+							m_flSlopeIncoming = 1.084
+							m_flSlopeOutgoing = 1.084
+						},
+						{
+							x = 0.272066
+							y = 0.17776
+							m_flSlopeIncoming = 0.14317
+							m_flSlopeOutgoing = 0.14317
 						},
 						{
 							x = 1.0
 							y = 0.0
-							m_flSlopeIncoming = -0.08888
-							m_flSlopeOutgoing = -0.08888
+							m_flSlopeIncoming = -0.244198
+							m_flSlopeOutgoing = -0.244198
 						},
 					]
 					m_tangents = 
@@ -1348,6 +1364,10 @@
 							m_nIncomingTangent = "CURVE_TANGENT_FREE"
 							m_nOutgoingTangent = "CURVE_TANGENT_MIRROR"
 						},
+						{
+							m_nIncomingTangent = "CURVE_TANGENT_MIRROR"
+							m_nOutgoingTangent = "CURVE_TANGENT_SPLINE"
+						},
 					]
 					m_vDomainMins = [ 0.0, 0.0 ]
 					m_vDomainMaxs = [ 1.0, 1.0 ]
@@ -1359,7 +1379,7 @@
 		{
 			_class = "C_OP_BasicMovement"
 			m_fDrag = 0.2
-			m_Gravity = [ 0.0, 0.0, -300.0 ]
+			m_Gravity = [ 0.0, 0.0, -50.0 ]
 		},
 	]
 	m_Renderers = 
