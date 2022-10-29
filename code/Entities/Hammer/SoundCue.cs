@@ -27,7 +27,6 @@ public partial class MySoundCue : BaseTrigger
 
 		if ( UI )
 		{
-			Log.Info( $"Playing {SoundPath}" );
 			Sound.FromScreen( SoundPath );
 
 		}

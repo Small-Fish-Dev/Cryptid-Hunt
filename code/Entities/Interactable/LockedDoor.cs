@@ -8,7 +8,7 @@ public partial class LockedDoor : BaseInteractable
 
 	public override string ModelPath => "models/stuck_door.vmdl";
 	public override string UseDescription => "Blocked Door";
-	public override Vector3 PromptOffset3D => new Vector3( 0f );
+	public override Vector3 PromptOffset3D => new Vector3( 0f, 0f, 45f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
 	public override bool Locked { get; set; } = true;
 
