@@ -23,6 +23,7 @@ public partial class NextBotPlayer : BasePlayer
 		SetModel( "models/citizen/citizen.vmdl" );
 
 		EnableShadowCasting = false;
+		EnableDrawing = false;
 
 		_clothing.LoadFromClient( Game.PlayerClient );
 		_clothing.DressEntity( this );
@@ -30,7 +31,6 @@ public partial class NextBotPlayer : BasePlayer
 
 	public override void Respawn()
 	{
-		EnableDrawing = true;
 		LifeState = LifeState.Alive;
 		Health = 1f;
 		
@@ -66,7 +66,6 @@ public partial class NextBotPlayer : BasePlayer
 	public override void OnKilled()
 	{
 		LifeState = LifeState.Dead;
-		EnableDrawing = false;
 
 		BecomeRagdollOnClient( Velocity, _lastDamage.Flags, _lastDamage.Position, _lastDamage.Force,
 			_lastDamage.BoneIndex );
@@ -76,7 +75,7 @@ public partial class NextBotPlayer : BasePlayer
 		GameTask.RunInThreadAsync( async () =>
 		{
 			await GameTask.DelaySeconds( 1.0f );
-			if ( this != null && IsValid )
+			if ( IsValid )
 				Respawn();
 		} );
 	}
@@ -226,10 +225,10 @@ public partial class NextBotPlayer : BasePlayer
 			};
 		}
 
-		camera.Position = corpse?.IsValid() ?? false && LifeState == LifeState.Dead
+		camera.Position = (corpse?.IsValid() ?? false) && LifeState == LifeState.Dead
 			? Vector3.Lerp( camera.Position, corpse.Position + Vector3.Up * 80f, 10f * Time.Delta )
 			: Position + Vector3.Up * 64f;
-		camera.Rotation = corpse?.IsValid() ?? false && LifeState == LifeState.Dead
+		camera.Rotation = (corpse?.IsValid() ?? false) && LifeState == LifeState.Dead
 			? Rotation.Lerp( camera.Rotation, Rotation.From( 89, 0, 0 ), 10f * Time.Delta )
 			: EyeRotation;
 
