@@ -61,7 +61,6 @@ public partial class Game : GameBase
 			return;
 		}
 
-		client.Pawn = new Player();
 		PlayerClient = client;
 		State = new MainMenuState();
 
@@ -73,8 +72,35 @@ public partial class Game : GameBase
 		cl.Pawn = null;
 	}
 
+	ScriptedEventCamera cam;
+
 	public override CameraSetup BuildCamera( CameraSetup camSetup )
 	{
+		if ( Local.Pawn == null )
+		{
+			if ( cam == null )
+			{
+				var cameras = Entity.All.OfType<ScriptedEventCamera>().ToList();
+				for ( int i = 0; i < cameras.Count; i++ )
+				{
+					var camera = cameras[i];
+					if ( camera == null ) continue;
+
+					if ( camera.Name.Contains( "MainMenu" ) )
+					{
+						cam = camera;
+						break;
+					}
+				}
+			} 
+			else
+			{
+				camSetup.Position = cam.Position;
+				camSetup.Rotation = cam.Rotation;
+				camSetup.FieldOfView = 70f;
+			}
+		}
+
 		Local.Pawn?.PostCameraSetup( ref camSetup );
 		return camSetup;
 	}

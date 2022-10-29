@@ -12,7 +12,7 @@ public partial class Player
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
 
-		Player pawn = Client.Pawn as Player;
+		if ( Local.Pawn is not Player pawn ) return;
 
 		var speed = pawn.Velocity.Length / 160f;
 		var left = setup.Rotation.Left;
@@ -76,11 +76,12 @@ public partial class Player
 
 		setup.Position += upOffset;
 		setup.Position += sideOffset;
+		setup.Viewer = pawn;
 
 		posDiff += upOffset;
 		posDiff += sideOffset;
 
-		setup.FieldOfView = 70;
+		setup.FieldOfView = 60f;
 
 		Event.Run( "PostCameraSetup", posDiff, rotDiff );
 

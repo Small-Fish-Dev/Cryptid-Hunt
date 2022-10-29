@@ -52,6 +52,7 @@ public partial class PlayerController : PawnController
 	public override void Simulate()
 	{
 		EyeRotation = Input.Rotation;
+		Rotation = Rotation.FromYaw( EyeRotation.Yaw() );
 		
 		CheckLadder();
 
