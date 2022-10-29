@@ -1,12 +1,9 @@
 ﻿namespace SpookyJam2022.States;
 
-public partial class GameplayState : BaseState
+public class GameplayState : BaseState
 {
 	public override void Init()
 	{
-
-		ShowMainGameHUD( To.Everyone );
-
 		var player = new Player();
 		Game.Player = player;
 		Game.PlayerClient.Pawn = player;
@@ -34,13 +31,5 @@ public partial class GameplayState : BaseState
 
 	public override void CleanUp()
 	{
-	}
-
-	[ClientRpc]
-	public static void ShowMainGameHUD()
-	{
-
-		HUD.Instance.SetTemplate( "/HUD/MainGameUI.html" );
-
 	}
 }
