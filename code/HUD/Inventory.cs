@@ -200,13 +200,19 @@ public class Inventory : Panel
 	private void createView( Item item )
 	{
 		viewContainer = AddChild<Panel>( "viewContainer" );
-		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
-		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
-		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
 
 		var viewer = new ItemViewer( item );
 		viewer.AddClass( "view" );
 		viewContainer.AddChild( viewer );
+
+		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
+		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
+		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
+
+		var buttonContainer = viewContainer.AddChild<Panel>( "buttonContainer" );
+		var equipButton = buttonContainer.AddChild<Panel>( "button" );
+		equipButton.AddEventListener( "onclick", () => Player.Equip( item.Index ) );
+		equipButton.AddChild<Label>( "text" ).Text = "Equip";
 	}
 
 	public void Refresh()
