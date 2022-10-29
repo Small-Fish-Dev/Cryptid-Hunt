@@ -59,7 +59,7 @@ public partial class Container
 		for ( int i = 0; i < Items.Count; i++ )
 		{
 			if ( Items[i]?.Resource.ResourceName == resourceName 
-				&& (ignoreMax && Items[i].Amount < Items[i].Resource.MaxAmount ) ) return i;
+				&& (!ignoreMax || ( ignoreMax && Items[i].Amount < Items[i].Resource.MaxAmount ) ) ) return i;
 		}
 
 		return null;
@@ -135,6 +135,14 @@ public partial class Container
 			Weight -= amount.Value * item.Resource.Weight;
 			item.Amount -= amount.Value;
 			
+			if ( item.Amount == 0 )
+			{
+				Items.RemoveAt( index );
+				Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
+
+				return true;
+			}
+
 			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( item ) );
 
 			return true;

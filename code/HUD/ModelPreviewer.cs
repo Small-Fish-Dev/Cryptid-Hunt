@@ -22,7 +22,8 @@ public struct ModelPreview
 		new ModelPreview { Name = "Medkit", Path = "models/items/medkit.vmdl", Author = "Luke", Rotation = new Angles( -20, 225, 0 ), Offset = new Vector3( 0, 0, -10 ), Zoom = 1.8f },
 		new ModelPreview { Name = "Bed", Path = "models/items/bed.vmdl", Author = "Luke", Rotation = new Angles( -20, 0, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
 		new ModelPreview { Name = "Page", Path = "models/items/page.vmdl", Author = "Luke", Rotation = new Angles( 60, 20, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 2.6f },
-		new ModelPreview { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f }
+		new ModelPreview { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f },
+		new ModelPreview { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
 		/*
 		["models/placeholders/placeholder_key.vmdl"] = "Placeholder (ubre)",
 		["models/placeholders/placeholder_beartrap.vmdl"] = "Placeholder (ubre)",

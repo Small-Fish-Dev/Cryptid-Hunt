@@ -37,13 +37,7 @@ public partial class Item
 			if ( !all.ContainsKey( ResourceName ) )
 			{
 				all.Add( ResourceName, this );
-
-				if ( types == null )
-					types = TypeLibrary.GetTypesWithAttribute<ItemAttribute>();
-
-				var boundType = types.Where( tuple => tuple.attribute.Resource == ResourceName ).FirstOrDefault();
-				if ( boundType != default )
-					Interactable = boundType.type;
+				fetchBinding();
 				
 				if ( Host.IsServer ) return;
 
@@ -70,6 +64,22 @@ public partial class Item
 				Icon = render.Texture;
 			}
 		}
+
+		private void fetchBinding()
+		{
+			var boundType = TypeLibrary
+				.GetTypesWithAttribute<ItemAttribute>()
+				.Where( tuple => tuple.Attribute.Resource == ResourceName ).FirstOrDefault();
+
+			Interactable = boundType.Type;
+		}
+
+		[Event.Hotload]
+		private static void fetchAll()
+		{
+			foreach ( var res in All.Values )
+				res.fetchBinding();
+		}
 	}
 
 	public ItemResource Resource { get; protected set; }
@@ -94,7 +104,8 @@ public partial class Item
 	/// <returns></returns>
 	public static ItemResource GetByType( Type type )
 	{
-		var resource = ItemResource.All.Values.Where( res => res?.Interactable?.ClassName == type.Name )
+		var resource = ItemResource.All.Values
+			.Where( res => res?.Interactable?.ClassName == type.Name )
 			.FirstOrDefault();
 
 		return resource;
