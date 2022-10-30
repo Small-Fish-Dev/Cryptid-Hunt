@@ -8,6 +8,7 @@ public partial class BaseInteractable : AnimatedEntity
 	public virtual bool Locked { get; set; } = false;
 
 	public float Amount { get; set; } = 1;
+	public Item ActiveItem { get; set; }
 
 	public virtual Vector3 PromptOffset3D => new Vector3( 0f );
 	public virtual Vector2 PromptOffset2D => new Vector2( 0f );
@@ -42,9 +43,12 @@ public partial class BaseInteractable : AnimatedEntity
 
 	public virtual void Use( Player player )
 	{
+		if ( player == null
+			|| ActiveItem == null
+			|| ActiveItem.Container != player.Inventory ) return;
 
-
-
+		var index = player.Inventory.Items.IndexOf( ActiveItem );
+		player.Inventory.Remove( index );
 	}
 
 	public void Unlock()

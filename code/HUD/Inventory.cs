@@ -98,9 +98,10 @@ public class Inventory : Panel
 		get => _selected;
 		set
 		{
-			_selected = value;
+			if ( value == selected ) return;
 
-			viewContainer?.Delete( true );
+			_selected = value;
+			viewContainer?.Delete();
 
 			if ( value != null )
 				createView( value );
@@ -207,9 +208,10 @@ public class Inventory : Panel
 		viewer.AddClass( "view" );
 		viewContainer.AddChild( viewer );
 
+
 		var titleContainer = viewContainer.AddChild<Panel>( "titleContainer" );
-		titleContainer.AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
-		titleContainer.AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
+		titleContainer.AddChild<Panel>( "titleText" ).AddChild<Label>( "title" ).Text = $"{item.Resource.Title}";
+		titleContainer.AddChild<Panel>( "descriptionText" ).AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
 
 		var buttonContainer = viewContainer.AddChild<Panel>( "buttonContainer" );
 		var equipButton = buttonContainer.AddChild<Panel>( "button" );
@@ -235,5 +237,12 @@ public class Inventory : Panel
 
 		for ( int i = 0; i < 24; i++ )
 			refreshSlot( inventory, i );
+	}
+
+	public override void Tick()
+	{
+		if ( Local.Pawn is not Player pawn ) return;
+		if ( selected == null || selected.Container != pawn.Inventory )
+			selected = null;
 	}
 }

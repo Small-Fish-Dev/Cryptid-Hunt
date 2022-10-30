@@ -83,7 +83,6 @@ public partial class Player
 
 		setup.Position += upOffset;
 		setup.Position += sideOffset;
-		setup.Viewer = pawn;
 
 		posDiff += upOffset;
 		posDiff += sideOffset;
@@ -106,6 +105,7 @@ public partial class Player
 		}
 
 		setup.FieldOfView = 60f;
+		setup.Viewer = pawn;
 
 		Event.Run( "PostCameraSetup", posDiff, rotDiff );
 		

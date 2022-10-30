@@ -62,6 +62,7 @@ public partial class Player
 							return;
 						}
 
+						ritem.Container = null;
 						container.Weight -= ritem.Amount * ritem.Resource.Weight;
 						container.Items.RemoveAt( rindex );
 
@@ -98,7 +99,8 @@ public partial class Player
 	{
 		if ( ConsoleSystem.Caller.Pawn is not Player pawn ) return;
 
-		var type = pawn.Inventory[index]
+		var item = pawn.Inventory[index];
+		var type = item
 			?.Resource
 			?.Interactable
 			?.TargetType;
@@ -110,6 +112,7 @@ public partial class Player
 			return;
 		}
 
+		interactable.ActiveItem = item;
 		pawn.ChangeHolding( interactable );
 	}
 }

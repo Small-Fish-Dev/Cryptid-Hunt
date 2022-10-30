@@ -32,6 +32,8 @@ public partial class BearTrap : BaseInteractable
 		if ( trace.Hit && trace.Normal.z >= 0.4f )
 		{
 
+			base.Use( player );
+
 			Parent = null;
 			EnableAllCollisions = true;
 			Position = trace.HitPosition;

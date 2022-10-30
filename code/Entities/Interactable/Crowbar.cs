@@ -26,6 +26,7 @@ public partial class Crowbar : BaseInteractable
 
 		if ( player.FirstInteractable is LockedDoor door )
 		{
+			base.Use( player );
 
 			door.Delete();
 

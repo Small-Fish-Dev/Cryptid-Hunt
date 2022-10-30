@@ -25,6 +25,7 @@ public partial class Key : BaseInteractable
 
 		if ( player.FirstInteractable is LockedChest chest )
 		{
+			base.Use( player );
 
 			new Shotgun()
 			{

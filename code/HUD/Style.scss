@@ -216,6 +216,7 @@ Inventory {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     pointer-events: all;
+    z-index: 3;
 
     .container {
         position: absolute;
@@ -290,7 +291,8 @@ Inventory {
         height: 900px;
         background-image: url(ui/brushes4.png);
         background-image-tint: rgba(350, 350, 350, 1);
-        background-size: 99%;
+        background-size: 100%;
+        background-position: center;
         background-repeat: no-repeat;
         padding: 60px;
         margin: -60px;
@@ -299,6 +301,7 @@ Inventory {
             overflow: scroll;
             flex-direction: row;
             flex-wrap: wrap;
+            pointer-events: all;
 
             .slot {
                 &.hasItem {
@@ -387,27 +390,55 @@ Inventory {
         right: 50px;
         width: 1100px;
         height: 900px;
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+        opacity: 1;
+
+        &:intro {
+            transform: scale(0);
+        }
+
+        &:outro {
+            transition: transform 0.1s ease-in, opacity 0.1s ease-in;
+            transform: scale(1.5);
+            opacity: 0;
+        }
 
         .titleContainer {
+            position: absolute;
             width: 100%;
             flex-direction: column;
-            text-align: center;
-            font-family: Neucha-Regular;
+            align-content: center;
 
-            .title {
-                color: rgba(240, 240, 240, 1);
-                font-size: 48px;
-                text-shadow: 0px 0px 6px rgba(white, 0.8);
+            .titleText {
+                align-self: center;
+
+                .title {
+                    font-family: Neucha-Regular;
+                    padding: 20px;
+                    margin: -20px;
+                    background-image: url(ui/brushes2.png);
+                    background-size: 100%;
+                    color: rgba(240, 240, 240, 1);
+                    text-shadow: 0px 0px 6px rgba(white, 0.8);
+                    font-size: 48px;
+                }
             }
 
-            .description {
-                color: rgba(140, 140, 140, 1);
-                margin-top: 10px;
-                font-size: 32px;
-                text-shadow: 0px 0px 4px rgba(white, 0.6);
-            }
+            .descriptionText {
+                align-self: center;
 
-            pointer-events: none;
+                .description {
+                    font-family: Neucha-Regular;
+                    padding: 20px;
+                    margin: -20px;
+                    background-image: url(ui/brushes2.png);
+                    background-size: 100%;
+                    color: rgba(140, 140, 140, 1);
+                    font-size: 32px;
+                    text-shadow: 0px 0px 4px rgba(white, 0.6);
+                }
+            }
         }
 
         .view {
@@ -648,58 +679,47 @@ Credits {
     width: 100vw;
     height: 100vh;
     z-index: 1000;
-    
-    background-color: black;
+    background-color: rgba(black, 0.95);
     color: maroon;
-    
     flex-direction: column;
-    
     padding: 5vmin;
-    
+
     Label {
         font-family: Creepster-Regular;
         font-size: 60px;
         text-align: center;
-        
         flex-grow: 1;
-      
+
         &.techtip {
             font-size: 30px;
         }
     }
-    
+
     FearEntry {
-        background-color: white;
+        background-color: rgba(white, 0.05);
         color: black;
-        
         font-size: 24px;
         text-align: left;
-        
         padding: 8px;
-        
         border-radius: 8px;
-
         // copied from s&box base
-        
+
         cursor: text;
         align-items: center;
         justify-content: center;
         flex-direction: row;
 
-        &.is-multiline
-        {
+        &.is-multiline {
             align-items: flex-start;
             white-space: normal;
         }
 
         .content-label,
-        .placeholder
-        {
+        .placeholder {
             flex-grow: 1;
         }
 
-        .placeholder
-        {
+        .placeholder {
             opacity: 0.2;
             pointer-events: none;
             display: none;
@@ -708,54 +728,44 @@ Credits {
         .content-label,
         .prefix-label,
         .suffix-label,
-        .placeholder
-        {
+        .placeholder {
             padding: 10px;
             overflow: hidden;
         }
 
         .prefix-label,
-        .suffix-label
-        {
+        .suffix-label {
             flex-shrink: 0;
             opacity: 0.5;
             background-color: rgba( black, 0.8 );
         }
 
-        .prefix-label
-        {
+        .prefix-label {
             order: -1;
             flex-shrink: 0;
         }
 
-        &.has-placeholder
-        {
-            .placeholder
-            {
+        &.has-placeholder {
+            .placeholder {
                 display: flex;
             }
 
-            .content-label
-            {
+            .content-label {
                 display: none;
             }
         }
 
-        &:hover
-        {
-            .placeholder
-            {
+        &:hover {
+            .placeholder {
                 display: none;
             }
 
-            .content-label
-            {
+            .content-label {
                 display: flex;
             }
         }
 
-        &.invalid
-        {
+        &.invalid {
             box-shadow: 0px 0px 1px 2px #f8356b;
         }
     }
