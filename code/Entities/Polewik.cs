@@ -27,13 +27,13 @@ public partial class Polewik : AnimatedEntity
 {
 
 	public float JumpscareDistance => 120f;
-	public float DetectDistance => 1000f;
-	public float StalkingDistance => 450f;
-	public float AttackDistance => 300f;
+	public float DetectDistance => 1200f;
+	public float StalkingDistance => 600f;
+	public float AttackDistance => 400f;
 	public float GiveUpDistance => 2400f;
-	public float GiveUpAfter => 15f;
+	public float GiveUpAfter => 20f;
 	public float AttackAfterStalking => 20f;
-	public float AttackAfterStalling => 240f;
+	public float AttackAfterStalling => 150f;
 
 	TimeSince lastAttack = 0f;
 
@@ -180,6 +180,8 @@ public partial class Polewik : AnimatedEntity
 				Velocity = 0f;
 				WishVelocity = 0f;
 				Rotation = Rotation.LookAt( Victim.Position );
+
+				ResetInterpolation();
 
 
 				Victim.LockInputs = true;
@@ -349,13 +351,10 @@ public partial class Polewik : AnimatedEntity
 
 		ComputeAnimation();
 
-		if ( stuckOnMovement >= 0.5f )
+		if ( stuckOnMovement >= 1f )
 		{
 
-
-			CurrentPathId = (CurrentPathId + 1) % PatrolPath.PathNodes.Count;
-
-			Position = PatrolPath.PathNodes[CurrentPathId].WorldPosition;
+			Position = ClosestNodeTo( TargetPosition ).WorldPosition;
 			stuckOnMovement = 0f;
 
 		}
