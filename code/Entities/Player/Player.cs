@@ -124,6 +124,27 @@ public partial class Player : BasePlayer
 
 		}
 
+		if ( HP > 0 && !LockInputs )
+		{
+
+			var onceEvery = 180f * Math.Max( 1, Velocity.Length / 80 );
+
+			if ( Time.Tick % onceEvery == 0 )
+			{
+
+				PlaySound( "sounds/misc/breathe_in.sound" );
+
+			}
+
+			if ( ( Time.Tick + onceEvery / 2 ) % onceEvery == 0 )
+			{
+
+				PlaySound( "sounds/misc/breathe_out.sound" );
+
+			}
+
+		}
+
 	}
 
 	[Event( "BeginGame" )]
