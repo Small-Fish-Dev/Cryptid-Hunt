@@ -1,6 +1,6 @@
 ﻿namespace SpookyJam2022;
 
-public partial class BaseInteractable : ModelEntity
+public partial class BaseInteractable : AnimatedEntity
 {
 
 	public virtual string ModelPath => "models/placeholders/placeholder_cinder.vmdl";

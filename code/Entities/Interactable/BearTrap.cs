@@ -13,7 +13,7 @@ public partial class BearTrap : BaseInteractable
 	public override Vector2 PromptOffset2D => new Vector2( -20f, 0f );
 	public override Rotation OffsetRotation => Rotation.From( new Angles( 0f, -70f, 0f ) );
 	public override Vector3 OffsetPosition => new Vector3( 5f, -5f, -5f );
-
+	[Net] public bool Triggered { get; set; } = false;
 	public override void Interact( Player player )
 	{
 
@@ -41,6 +41,8 @@ public partial class BearTrap : BaseInteractable
 
 			player.Holding = null;
 
+			PlaySound( "sounds/items/beartrap_set.sound" );
+
 		}
 
 	}
@@ -52,8 +54,25 @@ public partial class BearTrap : BaseInteractable
 		foreach ( var polewik in FindInSphere( Position, 70f ).OfType<Polewik>() )
 		{
 
-			polewik.HP -= 10;
-			Delete();
+			if ( !Triggered )
+			{
+
+				Triggered = true;
+				polewik.HP -= 10;
+
+				CurrentSequence.Name = "clamp";
+				PlaySound( "sounds/items/beartrap_trigger.sound" );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 1f );
+
+					Delete();
+
+				} );
+
+			}
 
 		}
 
