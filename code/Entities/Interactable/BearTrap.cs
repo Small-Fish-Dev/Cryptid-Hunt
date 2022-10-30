@@ -52,12 +52,11 @@ public partial class BearTrap : BaseInteractable
 	[Event.Tick.Server]
 	void calcLogic()
 	{
-
-		foreach ( var polewik in FindInSphere( Position, 70f ).OfType<Polewik>() )
+		if ( !Triggered && Parent == null )
 		{
 
-			if ( !Triggered )
-			{
+			foreach ( var polewik in FindInSphere( Position, 70f ).OfType<Polewik>() )
+			{	
 
 				Triggered = true;
 				polewik.HP -= 10;
