@@ -90,6 +90,7 @@ public partial class Polewik : AnimatedEntity
 					await GameTask.DelaySeconds( 0.5f );
 
 					if ( !IsValid ) return;
+					Event.Run( "ScreenShake", 2f, 7f );
 					SetAnimParameter( "howl", true );
 
 					await GameTask.DelaySeconds( 3.5f );
@@ -195,6 +196,7 @@ public partial class Polewik : AnimatedEntity
 
 				PlaySound( "sounds/polewik/jumpscare.sound" ).SetVolume( 5 );
 
+				Event.Run( "ScreenShake", 1.6f, 5f );
 				GameTask.RunInThreadAsync( async () =>
 				{
 
