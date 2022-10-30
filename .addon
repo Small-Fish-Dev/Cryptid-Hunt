@@ -1,9 +1,9 @@
 {
-  "Title": "Spooky Jam 2022",
+  "Title": "Cryptid Hunt",
   "Type": "game",
-  "Org": "local",
-  "Ident": "spookyjam2022",
-  "Tags": "",
+  "Org": "fish",
+  "Ident": "cryptid_hunt",
+  "Tags": "Horror, Beast, Cryptid",
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
