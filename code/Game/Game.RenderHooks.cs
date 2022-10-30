@@ -14,8 +14,9 @@ public partial class Game
 		ScreenEffects.Vignette.Intensity = 0.72f;
 		ScreenEffects.Vignette.Roundness = 0.1f;
 
-		ScreenEffects.MotionBlur.Scale = 0.05f;
-		ScreenEffects.MotionBlur.Samples = 8;
+		// FIX: disabled till fixed
+		/*ScreenEffects.MotionBlur.Scale = 0.05f;
+		ScreenEffects.MotionBlur.Samples = 8;*/
 
 		ScreenEffects.FilmGrain.Intensity = 0.01f;
 		ScreenEffects.FilmGrain.Response = 0.5f;
