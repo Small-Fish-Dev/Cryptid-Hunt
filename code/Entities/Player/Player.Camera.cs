@@ -27,11 +27,8 @@ public partial class Player
 			walkBob += Time.Delta * speed * 20f;
 		}
 
-		setup.Position -= setup.Rotation.Up * lastShake.x;
-		setup.Position -= setup.Rotation.Right * lastShake.y;
-
-		var upOffset = up * ( MathF.Sin( walkBob ) * 0.75f * -2f );
-		var sideOffset = left * ( MathF.Sin( walkBob * 0.5f ) * speed * -3f );
+		var upOffset = ScriptedEvent ? 0 : ( up * ( MathF.Sin( walkBob ) * 0.75f * -2f ) );
+		var sideOffset = ScriptedEvent ? 0 : ( left * ( MathF.Sin( walkBob * 0.5f ) * speed * -3f ) );
 
 		var posDiff = Vector3.Zero;
 		var rotDiff = new Rotation();
@@ -88,9 +85,6 @@ public partial class Player
 		posDiff += sideOffset;
 
 
-		setup.Position += setup.Rotation.Up * lastShake.x;
-		setup.Position += setup.Rotation.Right * lastShake.y;
-
 		if ( cameraShake > 0 )
 		{
 
@@ -139,6 +133,8 @@ public partial class Player
 	{
 
 		ScriptedEvent = false;
+		OverrideTrigger = null;
+		OverrideCamera = null;
 
 	}
 
