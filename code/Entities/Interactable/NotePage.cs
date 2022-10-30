@@ -22,7 +22,12 @@ public partial class NotePage : BaseInteractable
 
 		base.Spawn();
 
-		Text = Text.Replace( @"\n", "\n" ); // Silly hammer new line
+		if ( Text != null )
+		{
+
+			Text = Text.Replace( @"\n", "\n" ); // Silly hammer new line
+
+		}
 
 	}
 
@@ -50,6 +55,13 @@ public partial class NotePage : BaseInteractable
 
 			var door = Entity.All.OfType<SceneTransferDoor>().Where( x => x.CheckpoindIDTarget == 1 ).FirstOrDefault(); // The first door haha, don't care
 			door.Unlock();
+
+			if ( Text.Contains( "window" ) ) //hehehehe
+			{
+
+				Event.Run( "BrainReveal" );
+
+			}
 
 		}
 

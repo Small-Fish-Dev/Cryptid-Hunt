@@ -21,6 +21,7 @@ public partial class Cardboard : BaseInteractable
 		base.Spawn();
 		EnableAllCollisions = false;
 		EnableDrawing = false;
+		
 
 	}
 
@@ -28,13 +29,14 @@ public partial class Cardboard : BaseInteractable
 	public void Cutscene()
 	{
 
-		EnableAllCollisions = true;
 		EnableDrawing = true;
 
 	}
 
 	public override void Interact( Player player )
 	{
+
+		if ( Locked ) return;
 
 		Event.Run( "RemovedCardboard" );
 		Sound.FromScreen( "sounds/scary/slam_flute.sound" ).SetVolume( 2 );
@@ -54,6 +56,14 @@ public partial class Cardboard : BaseInteractable
 
 		Delete();
 
+
+	}
+
+	[Event("BrainReveal")]
+	public void OnReveal()
+	{
+
+		EnableAllCollisions = true;
 
 	}
 

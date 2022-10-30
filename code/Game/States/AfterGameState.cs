@@ -28,7 +28,6 @@ public class AfterGameState : BaseState
 
 		Event.Run( "BeginGame" );
 		Event.Run( "StartCutscene" );
-		Sound.FromScreen( "sounds/music/creepy_radio.sound" ).SetVolume( 3 );
 
 		foreach ( var note in Entity.All.OfType<NotePage>() )
 		{
@@ -37,24 +36,44 @@ public class AfterGameState : BaseState
 
 		}
 
-		GameTask.RunInThreadAsync( async () =>
+		foreach ( var ent in Entity.All.OfType<ModelEntity>() )
+		{ 
+
+			if ( !ent.Name.Contains( "computer" ) ) continue;
+
+			var attachmentPos = ent.GetAttachment( "screen" )?.Position ?? Vector3.Zero;
+
+			var page = new NotePage()
+			{
+				Position = attachmentPos + Vector3.Right * 3f,
+				Text = "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
+
+
+			};
+
+			page.Rotation = Rotation.From( new Angles( -60f, 90f, 0f ) );
+
+			break;
+		}
+
+	}
+	[Event( "BrainReveal" )]
+	public void OnReveal()
+	{
+
+		foreach ( var light in Entity.All.OfType<SpotLightEntity>() )
 		{
 
-			await GameTask.DelaySeconds( 5f );
-
-			foreach ( var light in Entity.All.OfType<SpotLightEntity>() )
+			if ( light.Name.Contains( "brain" ) )
 			{
 
-				if ( light.Name.Contains( "brain" ) )
-				{
-
-					light.Enabled = true;
-
-				}
+				light.Enabled = true;
 
 			}
 
-		} );
+		}
+
+		Sound.FromScreen( "sounds/music/creepy_radio.sound" ).SetVolume( 3 );
 
 	}
 

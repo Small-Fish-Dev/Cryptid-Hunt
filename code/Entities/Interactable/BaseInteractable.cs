@@ -67,4 +67,21 @@ public partial class BaseInteractable : AnimatedEntity
 	}
 
 
+	public void Lock()
+	{
+
+		Locked = true;
+		_lock();
+
+	}
+
+	[ClientRpc]
+	void _lock()
+	{
+
+		Locked = true;
+
+	}
+
+
 }
