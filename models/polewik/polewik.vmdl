@@ -875,7 +875,7 @@
 								_class = "AnimEvent"
 								name = "impact"
 								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
-								event_frame = 30
+								event_frame = 28
 								event_keys = 
 								{
 									name = "hit"
