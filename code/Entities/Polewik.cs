@@ -633,6 +633,21 @@ public partial class Polewik : AnimatedEntity
 	public Rotation WishRotation;
 	public Vector3 WishVelocity;
 
+	public override void OnAnimEventFootstep( Vector3 position, int foot, float volume )
+	{
+
+		var trace = Trace.Ray( position, position + Vector3.Down * 10f )
+			.Ignore( this )
+			.Run();
+
+		var surface = trace.Surface;
+		var sound = surface.Sounds.FootLand;
+
+		Sound.FromWorld( sound, trace.HitPosition )
+			.SetVolume( (surface.ResourceName == "wood" ? 6 : 0.6f) * Velocity.Length / 40f );
+
+	}
+
 	public virtual void ComputeAnimation()
 	{
 
