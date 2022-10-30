@@ -49,13 +49,13 @@ public partial class Game : GameBase
 	public Game()
 	{
 		Instance = this;
+		Event.Run( "GameStart" );
 	}
 
 	[Event.Entity.PostSpawn]
 	public void LevelLoaded()
 	{
 	
-		Event.Run( "GameStart" );
 		Precache.Add( "sounds/ambient/ambient_wind_loop.sound" );
 		Precache.Add( "sounds/ambient/crows.sound" );
 		Precache.Add( "sounds/ambient/leaves_rustle.sound" );
