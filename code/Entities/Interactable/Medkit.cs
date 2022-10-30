@@ -17,7 +17,6 @@ public partial class Medkit : BaseInteractable
 	public override void Interact( Player player )
 	{
 
-
 		base.Interact( player );
 
 	}
@@ -28,6 +27,7 @@ public partial class Medkit : BaseInteractable
 
 		player.HP = 3;
 
+		Sound.FromScreen( "sounds/items/medkit.sound" );
 		player.ChangeHolding( null );
 		Delete();
 
