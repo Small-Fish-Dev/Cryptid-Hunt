@@ -3,12 +3,14 @@
   "Type": "game",
   "Org": "local",
   "Ident": "spookyjam2022",
+  "Tags": "",
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
   "ResourcePaths": [
     "/fonts/*",
-    "/ui/*"
+    "/ui/*",
+    "fonts/*"
   ],
   "HasCode": true,
   "CodePath": "/code/",
@@ -45,6 +47,7 @@
       "RootNamespace": "SpookyJam2022",
       "DefineConstants": "SANDBOX;ADDON;DEBUG",
       "NoWarn": "1701;1702;1591;"
-    }
+    },
+    "ParentPackage": ""
   }
 }

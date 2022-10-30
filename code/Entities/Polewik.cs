@@ -325,8 +325,12 @@ public partial class Polewik : AnimatedEntity
 
 		SetModel( ModelName );
 
-		CollisionBox = new BBox( new Vector3( -12f, -12, 0f ), new Vector3( 12f, 12f, 60f ) );
+		CollisionBox = new BBox( new Vector3( -18f, -18f, 0f ), new Vector3( 18f, 18f, 60f ) );
 		EnableHitboxes = true;
+
+		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, CollisionBox.Mins, CollisionBox.Maxs );
+
+		Tags.Add( "Polewik" );
 
 	}
 
@@ -344,7 +348,7 @@ public partial class Polewik : AnimatedEntity
 
 		ComputeAnimation();
 
-		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red );
+		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
 		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
@@ -418,6 +422,7 @@ public partial class Polewik : AnimatedEntity
 				}
 
 				var trace = Trace.Sphere( 200f, Victim.EyePosition, Victim.EyePosition + Victim.EyeRotation.Forward * 2000f )
+					.WithTag("Polewik")
 					.EntitiesOnly()
 					.Ignore( Victim )
 					.Run();
@@ -594,14 +599,17 @@ public partial class Polewik : AnimatedEntity
 
 	}
 
+	public Vector3 GroundPosition;
+
 	public virtual void ComputeMoveHelper()
 	{
 
-		var groundCheck = Trace.Box( CollisionBox, Position, Position + Vector3.Down )
+		var groundCheck = Trace.Box( CollisionBox, Position, Position + Vector3.Down * 5f )
 			.Ignore( this )
 			.Run();
 
 		GroundEntity = groundCheck.Entity;
+		GroundPosition = groundCheck.EndPosition;
 
 		if ( GroundEntity == null )
 		{
@@ -619,14 +627,14 @@ public partial class Polewik : AnimatedEntity
 
 		var helper = new MoveHelper( Position, Velocity )
 		{
-			MaxStandableAngle = 60f
+			MaxStandableAngle = 50f // ATV Monster LOL!!!
 		};
 
 		helper.Trace = helper.Trace.Size( CollisionBox )
 			.Ignore( this )
 			.WithoutTags( "player" );
 		helper.TryUnstuck();
-		helper.TryMoveWithStep( Time.Delta, 48f );
+		helper.TryMoveWithStep( Time.Delta, 30f );
 
 		Position = helper.Position;
 		Velocity = helper.Velocity;
@@ -636,7 +644,9 @@ public partial class Polewik : AnimatedEntity
 	public virtual bool NavigateTo( Vector3 pos )
 	{
 
-		var path = NavMesh.PathBuilder( Position )
+		var path = NavMesh.PathBuilder( GroundPosition )
+			.WithPartialPaths()
+			.WithNoOptimization()
 			.WithAgentHull( Agent )
 			.Build( pos );
 
@@ -679,7 +689,7 @@ public partial class Polewik : AnimatedEntity
 
 		NextPosition = PathPoints[Math.Clamp( PathIndex + 1, 0, PathPoints.Length - 1 )];
 
-		if ( Position.Distance( NextPosition ) < Velocity.Length * 10f * Time.Delta )
+		if ( Position.Distance( NextPosition ) < Math.Max( Velocity.Length, 100f ) * 10f * Time.Delta )
 		{
 			PathIndex++;
 

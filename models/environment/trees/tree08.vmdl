@@ -132,7 +132,7 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_tags = "solid"
-						radius = 14.124458
+						radius = 30.0
 						point0 = [ -2.23645, -8.253745, 185.928772 ]
 						point1 = [ 0.097892, -5.787132, -4.887772 ]
 					},

@@ -145,6 +145,15 @@
 						point0 = [ 14.383093, 32.955879, 79.148369 ]
 						point1 = [ 2.1504, 10.748225, -3.598969 ]
 					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 6.988367, 5.381931, 32.495361 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 38.961407, 42.114861, 74.990723 ]
+					},
 				]
 			},
 		]
