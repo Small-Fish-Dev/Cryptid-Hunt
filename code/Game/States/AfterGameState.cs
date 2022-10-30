@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022.States;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace SpookyJam2022.States;
 
 public class AfterGameState : BaseState
 {
@@ -32,28 +34,21 @@ public class AfterGameState : BaseState
 		foreach ( var note in Entity.All.OfType<NotePage>() )
 		{
 
-			note.Delete();
-
-		}
-
-		foreach ( var ent in Entity.All.OfType<ModelEntity>() )
-		{ 
-
-			if ( !ent.Name.Contains( "computer" ) ) continue;
-
-			var attachmentPos = ent.GetAttachment( "screen" )?.Position ?? Vector3.Zero;
-
-			var page = new NotePage()
+			if ( note.Name.Contains( "Brain" ) )
 			{
-				Position = attachmentPos + Vector3.Right * 3f,
-				Text = "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
+
+				note.EnableDrawing = true;
+				note.EnableAllCollisions = true;
+
+			}
+			else
+			{
+
+				note.Delete();
 
 
-			};
+			}
 
-			page.Rotation = Rotation.From( new Angles( -60f, 90f, 0f ) );
-
-			break;
 		}
 
 	}

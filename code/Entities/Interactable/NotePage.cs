@@ -29,6 +29,14 @@ public partial class NotePage : BaseInteractable
 
 		}
 
+		if ( Name.Contains( "Brain" ) )
+		{
+
+			EnableDrawing = false;
+			EnableAllCollisions = false;
+
+		}
+
 	}
 
 	public override void Interact( Player player )
