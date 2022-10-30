@@ -27,13 +27,13 @@ public partial class Polewik : AnimatedEntity
 {
 
 	public float JumpscareDistance => 120f;
-	public float DetectDistance => 1200f;
-	public float StalkingDistance => 600f;
-	public float AttackDistance => 400f;
-	public float GiveUpDistance => 2400f;
-	public float GiveUpAfter => 20f;
-	public float AttackAfterStalking => 20f;
-	public float AttackAfterStalling => 150f;
+	public float DetectDistance => 1400f;
+	public float StalkingDistance => 700f;
+	public float AttackDistance => 500f;
+	public float GiveUpDistance => 2600f;
+	public float GiveUpAfter => 25f;
+	public float AttackAfterStalking => 8f;
+	public float AttackAfterStalling => 60f;
 
 	TimeSince lastAttack = 0f;
 
@@ -108,8 +108,8 @@ public partial class Polewik : AnimatedEntity
 
 				lastAttack = 0f;
 
-				NavigateTo( FurthestNode.WorldPosition );
-				CurrentPathId = PatrolPath.PathNodes.IndexOf( FurthestNode );
+				NavigateTo( NearestNode.WorldPosition );
+				CurrentPathId = PatrolPath.PathNodes.IndexOf( NearestNode );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -235,14 +235,14 @@ public partial class Polewik : AnimatedEntity
 	public Dictionary<PolewikState, float> Speeds = new()
 	{
 		{ PolewikState.Idle, 0f },
-		{ PolewikState.Patrolling, 300f },
-		{ PolewikState.Stalking, 200f },
-		{ PolewikState.Following, 300f },
+		{ PolewikState.Patrolling, 450f },
+		{ PolewikState.Stalking, 300f },
+		{ PolewikState.Following, 550f },
 		{ PolewikState.Attacking, 1800f },
-		{ PolewikState.Fleeing, 450f },
+		{ PolewikState.Fleeing, 750f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 300f }, // TODO Change speed depending on if player manages to reach tower
+		{ PolewikState.AttackPersistent, 550f }, // TODO Change speed depending on if player manages to reach tower
 		{ PolewikState.Jumpscare, 0f }
 
 	};
@@ -353,10 +353,10 @@ public partial class Polewik : AnimatedEntity
 
 		ComputeAnimation();
 
-		if ( stuckOnMovement >= 1f )
+		if ( stuckOnMovement >= 4f )
 		{
 
-			Position = ClosestNodeTo( TargetPosition ).WorldPosition;
+			Position = ClosestNodeTo( NextPosition ).WorldPosition;
 			stuckOnMovement = 0f;
 
 		}
@@ -611,13 +611,13 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-		if ( CurrentState == PolewikState.Fleeing )
+		if ( CurrentState == PolewikState.Fleeing && PatrolPath != null)
 		{
 
-			if ( Position.Distance( TargetPosition ) >= 50f )
+			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
 
-				if ( Velocity.Length >= 80f )
+				if ( Velocity.Length >= 90f )
 				{
 
 					stuckOnMovement = 0f;
@@ -627,7 +627,6 @@ public partial class Polewik : AnimatedEntity
 			}
 
 		}
-
 
 	}
 
@@ -740,7 +739,7 @@ public partial class Polewik : AnimatedEntity
 
 		var helper = new MoveHelper( Position, Velocity )
 		{
-			MaxStandableAngle = 50f // ATV Monster LOL!!!
+			MaxStandableAngle = 40f // ATV Monster LOL!!!
 		};
 
 		helper.Trace = helper.Trace.Size( CollisionBox )
@@ -882,7 +881,7 @@ public partial class Polewik : AnimatedEntity
 
 		ComputeAI();
 
-		if ( CurrentState == PolewikState.Patrolling )
+		if ( CurrentState == PolewikState.Patrolling || CurrentState == PolewikState.Fleeing )
 		{
 
 			if ( ReachedTarget )
