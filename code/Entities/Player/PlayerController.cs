@@ -20,7 +20,7 @@ public partial class PlayerController : PawnController
 		if ( Input.Down( InputButton.Run ) && Stamina > 0.1f )
 		{
 			var overweight = MathF.Max( pawn.Inventory.Weight - pawn.Inventory.MaxWeight, 0f );
-			return MathF.Max( 160f - overweight * 4f, 110f );
+			return MathF.Max( 2000f - overweight * 4f, 110f );
 		}
 		else return 80f;
 	}

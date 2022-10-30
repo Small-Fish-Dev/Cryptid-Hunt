@@ -7,13 +7,13 @@
 		VolumeRandom = 0.12
 		Pitch = 1
 		PitchRandom = 0.16
-		Decibels = 155
+		Decibels = 115
 		Sounds = 
 		[
 			resource:"sounds/polewik/scream_scare.vsnd",
 		]
 		SelectionMode = "Random"
-		MaximumDistance = 5483.878
-		MinimumDistance = 274.1939
+		MaximumDistance = 3033.086
+		MinimumDistance = 151.6543
 	}
 }

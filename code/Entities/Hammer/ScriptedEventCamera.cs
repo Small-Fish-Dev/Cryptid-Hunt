@@ -46,10 +46,10 @@ public partial class ScriptedEventCamera : Entity
 		{
 			light = new SpotLightEntity
 			{
-				Enabled = true,
+				Enabled = false,
 				DynamicShadows = true,
-				Range = 4000,
-				Brightness = 10f,
+				Range = 2000,
+				Brightness = 2f,
 				Color = Color.White,
 				InnerConeAngle = 20,
 				OuterConeAngle = 30,
@@ -81,6 +81,19 @@ public partial class ScriptedEventCamera : Entity
 				} );
 
 			}
+
+		}
+
+	}
+
+	[Event( "ScriptedEventStart" )]
+	void addLight()
+	{
+
+		if ( light != null && Name.Contains( "Lake" ) )
+		{
+
+			light.Enabled = true;
 
 		}
 
