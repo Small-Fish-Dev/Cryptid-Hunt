@@ -59,6 +59,8 @@ public partial class Polewik : AnimatedEntity
 
 				lastAttack = 0f;
 
+				PlaySound( "sounds/polewik/pain.sound" ).SetVolume( 2 );
+
 				GameTask.RunInThreadAsync( async () =>
 				{
 
@@ -82,13 +84,17 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
+					Sound.FromScreen( "sounds/polewik/howl_far.sound" );
+
+					await GameTask.DelaySeconds( 0.5f );
+
 					SetAnimParameter( "howl", true );
 
-					await GameTask.DelaySeconds( 0.05f );
+					await GameTask.DelaySeconds( 0.5f );
 
 					SetAnimParameter( "howl", false );
 
-					await GameTask.DelaySeconds( 0.9f );
+					await GameTask.DelaySeconds( 3f );
 
 					Victim = ClosestPlayer;
 					CurrentState = PolewikState.AttackPersistent;
@@ -143,6 +149,8 @@ public partial class Polewik : AnimatedEntity
 
 				SetAnimParameter( "leap", true );
 
+				PlaySound( "sounds/polewik/jump.sound" ).SetVolume( 2 );
+
 				GameTask.RunInThreadAsync( async () =>
 				{
 
@@ -181,6 +189,8 @@ public partial class Polewik : AnimatedEntity
 
 				var flashlight = Victim.CreateLight( Victim.OverrideCamera );
 				Victim.FlashLightOn = false;
+
+				PlaySound( "sounds/polewik/jumpscare.sound" ).SetVolume( 5 );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -315,9 +325,8 @@ public partial class Polewik : AnimatedEntity
 
 		SetModel( ModelName );
 
-		CollisionBox = new BBox( new Vector3( -20f, -20f, 0f ), new Vector3( 20f, 20f, 70f ) );
-
-		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, CollisionBox.Mins, CollisionBox.Maxs );
+		CollisionBox = new BBox( new Vector3( -12f, -12, 0f ), new Vector3( 12f, 12f, 60f ) );
+		EnableHitboxes = true;
 
 	}
 
@@ -363,8 +372,7 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				Victim = ClosestPlayer;
-				CurrentState = PolewikState.AttackPersistent;
-				Sound.FromScreen( "sounds/polewik/howl_far.sound" );
+				CurrentState = PolewikState.Yell;
 
 			}
 
@@ -397,6 +405,7 @@ public partial class Polewik : AnimatedEntity
 				if ( Victim.Position.Distance( Position ) <= StalkingDistance || startedStalking >= AttackAfterStalking )
 				{
 
+					PlaySound( "sounds/polewik/scream_scare.sound" );
 					CurrentState = PolewikState.Following;
 
 				}
@@ -617,7 +626,7 @@ public partial class Polewik : AnimatedEntity
 			.Ignore( this )
 			.WithoutTags( "player" );
 		helper.TryUnstuck();
-		helper.TryMoveWithStep( Time.Delta, 32f );
+		helper.TryMoveWithStep( Time.Delta, 48f );
 
 		Position = helper.Position;
 		Velocity = helper.Velocity;
@@ -632,6 +641,13 @@ public partial class Polewik : AnimatedEntity
 			.Build( pos );
 
 		if ( path == null ) return false;
+
+		foreach ( var point in path.Segments )
+		{
+
+			DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
+
+		}
 
 		CurrentPath = path;
 
