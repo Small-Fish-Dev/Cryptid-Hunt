@@ -29,11 +29,14 @@ public partial class BaseInteractable : AnimatedEntity
 		if ( resource != null )
 		{
 			player.Inventory?.Insert( Item.FromResource( resource.ResourceName ), Amount );
+			Sound.FromScreen( "sounds/items/pickup.sound" );
 			Delete();
 
+		}
+		else
+		{
 			return;
 		}
-		Sound.FromScreen( "sounds/items/pickup.sound" );
 		player.ChangeHolding( this );
 	}
 
