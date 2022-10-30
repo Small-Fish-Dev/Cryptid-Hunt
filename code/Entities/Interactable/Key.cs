@@ -26,14 +26,7 @@ public partial class Key : BaseInteractable
 		if ( player.FirstInteractable is LockedChest chest )
 		{
 			base.Use( player );
-
-			new Shotgun()
-			{
-				Position = chest.Position,
-				Rotation = chest.Rotation
-			};
-
-			chest.Delete();
+			chest.Interact( player );
 
 			player.ChangeHolding( null );
 			Delete();

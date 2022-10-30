@@ -204,7 +204,7 @@
 						name = "lock"
 						parent_bone = "root"
 						relative_origin = [ 13.0, 16.5, 0.0 ]
-						relative_angles = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 270.0, 90.0, 180.0 ]
 						weight = 1.0
 						ignore_rotation = false
 					},
