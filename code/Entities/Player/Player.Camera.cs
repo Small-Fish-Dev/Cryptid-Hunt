@@ -30,7 +30,7 @@ public partial class Player
 		setup.Position -= setup.Rotation.Up * lastShake.x;
 		setup.Position -= setup.Rotation.Right * lastShake.y;
 
-		var upOffset = up * ( MathF.Sin( walkBob ) * speed * -2f );
+		var upOffset = up * ( MathF.Sin( walkBob ) * 0.75f * -2f );
 		var sideOffset = left * ( MathF.Sin( walkBob * 0.5f ) * speed * -3f );
 
 		var posDiff = Vector3.Zero;

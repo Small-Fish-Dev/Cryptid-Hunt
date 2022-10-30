@@ -47,7 +47,16 @@ public partial class BaseInteractable : AnimatedEntity
 			|| ActiveItem.Container != player.Inventory ) return;
 
 		var index = player.Inventory.Items.IndexOf( ActiveItem );
+		ShakeCamera( player );
 		player.Inventory.Remove( index );
+	}
+
+	[ClientRpc]
+	public void ShakeCamera( Player player )
+	{
+
+		Event.Run( "ScreenShake", 0.15f, 4f );
+
 	}
 
 	public void Unlock()
@@ -63,6 +72,23 @@ public partial class BaseInteractable : AnimatedEntity
 	{
 
 		Locked = false;
+
+	}
+
+
+	public void Lock()
+	{
+
+		Locked = true;
+		_lock();
+
+	}
+
+	[ClientRpc]
+	void _lock()
+	{
+
+		Locked = true;
 
 	}
 

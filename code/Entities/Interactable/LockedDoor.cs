@@ -21,6 +21,19 @@ public partial class LockedDoor : BaseInteractable
 			player.Holding.Delete();
 			player.ChangeHolding( null );
 
+			Sound.FromWorld( "sounds/items/metal_door_creak.sound", Position ).SetVolume( 2 );
+
+			var door = new ModelEntity();
+			door.Position = Position;
+			door.Rotation = Rotation;
+			door.Scale = Scale;
+			door.UsePhysicsCollision = true;
+			door.SetModel( GetModelName() );
+			door.SetupPhysicsFromModel( PhysicsMotionType.Dynamic );
+			door.EnableAllCollisions = true;
+			door.Velocity = door.Rotation.Up * 20f + door.Rotation.Left * 50f;
+			door.DeleteAsync( 2f );
+
 			Delete();
 
 		}
