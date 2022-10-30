@@ -15,14 +15,14 @@ public partial class PlayerController : PawnController
 
 	private float getSpeed()
 	{
-		if ( Pawn is not Player pawn ) return 80f;
+		if ( Pawn is not Player pawn ) return 120f;
 
 		if ( Input.Down( InputButton.Run ) && Stamina > 0.1f )
 		{
 			var overweight = MathF.Max( pawn.Inventory.Weight - pawn.Inventory.MaxWeight, 0f );
-			return MathF.Max( 2000f - overweight * 4f, 110f );
+			return MathF.Max( 220f - overweight * 4f, 110f );
 		}
-		else return 80f;
+		else return 120f;
 	}
 
 	private void CheckLadder()
