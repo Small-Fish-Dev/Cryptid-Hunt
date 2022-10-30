@@ -36,7 +36,7 @@ public partial class Brain : AnimatedEntity
 
 			await GameTask.DelaySeconds( 1.5f );
 
-			//Looking = true; // TODO Grod fix this!!!
+			Looking = true;
 
 			await GameTask.DelaySeconds( 3f );
 
@@ -65,11 +65,7 @@ public partial class Brain : AnimatedEntity
 
 				SetAnimParameter( "look", true );
 
-				var local = Transform.PointToLocal( ply.Position );
-				SetAnimParameter( "lookat", local );
-
 			}
-
 
 		}
 	}

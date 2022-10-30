@@ -87,13 +87,23 @@ public partial class ScriptedEventCamera : Entity
 	}
 
 	[Event( "ScriptedEventStart" )]
-	void addLight()
+	void addLight( string camera, ScriptedEventTrigger trigger )
 	{
 
 		if ( light != null && Name.Contains( "Lake" ) )
 		{
 
-			light.Enabled = true;
+			light.Enabled = true; 
+			
+			foreach ( var polewik in Entity.All.OfType<Polewik>() )
+			{
+
+				polewik.Disabled = false;
+				polewik.CurrentState = PolewikState.Yell;
+
+				return;
+
+			}
 
 		}
 
@@ -107,16 +117,7 @@ public partial class ScriptedEventCamera : Entity
 		{
 
 			light.Delete(); 
-			
-			foreach ( var polewik in Entity.All.OfType<Polewik>() )
-			{
 
-				polewik.Disabled = false;
-				polewik.CurrentState = PolewikState.AttackPersistent;
-
-				return;
-
-			}
 
 		}
 

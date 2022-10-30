@@ -84,17 +84,11 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					Sound.FromScreen( "sounds/polewik/howl_far.sound" );
-
 					await GameTask.DelaySeconds( 0.5f );
 
 					SetAnimParameter( "howl", true );
 
-					await GameTask.DelaySeconds( 0.5f );
-
-					SetAnimParameter( "howl", false );
-
-					await GameTask.DelaySeconds( 3f );
+					await GameTask.DelaySeconds( 3.5f );
 
 					Victim = ClosestPlayer;
 					CurrentState = PolewikState.AttackPersistent;
@@ -306,6 +300,7 @@ public partial class Polewik : AnimatedEntity
 		set
 		{
 			disabled = value;
+			stuckOnMovement = 0f;
 
 		}
 	}
@@ -332,6 +327,7 @@ public partial class Polewik : AnimatedEntity
 	TimeSince lastCalculatedPath;
 	TimeSince startedStalking;
 	TimeSince startedFollowing;
+	TimeSince stuckOnMovement;
 
 	public virtual void ComputeAI()
 	{
@@ -342,11 +338,23 @@ public partial class Polewik : AnimatedEntity
 
 		ComputeAnimation();
 
+		if ( stuckOnMovement >= 0.5f )
+		{
+
+
+			CurrentPathId = (CurrentPathId + 1) % PatrolPath.PathNodes.Count;
+
+			Position = PatrolPath.PathNodes[CurrentPathId].WorldPosition;
+			stuckOnMovement = 0f;
+
+		}
+
+
 		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
-		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
+		/*DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
-		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );
+		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );*/
 
 		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
 		{
@@ -374,6 +382,18 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( Position.Distance( TargetPosition ) >= 30f )
+			{
+
+				if ( Velocity.Length >= 90f )
+				{
+
+					stuckOnMovement = 0f;
+
+				}
+
+			}
+
 		}
 
 		if ( CurrentState == PolewikState.Stalking && PatrolPath != null )
@@ -390,11 +410,19 @@ public partial class Polewik : AnimatedEntity
 
 						NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
 
+						if ( Velocity.Length >= 80f )
+						{
+
+							stuckOnMovement = 0f;
+
+						}
+
 					}
 					else
 					{
 
 						WishRotation = Rotation.LookAt( Victim.Position );
+						stuckOnMovement = 0f;
 
 					}
 
@@ -424,7 +452,6 @@ public partial class Polewik : AnimatedEntity
 				if ( trace.Entity == this )
 				{
 
-					Log.Info( "AAAH!!!" );
 					CurrentState = PolewikState.Following;
 
 				}
@@ -470,6 +497,18 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( Position.Distance( TargetPosition ) >= 50f )
+			{
+
+				if ( Velocity.Length >= 80f )
+				{
+
+					stuckOnMovement = 0f;
+
+				}
+
+			}
+
 		}
 
 		if ( CurrentState == PolewikState.AttackPersistent && Victim != null && PatrolPath != null )
@@ -503,6 +542,18 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( Position.Distance( TargetPosition ) >= 50f )
+			{
+
+				if ( Velocity.Length >= 80f )
+				{
+
+					stuckOnMovement = 0f;
+
+				}
+
+			}
+
 		}
 
 		if ( CurrentState == PolewikState.Attacking && Victim != null )
@@ -523,7 +574,48 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			stuckOnMovement = 0f;
+
 		}
+
+		if ( CurrentState == PolewikState.Yell )
+		{
+
+			stuckOnMovement = 0f;
+
+		}
+
+		if ( CurrentState == PolewikState.Pain )
+		{
+
+			stuckOnMovement = 0f;
+
+		}
+
+		if ( CurrentState == PolewikState.Jumpscare )
+		{
+
+			stuckOnMovement = 0f;
+
+		}
+
+		if ( CurrentState == PolewikState.Fleeing )
+		{
+
+			if ( Position.Distance( TargetPosition ) >= 50f )
+			{
+
+				if ( Velocity.Length >= 80f )
+				{
+
+					stuckOnMovement = 0f;
+
+				}
+
+			}
+
+		}
+
 
 	}
 
@@ -645,14 +737,14 @@ public partial class Polewik : AnimatedEntity
 			.Build( pos );
 
 		if ( path == null ) return false;
-
+		/*
 		foreach ( var point in path.Segments )
 		{
 
 			DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
 
 		}
-
+		*/
 		CurrentPath = path;
 
 		PathLength = 0f;
