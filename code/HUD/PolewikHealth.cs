@@ -34,7 +34,7 @@ public class PolewikHealth : WorldPanel
 			else return;
 		}
 		
-		if ( Instance.polewik == null )
+		if ( Instance.polewik == null || !Instance.polewik.IsValid )
 		{
 			Instance.Delete();
 			Instance = null;

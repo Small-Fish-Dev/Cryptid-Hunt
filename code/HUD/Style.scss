@@ -840,7 +840,8 @@ PolewikHealth {
         background-size: 100% 100%;
         background-position-x: left;
         background-position-y: top;
-        background-image: url(ui/bar.png);
+        background-image: url(ui/healthbar_full.png);
+        background-image-tint: rgb(400, 200, 200);
         transition: width 0.2s ease-in-out;
     }
 }
