@@ -144,6 +144,7 @@ public class Inventory : Panel
 	private void refreshSlot( Container container, int index )
 	{
 		Panel panel;
+
 		if ( !slots.TryGetValue( index, out panel ) )
 		{
 			slots.Add( index, panel = new Panel( slotContainer, "slot" ) );
@@ -214,9 +215,15 @@ public class Inventory : Panel
 		titleContainer.AddChild<Panel>( "descriptionText" ).AddChild<Label>( "description" ).Text = $"{item.Resource.Description}";
 
 		var buttonContainer = viewContainer.AddChild<Panel>( "buttonContainer" );
-		var equipButton = buttonContainer.AddChild<Panel>( "button" );
-		equipButton.AddEventListener( "onclick", () => Player.Equip( pawn.Inventory.Items.IndexOf( selected ) ) );
-		equipButton.AddChild<Label>( "text" ).Text = "Equip";
+
+		if ( item.Resource.ResourceName != "shotgun_ammo" )
+		{
+
+			var equipButton = buttonContainer.AddChild<Panel>( "button" );
+			equipButton.AddEventListener( "onclick", () => Player.Equip( pawn.Inventory.Items.IndexOf( selected ) ) );
+			equipButton.AddChild<Label>( "text" ).Text = "Equip";
+
+		}
 	}
 
 	public void Refresh()
