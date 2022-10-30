@@ -15,7 +15,7 @@ public partial class Player
 			Enabled = true,
 			DynamicShadows = true,
 			Range = 2048,
-			Brightness = parent != null ? 0.2f : 5f,
+			Brightness = parent != null ? 0.13f : 5f,
 			Color = Color.White,
 			InnerConeAngle = 20,
 			OuterConeAngle = 40,

@@ -7,16 +7,16 @@
 		VolumeRandom = 0.13
 		Pitch = 1
 		PitchRandom = 0.16
-		Decibels = 90
+		Decibels = 170
 		Sounds = 
 		[
-			resource:"sounds/polewik/breathe01.vsnd",
-			resource:"sounds/polewik/breathe02.vsnd",
-			resource:"sounds/polewik/breathe03.vsnd",
-			resource:"sounds/polewik/breathe04.vsnd",
+			resource:"sounds/polewik/breath01.vsnd",
+			resource:"sounds/polewik/breath02.vsnd",
+			resource:"sounds/polewik/breath03.vsnd",
+			resource:"sounds/polewik/breath04.vsnd",
 		]
 		SelectionMode = "Random"
-		MaximumDistance = 1870.0942
-		MinimumDistance = 93.504715
+		MaximumDistance = 6590.138
+		MinimumDistance = 329.50693
 	}
 }

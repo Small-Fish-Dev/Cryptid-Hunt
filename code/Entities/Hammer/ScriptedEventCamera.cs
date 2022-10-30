@@ -48,8 +48,8 @@ public partial class ScriptedEventCamera : Entity
 			{
 				Enabled = false,
 				DynamicShadows = true,
-				Range = 2000,
-				Brightness = 2f,
+				Range = 2300,
+				Brightness = 3.5f,
 				Color = Color.White,
 				InnerConeAngle = 20,
 				OuterConeAngle = 30,
