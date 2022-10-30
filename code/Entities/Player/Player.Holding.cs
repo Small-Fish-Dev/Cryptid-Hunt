@@ -73,7 +73,7 @@ public partial class Player
 			if ( Holding is BearTrap trap )
 			{
 
-				var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 130f )
+				var trace = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * 160f )
 				.Ignore( this )
 				.Run();
 

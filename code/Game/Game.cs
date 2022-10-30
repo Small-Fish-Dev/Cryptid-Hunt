@@ -156,6 +156,12 @@ public partial class Game : GameBase
 		Event.Run( "ShowArea", Name );
 	}
 
+	[ClientRpc]
+	public void StartInputHint( string buttonHint, string hint )
+	{
+		Event.Run( "InputHint", buttonHint, hint );
+	}
+
 
 	public override void RenderHud()
 	{
