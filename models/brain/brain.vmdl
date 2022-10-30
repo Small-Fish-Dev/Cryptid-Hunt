@@ -6,27 +6,6 @@
 		children = 
 		[
 			{
-				_class = "GameDataList"
-				children = 
-				[
-					{
-						_class = "LookAtChain"
-						name = "eye"
-						lookat_chain = 
-						{
-							name = ""
-							bones = 
-							[
-								{
-									name = "eye"
-									weight = 1.0
-								},
-							]
-						}
-					},
-				]
-			},
-			{
 				_class = "MaterialGroupList"
 				children = 
 				[
@@ -41,21 +20,6 @@
 						]
 						use_global_default = false
 						global_default_material = ""
-					},
-				]
-			},
-			{
-				_class = "AttachmentList"
-				children = 
-				[
-					{
-						_class = "Attachment"
-						name = "eye"
-						parent_bone = "eye"
-						relative_origin = [ 0.0, 0.0, 0.0 ]
-						relative_angles = [ 0.0, 90.0, 180.0 ]
-						weight = 1.0
-						ignore_rotation = false
 					},
 				]
 			},
@@ -110,8 +74,8 @@
 						reverse = false
 					},
 					{
-						_class = "MorphFrame"
-						name = "iris"
+						_class = "AnimFile"
+						name = "brain_look"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -123,13 +87,12 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
-						morph_weights = 
-						[
-							{
-								morph = "iris"
-								weight = 1.0
-							},
-						]
+						source_filename = "models/brain/brain_look.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
 					},
 				]
 				default_root_bone_name = ""
