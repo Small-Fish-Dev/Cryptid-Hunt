@@ -303,12 +303,6 @@ public partial class Polewik : AnimatedEntity
 		{
 			disabled = value;
 
-			EnableDrawing = value;
-			EnableAllCollisions = value;
-			UseAnimGraph = value;
-			EnableShadowCasting = value;
-			Transmit = value ? TransmitType.Never : TransmitType.Pvs;
-
 		}
 	}
 
@@ -407,7 +401,7 @@ public partial class Polewik : AnimatedEntity
 
 				}
 
-				if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 400f )
+				if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 200f )
 				{
 
 					CurrentState = PolewikState.Fleeing;
@@ -454,14 +448,14 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 200f )
 			{
 
 				CurrentState = PolewikState.Attacking;
 
 			}
 
-			if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 400f )
+			if ( PathLength >= GiveUpDistance || Math.Abs( Victim.Position.z - Position.z ) > 200f )
 			{
 
 				CurrentState = PolewikState.Fleeing;
@@ -487,14 +481,14 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 200f )
 			{
 
 				CurrentState = PolewikState.Attacking;
 
 			}
 
-			if ( PathLength >= GiveUpDistance * 3f || Math.Abs( Victim.Position.z - Position.z ) > 400f )
+			if ( PathLength >= GiveUpDistance * 3f || Math.Abs( Victim.Position.z - Position.z ) > 200f )
 			{
 
 				CurrentState = PolewikState.Fleeing;
