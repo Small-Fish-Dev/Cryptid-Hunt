@@ -249,7 +249,7 @@ public partial class Polewik : AnimatedEntity
 
 	public BBox CollisionBox;
 
-	[Net] public float hp { get; set; } = 100f;
+	[Net] public float hp { get; set; } = 10f; // TODO INCREASE
 	public float HP
 	{
 		get => hp;
@@ -274,13 +274,7 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 2.5f );
 
-					foreach ( var ply in Entity.All.OfType<Player>() )
-					{
-
-						ply.Respawn();
-						ply.Inventory = new( "Backpack", 30, target: Game.PlayerClient );
-
-					}
+					Game.State = new AfterGameState();
 
 
 				} );
@@ -753,7 +747,7 @@ public partial class Polewik : AnimatedEntity
 	}
 
 	public BasePathNode NearestNode => ClosestNodeTo( Position );
-	public BasePathNode FurthestNode => PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).LastOrDefault();
+	public BasePathNode FurthestNode => IsValid ? PatrolPath.PathNodes.OrderBy( x => x.WorldPosition.Distance( Position ) ).LastOrDefault() : null;
 
 	[Event.Tick.Server]
 	private void computeAI()

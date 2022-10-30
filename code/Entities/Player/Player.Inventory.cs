@@ -114,5 +114,6 @@ public partial class Player
 
 		interactable.ActiveItem = item;
 		pawn.ChangeHolding( interactable );
+		Sound.FromScreen( "sounds/items/pickup.sound" );
 	}
 }

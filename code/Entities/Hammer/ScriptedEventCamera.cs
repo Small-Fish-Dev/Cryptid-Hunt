@@ -114,6 +114,8 @@ public partial class ScriptedEventCamera : Entity
 				polewik.Disabled = false;
 				polewik.CurrentState = PolewikState.AttackPersistent;
 
+				return;
+
 			}
 
 		}

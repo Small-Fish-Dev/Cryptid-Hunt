@@ -10,6 +10,9 @@ public partial class Brick : ModelEntity
 	{
 
 		base.Spawn();
+
+		SetModel( "models/placeholders/placeholder_cinder.vmdl" );
+
 		EnableAllCollisions = true;
 		EnableDrawing = true;
 
