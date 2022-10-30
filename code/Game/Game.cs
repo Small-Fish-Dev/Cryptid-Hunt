@@ -35,8 +35,8 @@ public partial class Game : GameBase
 		set
 		{
 			Host.AssertServer();
-			
-			if (_state is not null)
+
+			if ( _state is not null )
 				_state.CleanUp();
 
 			_state = value;
@@ -49,7 +49,58 @@ public partial class Game : GameBase
 	public Game()
 	{
 		Instance = this;
+	}
+
+	[Event.Entity.PostSpawn]
+	public void LevelLoaded()
+	{
+	
 		Event.Run( "GameStart" );
+		Precache.Add( "sounds/ambient/ambient_wind_loop.sound" );
+		Precache.Add( "sounds/ambient/crows.sound" );
+		Precache.Add( "sounds/ambient/leaves_rustle.sound" );
+		Precache.Add( "sounds/items/beartrap_set.sound" );
+		Precache.Add( "sounds/items/beartrap_trigger.sound" );
+		Precache.Add( "sounds/items/chest_locked.sound" );
+		Precache.Add( "sounds/items/chest_open.sound" );
+		Precache.Add( "sounds/items/crowbar.sound" );
+		Precache.Add( "sounds/items/door_open.sound" );
+		Precache.Add( "sounds/items/medkit.sound" );
+		Precache.Add( "sounds/items/metal_bar.sound" );
+		Precache.Add( "sounds/items/metal_door_creak.sound" );
+		Precache.Add( "sounds/items/page_close.sound" );
+		Precache.Add( "sounds/items/page_open.sound" );
+		Precache.Add( "sounds/items/pickup.sound" );
+		Precache.Add( "sounds/misc/breathe_in.sound" );
+		Precache.Add( "sounds/misc/breathe_out.sound" );
+		Precache.Add( "sounds/misc/car_intro.sound" );
+		Precache.Add( "sounds/misc/glass_break_intro.sound" );
+		Precache.Add( "sounds/misc/heart_beat.sound" );
+		Precache.Add( "sounds/music/creepy_radio.sound" );
+		Precache.Add( "sounds/music/dayofchaos.sound" );
+		Precache.Add( "sounds/music/piano_intro.sound" );
+		Precache.Add( "sounds/music/weird_flutes.sound" );
+		Precache.Add( "sounds/polewik/breathe.sound" );
+		Precache.Add( "sounds/polewik/hit.sound" );
+		Precache.Add( "sounds/polewik/howl_far.sound" );
+		Precache.Add( "sounds/polewik/jump.sound" );
+		Precache.Add( "sounds/polewik/jumpscare.sound" );
+		Precache.Add( "sounds/polewik/pain.sound" );
+		Precache.Add( "sounds/polewik/scream_scare.sound" );
+		Precache.Add( "sounds/scary/creepy_sound.sound" );
+		Precache.Add( "sounds/scary/door_slam.sound" );
+		Precache.Add( "sounds/scary/slam_flute.sound" );
+		Precache.Add( "sounds/scary/static_loop.sound" );
+		Precache.Add( "sounds/scary/string_high.sound" );
+		Precache.Add( "sounds/ui/button_click.sound" );
+		Precache.Add( "sounds/footsteps/footstep-dirt.sound" );
+		Precache.Add( "sounds/footsteps/footstep-grass.sound" );
+		Precache.Add( "sounds/footsteps/footstep-wood.sound" );
+		Precache.Add( "particles/bigblood.vpcf" );
+		Precache.Add( "particles/spit01.vpcf" );
+		Precache.Add( "particles/spitdrops.vpcf" );
+		Precache.Add( "particles/spitpuff.vpcf" );
+
 	}
 
 	public override void ClientJoined( Client client )
