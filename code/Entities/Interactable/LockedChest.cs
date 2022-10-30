@@ -52,10 +52,9 @@ public partial class LockedChest : BaseInteractable
 
 
 			var shotgun = new Shotgun();
-			shotgun.Position = Position;
-			shotgun.Rotation = Rotation.FromYaw( 45f );
+			shotgun.Position = Position + Vector3.Up * 10f;
+			shotgun.Rotation = Rotation.From( new Angles( 0, 45, -15 ) );
 			shotgun.EnableAllCollisions = false;
-			shotgun.EnableDrawing = false;
 
 			GameTask.RunInThreadAsync( async () =>
 			{
@@ -63,10 +62,9 @@ public partial class LockedChest : BaseInteractable
 				await GameTask.DelaySeconds( 1f );
 
 				shotgun.EnableAllCollisions = true;
-				shotgun.EnableDrawing = true;
 
-				dynamicLock.Delete();
-				Delete();
+				dynamicLock.EnableAllCollisions = false;
+				EnableAllCollisions = false;
 
 
 

@@ -23,6 +23,18 @@ public partial class Shotgun : BaseInteractable
 
 	}
 
+	[Net] TimeSince born { get; set; }
+
+	public override void Spawn()
+	{
+
+		base.Spawn();
+		born = 0;
+
+		RenderColor = new Color( 1, 1, 1, 0 );
+
+	}
+
 	public int BulletsPerShot => 22;
 	public float Spread => 8f; // Degrees
 	public float DamagePerBullet => 1f;
@@ -112,6 +124,14 @@ public partial class Shotgun : BaseInteractable
 	{
 
 		Particles.Create( "particles/bigblood.vpcf", position );
+
+	}
+
+	[Event.Tick.Server]
+	public void DrawShotgun()
+	{
+
+		RenderColor = new Color( 1, 1, 1, Math.Min( born, 1f ) );
 
 	}
 
