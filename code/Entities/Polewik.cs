@@ -68,9 +68,12 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 0.1f );
 
+					if ( !IsValid ) return;
 					SetAnimParameter( "growl", false );
 
 					await GameTask.DelaySeconds( 0.9f );
+
+					if ( !IsValid ) return;
 
 					CurrentState = PolewikState.Fleeing;
 
@@ -86,10 +89,12 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 0.5f );
 
+					if ( !IsValid ) return;
 					SetAnimParameter( "howl", true );
 
 					await GameTask.DelaySeconds( 3.5f );
 
+					if ( !IsValid ) return;
 					Victim = ClosestPlayer;
 					CurrentState = PolewikState.AttackPersistent;
 
@@ -110,6 +115,7 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( Rand.Float( 15f, 30f ) );
 
+					if ( !IsValid ) return;
 					CurrentState = PolewikState.Patrolling;
 
 				} );
@@ -154,6 +160,7 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 0.9f );
 
+					if ( !IsValid ) return;
 					if ( CurrentState == PolewikState.Attacking )
 					{
 
@@ -191,10 +198,12 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 1.2f );
 
+					if ( !IsValid ) return;
 					Victim.HP -= 1;
 
 					await GameTask.DelaySeconds( 0.45f );
 
+					if ( !IsValid ) return;
 					flashlight.Delete();
 					Victim.FlashLightOn = true;
 
@@ -243,7 +252,7 @@ public partial class Polewik : AnimatedEntity
 
 	public BBox CollisionBox;
 
-	[Net] public float hp { get; set; } = 10f; // TODO INCREASE
+	[Net] public float hp { get; set; } = 10f; // TODO SET TO 100
 	public float HP
 	{
 		get => hp;
@@ -320,6 +329,7 @@ public partial class Polewik : AnimatedEntity
 		SetupPhysicsFromOBB( PhysicsMotionType.Keyframed, CollisionBox.Mins, CollisionBox.Maxs );
 
 		Tags.Add( "Polewik" );
+		Tags.Add( "solid" );
 
 	}
 
