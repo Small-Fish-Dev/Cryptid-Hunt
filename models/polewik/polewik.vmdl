@@ -874,15 +874,15 @@
 							{
 								_class = "AnimEvent"
 								name = "impact"
-								event_class = "AE_GENERIC_EVENT"
+								event_class = "AE_CL_PLAYSOUND_ATTACHMENT"
 								event_frame = 30
 								event_keys = 
 								{
-									TypeName = ""
-									Int = 0
-									Float = 0.0
-									Vector = [ 0.0, 0.0, 0.0 ]
-									StringData = ""
+									name = "hit"
+									attachment = "paw_R"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
 								}
 							},
 							{
