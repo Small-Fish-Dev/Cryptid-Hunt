@@ -3,11 +3,11 @@
 	data = 
 	{
 		UI = false
-		Volume = 1
-		VolumeRandom = 0.1
+		Volume = 0.02
+		VolumeRandom = 0
 		Pitch = 1
-		PitchRandom = 0.1
-		Decibels = 50
+		PitchRandom = 0.03
+		Decibels = 75
 		Sounds = 
 		[
 			resource:"sounds/misc/breathe_out1.vsnd",
@@ -15,7 +15,7 @@
 			resource:"sounds/misc/breathe_out3.vsnd",
 		]
 		SelectionMode = "Random"
-		MaximumDistance = 599.31305
-		MinimumDistance = 29.965652
+		MaximumDistance = 1308.4543
+		MinimumDistance = 65.42272
 	}
 }
