@@ -38,7 +38,6 @@ public partial class BaseInteractable : AnimatedEntity
 		{
 			return;
 		}
-		player.ChangeHolding( this );
 	}
 
 	public virtual void Use( Player player )
