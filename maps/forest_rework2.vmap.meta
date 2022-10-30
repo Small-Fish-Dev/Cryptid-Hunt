@@ -1,6 +1,4 @@
 {
   "cloud_packages": [],
-  "game_packages": [
-    "fish.cryptid_hunt"
-  ]
+  "game_packages": []
 }
