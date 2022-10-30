@@ -252,7 +252,7 @@ public partial class Polewik : AnimatedEntity
 
 	public BBox CollisionBox;
 
-	[Net] public float hp { get; set; } = 10f; // TODO SET TO 100
+	[Net] public float hp { get; set; } = 100f; // TODO SET TO 100
 	public float HP
 	{
 		get => hp;
