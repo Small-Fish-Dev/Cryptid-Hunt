@@ -2,8 +2,8 @@
 
 public partial class PlayerController : PawnController
 {
-	[Net] public float MoveSpeed { get; set; } = 80f;
-	[Net] public float SprintSpeed { get; set; } = 1600f; // Set to 160
+	[Net] public float Stamina { get; set; } = 100f;
+	public TimeSince LastRan { get; private set; } = 0f;
 
 	private Vector3 gravity => new Vector3( 0, 0, -700f );
 	private float stepSize => 16f;
@@ -12,6 +12,18 @@ public partial class PlayerController : PawnController
 
 	private bool isTouchingLadder = false;
 	private Vector3 ladderNormal = Vector3.Zero;
+
+	private float getSpeed()
+	{
+		if ( Pawn is not Player pawn ) return 80f;
+
+		if ( Input.Down( InputButton.Run ) && Stamina > 0.1f )
+		{
+			var overweight = MathF.Max( pawn.Inventory.Weight - pawn.Inventory.MaxWeight, 0f );
+			return MathF.Max( 160f - overweight * 4f, 110f );
+		}
+		else return 80f;
+	}
 
 	private void CheckLadder()
 	{
@@ -48,12 +60,12 @@ public partial class PlayerController : PawnController
 		if (isTouchingLadder)
 			ladderNormal = trace.Normal;
 	}
-	
+
 	public override void Simulate()
 	{
 		EyeRotation = Input.Rotation;
 		Rotation = Rotation.FromYaw( EyeRotation.Yaw() );
-		
+
 		CheckLadder();
 
 		MoveHelper helper;
@@ -63,14 +75,14 @@ public partial class PlayerController : PawnController
 			var wishVelocity = new Vector3( 0, Input.Left, Input.Forward ); // W to ascend, S to descend
 			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( Input.Rotation.Yaw() );
 			var velocity = wishVelocity * 100;
-			float normalDot = velocity.Dot(ladderNormal);
+			float normalDot = velocity.Dot( ladderNormal );
 			var cross = ladderNormal * normalDot;
-			Velocity = (velocity - cross) + (-normalDot * ladderNormal.Cross(Vector3.Up.Cross(ladderNormal).Normal));
+			Velocity = (velocity - cross) + (-normalDot * ladderNormal.Cross( Vector3.Up.Cross( ladderNormal ).Normal ));
 
-			helper = new(Position, Velocity);
-			helper.Trace = helper.Trace.Size(Player.CollisionBox.Mins, Player.CollisionBox.Maxs).Ignore(Pawn);
+			helper = new( Position, Velocity );
+			helper.Trace = helper.Trace.Size( Player.CollisionBox.Mins, Player.CollisionBox.Maxs ).Ignore( Pawn );
 
-			helper.TryMove(Time.Delta);
+			helper.TryMove( Time.Delta );
 
 			Position = helper.Position;
 			Velocity = helper.Velocity;
@@ -81,11 +93,11 @@ public partial class PlayerController : PawnController
 			#region Movement
 			var wishVelocity = new Vector3( Input.Forward, Input.Left, 0 );
 			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( Input.Rotation.Yaw() );
-			wishVelocity *= (Input.Down( InputButton.Run ) ? SprintSpeed : MoveSpeed);
+			wishVelocity *= getSpeed();
 			Velocity = Vector3.Lerp( Velocity, wishVelocity, 12f * Time.Delta )
 				.WithZ( Velocity.z );
 
-			if (GroundEntity == null)
+			if ( GroundEntity == null )
 				Velocity += gravity * Time.Delta;
 			else
 			{
@@ -99,12 +111,12 @@ public partial class PlayerController : PawnController
 			helper.TryMoveWithStep( Time.Delta, stepSize );
 
 			//DebugOverlay.ScreenText( $"{Velocity} {helper.Velocity}" );
-			
+
 			Position = helper.Position;
 			Velocity = helper.Velocity;
 			#endregion
 		}
-			
+
 
 		if ( Velocity.z <= stepSize )
 		{
@@ -122,6 +134,16 @@ public partial class PlayerController : PawnController
 		else GroundEntity = null;
 
 		if ( Host.IsClient ) return;
+
+		if ( Input.Down( InputButton.Run ) )
+		{ 
+			if ( Velocity.Length > 10f && Stamina > 0f )
+			{
+				Stamina = MathF.Max( Stamina - Time.Delta * 4f, 0f );
+				LastRan = 0f;
+			}
+		}
+		else if ( LastRan > 4f ) Stamina = MathF.Min( Stamina + Time.Delta * 5f, 100f );
 
 		if ( Velocity.Length > 0f && lastStep >= 50 / Velocity.Length && GroundEntity != null )
 		{

@@ -8,7 +8,7 @@ public class GameplayState : BaseState
 		Game.Player = player;
 		Game.PlayerClient.Pawn = player;
 		player.Respawn();
-		player.Inventory = new("Backpack", 30, target: Game.PlayerClient);
+		player.Inventory = new("Backpack", 20, target: Game.PlayerClient);
 		
 		Event.Run( "BeginGame" ); // glass break
 	}
