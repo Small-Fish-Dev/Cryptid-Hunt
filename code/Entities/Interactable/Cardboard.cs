@@ -33,6 +33,7 @@ public partial class Cardboard : BaseInteractable
 	{
 
 		Event.Run( "RemovedCardboard" );
+		Sound.FromScreen( "sounds/scary/slam_flute.sound" ).SetVolume( 2 );
 		Delete();
 
 	}

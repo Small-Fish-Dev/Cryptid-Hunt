@@ -9,6 +9,7 @@ class MainMenu : Panel
 	Button startButton;
 	Button creditsButton;
 	Button quitButton;
+	Button afterGameButton;
 
 	public MainMenu()
 	{
@@ -58,6 +59,30 @@ class MainMenu : Panel
 				await GameTask.DelaySeconds( 2.5f );
 
 				NetworkStartGame();
+
+				Delete();
+
+			} );
+
+		} ); 
+		
+		afterGameButton = AddChild<Button>( "Button" );
+		afterGameButton.SetText( "CUTSCENE" );
+		afterGameButton.AddEventListener( "onclick", () =>
+		{
+
+			Sound.FromScreen( "sounds/ui/button_click.sound" );
+
+			Style.PointerEvents = PointerEvents.None;
+
+			Game.Instance.StartBlackScreen();
+
+			GameTask.RunInThreadAsync( async () =>
+			{
+
+				await GameTask.DelaySeconds( 2.5f );
+
+				NetworkCutscene();
 
 				Delete();
 
@@ -146,6 +171,14 @@ class MainMenu : Panel
 			client.Kick();
 
 		}
+
+	}
+
+	[ConCmd.Server]
+	private static void NetworkCutscene()
+	{
+
+		Game.State = new AfterGameState();
 
 	}
 

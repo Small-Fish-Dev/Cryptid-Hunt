@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using SpookyJam2022.States;
 
 namespace SpookyJam2022;
 
@@ -35,8 +36,15 @@ public partial class Brain : AnimatedEntity
 
 			await GameTask.DelaySeconds( 1.5f );
 
+			//Looking = true; // TODO Grod fix this!!!
 
-			Looking = true;
+			await GameTask.DelaySeconds( 3f );
+
+			Game.Instance.StartBlackScreen();
+
+			await GameTask.DelaySeconds( 2.5f );
+
+			Game.State = new CreditsMenuState();
 
 		} );
 
@@ -58,7 +66,7 @@ public partial class Brain : AnimatedEntity
 				SetAnimParameter( "look", true );
 
 				var local = Transform.PointToLocal( ply.Position );
-				SetAnimParameter( "lookat", local.WithX( Math.Max( local.x, 0 ) ) );
+				SetAnimParameter( "lookat", local );
 
 			}
 
