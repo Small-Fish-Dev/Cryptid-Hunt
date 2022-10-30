@@ -24,7 +24,7 @@ public partial class BearTrap : BaseInteractable
 	public override void Use( Player player )
 	{
 
-		var trace = Trace.Ray( player.EyePosition, player.EyePosition + player.EyeRotation.Forward * 130f )
+		var trace = Trace.Ray( player.EyePosition, player.EyePosition + player.EyeRotation.Forward * 170f )
 			.Ignore( player )
 			.Run();
 

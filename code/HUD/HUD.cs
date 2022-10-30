@@ -59,4 +59,15 @@ class HUD : RootPanel
 
 	}
 
+	[Event( "InputHint" )]
+	public void AddInputHint( string buttonHint, string hint )
+	{
+
+		string button = Input.GetKeyWithBinding( buttonHint ).ToUpper();
+		string text = $"Press [{button}] {hint}";
+
+		AddChild( new ZoneHint( text, text.Length / 20f ) );
+
+	}
+
 }
