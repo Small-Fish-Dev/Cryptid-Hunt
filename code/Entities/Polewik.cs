@@ -1,5 +1,6 @@
 ﻿using Sandbox;
 using SpookyJam2022.States;
+using System.Numerics;
 
 namespace SpookyJam2022;
 
@@ -25,13 +26,16 @@ public enum PolewikState
 public partial class Polewik : AnimatedEntity
 {
 
-	public float JumpscareDistance => 150f;
-	public float DetectDistance => 1200f;
-	public float StalkingDistance => 600f;
-	public float AttackDistance => 400f;
+	public float JumpscareDistance => 120f;
+	public float DetectDistance => 1000f;
+	public float StalkingDistance => 450f;
+	public float AttackDistance => 300f;
 	public float GiveUpDistance => 2400f;
 	public float GiveUpAfter => 15f;
 	public float AttackAfterStalking => 20f;
+	public float AttackAfterStalling => 240f;
+
+	TimeSince lastAttack = 0f;
 
 	[Net, Change] PolewikState currentState { get; set; } = PolewikState.Patrolling;
 	public PolewikState CurrentState
@@ -52,6 +56,8 @@ public partial class Polewik : AnimatedEntity
 
 			if ( value == PolewikState.Pain )
 			{
+
+				lastAttack = 0f;
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -93,6 +99,8 @@ public partial class Polewik : AnimatedEntity
 
 			if ( value == PolewikState.Fleeing )
 			{
+
+				lastAttack = 0f;
 
 				NavigateTo( FurthestNode.WorldPosition );
 				CurrentPathId = PatrolPath.PathNodes.IndexOf( FurthestNode );
@@ -158,6 +166,8 @@ public partial class Polewik : AnimatedEntity
 			if ( value == PolewikState.Jumpscare )
 			{
 
+				lastAttack = 0f;
+
 				Velocity = 0f;
 				WishVelocity = 0f;
 				Rotation = Rotation.LookAt( Victim.Position );
@@ -209,13 +219,13 @@ public partial class Polewik : AnimatedEntity
 	{
 		{ PolewikState.Idle, 0f },
 		{ PolewikState.Patrolling, 300f },
-		{ PolewikState.Stalking, 300f },
+		{ PolewikState.Stalking, 200f },
 		{ PolewikState.Following, 300f },
 		{ PolewikState.Attacking, 1800f },
 		{ PolewikState.Fleeing, 450f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 300f },
+		{ PolewikState.AttackPersistent, 300f }, // TODO Change speed depending on if player manages to reach tower
 		{ PolewikState.Jumpscare, 0f }
 
 	};
@@ -244,6 +254,27 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				RagdollModel( this );
+
+				GameTask.RunInThreadAsync( async () =>
+				{
+
+					await GameTask.DelaySeconds( 6f );
+
+					Game.Instance.StartBlackScreen();
+
+					await GameTask.DelaySeconds( 2.5f );
+
+					foreach ( var ply in Entity.All.OfType<Player>() )
+					{
+
+						ply.Respawn();
+						ply.Inventory = new( "Backpack", 30, target: Game.PlayerClient );
+
+					}
+
+
+				} );
+
 				Delete();
 
 			}
@@ -334,6 +365,15 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( lastAttack >= AttackAfterStalling )
+			{
+
+				Victim = ClosestPlayer;
+				CurrentState = PolewikState.AttackPersistent;
+				Sound.FromScreen( "sounds/polewik/howl_far.sound" );
+
+			}
+
 		}
 
 		if ( CurrentState == PolewikState.Stalking && PatrolPath != null )
@@ -371,6 +411,19 @@ public partial class Polewik : AnimatedEntity
 				{
 
 					CurrentState = PolewikState.Fleeing;
+
+				}
+
+				var trace = Trace.Sphere( 200f, Victim.EyePosition, Victim.EyePosition + Victim.EyeRotation.Forward * 2000f )
+					.EntitiesOnly()
+					.Ignore( Victim )
+					.Run();
+
+				if ( trace.Entity == this )
+				{
+
+					Log.Info( "AAAH!!!" );
+					CurrentState = PolewikState.Following;
 
 				}
 
