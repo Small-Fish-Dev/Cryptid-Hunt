@@ -273,7 +273,7 @@ public partial class Polewik : AnimatedEntity
 				RagdollModel( this );
 				Sound.FromWorld( "sounds/polewik/pain.sound", Position ).SetVolume( 2 );
 
-				GameTask.RunInThreadAsync( async () =>
+				new Action( async () =>
 				{
 
 					await GameTask.DelaySeconds( 6f );
@@ -285,7 +285,7 @@ public partial class Polewik : AnimatedEntity
 					Game.State = new AfterGameState();
 
 
-				} );
+				} ).Invoke();
 
 				Delete();
 
