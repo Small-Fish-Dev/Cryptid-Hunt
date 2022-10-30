@@ -59,7 +59,23 @@ public partial class Player : BasePlayer
 
 	public override void Respawn()
 	{
+
 		CurrentCheckpoint ??= PlayerSpawn.Initial;
+
+		EnableAllCollisions = true;
+		EnableDrawing = true;
+
+		Position = CurrentCheckpoint.Position;
+		Rotation = CurrentCheckpoint.Rotation;
+		EyeRotation = CurrentCheckpoint.Rotation;
+
+		ResetInterpolation();
+	}
+
+	public void Initial()
+	{
+
+		CurrentCheckpoint = PlayerSpawn.Initial;
 
 		EnableAllCollisions = true;
 		EnableDrawing = true;

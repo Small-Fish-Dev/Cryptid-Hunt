@@ -4,12 +4,27 @@ public class AfterGameState : BaseState
 {
 	public override void Init()
 	{
+		var count = 0;
 
-		var player = new Player();
-		Game.Player = player;
-		Game.PlayerClient.Pawn = player;
-		player.Respawn();
-		player.Inventory = new( "Backpack", 20, target: Game.PlayerClient );
+		foreach( var ply in Entity.All.OfType<Player>() )
+		{
+
+			ply.Initial();
+			ply.FlashLightOn = false;
+			count++;
+
+		}
+
+		if ( count == 0 )
+		{
+
+			var player = new Player();
+			Game.Player = player;
+			Game.PlayerClient.Pawn = player;
+			player.Initial();
+			player.Inventory = new( "Backpack", 20, target: Game.PlayerClient );
+
+		}
 
 		Event.Run( "BeginGame" );
 		Event.Run( "StartCutscene" );
