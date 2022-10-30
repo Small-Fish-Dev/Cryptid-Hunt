@@ -1,0 +1,204 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "cardboard.vmat"
+								to = "models/bedroom/cardboard/cardboard.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "mid"
+						child_body = "bot"
+						anchor_origin = [ -0.000001, -0.000002, -7.396022 ]
+						anchor_angles = [ 0.000007, 90.0, 89.999992 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "mid"
+						child_body = "mid_left"
+						anchor_origin = [ 5.734526, 0.000001, 0.0 ]
+						anchor_angles = [ -0.000002, -90.0, -180.0 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "mid"
+						child_body = "mid_right"
+						anchor_origin = [ -5.734528, 0.0, -0.000001 ]
+						anchor_angles = [ -0.0, 90.0, -180.0 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "mid"
+						child_body = "top"
+						anchor_origin = [ -0.000001, 0.000002, 7.30022 ]
+						anchor_angles = [ -0.0, 90.0, -90.0 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "top"
+						child_body = "top_left"
+						anchor_origin = [ 5.506619, 0.000002, 3.919203 ]
+						anchor_angles = [ -0.000002, -90.0, -179.999985 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+					{
+						_class = "PhysicsJointRevolute"
+						parent_body = "top"
+						child_body = "top_right"
+						anchor_origin = [ -5.50662, 0.0, 3.919201 ]
+						anchor_angles = [ -0.0, 90.0, -180.0 ]
+						collision_enabled = false
+						friction = 0.0
+						enable_limit = true
+						min_angle = -175.0
+						max_angle = 175.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "mid"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ 0.057501, 0.0, 0.086251 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 10.690002, 0.155979, 13.507511 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "top"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ 0.057501, 0.0, 4.513764 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 11.265004, 0.155979, 8.332497 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "bot"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ 0.057501, 0.0, 2.760009 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 11.265004, 0.155979, 4.249979 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "mid_left"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ 0.460001, 0.0, 2.271258 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 14.830013, 0.155979, 3.617479 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "mid_right"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ -0.460001, 0.0, 2.27126 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 14.830013, 0.155979, 3.617479 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "top_left"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ 0.0575, 0.0, 2.472509 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 7.009989, 0.155979, 3.214977 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "top_right"
+						surface_prop = "chair_foam"
+						collision_tags = "solid"
+						origin = [ -0.0575, 0.0, 2.47251 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 7.009989, 0.155979, 3.214977 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/bedroom/cardboard/cardboard.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"cardboard",
+							]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
