@@ -7,7 +7,7 @@
 		VolumeRandom = 0.15
 		Pitch = 1
 		PitchRandom = 0.15
-		Decibels = 110
+		Decibels = 180
 		Sounds = 
 		[
 			resource:"sounds/ambient/crows01.vsnd",
@@ -15,7 +15,7 @@
 			resource:"sounds/ambient/crows03.vsnd",
 		]
 		SelectionMode = "Random"
-		MaximumDistance = 2777.795
-		MinimumDistance = 138.88976
+		MaximumDistance = 7384.377
+		MinimumDistance = 369.21884
 	}
 }

@@ -374,7 +374,7 @@
 										{
 											_class = "CTimeCondition"
 											m_comparisonOp = 3
-											m_comparisonValue = 0.15
+											m_comparisonValue = 0.2
 										},
 									]
 									m_blendDuration = 0.2

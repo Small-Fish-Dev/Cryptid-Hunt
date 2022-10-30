@@ -7,13 +7,13 @@
 		VolumeRandom = 0
 		Pitch = 1
 		PitchRandom = 0
-		Decibels = 50
+		Decibels = 180
 		Sounds = 
 		[
 			resource:"sounds/ambient/leaves_rustle.vsnd",
 		]
 		SelectionMode = "Random"
-		MaximumDistance = 599.31305
-		MinimumDistance = 29.965652
+		MaximumDistance = 7384.377
+		MinimumDistance = 369.21884
 	}
 }
