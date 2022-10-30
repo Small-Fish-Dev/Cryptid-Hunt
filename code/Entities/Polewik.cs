@@ -122,6 +122,14 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
+			if ( value == PolewikState.AttackPersistent )
+			{
+
+				Victim = ClosestPlayer;
+				startedFollowing = 0f;
+
+			}
+
 			if ( value == PolewikState.Attacking )
 			{
 
@@ -167,11 +175,11 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( 0.2f );
+					await GameTask.DelaySeconds( 1.2f );
 
-					// TODO: Maybe code here for the attack HP
+					Victim.HP -= 1;
 
-					await GameTask.DelaySeconds( 1.45f );
+					await GameTask.DelaySeconds( 0.45f );
 
 					flashlight.Delete();
 					Victim.FlashLightOn = true;
@@ -292,7 +300,6 @@ public partial class Polewik : AnimatedEntity
 	TimeSince lastCalculatedPath;
 	TimeSince startedStalking;
 	TimeSince startedFollowing;
-	TimeSince startedAttacking;
 
 	public virtual void ComputeAI()
 	{
@@ -413,21 +420,28 @@ public partial class Polewik : AnimatedEntity
 		if ( CurrentState == PolewikState.AttackPersistent && Victim != null && PatrolPath != null )
 		{
 
-			if ( lastCalculatedPath >= 0.5f )
+			if ( lastCalculatedPath >= 0.2f )
 			{
 
 				NavigateTo( Victim.Position );
 
 			}
 
-			if ( Victim.Position.Distance( Position ) <= AttackAfterStalking && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
+			if ( startedFollowing >= GiveUpAfter * 2f )
+			{
+
+				CurrentState = PolewikState.Patrolling;
+
+			}
+
+			if ( Victim.Position.Distance( Position ) <= AttackDistance && Math.Abs( Victim.Position.z - Position.z ) <= 400f )
 			{
 
 				CurrentState = PolewikState.Attacking;
 
 			}
 
-			if ( PathLength >= GiveUpDistance * 2f || Math.Abs( Victim.Position.z - Position.z ) > 400f )
+			if ( PathLength >= GiveUpDistance * 3f || Math.Abs( Victim.Position.z - Position.z ) > 400f )
 			{
 
 				CurrentState = PolewikState.Fleeing;
@@ -443,7 +457,6 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				CurrentState = PolewikState.Jumpscare;
-				Victim.HP -= 1; // TODO: Make it happen only with the animation event
 
 
 			}
