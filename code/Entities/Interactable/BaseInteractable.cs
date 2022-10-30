@@ -33,7 +33,7 @@ public partial class BaseInteractable : AnimatedEntity
 
 			return;
 		}
-
+		Sound.FromScreen( "sounds/items/pickup.sound" );
 		player.ChangeHolding( this );
 	}
 
