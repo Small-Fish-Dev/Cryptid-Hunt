@@ -362,11 +362,11 @@ public partial class Polewik : AnimatedEntity
 		}
 
 
-		//DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
-		/*DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
+		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
+		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
-		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );*/
+		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );
 
 		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
 		{
@@ -650,7 +650,6 @@ public partial class Polewik : AnimatedEntity
 
 	public virtual void ComputeAnimation()
 	{
-		DebugOverlay.Sphere( Position, 15f, Color.Red, 0, false );
 		if ( Disabled ) return;
 		if ( !IsAuthority ) return;
 
@@ -763,14 +762,14 @@ public partial class Polewik : AnimatedEntity
 			.Build( pos );
 
 		if ( path == null ) return false;
-		/*
+
 		foreach ( var point in path.Segments )
 		{
 
 			DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
 
 		}
-		*/
+
 		CurrentPath = path;
 
 		PathLength = 0f;
