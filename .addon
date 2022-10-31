@@ -27,7 +27,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "ProjectTemplate": null,
-    "GameCategory": "None",
+    "GameCategory": "Horror",
     "Physics": {
       "SubSteps": 6,
       "TimeScale": 1,
