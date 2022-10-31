@@ -362,11 +362,11 @@ public partial class Polewik : AnimatedEntity
 		}
 
 
-		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
+		/*DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
 		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
-		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );
+		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );*/
 
 		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
 		{

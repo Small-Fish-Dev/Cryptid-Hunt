@@ -27,6 +27,9 @@ public partial class Player
 			walkBob += Time.Delta * speed * 20f;
 		}
 
+		setup.Position -= setup.Rotation.Up * lastShake.x;
+		setup.Position -= setup.Rotation.Right * lastShake.y;
+
 		var upOffset = ScriptedEvent ? 0 : ( up * ( MathF.Sin( walkBob ) * 0.75f * -2f ) );
 		var sideOffset = ScriptedEvent ? 0 : ( left * ( MathF.Sin( walkBob * 0.5f ) * speed * -3f ) );
 
@@ -84,6 +87,8 @@ public partial class Player
 		posDiff += upOffset;
 		posDiff += sideOffset;
 
+		setup.Position += setup.Rotation.Up * lastShake.x;
+		setup.Position += setup.Rotation.Right * lastShake.y;
 
 		if ( cameraShake > 0 )
 		{

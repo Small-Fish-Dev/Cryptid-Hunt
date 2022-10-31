@@ -105,6 +105,7 @@ public partial class Player : BasePlayer
 				{
 
 					InteractingWith.Interact( this );
+					ShakeCamera();
 
 				}
 				else
@@ -113,6 +114,7 @@ public partial class Player : BasePlayer
 					var availableInteractable = FirstInteractable;
 
 					availableInteractable?.Interact( this );
+					ShakeCamera();
 
 				}
 
@@ -160,6 +162,14 @@ public partial class Player : BasePlayer
 			}
 
 		}
+
+	}
+
+	[ClientRpc]
+	public void ShakeCamera()
+	{
+
+		Event.Run( "ScreenShake", 0.10f, 3f );
 
 	}
 
