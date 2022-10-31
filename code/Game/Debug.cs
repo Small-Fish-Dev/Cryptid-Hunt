@@ -74,7 +74,7 @@ public partial class Game
 			.Ignore( pawn )
 			.Run();
 
-		DebugOverlay.Sphere( tr.EndPosition, 20f, Color.Blue );
+		//DebugOverlay.Sphere( tr.EndPosition, 20f, Color.Blue );
 
 		foreach( var polewik in Entity.All.OfType<Polewik>() )
 		{

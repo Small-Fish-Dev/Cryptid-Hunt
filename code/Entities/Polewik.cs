@@ -766,7 +766,7 @@ public partial class Polewik : AnimatedEntity
 		foreach ( var point in path.Segments )
 		{
 
-			DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
+			//DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
 
 		}
 
