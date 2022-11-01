@@ -97,6 +97,50 @@
 				]
 				default_root_bone_name = ""
 			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "back"
+						child_body = "front"
+						anchor_origin = [ 0.000004, 34.202408, -0.00001 ]
+						anchor_angles = [ -3.6387, -90.028496, -90.301956 ]
+						collision_enabled = false
+						friction = 0.1
+						enable_swing_limit = true
+						swing_limit = 30.0
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -15.0
+						max_twist_angle = 15.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "back"
+						surface_prop = "flesh"
+						collision_tags = "solid"
+						radius = 35.0
+						point0 = [ -0.011719, 5.35004, -1.589233 ]
+						point1 = [ -0.023438, 23.491537, -1.204895 ]
+					},
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = "front"
+						surface_prop = "flesh"
+						collision_tags = "solid"
+						radius = 28.528652
+						center = [ -0.132812, 15.025775, 10.910217 ]
+					},
+				]
+			},
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
