@@ -194,7 +194,7 @@ public partial class Polewik : AnimatedEntity
 				var flashlight = Victim.CreateLight( Victim.OverrideCamera );
 				Victim.FlashLightOn = false;
 
-				PlaySound( "sounds/polewik/jumpscare.sound" ).SetVolume( 5 );
+				PlaySound( "sounds/polewik/jumpscare.sound" ).SetVolume( 2 );
 
 				Event.Run( "ScreenShake", 1.6f, 5f );
 				GameTask.RunInThreadAsync( async () =>
@@ -362,11 +362,11 @@ public partial class Polewik : AnimatedEntity
 		}
 
 
-		//DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
-		/*DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
+		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
+		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
-		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );*/
+		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );
 
 		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
 		{
@@ -397,7 +397,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
 
-				if ( Velocity.Length >= 90f )
+				if ( Velocity.Length >= 120f )
 				{
 
 					stuckOnMovement = 0f;
@@ -417,12 +417,12 @@ public partial class Polewik : AnimatedEntity
 				if ( lastCalculatedPath >= 0.5f )
 				{
 
-					if ( Position.Distance( TargetPosition ) >= 50f )
+					if ( Position.Distance( TargetPosition ) >= 20f )
 					{
 
 						NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
 
-						if ( Velocity.Length >= 80f )
+						if ( Velocity.Length >= 120f )
 						{
 
 							stuckOnMovement = 0f;
@@ -509,10 +509,10 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Position.Distance( TargetPosition ) >= 50f )
+			if ( Position.Distance( TargetPosition ) >= 20f )
 			{
 
-				if ( Velocity.Length >= 80f )
+				if ( Velocity.Length >= 120f )
 				{
 
 					stuckOnMovement = 0f;
@@ -554,10 +554,10 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( Position.Distance( TargetPosition ) >= 50f )
+			if ( Position.Distance( TargetPosition ) >= 20f )
 			{
 
-				if ( Velocity.Length >= 80f )
+				if ( Velocity.Length >= 120f )
 				{
 
 					stuckOnMovement = 0f;
@@ -617,7 +617,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
 
-				if ( Velocity.Length >= 90f )
+				if ( Velocity.Length >= 120f )
 				{
 
 					stuckOnMovement = 0f;
@@ -644,13 +644,12 @@ public partial class Polewik : AnimatedEntity
 		var sound = surface.Sounds.FootLand;
 
 		Sound.FromWorld( sound, trace.HitPosition )
-			.SetVolume( (surface.ResourceName == "wood" ? 6 : 0.6f) * Velocity.Length / 40f );
+			.SetVolume( 2 );
 
 	}
 
 	public virtual void ComputeAnimation()
 	{
-
 		if ( Disabled ) return;
 		if ( !IsAuthority ) return;
 
@@ -763,14 +762,14 @@ public partial class Polewik : AnimatedEntity
 			.Build( pos );
 
 		if ( path == null ) return false;
-		/*
+
 		foreach ( var point in path.Segments )
 		{
 
 			DebugOverlay.Sphere( point.Position, 5f, Color.Blue, 0.5f, false );
 
 		}
-		*/
+
 		CurrentPath = path;
 
 		PathLength = 0f;

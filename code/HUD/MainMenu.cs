@@ -40,7 +40,7 @@ class MainMenu : Panel
 			} );
 
 		} );
-		/*
+		
 
 		startButton = AddChild<Button>( "Button" );
 		startButton.SetText( "SKIP NEXTBOT" );
@@ -89,7 +89,7 @@ class MainMenu : Panel
 			} );
 
 		} );
-		*/
+		
 		creditsButton = AddChild<Button>( "Button" );
 		creditsButton.SetText( "Credits" );
 		creditsButton.AddEventListener( "onclick", () =>
