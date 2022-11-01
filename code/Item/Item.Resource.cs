@@ -68,10 +68,10 @@ public partial class Item
 		private void fetchBinding()
 		{
 			var boundType = TypeLibrary
-				.GetTypesWithAttribute<ItemAttribute>()
+				?.GetTypesWithAttribute<ItemAttribute>()
 				.Where( tuple => tuple.Attribute.Resource == ResourceName ).FirstOrDefault();
 
-			Interactable = boundType.Type;
+			Interactable = boundType?.Type;
 		}
 
 		[Event.Hotload]
