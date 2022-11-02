@@ -13,8 +13,8 @@ public partial class Player
 		var light = new SpotLightEntity
 		{
 			Enabled = true,
-			DynamicShadows = true,
-			Range = 2048,
+			DynamicShadows = parent != null ? false : true,
+			Range = parent != null ? 1024 : 2048,
 			Brightness = parent != null ? 0.16f : 5f,
 			Color = Color.White,
 			InnerConeAngle = 20,
