@@ -354,7 +354,10 @@ public partial class Polewik : AnimatedEntity
 		if ( stuckOnMovement >= 4f )
 		{
 
-			Position = ClosestNodeTo( NextPosition ).WorldPosition;
+			CurrentPathId = (CurrentPathId + 1) % PatrolPath.PathNodes.Count;
+			Position = PatrolPath.PathNodes[CurrentPathId].WorldPosition;
+			CurrentPathId = (CurrentPathId + 1) % PatrolPath.PathNodes.Count;
+			NavigateTo( PatrolPath.PathNodes[CurrentPathId].WorldPosition );
 			stuckOnMovement = 0f;
 
 		}
@@ -395,7 +398,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
 
-				if ( Velocity.Length >= 120f )
+				if ( Velocity.Length >= 200f )
 				{
 
 					stuckOnMovement = 0f;
@@ -420,7 +423,7 @@ public partial class Polewik : AnimatedEntity
 
 						NavigateTo( ClosestNodeTo( ClosestPlayer.Position ).WorldPosition );
 
-						if ( Velocity.Length >= 120f )
+						if ( Velocity.Length >= 200f )
 						{
 
 							stuckOnMovement = 0f;
@@ -510,7 +513,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 20f )
 			{
 
-				if ( Velocity.Length >= 120f )
+				if ( Velocity.Length >= 200f )
 				{
 
 					stuckOnMovement = 0f;
@@ -555,7 +558,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 20f )
 			{
 
-				if ( Velocity.Length >= 120f )
+				if ( Velocity.Length >= 200f )
 				{
 
 					stuckOnMovement = 0f;
@@ -615,7 +618,7 @@ public partial class Polewik : AnimatedEntity
 			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
 
-				if ( Velocity.Length >= 120f )
+				if ( Velocity.Length >= 200f )
 				{
 
 					stuckOnMovement = 0f;
