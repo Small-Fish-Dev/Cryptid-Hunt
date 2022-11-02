@@ -52,7 +52,7 @@ public partial class Shotgun : BaseInteractable
 		var success = player.Inventory?.Remove( ammoIndex.Value, 1 ) ?? false;
 		if ( !success ) return;
 
-		PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.shoot.sound" ).SetVolume( 3 );
+		PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.shoot.sound" ).SetVolume( 2 );
 		CreateParticle( player );
 
 		for ( int i = 0; i < BulletsPerShot; i++ )
@@ -83,7 +83,7 @@ public partial class Shotgun : BaseInteractable
 		{
 
 			await Task.DelaySeconds( 0.6f );
-			PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.pump.sound" ).SetVolume( 3 );
+			PlaySound( "weapons/rust_pumpshotgun/sounds/rust_pumpshotgun.pump.sound" ).SetVolume( 2 );
 
 		} );
 

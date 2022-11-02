@@ -59,7 +59,7 @@ public partial class Polewik : AnimatedEntity
 
 				lastAttack = 0f;
 
-				PlaySound( "sounds/polewik/pain.sound" ).SetVolume( 2 );
+				PlaySound( "sounds/polewik/pain.sound" );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -150,7 +150,7 @@ public partial class Polewik : AnimatedEntity
 
 				SetAnimParameter( "leap", true );
 
-				PlaySound( "sounds/polewik/jump.sound" ).SetVolume( 2 );
+				PlaySound( "sounds/polewik/jump.sound" );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -194,7 +194,7 @@ public partial class Polewik : AnimatedEntity
 				var flashlight = Victim.CreateLight( Victim.OverrideCamera );
 				Victim.FlashLightOn = false;
 
-				PlaySound( "sounds/polewik/jumpscare.sound" ).SetVolume( 2 );
+				PlaySound( "sounds/polewik/jumpscare.sound" );
 
 				Event.Run( "ScreenShake", 1.6f, 5f );
 				GameTask.RunInThreadAsync( async () =>
@@ -271,7 +271,7 @@ public partial class Polewik : AnimatedEntity
 			{
 
 				RagdollModel( this );
-				Sound.FromWorld( "sounds/polewik/pain.sound", Position ).SetVolume( 2 );
+				Sound.FromWorld( "sounds/polewik/pain.sound", Position );
 
 				new Action( async () =>
 				{

@@ -70,7 +70,7 @@ public partial class NextBot : ModelEntity
 			lastKilled = 0f;
 
 			Sound.FromScreen( "sounds/scary/creepy_sound.sound" )
-				.SetVolume( 4f )
+				.SetVolume( 3f )
 				.SetPitch( Rand.Float( 0.8f, 1.2f ) );
 		}
 
