@@ -192,7 +192,6 @@ public partial class Polewik : AnimatedEntity
 				SetAnimParameter( "attack", true );
 
 				var flashlight = Victim.CreateLight( Victim.OverrideCamera );
-				Victim.FlashLightOn = false;
 
 				PlaySound( "sounds/polewik/jumpscare.sound" );
 
@@ -209,7 +208,6 @@ public partial class Polewik : AnimatedEntity
 
 					if ( !IsValid ) return;
 					flashlight.Delete();
-					Victim.FlashLightOn = true;
 
 					if ( CurrentState == PolewikState.Jumpscare )
 					{
