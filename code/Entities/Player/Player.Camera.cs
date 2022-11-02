@@ -106,6 +106,8 @@ public partial class Player
 		setup.FieldOfView = 60f;
 		setup.Viewer = pawn;
 
+		setup.ZFar = 2048;
+
 		Event.Run( "PostCameraSetup", posDiff, rotDiff );
 		
 
