@@ -739,14 +739,14 @@ public partial class Polewik : AnimatedEntity
 
 		var helper = new MoveHelper( Position, Velocity )
 		{
-			MaxStandableAngle = 40f // ATV Monster LOL!!!
+			MaxStandableAngle = 80f // ATV Monster LOL!!!
 		};
 
 		helper.Trace = helper.Trace.Size( CollisionBox )
 			.Ignore( this )
 			.WithoutTags( "player" );
 		helper.TryUnstuck();
-		helper.TryMoveWithStep( Time.Delta, 30f );
+		helper.TryMoveWithStep( Time.Delta, 60f );
 
 		Position = helper.Position;
 		Velocity = helper.Velocity;
