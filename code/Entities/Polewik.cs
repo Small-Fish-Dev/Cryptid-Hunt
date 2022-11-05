@@ -30,12 +30,11 @@ public partial class Polewik : AnimatedEntity
 	public float DetectDistance => 1400f;
 	public float StalkingDistance => 700f;
 	public float AttackDistance => 500f;
-	public float GiveUpDistance => 2600f;
+	public float GiveUpDistance => 3600f;
 	public float GiveUpAfter => 25f;
 	public float AttackAfterStalking => 8f;
-	public float AttackAfterStalling => 60f;
-
-	TimeSince lastAttack = 0f;
+	public float AttackAfterStalling => 90f;
+	public float WaitUntilNextAttack => 20f;
 
 	[Net, Change] PolewikState currentState { get; set; } = PolewikState.Patrolling;
 	public PolewikState CurrentState
@@ -108,13 +107,14 @@ public partial class Polewik : AnimatedEntity
 
 				lastAttack = 0f;
 
+				TargetPosition = NearestNode.WorldPosition;
 				NavigateTo( NearestNode.WorldPosition );
 				CurrentPathId = PatrolPath.PathNodes.IndexOf( NearestNode );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( Rand.Float( 15f, 30f ) );
+					await GameTask.DelaySeconds( Rand.Float( 3f, 6f ) );
 
 					if ( !IsValid ) return;
 					CurrentState = PolewikState.Patrolling;
@@ -148,6 +148,7 @@ public partial class Polewik : AnimatedEntity
 			if ( value == PolewikState.Attacking )
 			{
 
+				lastAttack = 0f;
 				SetAnimParameter( "leap", true );
 
 				PlaySound( "sounds/polewik/jump.sound" );
@@ -240,7 +241,7 @@ public partial class Polewik : AnimatedEntity
 		{ PolewikState.Fleeing, 750f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 550f }, // TODO Change speed depending on if player manages to reach tower
+		{ PolewikState.AttackPersistent, 550f },
 		{ PolewikState.Jumpscare, 0f }
 
 	};
@@ -341,6 +342,7 @@ public partial class Polewik : AnimatedEntity
 	TimeSince startedStalking;
 	TimeSince startedFollowing;
 	TimeSince stuckOnMovement;
+	TimeSince lastAttack;
 
 	public virtual void ComputeAI()
 	{
@@ -362,8 +364,8 @@ public partial class Polewik : AnimatedEntity
 
 		}
 
-
-		/*DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
+		/*
+		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
 		DebugOverlay.Sphere( Position, DetectDistance, Color.Green );
 		DebugOverlay.Sphere( Position, StalkingDistance, Color.Yellow );
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
@@ -379,7 +381,14 @@ public partial class Polewik : AnimatedEntity
 		if ( CurrentState == PolewikState.Patrolling && PatrolPath != null )
 		{
 
-			if ( ClosestPlayer.Position.Distance( Position ) <= DetectDistance )
+			if ( lastCalculatedPath >= 0.5f )
+			{
+
+				NavigateTo( TargetPosition );
+
+			}
+
+			if ( lastAttack >= WaitUntilNextAttack && ClosestPlayer.Position.Distance( Position ) <= DetectDistance )
 			{
 
 				Victim = ClosestPlayer;
@@ -536,7 +545,6 @@ public partial class Polewik : AnimatedEntity
 
 			if ( startedFollowing >= GiveUpAfter * 2f )
 			{
-
 				CurrentState = PolewikState.Patrolling;
 
 			}
@@ -548,9 +556,8 @@ public partial class Polewik : AnimatedEntity
 
 			}
 
-			if ( PathLength >= GiveUpDistance * 3f || Math.Abs( Victim.Position.z - Position.z ) > 200f )
+			if ( PathLength >= GiveUpDistance * 4f || Math.Abs( Victim.Position.z - Position.z ) > 200f )
 			{
-
 				CurrentState = PolewikState.Fleeing;
 
 			}
@@ -614,6 +621,13 @@ public partial class Polewik : AnimatedEntity
 
 		if ( CurrentState == PolewikState.Fleeing && PatrolPath != null)
 		{
+
+			if ( lastCalculatedPath >= 0.5f )
+			{
+
+				NavigateTo( TargetPosition );
+
+			}
 
 			if ( Position.Distance( TargetPosition ) >= 30f )
 			{
@@ -716,7 +730,7 @@ public partial class Polewik : AnimatedEntity
 	public virtual void ComputeMoveHelper()
 	{
 
-		var groundCheck = Trace.Box( CollisionBox, Position, Position + Vector3.Down * 5f )
+		var groundCheck = Trace.Box( CollisionBox * 0.3f, Position, Position + Vector3.Down * 45f )
 			.Ignore( this )
 			.Run();
 
@@ -742,10 +756,9 @@ public partial class Polewik : AnimatedEntity
 			MaxStandableAngle = 80f // ATV Monster LOL!!!
 		};
 
-		helper.Trace = helper.Trace.Size( CollisionBox )
+		helper.Trace = helper.Trace.Size( CollisionBox * 0.3f )
 			.Ignore( this )
 			.WithoutTags( "player" );
-		helper.TryUnstuck();
 		helper.TryMoveWithStep( Time.Delta, 60f );
 
 		Position = helper.Position;
@@ -758,7 +771,6 @@ public partial class Polewik : AnimatedEntity
 
 		var path = NavMesh.PathBuilder( GroundPosition )
 			.WithPartialPaths()
-			.WithNoOptimization()
 			.WithAgentHull( Agent )
 			.Build( pos );
 
@@ -801,7 +813,7 @@ public partial class Polewik : AnimatedEntity
 
 		NextPosition = PathPoints[Math.Clamp( PathIndex + 1, 0, PathPoints.Length - 1 )];
 
-		if ( Position.Distance( NextPosition ) < Math.Max( Velocity.Length, 100f ) * 10f * Time.Delta )
+		if ( Position.Distance( NextPosition ) < Math.Max( Velocity.Length, 100f ) * 20f * Time.Delta )
 		{
 			PathIndex++;
 
