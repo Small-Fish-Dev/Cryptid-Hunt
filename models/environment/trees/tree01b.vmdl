@@ -145,23 +145,19 @@
 						point0 = [ 22.126221, -65.205894, 168.480377 ]
 						point1 = [ 12.688993, -45.12701, -6.444641 ]
 					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
 					{
-						_class = "PhysicsShapeBox"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
-						origin = [ 10.734535, -17.253372, 32.495361 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 31.46907, 87.385468, 74.990723 ]
-					},
-					{
-						_class = "PhysicsShapeBox"
-						parent_bone = ""
-						surface_prop = "default"
-						collision_tags = "solid"
-						origin = [ 9.446335, -17.253372, 32.495361 ]
-						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 69.429657, 87.385468, 74.990723 ]
+						_class = "GenericGameData"
+						game_class = "nav_data"
+						game_keys = 
+						{
+							nav_attribute_avoid = true
+						}
 					},
 				]
 			},
