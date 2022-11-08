@@ -8,12 +8,12 @@ public static partial class Flickr
 {
 	public static readonly string[] LocalFallbacks =
 	{
-		"materials/pig/pig.jpg",
-		"materials/fallbacks/jerry.jpg",
-		"materials/fallbacks/leha.png",
-		"materials/fallbacks/seedy.jpg",
-		"materials/fallbacks/snowball1.jpg",
-		"materials/fallbacks/snowball2.png",
+		"ui/fallbacks/pig.jpg",
+		"ui/fallbacks/jerry.jpg",
+		"ui/fallbacks/leha.png",
+		"ui/fallbacks/seedy.jpg",
+		"ui/fallbacks/snowball1.jpg",
+		"ui/fallbacks/snowball2.png",
 	};
 	
 	public static readonly int ResponsePrefixLength = "jsonFlickrFeed(".Length;
