@@ -50,6 +50,11 @@ public partial class Game : GameBase
 	{
 		Instance = this;
 		Event.Run( "GameStart" );
+
+		if ( IsClient )
+		{
+			_ = new HUD();
+		}
 	}
 
 	[Event.Entity.PostSpawn]

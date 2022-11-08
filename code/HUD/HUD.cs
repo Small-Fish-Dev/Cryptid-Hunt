@@ -2,8 +2,14 @@
 
 class HUD : RootPanel
 {
-
 	public static HUD Instance { get; set; }
+
+	public HUD()
+	{
+		StyleSheet.Load( "code/HUD/Style.scss" );
+		
+		Instance = this;
+	}
 
 	[Event.Hotload] // For when you don't want the main menu to pop up
 	private static void reloadHUD()
@@ -16,31 +22,6 @@ class HUD : RootPanel
 		Instance = new HUD();
 		//Instance.ChildrenOfType<MainMenu>().FirstOrDefault().Delete();
 
-	}
-
-
-	[Event( "GameStart" )]
-	private static void createHUD()
-	{
-
-		if ( Host.IsServer ) return;
-
-		Instance?.Delete( true );
-
-		Instance = new HUD();
-
-	}
-
-	public HUD()
-	{
-
-		SetTemplate( "/HUD/GameUI.html" );
-
-		/*try
-		{
-			AddChild( new ContainerDisplay( (Local.Pawn as Player).Inventory ) );
-		}
-		catch { }*/
 	}
 
 	[Event("BlackScreen")]
