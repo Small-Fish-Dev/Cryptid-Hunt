@@ -231,13 +231,68 @@
 						import_filter = 
 						{
 							exclude_by_default = false
+							exception_list = 
+							[
+								"polewik_fur_LOD3",
+								"polewik_fur_LOD2",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "fur"
+						filename = "models/polewik/polewik_fur.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
 							exception_list = [  ]
 						}
 					},
 					{
 						_class = "RenderMeshFile"
-						name = "naked"
-						filename = "models/polewik/polewik_naked.fbx"
+						name = "fur_LOD1"
+						filename = "models/polewik/polewik_fur_LOD1.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD2"
+						filename = "models/polewik/polewik_LOD2.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD3"
+						filename = "models/polewik/polewik_LOD3.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -1538,30 +1593,42 @@
 				bone_cull_type = "Aggressive"
 			},
 			{
-				_class = "BodyGroupList"
+				_class = "LODGroupList"
 				children = 
 				[
 					{
-						_class = "BodyGroup"
-						name = "fur"
-						children = 
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
 						[
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"polewik",
-								]
-							},
-							{
-								_class = "BodyGroupChoice"
-								meshes = 
-								[
-									"naked",
-								]
-							},
+							"polewik",
+							"fur",
 						]
-						hidden_in_tools = false
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 45.0
+						meshes = 
+						[
+							"polewik",
+							"fur_LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 80.0
+						meshes = 
+						[
+							"LOD2",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 100.0
+						meshes = 
+						[
+							"LOD3",
+						]
 					},
 				]
 			},
