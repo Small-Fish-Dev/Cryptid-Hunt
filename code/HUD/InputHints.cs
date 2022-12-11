@@ -35,7 +35,7 @@
 
 	public override void Tick()
 	{
-		if ( Local.Pawn is not Player pawn ) return;
+		if ( Game.LocalPawn is not Player pawn ) return;
 
 		foreach ( var interaction in pawn.AvailableInteractions )
 		{

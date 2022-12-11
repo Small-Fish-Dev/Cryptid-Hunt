@@ -10,10 +10,10 @@ public partial class NotePage : BaseInteractable
 	public override string UseDescription => "Read";
 	public override Vector3 PromptOffset3D => new Vector3( 0f, 0f, 0f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 30f );
-	[Net, Property, Description( "What's written in the note, you can use line breaks" ), DefaultValue( "Hello World" )]
-	public string Text { get; set; }
-	[Net, Property, Description( "Does it have a bloody handprint on it?" ), DefaultValue( false )]
-	public bool BloodyPrint { get; set; }
+	[Net, Property, Description( "What's written in the note, you can use line breaks" )]
+	public string Text { get; set; } = "Hello World";
+	[Net, Property, Description( "Does it have a bloody handprint on it?" )]
+	public bool BloodyPrint { get; set; } = false;
 
 	public bool IsOpen = false;
 

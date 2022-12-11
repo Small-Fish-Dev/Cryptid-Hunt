@@ -38,13 +38,13 @@ public partial class NextBot : ModelEntity
 	[Event.Tick]
 	public void ComputeAI()
 	{
-		if ( IsClient )
+		if ( Game.IsClient )
 		{
 			if ( panel == null ) return;
 
-			var eyeRot = Local.Pawn.EyeRotation;
+			var eyeRot = (Game.LocalPawn as BasePlayer).EyeRotation;
 			panel.Position = Position + Vector3.Up * 50f;
-			panel.Rotation = eyeRot.RotateAroundAxis( Vector3.Up, 180 ); //Rotation.FromYaw( Rotation.LookAt( Local.Pawn.Position - Position ).Yaw() );
+			panel.Rotation = eyeRot.RotateAroundAxis( Vector3.Up, 180 ); //Rotation.FromYaw( Rotation.LookAt( Game.LocalPawn.Position - Position ).Yaw() );
 
 			return;
 		}
@@ -57,7 +57,7 @@ public partial class NextBot : ModelEntity
 			var volume = MathF.Max( (maxDistanceSound - distance) / maxDistanceSound, 0 );
 			Sound.FromScreen( "sounds/scary/creepy_sound.sound" )
 				.SetVolume( volume )
-				.SetPitch( Rand.Float( 0.8f, 1.2f ) );
+				.SetPitch( Game.Random.Float( 0.8f, 1.2f ) );
 		}
 
 		if ( Target == null && Target.LifeState == LifeState.Alive ) return;
@@ -71,7 +71,7 @@ public partial class NextBot : ModelEntity
 
 			Sound.FromScreen( "sounds/scary/creepy_sound.sound" )
 				.SetVolume( 3f )
-				.SetPitch( Rand.Float( 0.8f, 1.2f ) );
+				.SetPitch( Game.Random.Float( 0.8f, 1.2f ) );
 		}
 
 	}

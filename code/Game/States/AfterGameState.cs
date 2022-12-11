@@ -21,10 +21,10 @@ public class AfterGameState : BaseState
 		{
 
 			var player = new Player();
-			Game.Player = player;
-			Game.PlayerClient.Pawn = player;
+			CryptidHunt.Player = player;
+			CryptidHunt.PlayerClient.Pawn = player;
 			player.Initial();
-			player.Inventory = new( "Backpack", 20, target: Game.PlayerClient );
+			player.Inventory = new( "Backpack", 20, target: CryptidHunt.PlayerClient );
 
 		}
 

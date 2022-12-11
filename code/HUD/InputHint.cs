@@ -18,7 +18,7 @@ class InputHint : Panel
 		startTime = 0f;
 	}
 
-	[Event.Frame]
+	[Event.Client.Frame]
 	void calculateLife()
 	{
 		if ( startTime >= duration )

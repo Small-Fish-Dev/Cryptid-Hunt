@@ -1,6 +1,6 @@
 ﻿namespace SpookyJam2022;
 
-public partial class Game
+public partial class CryptidHunt
 {
 
 	[ConCmd.Server]

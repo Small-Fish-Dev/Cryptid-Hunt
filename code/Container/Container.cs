@@ -27,7 +27,7 @@ public partial class Container
 		}
 	}
 
-	public Container( string name, float maxWeight = 20f, int? id = null, Client target = null )
+	public Container( string name, float maxWeight = 20f, int? id = null, IClient target = null )
 	{
 		ID = id ?? all.Count;
 
@@ -44,7 +44,7 @@ public partial class Container
 		if ( target != null )
 			UpdateTargets.Add( target );
 
-		if ( Host.IsServer )
+		if ( Game.IsServer )
 			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Initialize, getInitialUpdate() );
 	}
 
@@ -75,7 +75,7 @@ public partial class Container
 	/// <param name="amount"></param>
 	public void Insert( Item item, float? amount = null )
 	{
-		Host.AssertServer();
+		Game.AssertServer();
 
 		var res = item.Resource;
 		var totalAmount = amount ?? item.Amount;
@@ -125,7 +125,7 @@ public partial class Container
 	/// <returns>A boolean telling you if the item was successfully removed.</returns>
 	public bool Remove( int index, float? amount = null )
 	{
-		Host.AssertServer();
+		Game.AssertServer();
 
 		var item = Items.ElementAtOrDefault( index );
 		if ( item == null ) 
@@ -162,7 +162,7 @@ public partial class Container
 
 	public override string ToString()
 	{
-		var result = $"[{(Host.IsServer ? "SV" : "CL")}] {Name}\n";
+		var result = $"[{(Game.IsServer ? "SV" : "CL")}] {Name}\n";
 		for ( int i = 0; i < Items.Count; i++ )
 			result += $"{Items?[i]?.Resource.Title} " +
 				$"({Items?[i]?.Amount}/{Items?[i]?.Resource.MaxAmount})" +

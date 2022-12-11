@@ -15,7 +15,7 @@ class HUD : RootPanel
 	private static void reloadHUD()
 	{
 
-		if ( Host.IsServer ) return;
+		if ( Game.IsServer ) return;
 
 		Instance?.Delete( true );
 

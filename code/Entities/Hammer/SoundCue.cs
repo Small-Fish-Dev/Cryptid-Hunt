@@ -7,8 +7,8 @@ public partial class MySoundCue : BaseTrigger
 
 	[Net, Property, ResourceType("sound")]
 	public string SoundPath { get; set; }
-	[Net, Property, DefaultValue( false ), Description( "If false, sounds will play the the pivot of this entity" )]
-	public bool UI { get; set; }
+	[Net, Property, Description( "If false, sounds will play the the pivot of this entity" )]
+	public bool UI { get; set; } = false;
 
 	[Net] public bool Activated { get; set; } = false;
 
@@ -19,7 +19,7 @@ public partial class MySoundCue : BaseTrigger
 
 		base.Touch( other );
 
-		if ( Host.IsClient ) return;
+		if ( Game.IsClient ) return;
 		if ( Activated ) return;
 		if ( other is not Player player ) return;
 

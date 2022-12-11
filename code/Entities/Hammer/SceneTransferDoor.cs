@@ -11,8 +11,8 @@ public partial class SceneTransferDoor : BaseInteractable
 	public override Vector3 PromptOffset3D => new Vector3( 32f, 0f, -5f );
 	public override Vector2 PromptOffset2D => new Vector2( 20f, 0f );
 	public override bool Locked { get; set; } = true;
-	[Net, Property, Description( "The ID of the Checkpoint which the player will be transported" ), DefaultValue( 0 )]
-	public int CheckpoindIDTarget { get; set; }
+	[Net, Property, Description( "The ID of the Checkpoint which the player will be transported" )]
+	public int CheckpoindIDTarget { get; set; } = 0;
 	Rotation targetRotation;
 	[Net] public bool Open { get; set; } = false;
 
@@ -24,7 +24,7 @@ public partial class SceneTransferDoor : BaseInteractable
 
 		var target = PlayerSpawn.WithID( CheckpoindIDTarget );
 
-		Game.Instance.StartBlackScreen();
+		CryptidHunt.Instance.StartBlackScreen();
 
 		targetRotation = Rotation.RotateAroundAxis( Vector3.Up, -20f );
 		Open = true;

@@ -39,7 +39,7 @@ public partial class Item
 				all.Add( ResourceName, this );
 				fetchBinding();
 				
-				if ( Host.IsServer ) return;
+				if ( Game.IsServer ) return;
 
 				var world = new SceneWorld();
 

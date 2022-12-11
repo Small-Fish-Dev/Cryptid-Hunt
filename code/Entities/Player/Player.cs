@@ -36,7 +36,6 @@ public partial class Player : BasePlayer
 	{
 
 		EyeLocalPosition = Vector3.Up * maxs.z;
-		Controller ??= new PlayerController();
 
 		SetModel( "models/citizen/citizen.vmdl" ); // Movements are choppy without a model set?
 		SetupPhysicsFromAABB( PhysicsMotionType.Keyframed, mins, maxs );
@@ -67,7 +66,6 @@ public partial class Player : BasePlayer
 
 		Position = CurrentCheckpoint.Position;
 		Rotation = CurrentCheckpoint.Rotation;
-		EyeRotation = CurrentCheckpoint.Rotation;
 
 		ResetInterpolation();
 	}
@@ -82,18 +80,17 @@ public partial class Player : BasePlayer
 
 		Position = CurrentCheckpoint.Position;
 		Rotation = CurrentCheckpoint.Rotation;
-		EyeRotation = CurrentCheckpoint.Rotation;
 
 		ResetInterpolation();
 	}
 
 	public TimeSince LastInteraction = 0;
 
-	public override void Simulate( Client cl )
+	public override void Simulate( IClient cl )
 	{
 		base.Simulate( cl );
 		
-		if ( Host.IsClient ) return;
+		if ( Game.IsClient ) return;
 		
 		if ( Input.Pressed( InputButton.Use ) )
 		{
@@ -177,28 +174,20 @@ public partial class Player : BasePlayer
 	public void StartGame()
 	{
 
-		if ( Host.IsClient ) return;
+		if ( Game.IsClient ) return;
 
 		LockInputs = false;
 		OverrideCamera = null;
 		ScriptedEvent = false;
 
 	}
-
-	public override void FrameSimulate( Client cl )
-	{
-		Controller?.FrameSimulate( cl, this, null );
-		EyeRotation = Input.Rotation;
-	}
-
-	public override void BuildInput( InputBuilder input )
+	public override void BuildInput()
 	{
 
 		if ( LockInputs ) return;
 
-		input.ViewAngles += input.AnalogLook;
-		input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
-		input.InputDirection = input.AnalogMove;
+		InputDirection = Input.AnalogMove;
+		InputLook = Input.AnalogLook;
 
 	}
 }

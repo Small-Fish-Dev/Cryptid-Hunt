@@ -7,10 +7,10 @@ public partial class GameplayState : BaseState
 		NetworkGameUI(To.Everyone);
 		
 		var player = new Player();
-		Game.Player = player;
-		Game.PlayerClient.Pawn = player;
+		CryptidHunt.Player = player;
+		CryptidHunt.PlayerClient.Pawn = player;
 		player.Respawn();
-		player.Inventory = new( "Backpack", 20, target: Game.PlayerClient );
+		player.Inventory = new( "Backpack", 20, target: CryptidHunt.PlayerClient );
 
 		Event.Run( "BeginGame" ); // glass break
 	}

@@ -4,7 +4,7 @@ public abstract class BaseState
 {
 	protected BaseState()
 	{
-		Host.AssertServer();
+		Game.AssertServer();
 		
 		Event.Register( this );
 	}

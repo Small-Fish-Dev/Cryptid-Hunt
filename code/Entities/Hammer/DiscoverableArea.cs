@@ -5,8 +5,8 @@
 public partial class DiscoverableArea : BaseTrigger
 {
 
-	[Net, Property, DefaultValue( "World" ), Description( "What the text says when you enter this area")]
-	public string AreaName { get; set; }
+	[Net, Property, Description( "What the text says when you enter this area" )]
+	public string AreaName { get; set; } = "World";
 
 	[Net] public bool Activated { get; set; } = false;
 
@@ -17,13 +17,13 @@ public partial class DiscoverableArea : BaseTrigger
 
 		base.Touch( other );
 
-		if ( Host.IsClient ) return;
+		if ( Game.IsClient ) return;
 		if ( Activated ) return;
 		if ( other is not Player player ) return;
 
 		Activated = true;
 
-		Game.Instance.StartZoneHint( AreaName );
+		CryptidHunt.Instance.StartZoneHint( AreaName );
 
 	}
 

@@ -63,7 +63,8 @@ public partial class PlayerController : PawnController
 
 	public override void Simulate()
 	{
-		EyeRotation = Input.Rotation;
+		if ( Pawn is not Player player ) return;
+		EyeRotation = Rotation.From(player.InputLook);
 		Rotation = Rotation.FromYaw( EyeRotation.Yaw() );
 
 		CheckLadder();
@@ -72,8 +73,8 @@ public partial class PlayerController : PawnController
 		if ( isTouchingLadder )
 		{
 			#region Ladder
-			var wishVelocity = new Vector3( 0, Input.Left, Input.Forward ); // W to ascend, S to descend
-			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( Input.Rotation.Yaw() );
+			var wishVelocity = new Vector3( 0, player.InputDirection.y, player.InputDirection.x ); // W to ascend, S to descend
+			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( EyeRotation.Yaw() );
 			var velocity = wishVelocity * 100;
 			float normalDot = velocity.Dot( ladderNormal );
 			var cross = ladderNormal * normalDot;
@@ -91,8 +92,8 @@ public partial class PlayerController : PawnController
 		else
 		{
 			#region Movement
-			var wishVelocity = new Vector3( Input.Forward, Input.Left, 0 );
-			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( Input.Rotation.Yaw() );
+			var wishVelocity = new Vector3( player.InputDirection.x, player.InputDirection.y, 0 );
+			wishVelocity = wishVelocity.Normal * Rotation.FromYaw( EyeRotation.Yaw() );
 			wishVelocity *= getSpeed();
 			Velocity = Vector3.Lerp( Velocity, wishVelocity, 12f * Time.Delta )
 				.WithZ( Velocity.z );
@@ -133,7 +134,7 @@ public partial class PlayerController : PawnController
 		}
 		else GroundEntity = null;
 
-		if ( Host.IsClient ) return;
+		if ( Game.IsClient ) return;
 
 		if ( Input.Down( InputButton.Run ) )
 		{ 

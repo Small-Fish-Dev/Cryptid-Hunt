@@ -12,11 +12,11 @@ public enum PlayerSpawnType
 public class PlayerSpawn : Entity
 {
 
-	[Property, Description( "Initial = When game starts, Checkpoint = When unlocked you'll spawn here upon death" ), DefaultValue( PlayerSpawnType.Initial )]
+	[Property, Description( "Initial = When game starts, Checkpoint = When unlocked you'll spawn here upon death" )]
 	public PlayerSpawnType Type { get; set; } = PlayerSpawnType.Initial;
-	[Property, Description( "How close the player has to be to unlock this Checkpoint Type" ), DefaultValue( 100f )]
+	[Property, Description( "How close the player has to be to unlock this Checkpoint Type" )]
 	public float ReachingRange { get; set; } = 100f;
-	[Property, Description( "If a player reaches a Checkpoint Type with higher ID than the last it will set it as the current respawn point" ), DefaultValue( 0 )]
+	[Property, Description( "If a player reaches a Checkpoint Type with higher ID than the last it will set it as the current respawn point" )]
 	public int CheckpointID { get; set; } = 0;
 	public static PlayerSpawn Initial => Entity.All.OfType<PlayerSpawn>().Where( x => x.Type == PlayerSpawnType.Initial ).FirstOrDefault();
 

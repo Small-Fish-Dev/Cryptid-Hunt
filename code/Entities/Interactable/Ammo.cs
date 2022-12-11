@@ -16,7 +16,7 @@ public partial class Ammo : BaseInteractable
 	{
 		base.Spawn();
 
-		Amount = Rand.Int( 3, 5 );
+		Amount = Game.Random.Int( 3, 5 );
 	}
 
 	public override void Interact( Player player )

@@ -6,7 +6,7 @@ public partial class NextBotPlayer : BasePlayer
 {
 	private readonly ClothingContainer _clothing = new();
 	private readonly IEnumerable<NextbotPlayerSpawn> _spawnPoints;
-	
+
 	private DamageInfo _lastDamage;
 
 	public NextBotPlayer()
@@ -18,14 +18,12 @@ public partial class NextBotPlayer : BasePlayer
 	{
 		base.Spawn();
 		
-		Controller ??= new WalkController();
-		
 		SetModel( "models/citizen/citizen.vmdl" );
 
 		EnableShadowCasting = false;
 		EnableDrawing = false;
 
-		_clothing.LoadFromClient( Game.PlayerClient );
+		_clothing.LoadFromClient( CryptidHunt.PlayerClient );
 		_clothing.DressEntity( this );
 	}
 
@@ -41,16 +39,10 @@ public partial class NextBotPlayer : BasePlayer
 		Event.Run( "nextbot.player.respawn" );
 	}
 
-	public override void FrameSimulate( Client cl )
-	{
-		base.FrameSimulate( cl );
-		EyeRotation = Input.Rotation;
-	}
-
 	[ConCmd.Admin( "debug_commit_die" )]
 	public static void CommitDie()
 	{
-		if ( Game.PlayerClient.Pawn is not NextBotPlayer player )
+		if ( CryptidHunt.PlayerClient.Pawn is not NextBotPlayer player )
 			throw new Exception("Pawn is not NextBot player");
 
 		player.TakeDamage( DamageInfo.Generic( 50f ) );
@@ -67,7 +59,7 @@ public partial class NextBotPlayer : BasePlayer
 	{
 		LifeState = LifeState.Dead;
 
-		BecomeRagdollOnClient( Velocity, _lastDamage.Flags, _lastDamage.Position, _lastDamage.Force,
+		BecomeRagdollOnClient( Velocity, _lastDamage.Position, _lastDamage.Force,
 			_lastDamage.BoneIndex );
 
 		Event.Run( "nextbot.player.dead" );
@@ -83,7 +75,7 @@ public partial class NextBotPlayer : BasePlayer
 	ModelEntity corpse;
 
 	[ClientRpc]
-	private void BecomeRagdollOnClient( Vector3 velocity, DamageFlags damageFlags, Vector3 forcePos, Vector3 force, int bone )
+	private void BecomeRagdollOnClient( Vector3 velocity, Vector3 forcePos, Vector3 force, int bone )
 	{
 		corpse = new ModelEntity();
 		corpse.Tags.Add( "ragdoll", "solid", "debris" );
@@ -119,46 +111,20 @@ public partial class NextBotPlayer : BasePlayer
 			clothing.CopyMaterialGroup( e );
 		}
 
-		if ( damageFlags.HasFlag( DamageFlags.Bullet ) ||
-		     damageFlags.HasFlag( DamageFlags.PhysicsImpact ) )
-		{
-			PhysicsBody body = bone > 0 ? corpse.GetBonePhysicsBody( bone ) : null;
-
-			if ( body != null )
-			{
-				body.ApplyImpulseAt( forcePos, force * body.Mass );
-			}
-			else
-			{
-				corpse.PhysicsGroup.ApplyImpulse( force );
-			}
-		}
-
-		if ( damageFlags.HasFlag( DamageFlags.Blast ) )
-		{
-			if ( corpse.PhysicsGroup != null )
-			{
-				corpse.PhysicsGroup.AddVelocity( (Position - (forcePos + Vector3.Down * 100.0f)).Normal * (force.Length * 0.2f) );
-				var angularDir = (Rotation.FromYaw( 90 ) * force.WithZ( 0 ).Normal).Normal;
-				corpse.PhysicsGroup.AddAngularVelocity( angularDir * (force.Length * 0.02f) );
-			}
-		}
-
 		corpse.DeleteAsync( 10.0f );
 	}
 
 	private FearEntry fearEntry;
 
-	public override void BuildInput( InputBuilder input )
+	public override void BuildInput()
 	{
 		if ( fearEntry is not null && fearEntry.IsValid )
 		{
-			if ( input.Pressed( InputButton.PrimaryAttack ) )
+			if ( Input.Pressed( InputButton.PrimaryAttack ) )
 				fearEntry.Focus();
 		} else {
-			input.ViewAngles += input.AnalogLook;
-			input.ViewAngles.pitch = input.ViewAngles.pitch.Clamp( -89, 89 );
-			input.InputDirection = input.AnalogMove;
+			InputDirection = Input.AnalogMove;
+			InputLook = Input.AnalogLook;
 		}
 	}
 
@@ -169,11 +135,11 @@ public partial class NextBotPlayer : BasePlayer
 	ModelEntity computer;
 	Texture lastFrame;
 	SceneLight light;
-
-	[Event.Frame]
+	
+	[Event.Client.Frame]
 	private void onFrame()
 	{
-		if ( Local.Pawn is NextBotPlayer || lastFrame != null ) return;
+		if ( Game.LocalPawn is NextBotPlayer || lastFrame != null ) return;
 
 		lastFrame = render.Texture;
 		view.Style.BackgroundImage = lastFrame;
@@ -187,7 +153,7 @@ public partial class NextBotPlayer : BasePlayer
 		
 		light.Delete();
 	}
-
+	/*
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
 		if ( computer == null )
@@ -265,5 +231,5 @@ public partial class NextBotPlayer : BasePlayer
 
 		screen.Rotation = setup.Rotation.Inverse;
 		screen.Position = attachmentPos - Vector3.Right * 0.01f;
-	}
+	}*/
 }

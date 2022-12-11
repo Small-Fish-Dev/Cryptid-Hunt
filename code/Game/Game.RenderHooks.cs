@@ -1,15 +1,15 @@
 ﻿namespace SpookyJam2022;
 
-public partial class Game
+public partial class CryptidHunt
 {
 	public static ScreenEffects ScreenEffects { get; private set; }
 
 	[Event( "GameStart" )]
 	private void initialize()
 	{
-		if ( Host.IsServer ) return;
+		if ( Game.IsServer ) return;
 
-		ScreenEffects = Map.Camera.FindOrCreateHook<ScreenEffects>();
+		ScreenEffects = Camera.Current.FindOrCreateHook<ScreenEffects>();
 		ScreenEffects.Vignette.Smoothness = 1f;
 		ScreenEffects.Vignette.Intensity = 0.72f;
 		ScreenEffects.Vignette.Roundness = 0.1f;

@@ -12,11 +12,11 @@ public partial class Player
 	TimeUntil cameraShake = 0f;
 	float shakeIntensity = 0f;
 	Vector2 lastShake;
-
+	/*
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
 
-		if ( Local.Pawn is not Player pawn ) return;
+		if ( Game.LocalPawn is not Player pawn ) return;
 
 		var speed = pawn.Velocity.Length / 160f;
 		var left = setup.Rotation.Left;
@@ -152,6 +152,6 @@ public partial class Player
 		cameraShake = duration;
 		shakeIntensity = intensity;
 
-	}
+	}*/
 
 }

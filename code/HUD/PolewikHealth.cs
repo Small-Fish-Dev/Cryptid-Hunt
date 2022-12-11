@@ -21,7 +21,7 @@ public class PolewikHealth : WorldPanel
 		inner = AddChild<Panel>( "inner" );
 	}
 
-	[Event.Frame]
+	[Event.Client.Frame]
 	private static void onframe()
 	{
 		if ( HUD.Instance == null ) return;
@@ -45,7 +45,7 @@ public class PolewikHealth : WorldPanel
 			Instance.lastDamaged = 0f;
 
 		Instance.Position = Instance.polewik.CollisionWorldSpaceCenter + Vector3.Up * 80f;
-		Instance.Rotation = Rotation.LookAt( CurrentView.Position - Instance.polewik.CollisionWorldSpaceCenter );
+		Instance.Rotation = Rotation.LookAt( Camera.Current.Position - Instance.polewik.CollisionWorldSpaceCenter );
 
 		Instance.lastHealth = Instance.polewik.hp;
 		Instance.Style.Opacity = Instance.lastDamaged > 10f ? 0f : 1f;

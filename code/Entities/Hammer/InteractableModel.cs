@@ -5,20 +5,20 @@
 public partial class InteractableModel : BaseInteractable
 {
 	public override string UseDescription => _useDescription;
-	[Property, DefaultValue(false), Description("Can this entity be interacted with?")]
-	public override bool Locked { get; set; }
+	[Property, Description( "Can this entity be interacted with?" )]
+	public override bool Locked { get; set; } = false;
 	public override string ModelPath => _modelPath;
-	
-	[Property, DefaultValue( "" ), Description( "What to trigger when interacted with" )]
-	public Output Trigger { get; set; }
-	[Property, DefaultValue( false ), Description( "Can this entity be interacted with more than once" )]
-	public bool SingleUse { get; set; }
 
-	[Property, DefaultValue( "Use" ), Description( "What the text says when you look at the trigger" )]
-	private string _useDescription { get; set; }
-	[Property, DefaultValue( "models/stuck_door.vmdl" ), Description( "The model that represents this entity" )]
-	private string _modelPath { get; set; }
-	
+	[Property, Description( "What to trigger when interacted with" )]
+	public Output Trigger { get; set; }
+	[Property, Description( "Can this entity be interacted with more than once" )]
+	public bool SingleUse { get; set; } = false;
+
+	[Property, Description( "What the text says when you look at the trigger" )]
+	private string _useDescription { get; set; } = "Use";
+	[Property, Description( "The model that represents this entity" )]
+	private string _modelPath { get; set; } = "models/stuck_door.vmdl";
+
 	public override void Interact( Player player )
 	{
 

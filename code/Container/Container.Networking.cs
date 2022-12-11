@@ -10,7 +10,7 @@ public partial class Container
 		Amount
 	}
 
-	public List<Client> UpdateTargets = new();
+	public List<IClient> UpdateTargets = new();
 
 	private byte[] getAmountUpdate( Item item )
 	{

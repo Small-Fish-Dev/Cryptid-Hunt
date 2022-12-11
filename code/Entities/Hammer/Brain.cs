@@ -40,11 +40,11 @@ public partial class Brain : AnimatedEntity
 
 			await GameTask.DelaySeconds( 3f );
 
-			Game.Instance.StartBlackScreen();
+			CryptidHunt.Instance.StartBlackScreen();
 
 			await GameTask.DelaySeconds( 2.5f );
 
-			Game.State = new CreditsMenuState();
+			CryptidHunt.State = new CreditsMenuState();
 
 		} );
 

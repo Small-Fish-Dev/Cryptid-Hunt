@@ -51,7 +51,7 @@ public class Inventory : Panel
 			AddEventListener( "onmouseup", () => shouldMove = false );
 		}
 
-		[Event.Frame]
+		[Event.Client.Frame]
 		private void onFrame()
 		{
 			if ( !HasHovered )
@@ -133,14 +133,6 @@ public class Inventory : Panel
 		Refresh();
 	}
 
-	[Event.BuildInput]
-	private void buildInput( InputBuilder input )
-	{
-		if ( Local.Pawn is not Player pawn ) return;
-		if ( input.Released( InputButton.Score ) )
-			Active = !Active;
-	}
-
 	private void refreshSlot( Container container, int index )
 	{
 		Panel panel;
@@ -201,7 +193,7 @@ public class Inventory : Panel
 
 	private void createView( Item item )
 	{
-		if ( Local.Pawn is not Player pawn ) return;
+		if ( Game.LocalPawn is not Player pawn ) return;
 
 		viewContainer = AddChild<Panel>( "viewContainer" );
 
@@ -228,7 +220,7 @@ public class Inventory : Panel
 
 	public void Refresh()
 	{
-		if ( Local.Pawn is not Player pawn ) return;
+		if ( Game.LocalPawn is not Player pawn ) return;
 
 		var inventory = pawn.Inventory;
 		if ( inventory == null ) return;
@@ -248,7 +240,11 @@ public class Inventory : Panel
 
 	public override void Tick()
 	{
-		if ( Local.Pawn is not Player pawn ) return;
+		if ( Game.LocalPawn is not Player pawn ) return; 
+
+		if ( Input.Released( InputButton.Score ) )
+			Active = !Active;
+
 		if ( selected == null || selected.Container != pawn.Inventory )
 			selected = null;
 	}

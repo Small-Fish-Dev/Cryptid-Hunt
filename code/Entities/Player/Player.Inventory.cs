@@ -85,7 +85,7 @@ public partial class Player
 						break;
 				}
 
-				if ( Local.Pawn is Player player && player.Inventory == null )
+				if ( Game.LocalPawn is Player player && player.Inventory == null )
 					player.Inventory = container;
 
 				SpookyJam2022.Inventory.Instance?.Refresh();

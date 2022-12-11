@@ -7,9 +7,9 @@ public class NextBotState : BaseState
 
 	public override void Init()
 	{
-		Game.Player = new NextBotPlayer();
-		Game.PlayerClient.Pawn = Game.Player;
-		Game.Player.Respawn();
+		CryptidHunt.Player = new NextBotPlayer();
+		CryptidHunt.PlayerClient.Pawn = CryptidHunt.Player;
+		CryptidHunt.Player.Respawn();
 	}
 	
 	public override void CleanUp()
@@ -39,7 +39,7 @@ public class NextBotState : BaseState
 				await GameTask.Delay( 2500 );
 				Sound.FromWorld( "sounds/misc/glass_break_intro.sound", PlayerSpawn.Initial.Transform.PointToWorld( new Vector3( -50f, 30f, 72f ) ) ).SetVolume( 6 );
 				await GameTask.Delay( 3000 );
-				Game.State = new GameplayState();
+				CryptidHunt.State = new GameplayState();
 			} ).Invoke();
 	}
 }

@@ -48,7 +48,7 @@ public class ModelViewer : ScenePanel
 		AddEventListener( "onmouseup", () => shouldMove = false );
 	}
 
-	[Event.Frame]
+	[Event.Client.Frame]
 	private void onFrame()
 	{
 		if ( shouldMove )

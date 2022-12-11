@@ -114,7 +114,7 @@ public partial class Polewik : AnimatedEntity
 				GameTask.RunInThreadAsync( async () =>
 				{
 
-					await GameTask.DelaySeconds( Rand.Float( 3f, 6f ) );
+					await GameTask.DelaySeconds( Game.Random.Float( 3f, 6f ) );
 
 					if ( !IsValid ) return;
 					CurrentState = PolewikState.Patrolling;
@@ -228,6 +228,7 @@ public partial class Polewik : AnimatedEntity
 
 		}
 	}
+
 	public GenericPathEntity PatrolPath => Entity.All.OfType<GenericPathEntity>().Where( x => x.Name.Contains( "Monster" )).FirstOrDefault();
 	public string ModelName => "models/polewik/polewik.vmdl";
 	public float Gravity => 700f;
@@ -277,11 +278,11 @@ public partial class Polewik : AnimatedEntity
 
 					await GameTask.DelaySeconds( 6f );
 
-					Game.Instance.StartBlackScreen();
+					CryptidHunt.Instance.StartBlackScreen();
 
 					await GameTask.DelaySeconds( 2.5f );
 
-					Game.State = new AfterGameState();
+					CryptidHunt.State = new AfterGameState();
 
 
 				} ).Invoke();
@@ -346,7 +347,7 @@ public partial class Polewik : AnimatedEntity
 
 	public virtual void ComputeAI()
 	{
-		if ( Game.State is not GameplayState )
+		if ( CryptidHunt.State is not GameplayState )
 			return;
 
 		if ( Disabled ) return;

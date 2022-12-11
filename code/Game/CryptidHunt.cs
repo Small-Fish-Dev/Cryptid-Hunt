@@ -6,7 +6,7 @@ global using System.Collections.Generic;
 global using System.Linq;
 global using System.Text.Json.Serialization;
 global using System.ComponentModel.DataAnnotations;
-global using SandboxEditor;
+global using Editor;
 global using System.IO;
 global using System.Threading.Tasks;
 global using System.Text.Json;
@@ -16,7 +16,7 @@ using SpookyJam2022.States;
 
 namespace SpookyJam2022;
 
-public partial class Game : GameBase
+public partial class CryptidHunt : GameManager
 {
 	public enum GameState
 	{
@@ -25,8 +25,8 @@ public partial class Game : GameBase
 		Gameplay
 	}
 
-	public static Game Instance { get; private set; }
-	public static Client PlayerClient { get; private set; }
+	public static CryptidHunt Instance { get; private set; }
+	public static IClient PlayerClient { get; private set; }
 	public static BasePlayer Player { get; set; }
 
 	public static BaseState State
@@ -34,7 +34,7 @@ public partial class Game : GameBase
 		get => _state;
 		set
 		{
-			Host.AssertServer();
+			Game.AssertServer();
 
 			if ( _state is not null )
 				_state.CleanUp();
@@ -46,12 +46,12 @@ public partial class Game : GameBase
 
 	private static BaseState _state = null;
 
-	public Game()
+	public CryptidHunt()
 	{
 		Instance = this;
 		Event.Run( "GameStart" );
 
-		if ( IsClient )
+		if ( Game.IsClient )
 		{
 			_ = new HUD();
 		}
@@ -68,7 +68,7 @@ public partial class Game : GameBase
 
 	}
 
-	public override void ClientJoined( Client client )
+	public override void ClientJoined( IClient client )
 	{
 		// Limit to one player only.
 		if ( PlayerClient != null )
@@ -82,17 +82,17 @@ public partial class Game : GameBase
 
 	}
 
-	public override void ClientDisconnect( Client cl, NetworkDisconnectionReason reason )
+	public override void ClientDisconnect( IClient cl, NetworkDisconnectionReason reason )
 	{
 		cl.Pawn?.Delete();
 		cl.Pawn = null;
 	}
 
 	ScriptedEventCamera cam;
-
-	public override CameraSetup BuildCamera( CameraSetup camSetup )
+	/*
+	public override void BuildCamera( CameraSetup camSetup )
 	{
-		if ( Local.Pawn == null )
+		if ( Game.LocalPawn == null )
 		{
 			if ( cam == null )
 			{
@@ -117,30 +117,22 @@ public partial class Game : GameBase
 			}
 		}
 
-		Local.Pawn?.PostCameraSetup( ref camSetup );
+		Game.LocalPawn?.PostCameraSetup( ref camSetup );
 		return camSetup;
 	}
-
-	public override void Simulate( Client cl )
+	*/
+	public override void Simulate( IClient cl )
 	{
-		if ( !cl.Pawn.IsValid() ) return;
-		if ( !cl.Pawn.IsAuthority ) return;
+		if ( cl.Pawn is not BasePlayer pawn ) return;
 
-		cl.Pawn?.Simulate( cl );
+		pawn.Simulate( cl );
 	}
 
-	public override void FrameSimulate( Client cl )
+	public override void FrameSimulate( IClient cl )
 	{
-		if ( !cl.Pawn.IsValid() ) return;
-		if ( !cl.Pawn.IsAuthority ) return;
+		if ( cl.Pawn is not BasePlayer pawn ) return;
 
-		cl.Pawn?.FrameSimulate( cl );
-	}
-
-	public override void BuildInput( InputBuilder input )
-	{
-		Event.Run( "BuildInput", input );
-		Local.Pawn?.BuildInput( input );
+		pawn.FrameSimulate( cl );
 	}
 
 	public override void Shutdown()
@@ -151,7 +143,7 @@ public partial class Game : GameBase
 		Instance?.Delete();
 	}
 
-	public override bool CanHearPlayerVoice( Client source, Client receiver )
+	public override bool CanHearPlayerVoice( IClient source, IClient receiver )
 	{
 		return false;
 	}

@@ -58,7 +58,7 @@ public partial class Shotgun : BaseInteractable
 		for ( int i = 0; i < BulletsPerShot; i++ )
 		{
 
-			var randomDir = new Vector3( 0f, Rand.Float( -Spread, Spread ) * (float)Math.Cos( Rand.Float( 0f, 2f * (float)Math.PI ) ), Rand.Float( -Spread, Spread ) * (float)Math.Sin( Rand.Float( 0f, 2f * (float)Math.PI ) ) );
+			var randomDir = new Vector3( 0f, Game.Random.Float( -Spread, Spread ) * (float)Math.Cos( Game.Random.Float( 0f, 2f * (float)Math.PI ) ), Game.Random.Float( -Spread, Spread ) * (float)Math.Sin( Game.Random.Float( 0f, 2f * (float)Math.PI ) ) );
 			var trace = Trace.Ray( player.EyePosition, player.EyePosition + player.EyeRotation.RotateAroundAxis( Vector3.Up, randomDir.y ).RotateAroundAxis( Vector3.Right, randomDir.z ).Forward * DamageFalloff )
 				.Ignore( player )
 				.Run();

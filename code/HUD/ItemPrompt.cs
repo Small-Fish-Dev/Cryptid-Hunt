@@ -19,12 +19,12 @@ class ItemPrompt : Panel
 
 	}
 
-	[Event.Frame]
+	[Event.Client.Frame]
 	void computePrompt()
 	{
 		SetClass( "hidden", true );
 
-		if ( Local.Pawn is not Player player ) return;
+		if ( Game.LocalPawn is not Player player ) return;
 
 		var interactable = player.FirstInteractable;
 

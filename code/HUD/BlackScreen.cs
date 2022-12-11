@@ -13,7 +13,7 @@ class BlackScreen : Panel
 
 	}
 
-	[Event.Frame]
+	[Event.Client.Frame]
 	void calculateOpacity()
 	{
 

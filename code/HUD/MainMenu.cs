@@ -26,7 +26,7 @@ class MainMenu : Panel
 
 			Style.PointerEvents = PointerEvents.None;
 
-			Game.Instance.StartBlackScreen();
+			CryptidHunt.Instance.StartBlackScreen();
 
 			GameTask.RunInThreadAsync( async () =>
 			{
@@ -99,7 +99,7 @@ class MainMenu : Panel
 
 			Style.PointerEvents = PointerEvents.None;
 
-			Game.Instance.StartBlackScreen();
+			CryptidHunt.Instance.StartBlackScreen();
 
 			GameTask.RunInThreadAsync( async () =>
 			{
@@ -123,7 +123,7 @@ class MainMenu : Panel
 
 			Style.PointerEvents = PointerEvents.None;
 
-			Game.Instance.StartBlackScreen();
+			CryptidHunt.Instance.StartBlackScreen();
 
 			GameTask.RunInThreadAsync( async () =>
 			{
@@ -142,13 +142,13 @@ class MainMenu : Panel
 	[ConCmd.Server]
 	private static void NetworkCredits()
 	{
-		Game.State = new CreditsMenuState();
+		CryptidHunt.State = new CreditsMenuState();
 	}
 
 	[ConCmd.Server]
 	private static void NetworkStartNextbot()
 	{
-		Game.State = new NextBotState();
+		CryptidHunt.State = new NextBotState();
 	}
 
 
@@ -156,14 +156,14 @@ class MainMenu : Panel
 	[ConCmd.Server]
 	private static void NetworkStartGame()
 	{
-		Game.State = new GameplayState();
+		CryptidHunt.State = new GameplayState();
 	}
 
 	[ConCmd.Server]
 	private static void QuitGame()
 	{
 
-		var clients = Client.All.ToArray();
+		var clients = Game.Clients.ToArray();
 
 		foreach( var client in clients )
 		{
@@ -178,7 +178,7 @@ class MainMenu : Panel
 	private static void NetworkCutscene()
 	{
 
-		Game.State = new AfterGameState();
+		CryptidHunt.State = new AfterGameState();
 
 	}
 

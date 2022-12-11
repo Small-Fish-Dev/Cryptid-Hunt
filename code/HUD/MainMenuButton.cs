@@ -14,7 +14,7 @@ class MainMenuButton : Panel
 
 			Style.PointerEvents = PointerEvents.None;
 
-			Game.Instance.StartBlackScreen();
+			CryptidHunt.Instance.StartBlackScreen();
 
 			GameTask.RunInThreadAsync( async () =>
 			{
@@ -36,7 +36,7 @@ class MainMenuButton : Panel
 	[ConCmd.Server]
 	private static void NetworkMainMenu()
 	{
-		Game.State = new MainMenuState();
+		CryptidHunt.State = new MainMenuState();
 	}
 
 }
