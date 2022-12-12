@@ -83,10 +83,8 @@ public static partial class Flickr
 		var url = await GetUrl( fear );
 		if ( url == default ) // got an empty url
 			return await GetFallback();
-		
-		var client = new Http( new Uri( url ) );
 
-		var image = Sandbox.TextureLoader.Image.Load( await client.GetStreamAsync() );
+		var image = Texture.Load( url );
 		TimeSince imageStartedLoading = 0;
 		while ( !image.IsLoaded )
 		{
