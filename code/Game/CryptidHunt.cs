@@ -49,7 +49,7 @@ public partial class CryptidHunt : GameManager
 	public CryptidHunt()
 	{
 		Instance = this;
-		Event.Run( "GameStart" );
+		InitializeScreenEffects();
 
 		if ( Game.IsClient )
 		{

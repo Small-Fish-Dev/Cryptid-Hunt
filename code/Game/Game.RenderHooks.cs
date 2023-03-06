@@ -4,8 +4,7 @@ public partial class CryptidHunt
 {
 	public static ScreenEffects ScreenEffects { get; private set; }
 
-	[Event( "GameStart" )]
-	private void initialize()
+	public void InitializeScreenEffects()
 	{
 		if ( Game.IsServer ) return;
 
@@ -23,5 +22,5 @@ public partial class CryptidHunt
 	}
 
 	[Event.Hotload]
-	private void hotload() => initialize();
+	private void hotload() => InitializeScreenEffects();
 }
