@@ -45,11 +45,11 @@ public class PolewikHealth : WorldPanel
 			Instance.lastDamaged = 0f;
 
 		Instance.Position = Instance.polewik.CollisionWorldSpaceCenter + Vector3.Up * 80f;
-		Instance.Rotation = Rotation.LookAt( Camera.Current.Position - Instance.polewik.CollisionWorldSpaceCenter );
+		if ( Camera.Current != null )
+			Instance.Rotation = Rotation.LookAt( Camera.Current.Position - Instance.polewik.CollisionWorldSpaceCenter );
 
 		Instance.lastHealth = Instance.polewik.hp;
 		Instance.Style.Opacity = Instance.lastDamaged > 10f ? 0f : 1f;
-
 		Instance.inner.Style.Width = Length.Fraction( Instance.polewik.hp / 100f );
 	}
 }
