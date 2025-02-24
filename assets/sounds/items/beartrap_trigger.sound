@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.050000,
+	"Pitch": 1,
+	"PitchRandom": 0.100000,
+	"Decibels": 120,
+	"Sounds":
+	[
+		"sounds/items/beartrap_trigger.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 3299.722700,
+	"MinimumDistance": 164.986130
+}

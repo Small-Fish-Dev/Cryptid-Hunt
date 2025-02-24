@@ -1,0 +1,8 @@
+"Layer0"
+{
+	"shader"		"shaders/sky.shader"
+	"F_TEXTURE_FORMAT2"		"5"
+	"g_flBrightnessExposureBias"		"-2.477000"
+	"g_flRenderOnlyExposureBias"		"0.000000"
+	"SkyTexture"		"materials/cloudy_night/cloudy_night.jpg"
+}

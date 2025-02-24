@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.200000,
+	"Pitch": 1,
+	"PitchRandom": 0.200000,
+	"Decibels": 70,
+	"Sounds":
+	[
+		"sounds/items/chest_locked.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 1143.933500,
+	"MinimumDistance": 57.196674
+}

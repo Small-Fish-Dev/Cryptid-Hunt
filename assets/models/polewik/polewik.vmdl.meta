@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Polewick",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "polewik",
+      "Tags": "creature cryptid animal animated scary",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/polewik/polewik.vmdl",
+        "Summary": "A unknown creature that has simularities to a bear or ape. a cryptid.",
+        "Description": "Polewick is a model made by smallfishes top notch modeller Grodbert, it was based on an ai generated image from a polish cryptid twitter bot, and we used it as inspiration for our game in the week long gvar horror gamejam, winning 2nd place!",
+        "Public": true,
+        "ReplaceTags": "creature cryptid animal animated scary"
+      }
+    }
+  }
+}

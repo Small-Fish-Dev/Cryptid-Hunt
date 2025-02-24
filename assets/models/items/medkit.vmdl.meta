@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Medkit",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "medkit",
+      "Tags": "medkit health heal",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/medkit.vmdl",
+        "Summary": "medkit for firstaid",
+        "Description": "medkit model made for cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "medkit health heal"
+      }
+    }
+  }
+}

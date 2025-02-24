@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.130000,
+	"Pitch": 1,
+	"PitchRandom": 0.140000,
+	"Decibels": 125,
+	"Sounds":
+	[
+		"sounds/polewik/pain.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 3577.706300,
+	"MinimumDistance": 178.885310
+}

@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0,
+	"Pitch": 1,
+	"PitchRandom": 0.200000,
+	"Decibels": 180,
+	"Sounds":
+	[
+		"sounds/items/metal_bar.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 7384.377000,
+	"MinimumDistance": 369.218840
+}

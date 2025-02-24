@@ -1,0 +1,16 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.110000,
+	"Pitch": 1,
+	"PitchRandom": 0.140000,
+	"Decibels": 125,
+	"Sounds":
+	[
+		"sounds/polewik/jump01.vsnd",
+		"sounds/polewik/jump02.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 3577.706300,
+	"MinimumDistance": 178.885310
+}

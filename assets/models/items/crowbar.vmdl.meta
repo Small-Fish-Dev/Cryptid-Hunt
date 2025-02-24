@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Crowbar",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "crowbar",
+      "Tags": "crowbar rusty",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/crowbar.vmdl",
+        "Summary": "rusty basic crowbar",
+        "Description": "rusty basic crowbar made for cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "crowbar rusty"
+      }
+    }
+  }
+}

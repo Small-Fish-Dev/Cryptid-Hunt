@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Chest",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "chest",
+      "Tags": "chest wood box crate",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/chest.vmdl",
+        "Summary": "Wooden chest",
+        "Description": "wooden chest made for cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "chest wood box crate"
+      }
+    }
+  }
+}

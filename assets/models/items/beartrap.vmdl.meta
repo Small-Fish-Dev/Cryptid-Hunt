@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Beartrap",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "beartrap",
+      "Tags": "beartrap trap springtrap rusty",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/beartrap.vmdl",
+        "Summary": "Rusty beartrap",
+        "Description": "a rusty old beartrap made for the horror game cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "beartrap trap springtrap rusty"
+      }
+    }
+  }
+}

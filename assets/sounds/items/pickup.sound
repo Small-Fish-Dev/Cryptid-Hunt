@@ -1,0 +1,15 @@
+{
+	"UI": true,
+	"Volume": 0.670000,
+	"VolumeRandom": 0.100000,
+	"Pitch": 1,
+	"PitchRandom": 0.100000,
+	"Decibels": 60,
+	"Sounds":
+	[
+		"sounds/items/pickup.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 848.930660,
+	"MinimumDistance": 42.446533
+}

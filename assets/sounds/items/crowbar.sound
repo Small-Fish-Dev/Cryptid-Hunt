@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0,
+	"Pitch": 1,
+	"PitchRandom": 0,
+	"Decibels": 80,
+	"Sounds":
+	[
+		"sounds/items/crowbar.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 1484.321400,
+	"MinimumDistance": 74.216070
+}

@@ -1,0 +1,24 @@
+{
+	"UI": true,
+	"Volume": 1,
+	"VolumeRandom": 0,
+	"Pitch": 1,
+	"PitchRandom": 0,
+	"Decibels": 70,
+	"Sounds":
+	[
+		"sounds/scary/scary09.vsnd",
+		"sounds/scary/scary08.vsnd",
+		"sounds/scary/scary07.vsnd",
+		"sounds/scary/scary06.vsnd",
+		"sounds/scary/scary05.vsnd",
+		"sounds/scary/scary04.vsnd",
+		"sounds/scary/scary03.vsnd",
+		"sounds/scary/scary02.vsnd",
+		"sounds/scary/scary01.vsnd",
+		"sounds/scary/scary0.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 1143.933500,
+	"MinimumDistance": 57.196674
+}

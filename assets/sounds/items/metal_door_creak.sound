@@ -1,0 +1,17 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.100000,
+	"Pitch": 1,
+	"PitchRandom": 0.100000,
+	"Decibels": 70,
+	"Sounds":
+	[
+		"sounds/items/metal_door_creak1.vsnd",
+		"sounds/items/metal_door_creak2.vsnd",
+		"sounds/items/metal_door_creak3.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 1143.933500,
+	"MinimumDistance": 57.196674
+}

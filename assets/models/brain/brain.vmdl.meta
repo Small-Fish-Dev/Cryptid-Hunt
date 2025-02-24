@@ -1,0 +1,25 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Giant Space Brains",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "spacebrain",
+      "Tags": "",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "ResourcePaths": null,
+      "HasCode": false,
+      "CodePath": null,
+      "Metadata": {
+        "SingleAssetSource": "models/brain/brain.vmdl",
+        "Summary": "A 3d model of the Giant Space Brains of Palos Verdes",
+        "Description": "This is based on an existing cryptid and was made for the game cryptid hunt, only having a cameo at the end.",
+        "Public": true,
+        "ReplaceTags": "brain cryptid creature scary"
+      }
+    }
+  }
+}

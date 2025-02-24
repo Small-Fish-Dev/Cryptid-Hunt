@@ -1,0 +1,25 @@
+{
+  "publish": {
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Shotgun Ammo",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "shotgun-ammo",
+      "Tags": "ammo wepon prop",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "ResourcePaths": null,
+      "HasCode": false,
+      "CodePath": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/ammo.vmdl",
+        "Summary": "Unknown shotgun ammo",
+        "Description": "Shotgun ammo made for the gamejam horror game cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "shotgun ammo weapon"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Page",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "page",
+      "Tags": "paper page note",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/page.vmdl",
+        "Summary": "Piece of paper with random scribbles on it",
+        "Description": "page/note made for cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "paper page note"
+      }
+    }
+  }
+}

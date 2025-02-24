@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.120000,
+	"Pitch": 1,
+	"PitchRandom": 0.160000,
+	"Decibels": 115,
+	"Sounds":
+	[
+		"sounds/polewik/scream_scare.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 3033.086000,
+	"MinimumDistance": 151.654300
+}

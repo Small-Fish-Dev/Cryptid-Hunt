@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": true,
+    "ProjectConfig": {
+      "Title": "Bed",
+      "Type": "model",
+      "Org": "fish",
+      "Ident": "bed",
+      "Tags": "bed furniture",
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": null,
+      "EditorReferences": null,
+      "Metadata": {
+        "SingleAssetSource": "models/items/bed.vmdl",
+        "Summary": "just a generic bed",
+        "Description": "a generic bland bed made for cryptid hunt",
+        "Public": true,
+        "ReplaceTags": "bed furniture"
+      }
+    }
+  }
+}

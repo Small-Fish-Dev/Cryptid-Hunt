@@ -1,0 +1,15 @@
+{
+	"UI": false,
+	"Volume": 1,
+	"VolumeRandom": 0.150000,
+	"Pitch": 1,
+	"PitchRandom": 0.150000,
+	"Decibels": 155,
+	"Sounds":
+	[
+		"sounds/ambient/crows.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 5483.878000,
+	"MinimumDistance": 274.193900
+}

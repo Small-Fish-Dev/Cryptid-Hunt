@@ -1,0 +1,15 @@
+{
+	"UI": true,
+	"Volume": 0.740000,
+	"VolumeRandom": 0,
+	"Pitch": 1,
+	"PitchRandom": 0,
+	"Decibels": 180,
+	"Sounds":
+	[
+		"sounds/polewik/howl_far.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 7384.377000,
+	"MinimumDistance": 369.218840
+}

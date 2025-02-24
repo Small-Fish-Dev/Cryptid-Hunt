@@ -1,0 +1,17 @@
+{
+	"UI": false,
+	"Volume": 0.010000,
+	"VolumeRandom": 0,
+	"Pitch": 1,
+	"PitchRandom": 0.050000,
+	"Decibels": 75,
+	"Sounds":
+	[
+		"sounds/misc/breathe_in1.vsnd",
+		"sounds/misc/breathe_in2.vsnd",
+		"sounds/misc/breathe_in3.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 1308.454300,
+	"MinimumDistance": 65.422720
+}

@@ -1,0 +1,15 @@
+{
+	"UI": true,
+	"Volume": 0.350000,
+	"VolumeRandom": 0.150000,
+	"Pitch": 0.900000,
+	"PitchRandom": 0.050000,
+	"Decibels": 40,
+	"Sounds":
+	[
+		"sounds/items/page_open.vsnd"
+	],
+	"SelectionMode": "Random",
+	"MaximumDistance": 395.080350,
+	"MinimumDistance": 19.754019
+}
