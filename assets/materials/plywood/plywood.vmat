@@ -1,11 +1,8 @@
-
-Layer0
+"Layer0"
 {
-	shader "complex.vfx"
-
-	TextureColor "materials/plywood/plywood_color.jpg"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
-	TextureNormal "materials/plywood/plywood_normal.jpg"
-	TextureRoughness "materials/plywood/plywood_rough.jpg"
-
+	"shader"		"shaders/complex.shader"
+	"TextureColor"		"materials/plywood/plywood_color.jpg"
+	"TextureAmbientOcclusion"		"materials/default/default_ao.tga"
+	"TextureNormal"		"materials/plywood/plywood_normal.jpg"
+	"TextureRoughness"		"materials/plywood/plywood_rough.jpg"
 }
