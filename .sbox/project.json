@@ -16,7 +16,7 @@
   },
   "SceneView.Viewport0.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-300,0,100\u0022,\u0022CameraRotation\u0022:\u00220,0,0,1\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1747864264,
+    "Timeout": 1747864684,
     "DeleteAt": 0
   },
   "gizmo.settings": {
@@ -121,32 +121,32 @@
   },
   "AssetBrowser.Model.History": {
     "Value": "[\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\Assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\Assets\u0022]",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.HistoryIdx": {
     "Value": "1",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ViewMode": {
     "Value": "1",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1747864256,
+    "Timeout": 1747864641,
     "DeleteAt": 0
   }
 }
