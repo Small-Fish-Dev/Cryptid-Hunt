@@ -320,10 +320,10 @@
           "__type": "Sandbox.VolumetricFogVolume",
           "__guid": "79560fdc-6a53-4053-841d-eb86c5eb10ea",
           "Bounds": {
-            "Mins": "-15000,-15000,-1500",
-            "Maxs": "15000,15000,1500"
+            "Mins": "-12000,-7131.199,-1500",
+            "Maxs": "12000,8678.723,1500"
           },
-          "FalloffExponent": 1,
+          "FalloffExponent": 0.41,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -331,36 +331,6 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Strength": 1
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "eb4d4866-6444-499f-b684-c78348bf1724",
-      "Flags": 0,
-      "Name": "polewik",
-      "Position": "4655.377,6743.217,382.9375",
-      "Rotation": "-0.005960842,0.01729996,0.828778,-0.559278",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.Prop",
-          "__guid": "28b1a41c-3985-4706-97d9-f53eca3cd7b3",
-          "BodyGroups": 18446744073709551615,
-          "Health": 0,
-          "IsStatic": false,
-          "MaterialGroup": null,
-          "Model": "models/polewik/polewik.vmdl",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnPropBreak": null,
-          "OnPropTakeDamage": null,
-          "StartAsleep": false,
-          "Tint": "1,1,1,1"
         }
       ],
       "Children": []
@@ -384,7 +354,7 @@
             {
               "__type": "ChurchLight",
               "__guid": "fd1bac2f-8d21-4537-a3ba-eb6510f3168a",
-              "Color": "1,0,0,1",
+              "Color": "20,0,0,1",
               "Lights": [
                 {
                   "_type": "component",

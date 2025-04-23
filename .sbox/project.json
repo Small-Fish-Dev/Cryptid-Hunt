@@ -16,7 +16,7 @@
   },
   "SceneView.Viewport0.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748034358,
+    "Timeout": 1748035077,
     "DeleteAt": 0
   },
   "gizmo.settings": {
@@ -26,7 +26,7 @@
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1748034301,
+    "Timeout": 1748035072,
     "DeleteAt": 0
   },
   "AssetBrowser.ViewMode": {
@@ -155,13 +155,13 @@
     "DeleteAt": 0
   },
   "scenes/world.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00225176.025,8458.144,1809.785\u0022,\u0022CameraRotation\u0022:\u0022-0.06404167,0.04161959,0.8360392,0.5433276\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748034358,
+    "Value": "{\u0022CameraPosition\u0022:\u00221168.677,1393.991,476.1987\u0022,\u0022CameraRotation\u0022:\u0022-0.0003875983,-0.07428824,-0.005203003,0.9972232\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748035077,
     "DeleteAt": 0
   },
   ".Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u00225158.062,8739.537,1734.207\u0022,\u0022CameraRotation\u0022:\u0022-0.04918778,0.03250734,0.8328195,0.5503957\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748034301,
+    "Timeout": 1748035072,
     "DeleteAt": 0
   },
   "expand.97208dd9-d2b0-4730-abdd-99204fb80ab7.MoveModeWalk": {
@@ -181,7 +181,7 @@
   },
   "prefabs/bear trap.prefab.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748034358,
+    "Timeout": 1748035077,
     "DeleteAt": 0
   }
 }

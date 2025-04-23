@@ -16,10 +16,9 @@ public sealed class ChurchLight : Component
 		foreach ( var light in Lights )
 		{
 			var distance = light.WorldPosition.Distance( camera.WorldPosition );
-			var intensity = MathX.Remap( distance, 1500f, 5000f, 0f, 1f );
+			var intensity = MathX.Remap( distance, 1800f, 5000f, 0.02f, 1f );
 
 			light.LightColor = Color.Black.LerpTo( Color, intensity );
-			Log.Info( intensity );
 		}
 	}
 }
