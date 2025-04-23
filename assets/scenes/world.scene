@@ -1602,6 +1602,254 @@
           "Enabled": true,
           "__Prefab": "prefabs/bear trap.prefab",
           "__PrefabVariables": {}
+        },
+        {
+          "__guid": "2573b705-e5a3-46bf-b5af-48cc51ee1721",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "4842.674,8990.674,929.1794",
+          "Rotation": "0,0.7071068,0,0.7071068",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "ca607b51-6683-4af5-8043-687d2b587844",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "8f967e11-af3d-4d80-80ab-171bf6472454",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "4850.674,8985.091,1777.179",
+          "Rotation": "-0.00000005971086,0.8660254,-0.00000005971086,-0.5",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "6f12b397-6706-4486-8d78-eda1f189ecf4",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "3774.841,8986.361,1224.622",
+          "Rotation": "-0.258819,-0.00000001131334,0.9659258,-0.00000004222196",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "df279da7-61fe-4e01-ad2a-2e56ceafc165",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "ed05ebf3-8825-4985-a7d6-060932cdff98",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "-6379.326,9582.674,389.1793",
+          "Rotation": "-0.2566048,0.03378261,0.9576622,-0.1260784",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "db8e2e91-95f6-4bd0-85da-c398522264ec",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "593ca00d-6e7c-420b-8a67-acbf4724eab0",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "1898.674,4656.674,403.1794",
+          "Rotation": "0,0.5,0,0.8660254",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "9b591294-6d11-405c-b4fa-0da958462d0b",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "17b21146-295b-497b-8d8f-35a42a3cdf45",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "-2557.326,-1377.326,-377.8206",
+          "Rotation": "-0.9396926,0.0000003112256,0.3420201,0.0000008550854",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "f3942fec-e9d3-4682-a0f1-f841c9afb92d",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "c520a532-8999-4581-9aad-e5af74782e96",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "-2550.326,-1377.326,-395.8206",
+          "Rotation": "-0.04361953,-0.00000004350549,0.9990482,-0.0000009964364",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "c3cbf52b-4151-4a50-b4bd-e4f56210c30e",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "4e1285ea-a36a-4533-81d5-6844ea661043",
+          "Flags": 0,
+          "Name": "Spot Light (1)",
+          "Position": "-1942.757,2467.674,414.1794",
+          "Rotation": "-0.4999999,-0.4999999,0.5000001,-0.5000001",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "e386c6ce-e13d-4cc6-b8d4-afdd00bf4a07",
+              "Attenuation": 1,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0.91373,0.98039,1,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 500,
+              "Shadows": true
+            }
+          ],
+          "Children": []
         }
       ]
     },

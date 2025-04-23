@@ -16,7 +16,7 @@
   },
   "SceneView.Viewport0.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033158,
+    "Timeout": 1748033217,
     "DeleteAt": 0
   },
   "gizmo.settings": {
@@ -155,8 +155,8 @@
     "DeleteAt": 0
   },
   "scenes/world.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-2060.33,2253.442,59.0801\u0022,\u0022CameraRotation\u0022:\u0022-0.08375361,0.1477898,0.4858737,0.8573623\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033158,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-2092.958,2273.814,79.22765\u0022,\u0022CameraRotation\u0022:\u0022-0.009741094,0.01815142,0.4727665,0.8809469\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748033217,
     "DeleteAt": 0
   },
   ".Viewport0": {
@@ -181,7 +181,7 @@
   },
   "prefabs/bear trap.prefab.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033158,
+    "Timeout": 1748033217,
     "DeleteAt": 0
   }
 }
