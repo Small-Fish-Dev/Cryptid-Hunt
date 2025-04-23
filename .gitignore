@@ -31,3 +31,7 @@ Exports/
 *.sfk
 .sbox/project.json
 .sbox/cloud.db
+*.db
+*.db-shm
+*.db-wal
+*.vsidx
