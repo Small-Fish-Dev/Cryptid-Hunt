@@ -35,3 +35,5 @@ Exports/
 *.db-shm
 *.db-wal
 *.vsidx
+*.bin
+/code/.vs

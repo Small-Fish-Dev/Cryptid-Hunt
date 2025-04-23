@@ -1,12 +1,12 @@
 {
   "AssetBrowser.History": {
-    "Value": "[\u0022E:\\\\sbox-games\\\\spookyjam22\\\\Assets\u0022,\u0022E:\\\\sbox-games\\\\spookyjam22\\\\assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\models\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\maps\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\prefabs\u0022]",
-    "Timeout": 1748032578,
+    "Value": "[\u0022E:\\\\sbox-games\\\\spookyjam22\\\\Assets\u0022,\u0022E:\\\\sbox-games\\\\spookyjam22\\\\assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\models\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\maps\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\prefabs\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\assets\\\\maps\u0022]",
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.HistoryIdx": {
-    "Value": "5",
-    "Timeout": 1748032578,
+    "Value": "7",
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
@@ -16,7 +16,7 @@
   },
   "SceneView.Viewport0.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033217,
+    "Timeout": 1748034358,
     "DeleteAt": 0
   },
   "gizmo.settings": {
@@ -26,47 +26,47 @@
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1748032952,
+    "Timeout": 1748034301,
     "DeleteAt": 0
   },
   "AssetBrowser.ViewMode": {
     "Value": "3",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.Search": {
     "Value": "\u0022\u0022",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.ActiveTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.ExcludedTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1748032506,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "Window.SboxHammer.Dock": {
     "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAAB8gAAAPsAAAAAAAAAAAAAAfIAAAD7AAAAAAAAAAACAAAAAAAAAAAAAAAB8gAAAPs\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Tool Properties\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Active Material\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABaAAAAH8A/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Map View\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerCloudBrowser\u0022,\u0022name\u0022:\u0022Cloud Browser\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADsQAAAfYA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Outliner\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Selection Sets\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Object Properties\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAA8AAAAPAA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAADAAABYgAABFMAAAFqAP////8BAAAAAQA=\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
-    "Timeout": 1748031988,
+    "Timeout": 1748034171,
     "DeleteAt": 0
   },
   "AssetBrowser.Material.History": {
@@ -155,13 +155,13 @@
     "DeleteAt": 0
   },
   "scenes/world.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-2092.958,2273.814,79.22765\u0022,\u0022CameraRotation\u0022:\u0022-0.009741094,0.01815142,0.4727665,0.8809469\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033217,
+    "Value": "{\u0022CameraPosition\u0022:\u00225176.025,8458.144,1809.785\u0022,\u0022CameraRotation\u0022:\u0022-0.06404167,0.04161959,0.8360392,0.5433276\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748034358,
     "DeleteAt": 0
   },
   ".Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u00224856.004,8385.474,536.3447\u0022,\u0022CameraRotation\u0022:\u00220.1769022,0.03419442,-0.9657578,0.1866768\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748031545,
+    "Value": "{\u0022CameraPosition\u0022:\u00225158.062,8739.537,1734.207\u0022,\u0022CameraRotation\u0022:\u0022-0.04918778,0.03250734,0.8328195,0.5503957\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748034301,
     "DeleteAt": 0
   },
   "expand.97208dd9-d2b0-4730-abdd-99204fb80ab7.MoveModeWalk": {
@@ -181,7 +181,7 @@
   },
   "prefabs/bear trap.prefab.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-73.05256,-84.68092,20.88262\u0022,\u0022CameraRotation\u0022:\u0022-0.04829568,0.1506042,0.3015193,0.9402511\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748033217,
+    "Timeout": 1748034358,
     "DeleteAt": 0
   }
 }
