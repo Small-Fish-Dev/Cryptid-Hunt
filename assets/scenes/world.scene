@@ -1627,13 +1627,13 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "9b591294-6d11-405c-b4fa-0da958462d0b",
-                  "Attenuation": 1,
+                  "Attenuation": 3.96,
                   "ConeInner": 15,
                   "ConeOuter": 45,
                   "Cookie": null,
-                  "FogMode": "Enabled",
+                  "FogMode": "Disabled",
                   "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
+                  "LightColor": "0.40102,0.49008,0.51628,1",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -1641,7 +1641,7 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Radius": 500,
-                  "Shadows": true
+                  "Shadows": false
                 }
               ],
               "Children": []
@@ -2481,7 +2481,6 @@
               "Position": "2269.99,1262.674,702.476",
               "Rotation": "0,-0.03536636,0,0.9993744",
               "Tags": "light_point,light",
-              "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -3149,6 +3148,57 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "29a554a6-db13-492d-b0fc-e4c6dc02ceb9",
+      "Flags": 0,
+      "Name": "gatorkid",
+      "Position": "2859.656,4821.093,22.08317",
+      "Rotation": "-0.1176156,0.002431162,0.9582548,0.2605923",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "22197502-17ae-4c40-9d33-eb950f46f09f",
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/enemies/gatorkid/gatorkid.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
@@ -3172,6 +3222,8 @@
   "ResourceVersion": 2,
   "Title": null,
   "Description": null,
-  "__references": [],
+  "__references": [
+    "apetavern.gatorkid#42640"
+  ],
   "__version": 2
 }
