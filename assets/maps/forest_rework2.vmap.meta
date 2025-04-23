@@ -15,7 +15,6 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "alex.water#93122",
         "facepunch.beech_bush_large#60666",
         "facepunch.beech_bush_medium_wall_corner#60668",
         "facepunch.beech_bush_medium_wall#60667",
@@ -29,6 +28,7 @@
         "facepunch.decal_street_line_marking_a#67244",
         "facepunch.floor_asphalt_blend#85378",
         "facepunch.floor_asphalt_dirt_blend#85376",
+        "facepunch.floor_damaged_asphalt#85377",
         "facepunch.floor_grass_a#18648",
         "facepunch.floor_steel_grid_dirty_a#85410",
         "facepunch.folding_construction_sign#19200",
