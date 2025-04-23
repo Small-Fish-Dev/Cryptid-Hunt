@@ -374,2721 +374,2811 @@
       "Components": [],
       "Children": [
         {
-          "__guid": "3a5669ed-92ec-4282-af71-efa7b6812497",
+          "__guid": "dd344e2e-b954-484e-af73-18108b9a6fbf",
           "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1833.326,3878.674,219.2189",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a0c3445c-ace0-4e97-836a-65fba4323626",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4060.292,1038.385,593.5939",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "be9efc50-0cb4-4a1e-be84-c81d9e0ff1c8",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "3736.339,1094.266,631.1176",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f47e0e02-fed6-4ad8-974e-b8c438e81e23",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "3399.674,1227.674,637.3907",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "25b3622a-4031-4a9a-994a-01a51f03ccad",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "3050.674,903.6736,636.8843",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8e67e376-b9b5-42ed-ae0b-cbd81d2cde9e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "2386.674,973.6736,642.6096",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "52af7ed0-afef-4d58-9da0-8ab30f6d0ce2",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1905.583,1528.063,642.7612",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a223a637-7f2a-4ffc-95fa-548b43f6c147",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1074.674,1372.674,599.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6df9a298-fbd0-42ad-9374-2b16ac02383d",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "980.6737,1519.674,591.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "9df4e4ab-4263-4bf3-ae94-747b4c017f02",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "738.6737,1607.674,537.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f4a53e00-f41f-4786-a537-e0e5be102722",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "490.6737,1482.674,507.2971",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "825715c2-1ed6-420d-a879-8286a777657e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-117.3263,1578.674,391.7633",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f4e0add3-4eaa-4466-a48d-024642e5cbe8",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-565.3263,1674.674,300.297",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6173bcf1-4d4b-4547-8358-40d1b1295543",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1051.189,1776.791,239.9362",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a1209507-7793-47d3-9812-6ac89a7da661",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1237.326,1930.674,225.5475",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "be19a75a-eaeb-4d84-8c8d-54c3f561957f",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1589.366,1884.171,242.0165",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8d0cac2c-8d61-4c59-ba4a-66ad8d31e0d4",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1966.776,1841.963,216.4828",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f0e3c377-73c7-4d1c-90bf-281716a6473e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2167.091,1881.018,232.3381",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "e1a6b26d-8c1f-4d65-bfc5-a6b2bd29d93a",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2352.12,1991.26,247.1524",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "dbf32fbb-06eb-4154-8fa6-f37f557ae2aa",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2376.819,2289.936,220.5992",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "c946e05a-191d-4fb0-b371-e8b33ddbc0ef",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4241.674,1034.674,556.9578",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a8b39a1c-c336-4ba3-90d7-cf73efa4782b",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4633.674,661.6736,531.6602",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cdfbbbf0-2e2b-4075-b435-54f79c7a29b1",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5583.674,764.6736,525.3948",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "16466ff9-700e-4179-8b4c-377758a3a19c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7430.674,3076.674,532.406",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "e6ade82b-0739-4b56-af13-048af9304647",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5305.674,5607.674,641.7336",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cdc0d6b4-12dd-4533-bbed-a70b67c40a19",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5337.674,5181.674,636.9543",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "fbbce41b-13b7-4a0c-bf69-c7c07d6efb78",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5750.674,4809.674,640.6074",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "e5a0fbb0-bd8d-4871-bbca-c0cfc21c872e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5977.674,4299.674,642.5006",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "618928a0-e918-42f5-a2f6-b0eb56289bc1",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6289.674,4204.674,610.6645",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "0c49e227-5f37-407d-9736-67f99760f5fc",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6616.674,3976.674,554.6802",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "2fb8eed2-3be0-4149-ae88-a9d79fdfbc6a",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6899.674,4095.674,591.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "11ba7a7d-cc4c-4ada-94a7-6c688b55ba98",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7636.674,3311.674,549.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "b70a51a1-a4b6-42fa-9136-944ff628b8ab",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7510.674,2742.674,536.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "440daaf1-e3a3-4626-be7e-32bc9bace20a",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5694.674,1155.674,514.0251",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "d232b7c7-8bec-48dd-8c9c-6bc884bed0e5",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7636.674,2516.802,531.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a012cc89-2315-4f68-a157-8685be25e0bb",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7583.674,2246.674,517.5184",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "3d5b1dee-6de5-41e6-adde-97c054e710cf",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7367.068,2103.708,515.103",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "51a40b80-4ab7-441f-b837-10a8b6e9d099",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7196.589,1822.09,512.0471",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "148dde60-9344-4504-acb2-c7c4da5b1875",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "7007.674,1669.674,507.9062",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "9d14e3d3-36e8-4f2e-bcbd-68fba54ca9e8",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6622.674,1567.674,517.8532",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ac48fb0c-826b-4d00-9621-baa0de41ceff",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6527.674,1125.674,505.644",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "08ec0aea-b429-49f8-a43a-b193f1224ea4",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "6300.674,939.6736,514.9445",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "bd9086ec-4a2d-4d6f-9587-ddca6c49e03b",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1709.326,3410.674,239.7674",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cd384b80-1a85-4363-8d0b-1f51495b5757",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1941.326,4106.674,219.215",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "2a7ebe80-b1a8-4cde-970b-9c7937123552",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "3942.674,6066.674,627.1451",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "3f01041a-24f3-4ffc-a2c3-5a073173bd29",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2162.95,4452.458,219.8901",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "343357df-b88b-43d6-ab4a-76cf536133fe",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1461.326,6826.674,221.5205",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "3589f5f9-3cf0-4b74-8cdf-f1467445644c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1863.833,6813.509,221.9183",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "c95cb4e3-8005-4d48-965d-8abf92ae8ff3",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2357.326,6570.674,224.1469",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6589e04c-a63d-491f-b339-c88653dfe683",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2709.326,6506.674,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "271f0b5f-e875-4c75-b0d3-014b2e2d6b14",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2898.352,6238.834,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6d78da8d-cc07-4907-aa69-b3000c88f824",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3019.439,5848.153,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8e3c1a54-8b40-4724-99f5-4dd906ba8712",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3065.637,5453.794,224.1793",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1590e699-ae69-48bf-9b40-8413a5da3038",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3213.797,5098.865,224.1793",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "2082eef8-9fcb-4bcf-878e-d006ba6efe1b",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3498.884,4896.505,224.1793",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "16d45b60-71c4-4ce2-94de-5267bd488660",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3765.326,4970.674,224.1793",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "9888b81b-eb7e-4db8-bd04-03dd85c8272c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3875.144,5580.521,233.5341",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "317f0306-370f-44bd-b038-9c59fb4e9b36",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3845.844,5965.242,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "26f8d0ca-d337-4f5d-982d-7034f962775c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4387.326,6412.674,224.1803",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ed2098af-b938-4086-b830-12f1d0c8a910",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4122.326,6765.674,284.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "48a33855-1700-4db7-8809-c0bc874febd7",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4194.788,7348.122,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1439d48b-dfe4-4b03-a8c4-fd66fbf5de94",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4722.395,8351.329,216.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "accfb529-b2c2-4fd1-91e9-253977dd02f2",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1173.326,6730.674,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "733129d1-453c-4101-9644-11e7309dd90e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "42.67368,7338.674,224.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "19e04f54-e6fb-46df-a2ad-f00f22d6feca",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "266.6737,7274.674,223.3944",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "0b73e8a6-2141-4131-b627-843ba0bbaf12",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "424.0042,6454.571,220.2869",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "3081985d-5eb8-47c1-b882-204467340f46",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2207.196,4721.787,228.2303",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "344f6afe-bdde-44ad-8917-e6304460bf87",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2453.326,5418.674,220.0911",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "d13d08f9-d9be-4c14-8409-4c05db2b87d1",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2293.326,5546.674,218.4879",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cb8a29d7-7827-4148-8d93-9299abdc24d5",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2025.326,5706.674,219.6987",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "7466aa1c-93fb-47d8-b218-94c5a42fcd9e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1905.326,5846.674,220.6652",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ffada920-14ca-4976-b18d-aa19bb909e4e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1653.326,6166.674,222.6317",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6cf37117-832b-499d-a41f-41055d48cb0e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1205.326,6386.674,225.0473",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "62daf65e-e6b9-4471-aa85-08c196316237",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "162.2097,6599.629,221.7676",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "15a7f319-219c-4a0d-b6bb-c0de50505141",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "677.0731,6394.693,220.4211",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ccbcc22c-53bf-406f-a8b6-6818d9ed325b",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "394.6737,7050.674,221.7723",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ba567699-909d-4d8b-95fd-db1fe37b359e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "714.6737,6314.674,220.5707",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6643f9e5-8046-45c0-a4ca-c60cd22bf071",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "810.6737,6218.674,222.5191",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6e17e30a-d92a-4256-baf9-4053f00ebb06",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "980.4939,6048.272,222.6402",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "87ac9942-ac8b-45b5-84cb-cacc0ca173c5",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1034.674,5898.674,221.5587",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "d8e342ef-54b0-4586-a722-41ea5adc6194",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1322.674,5514.674,222.5501",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1d1aff2c-b692-426f-9ab6-5ec7eaff4648",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1470.674,6318.674,231.4848",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "615fac61-1cec-43ff-bff4-9f7e816660c1",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1294.674,6878.674,220.7139",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1af32163-3ae1-4d12-a5d0-0e5c47cc3f86",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1034.674,7274.674,220.9796",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "9f8761b9-d3c8-4fcd-9ec4-3dd810190bef",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "5094.674,6275.674,648.9669",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8ea05cc2-681c-41ef-be1c-dfb4ab342a79",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4073.674,6269.674,642.2353",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "0915f0a5-605e-4bc5-aa54-cae4d78fa25f",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4335.674,6545.674,614.7482",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "c06df73c-914a-4aa0-980d-9fb5b1cbbd8b",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4923.803,10848.7,269.593",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "823017af-e6a6-424b-bdf1-6d9859eb7c2f",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4451.99,10759.04,281.4926",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6b8886e1-34cc-4b9a-89fa-2fc801a86877",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-3786.051,10689.53,281.4751",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "66fe1d46-c328-4970-abd3-fcf040c14afd",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2850.568,10730.83,259.934",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "54314838-3461-452b-96f4-e07afb30f201",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-2226.344,10594.45,195.8378",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "4c88fb1a-73dd-4b57-b324-0a8848a7094d",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-1311.298,10338.21,194.538",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "bfd81dc4-66f1-4ded-b1c7-67c0e6192cff",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-560.3955,10303.74,202.8524",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "7312d1b7-853a-4f9c-b37d-07324619e334",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "183.4253,10137.23,321.4791",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "fa461bbd-d2d1-459d-aa21-2156e3616606",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1021.267,9845.311,388.3751",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "bb9e18dc-6f2b-4e07-a627-41a14b46f84e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "1822.517,9542.484,480.4716",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "6b0a728b-277a-4988-8532-f00cd48ffbf5",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "2343.154,9157.684,652.7849",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cbe0dcda-641c-4eb0-9274-059b8bbd3d6c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "2524.674,8860.674,640.0066",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8d2f76cf-c53b-4a08-8eb5-1b0f5565ffaf",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "2935.674,8007.674,637.8934",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "7ef1af6d-c511-4a50-9515-dd9fe62addfe",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "3609.674,7980.674,629.2684",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "7be2340d-1cab-49db-bc4b-ae23a36469bb",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4043.674,8231.674,619.2253",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a7295c78-ddcd-4bd1-8434-61d16927e880",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4382.523,8022.113,634.2927",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "bc6bac98-820d-4d16-b804-208d17b631b1",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4500.674,7541.674,615.5582",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "33ba5d57-3dc2-4c51-9b3e-34261763f6df",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4418.674,7342.674,611.676",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "7e7f994d-885c-414b-b6eb-5ad2d0226910",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "4482.674,6974.674,612.0156",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "366b3566-186d-4952-a39c-2cefb31e132e",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-5473.584,10880.47,266.5645",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "cf6ce398-912d-4715-a3fe-e51cc7027660",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-5931.52,10726.42,237.225",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "5d497395-a9d9-4b0f-ac07-ae3d5995ac20",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-6397.17,10220.56,233.588",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "3e398356-2cdf-48db-a89f-acac6e42b700",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-6469.303,9842.422,224.0653",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "ed2705ee-40b3-4ef9-9010-8b03a95b9364",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-4858.215,8690.693,222.9182",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "aca14603-297a-4e56-be06-7b0064ed1bc5",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-5112.767,9009.32,224.1419",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "2bae0f11-ff2b-4fdc-80ce-502b387fc0f6",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-5332.325,9226.312,219.8237",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "d5691618-c3fd-4431-9a16-8cd0b76a9938",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-5860.776,9381.814,216.1794",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "b6e6c166-9038-45f4-a07a-222fd296dc2c",
-          "Flags": 0,
-          "Name": "path_node",
-          "Position": "-6489.586,9464.987,218.6813",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1c87c021-713a-4742-b91c-a3f180dda579",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6903.324,9424.033,246.1794",
-          "Rotation": "0,0,0.05233596,0.9986295",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "4fb04af2-2723-4210-a759-bbfdee3fc5c1",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6901.826,9443.174,246.1794",
-          "Rotation": "0,0,0.07845912,0.9969173",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "3a5de35c-0540-4f41-aa5f-1d65e8008a82",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6900.826,9461.674,246.1794",
-          "Rotation": "0,0,0.1478093,0.9890159",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "c4c6f975-0573-4ef1-9ece-5b54c03d8333",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6879.371,9476.128,212.0853",
-          "Rotation": "0,0,0.515038,0.8571674",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "a8d9fd6a-7c73-4096-8a61-58639f5ba902",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6869.826,9447.674,226.1793",
-          "Rotation": "0.2582,-0.6328065,0.2365966,-0.6905873",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "627cc6d9-ca31-4273-9750-a01f03b8ff76",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-6858.326,9452.674,216.6794",
-          "Rotation": "-0.7009093,0,0,0.7132505",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "cc825f37-d6df-42d0-9452-cd8cf053486e",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "4490.674,8858.674,643.1794",
-          "Rotation": "0,0,0.258819,0.9659258",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "2e35a848-d76e-4510-a7cd-51371b93e490",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "3780.669,8861.653,621.1794",
-          "Rotation": "0,0,0.258819,0.9659258",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "996e74c0-42ef-4774-954a-e630257d8375",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "3758.486,8883.188,620.1797",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "7c30411e-0b63-40fd-8d2f-82995641c95d",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-1891.326,2528.178,223.2304",
-          "Rotation": "0,0,0.258819,0.9659258",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "41a9227e-cdc6-4a8f-bd00-715932bc1a4a",
-          "Flags": 0,
-          "Name": "ammo",
-          "Position": "-1795.561,2303.918,219.6824",
-          "Enabled": true,
-          "__Prefab": "prefabs/ammo.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "b1710afc-8460-4de7-99b4-59e9311036ef",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-6820.826,9536.173,211.5363",
-          "Rotation": "0,0,0.9205046,0.3907318",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "0691f55e-3327-4672-b288-1bb161725f48",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-1747.326,2345.787,212.7102",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "f23e1e32-a8ea-4e04-a06c-5d12eedaf7b3",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-1750.976,2366.923,212.8783",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "722020a8-df6b-4dfb-b6e7-eba1808089ca",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-1909.326,2498.674,223.2304",
-          "Rotation": "0,0,0.7933533,0.6087615",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "ae30958c-dfe1-44e8-9bec-1bd06276beb2",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-6787.326,9547.174,211.5363",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "d2eae971-10cc-4b4c-b33e-990f6696bf92",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "4010.674,8952.674,624.1794",
-          "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "24427b30-665f-4dc4-9166-30945cbd9ae4",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "3782.674,8840.674,631.179",
-          "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "ee89eacc-761b-47ea-9345-4e7e61421ffa",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-6819.826,9553.674,211.5363",
-          "Rotation": "-0.09284795,-0.04586028,0.03869773,0.9938706",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "3ed8ca3d-fcf0-477c-8014-1c3a5de46250",
-          "Flags": 0,
-          "Name": "bear trap",
-          "Position": "-6792.826,9564.174,212.0954",
-          "Rotation": "-0.08018234,-0.04020797,0.4464481,0.8903023",
-          "Enabled": true,
-          "__Prefab": "prefabs/bear trap.prefab",
-          "__PrefabVariables": {}
-        },
-        {
-          "__guid": "2573b705-e5a3-46bf-b5af-48cc51ee1721",
-          "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "4842.674,8990.674,929.1794",
-          "Rotation": "0,0.7071068,0,0.7071068",
-          "Tags": "light_spot,light",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "ca607b51-6683-4af5-8043-687d2b587844",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "8f967e11-af3d-4d80-80ab-171bf6472454",
-          "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "4850.674,8985.091,1777.179",
+          "Name": "Church Light",
+          "Position": "4850.674,8985.091,1776.435",
           "Rotation": "-0.00000005971086,0.8660254,-0.00000005971086,-0.5",
-          "Tags": "light_spot,light",
           "Enabled": true,
           "Components": [
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
+              "__type": "ChurchLight",
+              "__guid": "fd1bac2f-8d21-4537-a3ba-eb6510f3168a",
+              "Color": "1,0,0,1",
+              "Lights": [
+                {
+                  "_type": "component",
+                  "component_id": "65df82b1-58df-4573-a721-60b129d238c4",
+                  "go": "97375098-6897-4dbe-bf12-062750fda6de",
+                  "component_type": "SpotLight"
+                },
+                {
+                  "_type": "component",
+                  "component_id": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
+                  "go": "8f967e11-af3d-4d80-80ab-171bf6472454",
+                  "component_type": "SpotLight"
+                }
+              ],
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
+              "OnComponentUpdate": null
             }
           ],
-          "Children": []
+          "Children": [
+            {
+              "__guid": "97375098-6897-4dbe-bf12-062750fda6de",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "359.4154,-418.8223,-0.5126737",
+              "Rotation": "-0.2912856,-0.2260223,0.6891134,0.6238504",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "65df82b1-58df-4573-a721-60b129d238c4",
+                  "Attenuation": 0,
+                  "ConeInner": 90,
+                  "ConeOuter": 27,
+                  "Cookie": null,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "11.9,0,0,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 487.84003,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "8f967e11-af3d-4d80-80ab-171bf6472454",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
+                  "Attenuation": 0,
+                  "ConeInner": 0,
+                  "ConeOuter": 25.56,
+                  "Cookie": null,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "11.9,0,0,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 487.84003,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            }
+          ]
         },
         {
-          "__guid": "6f12b397-6706-4486-8d78-eda1f189ecf4",
+          "__guid": "02076f6c-bc86-4c3d-ae48-68cc9b2d3ed8",
           "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "3774.841,8986.361,1224.622",
-          "Rotation": "-0.258819,-0.00000001131334,0.9659258,-0.00000004222196",
-          "Tags": "light_spot,light",
+          "Name": "Path",
           "Enabled": true,
-          "Components": [
+          "Components": [],
+          "Children": [
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "df279da7-61fe-4e01-ad2a-2e56ceafc165",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
+              "__guid": "3a5669ed-92ec-4282-af71-efa7b6812497",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1833.326,3878.674,219.2189",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a0c3445c-ace0-4e97-836a-65fba4323626",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4060.292,1038.385,593.5939",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "be9efc50-0cb4-4a1e-be84-c81d9e0ff1c8",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "3736.339,1094.266,631.1176",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "f47e0e02-fed6-4ad8-974e-b8c438e81e23",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "3399.674,1227.674,637.3907",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "25b3622a-4031-4a9a-994a-01a51f03ccad",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "3050.674,903.6736,636.8843",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8e67e376-b9b5-42ed-ae0b-cbd81d2cde9e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "2386.674,973.6736,642.6096",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "52af7ed0-afef-4d58-9da0-8ab30f6d0ce2",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1905.583,1528.063,642.7612",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a223a637-7f2a-4ffc-95fa-548b43f6c147",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1074.674,1372.674,599.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6df9a298-fbd0-42ad-9374-2b16ac02383d",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "980.6737,1519.674,591.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "9df4e4ab-4263-4bf3-ae94-747b4c017f02",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "738.6737,1607.674,537.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "f4a53e00-f41f-4786-a537-e0e5be102722",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "490.6737,1482.674,507.2971",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "825715c2-1ed6-420d-a879-8286a777657e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-117.3263,1578.674,391.7633",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "f4e0add3-4eaa-4466-a48d-024642e5cbe8",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-565.3263,1674.674,300.297",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6173bcf1-4d4b-4547-8358-40d1b1295543",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1051.189,1776.791,239.9362",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a1209507-7793-47d3-9812-6ac89a7da661",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1237.326,1930.674,225.5475",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "be19a75a-eaeb-4d84-8c8d-54c3f561957f",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1589.366,1884.171,242.0165",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8d0cac2c-8d61-4c59-ba4a-66ad8d31e0d4",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1966.776,1841.963,216.4828",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "f0e3c377-73c7-4d1c-90bf-281716a6473e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2167.091,1881.018,232.3381",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "e1a6b26d-8c1f-4d65-bfc5-a6b2bd29d93a",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2352.12,1991.26,247.1524",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "dbf32fbb-06eb-4154-8fa6-f37f557ae2aa",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2376.819,2289.936,220.5992",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "c946e05a-191d-4fb0-b371-e8b33ddbc0ef",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4241.674,1034.674,556.9578",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a8b39a1c-c336-4ba3-90d7-cf73efa4782b",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4633.674,661.6736,531.6602",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cdfbbbf0-2e2b-4075-b435-54f79c7a29b1",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5583.674,764.6736,525.3948",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "16466ff9-700e-4179-8b4c-377758a3a19c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7430.674,3076.674,532.406",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "e6ade82b-0739-4b56-af13-048af9304647",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5305.674,5607.674,641.7336",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cdc0d6b4-12dd-4533-bbed-a70b67c40a19",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5337.674,5181.674,636.9543",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "fbbce41b-13b7-4a0c-bf69-c7c07d6efb78",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5750.674,4809.674,640.6074",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "e5a0fbb0-bd8d-4871-bbca-c0cfc21c872e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5977.674,4299.674,642.5006",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "618928a0-e918-42f5-a2f6-b0eb56289bc1",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6289.674,4204.674,610.6645",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "0c49e227-5f37-407d-9736-67f99760f5fc",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6616.674,3976.674,554.6802",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "2fb8eed2-3be0-4149-ae88-a9d79fdfbc6a",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6899.674,4095.674,591.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "11ba7a7d-cc4c-4ada-94a7-6c688b55ba98",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7636.674,3311.674,549.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "b70a51a1-a4b6-42fa-9136-944ff628b8ab",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7510.674,2742.674,536.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "440daaf1-e3a3-4626-be7e-32bc9bace20a",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5694.674,1155.674,514.0251",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "d232b7c7-8bec-48dd-8c9c-6bc884bed0e5",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7636.674,2516.802,531.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a012cc89-2315-4f68-a157-8685be25e0bb",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7583.674,2246.674,517.5184",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "3d5b1dee-6de5-41e6-adde-97c054e710cf",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7367.068,2103.708,515.103",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "51a40b80-4ab7-441f-b837-10a8b6e9d099",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7196.589,1822.09,512.0471",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "148dde60-9344-4504-acb2-c7c4da5b1875",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "7007.674,1669.674,507.9062",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "9d14e3d3-36e8-4f2e-bcbd-68fba54ca9e8",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6622.674,1567.674,517.8532",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ac48fb0c-826b-4d00-9621-baa0de41ceff",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6527.674,1125.674,505.644",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "08ec0aea-b429-49f8-a43a-b193f1224ea4",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "6300.674,939.6736,514.9445",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "bd9086ec-4a2d-4d6f-9587-ddca6c49e03b",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1709.326,3410.674,239.7674",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cd384b80-1a85-4363-8d0b-1f51495b5757",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1941.326,4106.674,219.215",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "2a7ebe80-b1a8-4cde-970b-9c7937123552",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "3942.674,6066.674,627.1451",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "3f01041a-24f3-4ffc-a2c3-5a073173bd29",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2162.95,4452.458,219.8901",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "343357df-b88b-43d6-ab4a-76cf536133fe",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1461.326,6826.674,221.5205",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "3589f5f9-3cf0-4b74-8cdf-f1467445644c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1863.833,6813.509,221.9183",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "c95cb4e3-8005-4d48-965d-8abf92ae8ff3",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2357.326,6570.674,224.1469",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6589e04c-a63d-491f-b339-c88653dfe683",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2709.326,6506.674,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "271f0b5f-e875-4c75-b0d3-014b2e2d6b14",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2898.352,6238.834,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6d78da8d-cc07-4907-aa69-b3000c88f824",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3019.439,5848.153,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8e3c1a54-8b40-4724-99f5-4dd906ba8712",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3065.637,5453.794,224.1793",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "1590e699-ae69-48bf-9b40-8413a5da3038",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3213.797,5098.865,224.1793",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "2082eef8-9fcb-4bcf-878e-d006ba6efe1b",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3498.884,4896.505,224.1793",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "16d45b60-71c4-4ce2-94de-5267bd488660",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3765.326,4970.674,224.1793",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "9888b81b-eb7e-4db8-bd04-03dd85c8272c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3875.144,5580.521,233.5341",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "317f0306-370f-44bd-b038-9c59fb4e9b36",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3845.844,5965.242,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "26f8d0ca-d337-4f5d-982d-7034f962775c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4387.326,6412.674,224.1803",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ed2098af-b938-4086-b830-12f1d0c8a910",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4122.326,6765.674,284.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "48a33855-1700-4db7-8809-c0bc874febd7",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4194.788,7348.122,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "1439d48b-dfe4-4b03-a8c4-fd66fbf5de94",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4722.395,8351.329,216.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "accfb529-b2c2-4fd1-91e9-253977dd02f2",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1173.326,6730.674,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "733129d1-453c-4101-9644-11e7309dd90e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "42.67368,7338.674,224.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "19e04f54-e6fb-46df-a2ad-f00f22d6feca",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "266.6737,7274.674,223.3944",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "0b73e8a6-2141-4131-b627-843ba0bbaf12",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "424.0042,6454.571,220.2869",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "3081985d-5eb8-47c1-b882-204467340f46",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2207.196,4721.787,228.2303",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "344f6afe-bdde-44ad-8917-e6304460bf87",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2453.326,5418.674,220.0911",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "d13d08f9-d9be-4c14-8409-4c05db2b87d1",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2293.326,5546.674,218.4879",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cb8a29d7-7827-4148-8d93-9299abdc24d5",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2025.326,5706.674,219.6987",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "7466aa1c-93fb-47d8-b218-94c5a42fcd9e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1905.326,5846.674,220.6652",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ffada920-14ca-4976-b18d-aa19bb909e4e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1653.326,6166.674,222.6317",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6cf37117-832b-499d-a41f-41055d48cb0e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1205.326,6386.674,225.0473",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "62daf65e-e6b9-4471-aa85-08c196316237",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "162.2097,6599.629,221.7676",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "15a7f319-219c-4a0d-b6bb-c0de50505141",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "677.0731,6394.693,220.4211",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ccbcc22c-53bf-406f-a8b6-6818d9ed325b",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "394.6737,7050.674,221.7723",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ba567699-909d-4d8b-95fd-db1fe37b359e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "714.6737,6314.674,220.5707",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6643f9e5-8046-45c0-a4ca-c60cd22bf071",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "810.6737,6218.674,222.5191",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6e17e30a-d92a-4256-baf9-4053f00ebb06",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "980.4939,6048.272,222.6402",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "87ac9942-ac8b-45b5-84cb-cacc0ca173c5",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1034.674,5898.674,221.5587",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "d8e342ef-54b0-4586-a722-41ea5adc6194",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1322.674,5514.674,222.5501",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "1d1aff2c-b692-426f-9ab6-5ec7eaff4648",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1470.674,6318.674,231.4848",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "615fac61-1cec-43ff-bff4-9f7e816660c1",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1294.674,6878.674,220.7139",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "1af32163-3ae1-4d12-a5d0-0e5c47cc3f86",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1034.674,7274.674,220.9796",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "9f8761b9-d3c8-4fcd-9ec4-3dd810190bef",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "5094.674,6275.674,648.9669",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8ea05cc2-681c-41ef-be1c-dfb4ab342a79",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4073.674,6269.674,642.2353",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "0915f0a5-605e-4bc5-aa54-cae4d78fa25f",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4335.674,6545.674,614.7482",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "c06df73c-914a-4aa0-980d-9fb5b1cbbd8b",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4923.803,10848.7,269.593",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "823017af-e6a6-424b-bdf1-6d9859eb7c2f",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4451.99,10759.04,281.4926",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6b8886e1-34cc-4b9a-89fa-2fc801a86877",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-3786.051,10689.53,281.4751",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "66fe1d46-c328-4970-abd3-fcf040c14afd",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2850.568,10730.83,259.934",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "54314838-3461-452b-96f4-e07afb30f201",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-2226.344,10594.45,195.8378",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "4c88fb1a-73dd-4b57-b324-0a8848a7094d",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-1311.298,10338.21,194.538",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "bfd81dc4-66f1-4ded-b1c7-67c0e6192cff",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-560.3955,10303.74,202.8524",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "7312d1b7-853a-4f9c-b37d-07324619e334",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "183.4253,10137.23,321.4791",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "fa461bbd-d2d1-459d-aa21-2156e3616606",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1021.267,9845.311,388.3751",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "bb9e18dc-6f2b-4e07-a627-41a14b46f84e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "1822.517,9542.484,480.4716",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6b0a728b-277a-4988-8532-f00cd48ffbf5",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "2343.154,9157.684,652.7849",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cbe0dcda-641c-4eb0-9274-059b8bbd3d6c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "2524.674,8860.674,640.0066",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8d2f76cf-c53b-4a08-8eb5-1b0f5565ffaf",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "2935.674,8007.674,637.8934",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "7ef1af6d-c511-4a50-9515-dd9fe62addfe",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "3609.674,7980.674,629.2684",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "7be2340d-1cab-49db-bc4b-ae23a36469bb",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4043.674,8231.674,619.2253",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a7295c78-ddcd-4bd1-8434-61d16927e880",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4382.523,8022.113,634.2927",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "bc6bac98-820d-4d16-b804-208d17b631b1",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4500.674,7541.674,615.5582",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "33ba5d57-3dc2-4c51-9b3e-34261763f6df",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4418.674,7342.674,611.676",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "7e7f994d-885c-414b-b6eb-5ad2d0226910",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "4482.674,6974.674,612.0156",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "366b3566-186d-4952-a39c-2cefb31e132e",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-5473.584,10880.47,266.5645",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "cf6ce398-912d-4715-a3fe-e51cc7027660",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-5931.52,10726.42,237.225",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "5d497395-a9d9-4b0f-ac07-ae3d5995ac20",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-6397.17,10220.56,233.588",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "3e398356-2cdf-48db-a89f-acac6e42b700",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-6469.303,9842.422,224.0653",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "ed2705ee-40b3-4ef9-9010-8b03a95b9364",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-4858.215,8690.693,222.9182",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "aca14603-297a-4e56-be06-7b0064ed1bc5",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-5112.767,9009.32,224.1419",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "2bae0f11-ff2b-4fdc-80ce-502b387fc0f6",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-5332.325,9226.312,219.8237",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "d5691618-c3fd-4431-9a16-8cd0b76a9938",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-5860.776,9381.814,216.1794",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "b6e6c166-9038-45f4-a07a-222fd296dc2c",
+              "Flags": 0,
+              "Name": "path_node",
+              "Position": "-6489.586,9464.987,218.6813",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
             }
-          ],
-          "Children": []
+          ]
         },
         {
-          "__guid": "ed05ebf3-8825-4985-a7d6-060932cdff98",
+          "__guid": "31942502-03c9-494c-ba71-e4bfe52b20ba",
           "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "-6379.326,9582.674,389.1793",
-          "Rotation": "-0.2566048,0.03378261,0.9576622,-0.1260784",
-          "Tags": "light_spot,light",
+          "Name": "Lights",
           "Enabled": true,
-          "Components": [
+          "Components": [],
+          "Children": [
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "db8e2e91-95f6-4bd0-85da-c398522264ec",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
+              "__guid": "4e1285ea-a36a-4533-81d5-6844ea661043",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "-1942.757,2467.674,414.1794",
+              "Rotation": "-0.4999999,-0.4999999,0.5000001,-0.5000001",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "e386c6ce-e13d-4cc6-b8d4-afdd00bf4a07",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "c520a532-8999-4581-9aad-e5af74782e96",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "-2550.326,-1377.326,-395.8206",
+              "Rotation": "-0.04361953,-0.00000004350549,0.9990482,-0.0000009964364",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "c3cbf52b-4151-4a50-b4bd-e4f56210c30e",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "17b21146-295b-497b-8d8f-35a42a3cdf45",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "-2557.326,-1377.326,-377.8206",
+              "Rotation": "-0.9396926,0.0000003112256,0.3420201,0.0000008550854",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "f3942fec-e9d3-4682-a0f1-f841c9afb92d",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "ed05ebf3-8825-4985-a7d6-060932cdff98",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "-6379.326,9582.674,389.1793",
+              "Rotation": "-0.2566048,0.03378261,0.9576622,-0.1260784",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "db8e2e91-95f6-4bd0-85da-c398522264ec",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "593ca00d-6e7c-420b-8a67-acbf4724eab0",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "1898.674,4656.674,403.1794",
+              "Rotation": "0,0.5,0,0.8660254",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "9b591294-6d11-405c-b4fa-0da958462d0b",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "6f12b397-6706-4486-8d78-eda1f189ecf4",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "3774.841,8986.361,1224.622",
+              "Rotation": "-0.258819,-0.00000001131334,0.9659258,-0.00000004222196",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "df279da7-61fe-4e01-ad2a-2e56ceafc165",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "2573b705-e5a3-46bf-b5af-48cc51ee1721",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "4842.674,8990.674,929.1794",
+              "Rotation": "0,0.7071068,0,0.7071068",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "ca607b51-6683-4af5-8043-687d2b587844",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "2eb26aa1-d1b8-4cef-992d-6cd3d520f3be",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-4535.326,8544.674,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c4bcf4e7-a04f-4db4-959f-579cd5062da0",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "98c22a23-5473-402f-95ea-7259b4d83b34",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-1909.326,6482.674,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6b4db89e-8372-4050-ac26-699a48cb035b",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "662c965c-6f90-4ef7-b1fe-c3b284e2138b",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-837.3263,7034.674,275.769",
+              "Rotation": "0,0,0.6087614,-0.7933533",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3960dabc-b642-4ae1-b0c7-82b4682c3a8c",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "8b0f31e2-fb35-48db-a307-657095a50f66",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "1296.674,6902.674,285.1794",
+              "Rotation": "0,0,0.7933533,-0.6087614",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "b6011937-cbc3-4333-b470-f3365cc90410",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "63a5be7b-ecd3-4fdd-a5a3-b216135fb7e1",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-4921.326,8854.675,275.769",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "943ff35d-fbf9-45d6-89db-7ee759b26768",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "0dd4dd11-59e4-4538-b43b-83589051443d",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2051.851,3968.689,274.476",
+              "Rotation": "0.01353413,0.03267426,0.3824441,-0.9233015",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "f225b902-4a3c-4dd2-93b4-35135fd9d424",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "609120c4-8803-4c37-affa-7d1cf5935156",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-1628.01,1586.674,274.476",
+              "Rotation": "0,-0.03536637,0,0.9993744",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "9e929a78-72c6-4c18-bca1-e2aa0fb89253",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "a8506bd9-f082-44a3-9e15-fca5dbde952c",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2758.801,1698.658,274.476",
+              "Rotation": "0.03267426,-0.01353412,0.9233015,0.382444",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6471e311-40ec-4fc6-842e-babcc6128f46",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "88798634-cee3-48d3-b6ad-412fa174a695",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-3839.326,4506.674,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "b3286a34-68a1-4538-94b4-97391ba4987a",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "78545a85-08c4-44a2-8cfa-c5b22ca0b8f9",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-4353.829,5635.059,275.769",
+              "Rotation": "0,0,0.3826835,-0.9238795",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6dfe56fd-e46f-46e7-9abb-b371748e5d3e",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "493fdefe-c7e0-474c-bf77-c3e4d3504775",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-4731.268,7209.848,275.769",
+              "Rotation": "0,0,0.6087614,-0.7933533",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e81fd4dd-8c78-4783-99cc-e9e67f2805d9",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "536cc2b9-920a-4aa8-8662-5bbe16dcc34c",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-4587.326,6466.674,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "b6e69b26-6d5b-47e8-b599-bf047340d85e",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "ff5bb6a3-1f7d-4479-81d8-99e276ce2a4c",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-3905.326,4946.674,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "ce33d8a0-22fc-4682-82ef-bab19c551aa6",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "57e1f8ec-b9c8-4723-acbd-7670f49cc446",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "3655.738,8874.674,733.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "d717db4b-59e0-4f51-abaa-3a0becdca2d0",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "d5797f4b-7541-4985-97a4-c33c6194c233",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "4086.674,8985.751,865.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "1f28c86d-c0df-4a95-a28b-7bddc6e0eeae",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "f2c3d498-d129-49fa-a634-3d198a2350d8",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-6821.326,9518.674,319.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "73dba6fa-3004-4f23-9231-518352dfa083",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "9cf1529c-b99d-4ca7-968b-f3bb32777e92",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-5029.628,10781.87,369.5441",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "fc73b8e6-199c-458a-8585-de4d02219f06",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "dcc1d408-0640-4991-bbf4-477819129849",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-137.1853,10256.89,425.7773",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "3817380e-027d-4d24-85f4-97c94e775743",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "1cca0d8e-615a-4bdd-97b0-d79ddd83f893",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "438.6737,10178.67,487.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "c355c035-885f-4ce0-a063-f28ac3eddc44",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "206d5f6c-e293-4252-900c-e89a0f0435d8",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "195.5715,10316.79,326.7715",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "9734162f-7b3b-4468-8097-4d404bab5113",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3f260a04-1307-46cb-a5a3-2262a5ce44a9",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "1494.75,9539.014,471.5696",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "bb324109-8339-4d45-88a0-c1db160cb9dc",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "4ec25c10-db21-4300-a84e-8905859cfe88",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-6675.414,9482.641,317.5387",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "eb3f8fe6-982f-44b6-a559-56b4dc936a50",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "6e6a2f82-10ee-484e-aa75-ffd37c659240",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-5929.236,9094.33,299.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "60e5cf35-bb5f-4246-a0af-6c3b8a8a92a8",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "10594095-87b8-4983-befd-4f5610ef31ba",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "2501.667,5575.794,682.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "5e6a0b1a-d914-4ab6-a6fc-c6c93f26a19f",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "ad942114-8bbf-496d-abcb-4b21e2e95c48",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-1941.947,10459.09,659.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "5219f5aa-17b1-45df-929a-caf9ca97511b",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "255e964f-27ef-45ec-9a0d-cf554c7933d3",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2742.445,4538.164,275.769",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "9ebec939-2133-47f0-8631-5e85817c9f6b",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "87874318-815c-46ba-991a-ac72fab4c81a",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "7892.674,3474.674,569.1794",
+              "Rotation": "0,0,0.1305263,-0.9914448",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "208f37c7-b8b7-4df3-a4cf-17f44e44b875",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "db9b509b-1135-40bf-8d38-a6d6f8f41e2a",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-306.0099,1486.674,405.9924",
+              "Rotation": "0,-0.03536637,0,0.9993744",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "2555ce5a-6a4f-4175-bc22-78575ae458c5",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "cf176e54-b2fa-4866-b1af-60228447d6df",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "2269.99,1262.674,702.476",
+              "Rotation": "0,-0.03536636,0,0.9993744",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "33023afe-148e-4c16-8d5f-0a3fa6924b5c",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "f8d5a2ab-bb4c-4dc9-92d6-26201e3b0db6",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "4800.674,1778.674,609.1794",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "8df014cb-278b-4c25-bc7d-f335c8977bea",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "1817800f-f3d3-4972-b226-724e7d4bfd51",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "6712.672,1427.118,566.3691",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "2514df0f-bcce-49e0-9629-72ad4e30022a",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "9ffc0d3a-68ed-4f19-90b6-2aeceb4bc26b",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "7486.672,897.1179,566.3691",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "71cc0575-b5be-49a6-9d88-439dd50afa1c",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "9c9954de-4ac1-42b4-9ab6-c51ac5f83ae3",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "2886.674,5802.674,649.1794",
+              "Rotation": "0,0,0.7933533,-0.6087614",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "02c73e02-9673-4727-8152-53945447ba8a",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "631f3b74-012f-4b86-8781-e805eb0ab11b",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2086.326,2197.674,609.6964",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "904762df-578e-4172-aa14-9ea74d989478",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "c95d016a-c4ac-4966-a583-58b6080b8eaf",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2142.877,2257.674,609.6964",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "68d436a1-6433-44fb-9fe1-0a67291162f5",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "6765a853-dfaa-4edd-8c40-38c3b3e0e360",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2121.485,2455.914,290.5361",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "d1692a60-8a5a-4f01-9193-28fdf16eacc0",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "5a40f405-df22-4133-9e43-c0f56ee21566",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "3965.161,8937.823,664.1794",
+              "Rotation": "0,0,0.1045285,-0.9945219",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "bd896993-9142-4e8c-bf17-3281e3ee71e4",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "17f3c362-d2a1-401f-a137-5f80a97789dc",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "-2702.326,-1379.826,-366.8206",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "e7c2a6b2-2c29-4a1d-806c-5464af7eb7f5",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3f9d6915-610d-4b51-89e7-fb13ada6c55e",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "1080.849,6774.42,285.1794",
+              "Rotation": "0,0,0.5000001,0.8660253",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "4bfd2f71-1ec9-4e87-a502-ed9eb174e0b5",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "0f4b210c-5eae-47da-831a-ff8249eb83f6",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "1462.192,5720.882,285.1794",
+              "Rotation": "0,0,0.7933534,0.6087613",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "6ae938d7-9649-4a52-9734-d3b3475934b4",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "340b904f-00b0-4ccb-8725-0c6ec29c32e7",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "4558.674,4844.674,649.1794",
+              "Tags": "light_point,light",
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "cc5a2d44-1e08-4e3b-8f92-556fd68acb0c",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "d6f975f4-81a7-46bb-9129-a114a11ba0a9",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "4322.674,5934.673,649.1794",
+              "Rotation": "0,0,1,-0.00000004371139",
+              "Tags": "light_point,light",
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "8a2116cb-017a-4184-9cff-415009e34618",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "4e77d6aa-b94b-47bb-ba66-ca0a6a72545f",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "4344.674,6320.674,649.1794",
+              "Tags": "light_point,light",
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "714a4c4a-98bc-454d-9c6e-7acea50f87b4",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "8a210570-077d-4af7-9be1-0c2fb4961dc2",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "7490.778,3361.209,583.1794",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "8d253a6d-82d5-46b6-853f-b091a7f3a75e",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "af2d7f98-6577-47f8-8cc5-e0735d1dbe7e",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "5732.779,3282.575,615.1794",
+              "Rotation": "0,0,0.1391731,0.9902681",
+              "Tags": "light_point,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "84a3909a-2f65-43cd-b889-a31ca86b50d2",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.91373,0.98039,1,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
             }
-          ],
-          "Children": []
+          ]
         },
         {
-          "__guid": "593ca00d-6e7c-420b-8a67-acbf4724eab0",
+          "__guid": "c271b4bc-cd50-4f2e-989d-36adb16fe940",
           "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "1898.674,4656.674,403.1794",
-          "Rotation": "0,0.5,0,0.8660254",
-          "Tags": "light_spot,light",
+          "Name": "Items",
           "Enabled": true,
-          "Components": [
+          "Components": [],
+          "Children": [
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "9b591294-6d11-405c-b4fa-0da958462d0b",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "17b21146-295b-497b-8d8f-35a42a3cdf45",
-          "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "-2557.326,-1377.326,-377.8206",
-          "Rotation": "-0.9396926,0.0000003112256,0.3420201,0.0000008550854",
-          "Tags": "light_spot,light",
-          "Enabled": true,
-          "Components": [
+              "__guid": "3ed8ca3d-fcf0-477c-8014-1c3a5de46250",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-6792.826,9564.174,212.0954",
+              "Rotation": "-0.08018234,-0.04020797,0.4464481,0.8903023",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "f3942fec-e9d3-4682-a0f1-f841c9afb92d",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "c520a532-8999-4581-9aad-e5af74782e96",
-          "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "-2550.326,-1377.326,-395.8206",
-          "Rotation": "-0.04361953,-0.00000004350549,0.9990482,-0.0000009964364",
-          "Tags": "light_spot,light",
-          "Enabled": true,
-          "Components": [
+              "__guid": "ee89eacc-761b-47ea-9345-4e7e61421ffa",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-6819.826,9553.674,211.5363",
+              "Rotation": "-0.09284795,-0.04586028,0.03869773,0.9938706",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "c3cbf52b-4151-4a50-b4bd-e4f56210c30e",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "4e1285ea-a36a-4533-81d5-6844ea661043",
-          "Flags": 0,
-          "Name": "Spot Light (1)",
-          "Position": "-1942.757,2467.674,414.1794",
-          "Rotation": "-0.4999999,-0.4999999,0.5000001,-0.5000001",
-          "Tags": "light_spot,light",
-          "Enabled": true,
-          "Components": [
+              "__guid": "24427b30-665f-4dc4-9166-30945cbd9ae4",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "3782.674,8840.674,631.179",
+              "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
             {
-              "__type": "Sandbox.SpotLight",
-              "__guid": "e386c6ce-e13d-4cc6-b8d4-afdd00bf4a07",
-              "Attenuation": 1,
-              "ConeInner": 15,
-              "ConeOuter": 45,
-              "Cookie": null,
-              "FogMode": "Enabled",
-              "FogStrength": 1,
-              "LightColor": "0.91373,0.98039,1,1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Radius": 500,
-              "Shadows": true
+              "__guid": "d2eae971-10cc-4b4c-b33e-990f6696bf92",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "4010.674,8952.674,624.1794",
+              "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "ae30958c-dfe1-44e8-9bec-1bd06276beb2",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-6787.326,9547.174,211.5363",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "722020a8-df6b-4dfb-b6e7-eba1808089ca",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-1909.326,2498.674,223.2304",
+              "Rotation": "0,0,0.7933533,0.6087615",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "f23e1e32-a8ea-4e04-a06c-5d12eedaf7b3",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-1750.976,2366.923,212.8783",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "0691f55e-3327-4672-b288-1bb161725f48",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-1747.326,2345.787,212.7102",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "b1710afc-8460-4de7-99b4-59e9311036ef",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "-6820.826,9536.173,211.5363",
+              "Rotation": "0,0,0.9205046,0.3907318",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "41a9227e-cdc6-4a8f-bd00-715932bc1a4a",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-1795.561,2303.918,219.6824",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "7c30411e-0b63-40fd-8d2f-82995641c95d",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-1891.326,2528.178,223.2304",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "996e74c0-42ef-4774-954a-e630257d8375",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "3758.486,8883.188,620.1797",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "2e35a848-d76e-4510-a7cd-51371b93e490",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "3780.669,8861.653,621.1794",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "cc825f37-d6df-42d0-9452-cd8cf053486e",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "4490.674,8858.674,643.1794",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "627cc6d9-ca31-4273-9750-a01f03b8ff76",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6858.326,9452.674,216.6794",
+              "Rotation": "-0.7009093,0,0,0.7132505",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "a8d9fd6a-7c73-4096-8a61-58639f5ba902",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6869.826,9447.674,226.1793",
+              "Rotation": "0.2582,-0.6328065,0.2365966,-0.6905873",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "c4c6f975-0573-4ef1-9ece-5b54c03d8333",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6879.371,9476.128,212.0853",
+              "Rotation": "0,0,0.515038,0.8571674",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "3a5de35c-0540-4f41-aa5f-1d65e8008a82",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6900.826,9461.674,246.1794",
+              "Rotation": "0,0,0.1478093,0.9890159",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "4fb04af2-2723-4210-a759-bbfdee3fc5c1",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6901.826,9443.174,246.1794",
+              "Rotation": "0,0,0.07845912,0.9969173",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "1c87c021-713a-4742-b91c-a3f180dda579",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "-6903.324,9424.033,246.1794",
+              "Rotation": "0,0,0.05233596,0.9986295",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
             }
-          ],
-          "Children": []
+          ]
         }
       ]
-    },
-    {
-      "__guid": "af2d7f98-6577-47f8-8cc5-e0735d1dbe7e",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "5882.105,3431.901,404",
-      "Rotation": "0,0,0.1391731,0.9902681",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "84a3909a-2f65-43cd-b889-a31ca86b50d2",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "8a210570-077d-4af7-9be1-0c2fb4961dc2",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "7640.104,3510.536,372",
-      "Rotation": "0,0,0.258819,0.9659258",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "8d253a6d-82d5-46b6-853f-b091a7f3a75e",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "4e77d6aa-b94b-47bb-ba66-ca0a6a72545f",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4494,6470,438",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "714a4c4a-98bc-454d-9c6e-7acea50f87b4",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "d6f975f4-81a7-46bb-9129-a114a11ba0a9",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4472,6084,438",
-      "Rotation": "0,0,1,-0.00000004371139",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "8a2116cb-017a-4184-9cff-415009e34618",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "340b904f-00b0-4ccb-8725-0c6ec29c32e7",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4708,4994,438",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "cc5a2d44-1e08-4e3b-8f92-556fd68acb0c",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "0f4b210c-5eae-47da-831a-ff8249eb83f6",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "1611.518,5870.208,74",
-      "Rotation": "0,0,0.7933534,0.6087613",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "6ae938d7-9649-4a52-9734-d3b3475934b4",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "3f9d6915-610d-4b51-89e7-fb13ada6c55e",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "1230.175,6923.746,74",
-      "Rotation": "0,0,0.5000001,0.8660253",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "4bfd2f71-1ec9-4e87-a502-ed9eb174e0b5",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "17f3c362-d2a1-401f-a137-5f80a97789dc",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-2553,-1230.5,-578",
-      "Rotation": "0,0,0.7071068,-0.7071068",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "e7c2a6b2-2c29-4a1d-806c-5464af7eb7f5",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "5a40f405-df22-4133-9e43-c0f56ee21566",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4114.487,9087.149,453",
-      "Rotation": "0,0,0.1045285,-0.9945219",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "bd896993-9142-4e8c-bf17-3281e3ee71e4",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "6765a853-dfaa-4edd-8c40-38c3b3e0e360",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1972.158,2605.24,79.35669",
-      "Rotation": "0,0,0.7071068,-0.7071068",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "d1692a60-8a5a-4f01-9193-28fdf16eacc0",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "c95d016a-c4ac-4966-a583-58b6080b8eaf",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1993.551,2407,398.517",
-      "Rotation": "0,0,0.7071068,-0.7071068",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "68d436a1-6433-44fb-9fe1-0a67291162f5",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "631f3b74-012f-4b86-8781-e805eb0ab11b",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1937,2347,398.517",
-      "Rotation": "0,0,0.7071068,-0.7071068",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "904762df-578e-4172-aa14-9ea74d989478",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "9c9954de-4ac1-42b4-9ab6-c51ac5f83ae3",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "3036,5952,438",
-      "Rotation": "0,0,0.7933533,-0.6087614",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "02c73e02-9673-4727-8152-53945447ba8a",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "9ffc0d3a-68ed-4f19-90b6-2aeceb4bc26b",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "7635.998,1046.444,355.1897",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "71cc0575-b5be-49a6-9d88-439dd50afa1c",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "1817800f-f3d3-4972-b226-724e7d4bfd51",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "6861.998,1576.444,355.1897",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "2514df0f-bcce-49e0-9629-72ad4e30022a",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "f8d5a2ab-bb4c-4dc9-92d6-26201e3b0db6",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4950,1928,398",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "8df014cb-278b-4c25-bc7d-f335c8977bea",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "cf176e54-b2fa-4866-b1af-60228447d6df",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "2419.316,1412,491.2966",
-      "Rotation": "0,-0.03536636,0,0.9993744",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "33023afe-148e-4c16-8d5f-0a3fa6924b5c",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "db9b509b-1135-40bf-8d38-a6d6f8f41e2a",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-156.6836,1636,194.8131",
-      "Rotation": "0,-0.03536637,0,0.9993744",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "2555ce5a-6a4f-4175-bc22-78575ae458c5",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "87874318-815c-46ba-991a-ac72fab4c81a",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "8042,3624,358",
-      "Rotation": "0,0,0.1305263,-0.9914448",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "208f37c7-b8b7-4df3-a4cf-17f44e44b875",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "255e964f-27ef-45ec-9a0d-cf554c7933d3",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-2593.119,4687.49,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "9ebec939-2133-47f0-8631-5e85817c9f6b",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "ad942114-8bbf-496d-abcb-4b21e2e95c48",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1792.62,10608.42,448",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "5219f5aa-17b1-45df-929a-caf9ca97511b",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "10594095-87b8-4983-befd-4f5610ef31ba",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "2650.993,5725.121,471",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "5e6a0b1a-d914-4ab6-a6fc-c6c93f26a19f",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "6e6a2f82-10ee-484e-aa75-ffd37c659240",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-5779.91,9243.656,88",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "60e5cf35-bb5f-4246-a0af-6c3b8a8a92a8",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "4ec25c10-db21-4300-a84e-8905859cfe88",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-6526.087,9631.967,106.3594",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "eb3f8fe6-982f-44b6-a559-56b4dc936a50",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "3f260a04-1307-46cb-a5a3-2262a5ce44a9",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "1644.077,9688.34,260.3902",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "bb324109-8339-4d45-88a0-c1db160cb9dc",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "206d5f6c-e293-4252-900c-e89a0f0435d8",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "344.8978,10466.12,115.5921",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "9734162f-7b3b-4468-8097-4d404bab5113",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "1cca0d8e-615a-4bdd-97b0-d79ddd83f893",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "588,10328,276",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "c355c035-885f-4ce0-a063-f28ac3eddc44",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "dcc1d408-0640-4991-bbf4-477819129849",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "12.14099,10406.22,214.598",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "3817380e-027d-4d24-85f4-97c94e775743",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "9cf1529c-b99d-4ca7-968b-f3bb32777e92",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4880.302,10931.19,158.3647",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "fc73b8e6-199c-458a-8585-de4d02219f06",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "f2c3d498-d129-49fa-a634-3d198a2350d8",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-6672,9668,108",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "73dba6fa-3004-4f23-9231-518352dfa083",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "d5797f4b-7541-4985-97a4-c33c6194c233",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "4236,9135.077,654",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "1f28c86d-c0df-4a95-a28b-7bddc6e0eeae",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "57e1f8ec-b9c8-4723-acbd-7670f49cc446",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "3805.064,9024,522",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "d717db4b-59e0-4f51-abaa-3a0becdca2d0",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "ff5bb6a3-1f7d-4479-81d8-99e276ce2a4c",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-3756,5096,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "ce33d8a0-22fc-4682-82ef-bab19c551aa6",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "536cc2b9-920a-4aa8-8662-5bbe16dcc34c",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4438,6616,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "b6e69b26-6d5b-47e8-b599-bf047340d85e",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "493fdefe-c7e0-474c-bf77-c3e4d3504775",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4581.942,7359.174,64.58965",
-      "Rotation": "0,0,0.6087614,-0.7933533",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "e81fd4dd-8c78-4783-99cc-e9e67f2805d9",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "78545a85-08c4-44a2-8cfa-c5b22ca0b8f9",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4204.503,5784.385,64.58965",
-      "Rotation": "0,0,0.3826835,-0.9238795",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "6dfe56fd-e46f-46e7-9abb-b371748e5d3e",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "88798634-cee3-48d3-b6ad-412fa174a695",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-3690,4656,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "b3286a34-68a1-4538-94b4-97391ba4987a",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "a8506bd9-f082-44a3-9e15-fca5dbde952c",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-2609.475,1847.985,63.29663",
-      "Rotation": "0.03267426,-0.01353412,0.9233015,0.382444",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "6471e311-40ec-4fc6-842e-babcc6128f46",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "609120c4-8803-4c37-affa-7d1cf5935156",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1478.684,1736,63.29663",
-      "Rotation": "0,-0.03536637,0,0.9993744",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "9e929a78-72c6-4c18-bca1-e2aa0fb89253",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "0dd4dd11-59e4-4538-b43b-83589051443d",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1902.525,4118.016,63.29663",
-      "Rotation": "0.01353413,0.03267426,0.3824441,-0.9233015",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "f225b902-4a3c-4dd2-93b4-35135fd9d424",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "63a5be7b-ecd3-4fdd-a5a3-b216135fb7e1",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4772,9004.001,64.58965",
-      "Rotation": "0,0,0.7071068,-0.7071068",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "943ff35d-fbf9-45d6-89db-7ee759b26768",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "8b0f31e2-fb35-48db-a307-657095a50f66",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "1446,7052,74",
-      "Rotation": "0,0,0.7933533,-0.6087614",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "b6011937-cbc3-4333-b470-f3365cc90410",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "662c965c-6f90-4ef7-b1fe-c3b284e2138b",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-688,7184,64.58965",
-      "Rotation": "0,0,0.6087614,-0.7933533",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "3960dabc-b642-4ae1-b0c7-82b4682c3a8c",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "98c22a23-5473-402f-95ea-7259b4d83b34",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-1760,6632,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "6b4db89e-8372-4050-ac26-699a48cb035b",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "2eb26aa1-d1b8-4cef-992d-6cd3d520f3be",
-      "Flags": 0,
-      "Name": "Point Light (1)",
-      "Position": "-4386,8694,64.58965",
-      "Tags": "light_point,light",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.PointLight",
-          "__guid": "c4bcf4e7-a04f-4db4-959f-579cd5062da0",
-          "Attenuation": 1,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0.91373,0.98039,1,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 400,
-          "Shadows": true
-        }
-      ],
-      "Children": []
     }
   ],
   "SceneProperties": {
