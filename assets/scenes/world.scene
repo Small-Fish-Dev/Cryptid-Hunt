@@ -254,7 +254,7 @@
                   "__guid": "6cc37119-50bf-45e2-98f3-e429c60cd2f6",
                   "Attenuation": 0.2,
                   "ConeInner": 0,
-                  "ConeOuter": 21.24,
+                  "ConeOuter": 20,
                   "Cookie": null,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
