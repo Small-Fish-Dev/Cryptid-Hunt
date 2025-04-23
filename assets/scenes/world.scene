@@ -30,8 +30,8 @@
     {
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
-      "Name": "Player Controller",
-      "Position": "4481.887,6489.713,467.895",
+      "Name": "Player",
+      "Position": "4553.13,6489.713,431.563",
       "Enabled": true,
       "Components": [
         {
@@ -81,21 +81,16 @@
           "OnComponentUpdate": null,
           "PitchClamp": 90,
           "ReachLength": 130,
-          "Renderer": {
-            "_type": "component",
-            "component_id": "571818dd-d571-4757-a30e-12d3328c1c89",
-            "go": "204b6b93-d44d-4e4c-99ee-6c7e5e4a3b58",
-            "component_type": "SkinnedModelRenderer"
-          },
+          "Renderer": null,
           "RotateWithGround": true,
           "RotationAngleLimit": 45,
           "RotationSpeed": 1,
           "RunByDefault": false,
-          "RunSpeed": 320,
+          "RunSpeed": 220,
           "ShowColliderComponents": false,
           "ShowRigidbodyComponent": false,
-          "ThirdPerson": true,
-          "ToggleCameraModeButton": "view",
+          "ThirdPerson": false,
+          "ToggleCameraModeButton": "",
           "UseAnimatorControls": true,
           "UseButton": "use",
           "UseCameraControls": true,
@@ -146,18 +141,6 @@
           "StepUpHeight": 18
         },
         {
-          "__type": "Sandbox.Movement.MoveModeSwim",
-          "__guid": "03fbd545-e2ea-47c9-90c7-4000a3be1af0",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Priority": 10,
-          "SwimLevel": 0.7
-        },
-        {
           "__type": "Sandbox.Movement.MoveModeLadder",
           "__guid": "331d1206-b9b9-4fd1-bdea-90bf19370f19",
           "ClimbableTags": "ladder",
@@ -172,55 +155,6 @@
         }
       ],
       "Children": [
-        {
-          "__guid": "204b6b93-d44d-4e4c-99ee-6c7e5e4a3b58",
-          "Flags": 0,
-          "Name": "Body",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "571818dd-d571-4757-a30e-12d3328c1c89",
-              "AnimationGraph": null,
-              "BodyGroups": 341,
-              "BoneMergeTarget": null,
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "Morphs": {},
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
-              "PlaybackRate": 1,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Sequence": {
-                "Name": null,
-                "Looping": true
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
-            }
-          ],
-          "Children": []
-        },
         {
           "__guid": "c16b8cad-0db5-429e-9da2-e4ead2ecdd44",
           "Flags": 1,
@@ -272,57 +206,112 @@
             }
           ],
           "Children": []
+        },
+        {
+          "__guid": "a8ee2231-5b46-4af2-9336-6bf42c47e30c",
+          "Flags": 0,
+          "Name": "Camera",
+          "Position": "-28.61426,-419.6255,9.798187",
+          "Rotation": "0.00280295,-0.003333778,0.6435326,0.7654063",
+          "Tags": "maincamera",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.CameraComponent",
+              "__guid": "8450246d-7549-439e-a53b-179e886daeac",
+              "BackgroundColor": "0.33333,0.46275,0.52157,1",
+              "ClearFlags": "All",
+              "FieldOfView": 60,
+              "FovAxis": "Horizontal",
+              "IsMainCamera": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Orthographic": false,
+              "OrthographicHeight": 1204,
+              "Priority": 1,
+              "RenderExcludeTags": "",
+              "RenderTags": "",
+              "TargetEye": "None",
+              "Viewport": "0,0,1,1",
+              "ZFar": 10000,
+              "ZNear": 10
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "20508266-df9e-4ac4-9319-5ec6094c7675",
+              "Flags": 0,
+              "Name": "Spot Light",
+              "Tags": "light_spot,light",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "6cc37119-50bf-45e2-98f3-e429c60cd2f6",
+                  "Attenuation": 0.2,
+                  "ConeInner": 0,
+                  "ConeOuter": 21.24,
+                  "Cookie": null,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.99543,1,0.72558,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 1000,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            }
+          ]
         }
       ]
     },
     {
-      "__guid": "a8ee2231-5b46-4af2-9336-6bf42c47e30c",
+      "__guid": "1f38b14e-010a-4b51-b71a-8b432ec7fef0",
       "Flags": 0,
-      "Name": "Camera",
-      "Position": "4328.565,6250.314,478.8394",
-      "Tags": "maincamera",
+      "Name": "Skybox",
+      "Position": "4570.663,6526.707,669.1204",
+      "Tags": "skybox",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.CameraComponent",
-          "__guid": "8450246d-7549-439e-a53b-179e886daeac",
-          "BackgroundColor": "0.33333,0.46275,0.52157,1",
-          "ClearFlags": "All",
-          "FieldOfView": 60,
-          "FovAxis": "Horizontal",
-          "IsMainCamera": true,
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "e5cf1bfd-2b20-49ed-9ac0-fd9bfcd4de4c",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Orthographic": false,
-          "OrthographicHeight": 1204,
-          "Priority": 1,
-          "RenderExcludeTags": "",
-          "RenderTags": "",
-          "TargetEye": "None",
-          "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/cloudy_night/cloudy_night.vmat",
+          "Tint": "0.12363,0.15076,0.2093,1"
         }
       ],
       "Children": []
     },
     {
-      "__guid": "1d2ed065-b461-43bf-8956-64849935d08c",
+      "__guid": "36c3998e-3d94-43df-885d-c8224bde3914",
       "Flags": 0,
       "Name": "Volumetric Fog",
-      "Position": "4361.667,6272.565,494.6656",
+      "Position": "4786.035,5501.617,477.1058",
       "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.VolumetricFogVolume",
-          "__guid": "f3700dc9-3ff9-4eae-b67e-5bd06ea76459",
+          "__guid": "79560fdc-6a53-4053-841d-eb86c5eb10ea",
           "Bounds": {
-            "Mins": "-15000,-15000,-15000",
-            "Maxs": "15000,15000,15000"
+            "Mins": "-15000,-15000,-1500",
+            "Maxs": "15000,15000,1500"
           },
           "FalloffExponent": 1,
           "OnComponentDestroy": null,
@@ -331,7 +320,37 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Strength": 0
+          "Strength": 1
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "eb4d4866-6444-499f-b684-c78348bf1724",
+      "Flags": 0,
+      "Name": "polewik",
+      "Position": "4655.377,6743.217,382.9375",
+      "Rotation": "-0.005960842,0.01729996,0.828778,-0.559278",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.Prop",
+          "__guid": "28b1a41c-3985-4706-97d9-f53eca3cd7b3",
+          "BodyGroups": 18446744073709551615,
+          "Health": 0,
+          "IsStatic": false,
+          "MaterialGroup": null,
+          "Model": "models/polewik/polewik.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "StartAsleep": false,
+          "Tint": "1,1,1,1"
         }
       ],
       "Children": []
