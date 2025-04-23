@@ -29,3 +29,5 @@ code/Properties/*
 Exports/
 *.shader_c
 *.sfk
+.sbox/project.json
+.sbox/cloud.db
