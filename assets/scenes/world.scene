@@ -47,7 +47,7 @@
         {
           "__type": "Sandbox.PlayerController",
           "__guid": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
-          "AccelerationTime": 0,
+          "AccelerationTime": 0.2,
           "AimStrengthBody": 1,
           "AimStrengthEyes": 1,
           "AimStrengthHead": 1,
@@ -69,7 +69,7 @@
             "_type": "gameobject",
             "go": "c16b8cad-0db5-429e-9da2-e4ead2ecdd44"
           },
-          "DeaccelerationTime": 0,
+          "DeaccelerationTime": 0.2,
           "DuckedHeight": 36,
           "DuckedSpeed": 70,
           "EnableFootstepSounds": true,
@@ -81,7 +81,7 @@
           },
           "FootstepVolume": 1,
           "HideBodyInFirstPerson": false,
-          "JumpSpeed": 300,
+          "JumpSpeed": 0,
           "LookSensitivity": 1,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
