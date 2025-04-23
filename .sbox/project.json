@@ -15,8 +15,8 @@
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748032737,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-1.880982,105.2326,38.54465\u0022,\u0022CameraRotation\u0022:\u00220.1181315,0.1172275,-0.6999185,0.6945622\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748032857,
     "DeleteAt": 0
   },
   "gizmo.settings": {
@@ -26,7 +26,7 @@
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1748032588,
+    "Timeout": 1748032811,
     "DeleteAt": 0
   },
   "AssetBrowser.ViewMode": {
@@ -121,42 +121,42 @@
   },
   "AssetBrowser.Model.History": {
     "Value": "[\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\Assets\u0022,\u0022C:\\\\Users\\\\uberm\\\\Desktop\\\\Projects\\\\cryptid-hunt\\\\Assets\u0022]",
-    "Timeout": 1747943646,
+    "Timeout": 1748032819,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.HistoryIdx": {
     "Value": "1",
-    "Timeout": 1747943646,
+    "Timeout": 1748032819,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ViewMode": {
     "Value": "1",
-    "Timeout": 1747943646,
+    "Timeout": 1748032821,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1747943646,
+    "Timeout": 1748032821,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1747943646,
+    "Timeout": 1748032821,
     "DeleteAt": 0
   },
   "AssetBrowser.Model.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1747943646,
+    "Timeout": 1748032821,
     "DeleteAt": 0
   },
   "scene.lastopened": {
-    "Value": "[\u0022scenes/world.scene\u0022,\u0022prefabs/path_node.prefab\u0022]",
-    "Timeout": 1748032588,
+    "Value": "[\u0022scenes/world.scene\u0022,\u0022prefabs/ammo.prefab\u0022]",
+    "Timeout": 1748032811,
     "DeleteAt": 0
   },
   "scenes/world.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-1670.016,3991.648,26.37143\u0022,\u0022CameraRotation\u0022:\u0022-0.1795886,0.1232416,0.8047295,0.5522408\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748032737,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-6714.13,9548.858,53.32978\u0022,\u0022CameraRotation\u0022:\u0022-0.1737491,0.09060053,0.8695021,0.4533972\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748032857,
     "DeleteAt": 0
   },
   ".Viewport0": {
@@ -171,7 +171,12 @@
   },
   "prefabs/path_node.prefab.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-0.6736481,-0.6736482,0.9526824\u0022,\u0022CameraRotation\u0022:\u0022-0.1464466,0.3535534,0.3535534,0.8535534\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1748032737,
+    "Timeout": 1748032773,
+    "DeleteAt": 0
+  },
+  "prefabs/ammo.prefab.Viewport0": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022-1.880982,105.2326,38.54465\u0022,\u0022CameraRotation\u0022:\u00220.1181315,0.1172275,-0.6999185,0.6945622\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1748032857,
     "DeleteAt": 0
   }
 }
