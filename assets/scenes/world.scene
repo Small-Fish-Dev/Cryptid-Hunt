@@ -1515,6 +1515,93 @@
           "Enabled": true,
           "__Prefab": "prefabs/ammo.prefab",
           "__PrefabVariables": {}
+        },
+        {
+          "__guid": "b1710afc-8460-4de7-99b4-59e9311036ef",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-6820.826,9536.173,211.5363",
+          "Rotation": "0,0,0.9205046,0.3907318",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "0691f55e-3327-4672-b288-1bb161725f48",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-1747.326,2345.787,212.7102",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "f23e1e32-a8ea-4e04-a06c-5d12eedaf7b3",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-1750.976,2366.923,212.8783",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "722020a8-df6b-4dfb-b6e7-eba1808089ca",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-1909.326,2498.674,223.2304",
+          "Rotation": "0,0,0.7933533,0.6087615",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ae30958c-dfe1-44e8-9bec-1bd06276beb2",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-6787.326,9547.174,211.5363",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "d2eae971-10cc-4b4c-b33e-990f6696bf92",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "4010.674,8952.674,624.1794",
+          "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "24427b30-665f-4dc4-9166-30945cbd9ae4",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "3782.674,8840.674,631.179",
+          "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "ee89eacc-761b-47ea-9345-4e7e61421ffa",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-6819.826,9553.674,211.5363",
+          "Rotation": "-0.09284795,-0.04586028,0.03869773,0.9938706",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3ed8ca3d-fcf0-477c-8014-1c3a5de46250",
+          "Flags": 0,
+          "Name": "bear trap",
+          "Position": "-6792.826,9564.174,212.0954",
+          "Rotation": "-0.08018234,-0.04020797,0.4464481,0.8903023",
+          "Enabled": true,
+          "__Prefab": "prefabs/bear trap.prefab",
+          "__PrefabVariables": {}
         }
       ]
     }
