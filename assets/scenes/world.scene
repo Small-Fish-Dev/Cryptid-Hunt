@@ -32,7 +32,8 @@
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null
+          "OnComponentUpdate": null,
+          "StringProperty": null
         }
       ],
       "Children": []
@@ -2790,7 +2791,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 27,
+                "Id": 33,
                 "Value": false,
                 "DstId": 20,
                 "DstName": "_value"
@@ -2808,7 +2809,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 28,
+                "Id": 34,
                 "Value": "0,-400,200",
                 "DstId": 22,
                 "DstName": "velocity"
@@ -2826,7 +2827,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 29,
+                "Id": 35,
                 "Value": false,
                 "DstId": 26,
                 "DstName": "_value"
