@@ -1,6 +1,4 @@
-using Sandbox;
-using Sandbox.Utility;
-using System;
+namespace CryptidHunt;
 
 public sealed class Flickerer : Component
 {

@@ -1,4 +1,4 @@
-using Sandbox;
+namespace CryptidHunt;
 
 public sealed class ChurchLight : Component
 {
