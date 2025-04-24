@@ -143,7 +143,8 @@
       "Mounts": null,
       "IsStandaloneOnly": false,
       "Metadata": {
-        "SingleAssetSource": "maps/forest_rework2.vmap"
+        "SingleAssetSource": "maps/forest_rework2.vmap",
+        "ParentPackage": "fish.cryptid_hunt"
       }
     }
   }
