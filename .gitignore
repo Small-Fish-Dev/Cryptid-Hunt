@@ -37,3 +37,4 @@ Exports/
 *.vsidx
 *.bin
 /code/.vs
+/.sbox
