@@ -14,15 +14,25 @@ public sealed class Player : Component
 			Model.OnFootstepEvent += OnFootstepEvent;
 	}
 
-	protected override void OnUpdate()
-	{
+	TimeUntil _nextFootstep;
 
+	protected override void OnFixedUpdate()
+	{
+		if ( !Controller.IsValid() ) return;
+
+		if ( Controller.IsClimbing && _nextFootstep )
+		{
+			_nextFootstep = 0.3f;
+			Sound.Play( "footstep-metal", WorldPosition ).Volume *= 7;
+		}
 	}
 
 	bool _stepSound = false;
 
 	public void OnFootstepEvent( SceneModel.FootstepEvent footstepEvent )
 	{
+		if ( !Controller.IsValid() ) return;
+
 		var footTrace = Scene.Trace.Ray( WorldPosition, WorldPosition + Vector3.Down * 10f )
 			.Radius( 2f )
 			.IgnoreDynamic()
@@ -48,6 +58,6 @@ public sealed class Player : Component
 			_ => "footstep-concrete"
 		};
 
-		Sound.Play( sound, footTrace.EndPosition ).Volume *= Controller.Velocity.Length / 10f;
+		Sound.Play( sound, footTrace.EndPosition ).Volume *= Controller.Velocity.WithZ( 0f ).Length / 10f;
 	}
 }
