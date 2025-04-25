@@ -1,4 +1,4 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Container
 {
@@ -11,8 +11,8 @@ public partial class Container
 	public float MaxWeight { get; private set; }
 
 	private float weight;
-	public float Weight 
-	{ 
+	public float Weight
+	{
 		get => weight;
 		set => weight = Math.Max( value, 0 );
 	}
@@ -27,12 +27,12 @@ public partial class Container
 		}
 	}
 
-	public Container( string name, float maxWeight = 20f, int? id = null, IClient target = null )
+	public Container( string name, float maxWeight = 20f, int? id = null )
 	{
 		ID = id ?? all.Count;
 
 		Name = name;
-		
+
 		Items = new List<Item>();
 		MaxWeight = maxWeight;
 
@@ -41,11 +41,7 @@ public partial class Container
 
 		all.Add( ID, this );
 
-		if ( target != null )
-			UpdateTargets.Add( target );
-
-		if ( Game.IsServer )
-			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Initialize, getInitialUpdate() );
+		//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Initialize, getInitialUpdate() );
 	}
 
 	/// <summary>
@@ -75,8 +71,6 @@ public partial class Container
 	/// <param name="amount"></param>
 	public void Insert( Item item, float? amount = null )
 	{
-		Game.AssertServer();
-
 		var res = item.Resource;
 		var totalAmount = amount ?? item.Amount;
 		var amountToAdd = totalAmount;
@@ -97,7 +91,7 @@ public partial class Container
 						amountToAdd -= fit;
 						item.Amount -= fit;
 
-						Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( found ) );
+						//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( found ) );
 						continue;
 					}
 				}
@@ -109,7 +103,7 @@ public partial class Container
 			item.Container = this;
 			item.Amount = amountToAdd;
 
-			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Insert, getInsertUpdate( item ) );
+			//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Insert, getInsertUpdate( item ) );
 
 			break;
 		}
@@ -125,10 +119,8 @@ public partial class Container
 	/// <returns>A boolean telling you if the item was successfully removed.</returns>
 	public bool Remove( int index, float? amount = null )
 	{
-		Game.AssertServer();
-
 		var item = Items.ElementAtOrDefault( index );
-		if ( item == null ) 
+		if ( item == null )
 			return false;
 
 		if ( amount != null )
@@ -138,16 +130,16 @@ public partial class Container
 
 			Weight -= amount.Value * item.Resource.Weight;
 			item.Amount -= amount.Value;
-			
+
 			if ( item.Amount == 0 )
 			{
 				Items.RemoveAt( index );
-				Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
+				//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
 
 				return true;
 			}
 
-			Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( item ) );
+			//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Amount, getAmountUpdate( item ) );
 
 			return true;
 		}
@@ -155,14 +147,14 @@ public partial class Container
 		item.Container = null;
 		Weight -= item.Amount * item.Resource.Weight;
 		Items.RemoveAt( index );
-		Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
-		
+		//Player.UpdateContainer( To.Multiple( UpdateTargets ), Update.Remove, getRemoveUpdate( index ) );
+
 		return true;
 	}
 
 	public override string ToString()
 	{
-		var result = $"[{(Game.IsServer ? "SV" : "CL")}] {Name}\n";
+		var result = $"{Name}\n";
 		for ( int i = 0; i < Items.Count; i++ )
 			result += $"{Items?[i]?.Resource.Title} " +
 				$"({Items?[i]?.Amount}/{Items?[i]?.Resource.MaxAmount})" +

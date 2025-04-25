@@ -1,4 +1,4 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Item
 {
@@ -8,14 +8,14 @@ public partial class Item
 
 	private Item() { }
 
-	public static Item FromResource( string resourceName)
+	public static Item FromResource( string resourceName )
 	{
-		if ( !ItemResource.All.TryGetValue( resourceName, out var resource ) ) 
+		if ( !ItemResource.All.TryGetValue( resourceName, out var resource ) )
 			return null;
 
-		var item = new Item 
-		{ 
-			Resource = resource 
+		var item = new Item
+		{
+			Resource = resource
 		};
 
 		return item;

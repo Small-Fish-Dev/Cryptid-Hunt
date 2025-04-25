@@ -1,4 +1,4 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 [AttributeUsage( AttributeTargets.Class )]
 public class ItemAttribute : Attribute

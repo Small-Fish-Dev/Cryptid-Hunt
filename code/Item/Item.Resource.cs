@@ -1,4 +1,6 @@
-﻿namespace SpookyJam2022;
+﻿using System.Text.Json.Serialization;
+
+namespace CryptidHunt;
 
 public partial class Item
 {
@@ -27,8 +29,8 @@ public partial class Item
 
 		[Category( "Other" )] public float Weight { get; set; } = 1;
 
-		[HideInEditor, JsonIgnore] public Texture Icon { get; private set; }
-		[HideInEditor, JsonIgnore] public TypeDescription Interactable { get; private set; }
+		[Hide, JsonIgnore] public Texture Icon { get; private set; }
+		[Hide, JsonIgnore] public TypeDescription Interactable { get; private set; }
 
 		private IEnumerable<(TypeDescription type, ItemAttribute attribute)> types = null;
 
@@ -38,12 +40,10 @@ public partial class Item
 			{
 				all.Add( ResourceName, this );
 				fetchBinding();
-				
-				if ( Game.IsServer ) return;
 
 				var world = new SceneWorld();
 
-				var model = Sandbox.Model.Load( Model ) 
+				var model = Sandbox.Model.Load( Model )
 					?? Sandbox.Model.Load( "models/dev/error.vmdl" );
 				var obj = new SceneModel(
 					world,
@@ -59,9 +59,9 @@ public partial class Item
 					FieldOfView = 60f
 				};
 				var size = new Vector2( 256f, 256f );
-				var render = camera.Render( size );
+				//var render = camera.Render( size );
 
-				Icon = render.Texture;
+				//Icon = render.Texture;
 			}
 		}
 
@@ -74,7 +74,6 @@ public partial class Item
 			Interactable = boundType?.Type;
 		}
 
-		[Event.Hotload]
 		private static void fetchAll()
 		{
 			foreach ( var res in All.Values )
