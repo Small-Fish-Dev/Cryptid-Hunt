@@ -45,6 +45,28 @@
       "Enabled": true,
       "Components": [
         {
+          "__type": "Player",
+          "__guid": "534f0fbb-a1c6-44b3-902f-7e62d7219413",
+          "Controller": {
+            "_type": "component",
+            "component_id": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
+            "go": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
+            "component_type": "PlayerController"
+          },
+          "Model": {
+            "_type": "component",
+            "component_id": "6a30452a-795b-46e9-a772-ff01fd83a27e",
+            "go": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
           "__type": "Sandbox.PlayerController",
           "__guid": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
           "AccelerationTime": 0.2,
@@ -72,14 +94,14 @@
           "DeaccelerationTime": 0.2,
           "DuckedHeight": 36,
           "DuckedSpeed": 70,
-          "EnableFootstepSounds": true,
+          "EnableFootstepSounds": false,
           "EnablePressing": true,
           "EyeDistanceFromTop": 8,
           "FootstepMixer": {
             "Name": "game",
             "Id": "ed9b083f-9e77-4c2d-a3e3-318c6f6e81e3"
           },
-          "FootstepVolume": 20,
+          "FootstepVolume": 1,
           "HideBodyInFirstPerson": true,
           "JumpSpeed": 0,
           "LookSensitivity": 1,
