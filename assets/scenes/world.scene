@@ -76,11 +76,11 @@
           "EnablePressing": true,
           "EyeDistanceFromTop": 8,
           "FootstepMixer": {
-            "Name": "unknown",
-            "Id": "00000000-0000-0000-0000-000000000000"
+            "Name": "game",
+            "Id": "ed9b083f-9e77-4c2d-a3e3-318c6f6e81e3"
           },
-          "FootstepVolume": 1,
-          "HideBodyInFirstPerson": false,
+          "FootstepVolume": 20,
+          "HideBodyInFirstPerson": true,
           "JumpSpeed": 0,
           "LookSensitivity": 1,
           "OnComponentDestroy": null,
@@ -91,7 +91,12 @@
           "OnComponentUpdate": null,
           "PitchClamp": 90,
           "ReachLength": 130,
-          "Renderer": null,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "6a30452a-795b-46e9-a772-ff01fd83a27e",
+            "go": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
+            "component_type": "SkinnedModelRenderer"
+          },
           "RotateWithGround": true,
           "RotationAngleLimit": 45,
           "RotationSpeed": 1,
@@ -341,6 +346,55 @@
               "Children": []
             }
           ]
+        },
+        {
+          "__guid": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
+          "Flags": 0,
+          "Name": "Body",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "6a30452a-795b-46e9-a772-ff01fd83a27e",
+              "AnimationGraph": null,
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "Morphs": {},
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "PlaybackRate": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null,
+                "Looping": true
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ],
+          "Children": []
         }
       ]
     },
@@ -441,7 +495,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 5,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -453,7 +507,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 9,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
