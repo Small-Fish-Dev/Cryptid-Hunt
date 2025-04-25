@@ -290,6 +290,24 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "Saturation": 1
+            },
+            {
+              "__type": "Sandbox.Tonemapping",
+              "__guid": "b9d76511-3aa2-479a-afbb-e26c206dfd3a",
+              "__version": 3,
+              "AutoExposureEnabled": true,
+              "ExposureCompensation": 0,
+              "ExposureMethod": "RGB",
+              "MaximumExposure": 3,
+              "MinimumExposure": 1,
+              "Mode": "ACES",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Rate": 1
             }
           ],
           "Children": [
@@ -343,7 +361,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "SkyIndirectLighting": false,
+          "SkyIndirectLighting": true,
           "SkyMaterial": "materials/cloudy_night/cloudy_night.vmat",
           "Tint": "0.12363,0.15076,0.2093,1"
         },
@@ -357,6 +375,107 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.ActionGraphs.ActionsInvoker",
+          "__guid": "50603970-4805-4e4d-92f0-f2664cb0a688",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnDestroyAction": null,
+          "OnDisabledAction": null,
+          "OnEnabledAction": {
+            "__version": 9,
+            "__guid": "76887627-b548-4db6-ba80-79865f613024",
+            "__changeId": 18,
+            "UserData": {
+              "Title": "On Enabled Action",
+              "ReferencedComponentTypes": []
+            },
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 2,
+                "Type": "scene.ref",
+                "UserData": {
+                  "Position": "-12,72"
+                }
+              },
+              {
+                "Id": 3,
+                "Type": "property",
+                "Properties": {
+                  "_name": "SkyIndirectLighting",
+                  "_type": "Sandbox.SkyBox2D"
+                },
+                "UserData": {
+                  "Position": "468,24"
+                }
+              },
+              {
+                "Id": 6,
+                "Type": "time.delayobj",
+                "UserData": {
+                  "Position": "240,24"
+                }
+              }
+            ],
+            "Links": [
+              {
+                "SrcId": 6,
+                "SrcName": "_signal",
+                "DstId": 3,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 2,
+                "SrcName": "_result",
+                "DstId": 3,
+                "DstName": "_target"
+              },
+              {
+                "Id": 5,
+                "Value": false,
+                "DstId": 3,
+                "DstName": "_value"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_signal",
+                "DstId": 6,
+                "DstName": "_signal"
+              },
+              {
+                "Id": 9,
+                "Value": 5,
+                "DstId": 6,
+                "DstName": "seconds"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_target",
+                "DstId": 6,
+                "DstName": "target"
+              }
+            ],
+            "Defaults": {
+              "$2.component": {
+                "_type": "component",
+                "component_id": "e5cf1bfd-2b20-49ed-9ac0-fd9bfcd4de4c",
+                "go": "1f38b14e-010a-4b51-b71a-8b432ec7fef0",
+                "component_type": "SkyBox2D"
+              }
+            }
+          },
+          "OnFixedUpdateAction": null,
+          "OnUpdateAction": null
         }
       ],
       "Children": []
