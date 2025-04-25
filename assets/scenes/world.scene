@@ -343,9 +343,20 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "SkyIndirectLighting": true,
+          "SkyIndirectLighting": false,
           "SkyMaterial": "materials/cloudy_night/cloudy_night.vmat",
           "Tint": "0.12363,0.15076,0.2093,1"
+        },
+        {
+          "__type": "Sandbox.AmbientLight",
+          "__guid": "812e3729-7bb6-4b24-8f37-66c562eaaa1c",
+          "Color": "0.01722,0.01696,0.03256,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
