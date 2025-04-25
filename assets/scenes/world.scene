@@ -2259,34 +2259,6 @@
               "Children": []
             },
             {
-              "__guid": "3f9d6915-610d-4b51-89e7-fb13ada6c55e",
-              "Flags": 0,
-              "Name": "Point Light (1)",
-              "Position": "1080.849,6774.42,285.1794",
-              "Rotation": "0,0,0.5000001,0.8660253",
-              "Tags": "light,light_point",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "4bfd2f71-1ec9-4e87-a502-ed9eb174e0b5",
-                  "Attenuation": 1,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Radius": 400,
-                  "Shadows": false
-                }
-              ],
-              "Children": []
-            },
-            {
               "__guid": "1f6b0de8-6daa-422c-be61-456bbbb4f21b",
               "Flags": 0,
               "Name": "light_spot (1)",
@@ -2663,243 +2635,243 @@
             }
           ],
           "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "92db8f5b-63b9-4aa0-9c71-c0b72c2c8169",
-      "Flags": 0,
-      "Name": "Ladder",
-      "Position": "2564.097,5772.306,-7.114374",
-      "Rotation": "0,0,0.7071068,0.7071068",
-      "Tags": "ladder",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "1eba678e-5c6d-4fbf-a150-193dd98ce07c",
-          "Center": "3.341505,-0.345439,233.9598",
-          "Friction": null,
-          "IsTrigger": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "Scale": "8.826654,25,343.935",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
         },
         {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "503ab255-f82a-4b3b-a8ce-698bc808a237",
-          "Center": "8.861503,-0.345439,118.8249",
-          "Friction": null,
-          "IsTrigger": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "Scale": "3.146655,21,576.6332",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "0abb1420-7ee6-4ea4-b013-fbeb494cb801",
-          "Center": "3.341505,-0.345439,9.87983",
-          "Friction": null,
-          "IsTrigger": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": {
-            "__version": 9,
-            "__guid": "bc2eabeb-909c-4087-8759-628a6a7072be",
-            "__changeId": 65,
-            "UserData": {
-              "Title": "On Collider Enter",
-              "ReferencedComponentTypes": []
+          "__guid": "92db8f5b-63b9-4aa0-9c71-c0b72c2c8169",
+          "Flags": 0,
+          "Name": "Ladder",
+          "Position": "2414.771,5622.98,204.065",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Tags": "ladder",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "1eba678e-5c6d-4fbf-a150-193dd98ce07c",
+              "Center": "3.341505,-0.345439,233.9598",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "8.826654,25,343.935",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
             },
-            "Variables": [],
-            "Nodes": [
-              {
-                "Id": 0,
-                "Type": "input",
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "503ab255-f82a-4b3b-a8ce-698bc808a237",
+              "Center": "8.861503,-0.345439,118.8249",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "3.146655,21,576.6332",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "0abb1420-7ee6-4ea4-b013-fbeb494cb801",
+              "Center": "3.341505,-0.345439,9.87983",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": {
+                "__version": 9,
+                "__guid": "bc2eabeb-909c-4087-8759-628a6a7072be",
+                "__changeId": 65,
                 "UserData": {
-                  "Position": "-72,-24"
-                }
-              },
-              {
-                "Id": 5,
-                "Type": "scene.ref",
-                "UserData": {
-                  "Position": "-240,84",
-                  "Labels": {
-                    "_result": "Controller"
+                  "Title": "On Collider Enter",
+                  "ReferencedComponentTypes": []
+                },
+                "Variables": [],
+                "Nodes": [
+                  {
+                    "Id": 0,
+                    "Type": "input",
+                    "UserData": {
+                      "Position": "-72,-24"
+                    }
+                  },
+                  {
+                    "Id": 5,
+                    "Type": "scene.ref",
+                    "UserData": {
+                      "Position": "-240,84",
+                      "Labels": {
+                        "_result": "Controller"
+                      }
+                    }
+                  },
+                  {
+                    "Id": 18,
+                    "Type": "if",
+                    "UserData": {
+                      "Position": "216,84"
+                    }
+                  },
+                  {
+                    "Id": 19,
+                    "Type": "property",
+                    "ParentId": 5,
+                    "Properties": {
+                      "_name": "IsClimbing",
+                      "_type": "Sandbox.PlayerController"
+                    }
+                  },
+                  {
+                    "Id": 20,
+                    "Type": "property",
+                    "Properties": {
+                      "_name": "IsClimbing",
+                      "_type": "Sandbox.PlayerController"
+                    },
+                    "UserData": {
+                      "Position": "480,264"
+                    }
+                  },
+                  {
+                    "Id": 22,
+                    "Type": "call",
+                    "Properties": {
+                      "_isStatic": false,
+                      "_name": "Jump",
+                      "_type": "Sandbox.PlayerController"
+                    },
+                    "UserData": {
+                      "Position": "528,168"
+                    }
+                  },
+                  {
+                    "Id": 26,
+                    "Type": "property",
+                    "Properties": {
+                      "_name": "IsClimbing",
+                      "_type": "Sandbox.PlayerController"
+                    },
+                    "UserData": {
+                      "Position": "480,72"
+                    }
+                  }
+                ],
+                "Links": [
+                  {
+                    "SrcId": 0,
+                    "SrcName": "_signal",
+                    "DstId": 18,
+                    "DstName": "_signal"
+                  },
+                  {
+                    "SrcId": 19,
+                    "SrcName": "_result",
+                    "DstId": 18,
+                    "DstName": "condition"
+                  },
+                  {
+                    "SrcId": 5,
+                    "SrcName": "_result",
+                    "DstId": 19,
+                    "DstName": "_target"
+                  },
+                  {
+                    "SrcId": 22,
+                    "SrcName": "_signal",
+                    "DstId": 20,
+                    "DstName": "_signal"
+                  },
+                  {
+                    "SrcId": 5,
+                    "SrcName": "_result",
+                    "DstId": 20,
+                    "DstName": "_target"
+                  },
+                  {
+                    "Id": 27,
+                    "Value": false,
+                    "DstId": 20,
+                    "DstName": "_value"
+                  },
+                  {
+                    "SrcId": 26,
+                    "SrcName": "_signal",
+                    "DstId": 22,
+                    "DstName": "_signal"
+                  },
+                  {
+                    "SrcId": 5,
+                    "SrcName": "_result",
+                    "DstId": 22,
+                    "DstName": "_target"
+                  },
+                  {
+                    "Id": 28,
+                    "Value": "0,-400,200",
+                    "DstId": 22,
+                    "DstName": "velocity"
+                  },
+                  {
+                    "SrcId": 18,
+                    "SrcName": "true",
+                    "DstId": 26,
+                    "DstName": "_signal"
+                  },
+                  {
+                    "SrcId": 5,
+                    "SrcName": "_result",
+                    "DstId": 26,
+                    "DstName": "_target"
+                  },
+                  {
+                    "Id": 29,
+                    "Value": false,
+                    "DstId": 26,
+                    "DstName": "_value"
+                  }
+                ],
+                "Defaults": {
+                  "$5.component": {
+                    "_type": "component",
+                    "component_id": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
+                    "go": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
+                    "component_type": "PlayerController"
                   }
                 }
               },
-              {
-                "Id": 18,
-                "Type": "if",
-                "UserData": {
-                  "Position": "216,84"
-                }
-              },
-              {
-                "Id": 19,
-                "Type": "property",
-                "ParentId": 5,
-                "Properties": {
-                  "_name": "IsClimbing",
-                  "_type": "Sandbox.PlayerController"
-                }
-              },
-              {
-                "Id": 20,
-                "Type": "property",
-                "Properties": {
-                  "_name": "IsClimbing",
-                  "_type": "Sandbox.PlayerController"
-                },
-                "UserData": {
-                  "Position": "480,264"
-                }
-              },
-              {
-                "Id": 22,
-                "Type": "call",
-                "Properties": {
-                  "_isStatic": false,
-                  "_name": "Jump",
-                  "_type": "Sandbox.PlayerController"
-                },
-                "UserData": {
-                  "Position": "528,168"
-                }
-              },
-              {
-                "Id": 26,
-                "Type": "property",
-                "Properties": {
-                  "_name": "IsClimbing",
-                  "_type": "Sandbox.PlayerController"
-                },
-                "UserData": {
-                  "Position": "480,72"
-                }
-              }
-            ],
-            "Links": [
-              {
-                "SrcId": 0,
-                "SrcName": "_signal",
-                "DstId": 18,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 19,
-                "SrcName": "_result",
-                "DstId": 18,
-                "DstName": "condition"
-              },
-              {
-                "SrcId": 5,
-                "SrcName": "_result",
-                "DstId": 19,
-                "DstName": "_target"
-              },
-              {
-                "SrcId": 22,
-                "SrcName": "_signal",
-                "DstId": 20,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 5,
-                "SrcName": "_result",
-                "DstId": 20,
-                "DstName": "_target"
-              },
-              {
-                "Id": 27,
-                "Value": false,
-                "DstId": 20,
-                "DstName": "_value"
-              },
-              {
-                "SrcId": 26,
-                "SrcName": "_signal",
-                "DstId": 22,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 5,
-                "SrcName": "_result",
-                "DstId": 22,
-                "DstName": "_target"
-              },
-              {
-                "Id": 28,
-                "Value": "0,-400,200",
-                "DstId": 22,
-                "DstName": "velocity"
-              },
-              {
-                "SrcId": 18,
-                "SrcName": "true",
-                "DstId": 26,
-                "DstName": "_signal"
-              },
-              {
-                "SrcId": 5,
-                "SrcName": "_result",
-                "DstId": 26,
-                "DstName": "_target"
-              },
-              {
-                "Id": 29,
-                "Value": false,
-                "DstId": 26,
-                "DstName": "_value"
-              }
-            ],
-            "Defaults": {
-              "$5.component": {
-                "_type": "component",
-                "component_id": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
-                "go": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
-                "component_type": "PlayerController"
-              }
+              "OnTriggerExit": null,
+              "Scale": "50,50,5.680007",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
             }
-          },
-          "OnTriggerExit": null,
-          "Scale": "50,50,5.680007",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
+          ],
+          "Children": []
         }
-      ],
-      "Children": []
+      ]
     }
   ],
   "SceneProperties": {
@@ -2912,10 +2884,10 @@
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
-      "AgentHeight": 64,
+      "AgentHeight": 32,
       "AgentRadius": 16,
-      "AgentStepSize": 18,
-      "AgentMaxSlope": 40,
+      "AgentStepSize": 48,
+      "AgentMaxSlope": 50,
       "ExcludedBodies": "",
       "IncludedBodies": ""
     }
