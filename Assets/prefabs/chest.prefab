@@ -1,24 +1,36 @@
 {
   "RootObject": {
-    "__guid": "1146d3f5-8005-400f-9c98-19e6496e035f",
+    "__guid": "64b52201-89a8-4d94-83b9-b134fc9faa06",
     "Flags": 0,
-    "Name": "crowbar",
+    "Name": "chest",
     "Enabled": true,
     "Components": [
       {
-        "__type": "Sandbox.ModelRenderer",
-        "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
+        "__type": "Sandbox.SkinnedModelRenderer",
+        "__guid": "ec46b8a8-3c16-4e56-b957-dd9a72048af3",
+        "AnimationGraph": null,
         "BodyGroups": 18446744073709551615,
+        "BoneMergeTarget": null,
         "CreateAttachments": false,
+        "CreateBoneObjects": false,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "models/items/crowbar.vmdl",
+        "Model": "models/items/chest.vmdl",
+        "Morphs": {},
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "Parameters": {
+          "bools": {},
+          "ints": {},
+          "floats": {},
+          "vectors": {},
+          "rotations": {}
+        },
+        "PlaybackRate": 1,
         "RenderOptions": {
           "GameLayer": true,
           "OverlayLayer": false,
@@ -26,12 +38,17 @@
           "AfterUILayer": false
         },
         "RenderType": "On",
-        "Tint": "1,1,1,1"
+        "Sequence": {
+          "Name": null,
+          "Looping": true
+        },
+        "Tint": "1,1,1,1",
+        "UseAnimGraph": true
       },
       {
         "__type": "Sandbox.BoxCollider",
-        "__guid": "2c00b058-ed22-4975-81ba-e7c7c5b00bbe",
-        "Center": "13.75551,1.717767,0.4191902",
+        "__guid": "51a1319d-af30-4ca8-9556-d2a474d46345",
+        "Center": "0.09447479,0.6099501,12.06842",
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -44,7 +61,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Scale": "41.63419,5.064107,2.099545",
+        "Scale": "40.23738,27.73308,24.70067",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
