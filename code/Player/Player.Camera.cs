@@ -2,10 +2,9 @@
 
 public partial class Player
 {
-    /*
-	[Net] public ScriptedEventCamera OverrideCamera { get; set; }
-	[Net] public ScriptedEventTrigger OverrideTrigger { get; set; }
-	[Net] public bool ScriptedEvent { get; set; }
+	public ScriptedEventCamera OverrideCamera { get; set; }
+	public ScriptedEventTrigger OverrideTrigger { get; set; }
+	public bool ScriptedEvent { get; set; }
 
 	float walkBob = 0f;
 
@@ -29,8 +28,8 @@ public partial class Player
 		setup.Position -= setup.Rotation.Up * lastShake.x;
 		setup.Position -= setup.Rotation.Right * lastShake.y;
 
-		var upOffset = ScriptedEvent ? 0 : ( up * ( MathF.Sin( walkBob ) * 0.75f * -2f ) );
-		var sideOffset = ScriptedEvent ? 0 : ( left * ( MathF.Sin( walkBob * 0.5f ) * speed * -3f ) );
+		var upOffset = ScriptedEvent ? 0 : (up * (MathF.Sin( walkBob ) * 0.75f * -2f));
+		var sideOffset = ScriptedEvent ? 0 : (left * (MathF.Sin( walkBob * 0.5f ) * speed * -3f));
 
 		var posDiff = Vector3.Zero;
 		var rotDiff = new Rotation();
@@ -92,7 +91,7 @@ public partial class Player
 		if ( cameraShake > 0 )
 		{
 
-			lastShake = new Vector2( ( Noise.Perlin( Time.Now * shakeIntensity * 20f, 18924 ) * 2 - 1 ) * shakeIntensity, ( Noise.Perlin( Time.Now * shakeIntensity * 20f, 9124 ) * 2 - 1 ) * shakeIntensity );
+			lastShake = new Vector2( (Noise.Perlin( Time.Now * shakeIntensity * 20f, 18924 ) * 2 - 1) * shakeIntensity, (Noise.Perlin( Time.Now * shakeIntensity * 20f, 9124 ) * 2 - 1) * shakeIntensity );
 
 		}
 		else
@@ -108,7 +107,7 @@ public partial class Player
 		setup.ZFar = 3000;
 
 		Event.Run( "PostCameraSetup", posDiff, rotDiff );
-		
+
 
 	}
 
@@ -134,7 +133,7 @@ public partial class Player
 
 	}
 
-	[Event( "ScriptedEventEnd")]
+	[Event( "ScriptedEventEnd" )]
 	void endScriptedEvent()
 	{
 
@@ -144,7 +143,7 @@ public partial class Player
 
 	}
 
-	[Event("ScreenShake")]
+	[Event( "ScreenShake" )]
 	void addScreenShake( float duration, float intensity )
 	{
 

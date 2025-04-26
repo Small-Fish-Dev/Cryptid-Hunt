@@ -1,65 +1,68 @@
 ﻿namespace CryptidHunt;
 
-public partial class ScriptedEventTrigger : Component, Component.ICollisionListener
+public partial class ScriptedEventTrigger : Component, Component.ITriggerListener
 {
-	[Property, Description( "End camera position and rotation" )]
-	public GameObject CameraTargetTransform { get; set; }
+	/// <summary>
+	/// The position and rotation the camera will move to
+	/// </summary>
+	[Property]
+	public GameObject TargetTransform { get; set; }
 
-	[Property, Description( "How fast it reaches the EndCamera (Not seconds)" )]
-	public float TransitionSpeed { get; set; } = 2f;
+	/// <summary>
+	/// How fast the camera will move to the target
+	/// </summary>
+	[Property]
+	public float TransitionDuration { get; set; } = 2f;
 
-	[Property, Description( "How long the scripted event lasts before returning camera to the player (Seconds)" )]
-	public float TransitionDuration { get; set; } = 4f;
+	/// <summary>
+	/// How long the camera stays on target
+	/// </summary>
+	[Property]
+	public float StayDuration { get; set; } = 4f;
 
-	[Property, Description( "Lock the player's inputs" )]
+	/// <summary>
+	/// Lock the player's inputs
+	/// </summary>
+	[Property]
 	public bool LockInputs { get; set; } = true;
 
-	public ScriptedEventCamera EndCamera { get; set; }
-	public bool Activated { get; set; } = false;
-	public bool Activateable { get; set; } = true;
+	public bool Activated { get; private set; } = false;
 
-	public override void
+	TimeUntil transitionEnd;
 
-	public override void StartTouch( Entity other )
+	public void OnTriggerEnter( Collider other )
 	{
+		if ( !Active || Activated ) return;
+		if ( !other.GameObject.Components.TryGet<Player>( out var player, FindMode.EnabledInSelf ) ) return;
 
-		if ( !Activateable ) return;
-		if ( other is not Player player ) return;
-
-		base.Touch( other );
-
-		Activateable = false;
-		Active = true;
+		Activated = true;
 
 		player.LockInputs = LockInputs;
+		player.Controller.UseCameraControls = false;
 
-		StartScriptedEvent( EndCameraRef, this );
+		transitionEnd = TransitionDuration;
 
 		GameTask.RunInThreadAsync( async () =>
 		{
-			await Task.DelaySeconds( TransitionDuration );
-
-			Active = false;
+			await Task.DelaySeconds( TransitionDuration + StayDuration );
 			player.LockInputs = false;
-
-			EndScriptedEvent();
-
+			player.Controller.UseCameraControls = true;
+			Enabled = false;
 		} );
-
 	}
 
-	public void StartScriptedEvent( string camera, ScriptedEventTrigger trigger )
+	protected override void OnUpdate()
 	{
+		if ( !Activated ) return;
+		if ( !Player.Instance.IsValid() || !Player.Instance.Camera.IsValid() ) return;
 
-		Event.Run( "ScriptedEventStart", camera, trigger );
+		var transition = transitionEnd.Fraction;
+		var startPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.Controller.CameraOffset );
+		var endPosition = TargetTransform.WorldPosition;
+		var startRotation = Player.Instance.Controller.EyeAngles.ToRotation();
+		var endRotation = TargetTransform.WorldRotation;
 
+		Player.Instance.Camera.WorldPosition = Vector3.Lerp( startPosition, endPosition, transition );
+		Player.Instance.Camera.WorldRotation = Rotation.Slerp( startRotation, endRotation, transition );
 	}
-
-	public void EndScriptedEvent()
-	{
-
-		Event.Run( "ScriptedEventEnd" );
-
-	}
-
 }
