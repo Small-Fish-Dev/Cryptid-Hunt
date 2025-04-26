@@ -1,8 +1,7 @@
-﻿using SpookyJam2022.States;
+﻿namespace CryptidHunt;
 
-namespace SpookyJam2022;
-
-public partial class NextBotPlayer : BasePlayer
+/*
+public partial class NextBotPlayer : Component
 {
 	private readonly ClothingContainer _clothing = new();
 	private readonly IEnumerable<NextbotPlayerSpawn> _spawnPoints;
@@ -232,4 +231,3 @@ public partial class NextBotPlayer : BasePlayer
 		screen.Rotation = setup.Rotation.Inverse;
 		screen.Position = attachmentPos - Vector3.Right * 0.01f;
 	}*/
-}

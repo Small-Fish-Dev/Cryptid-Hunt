@@ -1,7 +1,8 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Player
 {
+    /*
 	public Container Inventory { get; set; }
 
 	/// <summary>
@@ -116,4 +117,5 @@ public partial class Player
 		pawn.ChangeHolding( interactable );
 		Sound.FromScreen( "sounds/items/pickup.sound" );
 	}
+	*/
 }

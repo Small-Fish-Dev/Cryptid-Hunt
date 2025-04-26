@@ -1,8 +1,8 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Player
 {
-
+    /*
 	[Net] public BaseInteractable Holding { get; set; }
 	public ModelEntity ViewModel { get; set; }
 	public ModelEntity GhostEntity { get; set; }
@@ -141,5 +141,5 @@ public partial class Player
 		
 
 	}
-
+	*/
 }

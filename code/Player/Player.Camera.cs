@@ -1,8 +1,8 @@
-﻿namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Player
 {
-
+    /*
 	[Net] public ScriptedEventCamera OverrideCamera { get; set; }
 	[Net] public ScriptedEventTrigger OverrideTrigger { get; set; }
 	[Net] public bool ScriptedEvent { get; set; }
@@ -12,7 +12,6 @@ public partial class Player
 	TimeUntil cameraShake = 0f;
 	float shakeIntensity = 0f;
 	Vector2 lastShake;
-	/*
 	public override void PostCameraSetup( ref CameraSetup setup )
 	{
 

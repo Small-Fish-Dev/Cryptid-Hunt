@@ -1,10 +1,8 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace SpookyJam2022;
+﻿namespace CryptidHunt;
 
 public partial class Player
 {
-
+    /*
 	public SpotLightEntity FlashLight { get; set; }
 	[Net] public bool FlashLightOn { get; set; } = false;
 
@@ -76,5 +74,5 @@ public partial class Player
 		}
 
 	}
-
+	*/
 }
