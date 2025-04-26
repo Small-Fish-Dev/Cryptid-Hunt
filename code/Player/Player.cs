@@ -1,4 +1,4 @@
-using Sandbox;
+namespace CryptidHunt;
 
 public sealed class Player : Component
 {
@@ -8,6 +8,9 @@ public sealed class Player : Component
 	[Property]
 	public PlayerController Controller { get; set; }
 
+	public bool LockInputs { get; set; } = true;
+	public int HP { get; set; } = 3;
+
 	protected override void OnStart()
 	{
 		if ( Model.IsValid() )
@@ -15,6 +18,9 @@ public sealed class Player : Component
 	}
 
 	TimeUntil _nextFootstep;
+	TimeSince _lastBreath;
+	bool _breatheIn;
+	public TimeUntil NextInteraction { get; set; }
 
 	protected override void OnFixedUpdate()
 	{
@@ -25,7 +31,82 @@ public sealed class Player : Component
 			_nextFootstep = 0.3f;
 			Sound.Play( "footstep-metal", WorldPosition ).Volume *= 7;
 		}
+
+		if ( Input.Pressed( "use" ) )
+		{
+
+			if ( NextInteraction )
+			{
+				NextInteraction = 0.5f;
+
+				/*
+				if ( InteractingWith != null )
+				{
+
+					InteractingWith.Interact( this );
+					ShakeCamera();
+
+				}
+				else
+				{
+
+					var availableInteractable = FirstInteractable;
+
+					availableInteractable?.Interact( this );
+					ShakeCamera();
+
+				}
+
+				LastInteraction = 0;*/
+
+			}
+
+		}
+
+		if ( Input.Pressed( "primary" ) )
+		{
+			if ( NextInteraction )
+			{
+				/*
+				if ( Holding != null )
+				{
+
+					LastInteraction = 0;
+					Holding.Use( this );
+
+				}
+				*/
+			}
+
+		}
+
+		if ( HP > 0 && !LockInputs )
+		{
+			var breathTime = Math.Max( 1, Controller.Velocity.WithZ( 0f ).Length / 80 );
+
+			if ( _lastBreath >= breathTime )
+			{
+				_breatheIn = !_breatheIn;
+
+				Sound.Play( _breatheIn ? "breathe_in" : "breathe_out", WorldPosition );
+
+			}
+		}
 	}
+
+	public void Respawn()
+	{
+
+		//CurrentCheckpoint ??= PlayerSpawn.Initial;
+
+		//EnableAllCollisions = true;
+		//EnableDrawing = true;
+
+		//WorldPosition = CurrentCheckpoint.Position;
+		//Rotation = CurrentCheckpoint.Rotation;
+
+	}
+
 
 	bool _stepSound = false;
 

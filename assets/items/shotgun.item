@@ -1,15 +1,11 @@
-<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-	data = 
-	{
-		Title = "Shotgun"
-		Description = "Be careful with this thing."
-		Color = "0.27895,0.08643,0.08643,1"
-		Model = resource:"models/items/shotgun.vmdl"
-		Angles = "0,0,-30"
-		Position = "40,-5,-8"
-		MaxAmount = 1
-		AmountType = "Integer"
-		Weight = 3.1
-	}
+	"Title": "Shotgun",
+	"Description": "Be careful with this thing.",
+	"Color": "0.27895,0.08643,0.08643,1",
+	"Model": "models/items/shotgun.vmdl",
+	"Angles": "0,0,-30",
+	"Position": "40,-5,-8",
+	"MaxAmount": 1,
+	"AmountType": "Integer",
+	"Weight": 3.100000
 }
