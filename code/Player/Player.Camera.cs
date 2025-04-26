@@ -2,154 +2,44 @@
 
 public partial class Player
 {
-	public ScriptedEventCamera OverrideCamera { get; set; }
-	public ScriptedEventTrigger OverrideTrigger { get; set; }
-	public bool ScriptedEvent { get; set; }
+	[Property]
+	public Vector3 CameraOffset { get; set; } = new Vector3( 0f, 0f, 64f );
+	public TimeUntil CameraShake { get; set; } = 0f;
+	public float ShakeIntensity { get; set; } = 10f;
+	public Vector2 _lastShake;
 
-	float walkBob = 0f;
+	float _walkBob;
+	Vector3 _cameraOffset;
 
-	TimeUntil cameraShake = 0f;
-	float shakeIntensity = 0f;
-	Vector2 lastShake;
-	public override void PostCameraSetup( ref CameraSetup setup )
+	public void SetupCamera()
 	{
+		if ( LockInputs ) return;
 
-		if ( Game.LocalPawn is not Player pawn ) return;
+		var speed = Controller.Velocity.WithZ( 0f ).Length / 220f;
 
-		var speed = pawn.Velocity.Length / 160f;
-		var left = setup.Rotation.Left;
-		var up = setup.Rotation.Up;
+		if ( Controller.GroundObject.IsValid() )
+			_walkBob += Time.Delta * speed * 20f;
 
-		if ( pawn.GroundEntity != null )
-		{
-			walkBob += Time.Delta * speed * 20f;
-		}
+		var sideOffset = MathF.Sin( _walkBob * 0.5f ) * speed * -3f;
+		var upOffset = MathF.Sin( _walkBob ) * 0.75f * -1.5f;
 
-		setup.Position -= setup.Rotation.Up * lastShake.x;
-		setup.Position -= setup.Rotation.Right * lastShake.y;
-
-		var upOffset = ScriptedEvent ? 0 : (up * (MathF.Sin( walkBob ) * 0.75f * -2f));
-		var sideOffset = ScriptedEvent ? 0 : (left * (MathF.Sin( walkBob * 0.5f ) * speed * -3f));
-
-		var posDiff = Vector3.Zero;
-		var rotDiff = new Rotation();
-
-		if ( ScriptedEvent )
-		{
-
-			if ( OverrideTrigger != null && OverrideCamera != null )
-			{
-
-				setup.Position = Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta * OverrideTrigger.TransitionSpeed );
-				setup.Rotation = Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta * OverrideTrigger.TransitionSpeed );
-
-			}
-			else if ( OverrideTrigger == null && OverrideCamera != null )
-			{
-
-				if ( OverrideCamera.Target != null )
-				{
-
-					setup.Position = OverrideCamera.DoNotLerp ? OverrideCamera.Position : Vector3.Lerp( setup.Position, OverrideCamera.Position, Time.Delta );
-					setup.Rotation = OverrideCamera.DoNotLerp ? OverrideCamera.Rotation : Rotation.Lerp( setup.Rotation, OverrideCamera.Rotation, Time.Delta );
-					setup.FieldOfView = 40f;
-
-				}
-				else
-				{
-
-					setup.Position = OverrideCamera.Position;
-					setup.Rotation = OverrideCamera.Rotation;
-
-				}
-
-			}
-
-		}
+		if ( CameraShake > 0 )
+			_lastShake = new Vector2( (Noise.Perlin( Time.Now * ShakeIntensity * 20f, 18924 ) * 2 - 1) * ShakeIntensity, (Noise.Perlin( Time.Now * ShakeIntensity * 20f, 9124 ) * 2 - 1) * ShakeIntensity );
 		else
-		{
+			_lastShake = Vector2.Lerp( _lastShake, 0f, Time.Delta * ShakeIntensity );
 
-			var newPos = Vector3.Lerp( setup.Position - upOffset - sideOffset, EyePosition, Time.Delta * 30f );
-			posDiff = EyePosition - newPos;
-			var newRot = Rotation.Lerp( setup.Rotation, EyeRotation, Time.Delta * 30f );
-			rotDiff = EyeRotation - newRot;
+		sideOffset += _lastShake.x;
+		upOffset += _lastShake.y;
 
-			setup.Position = newPos;
-			setup.Rotation = newRot;
+		CameraOffset = _cameraOffset + Camera.WorldRotation.Left * sideOffset + WorldRotation.Up * upOffset;
 
-		}
-
-		setup.Position += upOffset;
-		setup.Position += sideOffset;
-
-		posDiff += upOffset;
-		posDiff += sideOffset;
-
-		setup.Position += setup.Rotation.Up * lastShake.x;
-		setup.Position += setup.Rotation.Right * lastShake.y;
-
-		if ( cameraShake > 0 )
-		{
-
-			lastShake = new Vector2( (Noise.Perlin( Time.Now * shakeIntensity * 20f, 18924 ) * 2 - 1) * shakeIntensity, (Noise.Perlin( Time.Now * shakeIntensity * 20f, 9124 ) * 2 - 1) * shakeIntensity );
-
-		}
-		else
-		{
-
-			lastShake = Vector2.Lerp( lastShake, 0f, Time.Delta * shakeIntensity );
-
-		}
-
-		setup.FieldOfView = 60f;
-		setup.Viewer = pawn;
-
-		setup.ZFar = 3000;
-
-		Event.Run( "PostCameraSetup", posDiff, rotDiff );
-
-
+		Camera.WorldPosition = WorldTransform.PointToWorld( CameraOffset );
+		Camera.WorldRotation = Controller.EyeAngles;
 	}
 
-	[Event( "ScriptedEventStart" )]
-	void startScriptedEvent( string name, ScriptedEventTrigger trigger )
+	public void AddCameraShake( float duration, float intensity )
 	{
-
-		foreach ( var ent in Entity.All ) // FindByName doesn't work????
-		{
-
-			if ( ent is not ScriptedEventCamera camera ) continue;
-
-			if ( camera.Name == name || camera.Name.Contains( name ) )
-			{
-
-				OverrideCamera = camera;
-				OverrideTrigger = trigger;
-				ScriptedEvent = true;
-
-			}
-
-		}
-
+		CameraShake = duration;
+		ShakeIntensity = intensity;
 	}
-
-	[Event( "ScriptedEventEnd" )]
-	void endScriptedEvent()
-	{
-
-		ScriptedEvent = false;
-		OverrideTrigger = null;
-		OverrideCamera = null;
-
-	}
-
-	[Event( "ScreenShake" )]
-	void addScreenShake( float duration, float intensity )
-	{
-
-		cameraShake = duration;
-		shakeIntensity = intensity;
-
-	}*/
-
 }

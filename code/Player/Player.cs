@@ -31,6 +31,7 @@ public partial class Player : Component
 		{
 			RunSpeed = Controller.RunSpeed;
 			Controller.RunSpeed = Controller.WalkSpeed;
+			_cameraOffset = CameraOffset;
 		}
 	}
 
@@ -116,7 +117,7 @@ public partial class Player : Component
 
 		if ( HP > 0 && !LockInputs )
 		{
-			var breathTime = Running ? 0.7f : 1.5f;
+			var breathTime = Running ? 1f : 1.5f;
 
 			if ( _lastBreath >= breathTime )
 			{
@@ -124,11 +125,16 @@ public partial class Player : Component
 				_lastBreath = 0f;
 
 				var sound = Sound.Play( _breatheIn ? "breathe_in" : "breathe_out", WorldPosition );
-				sound.Volume *= Running ? 40f : 10f;
+				sound.Volume *= Running ? 20f : 5f;
 				sound.Pitch *= Running ? 1.1f : 1f;
 
 			}
 		}
+	}
+
+	protected override void OnUpdate()
+	{
+		SetupCamera();
 	}
 
 	public void Respawn()
@@ -169,7 +175,7 @@ public partial class Player : Component
 		if ( !_stepSound )
 			return;
 
-		if ( _lastStep <= 0.2f ) return;
+		if ( _lastStep <= (Running ? 0.2f : 0.7f) ) return;
 		_lastStep = 0f;
 
 		var sound = tag switch

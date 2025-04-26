@@ -47,6 +47,13 @@
         {
           "__type": "CryptidHunt.Player",
           "__guid": "4f9d6164-f878-4bf2-a0a0-3177d6ea9269",
+          "Camera": {
+            "_type": "component",
+            "component_id": "8450246d-7549-439e-a53b-179e886daeac",
+            "go": "a8ee2231-5b46-4af2-9336-6bf42c47e30c",
+            "component_type": "CameraComponent"
+          },
+          "CameraOffset": "0,0,64",
           "Controller": {
             "_type": "component",
             "component_id": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
@@ -130,7 +137,7 @@
           "ToggleCameraModeButton": "",
           "UseAnimatorControls": true,
           "UseButton": "use",
-          "UseCameraControls": true,
+          "UseCameraControls": false,
           "UseFovFromPreferences": true,
           "UseInputControls": true,
           "UseLookControls": true,
@@ -241,15 +248,12 @@
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
             }
-          ],
-          "Children": []
+          ]
         },
         {
           "__guid": "a8ee2231-5b46-4af2-9336-6bf42c47e30c",
           "Flags": 0,
           "Name": "Camera",
-          "Position": "-28.61426,-419.6255,9.798187",
-          "Rotation": "0.00280295,-0.003333778,0.6435326,0.7654063",
           "Tags": "maincamera",
           "Enabled": true,
           "Components": [
@@ -364,8 +368,7 @@
                   "Radius": 1000,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             }
           ]
         },
@@ -407,16 +410,14 @@
                 "BloomLayer": false,
                 "AfterUILayer": false
               },
-              "RenderType": "On",
+              "RenderType": "ShadowsOnly",
               "Sequence": {
-                "Name": null,
-                "Looping": true
+                "Name": null
               },
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
             }
-          ],
-          "Children": []
+          ]
         }
       ]
     },
@@ -553,8 +554,7 @@
           "OnFixedUpdateAction": null,
           "OnUpdateAction": null
         }
-      ],
-      "Children": []
+      ]
     },
     {
       "__guid": "36c3998e-3d94-43df-885d-c8224bde3914",
@@ -579,8 +579,7 @@
           "OnComponentUpdate": null,
           "Strength": 1
         }
-      ],
-      "Children": []
+      ]
     },
     {
       "__guid": "3f9b6a30-1db2-4adf-a82e-274f8e9ef58c",
@@ -588,7 +587,6 @@
       "Name": "NewMap",
       "Position": "149.3263,149.3264,-211.1794",
       "Enabled": true,
-      "Components": [],
       "Children": [
         {
           "__guid": "dd344e2e-b954-484e-af73-18108b9a6fbf",
@@ -597,7 +595,6 @@
           "Position": "4850.674,8985.091,1776.435",
           "Rotation": "-0.00000005971086,0.8660254,-0.00000005971086,-0.5",
           "Enabled": true,
-          "Components": [],
           "Children": [
             {
               "__guid": "97375098-6897-4dbe-bf12-062750fda6de",
@@ -627,8 +624,7 @@
                   "Radius": 487.84003,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "8f967e11-af3d-4d80-80ab-171bf6472454",
@@ -656,8 +652,7 @@
                   "Radius": 487.84003,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             }
           ]
         },
@@ -666,1042 +661,811 @@
           "Flags": 0,
           "Name": "Path",
           "Enabled": true,
-          "Components": [],
           "Children": [
             {
               "__guid": "3a5669ed-92ec-4282-af71-efa7b6812497",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1833.326,3878.674,219.2189",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a0c3445c-ace0-4e97-836a-65fba4323626",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4060.292,1038.385,593.5939",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "be9efc50-0cb4-4a1e-be84-c81d9e0ff1c8",
               "Flags": 0,
               "Name": "path_node",
               "Position": "3736.339,1094.266,631.1176",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "f47e0e02-fed6-4ad8-974e-b8c438e81e23",
               "Flags": 0,
               "Name": "path_node",
               "Position": "3399.674,1227.674,637.3907",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "25b3622a-4031-4a9a-994a-01a51f03ccad",
               "Flags": 0,
               "Name": "path_node",
               "Position": "3050.674,903.6736,636.8843",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "8e67e376-b9b5-42ed-ae0b-cbd81d2cde9e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "2386.674,973.6736,642.6096",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "52af7ed0-afef-4d58-9da0-8ab30f6d0ce2",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1905.583,1528.063,642.7612",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a223a637-7f2a-4ffc-95fa-548b43f6c147",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1074.674,1372.674,599.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6df9a298-fbd0-42ad-9374-2b16ac02383d",
               "Flags": 0,
               "Name": "path_node",
               "Position": "980.6737,1519.674,591.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "9df4e4ab-4263-4bf3-ae94-747b4c017f02",
               "Flags": 0,
               "Name": "path_node",
               "Position": "738.6737,1607.674,537.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "f4a53e00-f41f-4786-a537-e0e5be102722",
               "Flags": 0,
               "Name": "path_node",
               "Position": "490.6737,1482.674,507.2971",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "825715c2-1ed6-420d-a879-8286a777657e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-117.3263,1578.674,391.7633",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "f4e0add3-4eaa-4466-a48d-024642e5cbe8",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-565.3263,1674.674,300.297",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6173bcf1-4d4b-4547-8358-40d1b1295543",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1051.189,1776.791,239.9362",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a1209507-7793-47d3-9812-6ac89a7da661",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1237.326,1930.674,225.5475",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "be19a75a-eaeb-4d84-8c8d-54c3f561957f",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1589.366,1884.171,242.0165",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "8d0cac2c-8d61-4c59-ba4a-66ad8d31e0d4",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1966.776,1841.963,216.4828",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "f0e3c377-73c7-4d1c-90bf-281716a6473e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2167.091,1881.018,232.3381",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "e1a6b26d-8c1f-4d65-bfc5-a6b2bd29d93a",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2352.12,1991.26,247.1524",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "dbf32fbb-06eb-4154-8fa6-f37f557ae2aa",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2376.819,2289.936,220.5992",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "c946e05a-191d-4fb0-b371-e8b33ddbc0ef",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4241.674,1034.674,556.9578",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a8b39a1c-c336-4ba3-90d7-cf73efa4782b",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4633.674,661.6736,531.6602",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cdfbbbf0-2e2b-4075-b435-54f79c7a29b1",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5583.674,764.6736,525.3948",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "16466ff9-700e-4179-8b4c-377758a3a19c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7430.674,3076.674,532.406",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "e6ade82b-0739-4b56-af13-048af9304647",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5305.674,5607.674,641.7336",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cdc0d6b4-12dd-4533-bbed-a70b67c40a19",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5337.674,5181.674,636.9543",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "fbbce41b-13b7-4a0c-bf69-c7c07d6efb78",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5750.674,4809.674,640.6074",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "e5a0fbb0-bd8d-4871-bbca-c0cfc21c872e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5977.674,4299.674,642.5006",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "618928a0-e918-42f5-a2f6-b0eb56289bc1",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6289.674,4204.674,610.6645",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "0c49e227-5f37-407d-9736-67f99760f5fc",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6616.674,3976.674,554.6802",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "2fb8eed2-3be0-4149-ae88-a9d79fdfbc6a",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6899.674,4095.674,591.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "11ba7a7d-cc4c-4ada-94a7-6c688b55ba98",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7636.674,3311.674,549.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "b70a51a1-a4b6-42fa-9136-944ff628b8ab",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7510.674,2742.674,536.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "440daaf1-e3a3-4626-be7e-32bc9bace20a",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5694.674,1155.674,514.0251",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "d232b7c7-8bec-48dd-8c9c-6bc884bed0e5",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7636.674,2516.802,531.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a012cc89-2315-4f68-a157-8685be25e0bb",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7583.674,2246.674,517.5184",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "3d5b1dee-6de5-41e6-adde-97c054e710cf",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7367.068,2103.708,515.103",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "51a40b80-4ab7-441f-b837-10a8b6e9d099",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7196.589,1822.09,512.0471",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "148dde60-9344-4504-acb2-c7c4da5b1875",
               "Flags": 0,
               "Name": "path_node",
               "Position": "7007.674,1669.674,507.9062",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "9d14e3d3-36e8-4f2e-bcbd-68fba54ca9e8",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6622.674,1567.674,517.8532",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ac48fb0c-826b-4d00-9621-baa0de41ceff",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6527.674,1125.674,505.644",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "08ec0aea-b429-49f8-a43a-b193f1224ea4",
               "Flags": 0,
               "Name": "path_node",
               "Position": "6300.674,939.6736,514.9445",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "bd9086ec-4a2d-4d6f-9587-ddca6c49e03b",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1709.326,3410.674,239.7674",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cd384b80-1a85-4363-8d0b-1f51495b5757",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1941.326,4106.674,219.215",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "2a7ebe80-b1a8-4cde-970b-9c7937123552",
               "Flags": 0,
               "Name": "path_node",
               "Position": "3942.674,6066.674,627.1451",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "3f01041a-24f3-4ffc-a2c3-5a073173bd29",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2162.95,4452.458,219.8901",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "343357df-b88b-43d6-ab4a-76cf536133fe",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1461.326,6826.674,221.5205",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "3589f5f9-3cf0-4b74-8cdf-f1467445644c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1863.833,6813.509,221.9183",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "c95cb4e3-8005-4d48-965d-8abf92ae8ff3",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2357.326,6570.674,224.1469",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6589e04c-a63d-491f-b339-c88653dfe683",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2709.326,6506.674,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "271f0b5f-e875-4c75-b0d3-014b2e2d6b14",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2898.352,6238.834,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6d78da8d-cc07-4907-aa69-b3000c88f824",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3019.439,5848.153,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "8e3c1a54-8b40-4724-99f5-4dd906ba8712",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3065.637,5453.794,224.1793",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "1590e699-ae69-48bf-9b40-8413a5da3038",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3213.797,5098.865,224.1793",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "2082eef8-9fcb-4bcf-878e-d006ba6efe1b",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3498.884,4896.505,224.1793",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "16d45b60-71c4-4ce2-94de-5267bd488660",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3765.326,4970.674,224.1793",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "9888b81b-eb7e-4db8-bd04-03dd85c8272c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3875.144,5580.521,233.5341",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "317f0306-370f-44bd-b038-9c59fb4e9b36",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3845.844,5965.242,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "26f8d0ca-d337-4f5d-982d-7034f962775c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4387.326,6412.674,224.1803",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ed2098af-b938-4086-b830-12f1d0c8a910",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4122.326,6765.674,284.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "48a33855-1700-4db7-8809-c0bc874febd7",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4194.788,7348.122,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "1439d48b-dfe4-4b03-a8c4-fd66fbf5de94",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4722.395,8351.329,216.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "accfb529-b2c2-4fd1-91e9-253977dd02f2",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1173.326,6730.674,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "733129d1-453c-4101-9644-11e7309dd90e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "42.67368,7338.674,224.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "19e04f54-e6fb-46df-a2ad-f00f22d6feca",
               "Flags": 0,
               "Name": "path_node",
               "Position": "266.6737,7274.674,223.3944",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "0b73e8a6-2141-4131-b627-843ba0bbaf12",
               "Flags": 0,
               "Name": "path_node",
               "Position": "424.0042,6454.571,220.2869",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "3081985d-5eb8-47c1-b882-204467340f46",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2207.196,4721.787,228.2303",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "344f6afe-bdde-44ad-8917-e6304460bf87",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2453.326,5418.674,220.0911",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "d13d08f9-d9be-4c14-8409-4c05db2b87d1",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2293.326,5546.674,218.4879",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cb8a29d7-7827-4148-8d93-9299abdc24d5",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2025.326,5706.674,219.6987",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "7466aa1c-93fb-47d8-b218-94c5a42fcd9e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1905.326,5846.674,220.6652",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ffada920-14ca-4976-b18d-aa19bb909e4e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1653.326,6166.674,222.6317",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6cf37117-832b-499d-a41f-41055d48cb0e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1205.326,6386.674,225.0473",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "62daf65e-e6b9-4471-aa85-08c196316237",
               "Flags": 0,
               "Name": "path_node",
               "Position": "162.2097,6599.629,221.7676",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "15a7f319-219c-4a0d-b6bb-c0de50505141",
               "Flags": 0,
               "Name": "path_node",
               "Position": "677.0731,6394.693,220.4211",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ccbcc22c-53bf-406f-a8b6-6818d9ed325b",
               "Flags": 0,
               "Name": "path_node",
               "Position": "394.6737,7050.674,221.7723",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ba567699-909d-4d8b-95fd-db1fe37b359e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "714.6737,6314.674,220.5707",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6643f9e5-8046-45c0-a4ca-c60cd22bf071",
               "Flags": 0,
               "Name": "path_node",
               "Position": "810.6737,6218.674,222.5191",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6e17e30a-d92a-4256-baf9-4053f00ebb06",
               "Flags": 0,
               "Name": "path_node",
               "Position": "980.4939,6048.272,222.6402",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "87ac9942-ac8b-45b5-84cb-cacc0ca173c5",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1034.674,5898.674,221.5587",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "d8e342ef-54b0-4586-a722-41ea5adc6194",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1322.674,5514.674,222.5501",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "1d1aff2c-b692-426f-9ab6-5ec7eaff4648",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1470.674,6318.674,231.4848",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "615fac61-1cec-43ff-bff4-9f7e816660c1",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1294.674,6878.674,220.7139",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "1af32163-3ae1-4d12-a5d0-0e5c47cc3f86",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1034.674,7274.674,220.9796",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "9f8761b9-d3c8-4fcd-9ec4-3dd810190bef",
               "Flags": 0,
               "Name": "path_node",
               "Position": "5094.674,6275.674,648.9669",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "8ea05cc2-681c-41ef-be1c-dfb4ab342a79",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4073.674,6269.674,642.2353",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "0915f0a5-605e-4bc5-aa54-cae4d78fa25f",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4335.674,6545.674,614.7482",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "c06df73c-914a-4aa0-980d-9fb5b1cbbd8b",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4923.803,10848.7,269.593",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "823017af-e6a6-424b-bdf1-6d9859eb7c2f",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4451.99,10759.04,281.4926",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6b8886e1-34cc-4b9a-89fa-2fc801a86877",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-3786.051,10689.53,281.4751",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "66fe1d46-c328-4970-abd3-fcf040c14afd",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2850.568,10730.83,259.934",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "54314838-3461-452b-96f4-e07afb30f201",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-2226.344,10594.45,195.8378",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "4c88fb1a-73dd-4b57-b324-0a8848a7094d",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-1311.298,10338.21,194.538",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "bfd81dc4-66f1-4ded-b1c7-67c0e6192cff",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-560.3955,10303.74,202.8524",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "7312d1b7-853a-4f9c-b37d-07324619e334",
               "Flags": 0,
               "Name": "path_node",
               "Position": "183.4253,10137.23,321.4791",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "fa461bbd-d2d1-459d-aa21-2156e3616606",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1021.267,9845.311,388.3751",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "bb9e18dc-6f2b-4e07-a627-41a14b46f84e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "1822.517,9542.484,480.4716",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "6b0a728b-277a-4988-8532-f00cd48ffbf5",
               "Flags": 0,
               "Name": "path_node",
               "Position": "2343.154,9157.684,652.7849",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cbe0dcda-641c-4eb0-9274-059b8bbd3d6c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "2524.674,8860.674,640.0066",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "8d2f76cf-c53b-4a08-8eb5-1b0f5565ffaf",
               "Flags": 0,
               "Name": "path_node",
               "Position": "2935.674,8007.674,637.8934",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "7ef1af6d-c511-4a50-9515-dd9fe62addfe",
               "Flags": 0,
               "Name": "path_node",
               "Position": "3609.674,7980.674,629.2684",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "7be2340d-1cab-49db-bc4b-ae23a36469bb",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4043.674,8231.674,619.2253",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "a7295c78-ddcd-4bd1-8434-61d16927e880",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4382.523,8022.113,634.2927",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "bc6bac98-820d-4d16-b804-208d17b631b1",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4500.674,7541.674,615.5582",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "33ba5d57-3dc2-4c51-9b3e-34261763f6df",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4418.674,7342.674,611.676",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "7e7f994d-885c-414b-b6eb-5ad2d0226910",
               "Flags": 0,
               "Name": "path_node",
               "Position": "4482.674,6974.674,612.0156",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "366b3566-186d-4952-a39c-2cefb31e132e",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-5473.584,10880.47,266.5645",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "cf6ce398-912d-4715-a3fe-e51cc7027660",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-5931.52,10726.42,237.225",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "5d497395-a9d9-4b0f-ac07-ae3d5995ac20",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-6397.17,10220.56,233.588",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "3e398356-2cdf-48db-a89f-acac6e42b700",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-6469.303,9842.422,224.0653",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "ed2705ee-40b3-4ef9-9010-8b03a95b9364",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-4858.215,8690.693,222.9182",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "aca14603-297a-4e56-be06-7b0064ed1bc5",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-5112.767,9009.32,224.1419",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "2bae0f11-ff2b-4fdc-80ce-502b387fc0f6",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-5332.325,9226.312,219.8237",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "d5691618-c3fd-4431-9a16-8cd0b76a9938",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-5860.776,9381.814,216.1794",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             },
             {
               "__guid": "b6e6c166-9038-45f4-a07a-222fd296dc2c",
               "Flags": 0,
               "Name": "path_node",
               "Position": "-6489.586,9464.987,218.6813",
-              "Enabled": true,
-              "Components": [],
-              "Children": []
+              "Enabled": true
             }
           ]
         },
@@ -1710,7 +1474,6 @@
           "Flags": 0,
           "Name": "Lights",
           "Enabled": true,
-          "Components": [],
           "Children": [
             {
               "__guid": "c520a532-8999-4581-9aad-e5af74782e96",
@@ -1740,8 +1503,7 @@
                   "Radius": 500,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "17b21146-295b-497b-8d8f-35a42a3cdf45",
@@ -1771,8 +1533,7 @@
                   "Radius": 500,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "ed05ebf3-8825-4985-a7d6-060932cdff98",
@@ -1802,8 +1563,7 @@
                   "Radius": 348.56,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "593ca00d-6e7c-420b-8a67-acbf4724eab0",
@@ -1833,8 +1593,7 @@
                   "Radius": 500,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "2573b705-e5a3-46bf-b5af-48cc51ee1721",
@@ -1864,8 +1623,7 @@
                   "Radius": 500,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "57e1f8ec-b9c8-4723-acbd-7670f49cc446",
@@ -1891,8 +1649,7 @@
                   "Radius": 400,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "f2c3d498-d129-49fa-a634-3d198a2350d8",
@@ -1918,8 +1675,7 @@
                   "Radius": 200,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "9cf1529c-b99d-4ca7-968b-f3bb32777e92",
@@ -1945,8 +1701,7 @@
                   "Radius": 200,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "206d5f6c-e293-4252-900c-e89a0f0435d8",
@@ -1972,8 +1727,7 @@
                   "Radius": 291.28006,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "3f260a04-1307-46cb-a5a3-2262a5ce44a9",
@@ -1999,8 +1753,7 @@
                   "Radius": 400,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "4ec25c10-db21-4300-a84e-8905859cfe88",
@@ -2026,8 +1779,7 @@
                   "Radius": 262.56003,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "10594095-87b8-4983-befd-4f5610ef31ba",
@@ -2053,8 +1805,7 @@
                   "Radius": 665.44025,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "ad942114-8bbf-496d-abcb-4b21e2e95c48",
@@ -2084,8 +1835,7 @@
                   "Radius": 1200,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "87874318-815c-46ba-991a-ac72fab4c81a",
@@ -2112,8 +1862,7 @@
                   "Radius": 400,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "631f3b74-012f-4b86-8781-e805eb0ab11b",
@@ -2140,8 +1889,7 @@
                   "Radius": 100,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "6765a853-dfaa-4edd-8c40-38c3b3e0e360",
@@ -2168,8 +1916,7 @@
                   "Radius": 300,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "5a40f405-df22-4133-9e43-c0f56ee21566",
@@ -2196,8 +1943,7 @@
                   "Radius": 120.07992,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "5ea52bda-69aa-4298-9c66-4df98f02c0b6",
@@ -2227,8 +1973,7 @@
                   "Radius": 216,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "17f3c362-d2a1-401f-a137-5f80a97789dc",
@@ -2255,8 +2000,7 @@
                   "Radius": 400,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "1f6b0de8-6daa-422c-be61-456bbbb4f21b",
@@ -2286,8 +2030,7 @@
                   "Radius": 500,
                   "Shadows": false
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "dbe57d5d-d8f3-4d99-8a44-ecafb1c8ff3f",
@@ -2317,8 +2060,7 @@
                   "Radius": 500,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "c8f89ff5-4626-4d8d-86f2-7f42fc3a0fbe",
@@ -2348,8 +2090,7 @@
                   "Radius": 500,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             },
             {
               "__guid": "0a4bfd17-f280-4ebf-a5af-4a662e4cb875",
@@ -2376,8 +2117,7 @@
                   "Radius": 400,
                   "Shadows": true
                 }
-              ],
-              "Children": []
+              ]
             }
           ]
         },
@@ -2386,7 +2126,6 @@
           "Flags": 0,
           "Name": "Items",
           "Enabled": true,
-          "Components": [],
           "Children": [
             {
               "__guid": "3ed8ca3d-fcf0-477c-8014-1c3a5de46250",
@@ -2627,14 +2366,12 @@
               },
               "RenderType": "On",
               "Sequence": {
-                "Name": null,
-                "Looping": true
+                "Name": null
               },
               "Tint": "1,1,1,1",
               "UseAnimGraph": true
             }
-          ],
-          "Children": []
+          ]
         },
         {
           "__guid": "92db8f5b-63b9-4aa0-9c71-c0b72c2c8169",
@@ -2868,16 +2605,20 @@
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
             }
-          ],
-          "Children": []
+          ]
         }
       ]
     }
   ],
   "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
     "NetworkInterpolation": true,
+    "PhysicsSubSteps": 1,
+    "ThreadedAnimation": true,
     "TimeScale": 1,
-    "WantsSystemScene": true,
+    "UseFixedUpdate": true,
     "Metadata": {},
     "NavMesh": {
       "Enabled": true,
