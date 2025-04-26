@@ -67,6 +67,9 @@ public partial class Player : Component
 			Stamina = Math.Clamp( Stamina + Time.Delta * 10f, 0f, 100f );
 		}
 
+		if ( Input.Pressed( "Flashlight" ) )
+			SetFlashLight( !FlashLightOn, true );
+
 		if ( Input.Pressed( "use" ) )
 		{
 
@@ -186,6 +189,6 @@ public partial class Player : Component
 			_ => "footstep-concrete"
 		};
 
-		Sound.Play( sound, footTrace.EndPosition ).Volume *= Controller.Velocity.WithZ( 0f ).Length / 10f;
+		Sound.Play( sound, footTrace.EndPosition ).Volume *= Controller.Velocity.WithZ( 0f ).Length / 15f;
 	}
 }
