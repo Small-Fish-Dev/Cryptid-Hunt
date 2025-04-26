@@ -60,8 +60,6 @@ public partial class Player : Component
             Stamina = Math.Clamp(Stamina + Time.Delta * 10f, 0f, 100f);
         }
 
-        Log.Info(Stamina);
-
         if (Input.Pressed("use"))
         {
 
@@ -120,7 +118,7 @@ public partial class Player : Component
                 _lastBreath = 0f;
 
                 var sound = Sound.Play(_breatheIn ? "breathe_in" : "breathe_out", WorldPosition);
-                sound.Volume *= Running ? 20f : 10f;
+                sound.Volume *= Running ? 40f : 10f;
                 sound.Pitch *= Running ? 1.1f : 1f;
 
             }
