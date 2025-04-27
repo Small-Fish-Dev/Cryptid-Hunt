@@ -2731,6 +2731,135 @@
           ]
         },
         {
+          "__guid": "c3cc620b-b129-4dee-8422-bee263bf4676",
+          "Flags": 0,
+          "Name": "Crows Sound (1)",
+          "Position": "-4161.2,9012.332,243.2374",
+          "Rotation": "0,0,0.965926,-0.2588188",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "48c60a4e-ad82-4001-bcc4-dd11b9a3c4fb",
+              "Center": "346.4105,0,-49.60214",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1534.823,500,599.2047",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "543608b1-851a-42c8-8621-ed8aba8931a4",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/crows.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "31f191f7-e996-4f7f-a1c5-4b622c47b4ab",
+          "Flags": 0,
+          "Name": "Crows Sound (2)",
+          "Position": "3208.359,1693.49,724.2719",
+          "Rotation": "0,0,0.7933537,-0.6087613",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "7b0e3bff-4c49-4e30-a4d0-8404f7a883a8",
+              "Center": "346.4105,0,-49.60214",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1534.823,500,599.2047",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "bdb58f17-bb52-4f3c-85b0-93352644f39a",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/crows.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "613e5628-a646-4701-aae0-c5b95240ac58",
+          "Flags": 0,
+          "Name": "Crows Sound (3)",
+          "Position": "1767.644,6512.994,271.7266",
+          "Rotation": "0,0,0.8660257,-0.4999999",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "6d7f33d2-5ea8-4e28-822c-460230d241ba",
+              "Center": "346.4105,0,-49.60214",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1534.823,500,599.2047",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "b8726b60-99db-4ef9-b8a1-34fd8bb1f318",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/crows.sound"
+            }
+          ]
+        },
+        {
           "__guid": "d4aee9f4-06f9-4814-90a1-e702f76da07a",
           "Flags": 0,
           "Name": "Leaves Rustle",
@@ -2769,6 +2898,263 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "3d84f3b7-02d1-41c7-bce2-61e91cba48c7",
+          "Flags": 0,
+          "Name": "Leaves Rustle (1)",
+          "Position": "2635.907,8791.908,295.304",
+          "Rotation": "0,0,0.258819,0.9659258",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "93163130-3127-4862-92c5-abad03e15f00",
+              "Center": "156.5604,-90.061,173.2882",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1304.539,680.122,443.3737",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "fb0de624-302a-44fe-8768-beb86d2677cf",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "4501c3ef-bccb-4c44-b948-5f4ff1e56ac6",
+          "Flags": 0,
+          "Name": "Leaves Rustle (2)",
+          "Position": "-2286.646,6555.889,12.98312",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "c219960d-0ad1-4181-bd20-869d42100e72",
+              "Center": "156.5604,60.06192,173.2882",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1304.539,980.3679,443.3737",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "5db15dd1-859a-40c6-bb5b-a098550946c1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "c95d5878-9c31-404c-b9a2-3775d3432cc8",
+          "Flags": 0,
+          "Name": "Leaves Rustle (3)",
+          "Position": "6975.686,1762.462,328.6759",
+          "Rotation": "0,0,-0.7071067,0.7071068",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "d083ec25-9fa3-4eef-a734-65dd73740957",
+              "Center": "809.4291,60.06192,173.2882",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "2610.277,980.3679,443.3737",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "f58e3d3e-aec0-4c1c-b7b9-d454ec05f35f",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "85321012-6016-45fb-a9b6-57069e04b071",
+          "Flags": 0,
+          "Name": "Leaves Rustle (4)",
+          "Position": "-2718.405,4270.37,12.98312",
+          "Rotation": "0,0,0.1305262,0.9914449",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "ea2e5b61-7343-4b98-b369-a07d0c3a7a4c",
+              "Center": "156.5604,60.06192,173.2882",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1304.539,980.3679,443.3737",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "61692731-ff4f-44f1-a273-5f72ad3f7ef6",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "b17f38dd-4cd1-47eb-a629-e9dbd85d9e6a",
+          "Flags": 0,
+          "Name": "Leaves Rustle (5)",
+          "Position": "1726.603,5522.633,12.98312",
+          "Rotation": "0,0,0.5000001,0.8660256",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "71fd18c3-df52-45f5-9c30-16b714e372d2",
+              "Center": "211.2169,150.8064,173.2882",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1195.226,512.6591,443.3737",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "d78c85dc-fa5a-4e63-9af3-2612a7f5bdb2",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/ambient/leaves_rustle.sound"
+            }
+          ]
+        },
+        {
+          "__guid": "568b8491-e90b-4b7f-8d65-c64c296f67e2",
+          "Flags": 0,
+          "Name": "Metal Bar",
+          "Position": "1607.831,9780.422,262.6035",
+          "Rotation": "0,0,0.3826835,0.9238797",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "4292ac95-3aa6-40b1-80d1-e2afeeb38272",
+              "Center": "0,5.906296,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "100,167.7935,100",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.MySoundCue",
+              "__guid": "f8485d18-798d-4522-bd9b-3d65e640fde7",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Sound": "sounds/items/metal_bar.sound"
             }
           ]
         }
