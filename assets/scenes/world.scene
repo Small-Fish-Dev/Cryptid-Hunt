@@ -169,7 +169,7 @@
         {
           "__type": "Sandbox.Movement.MoveModeWalk",
           "__guid": "d8ab3b43-0b36-4b7f-ab4d-030649fb8eae",
-          "GroundAngle": 45,
+          "GroundAngle": 60,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -177,8 +177,8 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "Priority": 0,
-          "StepDownHeight": 18,
-          "StepUpHeight": 18
+          "StepDownHeight": 22,
+          "StepUpHeight": 22
         },
         {
           "__type": "Sandbox.Movement.MoveModeLadder",
@@ -258,7 +258,7 @@
               "__guid": "8450246d-7549-439e-a53b-179e886daeac",
               "BackgroundColor": "0.33333,0.46275,0.52157,1",
               "ClearFlags": "All",
-              "FieldOfView": 60,
+              "FieldOfView": 90,
               "FovAxis": "Horizontal",
               "IsMainCamera": true,
               "OnComponentDestroy": null,
@@ -2368,7 +2368,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
-              "Scale": "3.146655,21,576.6332",
+              "Scale": "3.146655,21,563.9137",
               "Static": false,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
@@ -2561,15 +2561,15 @@
     {
       "__guid": "f9536e1f-f943-45c5-afaa-7d39d665c782",
       "Flags": 0,
-      "Name": "Trigger",
-      "Position": "2931.29,5811.668,451.4923",
+      "Name": "Lake Camera Event",
+      "Position": "-2878,8036,172",
       "Tags": "trigger",
       "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.BoxCollider",
           "__guid": "7aa8763c-218e-40a7-bca1-171f9850d75a",
-          "Center": "-58.58318,-3.1371,-24.64302",
+          "Center": "318.9948,-320.3542,148.9808",
           "Friction": null,
           "IsTrigger": true,
           "OnComponentDestroy": null,
@@ -2582,7 +2582,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
-          "Scale": "167.1664,296.9013,99.28604",
+          "Scale": "4086.108,4003.152,879.0507",
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
@@ -2627,10 +2627,58 @@
         {
           "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
           "Flags": 0,
-          "Name": "CameraTarget",
-          "Position": "1559.782,644.6587,-15.24048",
-          "Rotation": "0,0,0.9816272,0.1908092",
+          "Name": "Camera Target",
+          "Position": "-846,-21.66699,-24",
+          "Rotation": "-0.04361936,-0.0000000383055,0.9990482,-0.0000008773406",
           "Enabled": true
+        }
+      ]
+    },
+    {
+      "__guid": "3071f095-4b8e-4855-87fa-27523d662708",
+      "Flags": 0,
+      "Name": "Cube",
+      "Position": "-4164,8040,13.60207",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "9fbaa53f-0acb-46a6-a4fb-f785e552ba11",
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/polewik/polewik.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         }
       ]
     }
