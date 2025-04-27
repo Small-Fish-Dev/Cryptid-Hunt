@@ -2635,6 +2635,48 @@
       ]
     },
     {
+      "__guid": "0cd705c4-c1a5-4a8d-8b35-72077aeb4b25",
+      "Flags": 0,
+      "Name": "Crows Sound",
+      "Position": "4743.731,7778.812,630.611",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "6527aad9-50ca-452f-b481-2001b23da47a",
+          "Center": "346.4105,0,-49.60214",
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Scale": "1534.823,500,599.2047",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "CryptidHunt.MySoundCue",
+          "__guid": "af337000-90af-458d-8e91-7ad19798e369",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Sound": "sounds/ambient/crows.sound"
+        }
+      ]
+    },
+    {
       "__guid": "3071f095-4b8e-4855-87fa-27523d662708",
       "Flags": 0,
       "Name": "Cube",
@@ -2681,6 +2723,12 @@
           "UseAnimGraph": true
         }
       ]
+    },
+    {
+      "__guid": "4864d6cf-eae4-403d-ad7e-d2f4c8cd5f41",
+      "Flags": 0,
+      "Name": "SoundCues",
+      "Enabled": true
     }
   ],
   "SceneProperties": {
