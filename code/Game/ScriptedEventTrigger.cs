@@ -8,11 +8,8 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 	[Property]
 	public GameObject TargetTransform { get; set; }
 
-	/// <summary>
-	/// How fast the camera will move to the target
-	/// </summary>
 	[Property]
-	public float TransitionDuration { get; set; } = 2f;
+	public Curve Transition { get; set; }
 
 	/// <summary>
 	/// How long the camera stays on target
@@ -28,23 +25,24 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 
 	public bool Activated { get; private set; } = false;
 
-	TimeUntil transitionEnd;
+	RealTimeUntil _transitionEnd;
 
 	public void OnTriggerEnter( Collider other )
 	{
 		if ( !Active || Activated ) return;
-		if ( !other.GameObject.Components.TryGet<Player>( out var player, FindMode.EnabledInSelf ) ) return;
+		if ( !other.GameObject.Parent.Components.TryGet<Player>( out var player, FindMode.EnabledInSelf ) ) return;
 
 		Activated = true;
 
 		player.LockInputs = LockInputs;
 		player.Controller.UseCameraControls = false;
 
-		transitionEnd = TransitionDuration;
+		_transitionEnd = Transition.ValueRange.y;
 
 		GameTask.RunInThreadAsync( async () =>
 		{
-			await Task.DelaySeconds( TransitionDuration + StayDuration );
+			await Task.DelayRealtimeSeconds( Transition.ValueRange.y + StayDuration );
+
 			player.LockInputs = false;
 			player.Controller.UseCameraControls = true;
 			Enabled = false;
@@ -56,8 +54,8 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		if ( !Activated ) return;
 		if ( !Player.Instance.IsValid() || !Player.Instance.Camera.IsValid() ) return;
 
-		var transition = transitionEnd.Fraction;
-		var startPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.Controller.CameraOffset );
+		var transition = Transition.Evaluate( (float)_transitionEnd.Fraction ) / Transition.ValueRange.y;
+		var startPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.CameraOffset );
 		var endPosition = TargetTransform.WorldPosition;
 		var startRotation = Player.Instance.Controller.EyeAngles.ToRotation();
 		var endRotation = TargetTransform.WorldRotation;

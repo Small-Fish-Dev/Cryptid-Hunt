@@ -42,6 +42,7 @@
       "Flags": 0,
       "Name": "Player",
       "Position": "3171.419,6228.066,431.563",
+      "Tags": "player",
       "Enabled": true,
       "Components": [
         {
@@ -2554,6 +2555,82 @@
               "SurfaceVelocity": "0,0,0"
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "f9536e1f-f943-45c5-afaa-7d39d665c782",
+      "Flags": 0,
+      "Name": "Trigger",
+      "Position": "2931.29,5811.668,451.4923",
+      "Tags": "trigger",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "7aa8763c-218e-40a7-bca1-171f9850d75a",
+          "Center": "-58.58318,-3.1371,-24.64302",
+          "Friction": null,
+          "IsTrigger": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Scale": "167.1664,296.9013,99.28604",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "CryptidHunt.ScriptedEventTrigger",
+          "__guid": "daadbc76-e27b-4978-b60b-3162264d9330",
+          "LockInputs": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "StayDuration": 4,
+          "TargetTransform": {
+            "_type": "gameobject",
+            "go": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647"
+          },
+          "Transition": {
+            "rangey": "0,5",
+            "frames": [
+              {
+                "x": 0,
+                "y": 0,
+                "in": -0.065217406,
+                "out": 0.065217406,
+                "mode": "Mirrored"
+              },
+              {
+                "x": 1,
+                "y": 1,
+                "in": 0,
+                "out": 0,
+                "mode": "Mirrored"
+              }
+            ]
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
+          "Flags": 0,
+          "Name": "CameraTarget",
+          "Position": "1559.782,644.6587,-15.24048",
+          "Rotation": "0,0,0.9816272,0.1908092",
+          "Enabled": true
         }
       ]
     }
