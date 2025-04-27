@@ -2637,8 +2637,9 @@
     {
       "__guid": "3071f095-4b8e-4855-87fa-27523d662708",
       "Flags": 0,
-      "Name": "Cube",
+      "Name": "Polewik",
       "Position": "-4164,8040,13.60207",
+      "Tags": "polewick",
       "Enabled": true,
       "Components": [
         {
