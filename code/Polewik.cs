@@ -167,10 +167,7 @@ public partial class Polewik : Component
 	public Vector3 TargetPosition { get; set; }
 
 	[Property]
-	public NavMeshAgent Agent;
-
-	[Property]
-	public Collider Collider { get; set; }
+	public NavMeshAgent Agent { get; set; }
 
 	public Dictionary<PolewikState, float> Speeds = new()
 	{
@@ -229,6 +226,7 @@ public partial class Polewik : Component
 	protected override void OnFixedUpdate()
 	{
 		ComputeAnimation();
+		Agent.MaxSpeed = CurrentSpeed;
 
 		/*
 		DebugOverlay.Sphere( Position, JumpscareDistance, Color.Red, 0f, false );
@@ -387,7 +385,6 @@ public partial class Polewik : Component
 		ragdoll.Model = ModelRenderer.Model;
 
 		Agent.Enabled = false;
-		Collider.Enabled = false;
 	}
 
 

@@ -2643,6 +2643,192 @@
       "Enabled": true,
       "Components": [
         {
+          "__type": "CryptidHunt.Polewik",
+          "__guid": "5f3a83b1-f4df-44b8-8f01-6e4573dd2bc8",
+          "Agent": {
+            "_type": "component",
+            "component_id": "be780f98-54fa-4405-a45a-182e37a8dd1b",
+            "go": "3071f095-4b8e-4855-87fa-27523d662708",
+            "component_type": "NavMeshAgent"
+          },
+          "ModelRenderer": {
+            "_type": "component",
+            "component_id": "9fbaa53f-0acb-46a6-a4fb-f785e552ba11",
+            "go": "3071f095-4b8e-4855-87fa-27523d662708",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PatrolPath": [
+            {
+              "_type": "gameobject",
+              "go": "b986d59e-1661-4f37-baf4-6b70ca3f1903"
+            },
+            {
+              "_type": "gameobject",
+              "go": "f180c496-b3c8-41ca-a375-e49ed7885394"
+            },
+            {
+              "_type": "gameobject",
+              "go": "17f09bd2-ae90-4def-ad40-43e2e8efa5ef"
+            },
+            {
+              "_type": "gameobject",
+              "go": "10c3ee5d-5891-4844-8988-e536f8f16795"
+            },
+            {
+              "_type": "gameobject",
+              "go": "9ca1aeb1-a333-4a49-b542-3a8163432217"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e1b58b0d-62aa-4fbb-b59e-6aed9465ff17"
+            },
+            {
+              "_type": "gameobject",
+              "go": "590851ee-7673-4ac3-b6aa-7ccd9cbf9e51"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a96b653e-020a-433c-9221-2f9a7f694b46"
+            },
+            {
+              "_type": "gameobject",
+              "go": "4e2cdf10-6f28-4a3b-8eab-5690d2b0d15d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "b62598f8-5253-4c2c-aa89-f3b3db2870ec"
+            },
+            {
+              "_type": "gameobject",
+              "go": "b31dd1e4-338d-412e-b363-e63a43a26211"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e0eef13d-a45b-41af-a141-fbdd316c67a3"
+            },
+            {
+              "_type": "gameobject",
+              "go": "4fcc74be-fe43-4549-b585-984389808b1b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a8ff53e4-72d0-4bc2-9933-51ac696b8365"
+            },
+            {
+              "_type": "gameobject",
+              "go": "5c4fbda2-e5ce-448d-aaa8-9758f92734cc"
+            },
+            {
+              "_type": "gameobject",
+              "go": "933d4b5f-aca1-4c10-9aff-a45ba78afdda"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c59d0b04-2383-40c6-92bf-5c4d2d7d37e1"
+            },
+            {
+              "_type": "gameobject",
+              "go": "c6a145dc-635d-43dd-8c09-e9ab4a41dbc3"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fea9e18d-1c19-4147-8550-5e888e0e120c"
+            },
+            {
+              "_type": "gameobject",
+              "go": "501df04e-1913-4da6-ba26-d270927f7256"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a818e156-1ecc-4eef-9f95-283af06fe959"
+            },
+            {
+              "_type": "gameobject",
+              "go": "fd58b618-1cfa-4560-9bb5-2a386c16979b"
+            },
+            {
+              "_type": "gameobject",
+              "go": "20d93aa6-8da0-4a1a-aa9d-d3cde80644c2"
+            },
+            {
+              "_type": "gameobject",
+              "go": "246fe5b3-89e8-458c-a9a2-ccb14a157d89"
+            },
+            {
+              "_type": "gameobject",
+              "go": "8117015b-5b87-42e4-9358-36bb099466ca"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a96c7acc-d5be-4b33-879b-c603a161038a"
+            },
+            {
+              "_type": "gameobject",
+              "go": "32ed4cc6-5017-4260-987b-088d794c1752"
+            },
+            {
+              "_type": "gameobject",
+              "go": "1c9ef6d2-264e-4793-ae40-6b3eb3e23b79"
+            },
+            {
+              "_type": "gameobject",
+              "go": "73c42a2b-f194-4d45-9535-4207e8f60a6d"
+            },
+            {
+              "_type": "gameobject",
+              "go": "869163cf-f993-4151-a5fc-1a3e1415a856"
+            },
+            {
+              "_type": "gameobject",
+              "go": "0e093c9d-f97f-425d-b7e5-8a282189a8be"
+            },
+            {
+              "_type": "gameobject",
+              "go": "25882e3f-0298-4bf5-b25e-b9d662075c97"
+            },
+            {
+              "_type": "gameobject",
+              "go": "8a8eff23-d8e2-4821-8685-8b970b281399"
+            },
+            {
+              "_type": "gameobject",
+              "go": "bc41bab6-9e81-43d4-b229-1038fa3ec306"
+            },
+            {
+              "_type": "gameobject",
+              "go": "47295f84-5731-40e4-acbe-e1dc844af8f3"
+            },
+            {
+              "_type": "gameobject",
+              "go": "ca48beec-dc77-442a-b1e3-d6dd3b4023b1"
+            }
+          ]
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "be780f98-54fa-4405-a45a-182e37a8dd1b",
+          "Acceleration": 300,
+          "AutoTraverseLinks": true,
+          "Height": 64,
+          "MaxSpeed": 120,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
           "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "9fbaa53f-0acb-46a6-a4fb-f785e552ba11",
           "AnimationGraph": null,
@@ -3158,6 +3344,267 @@
               "Sound": "sounds/items/metal_bar.sound"
             }
           ]
+        }
+      ]
+    },
+    {
+      "__guid": "f7702f08-0bfb-4269-b1aa-075c41f7e621",
+      "Flags": 0,
+      "Name": "Path",
+      "Position": "-4879.018,9071.679,486.3103",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "ca48beec-dc77-442a-b1e3-d6dd3b4023b1",
+          "Flags": 0,
+          "Name": "Path_Node",
+          "Position": "623.5557,-860.5674,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "47295f84-5731-40e4-acbe-e1dc844af8f3",
+          "Flags": 0,
+          "Name": "Path_Node (1)",
+          "Position": "604.0474,-2361.769,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "bc41bab6-9e81-43d4-b229-1038fa3ec306",
+          "Flags": 0,
+          "Name": "Path_Node (2)",
+          "Position": "1250.279,-2705.533,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "8a8eff23-d8e2-4821-8685-8b970b281399",
+          "Flags": 0,
+          "Name": "Path_Node (3)",
+          "Position": "1652.544,-3961.82,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "25882e3f-0298-4bf5-b25e-b9d662075c97",
+          "Flags": 0,
+          "Name": "Path_Node (4)",
+          "Position": "2117.991,-3327.289,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "0e093c9d-f97f-425d-b7e5-8a282189a8be",
+          "Flags": 0,
+          "Name": "Path_Node (5)",
+          "Position": "3353.355,-2066.665,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "869163cf-f993-4151-a5fc-1a3e1415a856",
+          "Flags": 0,
+          "Name": "Path_Node (6)",
+          "Position": "3743.03,-216.4629,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "73c42a2b-f194-4d45-9535-4207e8f60a6d",
+          "Flags": 0,
+          "Name": "Path_Node (7)",
+          "Position": "5026.753,-1574.187,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "1c9ef6d2-264e-4793-ae40-6b3eb3e23b79",
+          "Flags": 0,
+          "Name": "Path_Node (8)",
+          "Position": "6707.921,-3478.248,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "32ed4cc6-5017-4260-987b-088d794c1752",
+          "Flags": 0,
+          "Name": "Path_Node (9)",
+          "Position": "5186.511,-2344.293,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "a96c7acc-d5be-4b33-879b-c603a161038a",
+          "Flags": 0,
+          "Name": "Path_Node (10)",
+          "Position": "3370.974,-2754.375,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "8117015b-5b87-42e4-9358-36bb099466ca",
+          "Flags": 0,
+          "Name": "Path_Node (11)",
+          "Position": "1994.26,-3389.741,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "246fe5b3-89e8-458c-a9a2-ccb14a157d89",
+          "Flags": 0,
+          "Name": "Path_Node (12)",
+          "Position": "2596.299,-5265.494,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "20d93aa6-8da0-4a1a-aa9d-d3cde80644c2",
+          "Flags": 0,
+          "Name": "Path_Node (13)",
+          "Position": "2206.521,-6261.225,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "fd58b618-1cfa-4560-9bb5-2a386c16979b",
+          "Flags": 0,
+          "Name": "Path_Node (14)",
+          "Position": "2943.566,-6889.754,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "a818e156-1ecc-4eef-9f95-283af06fe959",
+          "Flags": 0,
+          "Name": "Path_Node (15)",
+          "Position": "3612.459,-6828.389,-480.9151",
+          "Enabled": true
+        },
+        {
+          "__guid": "501df04e-1913-4da6-ba26-d270927f7256",
+          "Flags": 0,
+          "Name": "Path_Node (16)",
+          "Position": "5605.668,-7323.422,-162.1162",
+          "Enabled": true
+        },
+        {
+          "__guid": "fea9e18d-1c19-4147-8550-5e888e0e120c",
+          "Flags": 0,
+          "Name": "Path_Node (17)",
+          "Position": "7813.105,-7471.676,-34.8963",
+          "Enabled": true
+        },
+        {
+          "__guid": "c6a145dc-635d-43dd-8c09-e9ab4a41dbc3",
+          "Flags": 0,
+          "Name": "Path_Node (18)",
+          "Position": "9052.402,-7875.59,-67.24011",
+          "Enabled": true
+        },
+        {
+          "__guid": "c59d0b04-2383-40c6-92bf-5c4d2d7d37e1",
+          "Flags": 0,
+          "Name": "Path_Node (19)",
+          "Position": "11536.45,-8063.691,-198.8325",
+          "Enabled": true
+        },
+        {
+          "__guid": "933d4b5f-aca1-4c10-9aff-a45ba78afdda",
+          "Flags": 0,
+          "Name": "Path_Node (20)",
+          "Position": "12773.38,-7388.949,-184.8475",
+          "Enabled": true
+        },
+        {
+          "__guid": "5c4fbda2-e5ce-448d-aaa8-9758f92734cc",
+          "Flags": 0,
+          "Name": "Path_Node (21)",
+          "Position": "12414.91,-5693.035,-151.1623",
+          "Enabled": true
+        },
+        {
+          "__guid": "a8ff53e4-72d0-4bc2-9933-51ac696b8365",
+          "Flags": 0,
+          "Name": "Path_Node (22)",
+          "Position": "11963.73,-4945.414,-120.1789",
+          "Enabled": true
+        },
+        {
+          "__guid": "4fcc74be-fe43-4549-b585-984389808b1b",
+          "Flags": 0,
+          "Name": "Path_Node (23)",
+          "Position": "10526.78,-4496.264,-93.08957",
+          "Enabled": true
+        },
+        {
+          "__guid": "e0eef13d-a45b-41af-a141-fbdd316c67a3",
+          "Flags": 0,
+          "Name": "Path_Node (24)",
+          "Position": "9922.741,-3374.625,-93.08954",
+          "Enabled": true
+        },
+        {
+          "__guid": "b31dd1e4-338d-412e-b363-e63a43a26211",
+          "Flags": 0,
+          "Name": "Path_Node (25)",
+          "Position": "9813.365,-2239.975,-93.08954",
+          "Enabled": true
+        },
+        {
+          "__guid": "b62598f8-5253-4c2c-aa89-f3b3db2870ec",
+          "Flags": 0,
+          "Name": "Path_Node (26)",
+          "Position": "8259.019,-2947.539,-93.08954",
+          "Enabled": true
+        },
+        {
+          "__guid": "4e2cdf10-6f28-4a3b-8eab-5690d2b0d15d",
+          "Flags": 0,
+          "Name": "Path_Node (27)",
+          "Position": "7419.35,-1652.44,-59.52664",
+          "Enabled": true
+        },
+        {
+          "__guid": "a96b653e-020a-433c-9221-2f9a7f694b46",
+          "Flags": 0,
+          "Name": "Path_Node (28)",
+          "Position": "7709.126,-135.5059,-59.52664",
+          "Enabled": true
+        },
+        {
+          "__guid": "590851ee-7673-4ac3-b6aa-7ccd9cbf9e51",
+          "Flags": 0,
+          "Name": "Path_Node (29)",
+          "Position": "7039.496,528.7578,-179.5072",
+          "Enabled": true
+        },
+        {
+          "__guid": "e1b58b0d-62aa-4fbb-b59e-6aed9465ff17",
+          "Flags": 0,
+          "Name": "Path_Node (30)",
+          "Position": "5244.089,1279.105,-378.6311",
+          "Enabled": true
+        },
+        {
+          "__guid": "9ca1aeb1-a333-4a49-b542-3a8163432217",
+          "Flags": 0,
+          "Name": "Path_Node (31)",
+          "Position": "1714.204,1806.959,-418.1874",
+          "Enabled": true
+        },
+        {
+          "__guid": "10c3ee5d-5891-4844-8988-e536f8f16795",
+          "Flags": 0,
+          "Name": "Path_Node (32)",
+          "Position": "-839.1396,1849.743,-457.6037",
+          "Enabled": true
+        },
+        {
+          "__guid": "17f09bd2-ae90-4def-ad40-43e2e8efa5ef",
+          "Flags": 0,
+          "Name": "Path_Node (33)",
+          "Position": "-1502.043,635.2334,-485.1877",
+          "Enabled": true
+        },
+        {
+          "__guid": "f180c496-b3c8-41ca-a375-e49ed7885394",
+          "Flags": 0,
+          "Name": "Path_Node (34)",
+          "Position": "-79.38867,328.5664,-473.6619",
+          "Enabled": true
+        },
+        {
+          "__guid": "b986d59e-1661-4f37-baf4-6b70ca3f1903",
+          "Flags": 0,
+          "Name": "Path_Node (35)",
+          "Position": "646.1206,-156.8047,-473.6619",
+          "Enabled": true
         }
       ]
     }
