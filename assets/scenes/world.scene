@@ -66,12 +66,6 @@
             "go": "20508266-df9e-4ac4-9319-5ec6094c7675",
             "component_type": "SpotLight"
           },
-          "Model": {
-            "_type": "component",
-            "component_id": "6a30452a-795b-46e9-a772-ff01fd83a27e",
-            "go": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
-            "component_type": "SkinnedModelRenderer"
-          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -126,12 +120,7 @@
           "OnComponentUpdate": null,
           "PitchClamp": 90,
           "ReachLength": 130,
-          "Renderer": {
-            "_type": "component",
-            "component_id": "6a30452a-795b-46e9-a772-ff01fd83a27e",
-            "go": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
-            "component_type": "SkinnedModelRenderer"
-          },
+          "Renderer": null,
           "RotateWithGround": true,
           "RotationAngleLimit": 45,
           "RotationSpeed": 1,
@@ -375,53 +364,6 @@
                   "Shadows": false
                 }
               ]
-            }
-          ]
-        },
-        {
-          "__guid": "bc946ce4-5b82-4369-b71f-e2798bc982b3",
-          "Flags": 0,
-          "Name": "Body",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "6a30452a-795b-46e9-a772-ff01fd83a27e",
-              "AnimationGraph": null,
-              "BodyGroups": 341,
-              "BoneMergeTarget": null,
-              "CreateAttachments": false,
-              "CreateBoneObjects": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/citizen/citizen.vmdl",
-              "Morphs": {},
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Parameters": {
-                "bools": {},
-                "ints": {},
-                "floats": {},
-                "vectors": {},
-                "rotations": {}
-              },
-              "PlaybackRate": 1,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "ShadowsOnly",
-              "Sequence": {
-                "Name": null
-              },
-              "Tint": "1,1,1,1",
-              "UseAnimGraph": true
             }
           ]
         }

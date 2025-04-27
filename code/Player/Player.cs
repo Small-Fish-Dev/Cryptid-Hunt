@@ -5,9 +5,6 @@ public partial class Player : Component
 	public static Player Instance { get; private set; }
 
 	[Property]
-	public SkinnedModelRenderer Model { get; set; }
-
-	[Property]
 	public PlayerController Controller { get; set; }
 
 	[Property]
@@ -24,9 +21,6 @@ public partial class Player : Component
 	{
 		Instance = this;
 
-		if ( Model.IsValid() )
-			Model.OnFootstepEvent += OnFootstepEvent;
-
 		if ( Controller.IsValid() )
 		{
 			RunSpeed = Controller.RunSpeed;
@@ -35,20 +29,11 @@ public partial class Player : Component
 		}
 	}
 
-	TimeUntil _nextFootstep;
-	TimeSince _lastBreath;
-	bool _breatheIn;
 	public TimeUntil NextInteraction { get; set; }
 
 	protected override void OnFixedUpdate()
 	{
 		if ( !Controller.IsValid() ) return;
-
-		if ( Controller.IsClimbing && _nextFootstep )
-		{
-			_nextFootstep = 0.3f;
-			Sound.Play( "footstep-metal", WorldPosition ).Volume *= 7;
-		}
 
 		if ( Input.Down( "Run" ) && Stamina > 0 && (Running || LastRan >= 1f) )
 			Running = true;
@@ -118,21 +103,8 @@ public partial class Player : Component
 
 		}
 
-		if ( HP > 0 && !LockInputs )
-		{
-			var breathTime = Running ? 1f : 1.5f;
-
-			if ( _lastBreath >= breathTime )
-			{
-				_breatheIn = !_breatheIn;
-				_lastBreath = 0f;
-
-				var sound = Sound.Play( _breatheIn ? "breathe_in" : "breathe_out", WorldPosition );
-				sound.Volume *= Running ? 20f : 5f;
-				sound.Pitch *= Running ? 1.1f : 1f;
-
-			}
-		}
+		HandleBreathing();
+		HandleFootsteps();
 	}
 
 	protected override void OnUpdate()
@@ -153,13 +125,42 @@ public partial class Player : Component
 
 	}
 
+	TimeSince _lastBreath;
+	bool _breatheIn;
 
-	bool _stepSound = false;
+	public void HandleBreathing()
+	{
+		if ( HP <= 0f || LockInputs ) return;
+
+		var breathTime = Running ? 1f : 1.5f;
+
+		if ( _lastBreath >= breathTime )
+		{
+			_breatheIn = !_breatheIn;
+			_lastBreath = 0f;
+
+			var sound = Sound.Play( _breatheIn ? "breathe_in" : "breathe_out", WorldPosition );
+			sound.Volume *= Running ? 10f : 5f;
+			sound.Pitch *= Running ? 1.1f : 1f;
+
+		}
+	}
+
+	TimeUntil _nextFootstep;
 	TimeSince _lastStep = 0f;
 
-	public void OnFootstepEvent( SceneModel.FootstepEvent footstepEvent )
+	public void HandleFootsteps()
 	{
 		if ( !Controller.IsValid() ) return;
+
+		if ( Controller.IsClimbing && _nextFootstep )
+		{
+			_nextFootstep = 0.3f;
+			Sound.Play( "footstep-metal", WorldPosition ).Volume *= 7;
+		}
+
+		if ( _lastStep <= (Running ? 0.3f : 0.6f) ) return;
+		_lastStep = 0f;
 
 		var footTrace = Scene.Trace.Ray( WorldPosition, WorldPosition + Vector3.Down * 10f )
 			.Radius( 2f )
@@ -172,14 +173,6 @@ public partial class Player : Component
 		var tag = footTrace.Tags
 			.Where( x => x != "solid" && x != "world" )
 			.FirstOrDefault();
-
-		_stepSound = !_stepSound;
-
-		if ( !_stepSound )
-			return;
-
-		if ( _lastStep <= (Running ? 0.2f : 0.7f) ) return;
-		_lastStep = 0f;
 
 		var sound = tag switch
 		{
