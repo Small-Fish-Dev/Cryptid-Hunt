@@ -15,6 +15,7 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
+        "exorealms.17c1531bdc5c7b13#41168",
         "facepunch.beech_bush_large#60666",
         "facepunch.beech_bush_medium_wall_corner#60668",
         "facepunch.beech_bush_medium_wall#60667",
@@ -60,6 +61,7 @@
         "facepunch.wood_painted_a_hs#28972",
         "facepunch.wood_rotten_a_hs#28994",
         "facepunch.wood_varnished_a_hs#28977",
+        "nolankicks.lake_water#65330",
         "rust.barbedwire_set_bend90#25132",
         "rust.barbedwire_set_straight300#25135",
         "rust.barricadecoverwood#25158",
