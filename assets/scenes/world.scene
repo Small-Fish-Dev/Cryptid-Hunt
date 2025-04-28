@@ -2567,7 +2567,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "da6e1904-415e-4459-9ac2-3964f0e25a03",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2620,7 +2620,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "2c3b735e-084b-4742-a2de-5d113b2d8aff",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2673,7 +2673,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "526dbe35-1b09-4d3e-aa9a-bb912b3f27dc",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2726,7 +2726,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "d9b537da-cd11-4b6a-b485-624e5fc283a7",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2779,7 +2779,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "3d10de62-577b-4308-8c64-6fd273fd7920",
-              "BodyGroups": 3073,
+              "BodyGroups": 5632,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2832,7 +2832,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "32ca930c-6d11-4bee-95fd-1b415e00a020",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2885,7 +2885,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "36b9de8e-2de2-4ff4-b810-195f0cd8c660",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -2938,7 +2938,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "604297b1-4ed2-4cc9-8d9b-291ac23dc280",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3044,7 +3044,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "361e93dc-1a36-4340-be68-8d69ca791c49",
-              "BodyGroups": 3073,
+              "BodyGroups": 3136,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3150,7 +3150,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "17460137-9106-4ba4-9a1a-2bd0b905cc3f",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3203,7 +3203,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "39132021-faf6-49a6-974f-1603bef3e778",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3309,7 +3309,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "06d6ef8b-1b8c-4001-89b3-0106370af7ed",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3362,7 +3362,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "50e29b27-13ec-4698-9123-254f807cb092",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3415,7 +3415,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "5c889a96-8d9c-4974-8c0d-747a2b84dca4",
-              "BodyGroups": 3073,
+              "BodyGroups": 5632,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3468,7 +3468,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "4dccbf8b-1d92-4171-9242-02b75d37a6aa",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3521,7 +3521,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "7624bd3b-e871-45d9-8248-540559b224a0",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3544,112 +3544,6 @@
             {
               "__type": "Sandbox.ModelCollider",
               "__guid": "76e62bfe-49b7-4fbc-a5b1-bb55a28315e6",
-              "Friction": null,
-              "IsTrigger": false,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ]
-        },
-        {
-          "__guid": "cd7ecf15-f03b-4b36-b2d3-2286f180641f",
-          "Flags": 0,
-          "Name": "Sign (1)",
-          "Position": "1000.674,6786.674,214.5898",
-          "Rotation": "0.0007102899,0.00002596935,0.7933531,0.6087612",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "21f83030-b4ed-4b15-85bc-4d0ee8c9b2f7",
-              "BodyGroups": 3073,
-              "CreateAttachments": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "fa7dc60b-197f-4d9b-b44c-2553ba21fa55",
-              "Friction": null,
-              "IsTrigger": false,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ]
-        },
-        {
-          "__guid": "ac2b1140-035e-45e6-9a20-69681d8901d6",
-          "Flags": 0,
-          "Name": "Sign (1)",
-          "Position": "1015.987,6734.334,214.6321",
-          "Rotation": "0.0007102899,0.00002596935,0.7933531,0.6087612",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "f235ec93-123f-4d69-a114-232c41bb8041",
-              "BodyGroups": 3073,
-              "CreateAttachments": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "ab38ec9e-2aaf-44ad-b6ef-d6459ee71dba",
               "Friction": null,
               "IsTrigger": false,
               "Model": "models/items/sign.vmdl",
@@ -3733,7 +3627,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "f4ed34b7-a18b-4df3-8842-3012d578ee13",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3786,7 +3680,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "27e9cb43-0a88-4e50-bcc2-81ed7bfc86fd",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3829,59 +3723,6 @@
           ]
         },
         {
-          "__guid": "d8dc3199-36d3-4a92-bff9-a793af04e902",
-          "Flags": 0,
-          "Name": "Sign (1)",
-          "Position": "-1957.326,6506.674,187.1794",
-          "Rotation": "-0.04914255,-0.07338902,0.351242,0.9321094",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "999100b9-e1bc-4f22-a399-d1427be391ed",
-              "BodyGroups": 3073,
-              "CreateAttachments": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "690abe0d-3c72-4d9b-aead-abc39c7c8527",
-              "Friction": null,
-              "IsTrigger": false,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ]
-        },
-        {
           "__guid": "5c7eb4b5-7be1-4af7-adde-b9dc601643c1",
           "Flags": 0,
           "Name": "Sign (1)",
@@ -3892,7 +3733,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "a05e3f34-9cb5-4a32-8fc4-fd4a29fdbe7f",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -3945,7 +3786,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "048731d7-d402-4c59-830e-93891dad2594",
-              "BodyGroups": 3073,
+              "BodyGroups": 5632,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -4051,7 +3892,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "5e3cc353-a8a0-4454-9e34-298106c9d034",
-              "BodyGroups": 3073,
+              "BodyGroups": 5632,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -4104,7 +3945,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "1b6f7883-c815-4230-869e-fdf32dc3de3e",
-              "BodyGroups": 3073,
+              "BodyGroups": 5122,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -4147,60 +3988,6 @@
           ]
         },
         {
-          "__guid": "1ac35694-4f10-48e9-bffa-f9092288b73a",
-          "Flags": 0,
-          "Name": "Sign (1)",
-          "Position": "-2666.326,-1271.326,-443.8077",
-          "Rotation": "0,0,0.7071068,-0.7071068",
-          "Scale": "1.09,1.09,1.09",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "ff7ea181-4d9f-4ea1-9541-b2c5a5d05941",
-              "BodyGroups": 3073,
-              "CreateAttachments": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.ModelCollider",
-              "__guid": "f981d3f3-aa72-4ab4-845a-32e47e162ddb",
-              "Friction": null,
-              "IsTrigger": false,
-              "Model": "models/items/sign.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            }
-          ]
-        },
-        {
           "__guid": "a8e5058f-2425-4441-8607-f3577a9ee073",
           "Flags": 0,
           "Name": "Sign (1)",
@@ -4211,7 +3998,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "07b583e9-3f98-454d-8bd0-a0ded0c10b79",
-              "BodyGroups": 3073,
+              "BodyGroups": 5248,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -4264,7 +4051,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "748f60ca-deea-4dbf-b5ab-2b71131ce054",
-              "BodyGroups": 3073,
+              "BodyGroups": 5632,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
@@ -4317,7 +4104,7 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "28c4bb91-a2ae-4c23-9ee5-d66c32528442",
-              "BodyGroups": 3073,
+              "BodyGroups": 5128,
               "CreateAttachments": false,
               "MaterialGroup": null,
               "MaterialOverride": null,
