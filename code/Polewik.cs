@@ -375,7 +375,7 @@ public partial class Polewik : Component
 	{
 		if ( CurrentState == PolewikState.Jumpscare )
 		{
-			Player.Instance.CameraPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.CameraOffset );
+			Player.Instance.CameraPosition = WorldTransform.PointToWorld( new Vector3( 90f, 0f, 70f ) );
 			Player.Instance.CameraRotation = Rotation.LookAt( Vector3.Direction( Player.Instance.Camera.WorldPosition, Camera.WorldPosition ), Vector3.Up );
 		}
 	}
