@@ -1,6 +1,7 @@
 ﻿using Sandbox;
 using Sandbox.UI;
 using Sandbox.VR;
+using System;
 using System.IO;
 using static Sandbox.SceneModel;
 
@@ -37,6 +38,48 @@ public partial class Polewik : Component
 	public float AttackAfterStalking => 8f;
 	public float AttackAfterStalling => 90f;
 	public float WaitUntilNextAttack => 20f;
+
+	public Vector3? FirstInterceptPoint()
+	{
+		var posA = Player.Instance.WorldPosition;
+		var velA = Player.Instance.Controller.Velocity.WithZ( 0f );
+		var posB = WorldPosition;
+		var speedB = CurrentSpeed;
+
+		var toTarget = posA - posB;
+		var a = Vector3.Dot( velA, velA ) - speedB * speedB;
+		var b = 2f * Vector3.Dot( velA, toTarget );
+		var c = Vector3.Dot( toTarget, toTarget );
+
+		// Handle near-zero 'a' (velA magnitude ≈ speedB) as linear:
+		if ( MathF.Abs( a ) < 1e-6f )
+		{
+			// bt + c = 0  →  t = -c/b
+			if ( MathF.Abs( b ) < 1e-6f ) return null;
+			var tLin = -c / b;
+			if ( tLin <= 0f ) return null;
+			return posA + velA * tLin;
+		}
+
+		var disc = b * b - 4f * a * c;
+		if ( disc < 0f ) return null;
+
+		var sqrtDisc = MathF.Sqrt( disc );
+		var t1 = (-b + sqrtDisc) / (2f * a);
+		var t2 = (-b - sqrtDisc) / (2f * a);
+
+		float t;
+		if ( t1 > 0f && t2 > 0f )
+			t = MathF.Min( t1, t2 );
+		else if ( t1 > 0f )
+			t = t1;
+		else if ( t2 > 0f )
+			t = t2;
+		else
+			return null;
+
+		return posA + velA * t;
+	}
 
 	PolewikState currentState { get; set; } = PolewikState.Patrolling;
 
@@ -279,7 +322,9 @@ public partial class Polewik : Component
 
 		if ( CurrentState == PolewikState.Following )
 		{
-			NavigateTo( Player.Instance.WorldPosition );
+			var intercept = FirstInterceptPoint();
+			if ( intercept != null )
+				NavigateTo( intercept.Value );
 
 			if ( _startedFollowing >= GiveUpAfter )
 				CurrentState = PolewikState.Patrolling;
@@ -293,7 +338,9 @@ public partial class Polewik : Component
 
 		if ( CurrentState == PolewikState.AttackPersistent )
 		{
-			NavigateTo( Player.Instance.WorldPosition );
+			var intercept = FirstInterceptPoint();
+			if ( intercept != null )
+				NavigateTo( intercept.Value );
 
 			if ( _startedFollowing >= GiveUpAfter * 2f )
 				CurrentState = PolewikState.Patrolling;
@@ -307,6 +354,10 @@ public partial class Polewik : Component
 
 		if ( CurrentState == PolewikState.Attacking )
 		{
+			var intercept = FirstInterceptPoint();
+			if ( intercept != null )
+				NavigateTo( intercept.Value );
+
 			if ( Player.Instance.WorldPosition.Distance( WorldPosition ) <= 100f )
 				CurrentState = PolewikState.Jumpscare;
 

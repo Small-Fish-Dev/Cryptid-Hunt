@@ -41,7 +41,7 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "5664.526,3659.161,480.4333",
+      "Position": "3619.301,5993.76,405.3648",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -4407,7 +4407,7 @@
         {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "be780f98-54fa-4405-a45a-182e37a8dd1b",
-          "Acceleration": 300,
+          "Acceleration": 10000,
           "AutoTraverseLinks": true,
           "Height": 64,
           "MaxSpeed": 120,
