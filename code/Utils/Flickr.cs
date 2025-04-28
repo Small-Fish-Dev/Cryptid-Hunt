@@ -1,9 +1,12 @@
-﻿using System.Linq.Expressions;
+﻿using Sandbox;
 using Sandbox.Internal;
-using System.Web;
 using Sandbox.TextureLoader;
+using System.Linq.Expressions;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
+using System.Web;
 
-namespace SpookyJam2022.Utils;
+namespace CryptidHunt;
 
 public static partial class Flickr
 {
@@ -16,14 +19,14 @@ public static partial class Flickr
 		"ui/fallbacks/snowball1.jpg",
 		"ui/fallbacks/snowball2.png",
 	};
-	
+
 	public static readonly int ResponsePrefixLength = "jsonFlickrFeed(".Length;
 	public static readonly int ResponsePostfixLength = ")".Length;
 
 	/// <summary>
 	/// Time of "user patience" in seconds
 	/// </summary>
-	public static readonly float ImageLoadTimeout = 5.0f; 
+	public static readonly float ImageLoadTimeout = 5.0f;
 
 	class FlickPublicFeed
 	{
@@ -39,42 +42,32 @@ public static partial class Flickr
 
 	private static async Task<string> GetUrl( string fear )
 	{
-		var uris = new Uri[]
+		var jsonString = await Http.RequestStringAsync( $"https://www.flickr.com/services/feeds/photos_public.gne?format=json&tags={HttpUtility.UrlEncode( fear )}" );
+		jsonString = jsonString.Substring( ResponsePrefixLength, jsonString.Length - ResponsePrefixLength - ResponsePostfixLength );
+
+		FlickPublicFeed feed;
+		try
 		{
-			new($"https://www.flickr.com/services/feeds/photos_public.gne?format=json&tags=scary,{HttpUtility.UrlEncode( fear )},horror"), // more precise
-			new($"https://www.flickr.com/services/feeds/photos_public.gne?format=json&tags={HttpUtility.UrlEncode( fear )}") // less precise
-		};
-		
-		foreach ( var uri in uris )
-		{
-			var client = new Http( uri );
-
-			var jsonString = await client.GetStringAsync();
-			jsonString = jsonString.Substring( ResponsePrefixLength, jsonString.Length - ResponsePrefixLength - ResponsePostfixLength );
-
-			FlickPublicFeed feed;
-			try
-			{
-				feed = Json.Deserialize<FlickPublicFeed>( jsonString );
-			}
-			catch ( Exception ex )
-			{
-				Log.Error( $"Got an exception while parsing Flickr JSON! ({ex}, the JSON in question: {jsonString})" );
-				continue;
-			}
-
-			if ( feed.Items.Length == 0 )
-				continue;
-
-			var imageN = Random.Shared.Int( 0, Math.Min( 4, feed.Items.Length ) - 1 );
-			var imageUrl = feed.Items[imageN].Media.FirstOrDefault().Value;
-			if ( imageUrl != default )
-				return imageUrl;
+			feed = Json.Deserialize<FlickPublicFeed>( jsonString );
 		}
+		catch ( Exception ex )
+		{
+			Log.Error( $"Got an exception while parsing Flickr JSON! ({ex}, the JSON in question: {jsonString})" );
+			return default;
+		}
+
+		if ( feed.Items.Length == 0 )
+			return default;
+
+		var imageN = Random.Shared.Int( 0, Math.Min( 4, feed.Items.Length ) - 1 );
+		var imageUrl = feed.Items[imageN].Media.FirstOrDefault().Value;
+
+		if ( imageUrl != default )
+			return imageUrl;
 
 		return default;
 	}
-	
+
 	private static async Task<Texture> GetFallback() => await Texture.LoadAsync( FileSystem.Mounted,
 		LocalFallbacks[Random.Shared.Int( 0, LocalFallbacks.Length - 1 )] );
 
@@ -101,7 +94,7 @@ public static partial class Flickr
 		return image;
 	}
 
-	[ConCmd.Admin( "debug_get_fear" )]
+	[ConCmd( "debug_get_fear" )]
 	public static void DebugGetFear( string fear )
 	{
 		Log.Info( $"{GetUrl( fear ).Result}" );
