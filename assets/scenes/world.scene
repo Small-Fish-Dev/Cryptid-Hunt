@@ -5533,6 +5533,48 @@
           ]
         },
         {
+          "__guid": "51a1684b-e584-4d17-bd7b-18235c16beef",
+          "Flags": 0,
+          "Name": "The Sewer?",
+          "Position": "2269.048,4745.898,-8.102646",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "17b313aa-f85c-4ee2-8401-f64598f01b68",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "500,500,500",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "6a14fe11-52a1-49ce-8b38-d76a88c2b9a5",
+              "AreaName": "The Sewer?",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
           "__guid": "2f36470d-8036-4d17-bacc-9d01889ed665",
           "Flags": 0,
           "Name": "The Pond",
