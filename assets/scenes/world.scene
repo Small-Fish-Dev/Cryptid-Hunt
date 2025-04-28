@@ -5712,7 +5712,7 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
-              "Center": "-2305.917,-1064.206,0",
+              "Center": "-2142.144,-1064.206,0",
               "Friction": null,
               "IsTrigger": true,
               "OnComponentDestroy": null,
@@ -5725,7 +5725,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
-              "Scale": "4743.289,4128.413,1000",
+              "Scale": "5070.833,4128.413,1000",
               "Static": false,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
@@ -5734,6 +5734,187 @@
               "__type": "CryptidHunt.DiscoverableArea",
               "__guid": "fd830d84-42c4-45d2-a239-3d9937d90bca",
               "AreaName": "The Forest",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "98cb426e-3af8-4da5-9343-792145074b6d",
+      "Flags": 0,
+      "Name": "InputHints",
+      "Position": "1297.545,5933.167,1216.312",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "636af512-9e9f-4887-8616-7c0a501ad670",
+          "Flags": 0,
+          "Name": "Run hint",
+          "Position": "4656.846,-1248.405,-785.2676",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "f6c03b19-9ff5-4571-aad3-f2670639deba",
+              "Center": "0,-2327.564,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "500,5542.664,500",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.InputScreenHint",
+              "__guid": "839cf02c-949d-4563-84fb-6fa6782e172e",
+              "ButtonHint": "Run",
+              "Hint": " to run.",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "3a9833e2-635a-4bec-bab1-d6ab5aad3cf1",
+          "Flags": 0,
+          "Name": "Inventory hint",
+          "Position": "2819.583,3205.718,-785.2676",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "e49657bb-7da6-41d5-bff5-c2762a12b2f6",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "500,500,500",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.InputScreenHint",
+              "__guid": "68b80ed0-e5ce-4321-8ad9-79f4c28ed9ab",
+              "ButtonHint": "Score",
+              "Hint": "to open your backpack and equip items.",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "3c350023-5d4f-42c9-991d-4eefadbf95f0",
+          "Flags": 0,
+          "Name": "Interact hint",
+          "Position": "-3806.239,-7221.94,-1886.37",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "5cef1c43-70da-4e2d-b8e5-109317b11cc6",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "200,200,200",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.InputScreenHint",
+              "__guid": "8b8f93fd-c2f8-4b40-8408-49601272f28a",
+              "ButtonHint": "Use",
+              "Hint": "to interact with items.",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "30797168-ccec-44ba-ac8f-0a534b29ebb6",
+          "Flags": 0,
+          "Name": "Item hint",
+          "Position": "1301.177,-150.7969,-1276.726",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "0cb0f38d-cc1c-44cc-925f-01d53acfc3e8",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "500,500,500",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.InputScreenHint",
+              "__guid": "c7e440c5-b732-496b-9d08-f240ddd6a4b1",
+              "ButtonHint": "Attack1",
+              "Hint": "to use equipped item.",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
