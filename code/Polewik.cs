@@ -185,7 +185,7 @@ public partial class Polewik : Component
 				Sound.Play( "jumpscare", WorldPosition );
 
 				Player.Instance.CameraShake = 1.6f;
-				Player.Instance.ShakeIntensity = 20f;
+				Player.Instance.ShakeIntensity = 15f;
 
 				GameTask.RunInThreadAsync( async () =>
 				{
@@ -193,7 +193,7 @@ public partial class Polewik : Component
 
 					Player.Instance.HP -= 1;
 
-					await GameTask.DelaySeconds( 0.45f );
+					await GameTask.DelaySeconds( 1f );
 
 					if ( CurrentState == PolewikState.Jumpscare )
 						CurrentState = PolewikState.Fleeing;
@@ -375,8 +375,8 @@ public partial class Polewik : Component
 	{
 		if ( CurrentState == PolewikState.Jumpscare )
 		{
-			Player.Instance.CameraPosition = Camera.WorldPosition;
-			Player.Instance.CameraRotation = Camera.WorldRotation;
+			Player.Instance.CameraPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.CameraOffset );
+			Player.Instance.CameraRotation = Rotation.LookAt( Vector3.Direction( Player.Instance.Camera.WorldPosition, Camera.WorldPosition ), Vector3.Up );
 		}
 	}
 
