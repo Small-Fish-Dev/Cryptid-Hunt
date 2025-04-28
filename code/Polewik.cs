@@ -158,9 +158,7 @@ public partial class Polewik : Component
 					Player.Instance.LockInputs = false;
 					// TODO: Make player camera follow the camera attachment
 				} );
-
 			}
-
 		}
 	}
 
@@ -319,6 +317,15 @@ public partial class Polewik : Component
 		if ( CurrentState == PolewikState.Fleeing && PatrolPath != null )
 		{
 			NavigateTo( TargetPosition );
+		}
+	}
+
+	protected override void OnUpdate()
+	{
+		if ( CurrentState == PolewikState.Jumpscare )
+		{
+			Player.Instance.CameraPosition = Camera.WorldPosition;
+			Player.Instance.CameraRotation = Camera.WorldRotation;
 		}
 	}
 
