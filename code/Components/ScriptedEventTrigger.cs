@@ -35,7 +35,6 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		Activated = true;
 
 		player.LockInputs = LockInputs;
-		player.Controller.UseCameraControls = false;
 
 		_transitionEnd = Transition.ValueRange.y;
 
@@ -44,7 +43,6 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 			await Task.DelayRealtimeSeconds( Transition.ValueRange.y + StayDuration );
 
 			player.LockInputs = false;
-			player.Controller.UseCameraControls = true;
 			Enabled = false;
 		} );
 	}
@@ -60,7 +58,7 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		var startRotation = Player.Instance.Controller.EyeAngles.ToRotation();
 		var endRotation = TargetTransform.WorldRotation;
 
-		Player.Instance.Camera.WorldPosition = Vector3.Lerp( startPosition, endPosition, transition );
-		Player.Instance.Camera.WorldRotation = Rotation.Slerp( startRotation, endRotation, transition );
+		Player.Instance.CameraPosition = Vector3.Lerp( startPosition, endPosition, transition );
+		Player.Instance.CameraRotation = Rotation.Slerp( startRotation, endRotation, transition );
 	}
 }
