@@ -5441,6 +5441,267 @@
           "Enabled": true
         }
       ]
+    },
+    {
+      "__guid": "e5614751-b525-42c8-a218-0ecaa72aeb56",
+      "Flags": 0,
+      "Name": "DiscoverableAreas",
+      "Enabled": true,
+      "Children": [
+        {
+          "__guid": "f49b9b02-00e6-4c3c-83a9-f8f9b4fcbeec",
+          "Flags": 0,
+          "Name": "The Church",
+          "Position": "4221.079,9109.574,591.1458",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "fb26d4f3-5103-464b-a2e0-e8c3d2f92ce0",
+              "Center": "423.2643,32.04297,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "2846.528,1935.914,1000",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "aba80289-f5f2-4423-b2f6-6333950e03bb",
+              "AreaName": "The Church",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "17b3321b-8971-432e-87fe-ec4762067da5",
+          "Flags": 0,
+          "Name": "The Tower",
+          "Position": "2650.359,5809.314,412.5966",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "4c176081-5531-4acf-a472-8a23fe018b5f",
+              "Center": "113.1189,126.0429,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1226.238,1252.086,2000",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "1e3907cf-25be-418e-a311-ba9b82b15898",
+              "AreaName": "The Tower",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "2f36470d-8036-4d17-bacc-9d01889ed665",
+          "Flags": 0,
+          "Name": "The Pond",
+          "Position": "-2451.293,8012.469,43.43506",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "26dd07a0-f860-4791-a77b-3ca71770d4db",
+              "Center": "170.6401,-520.907,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "4485.952,2545.986,1000",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "a1289d8d-4163-47f3-b18b-7301ceb6e9e3",
+              "AreaName": "The Pond",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "3c8dc579-4acb-4ec8-a55f-0950bcfe95f0",
+          "Flags": 0,
+          "Name": "The Shed",
+          "Position": "-1716.581,2586.213,-130.4164",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "b098af9f-5855-405c-a361-2791501172d8",
+              "Center": "-187.4428,57.18195,28.41061",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1374.886,1114.364,943.1788",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "0986afa8-b7ce-4a98-95af-2a3d33781a36",
+              "AreaName": "The Shed",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "f24d29de-8bd3-44fc-9995-35fbaeda230a",
+          "Flags": 0,
+          "Name": "The Cave",
+          "Position": "-6715.872,9988.021,43.43417",
+          "Rotation": "0,0,-0.6755902,0.7372774",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "fab69c66-80a6-4f20-a0aa-3c044d25e31c",
+              "Center": "122.9626,4251.69,171.9885",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "1954.258,9503.38,1343.977",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "d2b6d9db-cdc8-40f7-b8b3-1d37837bb5d6",
+              "AreaName": "The Cave",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        },
+        {
+          "__guid": "ae9a73eb-4f75-41dc-9ad7-8f8b3eea7b0a",
+          "Flags": 0,
+          "Name": "The Forest",
+          "Position": "6687.108,4067.546,591.1456",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
+              "Center": "-2305.917,-1064.206,0",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "4743.289,4128.413,1000",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.DiscoverableArea",
+              "__guid": "fd830d84-42c4-45d2-a239-3d9937d90bca",
+              "AreaName": "The Forest",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
