@@ -68,40 +68,4 @@ GameUI {
             display: none;
         }
     }
-
-    .InputHint {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        transition: all 2s ease-in;
-        background-color: red;
-
-        .hint {
-            font-family: GochiHand-Regular;
-            font-size: 60px;
-            color: white;
-            text-stroke: 3px rgb(50, 0, 0, 0.6);
-            text-shadow: 0px 0px 12px rgb(black, 0.8);
-            background-image: url(ui/brushes2.png);
-            background-image-tint: rgba(500, 500, 500, 0.4);
-            padding: 30px;
-            margin: -30px;
-            background-size: 100%;
-            background-color: red;
-        }
-
-        &:intro {
-            opacity: 0;
-        }
-
-        &:outro {
-            opacity: 0;
-        }
-    }
 }

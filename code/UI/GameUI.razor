@@ -42,12 +42,20 @@
         blackScreen.LifeSpan = lifeSpan;
     }
 
+    public static void OpenInputHint(string text, string input = "attack1", float lifeSpan = 5f)
+    {
+        var inputHint = Instance.Panel.AddChild<InputHint>();
+        inputHint.Text = text;
+        inputHint.ButtonHint = input;
+        inputHint.LifeSpan = lifeSpan;
+    }
+
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );
 
-    [ConCmd("blackscreen")]
-    public static void BlackScreenDebug()
+    [ConCmd("input")]
+    public static void OpenInputHintDebug( string text )
     {
-        BlackScreen();
+        OpenInputHint( text );
 
     }
 }

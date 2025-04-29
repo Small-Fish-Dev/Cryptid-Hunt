@@ -39,8 +39,7 @@
         },
         "RenderType": "On",
         "Sequence": {
-          "Name": null,
-          "Looping": true
+          "Name": null
         },
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
@@ -70,9 +69,14 @@
     "Children": [],
     "__variables": [],
     "__properties": {
+      "FixedUpdateFrequency": 50,
+      "MaxFixedUpdates": 5,
+      "NetworkFrequency": 30,
       "NetworkInterpolation": true,
+      "PhysicsSubSteps": 1,
+      "ThreadedAnimation": true,
       "TimeScale": 1,
-      "WantsSystemScene": true,
+      "UseFixedUpdate": true,
       "Metadata": {},
       "NavMesh": {
         "Enabled": false,
