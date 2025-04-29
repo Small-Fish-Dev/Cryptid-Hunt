@@ -7,65 +7,6 @@ GameUI {
     justify-content: center;
     align-items: center;
 
-    .NotePanel {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.5s ease-in;
-        opacity: 1;
-        transform: translateY( 0% );
-
-        .page {
-            position: absolute;
-            height: 77%;
-            aspect-ratio: 0.73;
-            background-image: url(ui/paper-note.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            justify-content: center;
-            align-items: center;
-
-            .textContainer {
-                top: 11.5%;
-                width: 70%;
-                height: 71%;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-
-                .text {
-                    font-family: 'Gochi Hand';
-                    font-size: 2.7vmin;
-                }
-            }
-        }
-
-        .handPrint {
-            position: absolute;
-            height: 77%;
-            aspect-ratio: 0.73;
-            background-image: url(ui/bloody-handprint.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-blend-mode: overlay;
-        }
-
-        &:intro {
-            opacity: 0;
-            transform: translateY( 30% );
-        }
-
-        &:outro {
-            opacity: 0;
-            transform: translateY( 30% );
-        }
-    }
-
     .ItemPrompt {
         position: absolute;
         left: 0;
@@ -143,41 +84,6 @@ GameUI {
         align-items: flex-start;
         justify-content: center;
         transition: all 2s ease-in;
-
-        &:intro {
-            opacity: 0;
-        }
-
-        &:outro {
-            opacity: 0;
-        }
-    }
-
-    .ZoneHint {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: all 2s ease-in;
-
-        .hint {
-            font-family: GochiHand-Regular;
-            font-size: 70px;
-            color: white;
-            text-stroke: 3px rgb(50, 0, 0, 0.6);
-            text-shadow: 0px 0px 12px rgb(black, 0.8);
-            background-image: url(ui/brushes2.png);
-            background-image-tint: rgba(500, 500, 500, 0.4);
-            transform: translateY( -300% );
-            padding: 30px;
-            margin: -30px;
-            background-size: 100%;
-        }
 
         &:intro {
             opacity: 0;

@@ -29,5 +29,19 @@
             note?.Delete();
     }
 
+    public static void OpenZoneHint(string text, float lifeSpan = 5f)
+    {
+        var zoneHint = Instance.Panel.AddChild<ZoneHint>();
+        zoneHint.Text = text;
+        zoneHint.LifeSpan = lifeSpan;
+    }
+
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+
+    [ConCmd("givehint")]
+    public static void OpenZoneHintDebug(string text)
+    {
+        OpenZoneHint(text);
+
+    }
 }
