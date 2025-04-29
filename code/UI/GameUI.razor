@@ -5,7 +5,7 @@
 
 <root>
     <div class="ItemPrompt" style="display: @(Interactable.IsValid() ? "flex" : "none" )">
-        <div class="itemContainer" style="left:@ItemPromptPosition.x%; top:@ItemPromptPosition.y%">
+        <div class="itemContainer" style="left:@(ItemPromptPosition.x)px; top:@(ItemPromptPosition.y)px">
             <div class="image"></div>
             <div class="promptContainer">
                 <div class="prompt">Open</div>
@@ -17,7 +17,7 @@
 @code
 {
     public static GameUI Instance { get; private set; }
-    public GameObject Interactable { get; set; }
+    public Interactable Interactable { get; set; }
     public Vector2 ItemPromptPosition { get; set; } = new Vector2(0, 0);
 
     protected override void OnStart()
@@ -29,7 +29,10 @@
     protected override void OnUpdate()
     {
         base.OnUpdate();
-        ItemPromptPosition = Scene.Camera.PointToScreenNormal( Interactable.WorldPosition ) * 100f;
+        Interactable = Player.Instance.InteractingWith;
+
+        if (Interactable.IsValid())
+            ItemPromptPosition = ( Scene.Camera.PointToScreenPixels( Interactable.WorldTransform.PointToWorld(Interactable.PromptOffset3D ) ) + Interactable.PromptOffset2D ) * Panel.ScaleFromScreen;
     }
 
     public static void OpenNote( string text, bool handprint = false )
