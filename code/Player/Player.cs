@@ -10,6 +10,8 @@ public partial class Player : Component
 	[Property]
 	public CameraComponent Camera { get; set; }
 
+	public Interactable InteractingWith { get; set; }
+
 	public float RunSpeed { get; set; }
 	public float Stamina { get; set; } = 100f;
 	public bool Running { get; set; } = false;
@@ -54,6 +56,17 @@ public partial class Player : Component
 
 		if ( Input.Pressed( "Flashlight" ) )
 			SetFlashLight( !FlashLightOn, true );
+
+
+		var interactTrace = Scene.Trace.Ray( Camera.WorldPosition, Camera.WorldPosition + Camera.WorldRotation.Forward * 150f )
+			.Radius( 5f )
+			.IgnoreGameObjectHierarchy( GameObject )
+			.Run();
+
+		if ( interactTrace.Hit && interactTrace.GameObject.Components.TryGet<Interactable>( out var interactable ) )
+			InteractingWith = interactable;
+		else
+			InteractingWith = null;
 
 		if ( Input.Pressed( "use" ) )
 		{
