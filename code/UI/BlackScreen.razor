@@ -1,0 +1,17 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace CryptidHunt
+
+@code
+{
+    public RealTimeUntil LifeSpan { get; set; } = 5f;
+
+    public override void Tick()
+    {
+        if (LifeSpan)
+            Delete();
+    }
+
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
