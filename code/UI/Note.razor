@@ -1,0 +1,24 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace CryptidHunt
+
+<root>
+        <div class="page">
+            <div class="textContainer">
+                <div class="text">@Text</div>
+            </div>
+        </div>
+    @if (Handprint)
+    {
+            <div class="handprint"></div>
+    }
+</root>
+
+@code
+{
+    public string Text { get; set; } = "Sorry dude, I mean you no harm. My name is Patrick, I'm 31, and I'm not here to cause harm. Please do not contact the police , please don't alert the authorities, please don't freak out. I'm not going to kill myself or hurt anyone or anything like that, but please don't freak out. My name is Patr";
+    public bool Handprint { get; set; } = false;
+
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
