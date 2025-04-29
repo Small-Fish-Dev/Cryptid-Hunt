@@ -9,19 +9,15 @@ GameUI {
 
     .ItemPrompt {
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 0px;
+        top: 0px;
         height: 100%;
         width: 100%;
         display: flex;
-        transition: all 1s ease-in;
         opacity: 1;
 
-        .container {
+        .itemContainer {
             position: absolute;
-            top: 0;
-            left: 0;
-            height: 6%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -31,16 +27,16 @@ GameUI {
             background-image: url(ui/brushes2.png);
             background-size: 100%;
             background-image-tint: rgba(400, 200, 200, 0.8);
-            transform: translate(-50%, -50%);
 
             .image {
-                position: absolute;
                 left: 10px;
+                height: 48px;
                 width: 48px;
                 aspect-ratio: 1;
                 background-image: url(ui/hand.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
+                margin-right: 10px;
             }
 
             .promptContainer {
@@ -52,20 +48,15 @@ GameUI {
                 justify-content: center;
 
                 .prompt {
-                    font-family: GochiHand-Regular;
+                    font-family: 'Gochi Hand';
                     font-size: 40px;
                     color: rgb(120, 0, 0);
                     text-stroke: 3px rgb(50, 0, 0);
                     text-shadow: 0px 0px 4px rgba(red, 0.2);
                     left: 50px;
-                    padding-right: 60px;
-                    margin-bottom: 50px;
+                    padding-right: 30px;
                 }
             }
-        }
-
-        &.hidden {
-            display: none;
         }
     }
 }

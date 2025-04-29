@@ -4,16 +4,32 @@
 @namespace CryptidHunt
 
 <root>
+    <div class="ItemPrompt" style="display: @(Interactable.IsValid() ? "flex" : "none" )">
+        <div class="itemContainer" style="left:@ItemPromptPosition.x%; top:@ItemPromptPosition.y%">
+            <div class="image"></div>
+            <div class="promptContainer">
+                <div class="prompt">Open</div>
+            </div>
+        </div>
+    </div>
 </root>
 
 @code
 {
     public static GameUI Instance { get; private set; }
+    public GameObject Interactable { get; set; }
+    public Vector2 ItemPromptPosition { get; set; } = new Vector2(0, 0);
 
     protected override void OnStart()
     {
         base.OnStart();
         Instance = this;
+    }
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+        ItemPromptPosition = Scene.Camera.PointToScreenNormal( Interactable.WorldPosition ) * 100f;
     }
 
     public static void OpenNote( string text, bool handprint = false )
