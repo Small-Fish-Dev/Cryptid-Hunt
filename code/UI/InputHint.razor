@@ -1,0 +1,31 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace CryptidHunt
+
+<root>
+    <div class="hint">
+        <img class="image" src="@GetGlyph().ResourcePath" )>
+        <div class="text">@Text</div>
+    </div>
+</root>
+
+@code
+{
+    public string Text { get; set; } = "Run";
+    public string ButtonHint { get; set; } = "attack1";
+    public RealTimeUntil LifeSpan { get; set; } = 7f;
+
+    public override void Tick()
+    {
+        if (LifeSpan)
+            Delete();
+    }
+
+    public Texture GetGlyph()
+    {
+        return Sandbox.Input.GetGlyph(ButtonHint, InputGlyphSize.Small, false);
+    }
+
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
