@@ -36,12 +36,18 @@
         zoneHint.LifeSpan = lifeSpan;
     }
 
+    public static void BlackScreen(float lifeSpan = 5f)
+    {
+        var blackScreen = Instance.Panel.AddChild<BlackScreen>();
+        blackScreen.LifeSpan = lifeSpan;
+    }
+
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );
 
-    [ConCmd("givehint")]
-    public static void OpenZoneHintDebug(string text)
+    [ConCmd("blackscreen")]
+    public static void BlackScreenDebug()
     {
-        OpenZoneHint(text);
+        BlackScreen();
 
     }
 }
