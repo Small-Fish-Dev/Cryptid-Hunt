@@ -1,0 +1,19 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+    <div class="NotePanel">
+        <div class="page">
+            <div class="textContainer">
+                <div class="text">Sorry dude, I mean you no harm. My name is Patrick, I'm 31, and I'm not here to cause harm. Please do not contact the police , please don't alert the authorities, please don't freak out. I'm not going to kill myself or hurt anyone or anything like that, but please don't freak out. My name is Patr</div>
+            </div>
+        </div>
+        <div class="handPrint"></div>
+</root>
+
+@code
+{
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
