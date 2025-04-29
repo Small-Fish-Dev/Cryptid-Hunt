@@ -1,0 +1,22 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace CryptidHunt
+
+<root>
+    <div class="hint">@Text</div>
+</root>
+
+@code
+{
+    public string Text { get; set; } = "Ape Tavern HQ";
+    public RealTimeUntil LifeSpan { get; set; } = 7f;
+
+    public override void Tick()
+    {
+        if (LifeSpan)
+            Delete();
+    }
+
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
