@@ -30,4 +30,12 @@ public partial class Item : Interactable
 	[Property]
 	[Category( "Other" )]
 	public float Weight { get; set; } = 1;
+
+	public override void Interact( Player player )
+	{
+		if ( !player.IsValid() ) return;
+
+		if ( player.Give( this ) )
+			Sound.Play( "pickup", WorldPosition );
+	}
 }

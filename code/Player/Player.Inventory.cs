@@ -4,9 +4,23 @@ public partial class Player
 {
 	public Item[] Inventory { get; set; } = new Item[16];
 
-	public void Equip( int index )
+	public bool Give( Item item )
 	{
-		var item = Inventory[index];
+		if ( Inventory == null || !Inventory.Any( x => !x.IsValid() ) ) return false; // Invalid or full inventory
+
+		var firstEmptySlot = Array.FindIndex( Inventory, x => !x.IsValid() );
+		Inventory[firstEmptySlot] = item;
+
+		item.WorldPosition = WorldPosition;
+		item.GameObject.SetParent( GameObject );
+		item.GameObject.Enabled = false;
+
+		return true;
+	}
+
+	public bool Equip( Item item )
+	{
+		return true;
 		/*var type = item
 			?.Resource
 			?.Interactable
