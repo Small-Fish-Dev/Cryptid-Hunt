@@ -6,7 +6,7 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "CryptidHunt.Item",
+        "__type": "CryptidHunt.Medkit",
         "__guid": "d2f8e772-554d-4885-ac5e-5f8b6268e6d3",
         "Amount": 1,
         "Description": "Use this after getting hurt once or twice.",
@@ -31,6 +31,8 @@
         "Title": "Medkit",
         "Useable": true,
         "UseDescription": "Heal",
+        "ViewModelOffset": "0,0,0",
+        "ViewModelRotation": "0,0,0,0",
         "Weight": 0.8
       },
       {
