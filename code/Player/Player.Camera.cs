@@ -50,7 +50,7 @@ public partial class Player
 		}
 		else
 		{
-			Camera.WorldPosition = CameraPosition + CameraOffset;
+			Camera.WorldPosition = CameraPosition + CameraOffset * Camera.WorldRotation;
 			Camera.WorldRotation = CameraRotation;
 		}
 	}
