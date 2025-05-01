@@ -1,6 +1,8 @@
+using System;
+
 namespace CryptidHunt;
 
-public sealed class BearTrap : Item
+public sealed class BearTrap : Item, Component.ITriggerListener
 {
 	protected override void OnUpdate()
 	{
@@ -23,5 +25,16 @@ public sealed class BearTrap : Item
 		WorldPosition = trace.EndPosition;
 		WorldRotation = Rotation.LookAt( trace.Normal ) * Rotation.FromPitch( 90f );
 		player.Remove( this );
+		Sound.Play( "beartrap_set", WorldPosition );
+	}
+
+	public void OnTriggerEnter( Collider other )
+	{
+		if ( !Active ) return;
+		if ( !other.Components.TryGet<Polewik>( out var polewik, FindMode.EnabledInSelf ) ) return;
+
+		polewik.Health -= 10f;
+		Sound.Play( "beartrap_trigger", WorldPosition );
+		GameObject.Destroy();
 	}
 }

@@ -511,7 +511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 23,
+                "Id": 27,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +523,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 24,
+                "Id": 28,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2388,6 +2388,7 @@
               "Name": "bear trap",
               "Position": "-6792.826,9564.174,212.0954",
               "Rotation": "-0.08018234,-0.04020797,0.4464481,0.8903023",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2398,6 +2399,7 @@
               "Name": "bear trap",
               "Position": "-6819.826,9553.674,211.5363",
               "Rotation": "-0.09284795,-0.04586028,0.03869773,0.9938706",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2408,6 +2410,7 @@
               "Name": "bear trap",
               "Position": "3782.674,8840.674,631.179",
               "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2418,6 +2421,7 @@
               "Name": "bear trap",
               "Position": "4010.674,8952.674,624.1794",
               "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2427,6 +2431,7 @@
               "Flags": 0,
               "Name": "bear trap",
               "Position": "-6787.326,9547.174,211.5363",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2437,6 +2442,7 @@
               "Name": "bear trap",
               "Position": "-1909.326,2498.674,223.2304",
               "Rotation": "0,0,0.7933533,0.6087615",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2446,6 +2452,7 @@
               "Flags": 0,
               "Name": "bear trap",
               "Position": "-1750.976,2366.923,212.8783",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2455,6 +2462,7 @@
               "Flags": 0,
               "Name": "bear trap",
               "Position": "-1747.326,2345.787,212.7102",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2465,6 +2473,7 @@
               "Name": "bear trap",
               "Position": "-6820.826,9536.173,211.5363",
               "Rotation": "0,0,0.9205046,0.3907318",
+              "Tags": "trap",
               "Enabled": true,
               "__Prefab": "prefabs/bear trap.prefab",
               "__PrefabVariables": {}
@@ -2805,7 +2814,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 51,
+                    "Id": 57,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2823,7 +2832,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 52,
+                    "Id": 58,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2841,7 +2850,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 53,
+                    "Id": 59,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -5980,7 +5989,7 @@
       "Flags": 0,
       "Name": "Polewik",
       "Position": "-4164,8040,13.60207",
-      "Tags": "polewick",
+      "Tags": "polewik",
       "Components": [
         {
           "__type": "CryptidHunt.Polewik",
@@ -6555,6 +6564,7 @@
       "Name": "bear trap",
       "Position": "3935.493,5926.807,385",
       "Rotation": "-0.00000005960464,0.00000002980232,0.8141328,0.5806787",
+      "Tags": "trap",
       "Enabled": true,
       "__Prefab": "prefabs/bear trap.prefab",
       "__PrefabVariables": {}

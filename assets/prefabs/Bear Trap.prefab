@@ -3,6 +3,7 @@
     "__guid": "81755197-78ae-44f0-8d01-6a46546b91d8",
     "Flags": 0,
     "Name": "bear trap",
+    "Tags": "trap",
     "Enabled": true,
     "Components": [
       {
@@ -75,6 +76,27 @@
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
         "Scale": "35.02894,49.32107,10.54674",
+        "Static": false,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "3f1e3dcc-7d97-4dc1-8d85-355d8b76b623",
+        "Center": "0,0,20.24",
+        "Friction": null,
+        "IsTrigger": true,
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "Scale": "70,70,50",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
