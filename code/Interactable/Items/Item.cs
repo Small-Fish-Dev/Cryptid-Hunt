@@ -54,13 +54,14 @@ public partial class Item : Interactable
 		if ( !player.IsValid() ) return;
 
 		if ( player.Give( this ) )
-			Sound.Play( "pickup", WorldPosition );
+			Sound.Play( "pickup", WorldPosition ).Pitch *= 1.1f;
 	}
 
 	public override void Use( Player player )
 	{
 		base.Use( player );
 		player.ChangeHolding( this );
+		Sound.Play( "pickup", WorldPosition ).Pitch *= 0.9f;
 	}
 
 	public virtual void Attack( Player player )
