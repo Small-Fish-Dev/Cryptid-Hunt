@@ -1,0 +1,22 @@
+@using Sandbox;
+@using Sandbox.UI;
+@namespace CryptidHunt
+
+<root>
+    <div class="titleContainer">
+        <div class="titleText">
+            <div class="title">FUCKYOU</div>
+        </div>
+    </div>
+</root>
+
+@code
+{
+    public Item Item { get; set; }
+
+    public override void Tick()
+    {
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
