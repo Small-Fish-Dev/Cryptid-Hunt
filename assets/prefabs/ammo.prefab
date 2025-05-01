@@ -8,11 +8,12 @@
       {
         "__type": "CryptidHunt.Item",
         "__guid": "d2c087af-2538-4d23-b22d-09620bd8b71d",
-        "Amount": 1,
-        "Description": "To fueal your shotgun",
+        "Amount": 8,
+        "Description": "Depletes after shooting, no need to reload!",
         "Icon": "ui/icons/ammoi.png",
+        "InteractDescription": "Take Ammo",
         "Locked": false,
-        "MaxAmount": 1,
+        "MaxAmount": 8,
         "Model": {
           "_type": "component",
           "component_id": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
@@ -28,8 +29,9 @@
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Ammo",
+        "Useable": false,
         "UseDescription": "Take",
-        "Weight": 1
+        "Weight": 0.3
       },
       {
         "__type": "Sandbox.ModelRenderer",

@@ -29,6 +29,8 @@ public partial class Polewik : Component
 	[Property]
 	public GameObject Camera { get; set; }
 
+	public float Health { get; set; } = 100f;
+
 	public float JumpscareDistance => 120f;
 	public float DetectDistance => 1400f;
 	public float StalkingDistance => 700f;

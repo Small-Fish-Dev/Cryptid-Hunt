@@ -9,8 +9,9 @@
         "__type": "CryptidHunt.Item",
         "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
         "Amount": 1,
-        "Description": "To open rusty doors",
+        "Description": "To open rusty doors and the likes.",
         "Icon": "ui/icons/crowbari.png",
+        "InteractDescription": "Take Crowbar",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {
@@ -28,8 +29,9 @@
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Crowbar",
-        "UseDescription": "Take",
-        "Weight": 1
+        "Useable": true,
+        "UseDescription": "Equip",
+        "Weight": 3.7
       },
       {
         "__type": "Sandbox.ModelRenderer",

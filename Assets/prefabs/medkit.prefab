@@ -9,9 +9,9 @@
         "__type": "CryptidHunt.Item",
         "__guid": "d2f8e772-554d-4885-ac5e-5f8b6268e6d3",
         "Amount": 1,
-        "Description": "To heal yourself noob",
+        "Description": "Use this after getting hurt once or twice.",
         "Icon": "ui/icons/medkiti.png",
-        "InteractDescription": "Take",
+        "InteractDescription": "Take Medkit",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {
@@ -30,8 +30,8 @@
         "PromptOffset3D": "0,0,0",
         "Title": "Medkit",
         "Useable": true,
-        "UseDescription": "Use",
-        "Weight": 1
+        "UseDescription": "Heal",
+        "Weight": 0.8
       },
       {
         "__type": "Sandbox.ModelRenderer",

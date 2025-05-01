@@ -10,7 +10,7 @@
             <div class="weightbar"><div class="inner" style="width: 50%"></div></div>
         </div>
         <div class="weightContainer">
-            <div class="weight">10.3 / 20.0 KG</div>
+            <div class="weight">@(Items?.Sum( x => x.IsValid() ? x.Weight * x.Amount : 0f).ToString() ?? "0.0") / 20.0 KG</div>
         </div>
     </div>
     <div class="bottomContainer">

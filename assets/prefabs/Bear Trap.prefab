@@ -9,7 +9,7 @@
         "__type": "CryptidHunt.Item",
         "__guid": "e3e5e35c-8f88-49fc-af04-6d06218a9380",
         "Amount": 1,
-        "Description": "To hurt bears and bear-like animals",
+        "Description": "Also works on bear-like animals.",
         "Icon": "ui/icons/beartrapi.png",
         "InteractDescription": "Take",
         "Locked": false,
@@ -31,7 +31,7 @@
         "Title": "Bear Trap",
         "Useable": true,
         "UseDescription": "Equip",
-        "Weight": 1
+        "Weight": 2.2
       },
       {
         "__type": "Sandbox.ModelRenderer",
