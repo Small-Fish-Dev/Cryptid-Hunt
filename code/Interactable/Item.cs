@@ -56,4 +56,10 @@ public partial class Item : Interactable
 		if ( player.Give( this ) )
 			Sound.Play( "pickup", WorldPosition );
 	}
+
+	public override void Use( Player player )
+	{
+		base.Use( player );
+		player.ChangeHolding( this );
+	}
 }
