@@ -31,6 +31,8 @@
         "Title": "Crowbar",
         "Useable": true,
         "UseDescription": "Equip",
+        "ViewModelOffset": "29.8,-14.2,-10.12",
+        "ViewModelRotation": "0.6023555,-0.2250066,0.3722492,0.669306",
         "Weight": 3.7
       },
       {

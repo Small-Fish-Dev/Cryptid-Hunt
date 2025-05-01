@@ -31,6 +31,8 @@
         "Title": "Shotgun",
         "Useable": true,
         "UseDescription": "Equip",
+        "ViewModelOffset": "29.16001,-12.52,-21.56",
+        "ViewModelRotation": "-0.06387671,-0.005548911,0.7453108,0.663627",
         "Weight": 1
       },
       {

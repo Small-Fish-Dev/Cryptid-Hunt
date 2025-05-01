@@ -41,6 +41,14 @@ public partial class Item : Interactable
 	[Category( "Other" )]
 	public string UseDescription { get; set; } = "Equip";
 
+	[Property]
+	[Category( "Other" )]
+	public Vector3 ViewModelOffset { get; set; }
+
+	[Property]
+	[Category( "Other" )]
+	public Rotation ViewModelRotation { get; set; }
+
 	public override void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;
