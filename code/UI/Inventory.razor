@@ -41,27 +41,12 @@
 
     protected override void OnUpdate()
     {
-        base.OnUpdate();
-    }
+        Show = !Player.Instance.LockInputs && Input.Down( "Inventory" );
 
-    public static void OpenNote( string text, bool handprint = false )
-    {
-    }
+        Panel.Style.Opacity = Show ? 1f : 0f;
 
-    public static void CloseNote()
-    {
-    }
-
-    public static void OpenZoneHint(string text, float lifeSpan = 5f)
-    {
-    }
-
-    public static void BlackScreen(float lifeSpan = 5f)
-    {
-    }
-
-    public static void OpenInputHint(string text, string input = "attack1", float lifeSpan = 5f)
-    {
+        //if (selected == null || selected.Container != pawn.Inventory)
+        //    selected = null;
     }
 
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );
