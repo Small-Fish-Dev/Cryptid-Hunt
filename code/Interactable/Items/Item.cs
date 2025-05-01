@@ -62,4 +62,9 @@ public partial class Item : Interactable
 		base.Use( player );
 		player.ChangeHolding( this );
 	}
+
+	public virtual void Attack( Player player )
+	{
+		if ( !player.IsValid() ) return;
+	}
 }

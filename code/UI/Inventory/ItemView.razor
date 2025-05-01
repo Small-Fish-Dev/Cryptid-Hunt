@@ -3,23 +3,24 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="titleContainer">
-        <div class="titleText">
-            <div class="title">@Item?.Title</div>
-        </div>
-        <div class="descriptionText">
-            <div class="description">@Item?.Description</div>
-        </div>
-    </div>
     @if ( Item.IsValid() )
     {
-        <img class="view" src="@Item?.Icon">
+        <div class="titleContainer">
+            <div class="titleText">
+                <div class="title">@Item?.Title</div>
+            </div>
+            <div class="descriptionText">
+                <div class="description">@Item?.Description</div>
+            </div>
+        </div>
+
+        <img class="view" src="@Item.Icon">
 
         @if ( Item.Useable )
         {
             <div class="buttonContainer">
                 <div class="button" @onclick=@(() => Item.Use( Player.Instance ))>
-                    <div class="test">@Item?.UseDescription</div>
+                    <div class="test">@Item.UseDescription</div>
                 </div>
             </div>
         }
