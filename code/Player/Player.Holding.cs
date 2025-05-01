@@ -9,18 +9,11 @@ public partial class Player
 		if ( Holding.IsValid() )
 		{
 			Holding.GameObject.SetParent( GameObject );
-			Holding.LocalPosition = Vector3.Zero;
-			Holding.LocalRotation = Rotation.Identity;
 			Holding.GameObject.Enabled = false;
 		}
 
 		if ( item.IsValid() ) // We can change holding to null
-		{
-			item.GameObject.SetParent( Camera.GameObject );
-			item.LocalPosition = item.ViewModelOffset;
-			item.LocalRotation = item.ViewModelRotation;
 			item.GameObject.Enabled = true;
-		}
 
 		Holding = item;
 	}

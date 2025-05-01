@@ -2,14 +2,14 @@
 
 public partial class Player
 {
-	public Item[] Inventory { get; set; } = new Item[16];
+	public Item[] Items { get; set; } = new Item[16];
 
 	public bool Give( Item item )
 	{
-		if ( Inventory == null || !Inventory.Any( x => !x.IsValid() ) ) return false; // Invalid or full inventory
+		if ( Items == null || !Items.Any( x => !x.IsValid() ) ) return false; // Invalid or full inventory
 
-		var firstEmptySlot = Array.FindIndex( Inventory, x => !x.IsValid() );
-		Inventory[firstEmptySlot] = item;
+		var firstEmptySlot = Array.FindIndex( Items, x => !x.IsValid() );
+		Items[firstEmptySlot] = item;
 
 		item.WorldPosition = WorldPosition;
 		item.GameObject.SetParent( GameObject );
@@ -18,23 +18,19 @@ public partial class Player
 		return true;
 	}
 
-	public bool Equip( Item item )
+	public void Remove( Item item )
 	{
-		return true;
-		/*var type = item
-			?.Resource
-			?.Interactable
-			?.TargetType;
+		if ( Items == null ) return;
 
-		var interactable = TypeLibrary.Create<BaseInteractable>( type );
-		if ( interactable == null )
-		{
-			// failed ?? why
-			return;
-		}
+		var index = Array.FindIndex( Items, x => x == item );
+		if ( index == -1 ) return;
 
-		interactable.ActiveItem = item;
-		pawn.ChangeHolding( interactable );
-		Sound.FromScreen( "sounds/items/pickup.sound" );*/
+		if ( Holding == item )
+			ChangeHolding( null );
+
+		item.GameObject.SetParent( null );
+		item.GameObject.Enabled = true;
+		Items[index] = null;
+		Inventory.Instance.SelectedItem = null;
 	}
 }

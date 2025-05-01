@@ -33,6 +33,7 @@ public partial class Player : Component
 	}
 
 	public TimeUntil NextInteraction { get; set; }
+	public SceneTraceResult InteractTrace { get; set; }
 
 	protected override void OnFixedUpdate()
 	{
@@ -66,15 +67,12 @@ public partial class Player : Component
 			{
 				if ( NextInteraction )
 				{
-					/*
-					if ( Holding != null )
+					if ( Holding.IsValid() )
 					{
-
+						NextInteraction = 0.5f;
 						LastInteraction = 0;
-						Holding.Use( this );
-
+						Holding.Attack( this );
 					}
-					*/
 				}
 
 			}
@@ -86,19 +84,19 @@ public partial class Player : Component
 			Controller.WishVelocity = 0f;
 		}
 
-		var interactTrace = Scene.Trace.Ray( Camera.WorldPosition, Camera.WorldPosition + Camera.WorldRotation.Forward * 150f )
+		InteractTrace = Scene.Trace.Ray( Camera.WorldPosition, Camera.WorldPosition + Camera.WorldRotation.Forward * 150f )
 			.Radius( 5f )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
 
-		if ( interactTrace.Hit && interactTrace.GameObject.Components.TryGet<Interactable>( out var interactable ) )
+		if ( InteractTrace.Hit && InteractTrace.GameObject.Components.TryGet<Interactable>( out var interactable ) )
 			InteractingWith = interactable;
 		else
 			InteractingWith = null;
 
 		if ( Input.Pressed( "use" ) && NextInteraction )
 		{
-			NextInteraction = 0.5f;
+			NextInteraction = 0.2f;
 
 			if ( InteractingWith.IsValid() )
 			{

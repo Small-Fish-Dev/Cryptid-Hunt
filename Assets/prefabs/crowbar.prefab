@@ -6,7 +6,7 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "CryptidHunt.Item",
+        "__type": "CryptidHunt.Crowbar",
         "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
         "Amount": 1,
         "Description": "To open rusty doors and the likes.",

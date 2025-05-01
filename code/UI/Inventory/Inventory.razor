@@ -31,7 +31,7 @@
 @code
 {
     public static Inventory Instance { get; private set; }
-    public Item[] Items => Player.Instance?.Inventory;
+    public Item[] Items => Player.Instance?.Items;
     public float Weight => Items?.Sum(x => x.IsValid() ? x.Weight * x.Amount : 0f) ?? 0f;
     public Item SelectedItem { get; set; }
 

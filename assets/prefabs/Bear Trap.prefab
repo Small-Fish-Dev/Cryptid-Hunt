@@ -6,12 +6,12 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "CryptidHunt.Item",
+        "__type": "CryptidHunt.BearTrap",
         "__guid": "e3e5e35c-8f88-49fc-af04-6d06218a9380",
         "Amount": 1,
         "Description": "Also works on bear-like animals.",
         "Icon": "ui/icons/beartrapi.png",
-        "InteractDescription": "Take",
+        "InteractDescription": "Take Bear Trap",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {
