@@ -6,6 +6,59 @@
     "Enabled": true,
     "Components": [
       {
+        "__type": "CryptidHunt.Item",
+        "__guid": "d2c087af-2538-4d23-b22d-09620bd8b71d",
+        "Amount": 1,
+        "Description": "To fueal your shotgun",
+        "Icon": {
+          "$compiler": "texture",
+          "$source": "imagefile",
+          "data": {
+            "FilePath": "ui/icons/ammoi.png",
+            "MaxSize": 4096,
+            "ConvertHeightToNormals": false,
+            "NormalScale": 1,
+            "Rotate": 0,
+            "FlipVertical": false,
+            "FlipHorizontal": false,
+            "Padding": {
+              "Size": "0,0",
+              "EdgeSize": "0,0"
+            },
+            "Sharpen": 0,
+            "InvertColor": false,
+            "Blur": 0,
+            "Brightness": 1,
+            "Contrast": 1,
+            "Saturation": 1,
+            "Hue": 0,
+            "Colorize": false,
+            "TargetColor": "0,1,0,1",
+            "CacheToDisk": true
+          },
+          "compiled": null
+        },
+        "Locked": false,
+        "MaxAmount": 1,
+        "Model": {
+          "_type": "component",
+          "component_id": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
+          "go": "64b52201-89a8-4d94-83b9-b134fc9faa06",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,0,0",
+        "Title": "Ammo",
+        "UseDescription": "Take",
+        "Weight": 1
+      },
+      {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
         "BodyGroups": 18446744073709551615,

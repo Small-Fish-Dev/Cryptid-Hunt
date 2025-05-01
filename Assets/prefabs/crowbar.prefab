@@ -6,6 +6,59 @@
     "Enabled": true,
     "Components": [
       {
+        "__type": "CryptidHunt.Item",
+        "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
+        "Amount": 1,
+        "Description": "To open rusty doors",
+        "Icon": {
+          "$compiler": "texture",
+          "$source": "imagefile",
+          "data": {
+            "FilePath": "ui/icons/crowbari.png",
+            "MaxSize": 4096,
+            "ConvertHeightToNormals": false,
+            "NormalScale": 1,
+            "Rotate": 0,
+            "FlipVertical": false,
+            "FlipHorizontal": false,
+            "Padding": {
+              "Size": "0,0",
+              "EdgeSize": "0,0"
+            },
+            "Sharpen": 0,
+            "InvertColor": false,
+            "Blur": 0,
+            "Brightness": 1,
+            "Contrast": 1,
+            "Saturation": 1,
+            "Hue": 0,
+            "Colorize": false,
+            "TargetColor": "0,1,0,1",
+            "CacheToDisk": true
+          },
+          "compiled": null
+        },
+        "Locked": false,
+        "MaxAmount": 1,
+        "Model": {
+          "_type": "component",
+          "component_id": "87146c74-616e-472f-9694-61f59c30d0fd",
+          "go": "1146d3f5-8005-400f-9c98-19e6496e035f",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,0,0",
+        "Title": "Crowbar",
+        "UseDescription": "Take",
+        "Weight": 1
+      },
+      {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
         "BodyGroups": 18446744073709551615,
