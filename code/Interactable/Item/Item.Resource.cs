@@ -4,12 +4,6 @@ namespace CryptidHunt;
 
 public partial class Item
 {
-	public enum AmountType
-	{
-		Float = 0,
-		Integer = 1
-	}
-
 	[GameResource( "Item", "item", "An item resource." )]
 	public class ItemResource : GameResource
 	{

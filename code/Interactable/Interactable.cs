@@ -1,5 +1,3 @@
-using static CryptidHunt.Item;
-
 namespace CryptidHunt;
 
 public class Interactable : Component
@@ -13,16 +11,9 @@ public class Interactable : Component
 	[Property]
 	public Vector2 PromptOffset2D { get; set; }
 
-	[Property]
-	public float Amount { get; set; } = 1;
-	[Property]
-	public ItemResource Item { get; set; }
-	public Item ActiveItem { get; set; }
-
 	public virtual void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;
-		if ( Item == null ) return;
 
 		//player.Inventory?.Insert( Item, Amount );
 		Sound.Play( "pickup", WorldPosition );
