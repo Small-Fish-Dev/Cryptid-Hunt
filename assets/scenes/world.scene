@@ -41,7 +41,8 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "3619.301,5993.76,405.3648",
+      "Position": "-6419.673,9624.082,40.72359",
+      "Rotation": "0.0405261,-0.1163192,0.03330121,0.9918258",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -511,7 +512,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 43,
+                "Id": 51,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +524,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 44,
+                "Id": 52,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2814,7 +2815,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 81,
+                    "Id": 93,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2832,7 +2833,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 82,
+                    "Id": 94,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2850,7 +2851,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 83,
+                    "Id": 95,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -6661,8 +6662,8 @@
       "__guid": "f1738002-5d03-4340-995d-75f7e2ea033f",
       "Flags": 0,
       "Name": "crowbar (1)",
-      "Position": "3788.284,5819.039,385",
-      "Rotation": "-0.00000005960464,0,0.9999999,0",
+      "Position": "-6399.26,9659.192,48.71537",
+      "Rotation": "0.0405261,-0.1163192,0.03330121,0.9918258",
       "Enabled": true,
       "__Prefab": "prefabs/crowbar.prefab",
       "__PrefabVariables": {}

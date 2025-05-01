@@ -3,9 +3,9 @@ namespace CryptidHunt;
 public class Interactable : Component
 {
 	[Property]
-	public string InteractDescription { get; set; } = "Take";
+	public virtual string InteractDescription { get; set; } = "Take";
 	[Property]
-	public bool Locked { get; set; } = false;
+	public virtual bool Locked { get; set; } = false;
 	[Property]
 	public Vector3 PromptOffset3D { get; set; }
 	[Property]
@@ -17,7 +17,6 @@ public class Interactable : Component
 
 		//player.Inventory?.Insert( Item, Amount );
 		Sound.Play( "pickup", WorldPosition );
-		Destroy();
 	}
 
 	public virtual void Use( Player player )

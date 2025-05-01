@@ -6,6 +6,24 @@
     "Enabled": true,
     "Components": [
       {
+        "__type": "CryptidHunt.LockedDoor",
+        "__guid": "193e8e9c-30a5-4c3d-9124-42ce9cfce514",
+        "Model": {
+          "_type": "component",
+          "component_id": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
+          "go": "64b52201-89a8-4d94-83b9-b134fc9faa06",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,0.4800017,42.32"
+      },
+      {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
         "BodyGroups": 18446744073709551615,
@@ -29,11 +47,11 @@
         "Tint": "1,1,1,1"
       },
       {
-        "__type": "Sandbox.BoxCollider",
-        "__guid": "51a1319d-af30-4ca8-9556-d2a474d46345",
-        "Center": "8.003752,-2.687281,39.65133",
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "835b84df-ce29-4cfc-b650-f82f0958cd74",
         "Friction": null,
         "IsTrigger": false,
+        "Model": "models/stuck_door.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
@@ -44,7 +62,6 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Scale": "26.06284,56.93944,93.24345",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
