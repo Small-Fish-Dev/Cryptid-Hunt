@@ -5,15 +5,15 @@
 <root>
     <div class="titleContainer">
         <div class="titleText">
-            <div class="title">FUCK YOU</div>
+            <div class="title">@Item?.Title</div>
         </div>
         <div class="descriptionText">
-            <div class="description">FUCK YOU</div>
+            <div class="description">@Item?.Description</div>
         </div>
     </div>
-    <div class="view">
+    <img class="view" src="@Item?.Icon">
 
-    </div>
+    </img>
     <div class="buttonContainer">
         <div class="button">
             <div class="test">Equip</div>
@@ -23,10 +23,17 @@
 
 @code
 {
-    public Item Item { get; set; }
+    public Item Item => Inventory.Instance.SelectedItem;
+    public ScenePanel SceneView { get; set; }
 
     public override void Tick()
     {
+        if (SceneView == null)
+        {
+            //SceneView = new ScenePanel("scenes/world.scene");
+            //AddChild(SceneView);
+            //SceneView.SetClass("view", true);
+        }
     }
 
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );

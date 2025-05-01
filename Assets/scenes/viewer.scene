@@ -1,0 +1,234 @@
+{
+  "__guid": "d6ff6416-e37b-43f3-9f64-30e89319ac16",
+  "GameObjects": [
+    {
+      "__guid": "68b5870b-0ec9-4846-82b6-ba5e3ab3a7a8",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-100,0,0",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "379e897f-6e97-4255-91ad-4026367f66e6",
+          "BackgroundColor": "0.33333,0.46275,0.52157,0",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "FovAxis": "Horizontal",
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "skybox",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "27d0fd65-c585-41b7-9a6d-38e5c7b46e28",
+      "Flags": 0,
+      "Name": "Item",
+      "Rotation": "0,-0.258819,0,0.9659258",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "3a2f60b0-dbd9-45b4-83d1-c5c960f0c57f",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/items/medkit.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "1a3bd086-c4e3-4c62-80e7-8bd67e328f62",
+      "Flags": 0,
+      "Name": "Environment",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.AmbientLight",
+          "__guid": "9e57fc3a-8228-42f4-9deb-f73ee34f7592",
+          "Color": "0.11974,0.1481,0.2093,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "2efeac80-09dc-4a63-a981-c7c3cede4298",
+      "Flags": 0,
+      "Name": "Cold Light",
+      "Position": "-126.8445,70.42174,-7.131355",
+      "Rotation": "-0.03316737,-0.0991268,-0.2321665,0.9670432",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "56ed74f0-fbeb-4393-b457-c9562e2b0a83",
+          "Attenuation": 0,
+          "ConeInner": 15,
+          "ConeOuter": 30,
+          "Cookie": null,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.75597,0.73488,2,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 200,
+          "Shadows": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "008238ed-0b12-4cca-9926-eece88d86ba2",
+      "Flags": 0,
+      "Name": "Warm Light",
+      "Position": "-123.8396,-63.91038,20.3417",
+      "Rotation": "-0.1366399,0.09753837,0.2811446,0.9448671",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "26399373-ecda-4e29-9a42-691147599962",
+          "Attenuation": 0,
+          "ConeInner": 15,
+          "ConeOuter": 30,
+          "Cookie": null,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,0.16667,0,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 200,
+          "Shadows": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "2532b91b-ca13-4422-bae8-c37016d289ac",
+      "Flags": 0,
+      "Name": "White Light",
+      "Position": "102.1363,-7.906303,90.40615",
+      "Rotation": "-0.4540629,0.1781352,0.8588293,0.1565469",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "ab09326a-a717-4e58-b5d6-12fa8091c9e2",
+          "Attenuation": 0.12,
+          "ConeInner": 15,
+          "ConeOuter": 30,
+          "Cookie": null,
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "1,1,1,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 200,
+          "Shadows": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "a980d40d-c0b9-4fa2-9a11-62a27f7a5991",
+      "Flags": 0,
+      "Name": "Cubemap",
+      "Position": "-64.44518,-42.95643,60.78955",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "b6877d5c-7745-4b08-881a-c716b8c29731",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SkyIndirectLighting": false,
+          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "NetworkInterpolation": true,
+    "TimeScale": 1,
+    "WantsSystemScene": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}

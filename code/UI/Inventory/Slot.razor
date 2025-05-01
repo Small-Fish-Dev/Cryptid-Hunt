@@ -24,7 +24,7 @@
 
     public override void OnButtonEvent(ButtonEvent e)
     {
-        if ( e.Pressed && e.Button == "mouseleft" )
+        if ( Item.IsValid() && e.Pressed && e.Button == "mouseleft" )
         {
             Inventory.Instance.SelectedItem = Item;
         }

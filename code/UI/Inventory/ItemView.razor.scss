@@ -22,6 +22,7 @@ ItemView {
     .titleContainer {
         flex-direction: column;
         align-content: center;
+        height:100px;
 
         .titleText {
             align-self: center;
@@ -60,7 +61,6 @@ ItemView {
         width: 70%;
         height: 70%;
         pointer-events: all;
-        background-color: red;
     }
 
     .buttonContainer {
