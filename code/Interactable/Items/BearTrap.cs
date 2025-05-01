@@ -12,14 +12,15 @@ public sealed class BearTrap : Item, Component.ITriggerListener
 
 		var trace = Player.Instance.InteractTrace;
 		var rotation = Rotation.LookAt( trace.Hit ? trace.Normal : Vector3.Up ) * Rotation.FromPitch( 90f );
+		var canPlace = trace.Hit && Vector3.Dot( trace.Normal, Vector3.Up ) > 0.8f;
 
-		DebugOverlay.Model( Model.Model, trace.Hit ? Color.Green.WithAlpha( 0.7f ) : Color.Red.WithAlpha( 0.7f ), Time.Delta, new Transform( trace.EndPosition, rotation ) );
+		DebugOverlay.Model( Model.Model, canPlace ? Color.Green.WithAlpha( 0.7f ) : Color.Red.WithAlpha( 0.7f ), Time.Delta, new Transform( trace.EndPosition, rotation ) );
 	}
 	public override void Attack( Player player )
 	{
 		var trace = Player.Instance.InteractTrace;
 
-		if ( !trace.Hit ) return;
+		if ( !trace.Hit || Vector3.Dot( trace.Normal, Vector3.Up ) <= 0.8f ) return;
 
 		GameObject.Enabled = true;
 		WorldPosition = trace.EndPosition;
