@@ -511,7 +511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 35,
+                "Id": 43,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +523,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 36,
+                "Id": 44,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2814,7 +2814,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 69,
+                    "Id": 81,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2832,7 +2832,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 70,
+                    "Id": 82,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2850,7 +2850,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 71,
+                    "Id": 83,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -5981,6 +5981,64 @@
               "Children": []
             }
           ]
+        },
+        {
+          "__guid": "ed697aae-e3a1-4b36-b742-d39c1db8f50c",
+          "Flags": 0,
+          "Name": "chest",
+          "Position": "3993.674,9007.674,619.1794",
+          "Rotation": "0,0,0.8386706,-0.5446391",
+          "Enabled": true,
+          "__Prefab": "prefabs/chest.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "363ea210-9dc9-4faf-af8e-723c336b26da",
+          "Flags": 0,
+          "Name": "key (1)",
+          "Position": "-1777.564,2347.322,214.3735",
+          "Enabled": true,
+          "__Prefab": "prefabs/key.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "afdb23cc-5b54-415b-88f0-b29929486a3c",
+          "Flags": 0,
+          "Name": "key (1)",
+          "Position": "-1947.326,2522.674,245.2304",
+          "Rotation": "-0.1830128,0.6830125,0.1830129,0.6830127",
+          "Enabled": true,
+          "__Prefab": "prefabs/key.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "53aa2f43-c10a-4500-bdc5-f8fd3a85592e",
+          "Flags": 0,
+          "Name": "crowbar (1)",
+          "Position": "-1779.81,2325.488,213.4677",
+          "Enabled": true,
+          "__Prefab": "prefabs/crowbar.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "bbfd67eb-ce42-42e0-80d6-157433e11571",
+          "Flags": 0,
+          "Name": "crowbar (1)",
+          "Position": "-1961.326,2524.674,245.7932",
+          "Rotation": "0,0,0.258819,0.9659258",
+          "Enabled": true,
+          "__Prefab": "prefabs/crowbar.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "864a4845-e286-4ee8-8e5d-c862ad83a0f9",
+          "Flags": 0,
+          "Name": "locked_door",
+          "Position": "-6704.826,9488.174,221.1795",
+          "Rotation": "0.0405261,-0.1163192,0.03330121,0.9918258",
+          "Enabled": true,
+          "__Prefab": "prefabs/locked_door.prefab",
+          "__PrefabVariables": {}
         }
       ]
     },
@@ -6570,16 +6628,6 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "d3976794-fc8c-4f67-9920-b3980926d786",
-      "Flags": 0,
-      "Name": "crowbar",
-      "Position": "3788.284,5819.039,385",
-      "Rotation": "-0.00000005960464,0,0.9999999,0",
-      "Enabled": true,
-      "__Prefab": "prefabs/crowbar.prefab",
-      "__PrefabVariables": {}
-    },
-    {
       "__guid": "e6f1bbe3-8c05-486d-839c-539113d446a2",
       "Flags": 0,
       "Name": "medkit",
@@ -6600,13 +6648,33 @@
       "__PrefabVariables": {}
     },
     {
-      "__guid": "f2c400de-c942-489d-a694-f6c4f5606c91",
+      "__guid": "85e79e37-8834-4b83-8247-5048d388085b",
       "Flags": 0,
-      "Name": "key",
+      "Name": "key (1)",
       "Position": "3880.812,5852.755,387",
       "Rotation": "0,0.00000005960464,0.8073792,0.5900331",
       "Enabled": true,
       "__Prefab": "prefabs/key.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "f1738002-5d03-4340-995d-75f7e2ea033f",
+      "Flags": 0,
+      "Name": "crowbar (1)",
+      "Position": "3788.284,5819.039,385",
+      "Rotation": "-0.00000005960464,0,0.9999999,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/crowbar.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "b59a5040-5e40-49ea-838a-6c123de1da98",
+      "Flags": 0,
+      "Name": "medkit (1)",
+      "Position": "4142.471,9109.084,410.0001",
+      "Rotation": "0.00000005830215,0.0000000123925,-0.8386699,0.5446404",
+      "Enabled": true,
+      "__Prefab": "prefabs/medkit.prefab",
       "__PrefabVariables": {}
     }
   ],
