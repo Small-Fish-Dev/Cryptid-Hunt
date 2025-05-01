@@ -1,0 +1,283 @@
+Inventory {
+    position: absolute;
+    background-color: rgba(black, 0.98);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: all;
+    z-index: 3;
+    cursor: default;
+
+    .container {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-family: ComicNeue-Bold;
+        flex-direction: column;
+
+        .title {
+            font-size: 48px;
+            color: rgb(235, 235, 235);
+            font-weight: 500;
+            text-shadow: 0px 0px 8px white;
+            background-image: url(ui/brushes2.png);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            padding: 20px 30px 20px 20px;
+            margin: -20px -30px -20px -15px;
+            font-family: Neucha-Regular;
+        }
+
+        .weightBarContainer {
+            background-image: url(ui/brushes2.png);
+            background-position: center;
+            background-size: 100%;
+            padding: 30px 45px 30px 20px;
+            margin: -25px -45px -30px -20px;
+
+            .weightBar {
+                width: 300px;
+                height: 25px;
+                background-image: url(ui/bar.png);
+                background-size: 100%;
+                background-image-tint: rgb(50, 50, 50);
+
+                .inner {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-size: 300px 25px;
+                    background-position-x: left;
+                    background-position-y: top;
+                    background-image: url(ui/bar.png);
+                    transition: width 0.2s ease-in-out;
+                }
+            }
+        }
+
+        .weightContainer {
+            flex-direction: row;
+
+            .weight {
+                color: rgb(120, 120, 120);
+                font-size: 20px;
+                text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                padding: 5px;
+                font-weight: 600;
+                background-image: url(ui/brushes6.png);
+                background-image-tint: rgba(350, 350, 350, 1);
+                background-position: center;
+                background-size: 100%;
+            }
+        }
+    }
+
+    .itemContainer {
+        position: absolute;
+        top: 175px;
+        left: 50px;
+        width: 1100px;
+        height: 900px;
+        background-image: url(ui/brushes4.png);
+        background-image-tint: rgba(350, 350, 350, 1);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px;
+        margin: -60px;
+
+        .slotContainer {
+            overflow: scroll;
+            flex-direction: row;
+            flex-wrap: wrap;
+            pointer-events: all;
+
+            .slot {
+                &.hasItem {
+                    background-image: url(ui/slot_background_outline.png);
+                    cursor: pointer;
+                }
+
+                &.selected {
+                    background-image-tint: rgba(white, 0.8);
+                }
+
+                background-image: url(ui/slot_background.png);
+                background-image-tint: rgba(gray, 0.75);
+                background-size: cover;
+                width: 200px;
+                aspect-ratio: 1;
+                left: 80px;
+
+                .weight {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 10px;
+                    flex-direction: row;
+                    font-family: ComicNeue-Bold;
+                    color: rgba(120, 120, 120, 1);
+                    background-image: url(ui/brushes2.png);
+                    padding: 10px;
+                    background-image-tint: rgba(300, 300, 300, 0.5);
+                    background-size: 100%;
+
+                    .icon {
+                        background-image: url(ui/weight.png);
+                        background-size: cover;
+                        width: 10px;
+                        height: 25px;
+                        background-image-tint: rgba(150, 150, 150, 1);
+                        padding-right: 15px;
+                    }
+
+                    .text {
+                        top: 3px;
+                        font-size: 18px;
+                        padding-left: 5px;
+                        text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                    }
+                }
+
+                .amount {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    flex-direction: row;
+                    font-family: ComicNeue-Bold;
+                    color: rgba(120, 120, 120, 1);
+                    background-image: url(ui/brushes2.png);
+                    padding: 10px;
+                    background-image-tint: rgba(300, 300, 300, 0.5);
+                    background-size: 100%;
+
+                    .text {
+                        font-size: 18px;
+                        text-shadow: 0px 0px 4px rgb(30, 30, 30);
+                    }
+                }
+
+                .iconContainer {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    margin: 10px;
+
+                    .itemIcon {
+                        position: absolute;
+                        background-size: 100%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .viewContainer {
+        position: absolute;
+        top: 175px;
+        right: 50px;
+        width: 1100px;
+        height: 900px;
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+        opacity: 1;
+
+        &:intro {
+            transform: scale(0);
+        }
+
+        &:outro {
+            transition: transform 0.1s ease-in, opacity 0.1s ease-in;
+            transform: scale(1.5);
+            opacity: 0;
+        }
+
+        .titleContainer {
+            position: absolute;
+            width: 100%;
+            flex-direction: column;
+            align-content: center;
+
+            .titleText {
+                align-self: center;
+
+                .title {
+                    font-family: Neucha-Regular;
+                    padding: 20px;
+                    margin: -20px;
+                    background-image: url(ui/brushes2.png);
+                    background-position: center;
+                    background-size: 100%;
+                    color: rgba(240, 240, 240, 1);
+                    text-shadow: 0px 0px 6px rgba(white, 0.8);
+                    font-size: 48px;
+                }
+            }
+
+            .descriptionText {
+                align-self: center;
+
+                .description {
+                    font-family: Neucha-Regular;
+                    padding: 20px;
+                    margin: -20px;
+                    background-image: url(ui/brushes6.png);
+                    background-position: center;
+                    background-size: 100%;
+                    color: rgba(140, 140, 140, 1);
+                    font-size: 32px;
+                    text-shadow: 0px 0px 4px rgba(white, 0.6);
+                }
+            }
+        }
+
+        .view {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: all;
+        }
+
+        .buttonContainer {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            left: 0px;
+            flex-direction: row;
+            justify-content: center;
+            z-index: 2;
+
+            .button {
+                background-image: url(ui/button.png);
+                background-size: cover;
+                width: 205px;
+                height: 70px;
+                flex-grow: 0;
+                justify-content: center;
+                font-family: Neucha-Regular;
+                font-size: 32px;
+                color: gray;
+                background-image-tint: rgba(gray, 1);
+                text-shadow: 0px 0px 4px rgb(30, 30, 30, 1);
+                transition: transform 0.2s ease-in-out;
+                transform: scale(1);
+                cursor: pointer;
+
+                &:hover {
+                    background-image-tint: rgba(white, 1);
+                    color: white;
+                    text-shadow: 0px 0px 4px rgb(gray, 1);
+                    transform: scale(1.2);
+                }
+
+                .text {
+                    align-self: center;
+                }
+            }
+        }
+    }
+}

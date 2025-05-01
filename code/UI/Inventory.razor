@@ -1,0 +1,52 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+    <div class="container">
+        <div class="title">Inventory</div>
+        <div class="weightBarContainer">
+            <div class="weightbar">300kg</div>
+        </div>
+    </div>
+</root>
+
+@code
+{
+    public static Inventory Instance { get; private set; }
+    public bool Show { get; private set; } = true;
+
+    protected override void OnStart()
+    {
+        base.OnStart();
+        Instance = this;
+    }
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+    }
+
+    public static void OpenNote( string text, bool handprint = false )
+    {
+    }
+
+    public static void CloseNote()
+    {
+    }
+
+    public static void OpenZoneHint(string text, float lifeSpan = 5f)
+    {
+    }
+
+    public static void BlackScreen(float lifeSpan = 5f)
+    {
+    }
+
+    public static void OpenInputHint(string text, string input = "attack1", float lifeSpan = 5f)
+    {
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
