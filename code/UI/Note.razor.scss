@@ -1,58 +1,60 @@
 Note {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    opacity: 1;
+    transform: translateY( 0% );
+
+    .page {
         position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
+        height: 77%;
+        aspect-ratio: 0.73;
+        background-image: url(ui/paper-note.png);
+        background-size: cover;
+        background-repeat: no-repeat;
         justify-content: center;
-        transition: all 0.5s ease-in;
-        opacity: 1;
-        transform: translateY( 0% );
+        align-items: center;
 
-        .page {
-            position: absolute;
-            height: 77%;
-            aspect-ratio: 0.73;
-            background-image: url(ui/paper-note.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            justify-content: center;
-            align-items: center;
+        .textContainer {
+            top: 11.5%;
+            width: 70%;
+            height: 71%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            white-space: pre;
 
-            .textContainer {
-                top: 11.5%;
-                width: 70%;
-                height: 71%;
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-
-                .text {
-                    font-family: 'Gochi Hand';
-                    font-size: 2.7vmin;
-                }
+            .text {
+                font-family: 'Gochi Hand';
+                font-size: 2.7vmin;
+                white-space: pre;
             }
         }
-
-        .handPrint {
-            position: absolute;
-            height: 77%;
-            aspect-ratio: 0.73;
-            background-image: url(ui/bloody-handprint.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-blend-mode: overlay;
-        }
-
-        &:intro {
-            opacity: 0;
-            transform: translateY( 30% );
-        }
-
-        &:outro {
-            opacity: 0;
-            transform: translateY( 30% );
-        }
     }
+
+    .handPrint {
+        position: absolute;
+        height: 77%;
+        aspect-ratio: 0.73;
+        background-image: url(ui/bloody-handprint.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+    }
+
+    &:intro {
+        opacity: 0;
+        transform: translateY( 30% );
+    }
+
+    &:outro {
+        opacity: 0;
+        transform: translateY( 30% );
+    }
+}
