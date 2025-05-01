@@ -6,7 +6,7 @@
 <root>
     <div class="ItemPrompt" style="display: @(Interactable.IsValid() ? "flex" : "none" )">
         <div class="itemContainer" style="left:@(ItemPromptPosition.x)px; top:@(ItemPromptPosition.y)px">
-            <div class="image"></div>
+            <div class="image" style="background-image: url(@((Interactable?.Locked ?? false) ? "ui/lock.png" : "ui/hand.png"))"></div>
             <div class="promptContainer">
                 <div class="prompt">@Interactable?.InteractDescription</div>
             </div>
