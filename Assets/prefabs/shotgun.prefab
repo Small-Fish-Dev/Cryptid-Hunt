@@ -10,34 +10,7 @@
         "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
         "Amount": 1,
         "Description": "Kill.",
-        "Icon": {
-          "$compiler": "texture",
-          "$source": "imagefile",
-          "data": {
-            "FilePath": "ui/icons/shotguni.png",
-            "MaxSize": 4096,
-            "ConvertHeightToNormals": false,
-            "NormalScale": 1,
-            "Rotate": 0,
-            "FlipVertical": false,
-            "FlipHorizontal": false,
-            "Padding": {
-              "Size": "0,0",
-              "EdgeSize": "0,0"
-            },
-            "Sharpen": 0,
-            "InvertColor": false,
-            "Blur": 0,
-            "Brightness": 1,
-            "Contrast": 1,
-            "Saturation": 1,
-            "Hue": 0,
-            "Colorize": false,
-            "TargetColor": "0,1,0,1",
-            "CacheToDisk": true
-          },
-          "compiled": null
-        },
+        "Icon": "ui/icons/shotguni.png",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {

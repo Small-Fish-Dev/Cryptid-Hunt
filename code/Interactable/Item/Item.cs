@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using Sandbox.UI;
+using System.Text.Json.Serialization;
 
 namespace CryptidHunt;
 
@@ -17,7 +18,8 @@ public partial class Item : Interactable
 
 	[Property]
 	[Category( "Visual" )]
-	public Texture Icon { get; set; }
+	[ImageAssetPath]
+	public string Icon { get; set; }
 
 	[Property]
 	[Category( "Visual" )]

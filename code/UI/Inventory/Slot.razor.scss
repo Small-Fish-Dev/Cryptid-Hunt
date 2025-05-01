@@ -13,12 +13,12 @@ Slot {
     background-size: cover;
     width: 200px;
     height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
 
     .weight {
+        position: relative;
+        left: 110px;
+        top: 135px;
+        height: 45px;
         flex-direction: row;
         font-family: 'Comic Neue';
         font-weight: bold;
@@ -28,6 +28,7 @@ Slot {
         margin: 7px;
         background-image-tint: rgba(300, 300, 300, 0.5);
         background-size: 100%;
+        z-index: 9;
 
         .icon {
             background-image: url(ui/weight.png);
@@ -36,6 +37,7 @@ Slot {
             height: 25px;
             background-image-tint: rgba(150, 150, 150, 1);
             padding-right: 15px;
+            z-index: 9;
         }
 
         .text {
@@ -43,13 +45,15 @@ Slot {
             font-size: 18px;
             padding-left: 5px;
             text-shadow: 0px 0px 4px rgb(30, 30, 30);
+            z-index: 9;
         }
     }
 
     .amount {
-        position: absolute;
+        position: relative;
+        left: -80px;
         top: 10px;
-        left: 10px;
+        height: 40px;
         flex-direction: row;
         font-family: 'Comic Neue';
         font-weight: bold;
@@ -58,6 +62,7 @@ Slot {
         padding: 10px;
         background-image-tint: rgba(300, 300, 300, 0.5);
         background-size: 100%;
+        z-index: 2;
 
         .text {
             font-size: 18px;
@@ -67,16 +72,16 @@ Slot {
 
     .iconContainer {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 200px;
+        height: 200px;
         padding: 10px;
         margin: 10px;
+        z-index: 1;
 
         .itemIcon {
-            position: absolute;
             background-size: 100%;
-            width: 100%;
-            height: 100%;
+            width: 90%;
+            height: 90%;
         }
     }
 }

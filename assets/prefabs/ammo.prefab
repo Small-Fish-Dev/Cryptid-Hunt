@@ -10,34 +10,7 @@
         "__guid": "d2c087af-2538-4d23-b22d-09620bd8b71d",
         "Amount": 1,
         "Description": "To fueal your shotgun",
-        "Icon": {
-          "$compiler": "texture",
-          "$source": "imagefile",
-          "data": {
-            "FilePath": "ui/icons/ammoi.png",
-            "MaxSize": 4096,
-            "ConvertHeightToNormals": false,
-            "NormalScale": 1,
-            "Rotate": 0,
-            "FlipVertical": false,
-            "FlipHorizontal": false,
-            "Padding": {
-              "Size": "0,0",
-              "EdgeSize": "0,0"
-            },
-            "Sharpen": 0,
-            "InvertColor": false,
-            "Blur": 0,
-            "Brightness": 1,
-            "Contrast": 1,
-            "Saturation": 1,
-            "Hue": 0,
-            "Colorize": false,
-            "TargetColor": "0,1,0,1",
-            "CacheToDisk": true
-          },
-          "compiled": null
-        },
+        "Icon": "ui/icons/ammoi.png",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {

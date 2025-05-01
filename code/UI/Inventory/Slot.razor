@@ -7,7 +7,13 @@
     {
         <div class="weight">
             <div class="icon"></div>
-            <div class="text">2.2 KG</div>
+            <div class="text">@Item.Weight KG</div>
+        </div>
+        <div class="amount">
+            <div class="text">@Item.Amount/@Item.MaxAmount</div>
+        </div>
+        <div class="iconContainer">
+            <img class="itemIcon" src="@Item.Icon" )>
         </div>
     }
 </root>
@@ -15,6 +21,10 @@
 @code
 {
     public Item Item { get; set; }
+
+    public override void Tick()
+    {
+    }
 
     protected override int BuildHash() => System.HashCode.Combine( Time.Now );
 }

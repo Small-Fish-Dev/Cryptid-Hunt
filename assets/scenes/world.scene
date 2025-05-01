@@ -510,7 +510,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 9,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -522,7 +522,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 10,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2804,7 +2804,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 30,
+                    "Id": 27,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2822,7 +2822,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 31,
+                    "Id": 28,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2840,7 +2840,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 32,
+                    "Id": 29,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -6537,6 +6537,56 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "b7f3f6f6-8238-4da7-b388-d209f4bafec8",
+      "Flags": 0,
+      "Name": "ammo",
+      "Position": "3932.639,5862.711,385",
+      "Rotation": "-0.00000005960464,0.00000002980232,0.8141328,0.5806787",
+      "Enabled": true,
+      "__Prefab": "prefabs/ammo.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "37f9788f-e4aa-496b-aa67-0b98bbce6608",
+      "Flags": 0,
+      "Name": "bear trap",
+      "Position": "3935.493,5926.807,385",
+      "Rotation": "-0.00000005960464,0.00000002980232,0.8141328,0.5806787",
+      "Enabled": true,
+      "__Prefab": "prefabs/bear trap.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "d3976794-fc8c-4f67-9920-b3980926d786",
+      "Flags": 0,
+      "Name": "crowbar",
+      "Position": "3788.284,5819.039,385",
+      "Rotation": "-0.00000005960464,0,0.9999999,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/crowbar.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "e6f1bbe3-8c05-486d-839c-539113d446a2",
+      "Flags": 0,
+      "Name": "medkit",
+      "Position": "3889.258,5799.634,385.0001",
+      "Rotation": "0,0.00000005960464,0.8073792,0.5900331",
+      "Enabled": true,
+      "__Prefab": "prefabs/medkit.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "c9cf9ed1-df68-463c-ade2-dae5e27770f3",
+      "Flags": 0,
+      "Name": "shotgun",
+      "Position": "3842.579,5761.577,384",
+      "Rotation": "-0.00000005960464,0,0.9999999,0",
+      "Enabled": true,
+      "__Prefab": "prefabs/shotgun.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
