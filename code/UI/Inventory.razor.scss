@@ -13,7 +13,8 @@ Inventory {
         position: absolute;
         left: 20px;
         top: 20px;
-        font-family: ComicNeue-Bold;
+        font-family: 'Comic Neue';
+        font-weight: bold;
         flex-direction: column;
 
         .title {
@@ -27,7 +28,7 @@ Inventory {
             background-repeat: no-repeat;
             padding: 20px 30px 20px 20px;
             margin: -20px -30px -20px -15px;
-            font-family: Neucha-Regular;
+            font-family: Neucha;
         }
 
         .weightBarContainer {
@@ -116,7 +117,8 @@ Inventory {
                     right: 10px;
                     bottom: 10px;
                     flex-direction: row;
-                    font-family: ComicNeue-Bold;
+                    font-family: 'Comic Neue';
+                    font-weight: bold;
                     color: rgba(120, 120, 120, 1);
                     background-image: url(ui/brushes2.png);
                     padding: 10px;
@@ -145,7 +147,8 @@ Inventory {
                     top: 10px;
                     left: 10px;
                     flex-direction: row;
-                    font-family: ComicNeue-Bold;
+                    font-family: 'Comic Neue';
+                    font-weight: bold;
                     color: rgba(120, 120, 120, 1);
                     background-image: url(ui/brushes2.png);
                     padding: 10px;
@@ -206,7 +209,7 @@ Inventory {
                 align-self: center;
 
                 .title {
-                    font-family: Neucha-Regular;
+                    font-family: Neucha;
                     padding: 20px;
                     margin: -20px;
                     background-image: url(ui/brushes2.png);
@@ -222,7 +225,7 @@ Inventory {
                 align-self: center;
 
                 .description {
-                    font-family: Neucha-Regular;
+                    font-family: Neucha;
                     padding: 20px;
                     margin: -20px;
                     background-image: url(ui/brushes6.png);
@@ -258,7 +261,7 @@ Inventory {
                 height: 70px;
                 flex-grow: 0;
                 justify-content: center;
-                font-family: Neucha-Regular;
+                font-family: Neucha;
                 font-size: 32px;
                 color: gray;
                 background-image-tint: rgba(gray, 1);
