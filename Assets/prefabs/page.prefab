@@ -62,7 +62,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "PromptOffset2D": "0,0",
+        "PromptOffset2D": "-30,-30",
         "PromptOffset3D": "0,0,0",
         "Text": "Sorry dude, I mean you no harm.\nMy name is Patrick, I'm 31, and I'm not here to cause harm.\nPlease do not contact the police , please don't alert the authorities, please don't freak out.\nI'm not going to kill myself or hurt anyone or anything like that, but please don't freak out.\nMy name is Patr",
         "UseDescription": "read"

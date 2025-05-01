@@ -4473,84 +4473,1494 @@
             }
           ],
           "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "f9536e1f-f943-45c5-afaa-7d39d665c782",
-      "Flags": 0,
-      "Name": "Lake Camera Event",
-      "Position": "-2878,8036,172",
-      "Tags": "trigger",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "7aa8763c-218e-40a7-bca1-171f9850d75a",
-          "Center": "492.5625,-320.3542,148.9808",
-          "Friction": null,
-          "IsTrigger": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "Scale": "4433.243,4003.152,879.0507",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
         },
         {
-          "__type": "CryptidHunt.ScriptedEventTrigger",
-          "__guid": "daadbc76-e27b-4978-b60b-3162264d9330",
-          "LockInputs": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "StayDuration": 4,
-          "TargetTransform": {
-            "_type": "gameobject",
-            "go": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647"
-          },
-          "Transition": {
-            "rangey": "0,5",
-            "frames": [
-              {
-                "x": 0,
-                "y": 0,
-                "in": -0.065217406,
-                "out": 0.065217406,
-                "mode": "Mirrored"
-              },
-              {
-                "x": 1,
-                "y": 1,
-                "in": 0,
-                "out": 0,
-                "mode": "Mirrored"
-              }
-            ]
-          }
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
+          "__guid": "bf8f4b88-9348-4a25-bd2f-ee8c88707328",
           "Flags": 0,
-          "Name": "Camera Target",
-          "Position": "-846,-21.66699,-24",
-          "Rotation": "-0.04361936,-0.0000000383055,0.9990482,-0.0000008773406",
+          "Name": "Pages",
+          "Position": "2856.066,5743.891,682.1112",
           "Enabled": true,
           "Components": [],
-          "Children": []
+          "Children": [
+            {
+              "__guid": "1f73cbb3-31c2-469d-8bef-636bb044f172",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "-5524.282,-7015.217,-1109.769",
+              "Rotation": "0.3099855,-0.428265,0.563327,0.6349493",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
+                "Bloody Print": false
+              }
+            },
+            {
+              "__guid": "6658972e-38fc-4516-b8d4-a2cf823dac4c",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "-4835.393,-3221.217,-436.9318",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "I was wrong.\n\nIt doesn't even have eyes to gaze at me with.\nThat damn ape-thing attacked me while I was out foraging.\nThere is a chest in the church I was lodging at, my trusty shotgun is inside.\nIf you're reading this:\nYou'll need it.",
+                "Bloody Print": true
+              }
+            },
+            {
+              "__guid": "af040528-467a-4a33-86e3-68e5fc4dd054",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "-5490.393,-7127.217,-1151.932",
+              "Rotation": "0.06526307,0.1130389,0.4957225,-0.8586165",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "You're wasting your time, if you want a real scare you can work for us.\n\nRefuse and we'll come for you:\n\n91.196.10.201\nRzeszów, Poland\n50°00'41.4\"N   22°04'36.5\"E\n\nYour first task is killing the Polewik, a half-ape cryptid that hunts children.\nCome outside and meet us.",
+                "Bloody Print": false
+              }
+            },
+            {
+              "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "1118.607,3242.492,1.068176",
+              "Rotation": "0,0.5735765,0,0.819152",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
+                "Bloody Print": false
+              }
+            },
+            {
+              "__guid": "1c7c3f1f-dcd1-4fa7-9830-0eecd5ae7951",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "-4641.419,-3382.349,-469.7973",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "That thing...\nIt comes from the cave; I armed myself with a crowbar to open the old mineshaft but I was attacked.\nThis is it for me...\nI leave my key hoping it doesn't get added to the trophies inside of its cave...",
+                "Bloody Print": true
+              }
+            },
+            {
+              "__guid": "d3640cce-b4e4-4749-9d9a-b6b51503d79f",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "-342.4597,-19.24951,-22.02432",
+              "Rotation": "-0.2470533,-0.5074165,0.488091,-0.6657779",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\n its home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
+                "Bloody Print": false
+              }
+            }
+          ]
+        },
+        {
+          "__guid": "4864d6cf-eae4-403d-ad7e-d2f4c8cd5f41",
+          "Flags": 0,
+          "Name": "SoundCues",
+          "Position": "-149.3263,-149.3264,211.1794",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "0cd705c4-c1a5-4a8d-8b35-72077aeb4b25",
+              "Flags": 0,
+              "Name": "Crows Sound",
+              "Position": "4743.731,7778.812,630.611",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "6527aad9-50ca-452f-b481-2001b23da47a",
+                  "Center": "346.4105,0,-49.60214",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1534.823,500,599.2047",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "af337000-90af-458d-8e91-7ad19798e369",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/crows.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "c3cc620b-b129-4dee-8422-bee263bf4676",
+              "Flags": 0,
+              "Name": "Crows Sound (1)",
+              "Position": "-4161.2,9012.332,243.2374",
+              "Rotation": "0,0,0.965926,-0.2588188",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "48c60a4e-ad82-4001-bcc4-dd11b9a3c4fb",
+                  "Center": "346.4105,0,-49.60214",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1534.823,500,599.2047",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "543608b1-851a-42c8-8621-ed8aba8931a4",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/crows.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "31f191f7-e996-4f7f-a1c5-4b622c47b4ab",
+              "Flags": 0,
+              "Name": "Crows Sound (2)",
+              "Position": "3208.359,1693.49,724.2719",
+              "Rotation": "0,0,0.7933537,-0.6087613",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "7b0e3bff-4c49-4e30-a4d0-8404f7a883a8",
+                  "Center": "346.4105,0,-49.60214",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1534.823,500,599.2047",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "bdb58f17-bb52-4f3c-85b0-93352644f39a",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/crows.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "613e5628-a646-4701-aae0-c5b95240ac58",
+              "Flags": 0,
+              "Name": "Crows Sound (3)",
+              "Position": "1767.644,6512.994,271.7266",
+              "Rotation": "0,0,0.8660257,-0.4999999",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "6d7f33d2-5ea8-4e28-822c-460230d241ba",
+                  "Center": "346.4105,0,-49.60214",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1534.823,500,599.2047",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "b8726b60-99db-4ef9-b8a1-34fd8bb1f318",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/crows.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "d4aee9f4-06f9-4814-90a1-e702f76da07a",
+              "Flags": 0,
+              "Name": "Leaves Rustle",
+              "Position": "5053.414,5029.484,390.6334",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "e32fb111-ddf8-4ee5-82be-e0a344690984",
+                  "Center": "156.5604,-90.061,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1304.539,680.122,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "80711a69-8a2d-4998-81bb-6ce9433054a0",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3d84f3b7-02d1-41c7-bce2-61e91cba48c7",
+              "Flags": 0,
+              "Name": "Leaves Rustle (1)",
+              "Position": "2635.907,8791.908,295.304",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "93163130-3127-4862-92c5-abad03e15f00",
+                  "Center": "156.5604,-90.061,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1304.539,680.122,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "fb0de624-302a-44fe-8768-beb86d2677cf",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "4501c3ef-bccb-4c44-b948-5f4ff1e56ac6",
+              "Flags": 0,
+              "Name": "Leaves Rustle (2)",
+              "Position": "-2286.646,6555.889,12.98312",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "c219960d-0ad1-4181-bd20-869d42100e72",
+                  "Center": "156.5604,60.06192,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1304.539,980.3679,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "5db15dd1-859a-40c6-bb5b-a098550946c1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "c95d5878-9c31-404c-b9a2-3775d3432cc8",
+              "Flags": 0,
+              "Name": "Leaves Rustle (3)",
+              "Position": "6975.686,1762.462,328.6759",
+              "Rotation": "0,0,-0.7071067,0.7071068",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "d083ec25-9fa3-4eef-a734-65dd73740957",
+                  "Center": "809.4291,60.06192,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "2610.277,980.3679,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "f58e3d3e-aec0-4c1c-b7b9-d454ec05f35f",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "85321012-6016-45fb-a9b6-57069e04b071",
+              "Flags": 0,
+              "Name": "Leaves Rustle (4)",
+              "Position": "-2718.405,4270.37,12.98312",
+              "Rotation": "0,0,0.1305262,0.9914449",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "ea2e5b61-7343-4b98-b369-a07d0c3a7a4c",
+                  "Center": "156.5604,60.06192,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1304.539,980.3679,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "61692731-ff4f-44f1-a273-5f72ad3f7ef6",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "b17f38dd-4cd1-47eb-a629-e9dbd85d9e6a",
+              "Flags": 0,
+              "Name": "Leaves Rustle (5)",
+              "Position": "1726.603,5522.633,12.98312",
+              "Rotation": "0,0,0.5000001,0.8660256",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "71fd18c3-df52-45f5-9c30-16b714e372d2",
+                  "Center": "211.2169,150.8064,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1195.226,512.6591,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "d78c85dc-fa5a-4e63-9af3-2612a7f5bdb2",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "568b8491-e90b-4b7f-8d65-c64c296f67e2",
+              "Flags": 0,
+              "Name": "Metal Bar",
+              "Position": "1607.831,9780.422,262.6035",
+              "Rotation": "0,0,0.3826835,0.9238797",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "4292ac95-3aa6-40b1-80d1-e2afeeb38272",
+                  "Center": "18.41703,-15.07815,12.54826",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "136.8341,233.9842,155.1756",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "f8485d18-798d-4522-bd9b-3d65e640fde7",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/items/metal_bar.sound"
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "f7702f08-0bfb-4269-b1aa-075c41f7e621",
+          "Flags": 0,
+          "Name": "Path",
+          "Position": "-5028.344,8922.353,697.4897",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "ca48beec-dc77-442a-b1e3-d6dd3b4023b1",
+              "Flags": 0,
+              "Name": "Path_Node",
+              "Position": "623.5557,-860.5674,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "47295f84-5731-40e4-acbe-e1dc844af8f3",
+              "Flags": 0,
+              "Name": "Path_Node (1)",
+              "Position": "604.0474,-2361.769,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "bc41bab6-9e81-43d4-b229-1038fa3ec306",
+              "Flags": 0,
+              "Name": "Path_Node (2)",
+              "Position": "1250.279,-2705.533,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8a8eff23-d8e2-4821-8685-8b970b281399",
+              "Flags": 0,
+              "Name": "Path_Node (3)",
+              "Position": "1652.544,-3961.82,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "25882e3f-0298-4bf5-b25e-b9d662075c97",
+              "Flags": 0,
+              "Name": "Path_Node (4)",
+              "Position": "2117.991,-3327.289,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "0e093c9d-f97f-425d-b7e5-8a282189a8be",
+              "Flags": 0,
+              "Name": "Path_Node (5)",
+              "Position": "3353.355,-2066.665,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "869163cf-f993-4151-a5fc-1a3e1415a856",
+              "Flags": 0,
+              "Name": "Path_Node (6)",
+              "Position": "3743.03,-216.4629,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "73c42a2b-f194-4d45-9535-4207e8f60a6d",
+              "Flags": 0,
+              "Name": "Path_Node (7)",
+              "Position": "5026.753,-1574.187,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "1c9ef6d2-264e-4793-ae40-6b3eb3e23b79",
+              "Flags": 0,
+              "Name": "Path_Node (8)",
+              "Position": "6707.921,-3478.248,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "32ed4cc6-5017-4260-987b-088d794c1752",
+              "Flags": 0,
+              "Name": "Path_Node (9)",
+              "Position": "5186.511,-2344.293,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a96c7acc-d5be-4b33-879b-c603a161038a",
+              "Flags": 0,
+              "Name": "Path_Node (10)",
+              "Position": "3370.974,-2754.375,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8117015b-5b87-42e4-9358-36bb099466ca",
+              "Flags": 0,
+              "Name": "Path_Node (11)",
+              "Position": "1994.26,-3389.741,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "246fe5b3-89e8-458c-a9a2-ccb14a157d89",
+              "Flags": 0,
+              "Name": "Path_Node (12)",
+              "Position": "2596.299,-5265.494,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "20d93aa6-8da0-4a1a-aa9d-d3cde80644c2",
+              "Flags": 0,
+              "Name": "Path_Node (13)",
+              "Position": "2206.521,-6261.225,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "fd58b618-1cfa-4560-9bb5-2a386c16979b",
+              "Flags": 0,
+              "Name": "Path_Node (14)",
+              "Position": "2943.566,-6889.754,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a818e156-1ecc-4eef-9f95-283af06fe959",
+              "Flags": 0,
+              "Name": "Path_Node (15)",
+              "Position": "3612.459,-6828.389,-480.9151",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "501df04e-1913-4da6-ba26-d270927f7256",
+              "Flags": 0,
+              "Name": "Path_Node (16)",
+              "Position": "5605.668,-7323.422,-162.1162",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "fea9e18d-1c19-4147-8550-5e888e0e120c",
+              "Flags": 0,
+              "Name": "Path_Node (17)",
+              "Position": "7813.105,-7471.676,-34.8963",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "c6a145dc-635d-43dd-8c09-e9ab4a41dbc3",
+              "Flags": 0,
+              "Name": "Path_Node (18)",
+              "Position": "9052.402,-7875.59,-67.24011",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "c59d0b04-2383-40c6-92bf-5c4d2d7d37e1",
+              "Flags": 0,
+              "Name": "Path_Node (19)",
+              "Position": "11536.45,-8063.691,-198.8325",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "933d4b5f-aca1-4c10-9aff-a45ba78afdda",
+              "Flags": 0,
+              "Name": "Path_Node (20)",
+              "Position": "12773.38,-7388.949,-184.8475",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "5c4fbda2-e5ce-448d-aaa8-9758f92734cc",
+              "Flags": 0,
+              "Name": "Path_Node (21)",
+              "Position": "12414.91,-5693.035,-151.1623",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a8ff53e4-72d0-4bc2-9933-51ac696b8365",
+              "Flags": 0,
+              "Name": "Path_Node (22)",
+              "Position": "11963.73,-4945.414,-120.1789",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "4fcc74be-fe43-4549-b585-984389808b1b",
+              "Flags": 0,
+              "Name": "Path_Node (23)",
+              "Position": "10526.78,-4496.264,-93.08957",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "e0eef13d-a45b-41af-a141-fbdd316c67a3",
+              "Flags": 0,
+              "Name": "Path_Node (24)",
+              "Position": "9922.741,-3374.625,-93.08954",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "b31dd1e4-338d-412e-b363-e63a43a26211",
+              "Flags": 0,
+              "Name": "Path_Node (25)",
+              "Position": "9813.365,-2239.975,-93.08954",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "b62598f8-5253-4c2c-aa89-f3b3db2870ec",
+              "Flags": 0,
+              "Name": "Path_Node (26)",
+              "Position": "8259.019,-2947.539,-93.08954",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "4e2cdf10-6f28-4a3b-8eab-5690d2b0d15d",
+              "Flags": 0,
+              "Name": "Path_Node (27)",
+              "Position": "7419.35,-1652.44,-59.52664",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "a96b653e-020a-433c-9221-2f9a7f694b46",
+              "Flags": 0,
+              "Name": "Path_Node (28)",
+              "Position": "7709.126,-135.5059,-59.52664",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "590851ee-7673-4ac3-b6aa-7ccd9cbf9e51",
+              "Flags": 0,
+              "Name": "Path_Node (29)",
+              "Position": "7039.496,528.7578,-179.5072",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "e1b58b0d-62aa-4fbb-b59e-6aed9465ff17",
+              "Flags": 0,
+              "Name": "Path_Node (30)",
+              "Position": "5244.089,1279.105,-378.6311",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "9ca1aeb1-a333-4a49-b542-3a8163432217",
+              "Flags": 0,
+              "Name": "Path_Node (31)",
+              "Position": "1714.204,1806.959,-418.1874",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "10c3ee5d-5891-4844-8988-e536f8f16795",
+              "Flags": 0,
+              "Name": "Path_Node (32)",
+              "Position": "-839.1396,1849.743,-457.6037",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "17f09bd2-ae90-4def-ad40-43e2e8efa5ef",
+              "Flags": 0,
+              "Name": "Path_Node (33)",
+              "Position": "-1502.043,635.2334,-485.1877",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "f180c496-b3c8-41ca-a375-e49ed7885394",
+              "Flags": 0,
+              "Name": "Path_Node (34)",
+              "Position": "-79.38867,328.5664,-473.6619",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "b986d59e-1661-4f37-baf4-6b70ca3f1903",
+              "Flags": 0,
+              "Name": "Path_Node (35)",
+              "Position": "646.1206,-156.8047,-473.6619",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "f9536e1f-f943-45c5-afaa-7d39d665c782",
+          "Flags": 0,
+          "Name": "Lake Camera Event",
+          "Position": "-3027.326,7886.674,383.1794",
+          "Tags": "trigger",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "7aa8763c-218e-40a7-bca1-171f9850d75a",
+              "Center": "492.5625,-320.3542,148.9808",
+              "Friction": null,
+              "IsTrigger": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "4433.243,4003.152,879.0507",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "CryptidHunt.ScriptedEventTrigger",
+              "__guid": "daadbc76-e27b-4978-b60b-3162264d9330",
+              "LockInputs": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "StayDuration": 4,
+              "TargetTransform": {
+                "_type": "gameobject",
+                "go": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647"
+              },
+              "Transition": {
+                "rangey": "0,5",
+                "frames": [
+                  {
+                    "x": 0,
+                    "y": 0,
+                    "in": -0.065217406,
+                    "out": 0.065217406,
+                    "mode": "Mirrored"
+                  },
+                  {
+                    "x": 1,
+                    "y": 1,
+                    "in": 0,
+                    "out": 0,
+                    "mode": "Mirrored"
+                  }
+                ]
+              }
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
+              "Flags": 0,
+              "Name": "Camera Target",
+              "Position": "-846,-21.66699,-24",
+              "Rotation": "-0.04361936,-0.0000000383055,0.9990482,-0.0000008773406",
+              "Enabled": true,
+              "Components": [],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "e5614751-b525-42c8-a218-0ecaa72aeb56",
+          "Flags": 0,
+          "Name": "DiscoverableAreas",
+          "Position": "-149.3263,-149.3264,211.1794",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "f49b9b02-00e6-4c3c-83a9-f8f9b4fcbeec",
+              "Flags": 0,
+              "Name": "The Church",
+              "Position": "4221.079,9109.574,591.1458",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "fb26d4f3-5103-464b-a2e0-e8c3d2f92ce0",
+                  "Center": "423.2643,32.04297,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "2846.528,1935.914,1000",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "aba80289-f5f2-4423-b2f6-6333950e03bb",
+                  "AreaName": "The Church",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "17b3321b-8971-432e-87fe-ec4762067da5",
+              "Flags": 0,
+              "Name": "The Tower",
+              "Position": "2650.359,5809.314,412.5966",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "4c176081-5531-4acf-a472-8a23fe018b5f",
+                  "Center": "113.1189,126.0429,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1226.238,1252.086,2000",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "1e3907cf-25be-418e-a311-ba9b82b15898",
+                  "AreaName": "The Tower",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "51a1684b-e584-4d17-bd7b-18235c16beef",
+              "Flags": 0,
+              "Name": "The Sewer?",
+              "Position": "2269.048,4745.898,-8.102646",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "17b313aa-f85c-4ee2-8401-f64598f01b68",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "500,500,500",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "6a14fe11-52a1-49ce-8b38-d76a88c2b9a5",
+                  "AreaName": "The Sewer?",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "2f36470d-8036-4d17-bacc-9d01889ed665",
+              "Flags": 0,
+              "Name": "The Pond",
+              "Position": "-2451.293,8012.469,43.43506",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "26dd07a0-f860-4791-a77b-3ca71770d4db",
+                  "Center": "170.6401,-520.907,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "4485.952,2545.986,1000",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "a1289d8d-4163-47f3-b18b-7301ceb6e9e3",
+                  "AreaName": "The Pond",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3c8dc579-4acb-4ec8-a55f-0950bcfe95f0",
+              "Flags": 0,
+              "Name": "The Shed",
+              "Position": "-1716.581,2586.213,-130.4164",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "b098af9f-5855-405c-a361-2791501172d8",
+                  "Center": "-187.4428,57.18195,28.41061",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1374.886,1114.364,943.1788",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "0986afa8-b7ce-4a98-95af-2a3d33781a36",
+                  "AreaName": "The Shed",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "f24d29de-8bd3-44fc-9995-35fbaeda230a",
+              "Flags": 0,
+              "Name": "The Cave",
+              "Position": "-6715.872,9988.021,43.43417",
+              "Rotation": "0,0,-0.6755902,0.7372774",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "fab69c66-80a6-4f20-a0aa-3c044d25e31c",
+                  "Center": "122.9626,4251.69,171.9885",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1954.258,9503.38,1343.977",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "d2b6d9db-cdc8-40f7-b8b3-1d37837bb5d6",
+                  "AreaName": "The Cave",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "ae9a73eb-4f75-41dc-9ad7-8f8b3eea7b0a",
+              "Flags": 0,
+              "Name": "The Forest",
+              "Position": "6687.108,4067.546,591.1456",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
+                  "Center": "-2142.144,-1064.206,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "5070.833,4128.413,1000",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.DiscoverableArea",
+                  "__guid": "fd830d84-42c4-45d2-a239-3d9937d90bca",
+                  "AreaName": "The Forest",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "98cb426e-3af8-4da5-9343-792145074b6d",
+          "Flags": 0,
+          "Name": "InputHints",
+          "Position": "1148.219,5783.841,1427.491",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "636af512-9e9f-4887-8616-7c0a501ad670",
+              "Flags": 0,
+              "Name": "Run hint",
+              "Position": "4656.846,-1248.405,-785.2676",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "f6c03b19-9ff5-4571-aad3-f2670639deba",
+                  "Center": "0,-2327.564,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "500,5542.664,500",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.InputScreenHint",
+                  "__guid": "839cf02c-949d-4563-84fb-6fa6782e172e",
+                  "ButtonHint": "Run",
+                  "Hint": " to run.",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3a9833e2-635a-4bec-bab1-d6ab5aad3cf1",
+              "Flags": 0,
+              "Name": "Inventory hint",
+              "Position": "2819.583,3205.718,-785.2676",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "e49657bb-7da6-41d5-bff5-c2762a12b2f6",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "500,500,500",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.InputScreenHint",
+                  "__guid": "68b80ed0-e5ce-4321-8ad9-79f4c28ed9ab",
+                  "ButtonHint": "Score",
+                  "Hint": "to open your backpack and equip items.",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "3c350023-5d4f-42c9-991d-4eefadbf95f0",
+              "Flags": 0,
+              "Name": "Interact hint",
+              "Position": "-3806.239,-7221.94,-1886.37",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "5cef1c43-70da-4e2d-b8e5-109317b11cc6",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "200,200,200",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.InputScreenHint",
+                  "__guid": "8b8f93fd-c2f8-4b40-8408-49601272f28a",
+                  "ButtonHint": "Use",
+                  "Hint": "to interact with items.",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "30797168-ccec-44ba-ac8f-0a534b29ebb6",
+              "Flags": 0,
+              "Name": "Item hint",
+              "Position": "1301.177,-150.7969,-1276.726",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "0cb0f38d-cc1c-44cc-925f-01d53acfc3e8",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "500,500,500",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.InputScreenHint",
+                  "__guid": "c7e440c5-b732-496b-9d08-f240ddd6a4b1",
+                  "ButtonHint": "Attack1",
+                  "Hint": "to use equipped item.",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
+                }
+              ],
+              "Children": []
+            }
+          ]
         }
       ]
     },
@@ -5065,1327 +6475,6 @@
       ]
     },
     {
-      "__guid": "4864d6cf-eae4-403d-ad7e-d2f4c8cd5f41",
-      "Flags": 0,
-      "Name": "SoundCues",
-      "Enabled": true,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "0cd705c4-c1a5-4a8d-8b35-72077aeb4b25",
-          "Flags": 0,
-          "Name": "Crows Sound",
-          "Position": "4743.731,7778.812,630.611",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "6527aad9-50ca-452f-b481-2001b23da47a",
-              "Center": "346.4105,0,-49.60214",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1534.823,500,599.2047",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "af337000-90af-458d-8e91-7ad19798e369",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/crows.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "c3cc620b-b129-4dee-8422-bee263bf4676",
-          "Flags": 0,
-          "Name": "Crows Sound (1)",
-          "Position": "-4161.2,9012.332,243.2374",
-          "Rotation": "0,0,0.965926,-0.2588188",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "48c60a4e-ad82-4001-bcc4-dd11b9a3c4fb",
-              "Center": "346.4105,0,-49.60214",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1534.823,500,599.2047",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "543608b1-851a-42c8-8621-ed8aba8931a4",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/crows.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "31f191f7-e996-4f7f-a1c5-4b622c47b4ab",
-          "Flags": 0,
-          "Name": "Crows Sound (2)",
-          "Position": "3208.359,1693.49,724.2719",
-          "Rotation": "0,0,0.7933537,-0.6087613",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "7b0e3bff-4c49-4e30-a4d0-8404f7a883a8",
-              "Center": "346.4105,0,-49.60214",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1534.823,500,599.2047",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "bdb58f17-bb52-4f3c-85b0-93352644f39a",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/crows.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "613e5628-a646-4701-aae0-c5b95240ac58",
-          "Flags": 0,
-          "Name": "Crows Sound (3)",
-          "Position": "1767.644,6512.994,271.7266",
-          "Rotation": "0,0,0.8660257,-0.4999999",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "6d7f33d2-5ea8-4e28-822c-460230d241ba",
-              "Center": "346.4105,0,-49.60214",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1534.823,500,599.2047",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "b8726b60-99db-4ef9-b8a1-34fd8bb1f318",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/crows.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "d4aee9f4-06f9-4814-90a1-e702f76da07a",
-          "Flags": 0,
-          "Name": "Leaves Rustle",
-          "Position": "5053.414,5029.484,390.6334",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "e32fb111-ddf8-4ee5-82be-e0a344690984",
-              "Center": "156.5604,-90.061,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1304.539,680.122,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "80711a69-8a2d-4998-81bb-6ce9433054a0",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "3d84f3b7-02d1-41c7-bce2-61e91cba48c7",
-          "Flags": 0,
-          "Name": "Leaves Rustle (1)",
-          "Position": "2635.907,8791.908,295.304",
-          "Rotation": "0,0,0.258819,0.9659258",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "93163130-3127-4862-92c5-abad03e15f00",
-              "Center": "156.5604,-90.061,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1304.539,680.122,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "fb0de624-302a-44fe-8768-beb86d2677cf",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "4501c3ef-bccb-4c44-b948-5f4ff1e56ac6",
-          "Flags": 0,
-          "Name": "Leaves Rustle (2)",
-          "Position": "-2286.646,6555.889,12.98312",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "c219960d-0ad1-4181-bd20-869d42100e72",
-              "Center": "156.5604,60.06192,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1304.539,980.3679,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "5db15dd1-859a-40c6-bb5b-a098550946c1",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "c95d5878-9c31-404c-b9a2-3775d3432cc8",
-          "Flags": 0,
-          "Name": "Leaves Rustle (3)",
-          "Position": "6975.686,1762.462,328.6759",
-          "Rotation": "0,0,-0.7071067,0.7071068",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "d083ec25-9fa3-4eef-a734-65dd73740957",
-              "Center": "809.4291,60.06192,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "2610.277,980.3679,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "f58e3d3e-aec0-4c1c-b7b9-d454ec05f35f",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "85321012-6016-45fb-a9b6-57069e04b071",
-          "Flags": 0,
-          "Name": "Leaves Rustle (4)",
-          "Position": "-2718.405,4270.37,12.98312",
-          "Rotation": "0,0,0.1305262,0.9914449",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "ea2e5b61-7343-4b98-b369-a07d0c3a7a4c",
-              "Center": "156.5604,60.06192,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1304.539,980.3679,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "61692731-ff4f-44f1-a273-5f72ad3f7ef6",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "b17f38dd-4cd1-47eb-a629-e9dbd85d9e6a",
-          "Flags": 0,
-          "Name": "Leaves Rustle (5)",
-          "Position": "1726.603,5522.633,12.98312",
-          "Rotation": "0,0,0.5000001,0.8660256",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "71fd18c3-df52-45f5-9c30-16b714e372d2",
-              "Center": "211.2169,150.8064,173.2882",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1195.226,512.6591,443.3737",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "d78c85dc-fa5a-4e63-9af3-2612a7f5bdb2",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/ambient/leaves_rustle.sound"
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "568b8491-e90b-4b7f-8d65-c64c296f67e2",
-          "Flags": 0,
-          "Name": "Metal Bar",
-          "Position": "1607.831,9780.422,262.6035",
-          "Rotation": "0,0,0.3826835,0.9238797",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "4292ac95-3aa6-40b1-80d1-e2afeeb38272",
-              "Center": "18.41703,-15.07815,12.54826",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "136.8341,233.9842,155.1756",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.MySoundCue",
-              "__guid": "f8485d18-798d-4522-bd9b-3d65e640fde7",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Sound": "sounds/items/metal_bar.sound"
-            }
-          ],
-          "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "f7702f08-0bfb-4269-b1aa-075c41f7e621",
-      "Flags": 0,
-      "Name": "Path",
-      "Position": "-4879.018,9071.679,486.3103",
-      "Enabled": true,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "ca48beec-dc77-442a-b1e3-d6dd3b4023b1",
-          "Flags": 0,
-          "Name": "Path_Node",
-          "Position": "623.5557,-860.5674,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "47295f84-5731-40e4-acbe-e1dc844af8f3",
-          "Flags": 0,
-          "Name": "Path_Node (1)",
-          "Position": "604.0474,-2361.769,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "bc41bab6-9e81-43d4-b229-1038fa3ec306",
-          "Flags": 0,
-          "Name": "Path_Node (2)",
-          "Position": "1250.279,-2705.533,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8a8eff23-d8e2-4821-8685-8b970b281399",
-          "Flags": 0,
-          "Name": "Path_Node (3)",
-          "Position": "1652.544,-3961.82,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "25882e3f-0298-4bf5-b25e-b9d662075c97",
-          "Flags": 0,
-          "Name": "Path_Node (4)",
-          "Position": "2117.991,-3327.289,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "0e093c9d-f97f-425d-b7e5-8a282189a8be",
-          "Flags": 0,
-          "Name": "Path_Node (5)",
-          "Position": "3353.355,-2066.665,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "869163cf-f993-4151-a5fc-1a3e1415a856",
-          "Flags": 0,
-          "Name": "Path_Node (6)",
-          "Position": "3743.03,-216.4629,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "73c42a2b-f194-4d45-9535-4207e8f60a6d",
-          "Flags": 0,
-          "Name": "Path_Node (7)",
-          "Position": "5026.753,-1574.187,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "1c9ef6d2-264e-4793-ae40-6b3eb3e23b79",
-          "Flags": 0,
-          "Name": "Path_Node (8)",
-          "Position": "6707.921,-3478.248,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "32ed4cc6-5017-4260-987b-088d794c1752",
-          "Flags": 0,
-          "Name": "Path_Node (9)",
-          "Position": "5186.511,-2344.293,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a96c7acc-d5be-4b33-879b-c603a161038a",
-          "Flags": 0,
-          "Name": "Path_Node (10)",
-          "Position": "3370.974,-2754.375,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "8117015b-5b87-42e4-9358-36bb099466ca",
-          "Flags": 0,
-          "Name": "Path_Node (11)",
-          "Position": "1994.26,-3389.741,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "246fe5b3-89e8-458c-a9a2-ccb14a157d89",
-          "Flags": 0,
-          "Name": "Path_Node (12)",
-          "Position": "2596.299,-5265.494,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "20d93aa6-8da0-4a1a-aa9d-d3cde80644c2",
-          "Flags": 0,
-          "Name": "Path_Node (13)",
-          "Position": "2206.521,-6261.225,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "fd58b618-1cfa-4560-9bb5-2a386c16979b",
-          "Flags": 0,
-          "Name": "Path_Node (14)",
-          "Position": "2943.566,-6889.754,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a818e156-1ecc-4eef-9f95-283af06fe959",
-          "Flags": 0,
-          "Name": "Path_Node (15)",
-          "Position": "3612.459,-6828.389,-480.9151",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "501df04e-1913-4da6-ba26-d270927f7256",
-          "Flags": 0,
-          "Name": "Path_Node (16)",
-          "Position": "5605.668,-7323.422,-162.1162",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "fea9e18d-1c19-4147-8550-5e888e0e120c",
-          "Flags": 0,
-          "Name": "Path_Node (17)",
-          "Position": "7813.105,-7471.676,-34.8963",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "c6a145dc-635d-43dd-8c09-e9ab4a41dbc3",
-          "Flags": 0,
-          "Name": "Path_Node (18)",
-          "Position": "9052.402,-7875.59,-67.24011",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "c59d0b04-2383-40c6-92bf-5c4d2d7d37e1",
-          "Flags": 0,
-          "Name": "Path_Node (19)",
-          "Position": "11536.45,-8063.691,-198.8325",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "933d4b5f-aca1-4c10-9aff-a45ba78afdda",
-          "Flags": 0,
-          "Name": "Path_Node (20)",
-          "Position": "12773.38,-7388.949,-184.8475",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "5c4fbda2-e5ce-448d-aaa8-9758f92734cc",
-          "Flags": 0,
-          "Name": "Path_Node (21)",
-          "Position": "12414.91,-5693.035,-151.1623",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a8ff53e4-72d0-4bc2-9933-51ac696b8365",
-          "Flags": 0,
-          "Name": "Path_Node (22)",
-          "Position": "11963.73,-4945.414,-120.1789",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "4fcc74be-fe43-4549-b585-984389808b1b",
-          "Flags": 0,
-          "Name": "Path_Node (23)",
-          "Position": "10526.78,-4496.264,-93.08957",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "e0eef13d-a45b-41af-a141-fbdd316c67a3",
-          "Flags": 0,
-          "Name": "Path_Node (24)",
-          "Position": "9922.741,-3374.625,-93.08954",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "b31dd1e4-338d-412e-b363-e63a43a26211",
-          "Flags": 0,
-          "Name": "Path_Node (25)",
-          "Position": "9813.365,-2239.975,-93.08954",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "b62598f8-5253-4c2c-aa89-f3b3db2870ec",
-          "Flags": 0,
-          "Name": "Path_Node (26)",
-          "Position": "8259.019,-2947.539,-93.08954",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "4e2cdf10-6f28-4a3b-8eab-5690d2b0d15d",
-          "Flags": 0,
-          "Name": "Path_Node (27)",
-          "Position": "7419.35,-1652.44,-59.52664",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "a96b653e-020a-433c-9221-2f9a7f694b46",
-          "Flags": 0,
-          "Name": "Path_Node (28)",
-          "Position": "7709.126,-135.5059,-59.52664",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "590851ee-7673-4ac3-b6aa-7ccd9cbf9e51",
-          "Flags": 0,
-          "Name": "Path_Node (29)",
-          "Position": "7039.496,528.7578,-179.5072",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "e1b58b0d-62aa-4fbb-b59e-6aed9465ff17",
-          "Flags": 0,
-          "Name": "Path_Node (30)",
-          "Position": "5244.089,1279.105,-378.6311",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "9ca1aeb1-a333-4a49-b542-3a8163432217",
-          "Flags": 0,
-          "Name": "Path_Node (31)",
-          "Position": "1714.204,1806.959,-418.1874",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "10c3ee5d-5891-4844-8988-e536f8f16795",
-          "Flags": 0,
-          "Name": "Path_Node (32)",
-          "Position": "-839.1396,1849.743,-457.6037",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "17f09bd2-ae90-4def-ad40-43e2e8efa5ef",
-          "Flags": 0,
-          "Name": "Path_Node (33)",
-          "Position": "-1502.043,635.2334,-485.1877",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "f180c496-b3c8-41ca-a375-e49ed7885394",
-          "Flags": 0,
-          "Name": "Path_Node (34)",
-          "Position": "-79.38867,328.5664,-473.6619",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        },
-        {
-          "__guid": "b986d59e-1661-4f37-baf4-6b70ca3f1903",
-          "Flags": 0,
-          "Name": "Path_Node (35)",
-          "Position": "646.1206,-156.8047,-473.6619",
-          "Enabled": true,
-          "Components": [],
-          "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "e5614751-b525-42c8-a218-0ecaa72aeb56",
-      "Flags": 0,
-      "Name": "DiscoverableAreas",
-      "Enabled": true,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "f49b9b02-00e6-4c3c-83a9-f8f9b4fcbeec",
-          "Flags": 0,
-          "Name": "The Church",
-          "Position": "4221.079,9109.574,591.1458",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "fb26d4f3-5103-464b-a2e0-e8c3d2f92ce0",
-              "Center": "423.2643,32.04297,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "2846.528,1935.914,1000",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "aba80289-f5f2-4423-b2f6-6333950e03bb",
-              "AreaName": "The Church",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "17b3321b-8971-432e-87fe-ec4762067da5",
-          "Flags": 0,
-          "Name": "The Tower",
-          "Position": "2650.359,5809.314,412.5966",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "4c176081-5531-4acf-a472-8a23fe018b5f",
-              "Center": "113.1189,126.0429,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1226.238,1252.086,2000",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "1e3907cf-25be-418e-a311-ba9b82b15898",
-              "AreaName": "The Tower",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "51a1684b-e584-4d17-bd7b-18235c16beef",
-          "Flags": 0,
-          "Name": "The Sewer?",
-          "Position": "2269.048,4745.898,-8.102646",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "17b313aa-f85c-4ee2-8401-f64598f01b68",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "500,500,500",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "6a14fe11-52a1-49ce-8b38-d76a88c2b9a5",
-              "AreaName": "The Sewer?",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "2f36470d-8036-4d17-bacc-9d01889ed665",
-          "Flags": 0,
-          "Name": "The Pond",
-          "Position": "-2451.293,8012.469,43.43506",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "26dd07a0-f860-4791-a77b-3ca71770d4db",
-              "Center": "170.6401,-520.907,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "4485.952,2545.986,1000",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "a1289d8d-4163-47f3-b18b-7301ceb6e9e3",
-              "AreaName": "The Pond",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "3c8dc579-4acb-4ec8-a55f-0950bcfe95f0",
-          "Flags": 0,
-          "Name": "The Shed",
-          "Position": "-1716.581,2586.213,-130.4164",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "b098af9f-5855-405c-a361-2791501172d8",
-              "Center": "-187.4428,57.18195,28.41061",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1374.886,1114.364,943.1788",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "0986afa8-b7ce-4a98-95af-2a3d33781a36",
-              "AreaName": "The Shed",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "f24d29de-8bd3-44fc-9995-35fbaeda230a",
-          "Flags": 0,
-          "Name": "The Cave",
-          "Position": "-6715.872,9988.021,43.43417",
-          "Rotation": "0,0,-0.6755902,0.7372774",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "fab69c66-80a6-4f20-a0aa-3c044d25e31c",
-              "Center": "122.9626,4251.69,171.9885",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "1954.258,9503.38,1343.977",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "d2b6d9db-cdc8-40f7-b8b3-1d37837bb5d6",
-              "AreaName": "The Cave",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "ae9a73eb-4f75-41dc-9ad7-8f8b3eea7b0a",
-          "Flags": 0,
-          "Name": "The Forest",
-          "Position": "6687.108,4067.546,591.1456",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
-              "Center": "-2142.144,-1064.206,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "5070.833,4128.413,1000",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.DiscoverableArea",
-              "__guid": "fd830d84-42c4-45d2-a239-3d9937d90bca",
-              "AreaName": "The Forest",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        }
-      ]
-    },
-    {
-      "__guid": "98cb426e-3af8-4da5-9343-792145074b6d",
-      "Flags": 0,
-      "Name": "InputHints",
-      "Position": "1297.545,5933.167,1216.312",
-      "Enabled": true,
-      "Components": [],
-      "Children": [
-        {
-          "__guid": "636af512-9e9f-4887-8616-7c0a501ad670",
-          "Flags": 0,
-          "Name": "Run hint",
-          "Position": "4656.846,-1248.405,-785.2676",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "f6c03b19-9ff5-4571-aad3-f2670639deba",
-              "Center": "0,-2327.564,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "500,5542.664,500",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.InputScreenHint",
-              "__guid": "839cf02c-949d-4563-84fb-6fa6782e172e",
-              "ButtonHint": "Run",
-              "Hint": " to run.",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "3a9833e2-635a-4bec-bab1-d6ab5aad3cf1",
-          "Flags": 0,
-          "Name": "Inventory hint",
-          "Position": "2819.583,3205.718,-785.2676",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "e49657bb-7da6-41d5-bff5-c2762a12b2f6",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "500,500,500",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.InputScreenHint",
-              "__guid": "68b80ed0-e5ce-4321-8ad9-79f4c28ed9ab",
-              "ButtonHint": "Score",
-              "Hint": "to open your backpack and equip items.",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "3c350023-5d4f-42c9-991d-4eefadbf95f0",
-          "Flags": 0,
-          "Name": "Interact hint",
-          "Position": "-3806.239,-7221.94,-1886.37",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "5cef1c43-70da-4e2d-b8e5-109317b11cc6",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "200,200,200",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.InputScreenHint",
-              "__guid": "8b8f93fd-c2f8-4b40-8408-49601272f28a",
-              "ButtonHint": "Use",
-              "Hint": "to interact with items.",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "30797168-ccec-44ba-ac8f-0a534b29ebb6",
-          "Flags": 0,
-          "Name": "Item hint",
-          "Position": "1301.177,-150.7969,-1276.726",
-          "Tags": "trigger",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "0cb0f38d-cc1c-44cc-925f-01d53acfc3e8",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "500,500,500",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "CryptidHunt.InputScreenHint",
-              "__guid": "c7e440c5-b732-496b-9d08-f240ddd6a4b1",
-              "ButtonHint": "Attack1",
-              "Hint": "to use equipped item.",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
-            }
-          ],
-          "Children": []
-        }
-      ]
-    },
-    {
       "__guid": "69ad7a97-9e2f-4d2f-82c6-c6b516a3591a",
       "Flags": 0,
       "Name": "Cube",
@@ -6438,83 +6527,6 @@
         }
       ],
       "Children": []
-    },
-    {
-      "__guid": "1f73cbb3-31c2-469d-8bef-636bb044f172",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "-2518.889,-1122,-638.8376",
-      "Rotation": "0.3099855,-0.428265,0.563327,0.6349493",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
-        "Bloody Print": false
-      }
-    },
-    {
-      "__guid": "6658972e-38fc-4516-b8d4-a2cf823dac4c",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "-1830,2672,34",
-      "Rotation": "0,0,0.258819,0.9659258",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "I was wrong.\n\nIt doesn't even have eyes to gaze at me with.\nThat damn ape-thing attacked me while I was out foraging.\nThere is a chest in the church I was lodging at, my trusty shotgun is inside.\nIf you're reading this:\nYou'll need it.",
-        "Bloody Print": true
-      }
-    },
-    {
-      "__guid": "af040528-467a-4a33-86e3-68e5fc4dd054",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "-2485,-1234,-681",
-      "Rotation": "0.06526307,0.1130389,0.4957225,-0.8586165",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "You're wasting your time, if you want a real scare you can work for us.\n\nRefuse and we'll come for you:\n\n91.196.10.201\nRzeszów, Poland\n50°00'41.4\"N   22°04'36.5\"E\n\nYour first task is killing the Polewik, a half-ape cryptid that hunts children.\nCome outside and meet us.",
-        "Bloody Print": false
-      }
-    },
-    {
-      "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "4124,9135.709,472",
-      "Rotation": "0,0.5735765,0,0.819152",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
-        "Bloody Print": false
-      }
-    },
-    {
-      "__guid": "1c7c3f1f-dcd1-4fa7-9830-0eecd5ae7951",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "-1636.026,2510.868,1.134521",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "That thing...\nIt comes from the cave; I armed myself with a crowbar to open the old mineshaft but I was attacked.\nThis is it for me...\nI leave my key hoping it doesn't get added to the trophies inside of its cave...",
-        "Bloody Print": true
-      }
-    },
-    {
-      "__guid": "d3640cce-b4e4-4749-9d9a-b6b51503d79f",
-      "Flags": 0,
-      "Name": "page (1)",
-      "Position": "2662.933,5873.968,448.9075",
-      "Rotation": "-0.2470533,-0.5074165,0.488091,-0.6657779",
-      "Enabled": true,
-      "__Prefab": "prefabs/page.prefab",
-      "__PrefabVariables": {
-        "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\n its home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
-        "Bloody Print": false
-      }
     }
   ],
   "SceneProperties": {
