@@ -18,13 +18,11 @@ Note {
         background-image: url(ui/paper-note.png);
         background-size: cover;
         background-repeat: no-repeat;
-        justify-content: center;
-        align-items: center;
 
         .textContainer {
-            top: 11.5%;
-            width: 70%;
-            height: 71%;
+            width: 100%;
+            height: 100%;
+            padding: 32% 12% 20% 12%;
             display: flex;
             flex-direction: column;
             text-align: left;
