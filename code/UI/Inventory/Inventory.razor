@@ -17,7 +17,7 @@
                 @for (int i = 0; i < Items.Length; i++)
                 {
                     var item = Items[i];
-                    <Slot class="@(item.IsValid() ? "hasItem" : "")" Item="@item"/>
+                    <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
                 }
             </div>
         </div>
@@ -27,7 +27,9 @@
 @code
 {
     public static Inventory Instance { get; private set; }
-    public static Item[] Items => Player.Instance.Inventory;
+    public Item[] Items => Player.Instance.Inventory;
+    public Item SelectedItem { get; set; }
+
     public bool Show { get; private set; } = true;
 
     protected override void OnStart()
