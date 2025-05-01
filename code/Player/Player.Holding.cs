@@ -13,7 +13,12 @@ public partial class Player
 		}
 
 		if ( item.IsValid() ) // We can change holding to null
+		{
+			item.GameObject.SetParent( Camera.GameObject );
+			item.LocalPosition = item.ViewModelOffset;
+			item.LocalRotation = item.ViewModelRotation;
 			item.GameObject.Enabled = true;
+		}
 
 		Holding = item;
 	}

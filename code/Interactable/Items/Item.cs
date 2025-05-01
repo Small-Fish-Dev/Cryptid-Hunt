@@ -54,7 +54,7 @@ public partial class Item : Interactable
 		if ( !player.IsValid() ) return;
 
 		if ( player.Give( this ) )
-			Sound.Play( "pickup", WorldPosition ).Pitch *= 1.1f;
+			Sound.Play( "pickup", WorldPosition ).Pitch *= 1.2f;
 	}
 
 	public override void Use( Player player )
