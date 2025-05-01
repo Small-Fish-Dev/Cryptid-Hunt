@@ -1,0 +1,82 @@
+Slot {
+    &.hasItem {
+        background-image: url(ui/slot_background_outline.png);
+        cursor: pointer;
+    }
+
+    &.selected {
+        background-image-tint: rgba(white, 0.8);
+    }
+
+    background-image: url(ui/slot_background.png);
+    background-image-tint: rgba(gray, 0.75);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .weight {
+        flex-direction: row;
+        font-family: 'Comic Neue';
+        font-weight: bold;
+        color: rgba(120, 120, 120, 1);
+        background-image: url(ui/brushes2.png);
+        padding: 10px;
+        margin: 7px;
+        background-image-tint: rgba(300, 300, 300, 0.5);
+        background-size: 100%;
+
+        .icon {
+            background-image: url(ui/weight.png);
+            background-size: cover;
+            width: 10px;
+            height: 25px;
+            background-image-tint: rgba(150, 150, 150, 1);
+            padding-right: 15px;
+        }
+
+        .text {
+            top: 3px;
+            font-size: 18px;
+            padding-left: 5px;
+            text-shadow: 0px 0px 4px rgb(30, 30, 30);
+        }
+    }
+
+    .amount {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        flex-direction: row;
+        font-family: 'Comic Neue';
+        font-weight: bold;
+        color: rgba(120, 120, 120, 1);
+        background-image: url(ui/brushes2.png);
+        padding: 10px;
+        background-image-tint: rgba(300, 300, 300, 0.5);
+        background-size: 100%;
+
+        .text {
+            font-size: 18px;
+            text-shadow: 0px 0px 4px rgb(30, 30, 30);
+        }
+    }
+
+    .iconContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin: 10px;
+
+        .itemIcon {
+            position: absolute;
+            background-size: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

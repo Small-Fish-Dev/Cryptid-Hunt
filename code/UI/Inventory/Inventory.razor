@@ -14,14 +14,10 @@
         </div>
         <div class="itemContainer">
             <div class="slotContainer">
-                @for (int i = 0; i < 16; i++)
+                @for (int i = 0; i < Items.Length; i++)
                 {
-                    <div class="slot">
-                        <div class="weight">
-                            <div class="icon"></div>
-                            <div class="text">2.2 KG</div>
-                        </div>
-                    </div>
+                    var item = Items[i];
+                    <Slot class="@(item.IsValid() ? "hasItem" : "")" Item="@item"/>
                 }
             </div>
         </div>
@@ -31,6 +27,7 @@
 @code
 {
     public static Inventory Instance { get; private set; }
+    public static Item[] Items => Player.Instance.Inventory;
     public bool Show { get; private set; } = true;
 
     protected override void OnStart()
