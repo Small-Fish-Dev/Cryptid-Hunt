@@ -119,8 +119,7 @@ public partial class Polewik : Component
 				{
 					await GameTask.DelaySeconds( 0.5f );
 
-					Player.Instance.CameraShake = 2f;
-					Player.Instance.ShakeIntensity = 30f;
+					Player.Instance.AddCameraShake( 2f, 30f );
 
 					ModelRenderer.Set( "howl", true );
 					await GameTask.DelaySeconds( 3.5f );
@@ -184,8 +183,7 @@ public partial class Polewik : Component
 
 				Sound.Play( "jumpscare", WorldPosition );
 
-				Player.Instance.CameraShake = 1.6f;
-				Player.Instance.ShakeIntensity = 15f;
+				Player.Instance.AddCameraShake( 1.6f, 15f );
 
 				GameTask.RunInThreadAsync( async () =>
 				{

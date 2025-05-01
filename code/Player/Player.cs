@@ -104,8 +104,7 @@ public partial class Player : Component
 			{
 				InteractingWith.Interact( this );
 				LastInteraction = 0;
-				CameraShake = 0.2f;
-				ShakeIntensity = 3f;
+				AddCameraShake( 0.2f, 3f );
 			}
 		}
 

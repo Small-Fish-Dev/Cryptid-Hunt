@@ -37,8 +37,7 @@ public class Interactable : Component
 		//	|| ActiveItem.Container != player.Inventory ) return;
 
 		//var index = player.Inventory.Items.IndexOf( ActiveItem );
-		player.ShakeIntensity = 10f;
-		player.CameraShake = 0.5f;
+		player.AddCameraShake( 0.5f, 10f );
 		//player.Inventory.Remove( index );
 	}
 }

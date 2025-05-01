@@ -6,13 +6,13 @@ public partial class Player
 {
 	[Property]
 	public Vector3 CameraOffset { get; set; } = new Vector3( 0f, 0f, 64f );
-	public TimeUntil CameraShake { get; set; } = 0f;
 
 	public Vector3 CameraPosition;
 	public Rotation CameraRotation;
+	private TimeUntil _cameraShake = 0f;
+	private float _shakeIntensity = 10f;
+	private Vector2 _lastShake;
 
-	public float ShakeIntensity { get; set; } = 10f;
-	public Vector2 _lastShake;
 
 	float _walkBob;
 	Vector3 _cameraOffset;
@@ -27,10 +27,10 @@ public partial class Player
 		var sideOffset = MathF.Sin( _walkBob * 0.5f ) * speed * -3f;
 		var upOffset = MathF.Sin( _walkBob ) * 0.75f * -1.5f;
 
-		if ( CameraShake > 0 )
-			_lastShake = new Vector2( (Noise.Perlin( Time.Now * ShakeIntensity * 20f, 18924 ) * 2 - 1) * ShakeIntensity, (Noise.Perlin( Time.Now * ShakeIntensity * 20f, 9124 ) * 2 - 1) * ShakeIntensity );
+		if ( _cameraShake > 0 )
+			_lastShake = new Vector2( (Noise.Perlin( Time.Now * _shakeIntensity * 20f, 18924 ) * 2 - 1) * _shakeIntensity, (Noise.Perlin( Time.Now * _shakeIntensity * 20f, 9124 ) * 2 - 1) * _shakeIntensity );
 		else
-			_lastShake = Vector2.Lerp( _lastShake, 0f, Time.Delta * ShakeIntensity );
+			_lastShake = Vector2.Lerp( _lastShake, 0f, Time.Delta * _shakeIntensity );
 
 		sideOffset += _lastShake.x;
 		upOffset += _lastShake.y;
@@ -57,7 +57,7 @@ public partial class Player
 
 	public void AddCameraShake( float duration, float intensity )
 	{
-		CameraShake = duration;
-		ShakeIntensity = intensity;
+		_cameraShake = duration;
+		_shakeIntensity = intensity;
 	}
 }
