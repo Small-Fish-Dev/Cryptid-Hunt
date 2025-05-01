@@ -35,18 +35,24 @@ public partial class Player
 		sideOffset += _lastShake.x;
 		upOffset += _lastShake.y;
 
-		CameraOffset = _cameraOffset + Camera.WorldRotation.Left * sideOffset + WorldRotation.Up * upOffset;
+		if ( !LockInputs )
+			CameraOffset = _cameraOffset + Vector3.Left * sideOffset + Vector3.Up * upOffset;
+		else
+			CameraOffset = Vector3.Left * sideOffset + Vector3.Up * upOffset;
 
 		if ( !LockInputs )
 		{
 			CameraPosition = WorldTransform.PointToWorld( CameraOffset );
 			CameraRotation = Controller.EyeAngles;
+
+			Camera.WorldPosition = CameraPosition;
+			Camera.WorldRotation = CameraRotation;
 		}
 		else
-			CameraPosition += Camera.WorldRotation.Left * sideOffset + WorldRotation.Up * upOffset;
-
-		Camera.WorldPosition = CameraPosition;
-		Camera.WorldRotation = CameraRotation;
+		{
+			Camera.WorldPosition = CameraPosition + CameraOffset;
+			Camera.WorldRotation = CameraRotation;
+		}
 	}
 
 	public void AddCameraShake( float duration, float intensity )

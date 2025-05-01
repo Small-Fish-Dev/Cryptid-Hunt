@@ -16,6 +16,7 @@ public partial class Player : Component
 	public float Stamina { get; set; } = 100f;
 	public bool Running { get; set; } = false;
 	public TimeSince LastRan { get; set; } = 0f;
+	public TimeSince LastInteraction { get; set; } = 0f;
 	public bool LockInputs { get; set; } = false;
 	public int HP { get; set; } = 3;
 
@@ -37,7 +38,7 @@ public partial class Player : Component
 	{
 		if ( !Controller.IsValid() ) return;
 
-		if ( Input.Down( "Run" ) && Stamina > 0 && (Running || LastRan >= 1f) )
+		if ( !LockInputs && Input.Down( "Run" ) && Stamina > 0 && (Running || LastRan >= 1f) )
 			Running = true;
 		else
 			Running = false;
@@ -54,9 +55,36 @@ public partial class Player : Component
 			Stamina = Math.Clamp( Stamina + Time.Delta * 10f, 0f, 100f );
 		}
 
-		if ( Input.Pressed( "Flashlight" ) )
-			SetFlashLight( !FlashLightOn, true );
+		if ( !LockInputs )
+		{
+			Controller.UseInputControls = true;
 
+			if ( Input.Pressed( "Flashlight" ) )
+				SetFlashLight( !FlashLightOn, true );
+
+			if ( Input.Pressed( "attack1" ) )
+			{
+				if ( NextInteraction )
+				{
+					/*
+					if ( Holding != null )
+					{
+
+						LastInteraction = 0;
+						Holding.Use( this );
+
+					}
+					*/
+				}
+
+			}
+
+		}
+		else
+		{
+			Controller.UseInputControls = false;
+			Controller.WishVelocity = 0f;
+		}
 
 		var interactTrace = Scene.Trace.Ray( Camera.WorldPosition, Camera.WorldPosition + Camera.WorldRotation.Forward * 150f )
 			.Radius( 5f )
@@ -68,52 +96,17 @@ public partial class Player : Component
 		else
 			InteractingWith = null;
 
-		if ( Input.Pressed( "use" ) )
+		if ( Input.Pressed( "use" ) && NextInteraction )
 		{
+			NextInteraction = 0.5f;
 
-			if ( NextInteraction )
+			if ( InteractingWith.IsValid() )
 			{
-				NextInteraction = 0.5f;
-
-				/*
-				if ( InteractingWith != null )
-				{
-
-					InteractingWith.Interact( this );
-					ShakeCamera();
-
-				}
-				else
-				{
-
-					var availableInteractable = FirstInteractable;
-
-					availableInteractable?.Interact( this );
-					ShakeCamera();
-
-				}
-
-				LastInteraction = 0;*/
-
+				InteractingWith.Interact( this );
+				LastInteraction = 0;
+				CameraShake = 0.2f;
+				ShakeIntensity = 3f;
 			}
-
-		}
-
-		if ( Input.Pressed( "attack1" ) )
-		{
-			if ( NextInteraction )
-			{
-				/*
-				if ( Holding != null )
-				{
-
-					LastInteraction = 0;
-					Holding.Use( this );
-
-				}
-				*/
-			}
-
 		}
 
 		HandleBreathing();

@@ -217,10 +217,6 @@
         {
           "__type": "CryptidHunt.GameUI",
           "__guid": "0a38f28e-8fc4-435c-a1c9-d34d0002a00d",
-          "Interactable": {
-            "_type": "gameobject",
-            "go": "69ad7a97-9e2f-4d2f-82c6-c6b516a3591a"
-          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -5989,6 +5985,45 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "cd02ed17-8d2b-4207-9387-ba29604d21c2",
+          "Center": "0,0,0",
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "CryptidHunt.NotePage",
+          "__guid": "c037ce5a-2abe-494a-90e4-9da8ae1f2ca2",
+          "Amount": 1,
+          "BloodyPrint": true,
+          "Item": null,
+          "Locked": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "PromptOffset2D": "0,0",
+          "PromptOffset3D": "0,0,0",
+          "Text": "Fuck you\nYea...\nAaand true...\n",
+          "UseDescription": "Take"
         }
       ]
     }
