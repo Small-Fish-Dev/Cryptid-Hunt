@@ -43,7 +43,7 @@
 
     protected override void OnUpdate()
     {
-        Show = true;// !Player.Instance.LockInputs && Input.Down( "Inventory" );
+        Show = !Player.Instance.LockInputs && Input.Down( "Inventory" );
 
         Panel.Style.Opacity = Show ? 1f : 0f;
 

@@ -33,6 +33,14 @@ public partial class Item : Interactable
 	[Category( "Other" )]
 	public float Weight { get; set; } = 1;
 
+	[Property]
+	[Category( "Other" )]
+	public bool Useable { get; set; } = false;
+
+	[Property]
+	[Category( "Other" )]
+	public string UseDescription { get; set; } = "Equip";
+
 	public override void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;

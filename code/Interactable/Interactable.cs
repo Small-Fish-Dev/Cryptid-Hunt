@@ -3,7 +3,7 @@ namespace CryptidHunt;
 public class Interactable : Component
 {
 	[Property]
-	public string UseDescription { get; set; } = "Take";
+	public string InteractDescription { get; set; } = "Take";
 	[Property]
 	public bool Locked { get; set; } = false;
 	[Property]

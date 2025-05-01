@@ -11,14 +11,19 @@
             <div class="description">@Item?.Description</div>
         </div>
     </div>
-    <img class="view" src="@Item?.Icon">
+    @if ( Item.IsValid() )
+    {
+        <img class="view" src="@Item?.Icon">
 
-    </img>
-    <div class="buttonContainer">
-        <div class="button">
-            <div class="test">Equip</div>
-        </div>
-    </div>
+        @if ( Item.Useable )
+        {
+            <div class="buttonContainer">
+                <div class="button" @onclick=@(() => Item.Use( Player.Instance ))>
+                    <div class="test">@Item?.UseDescription</div>
+                </div>
+            </div>
+        }
+    }
 </root>
 
 @code

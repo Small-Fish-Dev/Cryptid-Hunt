@@ -11,6 +11,7 @@
         "Amount": 1,
         "Description": "Kill.",
         "Icon": "ui/icons/shotguni.png",
+        "InteractDescription": "Take",
         "Locked": false,
         "MaxAmount": 1,
         "Model": {
@@ -28,7 +29,8 @@
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Shotgun",
-        "UseDescription": "Take",
+        "Useable": true,
+        "UseDescription": "Equip",
         "Weight": 1
       },
       {
