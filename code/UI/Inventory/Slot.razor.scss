@@ -4,8 +4,12 @@ Slot {
         cursor: pointer;
     }
 
+    &:hover {
+        background-image-tint: rgba(white, 0.5);
+    }
+
     &.selected {
-        background-image-tint: rgba(white, 0.8);
+        background-image-tint: rgba(white, 1);
     }
 
     background-image: url(ui/slot_background.png);
