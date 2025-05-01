@@ -6440,16 +6440,80 @@
       "Children": []
     },
     {
-      "__guid": "c4d96523-ae2f-4bc1-9d88-05551984221e",
+      "__guid": "1f73cbb3-31c2-469d-8bef-636bb044f172",
       "Flags": 0,
-      "Name": "page",
-      "Position": "3745.268,6014.714,420.8489",
-      "Rotation": "0,-0.7071068,0,0.7071068",
+      "Name": "page (1)",
+      "Position": "-2518.889,-1122,-638.8376",
+      "Rotation": "0.3099855,-0.428265,0.563327,0.6349493",
       "Enabled": true,
       "__Prefab": "prefabs/page.prefab",
       "__PrefabVariables": {
-        "Text": "Sorry dude, I mean you no harm.\nMy name is Patrick, I'm 31, and I'm not here to cause harm.\nPlease do not contact the police , please don't alert the authorities, please don't freak out.\nI'm not going to kill myself or hurt anyone or anything like that, but please don't freak out.\nMy name is Patr",
+        "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
+        "Bloody Print": false
+      }
+    },
+    {
+      "__guid": "6658972e-38fc-4516-b8d4-a2cf823dac4c",
+      "Flags": 0,
+      "Name": "page (1)",
+      "Position": "-1830,2672,34",
+      "Rotation": "0,0,0.258819,0.9659258",
+      "Enabled": true,
+      "__Prefab": "prefabs/page.prefab",
+      "__PrefabVariables": {
+        "Text": "I was wrong.\n\nIt doesn't even have eyes to gaze at me with.\nThat damn ape-thing attacked me while I was out foraging.\nThere is a chest in the church I was lodging at, my trusty shotgun is inside.\nIf you're reading this:\nYou'll need it.",
         "Bloody Print": true
+      }
+    },
+    {
+      "__guid": "af040528-467a-4a33-86e3-68e5fc4dd054",
+      "Flags": 0,
+      "Name": "page (1)",
+      "Position": "-2485,-1234,-681",
+      "Rotation": "0.06526307,0.1130389,0.4957225,-0.8586165",
+      "Enabled": true,
+      "__Prefab": "prefabs/page.prefab",
+      "__PrefabVariables": {
+        "Text": "You're wasting your time, if you want a real scare you can work for us.\n\nRefuse and we'll come for you:\n\n91.196.10.201\nRzeszów, Poland\n50°00'41.4\"N   22°04'36.5\"E\n\nYour first task is killing the Polewik, a half-ape cryptid that hunts children.\nCome outside and meet us.",
+        "Bloody Print": false
+      }
+    },
+    {
+      "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
+      "Flags": 0,
+      "Name": "page (1)",
+      "Position": "4124,9135.709,472",
+      "Rotation": "0,0.5735765,0,0.819152",
+      "Enabled": true,
+      "__Prefab": "prefabs/page.prefab",
+      "__PrefabVariables": {
+        "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
+        "Bloody Print": false
+      }
+    },
+    {
+      "__guid": "1c7c3f1f-dcd1-4fa7-9830-0eecd5ae7951",
+      "Flags": 0,
+      "Name": "page (1)",
+      "Position": "-1636.026,2510.868,1.134521",
+      "Enabled": true,
+      "__Prefab": "prefabs/page.prefab",
+      "__PrefabVariables": {
+        "Text": "That thing...\nIt comes from the cave; I armed myself with a crowbar to open the old mineshaft but I was attacked.\nThis is it for me...\nI leave my key hoping it doesn't get added to the trophies inside of its cave...",
+        "Bloody Print": true
+      }
+    },
+    {
+      "__guid": "d3640cce-b4e4-4749-9d9a-b6b51503d79f",
+      "Flags": 0,
+      "Name": "page (1)",
+      "Position": "2662.933,5873.968,448.9075",
+      "Rotation": "-0.2470533,-0.5074165,0.488091,-0.6657779",
+      "Enabled": true,
+      "__Prefab": "prefabs/page.prefab",
+      "__PrefabVariables": {
+        "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\n its home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
+        "Bloody Print": false
       }
     }
   ],
