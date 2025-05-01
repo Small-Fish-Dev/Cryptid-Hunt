@@ -5,9 +5,25 @@
 
 <root>
     <div class="container">
-        <div class="title">Inventory</div>
+        <div class="title">BACKPACK</div>
         <div class="weightBarContainer">
             <div class="weightbar"><div class="inner" style="width: 50%"></div></div>
+        </div>
+        <div class="weightContainer">
+            <div class="weight">10.3 / 20.0 KG</div>
+        </div>
+        <div class="itemContainer">
+            <div class="slotContainer">
+                @for (int i = 0; i < 16; i++)
+                {
+                    <div class="slot">
+                        <div class="weight">
+                            <div class="icon"></div>
+                            <div class="text">2.2 KG</div>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
     </div>
 </root>

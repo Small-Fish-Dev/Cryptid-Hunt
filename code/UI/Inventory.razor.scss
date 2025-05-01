@@ -109,19 +109,20 @@ Inventory {
                 background-image-tint: rgba(gray, 0.75);
                 background-size: cover;
                 width: 200px;
-                aspect-ratio: 1;
-                left: 80px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
 
                 .weight {
-                    position: absolute;
-                    right: 10px;
-                    bottom: 10px;
                     flex-direction: row;
                     font-family: 'Comic Neue';
                     font-weight: bold;
                     color: rgba(120, 120, 120, 1);
                     background-image: url(ui/brushes2.png);
                     padding: 10px;
+                    margin: 7px;
                     background-image-tint: rgba(300, 300, 300, 0.5);
                     background-size: 100%;
 
