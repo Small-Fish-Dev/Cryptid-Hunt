@@ -4,7 +4,7 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="container">
+    <div class="topContainer">
         <div class="title">BACKPACK</div>
         <div class="weightBarContainer">
             <div class="weightbar"><div class="inner" style="width: 50%"></div></div>
@@ -12,16 +12,25 @@
         <div class="weightContainer">
             <div class="weight">10.3 / 20.0 KG</div>
         </div>
-        <div class="itemContainer">
-            <div class="slotContainer">
-                @for (int i = 0; i < Items.Length; i++)
-                {
-                    var item = Items[i];
-                    <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
-                }
+    </div>
+    <div class="bottomContainer">
+            <div class="itemContainer">
+                <div class="slotContainer">
+                    @for (int i = 0; i < Items.Length; i++)
+                    {
+                        var item = Items[i];
+                        <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
+                    }
+                </div>
+            </div>
+            <div class="viewContainer">
+                <div class="titleContainer">
+                    <div class="titleText">
+                        <div class="title">FUCKYOU</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </root>
 
 @code
