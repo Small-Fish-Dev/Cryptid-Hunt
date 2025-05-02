@@ -21,7 +21,7 @@ public class Interactable : Component
 
 		//player.Inventory?.Insert( Item, Amount );
 		Sound.Play( "pickup", WorldPosition );
-		OnInteract.Invoke();
+		OnInteract?.Invoke();
 	}
 
 	public virtual void Use( Player player )

@@ -12,7 +12,7 @@ public partial class NotePage : Interactable
 
 	public override void Interact( Player player )
 	{
-		OnInteract.Invoke();
+		OnInteract?.Invoke();
 
 		if ( !IsOpen )
 		{
