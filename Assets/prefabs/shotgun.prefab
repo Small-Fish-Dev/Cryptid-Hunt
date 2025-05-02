@@ -6,36 +6,6 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "CryptidHunt.Item",
-        "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
-        "Amount": 1,
-        "Description": "Kill.",
-        "Icon": "ui/icons/shotguni.png",
-        "InteractDescription": "Take",
-        "Locked": false,
-        "MaxAmount": 1,
-        "Model": {
-          "_type": "component",
-          "component_id": "87146c74-616e-472f-9694-61f59c30d0fd",
-          "go": "1146d3f5-8005-400f-9c98-19e6496e035f",
-          "component_type": "ModelRenderer"
-        },
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "PromptOffset2D": "0,0",
-        "PromptOffset3D": "0,0,0",
-        "Title": "Shotgun",
-        "Useable": true,
-        "UseDescription": "Equip",
-        "ViewModelOffset": "29.16001,-12.52,-21.56",
-        "ViewModelRotation": "-0.06387671,-0.005548911,0.7453108,0.663627",
-        "Weight": 1
-      },
-      {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
         "BodyGroups": 18446744073709551615,
@@ -78,6 +48,36 @@
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "CryptidHunt.Shotgun",
+        "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
+        "Amount": 1,
+        "Description": "Kill.",
+        "Icon": "ui/icons/shotguni.png",
+        "InteractDescription": "Take",
+        "Locked": false,
+        "MaxAmount": 1,
+        "Model": {
+          "_type": "component",
+          "component_id": "87146c74-616e-472f-9694-61f59c30d0fd",
+          "go": "1146d3f5-8005-400f-9c98-19e6496e035f",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,0,0",
+        "Title": "Shotgun",
+        "Useable": true,
+        "UseDescription": "Equip",
+        "ViewModelOffset": "29.16001,-12.52,-21.56",
+        "ViewModelRotation": "-0.06387671,-0.005548911,0.7453108,0.663627",
+        "Weight": 1
       }
     ],
     "Children": [],
