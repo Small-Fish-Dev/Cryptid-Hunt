@@ -21,7 +21,7 @@ public partial class InputScreenHint : Component, Component.ITriggerListener
 
 		Activated = true;
 
-		Log.Info( $"You have to press {ButtonHint}{Hint}" );
+		GameUI.OpenInputHint( Hint, ButtonHint );
 	}
 
 }
