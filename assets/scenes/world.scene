@@ -41,7 +41,8 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "4221.823,9142.131,411.6312",
+      "Position": "-2492.521,-1178.374,-688.4937",
+      "Rotation": "0,0,0.224951,0.9743701",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -511,7 +512,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 83,
+                "Id": 95,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +524,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 84,
+                "Id": 96,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2814,7 +2815,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 141,
+                    "Id": 159,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2832,7 +2833,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 142,
+                    "Id": 160,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2850,7 +2851,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 143,
+                    "Id": 161,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -5903,7 +5904,7 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "5cef1c43-70da-4e2d-b8e5-109317b11cc6",
-                  "Center": "0,0,0",
+                  "Center": "0,-8.61985,0",
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5916,7 +5917,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
-                  "Scale": "200,200,200",
+                  "Scale": "200,182.7603,200",
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6021,12 +6022,7 @@
           "Enabled": true,
           "__Prefab": "prefabs/chest.prefab",
           "__PrefabVariables": {
-            "Loot": {
-              "_type": "component",
-              "component_id": "8249b624-7d9e-4ce2-868e-061b10b2b529",
-              "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
-              "component_type": "Shotgun"
-            }
+            "Loot": null
           }
         },
         {
@@ -6647,6 +6643,40 @@
           "OnComponentUpdate": null,
           "Radius": 50,
           "Shadows": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "baeec906-84bf-47f0-9f44-a91105ca0eda",
+      "Flags": 0,
+      "Name": "Brick",
+      "Position": "-2483.552,-1234.518,-690.6468",
+      "Rotation": "0,0,0.224951,0.9743701",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "9cbcfd6f-b492-4bec-8baf-8394d411f0d9",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/placeholders/placeholder_cinder.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
         }
       ],
       "Children": []
