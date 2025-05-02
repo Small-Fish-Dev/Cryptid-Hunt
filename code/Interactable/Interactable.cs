@@ -11,12 +11,17 @@ public class Interactable : Component
 	[Property]
 	public Vector2 PromptOffset2D { get; set; }
 
+	[SingleAction]
+	[Property]
+	public Action OnInteract { get; set; }
+
 	public virtual void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;
 
 		//player.Inventory?.Insert( Item, Amount );
 		Sound.Play( "pickup", WorldPosition );
+		OnInteract.Invoke();
 	}
 
 	public virtual void Use( Player player )

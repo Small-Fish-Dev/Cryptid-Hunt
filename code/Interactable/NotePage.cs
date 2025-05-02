@@ -12,6 +12,8 @@ public partial class NotePage : Interactable
 
 	public override void Interact( Player player )
 	{
+		OnInteract.Invoke();
+
 		if ( !IsOpen )
 		{
 			GameUI.OpenNote( Text, BloodyPrint );

@@ -4448,7 +4448,8 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
-                "Bloody Print": false
+                "Bloody Print": false,
+                "On Interact": null
               }
             },
             {
@@ -4461,7 +4462,8 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "I was wrong.\n\nIt doesn't even have eyes to gaze at me with.\nThat damn ape-thing attacked me while I was out foraging.\nThere is a chest in the church I was lodging at, my trusty shotgun is inside.\nIf you're reading this:\nYou'll need it.",
-                "Bloody Print": true
+                "Bloody Print": true,
+                "On Interact": null
               }
             },
             {
@@ -4474,7 +4476,69 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "You're wasting your time, if you want a real scare you can work for us.\n\nRefuse and we'll come for you:\n\n91.196.10.201\nRzeszów, Poland\n50°00'41.4\"N   22°04'36.5\"E\n\nYour first task is killing the Polewik, a half-ape cryptid that hunts children.\nCome outside and meet us.",
-                "Bloody Print": false
+                "Bloody Print": false,
+                "On Interact": {
+                  "__version": 9,
+                  "__guid": "75fa4b21-4fcb-4a36-ab42-336eba8415f6",
+                  "__changeId": 11,
+                  "UserData": {
+                    "Title": "On Interact",
+                    "ReferencedComponentTypes": []
+                  },
+                  "Variables": [],
+                  "Nodes": [
+                    {
+                      "Id": 0,
+                      "Type": "input"
+                    },
+                    {
+                      "Id": 2,
+                      "Type": "scene.ref",
+                      "UserData": {
+                        "Position": "-60,84"
+                      }
+                    },
+                    {
+                      "Id": 4,
+                      "Type": "property",
+                      "Properties": {
+                        "_name": "ReadInitialNote",
+                        "_type": "CryptidHunt.GameManager"
+                      },
+                      "UserData": {
+                        "Position": "252,108"
+                      }
+                    }
+                  ],
+                  "Links": [
+                    {
+                      "SrcId": 0,
+                      "SrcName": "_signal",
+                      "DstId": 4,
+                      "DstName": "_signal"
+                    },
+                    {
+                      "SrcId": 2,
+                      "SrcName": "_result",
+                      "DstId": 4,
+                      "DstName": "_target"
+                    },
+                    {
+                      "Id": 5,
+                      "Value": true,
+                      "DstId": 4,
+                      "DstName": "_value"
+                    }
+                  ],
+                  "Defaults": {
+                    "$2.component": {
+                      "_type": "component",
+                      "component_id": "75113e0e-754a-411f-a4f1-25aac6834322",
+                      "go": "dc555f6d-6128-48ef-bbb2-11a58f552092",
+                      "component_type": "GameManager"
+                    }
+                  }
+                }
               }
             },
             {
@@ -4487,7 +4551,8 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
-                "Bloody Print": false
+                "Bloody Print": false,
+                "On Interact": null
               }
             },
             {
@@ -4499,7 +4564,8 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "That thing...\nIt comes from the cave; I armed myself with a crowbar to open the old mineshaft but I was attacked.\nThis is it for me...\nI leave my key hoping it doesn't get added to the trophies inside of its cave...",
-                "Bloody Print": true
+                "Bloody Print": true,
+                "On Interact": null
               }
             },
             {
@@ -4512,7 +4578,8 @@
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\nits home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
-                "Bloody Print": false
+                "Bloody Print": false,
+                "On Interact": null
               }
             }
           ]
@@ -5959,7 +6026,7 @@
           "__PrefabVariables": {
             "Loot": {
               "_type": "component",
-              "component_id": "21cc2529-970d-4cc4-b8ef-b0e79bf0b8b1",
+              "component_id": "e0872cb8-ddc3-4bbb-a5d3-2f25f3cd78e2",
               "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
               "component_type": "Shotgun"
             }
@@ -6631,6 +6698,26 @@
       "Enabled": true,
       "__Prefab": "prefabs/scene_transfer_door.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "dc555f6d-6128-48ef-bbb2-11a58f552092",
+      "Flags": 0,
+      "Name": "GameManager",
+      "Position": "-2436.427,-1116.551,-809.3224",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CryptidHunt.GameManager",
+          "__guid": "75113e0e-754a-411f-a4f1-25aac6834322",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
