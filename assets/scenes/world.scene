@@ -41,8 +41,7 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "-6419.673,9624.082,40.72359",
-      "Rotation": "0.0405261,-0.1163192,0.03330121,0.9918258",
+      "Position": "4221.823,9142.131,411.6312",
       "Tags": "player",
       "Enabled": true,
       "Components": [
@@ -512,7 +511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 51,
+                "Id": 63,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -524,7 +523,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 52,
+                "Id": 64,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2815,7 +2814,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 93,
+                    "Id": 111,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2833,7 +2832,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 94,
+                    "Id": 112,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2851,7 +2850,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 95,
+                    "Id": 113,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -6652,20 +6651,10 @@
       "__guid": "85e79e37-8834-4b83-8247-5048d388085b",
       "Flags": 0,
       "Name": "key (1)",
-      "Position": "3880.812,5852.755,387",
-      "Rotation": "0,0.00000005960464,0.8073792,0.5900331",
+      "Position": "4295.228,9177.038,427.2197",
+      "Rotation": "0,0,0.8386706,-0.5446391",
       "Enabled": true,
       "__Prefab": "prefabs/key.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "f1738002-5d03-4340-995d-75f7e2ea033f",
-      "Flags": 0,
-      "Name": "crowbar (1)",
-      "Position": "-6399.26,9659.192,48.71537",
-      "Rotation": "0.0405261,-0.1163192,0.03330121,0.9918258",
-      "Enabled": true,
-      "__Prefab": "prefabs/crowbar.prefab",
       "__PrefabVariables": {}
     },
     {

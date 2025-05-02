@@ -6,36 +6,6 @@
     "Enabled": true,
     "Components": [
       {
-        "__type": "CryptidHunt.Item",
-        "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
-        "Amount": 1,
-        "Description": "Could I open the chest with this key?",
-        "Icon": "ui/icons/keyi.png",
-        "InteractDescription": "Take Key",
-        "Locked": false,
-        "MaxAmount": 1,
-        "Model": {
-          "_type": "component",
-          "component_id": "87146c74-616e-472f-9694-61f59c30d0fd",
-          "go": "1146d3f5-8005-400f-9c98-19e6496e035f",
-          "component_type": "ModelRenderer"
-        },
-        "OnComponentDestroy": null,
-        "OnComponentDisabled": null,
-        "OnComponentEnabled": null,
-        "OnComponentFixedUpdate": null,
-        "OnComponentStart": null,
-        "OnComponentUpdate": null,
-        "PromptOffset2D": "0,0",
-        "PromptOffset3D": "0,0,0",
-        "Title": "Key",
-        "Useable": true,
-        "UseDescription": "Equip",
-        "ViewModelOffset": "25,-5,-5",
-        "ViewModelRotation": "0.5686694,0.812144,0.1069209,0.07486674",
-        "Weight": 0.1
-      },
-      {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
         "BodyGroups": 18446744073709551615,
@@ -78,6 +48,36 @@
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
+      },
+      {
+        "__type": "CryptidHunt.Key",
+        "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
+        "Amount": 1,
+        "Description": "Could I open the chest with this key?",
+        "Icon": "ui/icons/keyi.png",
+        "InteractDescription": "Take Key",
+        "Locked": false,
+        "MaxAmount": 1,
+        "Model": {
+          "_type": "component",
+          "component_id": "87146c74-616e-472f-9694-61f59c30d0fd",
+          "go": "1146d3f5-8005-400f-9c98-19e6496e035f",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,0,0",
+        "Title": "Key",
+        "Useable": true,
+        "UseDescription": "Equip",
+        "ViewModelOffset": "25,-5,-5",
+        "ViewModelRotation": "0.5686694,0.812144,0.1069209,0.07486674",
+        "Weight": 0.1
       }
     ],
     "Children": [],

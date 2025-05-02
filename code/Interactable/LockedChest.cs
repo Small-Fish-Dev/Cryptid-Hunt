@@ -1,11 +1,13 @@
 ﻿namespace CryptidHunt;
 
-public partial class LockedDoor : Interactable
+public partial class LockedChest : Interactable
 {
 	[Property]
 	public ModelRenderer Model { get; set; }
-	public override string InteractDescription => (Player.Instance.Holding is Crowbar || _fading) ? "Open" : "LOCKED";
-	public override bool Locked => (Player.Instance.Holding is Crowbar || _fading) ? false : true;
+	[Property]
+	public GameObject Lock { get; set; }
+	public override string InteractDescription => (Player.Instance.Holding is Key || _fading) ? "Open" : "LOCKED";
+	public override bool Locked => (Player.Instance.Holding is Key || _fading) ? false : true;
 
 	bool _shaking = false;
 	TimeUntil _fadeAway;
@@ -25,6 +27,7 @@ public partial class LockedDoor : Interactable
 		{
 			var alpha = 1f - _fadeAway.Fraction;
 			Model.Tint = Model.Tint.WithAlpha( alpha );
+			Lock.GetComponent<ModelRenderer>().Tint = Model.Tint.WithAlpha( alpha );
 		}
 	}
 
@@ -34,17 +37,17 @@ public partial class LockedDoor : Interactable
 
 		Sound.Play( "pickup", WorldPosition );
 
-		if ( player.Holding is Crowbar )
+		if ( player.Holding is Key )
 		{
-			Sound.Play( "crowbar", WorldPosition );
-			player.AddCameraShake( 0.5f, 8f );
+			Sound.Play( "chest_open", WorldPosition );
+			player.AddCameraShake( 0.3f, 5f );
 			Destruct();
 			player.Holding.DestroyGameObject();
 			player.Holding = null;
 		}
 		else
 		{
-			Sound.Play( "metal_door_creak", WorldPosition );
+			Sound.Play( "chest_locked", WorldPosition );
 			player.AddCameraShake( 0.3f, 8f );
 		}
 	}
@@ -53,10 +56,9 @@ public partial class LockedDoor : Interactable
 	{
 		_shaking = true;
 		_position = WorldPosition;
-		await Task.DelaySeconds( 3f );
+		await Task.DelaySeconds( 1f );
 		_shaking = false;
-		var body = GameObject.Components.Create<Rigidbody>();
-		body.ApplyForce( Vector3.Backward * 5000000f );
+		Lock.Components.Create<Rigidbody>().ApplyForce( Vector3.Up * 500f );
 		await Task.DelaySeconds( 1f );
 		_fadeAway = 2f;
 		_fading = true;

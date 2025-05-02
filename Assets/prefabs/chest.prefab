@@ -6,6 +6,28 @@
     "Enabled": true,
     "Components": [
       {
+        "__type": "CryptidHunt.LockedChest",
+        "__guid": "bc862895-61c9-4e5d-9dbd-1c39b1e4d052",
+        "Lock": {
+          "_type": "gameobject",
+          "go": "dab721e0-06d1-4c28-ba53-778439afc99e"
+        },
+        "Model": {
+          "_type": "component",
+          "component_id": "ec46b8a8-3c16-4e56-b957-dd9a72048af3",
+          "go": "64b52201-89a8-4d94-83b9-b134fc9faa06",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "-2.56,0,11.6"
+      },
+      {
         "__type": "Sandbox.SkinnedModelRenderer",
         "__guid": "ec46b8a8-3c16-4e56-b957-dd9a72048af3",
         "AnimationGraph": null,
@@ -39,7 +61,8 @@
         },
         "RenderType": "On",
         "Sequence": {
-          "Name": null
+          "Name": null,
+          "Looping": true
         },
         "Tint": "1,1,1,1",
         "UseAnimGraph": true
@@ -66,17 +89,68 @@
         "SurfaceVelocity": "0,0,0"
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "dab721e0-06d1-4c28-ba53-778439afc99e",
+        "Flags": 0,
+        "Name": "Lock",
+        "Position": "-0.08705628,13.25884,16.30068",
+        "Rotation": "0.258819,0,0,0.9659258",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "1fe8ad1c-a780-4822-bc6a-29bf16e8f66b",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/items/lock.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "3ae93d3a-b3f9-4925-95fe-5c988406eac9",
+            "Center": "0.009685993,0.07612354,-2.754067",
+            "Friction": null,
+            "IsTrigger": false,
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "OnObjectTriggerEnter": null,
+            "OnObjectTriggerExit": null,
+            "OnTriggerEnter": null,
+            "OnTriggerExit": null,
+            "Scale": "3.974044,1.528879,6.735063",
+            "Static": false,
+            "Surface": null,
+            "SurfaceVelocity": "0,0,0"
+          }
+        ],
+        "Children": []
+      }
+    ],
     "__variables": [],
     "__properties": {
-      "FixedUpdateFrequency": 50,
-      "MaxFixedUpdates": 5,
-      "NetworkFrequency": 30,
       "NetworkInterpolation": true,
-      "PhysicsSubSteps": 1,
-      "ThreadedAnimation": true,
       "TimeScale": 1,
-      "UseFixedUpdate": true,
+      "WantsSystemScene": true,
       "Metadata": {},
       "NavMesh": {
         "Enabled": false,
