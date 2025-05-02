@@ -1,9 +1,14 @@
-﻿namespace CryptidHunt;
+﻿using Sandbox;
+
+namespace CryptidHunt;
 
 public partial class SceneTransferDoor : Interactable
 {
 	[Property]
 	public ModelRenderer Model { get; set; }
+	[Property]
+	public SpawnPoint SpawnPoint { get; set; }
+
 	public override string InteractDescription => Locked ? "LOCKED" : "Open";
 	public override bool Locked => !GameManager.Instance.ReadInitialNote;
 	public bool Open { get; set; } = false;
@@ -29,11 +34,25 @@ public partial class SceneTransferDoor : Interactable
 			Sound.Play( "chest_locked", WorldPosition );
 		else
 		{
+			NextScene();
 			Sound.Play( "door_open", WorldPosition );
 			Open = true;
 			_degrees = 25f;
 		}
 
 		player.AddCameraShake( 0.3f, 8f );
+	}
+
+	public async void NextScene()
+	{
+		GameUI.BlackScreen();
+		Player.Instance.LockInputs = true;
+		await Task.DelaySeconds( 2.5f );
+		Player.Instance.LockInputs = false;
+		Player.Instance.WorldPosition = SpawnPoint.WorldPosition;
+		Player.Instance.Controller.EyeAngles = SpawnPoint.WorldRotation;
+		await Task.DelaySeconds( 4f );
+
+		Player.Instance.SetFlashLight( true, true );
 	}
 }
