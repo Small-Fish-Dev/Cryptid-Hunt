@@ -35,7 +35,7 @@
     public float Weight => Items?.Sum(x => x.IsValid() ? x.Weight * x.Amount : 0f) ?? 0f;
     public Item SelectedItem { get; set; }
 
-    public bool Show { get; private set; } = true;
+    public bool Show { get; private set; } = false;
 
     protected override void OnStart()
     {
