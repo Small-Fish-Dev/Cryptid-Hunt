@@ -1,0 +1,136 @@
+{
+  "RootObject": {
+    "__guid": "64b52201-89a8-4d94-83b9-b134fc9faa06",
+    "Flags": 0,
+    "Name": "scene_transfer_door",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "CryptidHunt.SceneTransferDoor",
+        "__guid": "193e8e9c-30a5-4c3d-9124-42ce9cfce514",
+        "Model": {
+          "_type": "component",
+          "component_id": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
+          "go": "64b52201-89a8-4d94-83b9-b134fc9faa06",
+          "component_type": "ModelRenderer"
+        },
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "PromptOffset2D": "0,0",
+        "PromptOffset3D": "0,-32.63998,56.48"
+      },
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "9d827ea5-41d2-4019-91ac-3969d46fe5a4",
+        "BodyGroups": 18446744073709551615,
+        "CreateAttachments": false,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/props/trim_sheets/doors/wooden_doors/wooden_door_01c.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "RenderOptions": {
+          "GameLayer": true,
+          "OverlayLayer": false,
+          "BloomLayer": false,
+          "AfterUILayer": false
+        },
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.ModelCollider",
+        "__guid": "835b84df-ce29-4cfc-b650-f82f0958cd74",
+        "Friction": null,
+        "IsTrigger": false,
+        "Model": "models/props/trim_sheets/doors/wooden_doors/wooden_door_01c.vmdl",
+        "OnComponentDestroy": null,
+        "OnComponentDisabled": null,
+        "OnComponentEnabled": null,
+        "OnComponentFixedUpdate": null,
+        "OnComponentStart": null,
+        "OnComponentUpdate": null,
+        "OnObjectTriggerEnter": null,
+        "OnObjectTriggerExit": null,
+        "OnTriggerEnter": null,
+        "OnTriggerExit": null,
+        "Static": false,
+        "Surface": null,
+        "SurfaceVelocity": "0,0,0"
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "d5b7bcc2-5d4d-4acd-b788-0628b071deee",
+        "Flags": 0,
+        "Name": "Handle",
+        "Position": "0.05641174,-43.13715,47.7561",
+        "Rotation": "-0.5,-0.5,0.5,0.5",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "58eaa190-fb5a-4ba7-aa8d-5b567d55e4f7",
+            "BodyGroups": 18446744073709551615,
+            "CreateAttachments": false,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/sbox_props/door_elements/door_handle_a.vmdl",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "RenderOptions": {
+              "GameLayer": true,
+              "OverlayLayer": false,
+              "BloomLayer": false,
+              "AfterUILayer": false
+            },
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ],
+        "Children": []
+      }
+    ],
+    "__variables": [],
+    "__properties": {
+      "NetworkInterpolation": true,
+      "TimeScale": 1,
+      "WantsSystemScene": true,
+      "Metadata": {},
+      "NavMesh": {
+        "Enabled": false,
+        "IncludeStaticBodies": true,
+        "IncludeKeyframedBodies": true,
+        "EditorAutoUpdate": true,
+        "AgentHeight": 64,
+        "AgentRadius": 16,
+        "AgentStepSize": 18,
+        "AgentMaxSlope": 40,
+        "ExcludedBodies": "",
+        "IncludedBodies": ""
+      }
+    }
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "DontBreakAsTemplate": false,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.door_handle_a#33664",
+    "facepunch.wooden_door_01c#43542"
+  ],
+  "__version": 1
+}

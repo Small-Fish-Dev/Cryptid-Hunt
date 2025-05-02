@@ -2303,7 +2303,7 @@
                   "OnComponentFixedUpdate": null,
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
-                  "Radius": 209.84,
+                  "Radius": 324.64005,
                   "Shadows": false
                 }
               ],
@@ -5959,7 +5959,7 @@
           "__PrefabVariables": {
             "Loot": {
               "_type": "component",
-              "component_id": "36c4b1a9-d5dd-453c-a43b-22dc41feb2f8",
+              "component_id": "21cc2529-970d-4cc4-b8ef-b0e79bf0b8b1",
               "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
               "component_type": "Shotgun"
             }
@@ -6620,6 +6620,17 @@
         }
       ],
       "Children": []
+    },
+    {
+      "__guid": "2c382ddb-6d10-4140-abf3-18d32c32587e",
+      "Flags": 0,
+      "Name": "scene_transfer_door",
+      "Position": "-2651.667,-1324.729,-690.8621",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Scale": "1,1,0.925",
+      "Enabled": true,
+      "__Prefab": "prefabs/scene_transfer_door.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
