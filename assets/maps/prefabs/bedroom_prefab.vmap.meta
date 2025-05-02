@@ -2,5 +2,38 @@
   "cloud_packages": [],
   "game_packages": [
     "local.spookyjam2022"
-  ]
+  ],
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Bedroom Prefab",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "bedroomprefab",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.ceiling_light#29026",
+        "facepunch.glass_c#70691",
+        "facepunch.metal_brushed#85422",
+        "facepunch.office_chair#33620",
+        "facepunch.office_desk#29073",
+        "facepunch.plaster_a#85427",
+        "facepunch.switch_a#19249",
+        "facepunch.switchbase_a#19251",
+        "facepunch.wood_blend_wood_wetrotten_a_hs#28989",
+        "facepunch.wood_painted_a_hs#28972",
+        "facepunch.wood_varnished_a_hs#28977",
+        "rustextended.glass_shattered#43280"
+      ],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/bedroom_prefab.vmap",
+        "ParentPackage": "fish.cryptid_hunt"
+      }
+    }
+  }
 }

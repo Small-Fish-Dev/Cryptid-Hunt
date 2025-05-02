@@ -512,7 +512,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 103,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -524,7 +524,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 104,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -1708,68 +1708,6 @@
           "Components": [],
           "Children": [
             {
-              "__guid": "c520a532-8999-4581-9aad-e5af74782e96",
-              "Flags": 0,
-              "Name": "Spot Light (1)",
-              "Position": "-2550.326,-1377.326,-395.8206",
-              "Rotation": "-0.04361953,-0.00000004350549,0.9990482,-0.0000009964364",
-              "Tags": "light,light_spot",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.SpotLight",
-                  "__guid": "c3cbf52b-4151-4a50-b4bd-e4f56210c30e",
-                  "Attenuation": 1,
-                  "ConeInner": 15,
-                  "ConeOuter": 45,
-                  "Cookie": null,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Radius": 500,
-                  "Shadows": false
-                }
-              ],
-              "Children": []
-            },
-            {
-              "__guid": "17b21146-295b-497b-8d8f-35a42a3cdf45",
-              "Flags": 0,
-              "Name": "Spot Light (1)",
-              "Position": "-2557.326,-1377.326,-377.8206",
-              "Rotation": "-0.9396926,0.0000003112256,0.3420201,0.0000008550854",
-              "Tags": "light,light_spot",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.SpotLight",
-                  "__guid": "f3942fec-e9d3-4682-a0f1-f841c9afb92d",
-                  "Attenuation": 1,
-                  "ConeInner": 15,
-                  "ConeOuter": 45,
-                  "Cookie": null,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Radius": 500,
-                  "Shadows": false
-                }
-              ],
-              "Children": []
-            },
-            {
               "__guid": "ed05ebf3-8825-4985-a7d6-060932cdff98",
               "Flags": 0,
               "Name": "Spot Light (1)",
@@ -2232,7 +2170,6 @@
               "Position": "-2702.326,-1379.826,-366.8206",
               "Rotation": "0,0,0.7071068,-0.7071068",
               "Tags": "light,light_point",
-              "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.PointLight",
@@ -2240,7 +2177,7 @@
                   "Attenuation": 1,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
+                  "LightColor": "0.98729,1,0.8093,1",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -2291,7 +2228,6 @@
               "Position": "-2550.326,-1377.326,-395.8206",
               "Rotation": "-0.04361953,-0.00000004350549,0.9990482,-0.0000009964364",
               "Tags": "light_spot,light",
-              "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.SpotLight",
@@ -2322,7 +2258,6 @@
               "Position": "-2557.326,-1377.326,-377.8206",
               "Rotation": "-0.9396926,0.0000003112256,0.3420201,0.0000008550854",
               "Tags": "light_spot,light",
-              "Enabled": true,
               "Components": [
                 {
                   "__type": "Sandbox.SpotLight",
@@ -2359,17 +2294,17 @@
                   "__type": "Sandbox.PointLight",
                   "__guid": "a07b8736-2d25-4435-b1db-451f21ed5a84",
                   "Attenuation": 1,
-                  "FogMode": "Enabled",
+                  "FogMode": "Disabled",
                   "FogStrength": 1,
-                  "LightColor": "0.91373,0.98039,1,1",
+                  "LightColor": "0.46225,0.48837,0.33164,1",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
                   "OnComponentFixedUpdate": null,
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
-                  "Radius": 400,
-                  "Shadows": true
+                  "Radius": 209.84,
+                  "Shadows": false
                 }
               ],
               "Children": []
@@ -2815,7 +2750,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 171,
+                    "Id": 27,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2833,7 +2768,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 172,
+                    "Id": 28,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2851,7 +2786,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 173,
+                    "Id": 29,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -6024,7 +5959,7 @@
           "__PrefabVariables": {
             "Loot": {
               "_type": "component",
-              "component_id": "8029382b-a1dc-4895-aa3c-4a5d7ed8b0a7",
+              "component_id": "36c4b1a9-d5dd-453c-a43b-22dc41feb2f8",
               "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
               "component_type": "Shotgun"
             }
