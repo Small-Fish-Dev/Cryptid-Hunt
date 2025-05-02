@@ -597,7 +597,7 @@
             {
               "__type": "CryptidHunt.ChurchLight",
               "__guid": "8525ffe7-5367-45a7-9ebb-65b7c5ec5342",
-              "Color": "1,0,0,5",
+              "Color": "30,0,0,1",
               "Lights": [
                 {
                   "_type": "component",
@@ -6096,7 +6096,7 @@
           "__PrefabVariables": {
             "Loot": {
               "_type": "component",
-              "component_id": "e0872cb8-ddc3-4bbb-a5d3-2f25f3cd78e2",
+              "component_id": "d06f43f5-f803-43e9-85b6-c619a80a27e1",
               "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
               "component_type": "Shotgun"
             }
