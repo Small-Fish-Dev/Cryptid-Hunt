@@ -53,7 +53,7 @@
         "__type": "CryptidHunt.Shotgun",
         "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
         "Amount": 1,
-        "Description": "Kill.",
+        "Description": "A way to fight back. Needs ammo.",
         "Icon": "ui/icons/shotguni.png",
         "InteractDescription": "Take",
         "Locked": false,
