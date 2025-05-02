@@ -511,7 +511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 63,
+                "Id": 71,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +523,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 64,
+                "Id": 72,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2814,7 +2814,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 111,
+                    "Id": 123,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2832,7 +2832,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 112,
+                    "Id": 124,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2850,7 +2850,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 113,
+                    "Id": 125,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -5983,6 +5983,16 @@
           ]
         },
         {
+          "__guid": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
+          "Flags": 0,
+          "Name": "shotgun (1)",
+          "Position": "3993.172,9008.987,626.4548",
+          "Rotation": "-0.09880751,-0.02501562,0.01853032,0.9946195",
+          "Enabled": true,
+          "__Prefab": "prefabs/shotgun.prefab",
+          "__PrefabVariables": {}
+        },
+        {
           "__guid": "ed697aae-e3a1-4b36-b742-d39c1db8f50c",
           "Flags": 0,
           "Name": "chest",
@@ -5990,7 +6000,14 @@
           "Rotation": "0,0,0.8386706,-0.5446391",
           "Enabled": true,
           "__Prefab": "prefabs/chest.prefab",
-          "__PrefabVariables": {}
+          "__PrefabVariables": {
+            "Loot": {
+              "_type": "component",
+              "component_id": "8249b624-7d9e-4ce2-868e-061b10b2b529",
+              "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
+              "component_type": "Shotgun"
+            }
+          }
         },
         {
           "__guid": "363ea210-9dc9-4faf-af8e-723c336b26da",

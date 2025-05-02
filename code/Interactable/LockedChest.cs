@@ -6,6 +6,8 @@ public partial class LockedChest : Interactable
 	public ModelRenderer Model { get; set; }
 	[Property]
 	public GameObject Lock { get; set; }
+	[Property]
+	public Item Loot { get; set; }
 	public override string InteractDescription => (Player.Instance.Holding is Key || _fading) ? "Open" : "LOCKED";
 	public override bool Locked => (Player.Instance.Holding is Key || _fading) ? false : true;
 
@@ -28,7 +30,16 @@ public partial class LockedChest : Interactable
 			var alpha = 1f - _fadeAway.Fraction;
 			Model.Tint = Model.Tint.WithAlpha( alpha );
 			Lock.GetComponent<ModelRenderer>().Tint = Model.Tint.WithAlpha( alpha );
+			Loot.Model.Tint = Model.Tint.WithAlpha( _fadeAway.Fraction );
 		}
+	}
+
+	protected override void OnStart()
+	{
+		base.OnStart();
+		Loot.Model.Tint = Model.Tint.WithAlpha( 0f );
+		Loot.Enabled = false;
+		Loot.GameObject.Enabled = false;
 	}
 
 	public override void Interact( Player player )
@@ -60,9 +71,11 @@ public partial class LockedChest : Interactable
 		_shaking = false;
 		Lock.Components.Create<Rigidbody>().ApplyForce( Vector3.Up * 500f );
 		await Task.DelaySeconds( 1f );
+		Loot.GameObject.Enabled = true;
 		_fadeAway = 2f;
 		_fading = true;
 		await Task.DelaySeconds( 2f );
+		Loot.Enabled = true;
 		DestroyGameObject();
 	}
 }
