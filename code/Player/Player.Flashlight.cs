@@ -4,7 +4,7 @@ public partial class Player
 {
 	[Property]
 	public Light FlashLight { get; set; }
-	public bool FlashLightOn { get; set; } = true;
+	public bool FlashLightOn { get; set; } = false;
 
 	public void SetFlashLight( bool on, bool sound = false )
 	{
