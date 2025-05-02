@@ -20,8 +20,10 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "OnInteract": null,
         "PromptOffset2D": "0,0",
-        "PromptOffset3D": "0,-32.63998,56.48"
+        "PromptOffset3D": "0,-32.63998,56.48",
+        "SpawnPoint": null
       },
       {
         "__type": "Sandbox.ModelRenderer",
@@ -103,7 +105,21 @@
         "Children": []
       }
     ],
-    "__variables": [],
+    "__variables": [
+      {
+        "Id": "Spawn Point",
+        "Title": "Spawn Point",
+        "Description": null,
+        "Group": null,
+        "Order": 0,
+        "Targets": [
+          {
+            "Id": "193e8e9c-30a5-4c3d-9124-42ce9cfce514",
+            "Property": "SpawnPoint"
+          }
+        ]
+      }
+    ],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,

@@ -392,6 +392,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "6cc37119-50bf-45e2-98f3-e429c60cd2f6",
+                  "__enabled": false,
                   "Attenuation": 0.84,
                   "ConeInner": 0,
                   "ConeOuter": 35,
@@ -592,7 +593,33 @@
           "Position": "4850.674,8985.091,1776.435",
           "Rotation": "-0.00000005971086,0.8660254,-0.00000005971086,-0.5",
           "Enabled": true,
-          "Components": [],
+          "Components": [
+            {
+              "__type": "CryptidHunt.ChurchLight",
+              "__guid": "8525ffe7-5367-45a7-9ebb-65b7c5ec5342",
+              "Color": "1,0,0,5",
+              "Lights": [
+                {
+                  "_type": "component",
+                  "component_id": "65df82b1-58df-4573-a721-60b129d238c4",
+                  "go": "97375098-6897-4dbe-bf12-062750fda6de",
+                  "component_type": "SpotLight"
+                },
+                {
+                  "_type": "component",
+                  "component_id": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
+                  "go": "8f967e11-af3d-4d80-80ab-171bf6472454",
+                  "component_type": "SpotLight"
+                }
+              ],
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
           "Children": [
             {
               "__guid": "97375098-6897-4dbe-bf12-062750fda6de",
@@ -5506,7 +5533,7 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "fb26d4f3-5103-464b-a2e0-e8c3d2f92ce0",
-                  "Center": "423.2643,32.04297,0",
+                  "Center": "-105.5702,59.90523,-180.191",
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5519,7 +5546,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
-                  "Scale": "2846.528,1935.914,1000",
+                  "Scale": "1788.859,565.0456,639.6179",
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -5765,7 +5792,7 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
-                  "Center": "-2142.144,-1064.206,0",
+                  "Center": "-1976.902,-1064.206,0",
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5778,7 +5805,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
-                  "Scale": "5070.833,4128.413,1000",
+                  "Scale": "5401.318,4128.413,1000",
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -5883,7 +5910,7 @@
                 {
                   "__type": "CryptidHunt.InputScreenHint",
                   "__guid": "68b80ed0-e5ce-4321-8ad9-79f4c28ed9ab",
-                  "ButtonHint": "Score",
+                  "ButtonHint": "Inventory",
                   "Hint": "to open your backpack and equip items.",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6697,7 +6724,14 @@
       "Scale": "1,1,0.925",
       "Enabled": true,
       "__Prefab": "prefabs/scene_transfer_door.prefab",
-      "__PrefabVariables": {}
+      "__PrefabVariables": {
+        "Spawn Point": {
+          "_type": "component",
+          "component_id": "1ad6e299-0074-4b82-8bac-1bf765ad9cd6",
+          "go": "6e068ffc-7807-480c-ae86-006fac5327ec",
+          "component_type": "SpawnPoint"
+        }
+      }
     },
     {
       "__guid": "dc555f6d-6128-48ef-bbb2-11a58f552092",
@@ -6709,6 +6743,28 @@
         {
           "__type": "CryptidHunt.GameManager",
           "__guid": "75113e0e-754a-411f-a4f1-25aac6834322",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "6e068ffc-7807-480c-ae86-006fac5327ec",
+      "Flags": 0,
+      "Name": "Spawn",
+      "Position": "8172.824,3446.434,303.1749",
+      "Rotation": "0,0,0.9455186,0.3255681",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "1ad6e299-0074-4b82-8bac-1bf765ad9cd6",
+          "Color": "0.8902,0.31765,0.05098,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
