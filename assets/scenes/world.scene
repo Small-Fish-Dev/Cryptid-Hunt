@@ -511,7 +511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 71,
+                "Id": 83,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -523,7 +523,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 72,
+                "Id": 84,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2270,7 +2270,7 @@
                   "Cookie": null,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
-                  "LightColor": "0.42171,0.42326,0.33073,1",
+                  "LightColor": "0.92093,0.84197,0.24415,1",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -2814,7 +2814,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 123,
+                    "Id": 141,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2832,7 +2832,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 124,
+                    "Id": 142,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2850,7 +2850,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 125,
+                    "Id": 143,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -4519,8 +4519,8 @@
               "__guid": "6658972e-38fc-4516-b8d4-a2cf823dac4c",
               "Flags": 0,
               "Name": "page (1)",
-              "Position": "-4835.393,-3221.217,-436.9318",
-              "Rotation": "0,0,0.258819,0.9659258",
+              "Position": "-4826.738,-3213.723,-436.8405",
+              "Rotation": "-0.049385,-0.1843073,0.2540638,0.948179",
               "Enabled": true,
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
@@ -4575,7 +4575,7 @@
               "Enabled": true,
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
-                "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\n its home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
+                "Text": "It doesn't seem to be a good climber,\nI was peeking inside the broken door in the mineshaft when it spotted me,\nits home doubtless,\nand I wasn't welcome;\nI'll have to come back with a way to pry the door open.",
                 "Bloody Print": false
               }
             }
@@ -5983,6 +5983,26 @@
           ]
         },
         {
+          "__guid": "b59a5040-5e40-49ea-838a-6c123de1da98",
+          "Flags": 0,
+          "Name": "medkit (1)",
+          "Position": "3993.145,8959.758,621.1795",
+          "Rotation": "0.00000005830215,0.0000000123925,-0.8386699,0.5446404",
+          "Enabled": true,
+          "__Prefab": "prefabs/medkit.prefab",
+          "__PrefabVariables": {}
+        },
+        {
+          "__guid": "3d0574d0-322c-4de3-97b1-16586be22724",
+          "Flags": 0,
+          "Name": "crowbar",
+          "Position": "2344.829,5681.341,598.1794",
+          "Rotation": "-0.09803686,-0.8604586,-0.0566016,0.4967859",
+          "Enabled": true,
+          "__Prefab": "prefabs/crowbar.prefab",
+          "__PrefabVariables": {}
+        },
+        {
           "__guid": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
           "Flags": 0,
           "Name": "shotgun (1)",
@@ -6022,8 +6042,8 @@
           "__guid": "afdb23cc-5b54-415b-88f0-b29929486a3c",
           "Flags": 0,
           "Name": "key (1)",
-          "Position": "-1947.326,2522.674,245.2304",
-          "Rotation": "-0.1830128,0.6830125,0.1830129,0.6830127",
+          "Position": "-1947.129,2528.278,246.8259",
+          "Rotation": "-0.1349225,0.6685824,0.2302116,0.6941153",
           "Enabled": true,
           "__Prefab": "prefabs/key.prefab",
           "__PrefabVariables": {}
@@ -6041,8 +6061,8 @@
           "__guid": "bbfd67eb-ce42-42e0-80d6-157433e11571",
           "Flags": 0,
           "Name": "crowbar (1)",
-          "Position": "-1961.326,2524.674,245.7932",
-          "Rotation": "0,0,0.258819,0.9659258",
+          "Position": "-1955.742,2524.646,245.7692",
+          "Rotation": "0.02207742,-0.01406486,0.5371155,0.8431024",
           "Enabled": true,
           "__Prefab": "prefabs/crowbar.prefab",
           "__PrefabVariables": {}
@@ -6570,119 +6590,66 @@
       ]
     },
     {
-      "__guid": "69ad7a97-9e2f-4d2f-82c6-c6b516a3591a",
+      "__guid": "d49633f9-f628-45fd-835d-6f3fc36567d3",
       "Flags": 0,
-      "Name": "Cube",
-      "Position": "3771.268,6015.679,409.4156",
+      "Name": "Spot Light",
+      "Position": "2502.594,5831.9,425.5631",
+      "Rotation": "0.1004125,0.881309,-0.05227143,0.4587804",
+      "Tags": "light_spot,light",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
-          "__guid": "4326c3f7-ec41-411c-af98-7239a8e34334",
-          "BodyGroups": 18446744073709551615,
-          "CreateAttachments": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/dev/box.vmdl",
+          "__type": "Sandbox.SpotLight",
+          "__guid": "7338e631-f04a-4465-8bd2-d86c77a17987",
+          "Attenuation": 7.31,
+          "ConeInner": 0,
+          "ConeOuter": 30,
+          "Cookie": null,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.09843,0.11222,0.11628,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "Sandbox.BoxCollider",
-          "__guid": "cd02ed17-8d2b-4207-9387-ba29604d21c2",
-          "Center": "0,0,0",
-          "Friction": null,
-          "IsTrigger": false,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "OnObjectTriggerEnter": null,
-          "OnObjectTriggerExit": null,
-          "OnTriggerEnter": null,
-          "OnTriggerExit": null,
-          "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null,
-          "SurfaceVelocity": "0,0,0"
+          "Radius": 50,
+          "Shadows": false
         }
       ],
       "Children": []
     },
     {
-      "__guid": "b7f3f6f6-8238-4da7-b388-d209f4bafec8",
+      "__guid": "0b6c4209-aa40-4cd9-9b68-edb65b50f056",
       "Flags": 0,
-      "Name": "ammo",
-      "Position": "3932.639,5862.711,385",
-      "Rotation": "-0.00000005960464,0.00000002980232,0.8141328,0.5806787",
+      "Name": "Spot Light (1)",
+      "Position": "-1781.14,2680.693,58.82708",
+      "Rotation": "0.1004125,0.881309,-0.05227143,0.4587804",
+      "Tags": "light_spot,light",
       "Enabled": true,
-      "__Prefab": "prefabs/ammo.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "37f9788f-e4aa-496b-aa67-0b98bbce6608",
-      "Flags": 0,
-      "Name": "bear trap",
-      "Position": "3935.493,5926.807,385",
-      "Rotation": "-0.00000005960464,0.00000002980232,0.8141328,0.5806787",
-      "Tags": "trap",
-      "Enabled": true,
-      "__Prefab": "prefabs/bear trap.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "e6f1bbe3-8c05-486d-839c-539113d446a2",
-      "Flags": 0,
-      "Name": "medkit",
-      "Position": "3889.258,5799.634,385.0001",
-      "Rotation": "0,0.00000005960464,0.8073792,0.5900331",
-      "Enabled": true,
-      "__Prefab": "prefabs/medkit.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "c9cf9ed1-df68-463c-ade2-dae5e27770f3",
-      "Flags": 0,
-      "Name": "shotgun",
-      "Position": "3842.579,5761.577,384",
-      "Rotation": "-0.00000005960464,0,0.9999999,0",
-      "Enabled": true,
-      "__Prefab": "prefabs/shotgun.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "85e79e37-8834-4b83-8247-5048d388085b",
-      "Flags": 0,
-      "Name": "key (1)",
-      "Position": "4295.228,9177.038,427.2197",
-      "Rotation": "0,0,0.8386706,-0.5446391",
-      "Enabled": true,
-      "__Prefab": "prefabs/key.prefab",
-      "__PrefabVariables": {}
-    },
-    {
-      "__guid": "b59a5040-5e40-49ea-838a-6c123de1da98",
-      "Flags": 0,
-      "Name": "medkit (1)",
-      "Position": "4142.471,9109.084,410.0001",
-      "Rotation": "0.00000005830215,0.0000000123925,-0.8386699,0.5446404",
-      "Enabled": true,
-      "__Prefab": "prefabs/medkit.prefab",
-      "__PrefabVariables": {}
+      "Components": [
+        {
+          "__type": "Sandbox.SpotLight",
+          "__guid": "99886287-638e-45bb-b1bb-07a5d66f7e86",
+          "Attenuation": 7.31,
+          "ConeInner": 0,
+          "ConeOuter": 30,
+          "Cookie": null,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.09843,0.11222,0.11628,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 50,
+          "Shadows": false
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
