@@ -1,4 +1,7 @@
-﻿namespace CryptidHunt;
+﻿using System;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace CryptidHunt;
 
 public partial class DiscoverableArea : Component, Component.ITriggerListener
 {
@@ -15,6 +18,6 @@ public partial class DiscoverableArea : Component, Component.ITriggerListener
 
 		Activated = true;
 
-		Log.Info( $"Welcome to {AreaName}" );
+		GameUI.OpenZoneHint( AreaName );
 	}
 }
