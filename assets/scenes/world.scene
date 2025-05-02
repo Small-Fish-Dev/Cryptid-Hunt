@@ -4798,7 +4798,7 @@
               "__guid": "d4aee9f4-06f9-4814-90a1-e702f76da07a",
               "Flags": 0,
               "Name": "Leaves Rustle",
-              "Position": "5053.414,5029.484,390.6334",
+              "Position": "5053.414,5029.484,263.0607",
               "Tags": "trigger",
               "Enabled": true,
               "Components": [
@@ -4833,6 +4833,49 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Sound": "sounds/ambient/leaves_rustle.sound"
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "cfbdf892-ecbb-4a9e-9685-5c2409c4f318",
+              "Flags": 0,
+              "Name": "Car Sound",
+              "Position": "7603.845,3510.293,293.4911",
+              "Tags": "trigger",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "f6cc6686-f1fd-449c-84f2-29cd5919c1bc",
+                  "Center": "156.5604,-90.061,173.2882",
+                  "Friction": null,
+                  "IsTrigger": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "1304.539,680.122,443.3737",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "CryptidHunt.MySoundCue",
+                  "__guid": "7e13bb70-e27c-42d7-b4f9-bc4f0ce03283",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Sound": "sounds/misc/car_intro.sound"
                 }
               ],
               "Children": []

@@ -54,5 +54,9 @@ public partial class SceneTransferDoor : Interactable
 		await Task.DelaySeconds( 4f );
 
 		Player.Instance.SetFlashLight( true, true );
+
+		await Task.DelaySeconds( 1f );
+
+		Sound.Play( "piano_intro" );
 	}
 }
