@@ -9,6 +9,13 @@ public sealed class Shotgun : Item
 
 	public override void Attack( Player player )
 	{
+		var firstAmmo = player.Items.FirstOrDefault( x => x.Title == "Ammo" ); // LOL
+		var ammoLeft = firstAmmo?.Amount ?? 0;
+		if ( ammoLeft <= 0 ) return;
+		firstAmmo.Amount--;
+		if ( firstAmmo.Amount <= 0 )
+			firstAmmo.DestroyGameObject();
+
 		for ( int i = 0; i < 10; i++ )
 		{
 			var rotation = player.Camera.WorldRotation;
@@ -30,6 +37,8 @@ public sealed class Shotgun : Item
 
 			_bulletHoles.Add( bullet, 30f );
 		}
+
+		Player.Instance.NextInteraction = 1f;
 	}
 
 	TimeUntil _nextBulletCullCheck;
