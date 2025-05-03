@@ -36,6 +36,16 @@
         }
     }
 
+    .monkeyBar {
+        position: absolute;
+        bottom: 50px;
+        font-family: 'Comic Sans MS';
+        font-size: 10px;
+        white-space: pre;
+        text-stroke: 1px black;
+        color: red;
+    }
+
     .TextEntry {
         color: white;
         width: 90%;
