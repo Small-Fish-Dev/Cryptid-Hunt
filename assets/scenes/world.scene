@@ -7462,6 +7462,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "ScarySound": "sounds/scary/creepy_sound.sound",
           "SpriteRenderer": {
             "_type": "component",
             "component_id": "49fefefc-e882-4dc3-9db7-d6d111546f34",
@@ -7478,10 +7479,10 @@
         {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "9aed6d07-265d-4fa8-be28-d82563f1dc6a",
-          "Acceleration": 1000,
+          "Acceleration": 800,
           "AutoTraverseLinks": true,
           "Height": 64,
-          "MaxSpeed": 300,
+          "MaxSpeed": 400,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
