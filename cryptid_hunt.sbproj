@@ -23,7 +23,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/world.scene",
+    "StartupScene": "scenes/menu.scene",
     "LaunchMode": "Normal",
     "ControlModes": {
       "Keyboard": true,
