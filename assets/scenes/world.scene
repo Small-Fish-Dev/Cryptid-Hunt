@@ -6930,7 +6930,7 @@
               "OnComponentUpdate": null,
               "TargetCamera": {
                 "_type": "gameobject",
-                "go": "41d63ce7-aa4d-4fc2-8b5f-00036886a8f8"
+                "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e"
               }
             }
           ],
@@ -7073,7 +7073,13 @@
           "__guid": "d00bb352-0e6c-46d4-8d96-ad678770e756",
           "Camera": {
             "_type": "gameobject",
-            "go": "41d63ce7-aa4d-4fc2-8b5f-00036886a8f8"
+            "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e"
+          },
+          "CameraBody": {
+            "_type": "component",
+            "component_id": "11c4c2c9-cc6c-4dde-99c4-80a19fd44ab7",
+            "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e",
+            "component_type": "Rigidbody"
           },
           "Computer": {
             "_type": "component",
@@ -7255,12 +7261,89 @@
           "Children": []
         },
         {
-          "__guid": "41d63ce7-aa4d-4fc2-8b5f-00036886a8f8",
+          "__guid": "dd85e5df-2606-4d3e-8753-9e1034f2720e",
           "Flags": 0,
           "Name": "CameraTarget",
-          "Position": "0,0,64",
+          "Position": "0,0,63.09338",
           "Enabled": true,
-          "Components": [],
+          "Components": [
+            {
+              "__type": "Sandbox.HullCollider",
+              "__guid": "4d92972e-817a-4d7c-8602-83ab0b680064",
+              "BoxSize": "50,50,50",
+              "Center": "0,0,0",
+              "Friction": null,
+              "Height": 22.239998,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Points": [],
+              "Radius": 0,
+              "Radius2": 12.960009,
+              "Slices": 16,
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0",
+              "Type": "Cone"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "6d851860-22ae-4824-8ff1-87d83f269bfa",
+              "Center": "0.4890022,0,6.000001",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "24.82828,1.280003,20",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "11c4c2c9-cc6c-4dde-99c4-80a19fd44ab7",
+              "__enabled": false,
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            }
+          ],
           "Children": []
         }
       ]

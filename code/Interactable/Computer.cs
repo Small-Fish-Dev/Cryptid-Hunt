@@ -34,7 +34,7 @@ public partial class Computer : Interactable
 
 	public async void StopGame()
 	{
-		await Task.DelaySeconds( 300f ); // TODO MAKE 30
+		await Task.DelaySeconds( 60f );
 		SoundPoint.StartSound();
 		await Task.DelaySeconds( 2f );
 		Playing = false;
