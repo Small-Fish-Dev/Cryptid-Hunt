@@ -5825,6 +5825,60 @@
               "Children": []
             },
             {
+              "__guid": "7099d1e0-729a-43d6-a3b8-76cf60b447a1",
+              "Flags": 0,
+              "Name": "Sign (1)",
+              "Position": "-6621.326,9642.674,195.1794",
+              "Rotation": "-0.04914255,-0.07338902,0.351242,0.9321094",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a5afa09f-7530-483a-bb3f-37b0c9a1fefa",
+                  "BodyGroups": 5128,
+                  "CreateAttachments": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/items/sign.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.ModelCollider",
+                  "__guid": "6d887f38-ef56-4691-a448-c3c71860f072",
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "Model": "models/items/sign.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            },
+            {
               "__guid": "035d5117-391a-4d0b-9073-6371be72c2cf",
               "Flags": 0,
               "Name": "Sign (1)",
