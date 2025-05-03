@@ -293,6 +293,7 @@
           "__guid": "a8ee2231-5b46-4af2-9336-6bf42c47e30c",
           "Flags": 0,
           "Name": "Camera",
+          "Position": "0,0,64",
           "Tags": "maincamera",
           "Enabled": true,
           "Components": [
@@ -524,7 +525,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 7,
+                "Id": 19,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -536,7 +537,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 8,
+                "Id": 20,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2653,7 +2654,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "7e95b087-a1cd-463d-97a5-ba2e682be8b1",
+                  "component_id": "7b2f075f-95d3-406e-83bf-469d18d6c459",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -2917,7 +2918,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 27,
+                    "Id": 45,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2935,7 +2936,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 28,
+                    "Id": 46,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2953,7 +2954,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 29,
+                    "Id": 47,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
