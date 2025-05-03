@@ -317,7 +317,7 @@
               "RenderTags": "",
               "TargetEye": "None",
               "Viewport": "0,0,1,1",
-              "ZFar": 10000,
+              "ZFar": 4000,
               "ZNear": 10
             },
             {
@@ -2042,34 +2042,6 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Radius": 1200,
-                  "Shadows": false
-                }
-              ],
-              "Children": []
-            },
-            {
-              "__guid": "87874318-815c-46ba-991a-ac72fab4c81a",
-              "Flags": 0,
-              "Name": "Point Light (1)",
-              "Position": "7897.048,3490.996,639.4216",
-              "Rotation": "0,0,0.1305263,-0.9914448",
-              "Tags": "light,light_point",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "208f37c7-b8b7-4df3-a4cf-17f44e44b875",
-                  "Attenuation": 1,
-                  "FogMode": "Disabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.22726,0.24932,0.25581,1",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Radius": 400,
                   "Shadows": false
                 }
               ],
@@ -6096,7 +6068,7 @@
           "__PrefabVariables": {
             "Loot": {
               "_type": "component",
-              "component_id": "d06f43f5-f803-43e9-85b6-c619a80a27e1",
+              "component_id": "43598fd4-8741-499b-8917-002a22a5290c",
               "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
               "component_type": "Shotgun"
             }
