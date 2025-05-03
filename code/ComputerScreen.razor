@@ -12,8 +12,7 @@
     [Property]
     public GameObject TargetCamera { get; set; }
     [Property]
-    public ModelRenderer Computer { get; set; }
-    [Property]
+    public Computer Computer { get; set; }
     public int FrameRate = 30;
 
     public static SceneCamera Camera { get; private set; }
@@ -46,6 +45,8 @@
 
         if (Camera == null || !_nextRender)
             return;
+
+        FrameRate = Computer.Playing ? 15 : 5;
 
         Camera.Position = TargetCamera.WorldPosition;
         Camera.Rotation = TargetCamera.WorldRotation;

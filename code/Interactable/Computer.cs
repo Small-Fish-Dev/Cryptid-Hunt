@@ -1,4 +1,5 @@
 ﻿using Sandbox;
+using System.Numerics;
 
 namespace CryptidHunt;
 
@@ -6,12 +7,26 @@ public partial class Computer : Interactable
 {
 	[Property]
 	public GameObject Camera { get; set; }
-	public bool Playing { get; set; } = false;
+	[Property]
+	public SoundPointComponent SoundPoint { get; set; }
+
+	public bool Playing { get; set; } = true;
 	public override string InteractDescription => Playing ? "Quit" : "Play";
 
-	protected override void OnUpdate()
+	protected override void OnStart()
 	{
-		base.OnUpdate();
+		base.OnStart();
+		StopGame();
+		Camera.Enabled = true;
+	}
+
+	public async void StopGame()
+	{
+		await Task.DelaySeconds( 3f );
+		SoundPoint.StartSound();
+		await Task.DelaySeconds( 2f );
+		Playing = false;
+		Camera.Enabled = false;
 	}
 
 	public override void Interact( Player player )
@@ -20,7 +35,7 @@ public partial class Computer : Interactable
 
 		Playing = !Playing;
 		Camera.Enabled = Playing;
-		player.LockInputs = Playing;
+		Player.Instance.LockInputs = Playing;
 	}
 
 }
