@@ -1,0 +1,514 @@
+{
+  "__guid": "d269188d-c79b-417a-91d5-e7ced66ba8fa",
+  "GameObjects": [
+    {
+      "__guid": "fe8856ef-36ec-4333-934c-6a2cc9a68e02",
+      "Flags": 0,
+      "Name": "Map",
+      "Position": "-4069.601,-8834.878,1024",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.MapInstance",
+          "__guid": "07168f32-4cba-4f42-8ece-ea1090e0d759",
+          "__version": 1,
+          "EnableCollision": true,
+          "MapName": "maps/prefabs/church/church_prefab.vmap",
+          "NoOrigin": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        },
+        {
+          "__type": "MyComponent",
+          "__guid": "753929e7-7cbd-44c0-add4-68437cb5b035",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "1f38b14e-010a-4b51-b71a-8b432ec7fef0",
+      "Flags": 0,
+      "Name": "Skybox",
+      "Position": "4570.663,6526.707,669.1204",
+      "Tags": "skybox",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkyBox2D",
+          "__guid": "e5cf1bfd-2b20-49ed-9ac0-fd9bfcd4de4c",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SkyIndirectLighting": true,
+          "SkyMaterial": "materials/cloudy_night/cloudy_night.vmat",
+          "Tint": "0.12363,0.15076,0.2093,1"
+        },
+        {
+          "__type": "Sandbox.AmbientLight",
+          "__guid": "812e3729-7bb6-4b24-8f37-66c562eaaa1c",
+          "Color": "0.01722,0.01696,0.03256,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.ActionGraphs.ActionsInvoker",
+          "__guid": "50603970-4805-4e4d-92f0-f2664cb0a688",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnDestroyAction": null,
+          "OnDisabledAction": null,
+          "OnEnabledAction": {
+            "__version": 9,
+            "__guid": "76887627-b548-4db6-ba80-79865f613024",
+            "__changeId": 18,
+            "UserData": {
+              "Title": "On Enabled Action",
+              "ReferencedComponentTypes": []
+            },
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 2,
+                "Type": "scene.ref",
+                "UserData": {
+                  "Position": "-12,72"
+                }
+              },
+              {
+                "Id": 3,
+                "Type": "property",
+                "Properties": {
+                  "_name": "SkyIndirectLighting",
+                  "_type": "Sandbox.SkyBox2D"
+                },
+                "UserData": {
+                  "Position": "468,24"
+                }
+              },
+              {
+                "Id": 6,
+                "Type": "time.delayobj",
+                "UserData": {
+                  "Position": "240,24"
+                }
+              }
+            ],
+            "Links": [
+              {
+                "SrcId": 6,
+                "SrcName": "_signal",
+                "DstId": 3,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 2,
+                "SrcName": "_result",
+                "DstId": 3,
+                "DstName": "_target"
+              },
+              {
+                "Id": 31,
+                "Value": false,
+                "DstId": 3,
+                "DstName": "_value"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_signal",
+                "DstId": 6,
+                "DstName": "_signal"
+              },
+              {
+                "Id": 32,
+                "Value": 5,
+                "DstId": 6,
+                "DstName": "seconds"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_target",
+                "DstId": 6,
+                "DstName": "target"
+              }
+            ],
+            "Defaults": {
+              "$2.component": {
+                "_type": "component",
+                "component_id": "e5cf1bfd-2b20-49ed-9ac0-fd9bfcd4de4c",
+                "go": "1f38b14e-010a-4b51-b71a-8b432ec7fef0",
+                "component_type": "SkyBox2D"
+              }
+            }
+          },
+          "OnFixedUpdateAction": null,
+          "OnUpdateAction": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "36c3998e-3d94-43df-885d-c8224bde3914",
+      "Flags": 0,
+      "Name": "Volumetric Fog",
+      "Position": "-4032,-8832,480",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.VolumetricFogVolume",
+          "__guid": "79560fdc-6a53-4053-841d-eb86c5eb10ea",
+          "Bounds": {
+            "Mins": "-2000,-2000,-1500",
+            "Maxs": "2000,2000,1500"
+          },
+          "FalloffExponent": 0.41,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Strength": 0.68
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "3f9b6a30-1db2-4adf-a82e-274f8e9ef58c",
+      "Flags": 0,
+      "Name": "NewMap",
+      "Position": "149.3263,149.3264,-211.1794",
+      "Rotation": "0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "31942502-03c9-494c-ba71-e4bfe52b20ba",
+          "Flags": 0,
+          "Name": "Lights",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "2573b705-e5a3-46bf-b5af-48cc51ee1721",
+              "Flags": 0,
+              "Name": "Spot Light (1)",
+              "Position": "4923.035,8990.678,896.0799",
+              "Rotation": "0,0.7933534,0,0.6087615",
+              "Tags": "light,light_spot",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "ca607b51-6683-4af5-8043-687d2b587844",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.62996,0.71822,0.74419,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 500,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "57e1f8ec-b9c8-4723-acbd-7670f49cc446",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "3631.628,8874.674,730.1594",
+              "Tags": "light,light_point",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "d717db4b-59e0-4f51-abaa-3a0becdca2d0",
+                  "Attenuation": 1,
+                  "FogMode": "Enabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.10698,0.03221,0.02687,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 400,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "5a40f405-df22-4133-9e43-c0f56ee21566",
+              "Flags": 0,
+              "Name": "Point Light (1)",
+              "Position": "3965.162,8937.824,653.4863",
+              "Rotation": "0,0,0.1045285,-0.9945219",
+              "Tags": "light,light_point",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "bd896993-9142-4e8c-bf17-3281e3ee71e4",
+                  "Attenuation": 5.64,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "1,0.65,0,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 120.07992,
+                  "Shadows": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "5ea52bda-69aa-4298-9c66-4df98f02c0b6",
+              "Flags": 0,
+              "Name": "Point Light (2)",
+              "Position": "4067.129,8985.751,903.5679",
+              "Rotation": "0,0.9659258,0,0.2588192",
+              "Tags": "light,light_point,light_spot",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpotLight",
+                  "__guid": "c2e3d0a2-2dc6-41e8-9bce-508c66bf6f3b",
+                  "Attenuation": 1,
+                  "ConeInner": 15,
+                  "ConeOuter": 45,
+                  "Cookie": null,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.16078,0.16078,0.16078,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 216,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "c271b4bc-cd50-4f2e-989d-36adb16fe940",
+          "Flags": 0,
+          "Name": "Items",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "24427b30-665f-4dc4-9166-30945cbd9ae4",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "3782.674,8840.674,631.179",
+              "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
+              "Tags": "trap",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "d2eae971-10cc-4b4c-b33e-990f6696bf92",
+              "Flags": 0,
+              "Name": "bear trap",
+              "Position": "4010.674,8952.674,624.1794",
+              "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
+              "Tags": "trap",
+              "Enabled": true,
+              "__Prefab": "prefabs/bear trap.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "996e74c0-42ef-4774-954a-e630257d8375",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "3758.486,8883.188,620.1797",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "2e35a848-d76e-4510-a7cd-51371b93e490",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "3780.669,8861.653,621.1794",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "cc825f37-d6df-42d0-9452-cd8cf053486e",
+              "Flags": 0,
+              "Name": "ammo",
+              "Position": "4490.674,8858.674,643.1794",
+              "Rotation": "0,0,0.258819,0.9659258",
+              "Enabled": true,
+              "__Prefab": "prefabs/ammo.prefab",
+              "__PrefabVariables": {}
+            },
+            {
+              "__guid": "ed697aae-e3a1-4b36-b742-d39c1db8f50c",
+              "Flags": 0,
+              "Name": "chest",
+              "Position": "3993.674,9007.674,619.1794",
+              "Rotation": "0,0,0.8386706,-0.5446391",
+              "Enabled": true,
+              "__Prefab": "prefabs/chest.prefab",
+              "__PrefabVariables": {
+                "Loot": null
+              }
+            },
+            {
+              "__guid": "b59a5040-5e40-49ea-838a-6c123de1da98",
+              "Flags": 0,
+              "Name": "medkit (1)",
+              "Position": "3993.145,8959.758,621.1795",
+              "Rotation": "0.00000005830215,0.0000000123925,-0.8386699,0.5446404",
+              "Enabled": true,
+              "__Prefab": "prefabs/medkit.prefab",
+              "__PrefabVariables": {}
+            }
+          ]
+        },
+        {
+          "__guid": "bf8f4b88-9348-4a25-bd2f-ee8c88707328",
+          "Flags": 0,
+          "Name": "Pages",
+          "Position": "2856.066,5743.891,682.1112",
+          "Enabled": true,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
+              "Flags": 0,
+              "Name": "page (1)",
+              "Position": "1118.607,3242.492,1.068176",
+              "Rotation": "0,0.5735765,0,0.819152",
+              "Enabled": true,
+              "__Prefab": "prefabs/page.prefab",
+              "__PrefabVariables": {
+                "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
+                "Bloody Print": false,
+                "On Interact": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "4305a699-c1a1-454c-bccc-7545a6eab900",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-4608,-8832,544",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "5b629c6b-c8a7-47e3-974b-b5f8ec17cf5b",
+          "BackgroundColor": "0,0,0,1",
+          "ClearFlags": "All",
+          "FieldOfView": 79,
+          "FovAxis": "Horizontal",
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 2000,
+          "ZNear": 10
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
+      "Flags": 0,
+      "Name": "UI",
+      "Position": "-4593.164,-8886.146,552.6333",
+      "Enabled": true,
+      "Components": [],
+      "Children": []
+    }
+  ],
+  "SceneProperties": {
+    "NetworkInterpolation": true,
+    "TimeScale": 1,
+    "WantsSystemScene": true,
+    "Metadata": {},
+    "NavMesh": {
+      "Enabled": true,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 32,
+      "AgentRadius": 16,
+      "AgentStepSize": 48,
+      "AgentMaxSlope": 50,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "ResourceVersion": 2,
+  "Title": null,
+  "Description": null,
+  "__references": [],
+  "__version": 2
+}
