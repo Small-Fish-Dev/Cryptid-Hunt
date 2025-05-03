@@ -32,7 +32,7 @@ public partial class NextBotPlayer : Component
 
 		if ( Computer.Started && Alive )
 		{
-			Controller.UseInputControls = true;
+			Controller.UseInputControls = Computer.Playing;
 			Camera.WorldRotation = Controller.EyeAngles;
 			Camera.LocalPosition = Vector3.Up * 64f;
 		}

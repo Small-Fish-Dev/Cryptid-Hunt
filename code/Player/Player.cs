@@ -155,6 +155,7 @@ public partial class Player : Component
 	public void HandleFootsteps()
 	{
 		if ( !Controller.IsValid() ) return;
+		if ( LockInputs ) return;
 
 		if ( Controller.IsClimbing && _nextFootstep )
 		{

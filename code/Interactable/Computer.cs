@@ -24,6 +24,7 @@ public partial class Computer : Interactable
 	{
 		base.OnStart();
 		Camera.Enabled = true;
+		Player.Instance.LockInputs = true;
 
 		MusicHanlder = Sound.Play( Music );
 	}
@@ -45,6 +46,7 @@ public partial class Computer : Interactable
 		await Task.DelaySeconds( 2f );
 		Playing = false;
 		Camera.Enabled = false;
+		Player.Instance.LockInputs = false;
 	}
 
 	public override void Interact( Player player )
