@@ -19,6 +19,9 @@ public partial class Player
 
 	public void SetupCamera()
 	{
+		if ( Holding.IsValid() )
+			Holding.Model.Enabled = !LockInputs;
+
 		var speed = Controller.Velocity.WithZ( 0f ).Length / 220f;
 
 		if ( Controller.GroundObject.IsValid() )
