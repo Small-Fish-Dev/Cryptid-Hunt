@@ -30,7 +30,7 @@ public partial class NextBotPlayer : Component
 		if ( !Controller.IsValid() ) return;
 		if ( !Camera.IsValid() ) return;
 
-		if ( Computer.Playing && Computer.Started && Alive )
+		if ( Computer.Started && Alive )
 		{
 			Controller.UseInputControls = true;
 			Camera.WorldRotation = Controller.EyeAngles;

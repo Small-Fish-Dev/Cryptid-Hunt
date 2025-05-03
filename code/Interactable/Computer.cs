@@ -12,6 +12,9 @@ public partial class Computer : Interactable
 	public Texture Fear { get; set; }
 	[Property]
 	public NextBot NextBot { get; set; }
+	[Property]
+	public SoundEvent Music { get; set; }
+	public SoundHandle MusicHanlder { get; set; }
 
 	public bool Playing { get; set; } = true;
 	public bool Started = false;
@@ -20,8 +23,9 @@ public partial class Computer : Interactable
 	protected override void OnStart()
 	{
 		base.OnStart();
-		StopGame();
 		Camera.Enabled = true;
+
+		MusicHanlder = Sound.Play( Music );
 	}
 
 	protected override void OnFixedUpdate()
@@ -30,11 +34,13 @@ public partial class Computer : Interactable
 		{
 			NextBot.SpriteRenderer.Texture = Fear;
 		}
+
+		MusicHanlder.Volume = Playing ? 0.2f : 0f;
 	}
 
 	public async void StopGame()
 	{
-		await Task.DelaySeconds( 60f );
+		await Task.DelaySeconds( 40f );
 		SoundPoint.StartSound();
 		await Task.DelaySeconds( 2f );
 		Playing = false;

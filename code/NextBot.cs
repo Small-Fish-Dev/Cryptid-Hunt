@@ -31,7 +31,7 @@ public sealed class NextBot : Component
 				Target.Die();
 		}
 
-		if ( _nextSound )
+		if ( _nextSound && Computer.Playing )
 		{
 			Sound.Play( ScarySound, WorldPosition ).Volume = MathX.Remap( distance, 100f, 1000f, 2f, 0.1f );
 			_nextSound = 1f;

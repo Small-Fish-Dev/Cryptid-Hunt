@@ -6816,6 +6816,7 @@
             "go": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549"
           },
           "Locked": false,
+          "Music": "sounds/music/nextbot-music-2.sound",
           "NextBot": {
             "_type": "component",
             "component_id": "e038d55b-ce64-413d-829d-a9278ab491cf",
