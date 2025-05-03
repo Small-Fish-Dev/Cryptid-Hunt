@@ -6809,6 +6809,24 @@
       "Enabled": true,
       "Components": [
         {
+          "__type": "CryptidHunt.Computer",
+          "__guid": "8901eac7-281e-486d-8a74-7ee484e0cab3",
+          "Camera": {
+            "_type": "gameobject",
+            "go": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549"
+          },
+          "Locked": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnInteract": null,
+          "PromptOffset2D": "0,0",
+          "PromptOffset3D": "0,0,0"
+        },
+        {
           "__type": "Sandbox.ModelRenderer",
           "__guid": "f68bbf7e-585b-4b00-8f57-1dda67c27eef",
           "BodyGroups": 18446744073709551615,
@@ -6830,6 +6848,27 @@
           },
           "RenderType": "On",
           "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "cdbf410b-e6a2-424b-8c9a-fd8edd5f5357",
+          "Center": "-3.533972,-1.606318,14.86068",
+          "Friction": null,
+          "IsTrigger": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Scale": "12.5868,25.4092,16.42472",
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
         }
       ],
       "Children": [
@@ -6895,7 +6934,6 @@
       "Position": "-2516.944,-1142.622,-640.3",
       "Rotation": "0,0,0.7071068,0.7071068",
       "Tags": "maincamera",
-      "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.CameraComponent",
@@ -6970,6 +7008,12 @@
           "Camera": {
             "_type": "gameobject",
             "go": "41d63ce7-aa4d-4fc2-8b5f-00036886a8f8"
+          },
+          "Computer": {
+            "_type": "component",
+            "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
+            "go": "280b1949-6f9e-4fa3-b496-799cd970659d",
+            "component_type": "Computer"
           },
           "Controller": {
             "_type": "component",

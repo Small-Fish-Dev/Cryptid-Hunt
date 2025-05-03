@@ -3,6 +3,9 @@
 public partial class NextBotPlayer : Component
 {
 	[Property]
+	public Computer Computer { get; set; }
+
+	[Property]
 	public PlayerController Controller { get; set; }
 
 	[Property]
@@ -15,6 +18,15 @@ public partial class NextBotPlayer : Component
 		if ( !Controller.IsValid() ) return;
 		if ( !Camera.IsValid() ) return;
 
-		Camera.WorldRotation = Controller.EyeAngles;
+		if ( Computer.Playing )
+		{
+			Controller.UseInputControls = true;
+			Camera.WorldRotation = Controller.EyeAngles;
+		}
+		else
+		{
+			Controller.UseInputControls = false;
+			Controller.WishVelocity = 0f;
+		}
 	}
 }
