@@ -46,7 +46,7 @@ public partial class Player : Component
 
 		if ( Running )
 		{
-			Stamina = Math.Clamp( Stamina - Time.Delta * 10f, 0f, 100f );
+			Stamina = Math.Clamp( Stamina - Time.Delta * 5f, 0f, 100f );
 			Controller.RunSpeed = RunSpeed;
 			LastRan = 0f;
 		}

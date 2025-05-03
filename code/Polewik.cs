@@ -119,12 +119,15 @@ public partial class Polewik : Component
 				Heartbeart?.Stop();
 				GameTask.RunInThreadAsync( async () =>
 				{
-					await GameTask.DelaySeconds( 0.5f );
+					await Task.DelayRealtimeSeconds( 0.5f );
 
-					Player.Instance.AddCameraShake( 2f, 30f );
+					Player.Instance.AddCameraShake( 4f, 5f );
+
+					await Task.DelayRealtimeSeconds( 1f );
 
 					ModelRenderer.Set( "howl", true );
-					await GameTask.DelaySeconds( 3.5f );
+					Sound.Play( "howl_far", WorldPosition );
+					await Task.DelayRealtimeSeconds( 4.5f );
 					CurrentState = PolewikState.AttackPersistent;
 				} );
 			}
@@ -222,14 +225,14 @@ public partial class Polewik : Component
 	public Dictionary<PolewikState, float> Speeds = new()
 	{
 		{ PolewikState.Idle, 0f },
-		{ PolewikState.Patrolling, 450f },
-		{ PolewikState.Stalking, 300f },
-		{ PolewikState.Following, 550f },
+		{ PolewikState.Patrolling, 350f },
+		{ PolewikState.Stalking, 200f },
+		{ PolewikState.Following, 450f },
 		{ PolewikState.Attacking, 1800f },
-		{ PolewikState.Fleeing, 750f },
+		{ PolewikState.Fleeing, 600f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 550f },
+		{ PolewikState.AttackPersistent, 450f },
 		{ PolewikState.Jumpscare, 0f }
 
 	};

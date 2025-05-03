@@ -41,6 +41,13 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		_startRotation = player.Camera.WorldRotation;
 		player.LockInputs = LockInputs;
 
+		var polewick = Scene.Components.Get<Polewik>( FindMode.EverythingInSelfAndDescendants );
+		if ( polewick.IsValid() )
+		{
+			polewick.GameObject.Enabled = true;
+			polewick.CurrentState = PolewikState.Yell;
+		}
+
 		_transitionEnd = Transition.ValueRange.y;
 
 		GameTask.RunInThreadAsync( async () =>
