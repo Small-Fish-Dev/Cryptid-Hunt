@@ -27,6 +27,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "OnInteract": null,
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Bear Trap",
@@ -62,7 +63,7 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "ce093f5e-809b-4cdc-adc3-4c995114e1b8",
-        "Center": "0.504631,0.5901852,5.296133",
+        "Center": "0.504631,0.5901852,1.856133",
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -75,7 +76,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Scale": "35.02894,49.32107,10.54674",
+        "Scale": "35.02894,49.32107,3.906743",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
@@ -96,7 +97,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
-        "Scale": "70,70,50",
+        "Scale": "70,70,9.765",
         "Static": false,
         "Surface": null,
         "SurfaceVelocity": "0,0,0"
