@@ -42,11 +42,16 @@ public partial class Computer : Interactable
 	public async void StopGame()
 	{
 		await Task.DelaySeconds( 40f );
-		SoundPoint.StartSound();
+		if ( Playing )
+			SoundPoint.StartSound();
 		await Task.DelaySeconds( 2f );
-		Playing = false;
-		Camera.Enabled = false;
-		Player.Instance.LockInputs = false;
+
+		if ( Playing )
+		{
+			Playing = false;
+			Camera.Enabled = false;
+			Player.Instance.LockInputs = false;
+		}
 	}
 
 	public override void Interact( Player player )
@@ -58,4 +63,17 @@ public partial class Computer : Interactable
 		Player.Instance.LockInputs = Playing;
 	}
 
+	[ConCmd( "skip_nextbot" )]
+	public static void SkipNextbot()
+	{
+		var computer = Game.ActiveScene.Components.Get<Computer>( FindMode.EverythingInSelfAndDescendants );
+		computer.Playing = false;
+		computer.Started = true;
+		computer.Camera.Enabled = false;
+		Player.Instance.LockInputs = false;
+
+		var screen = Game.ActiveScene.Components.Get<ComputerScreen>( FindMode.EverythingInSelfAndDescendants );
+		screen.Started = true;
+		screen.Input.Blur();
+	}
 }

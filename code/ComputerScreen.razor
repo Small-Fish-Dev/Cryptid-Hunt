@@ -26,7 +26,7 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
     public GameObject TargetCamera { get; set; }
     [Property]
     public Computer Computer { get; set; }
-    private TextEntry Input { get; set; }
+    public TextEntry Input { get; set; }
     public bool Started = false;
     public int FrameRate = 30;
 
@@ -101,12 +101,12 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         Computer.Fear = await Flickr.Get(fear);
     }
 
-    private void Open()
+    public void Open()
     {
         Input.Focus();
     }
 
-    private void Close()
+    public void Close()
     {
         Input.Blur();
         Input.Text = string.Empty;
