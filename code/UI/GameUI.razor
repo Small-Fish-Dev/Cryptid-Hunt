@@ -29,7 +29,7 @@
     protected override void OnUpdate()
     {
         base.OnUpdate();
-        Interactable = Player.Instance.InteractingWith;
+        Interactable = Player.Instance?.InteractingWith;
 
         if (Interactable.IsValid())
             ItemPromptPosition = ( Scene.Camera.PointToScreenPixels( Interactable.WorldTransform.PointToWorld(Interactable.PromptOffset3D ) ) + Interactable.PromptOffset2D ) * Panel.ScaleFromScreen;

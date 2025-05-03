@@ -1,17 +1,46 @@
 @using Sandbox;
 @using Sandbox.UI;
 @inherits PanelComponent
-@namespace Sandbox
+@namespace CryptidHunt
 
 <root>
     <div class="Logo"></div>
-    <button class="Button">Start Game</button>
+    <button class="Button" onclick=@Start >Start Game</button>
     <button class="Button">Credits</button>
-    <button class="Button">Quit</button>
+    <button class="Button" onclick=@Quit>Quit</button>
 </root>
 
 @code
 {
+    [Property]
+    public SceneFile StartScene { get; set; }
+
+    public bool Transitioning { get; set; } = false;
+
+    public async void Start()
+    {
+        if (Transitioning) return;
+
+        Sound.Play("button_click");
+        Transitioning = true;
+
+        GameUI.BlackScreen();
+        await GameTask.DelaySeconds(2.5f);
+
+        Scene.LoadFromFile(StartScene.ResourcePath);
+    }
+
+    public async void Quit()
+    {
+        if (Transitioning) return;
+
+        Sound.Play("button_click");
+        Transitioning = true;
+
+        GameUI.BlackScreen();
+        await GameTask.DelaySeconds(2.5f);
+        Game.Close();
+    }
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
 	/// </summary>

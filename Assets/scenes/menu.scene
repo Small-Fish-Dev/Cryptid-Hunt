@@ -135,7 +135,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 7,
+                "Id": 21,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -147,7 +147,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 8,
+                "Id": 22,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -248,33 +248,6 @@
               "Children": []
             },
             {
-              "__guid": "57e1f8ec-b9c8-4723-acbd-7670f49cc446",
-              "Flags": 0,
-              "Name": "Point Light (1)",
-              "Position": "3631.628,8874.674,730.1594",
-              "Tags": "light,light_point",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.PointLight",
-                  "__guid": "d717db4b-59e0-4f51-abaa-3a0becdca2d0",
-                  "Attenuation": 1,
-                  "FogMode": "Enabled",
-                  "FogStrength": 1,
-                  "LightColor": "0.10698,0.03221,0.02687,1",
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "Radius": 400,
-                  "Shadows": true
-                }
-              ],
-              "Children": []
-            },
-            {
               "__guid": "5a40f405-df22-4133-9e43-c0f56ee21566",
               "Flags": 0,
               "Name": "Point Light (1)",
@@ -343,17 +316,6 @@
           "Components": [],
           "Children": [
             {
-              "__guid": "24427b30-665f-4dc4-9166-30945cbd9ae4",
-              "Flags": 0,
-              "Name": "bear trap",
-              "Position": "3782.674,8840.674,631.179",
-              "Rotation": "0.2241439,-0.3535534,0.3535534,0.8365163",
-              "Tags": "trap",
-              "Enabled": true,
-              "__Prefab": "prefabs/bear trap.prefab",
-              "__PrefabVariables": {}
-            },
-            {
               "__guid": "d2eae971-10cc-4b4c-b33e-990f6696bf92",
               "Flags": 0,
               "Name": "bear trap",
@@ -361,27 +323,32 @@
               "Rotation": "0.06982009,0.1867427,0.1617343,0.9664856",
               "Tags": "trap",
               "Enabled": true,
-              "__Prefab": "prefabs/bear trap.prefab",
-              "__PrefabVariables": {}
-            },
-            {
-              "__guid": "996e74c0-42ef-4774-954a-e630257d8375",
-              "Flags": 0,
-              "Name": "ammo",
-              "Position": "3758.486,8883.188,620.1797",
-              "Enabled": true,
-              "__Prefab": "prefabs/ammo.prefab",
-              "__PrefabVariables": {}
-            },
-            {
-              "__guid": "2e35a848-d76e-4510-a7cd-51371b93e490",
-              "Flags": 0,
-              "Name": "ammo",
-              "Position": "3780.669,8861.653,621.1794",
-              "Rotation": "0,0,0.258819,0.9659258",
-              "Enabled": true,
-              "__Prefab": "prefabs/ammo.prefab",
-              "__PrefabVariables": {}
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "70103bd0-6d2f-4c73-95f1-3d21ec97de21",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/items/beartrap.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
             },
             {
               "__guid": "cc825f37-d6df-42d0-9452-cd8cf053486e",
@@ -390,8 +357,32 @@
               "Position": "4490.674,8858.674,643.1794",
               "Rotation": "0,0,0.258819,0.9659258",
               "Enabled": true,
-              "__Prefab": "prefabs/ammo.prefab",
-              "__PrefabVariables": {}
+              "Components": [
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "a4926bcb-e6cd-4bd8-b00c-38c25dab6bbd",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/items/ammo.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                }
+              ],
+              "Children": []
             },
             {
               "__guid": "ed697aae-e3a1-4b36-b742-d39c1db8f50c",
@@ -400,10 +391,84 @@
               "Position": "3993.674,9007.674,619.1794",
               "Rotation": "0,0,0.8386706,-0.5446391",
               "Enabled": true,
-              "__Prefab": "prefabs/chest.prefab",
-              "__PrefabVariables": {
-                "Loot": null
-              }
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "39caf7e2-2ea0-4819-b6c7-2d25c9d0d302",
+                  "AnimationGraph": null,
+                  "BodyGroups": 18446744073709551615,
+                  "BoneMergeTarget": null,
+                  "CreateAttachments": false,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/items/chest.vmdl",
+                  "Morphs": {},
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "PlaybackRate": 1,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Sequence": {
+                    "Name": null,
+                    "Looping": true
+                  },
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": [
+                {
+                  "__guid": "18189957-ac4a-4a53-9905-808dd37feda3",
+                  "Flags": 0,
+                  "Name": "Lock",
+                  "Position": "-0.0869112,13.25889,16.30069",
+                  "Rotation": "0.258819,0,0,0.9659258",
+                  "Enabled": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.ModelRenderer",
+                      "__guid": "437e8992-0d33-4eab-98b7-61b90c76e6ba",
+                      "BodyGroups": 18446744073709551615,
+                      "CreateAttachments": false,
+                      "MaterialGroup": null,
+                      "MaterialOverride": null,
+                      "Model": "models/items/lock.vmdl",
+                      "OnComponentDestroy": null,
+                      "OnComponentDisabled": null,
+                      "OnComponentEnabled": null,
+                      "OnComponentFixedUpdate": null,
+                      "OnComponentStart": null,
+                      "OnComponentUpdate": null,
+                      "RenderOptions": {
+                        "GameLayer": true,
+                        "OverlayLayer": false,
+                        "BloomLayer": false,
+                        "AfterUILayer": false
+                      },
+                      "RenderType": "On",
+                      "Tint": "1,1,1,1"
+                    }
+                  ],
+                  "Children": []
+                }
+              ]
             },
             {
               "__guid": "b59a5040-5e40-49ea-838a-6c123de1da98",
@@ -412,34 +477,120 @@
               "Position": "3993.145,8959.758,621.1795",
               "Rotation": "0.00000005830215,0.0000000123925,-0.8386699,0.5446404",
               "Enabled": true,
-              "__Prefab": "prefabs/medkit.prefab",
-              "__PrefabVariables": {}
+              "Components": [
+                {
+                  "__type": "CryptidHunt.Medkit",
+                  "__guid": "3994c216-5f3e-4d8b-bbdb-a710b1f11b19",
+                  "Amount": 1,
+                  "Description": "Use this after getting hurt once or twice.",
+                  "Icon": "ui/icons/medkiti.png",
+                  "InteractDescription": "Take Medkit",
+                  "Locked": false,
+                  "MaxAmount": 1,
+                  "Model": {
+                    "_type": "component",
+                    "component_id": "debc1137-fb4f-4f07-88cd-71a0d19fe211",
+                    "go": "b59a5040-5e40-49ea-838a-6c123de1da98",
+                    "component_type": "ModelRenderer"
+                  },
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnInteract": null,
+                  "PromptOffset2D": "0,0",
+                  "PromptOffset3D": "0,0,0",
+                  "Title": "Medkit",
+                  "Useable": true,
+                  "UseDescription": "Heal",
+                  "ViewModelOffset": "0,0,0",
+                  "ViewModelRotation": "0,0,0,0",
+                  "Weight": 0.8
+                },
+                {
+                  "__type": "Sandbox.ModelRenderer",
+                  "__guid": "debc1137-fb4f-4f07-88cd-71a0d19fe211",
+                  "BodyGroups": 18446744073709551615,
+                  "CreateAttachments": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/items/medkit.vmdl",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "5f892849-073c-4eb3-82f1-a3d1b17bf19b",
+                  "Center": "-1.461302,0.002810478,4.211773",
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "23.6183,28.06585,8.368631",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
             }
           ]
         },
         {
-          "__guid": "bf8f4b88-9348-4a25-bd2f-ee8c88707328",
+          "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
           "Flags": 0,
-          "Name": "Pages",
-          "Position": "2856.066,5743.891,682.1112",
+          "Name": "page (1)",
+          "Position": "3974.673,8986.383,683.1794",
+          "Rotation": "0,0.5735765,0,0.819152",
           "Enabled": true,
-          "Components": [],
-          "Children": [
+          "Components": [
             {
-              "__guid": "ced049b1-4760-435e-b026-28a37895fdf4",
-              "Flags": 0,
-              "Name": "page (1)",
-              "Position": "1118.607,3242.492,1.068176",
-              "Rotation": "0,0.5735765,0,0.819152",
-              "Enabled": true,
-              "__Prefab": "prefabs/page.prefab",
-              "__PrefabVariables": {
-                "Text": "There's something lurking out there, I can feel its gaze,\nneither man nor animal...\nI'll have to keep the key to the safebox with me at all times,\nI wouldn't want anyone to get ahold of the shotgun.",
-                "Bloody Print": false,
-                "On Interact": null
-              }
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "e5aecde9-962e-4d02-a071-ad62ecb6e361",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/items/page.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
             }
-          ]
+          ],
+          "Children": []
         }
       ]
     },
@@ -486,17 +637,6 @@
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.MainMenu",
-          "__guid": "8a4273d8-d9f5-423c-9742-e309310ca39e",
-          "MyStringValue": "Hello World!",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
-        },
-        {
           "__type": "Sandbox.ScreenPanel",
           "__guid": "f662a7b6-a75b-4017-be42-329c37b2435a",
           "AutoScreenScale": true,
@@ -510,7 +650,54 @@
           "Scale": 1,
           "ScaleStrategy": "ConsistentHeight",
           "TargetCamera": null,
+          "ZIndex": 5
+        },
+        {
+          "__type": "CryptidHunt.MainMenu",
+          "__guid": "bed0e469-dcfd-4c1b-b5ca-773a98044abd",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "StartScene": "scenes/world.scene"
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "3a979254-0c8c-4cab-951d-6c36c35a7412",
+      "Flags": 0,
+      "Name": "GameUI",
+      "Position": "-4593.164,-8886.146,552.6333",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "b11b6788-d743-4eac-8e2f-d10789f713af",
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": null,
           "ZIndex": 100
+        },
+        {
+          "__type": "CryptidHunt.GameUI",
+          "__guid": "9b09dd65-bf0c-465c-b23a-6231b12eec9a",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
