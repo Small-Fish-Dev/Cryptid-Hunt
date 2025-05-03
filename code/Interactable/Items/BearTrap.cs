@@ -8,7 +8,7 @@ public sealed class BearTrap : Item, Component.ITriggerListener
 	{
 		base.OnUpdate();
 
-		if ( Player.Instance.Holding != this ) return;
+		if ( Player.Instance?.Holding != this ) return;
 
 		var trace = Player.Instance.InteractTrace;
 		var position = trace.EndPosition - trace.Normal * 5f;
