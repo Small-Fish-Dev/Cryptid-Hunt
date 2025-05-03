@@ -47,8 +47,8 @@
         if (Camera == null || !_nextRender)
             return;
 
-        Camera.Position = Player.Instance.Camera.WorldPosition;
-        Camera.Rotation = Player.Instance.Camera.WorldRotation;
+        Camera.Position = TargetCamera.WorldPosition;
+        Camera.Rotation = TargetCamera.WorldRotation;
 
         Graphics.RenderToTexture(Camera, _renderTarget);
         _nextRender = 1f / FrameRate;
