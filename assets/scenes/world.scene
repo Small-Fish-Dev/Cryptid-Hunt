@@ -41,7 +41,7 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "-2492.521,-1178.374,-688.4937",
+      "Position": "-2525.038,-1173.688,-688.4934",
       "Rotation": "0,0,0.224951,0.9743701",
       "Tags": "player",
       "Enabled": true,
@@ -2662,8 +2662,8 @@
               "__guid": "3d0574d0-322c-4de3-97b1-16586be22724",
               "Flags": 0,
               "Name": "crowbar",
-              "Position": "2344.829,5681.341,598.1794",
-              "Rotation": "-0.09803686,-0.8604586,-0.0566016,0.4967859",
+              "Position": "2514.674,5714.674,603.1794",
+              "Rotation": "-0.6015918,-0.6229667,-0.3473291,0.3596699",
               "Enabled": true,
               "__Prefab": "prefabs/crowbar.prefab",
               "__PrefabVariables": {}
@@ -6824,7 +6824,13 @@
           "OnComponentUpdate": null,
           "OnInteract": null,
           "PromptOffset2D": "0,0",
-          "PromptOffset3D": "0,0,0"
+          "PromptOffset3D": "0,0,0",
+          "SoundPoint": {
+            "_type": "component",
+            "component_id": "9dbbbf76-26e4-4811-8b4e-79c6f9a62720",
+            "go": "efb0b91a-4b1e-4a00-a899-60c9760a21bc",
+            "component_type": "SoundPointComponent"
+          }
         },
         {
           "__type": "Sandbox.ModelRenderer",
@@ -6906,11 +6912,10 @@
               "__guid": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
               "Computer": {
                 "_type": "component",
-                "component_id": "f68bbf7e-585b-4b00-8f57-1dda67c27eef",
+                "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
                 "go": "280b1949-6f9e-4fa3-b496-799cd970659d",
-                "component_type": "ModelRenderer"
+                "component_type": "Computer"
               },
-              "FrameRate": 15,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -6958,17 +6963,6 @@
           "Viewport": "0,0,1,1",
           "ZFar": 10000,
           "ZNear": 10
-        },
-        {
-          "__type": "Sandbox.AudioListener",
-          "__guid": "b0e6a135-1295-4132-b344-223090c964ea",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "UseCameraDirection": true
         }
       ],
       "Children": []
@@ -7198,6 +7192,64 @@
           "Children": []
         }
       ]
+    },
+    {
+      "__guid": "efb0b91a-4b1e-4a00-a899-60c9760a21bc",
+      "Flags": 0,
+      "Name": "WindowBreak",
+      "Position": "-2440,-1224,-632",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "9dbbbf76-26e4-4811-8b4e-79c6f9a62720",
+          "Distance": 512,
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/misc/glass_break_intro.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
