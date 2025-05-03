@@ -51,12 +51,13 @@ public partial class SceneTransferDoor : Interactable
 		Player.Instance.LockInputs = false;
 		Player.Instance.WorldPosition = SpawnPoint.WorldPosition;
 		Player.Instance.Controller.EyeAngles = SpawnPoint.WorldRotation;
-		await Task.DelaySeconds( 4f );
+
+		await Task.DelaySeconds( 3f );
+		Sound.Play( "piano_intro" );
+		await Task.DelaySeconds( 1f );
 
 		Player.Instance.SetFlashLight( true, true );
 
 		await Task.DelaySeconds( 1f );
-
-		Sound.Play( "piano_intro" );
 	}
 }
