@@ -1,14 +1,22 @@
-@using Sandbox;
+﻿@using Sandbox;
 @using Sandbox.UI;
 @inherits PanelComponent
 @namespace CryptidHunt
 
 <root>
-    <div class="textContainer">
+    <div class="blackScreen" style="opacity: @(Started ? 0 : 0.9)"></div>
+    <div class="textContainer" style="opacity: @(Started ? 0 : 1)">
         <div class="text">WELCOME TO THE NEXTBOT
-PERSONALISED!
-WHAT OR WHO DO YOU FEAR THE MOST?...</div>
+            PERSONALISED!
+            WHAT OR WHO DO YOU FEAR THE MOST?...</div>
+        <div class="smallText">(PRESS MOUSE1 TO FOCUS)</div>
     </div>
+    <TextEntry	@ref=Input 
+    onsubmit=@Submit 
+    onblur=@Close
+    Placeholder=@($"ENTER TO SEND") 
+    MaxLength=@(20)
+    style="opacity: @(Started ? 0 : 1)">
 </root>
 
 @code
@@ -17,6 +25,8 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
     public GameObject TargetCamera { get; set; }
     [Property]
     public Computer Computer { get; set; }
+    private TextEntry Input { get; set; }
+    public bool Started = false;
     public int FrameRate = 30;
 
     public static SceneCamera Camera { get; private set; }
@@ -40,6 +50,8 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
             .WithSize(new Vector2(512f, 512f * 0.6f))
             .WithScreenFormat()
             .Create();
+
+        Open();
     }
 
 
@@ -61,5 +73,34 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         Panel.Style.BackgroundImage = _renderTarget;
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(_renderTarget);
+    private void Submit()
+    {
+        var message = Input.Text.Trim();
+        Input.Text = string.Empty;
+
+        Close();
+
+        if (string.IsNullOrWhiteSpace(message))
+            return;
+
+        Started = true;
+        Computer.Started = true;
+
+        //Player.Local.LastMessage = message;
+        //Player.Local.Talk(null);
+    }
+
+    private void Open()
+    {
+        Input.Focus();
+    }
+
+    private void Close()
+    {
+        Input.Blur();
+        Input.Text = string.Empty;
+        Input.Label.SetCaretPosition(0);
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(Time.Now);
 }

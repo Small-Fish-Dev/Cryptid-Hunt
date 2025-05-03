@@ -11,6 +11,7 @@ public partial class Computer : Interactable
 	public SoundPointComponent SoundPoint { get; set; }
 
 	public bool Playing { get; set; } = true;
+	public bool Started = false;
 	public override string InteractDescription => Playing ? "Quit" : "Play";
 
 	protected override void OnStart()
@@ -22,7 +23,7 @@ public partial class Computer : Interactable
 
 	public async void StopGame()
 	{
-		await Task.DelaySeconds( 30f );
+		await Task.DelaySeconds( 300f ); // TODO MAKE 30
 		SoundPoint.StartSound();
 		await Task.DelaySeconds( 2f );
 		Playing = false;
