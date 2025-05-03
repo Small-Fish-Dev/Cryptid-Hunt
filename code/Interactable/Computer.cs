@@ -9,6 +9,9 @@ public partial class Computer : Interactable
 	public GameObject Camera { get; set; }
 	[Property]
 	public SoundPointComponent SoundPoint { get; set; }
+	public Texture Fear { get; set; }
+	[Property]
+	public NextBot NextBot { get; set; }
 
 	public bool Playing { get; set; } = true;
 	public bool Started = false;
@@ -19,6 +22,14 @@ public partial class Computer : Interactable
 		base.OnStart();
 		StopGame();
 		Camera.Enabled = true;
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		if ( Fear != null )
+		{
+			NextBot.SpriteRenderer.Texture = Fear;
+		}
 	}
 
 	public async void StopGame()

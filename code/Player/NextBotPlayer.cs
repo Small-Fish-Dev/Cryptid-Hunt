@@ -11,6 +11,8 @@ public partial class NextBotPlayer : Component
 	[Property]
 	public GameObject Camera { get; set; }
 
+	public bool Alive { get; set; } = true;
+
 	protected override void OnUpdate()
 	{
 		base.OnUpdate();
@@ -28,5 +30,16 @@ public partial class NextBotPlayer : Component
 			Controller.UseInputControls = false;
 			Controller.WishVelocity = 0f;
 		}
+	}
+
+	public void Die()
+	{
+		if ( Alive ) return;
+		Alive = false;
+	}
+
+	public void Respawn()
+	{
+		Alive = true;
 	}
 }

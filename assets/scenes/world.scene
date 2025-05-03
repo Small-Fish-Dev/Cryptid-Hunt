@@ -6816,6 +6816,12 @@
             "go": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549"
           },
           "Locked": false,
+          "NextBot": {
+            "_type": "component",
+            "component_id": "e038d55b-ce64-413d-829d-a9278ab491cf",
+            "go": "37026854-8dde-420c-abad-bc83990ed9c6",
+            "component_type": "NextBot"
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -6978,6 +6984,72 @@
         {
           "__type": "Sandbox.SpawnPoint",
           "__guid": "fdd2cbd3-dc8f-471c-b4eb-091f24a65d11",
+          "Color": "0.8902,0.31765,0.05098,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "9134be07-d916-48c8-962a-c2be9adee0ef",
+      "Flags": 0,
+      "Name": "NextbotPlayerSpawn (1)",
+      "Position": "-3868,-4536,-928",
+      "Tags": "nextbot_player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "0386b4f6-1ea5-4c60-9da0-ee2674c4f205",
+          "Color": "0.8902,0.31765,0.05098,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "17ee0794-cb20-48fc-bd3e-7de7b0dc55f1",
+      "Flags": 0,
+      "Name": "NextbotPlayerSpawn (2)",
+      "Position": "-3844,-2412,-928",
+      "Tags": "nextbot_player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "d5f30928-346f-4721-925e-b0252b8fd3f7",
+          "Color": "0.8902,0.31765,0.05098,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "dcafc337-072c-4d55-a656-babd3c3e04b6",
+      "Flags": 0,
+      "Name": "NextbotPlayerSpawn (3)",
+      "Position": "-1600,-2376,-928",
+      "Tags": "nextbot_player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "bbcc9591-262f-4921-80ef-cf1247331a60",
           "Color": "0.8902,0.31765,0.05098,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -7247,6 +7319,96 @@
             "Id": "00000000-0000-0000-0000-000000000000"
           },
           "Volume": 1
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "37026854-8dde-420c-abad-bc83990ed9c6",
+      "Flags": 0,
+      "Name": "NextBot",
+      "Position": "-4884,-3820,-924",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpriteRenderer",
+          "__guid": "49fefefc-e882-4dc3-9db7-d6d111546f34",
+          "Additive": false,
+          "CastShadows": true,
+          "Color": "0.31188,0.06176,0.06176,1",
+          "DepthFeather": 0,
+          "FlipHorizontal": false,
+          "FlipVertical": false,
+          "FogStrength": 1,
+          "Lighting": false,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opaque": true,
+          "Pivot": "0.5,0",
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "Size": "100,100",
+          "Texture": "materials/particles/shapes/heart1.vtex"
+        },
+        {
+          "__type": "NextBot",
+          "__guid": "e038d55b-ce64-413d-829d-a9278ab491cf",
+          "Agent": {
+            "_type": "component",
+            "component_id": "9aed6d07-265d-4fa8-be28-d82563f1dc6a",
+            "go": "37026854-8dde-420c-abad-bc83990ed9c6",
+            "component_type": "NavMeshAgent"
+          },
+          "Computer": {
+            "_type": "component",
+            "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
+            "go": "280b1949-6f9e-4fa3-b496-799cd970659d",
+            "component_type": "Computer"
+          },
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "SpriteRenderer": {
+            "_type": "component",
+            "component_id": "49fefefc-e882-4dc3-9db7-d6d111546f34",
+            "go": "37026854-8dde-420c-abad-bc83990ed9c6",
+            "component_type": "SpriteRenderer"
+          },
+          "Target": {
+            "_type": "component",
+            "component_id": "d00bb352-0e6c-46d4-8d96-ad678770e756",
+            "go": "044a017e-9fd7-4736-8194-d5f82d35b77e",
+            "component_type": "NextBotPlayer"
+          }
+        },
+        {
+          "__type": "Sandbox.NavMeshAgent",
+          "__guid": "9aed6d07-265d-4fa8-be28-d82563f1dc6a",
+          "Acceleration": 1000,
+          "AutoTraverseLinks": true,
+          "Height": 64,
+          "MaxSpeed": 300,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Radius": 51.200005,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": false
         }
       ],
       "Children": []

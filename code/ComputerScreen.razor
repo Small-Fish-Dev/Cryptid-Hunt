@@ -85,9 +85,15 @@
 
         Started = true;
         Computer.Started = true;
+        SetFear(message);
 
         //Player.Local.LastMessage = message;
         //Player.Local.Talk(null);
+    }
+
+    async void SetFear( string fear )
+    {
+        Computer.Fear = await Flickr.Get(fear);
     }
 
     private void Open()
