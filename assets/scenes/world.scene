@@ -525,7 +525,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 19,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -537,7 +537,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 20,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -2654,7 +2654,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "7b2f075f-95d3-406e-83bf-469d18d6c459",
+                  "component_id": "a16e6db0-66c3-4fbd-8a2e-85324b2d7fcd",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -2918,7 +2918,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 45,
+                    "Id": 27,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -2936,7 +2936,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 46,
+                    "Id": 28,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -2954,7 +2954,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 47,
+                    "Id": 29,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"

@@ -1,0 +1,22 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "Game Logic",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "gamelogic",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [],
+      "Mounts": null,
+      "IsStandaloneOnly": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/prefabs/game_logic.vmap",
+        "ParentPackage": "fish.cryptid_hunt"
+      }
+    }
+  }
+}
