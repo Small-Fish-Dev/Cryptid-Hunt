@@ -72,6 +72,9 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         _nextRender = 1f / FrameRate;
 
         Panel.Style.BackgroundImage = _renderTarget;
+
+        if ( !Started )
+            Input.Focus();
     }
 
     private void Submit()

@@ -135,7 +135,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 25,
+                "Id": 33,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -147,7 +147,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 26,
+                "Id": 34,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -698,6 +698,64 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "ae2e07e4-f57e-4f21-8aeb-72176762d9ed",
+      "Flags": 0,
+      "Name": "Sound Point",
+      "Position": "-5023.822,-7275.92,1135.35",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SoundPointComponent",
+          "__guid": "fbba9654-1eb7-4a87-ba12-cb4b6c4a33b1",
+          "Distance": 1000,
+          "DistanceAttenuation": true,
+          "DistanceAttenuationOverride": false,
+          "Falloff": [
+            {
+              "x": 0,
+              "y": 1,
+              "in": 3.1415927,
+              "out": -3.1415927,
+              "mode": "Mirrored"
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "in": 0,
+              "out": 0,
+              "mode": "Mirrored"
+            }
+          ],
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Pitch": 1,
+          "PlayOnStart": true,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundEvent": "sounds/ambient/ambient_wind_loop.sound",
+          "SoundOverride": false,
+          "StopOnNew": false,
+          "TargetMixer": {
+            "Name": "unknown",
+            "Id": "00000000-0000-0000-0000-000000000000"
+          },
+          "Volume": 1
         }
       ],
       "Children": []
