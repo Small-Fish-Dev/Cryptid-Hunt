@@ -27,6 +27,9 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 
 	RealTimeUntil _transitionEnd;
 
+	Vector3 _startPosition;
+	Rotation _startRotation;
+
 	public void OnTriggerEnter( Collider other )
 	{
 		if ( !Active || Activated ) return;
@@ -34,6 +37,8 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 
 		Activated = true;
 
+		_startPosition = player.Camera.WorldPosition;
+		_startRotation = player.Camera.WorldRotation;
 		player.LockInputs = LockInputs;
 
 		_transitionEnd = Transition.ValueRange.y;
@@ -53,12 +58,10 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		if ( !Player.Instance.IsValid() || !Player.Instance.Camera.IsValid() ) return;
 
 		var transition = Transition.Evaluate( (float)_transitionEnd.Fraction ) / Transition.ValueRange.y;
-		var startPosition = Player.Instance.WorldTransform.PointToWorld( Player.Instance.CameraOffset );
 		var endPosition = TargetTransform.WorldPosition;
-		var startRotation = Player.Instance.Controller.EyeAngles.ToRotation();
 		var endRotation = TargetTransform.WorldRotation;
 
-		Player.Instance.CameraPosition = Vector3.Lerp( startPosition, endPosition, transition );
-		Player.Instance.CameraRotation = Rotation.Slerp( startRotation, endRotation, transition );
+		Player.Instance.CameraPosition = Vector3.Lerp( _startPosition, endPosition, transition );
+		Player.Instance.CameraRotation = Rotation.Slerp( _startRotation, endRotation, transition );
 	}
 }
