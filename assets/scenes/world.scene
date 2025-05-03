@@ -6249,6 +6249,7 @@
             "_type": "gameobject",
             "go": "a2bec710-65e6-4a00-8924-d3c92c7d6091"
           },
+          "HeartbeatSound": "sounds/misc/heart_beat.sound",
           "ModelRenderer": {
             "_type": "component",
             "component_id": "9fbaa53f-0acb-46a6-a4fb-f785e552ba11",

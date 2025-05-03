@@ -1,11 +1,4 @@
-﻿using Sandbox;
-using Sandbox.UI;
-using Sandbox.VR;
-using System;
-using System.IO;
-using static Sandbox.SceneModel;
-
-namespace CryptidHunt;
+﻿namespace CryptidHunt;
 
 public enum PolewikState
 {
@@ -40,6 +33,10 @@ public partial class Polewik : Component
 	public float AttackAfterStalking => 8f;
 	public float AttackAfterStalling => 90f;
 	public float WaitUntilNextAttack => 20f;
+
+	[Property]
+	public SoundEvent HeartbeatSound { get; set; }
+	public SoundHandle Heartbeart { get; set; }
 
 	public Vector3? FirstInterceptPoint()
 	{
@@ -96,10 +93,12 @@ public partial class Polewik : Component
 			{
 				NavigateTo( NearestNode.WorldPosition );
 				CurrentPathId = PatrolPath.IndexOf( NearestNode );
+				Heartbeart?.Stop();
 			}
 
 			if ( value == PolewikState.Pain )
 			{
+				Heartbeart?.Stop();
 				_lastAttack = 0f;
 
 				Sound.Play( "pain", WorldPosition );
@@ -117,6 +116,7 @@ public partial class Polewik : Component
 
 			if ( value == PolewikState.Yell )
 			{
+				Heartbeart?.Stop();
 				GameTask.RunInThreadAsync( async () =>
 				{
 					await GameTask.DelaySeconds( 0.5f );
@@ -131,6 +131,7 @@ public partial class Polewik : Component
 
 			if ( value == PolewikState.Fleeing )
 			{
+				Heartbeart?.Stop();
 				_lastAttack = 0f;
 
 				TargetPosition = NearestNode.WorldPosition;
@@ -145,17 +146,21 @@ public partial class Polewik : Component
 			}
 
 			if ( value == PolewikState.Stalking )
+			{
 				_startedStalking = 0f;
+				Heartbeart ??= Sound.Play( HeartbeatSound );
+			}
 
-			if ( value == PolewikState.Following )
+			if ( value == PolewikState.Following || value == PolewikState.AttackPersistent )
+			{
+				Heartbeart ??= Sound.Play( HeartbeatSound );
 				_startedFollowing = 0f;
-
-			if ( value == PolewikState.AttackPersistent )
-				_startedFollowing = 0f;
+			}
 
 			if ( value == PolewikState.Attacking )
 			{
 				_lastAttack = 0f;
+				Heartbeart ??= Sound.Play( HeartbeatSound );
 				ModelRenderer.Set( "leap", true );
 
 				Sound.Play( "jump", WorldPosition );
@@ -173,6 +178,7 @@ public partial class Polewik : Component
 
 			if ( value == PolewikState.Jumpscare )
 			{
+				Heartbeart?.Stop();
 				_lastAttack = 0f;
 
 				Agent.Stop();
