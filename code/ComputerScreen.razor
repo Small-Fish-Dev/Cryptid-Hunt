@@ -1,0 +1,60 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+
+</root>
+
+@code
+{
+    [Property]
+    public GameObject TargetCamera { get; set; }
+    [Property]
+    public ModelRenderer Computer { get; set; }
+    [Property]
+    public int FrameRate = 30;
+
+    public static SceneCamera Camera { get; private set; }
+    private static Texture _renderTarget;
+    private RealTimeUntil _nextRender;
+
+    protected override void OnStart()
+    {
+        base.OnStart();
+
+        Camera?.Dispose();
+        Camera = new()
+            {
+                World = Scene?.SceneWorld,
+                Size = 512,
+                ZFar = 1000f,
+                BackgroundColor = new Color32(43, 43, 37).ToColor()
+            };
+
+        _renderTarget = Texture.CreateRenderTarget()
+            .WithSize(new Vector2(512f, 512f * 0.6f))
+            .WithScreenFormat()
+            .Create();
+    }
+
+
+    protected override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        if (Camera == null || !_nextRender)
+            return;
+
+        Camera.Position = Player.Instance.Camera.WorldPosition;
+        Camera.Rotation = Player.Instance.Camera.WorldRotation;
+
+        Graphics.RenderToTexture(Camera, _renderTarget);
+        _nextRender = 1f / FrameRate;
+
+        Panel.Style.BackgroundImage = _renderTarget;
+    }
+
+    protected override int BuildHash() => System.HashCode.Combine(_renderTarget);
+}

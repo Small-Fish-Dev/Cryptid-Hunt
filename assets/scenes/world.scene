@@ -2642,7 +2642,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "43598fd4-8741-499b-8917-002a22a5290c",
+                  "component_id": "83ba789f-9563-4063-8ef3-7a18684b118f",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -2980,7 +2980,6 @@
               "Name": "page (1)",
               "Position": "-5524.282,-7015.217,-1109.769",
               "Rotation": "0.3099855,-0.428265,0.563327,0.6349493",
-              "Enabled": true,
               "__Prefab": "prefabs/page.prefab",
               "__PrefabVariables": {
                 "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
@@ -6797,6 +6796,127 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "280b1949-6f9e-4fa3-b496-799cd970659d",
+      "Flags": 0,
+      "Name": "Computer",
+      "Position": "-2514.265,-1121.41,-655.1213",
+      "Rotation": "0,0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.ModelRenderer",
+          "__guid": "f68bbf7e-585b-4b00-8f57-1dda67c27eef",
+          "BodyGroups": 18446744073709551615,
+          "CreateAttachments": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/bedroom/computer/computer.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "bd01783c-0c17-4441-af15-e658fe62fe56",
+          "Flags": 0,
+          "Name": "Screen",
+          "Position": "-4.095337,-2.691162,14.90131",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.WorldPanel",
+              "__guid": "992a4183-3124-49cd-84b1-99625243047f",
+              "HorizontalAlign": "Center",
+              "InteractionRange": 1000,
+              "LookAtCamera": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "PanelSize": "500,500",
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderScale": 1,
+              "VerticalAlign": "Center"
+            },
+            {
+              "__type": "CryptidHunt.ComputerScreen",
+              "__guid": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
+              "Computer": {
+                "_type": "component",
+                "component_id": "f68bbf7e-585b-4b00-8f57-1dda67c27eef",
+                "go": "280b1949-6f9e-4fa3-b496-799cd970659d",
+                "component_type": "ModelRenderer"
+              },
+              "FrameRate": 15,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "TargetCamera": null
+            }
+          ],
+          "Children": []
+        }
+      ]
+    },
+    {
+      "__guid": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549",
+      "Flags": 0,
+      "Name": "Camera",
+      "Position": "-2516.944,-1142.622,-640.3",
+      "Rotation": "0,0,0.7071068,0.7071068",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.CameraComponent",
+          "__guid": "103de64a-e500-4501-b202-3f7009ceff9c",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 61.92,
+          "FovAxis": "Horizontal",
+          "IsMainCamera": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
         }
       ],
       "Children": []

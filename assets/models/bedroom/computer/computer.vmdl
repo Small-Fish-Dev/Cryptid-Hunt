@@ -19,7 +19,7 @@
 							},
 							{
 								from = "screen.vmat"
-								to = "materials/effects/black.vmat"
+								to = "materials/black_matte.vmat"
 							},
 						]
 						use_global_default = false
