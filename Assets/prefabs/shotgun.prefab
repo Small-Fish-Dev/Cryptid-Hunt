@@ -53,6 +53,10 @@
         "__type": "CryptidHunt.Shotgun",
         "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
         "Amount": 1,
+        "BulletHolePrefab": {
+          "_type": "gameobject",
+          "prefab": "prefabs/bullet_hole.prefab"
+        },
         "Description": "A way to fight back. Needs ammo.",
         "Icon": "ui/icons/shotguni.png",
         "InteractDescription": "Take",
@@ -70,6 +74,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "OnInteract": null,
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Shotgun",
@@ -77,7 +82,7 @@
         "UseDescription": "Equip",
         "ViewModelOffset": "29.16001,-12.52,-21.56",
         "ViewModelRotation": "-0.06387671,-0.005548911,0.7453108,0.663627",
-        "Weight": 1
+        "Weight": 3.8
       }
     ],
     "Children": [],

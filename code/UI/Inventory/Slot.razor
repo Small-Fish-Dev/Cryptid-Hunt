@@ -7,7 +7,7 @@
     {
         <div class="weight">
             <div class="icon"></div>
-            <div class="text">@Item.Weight KG</div>
+            <div class="text">@(Item.Weight * Item.Amount) KG</div>
         </div>
         <div class="amount">
             <div class="text">@Item.Amount/@Item.MaxAmount</div>

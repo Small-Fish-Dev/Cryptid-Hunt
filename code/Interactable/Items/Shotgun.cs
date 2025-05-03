@@ -2,12 +2,46 @@ namespace CryptidHunt;
 
 public sealed class Shotgun : Item
 {
+	[Property]
+	public GameObject BulletHolePrefab { get; set; }
+
+	Dictionary<GameObject, TimeUntil> _bulletHoles = new();
+
 	public override void Attack( Player player )
 	{
-		if ( player.InteractingWith is LockedDoor )
+		for ( int i = 0; i < 10; i++ )
 		{
-			player.InteractingWith.Interact( player );
-			return;
+			var rotation = player.Camera.WorldRotation;
+			rotation *= Rotation.FromYaw( Game.Random.Float( -5f, 5f ) );
+			rotation *= Rotation.FromPitch( Game.Random.Float( -5f, 5f ) );
+
+			var shootTrace = Scene.Trace.Ray( player.Camera.WorldPosition, player.Camera.WorldPosition + rotation.Forward * 1000f )
+				.Radius( 5f )
+				.IgnoreGameObjectHierarchy( player.GameObject )
+				.Run();
+
+			if ( !shootTrace.Hit ) continue;
+
+			var bullet = BulletHolePrefab.Clone();
+			bullet.WorldPosition = shootTrace.EndPosition - shootTrace.Normal * 5f;
+			var bulletRotation = Rotation.LookAt( -shootTrace.Normal );
+			bulletRotation *= Rotation.FromAxis( bulletRotation.Right, Game.Random.Float( -90f, 90f ) );
+			bullet.WorldRotation = bulletRotation;
+
+			_bulletHoles.Add( bullet, 30f );
+		}
+	}
+
+	TimeUntil _nextBulletCullCheck;
+
+	protected override void OnFixedUpdate()
+	{
+		if ( !_nextBulletCullCheck ) return;
+
+		foreach ( var bullet in _bulletHoles.ToList() )
+		{
+			if ( !bullet.Value ) continue;
+			bullet.Key.Destroy();
 		}
 	}
 }

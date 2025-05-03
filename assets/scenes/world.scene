@@ -41,7 +41,7 @@
       "__guid": "97208dd9-d2b0-4730-abdd-99204fb80ab7",
       "Flags": 0,
       "Name": "Player",
-      "Position": "184,7120,32",
+      "Position": "368,7048,32",
       "Rotation": "0,0,0.224951,0.9743701",
       "Tags": "player",
       "Enabled": true,
@@ -2654,7 +2654,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "3bc83fd6-afbd-46b6-92bc-400df3eab87e",
+                  "component_id": "b010485d-4677-4ee9-98ac-e8d81fc0c433",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -7572,6 +7572,36 @@
           ]
         }
       ]
+    },
+    {
+      "__guid": "3bbf68a5-8522-46d1-add2-db91bb15aa59",
+      "Flags": 0,
+      "Name": "shotgun",
+      "Position": "426.5597,7120.206,0.000136137",
+      "Rotation": "-0.000001698732,-0.000001102686,0.9587128,-0.2843758",
+      "Enabled": true,
+      "__Prefab": "prefabs/shotgun.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "52294bcf-d378-4834-967b-a9c20feb6fe7",
+      "Flags": 0,
+      "Name": "ammo",
+      "Position": "469.1404,7157.446,1.000576",
+      "Rotation": "-0.000001698732,-0.000001102686,0.9587128,-0.2843758",
+      "Enabled": true,
+      "__Prefab": "prefabs/ammo.prefab",
+      "__PrefabVariables": {}
+    },
+    {
+      "__guid": "1df3e49e-8039-4a7f-833b-d96903986b2b",
+      "Flags": 0,
+      "Name": "ammo (1)",
+      "Position": "494.3411,7106.35,1.000396",
+      "Rotation": "-0.00000005960464,-0.000001817942,0.7204137,-0.6935445",
+      "Enabled": true,
+      "__Prefab": "prefabs/ammo.prefab",
+      "__PrefabVariables": {}
     }
   ],
   "SceneProperties": {
