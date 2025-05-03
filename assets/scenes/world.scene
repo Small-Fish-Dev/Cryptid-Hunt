@@ -378,6 +378,17 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "Rate": 1
+            },
+            {
+              "__type": "Sandbox.AudioListener",
+              "__guid": "cf6ac791-fccf-4970-8444-6fa1f5a34190",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "UseCameraDirection": true
             }
           ],
           "Children": [
@@ -2642,7 +2653,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "83ba789f-9563-4063-8ef3-7a18684b118f",
+                  "component_id": "6a0407d9-f351-4b13-948b-be5b5aadc515",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -6954,7 +6965,7 @@
           "ClearFlags": "All",
           "FieldOfView": 61.92,
           "FovAxis": "Horizontal",
-          "IsMainCamera": true,
+          "IsMainCamera": false,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -6963,12 +6974,12 @@
           "OnComponentUpdate": null,
           "Orthographic": false,
           "OrthographicHeight": 1204,
-          "Priority": 1,
+          "Priority": 2,
           "RenderExcludeTags": "",
           "RenderTags": "",
           "TargetEye": "None",
           "Viewport": "0,0,1,1",
-          "ZFar": 10000,
+          "ZFar": 100,
           "ZNear": 10
         }
       ],
