@@ -22,7 +22,7 @@ public partial class Computer : Interactable
 
 	public async void StopGame()
 	{
-		await Task.DelaySeconds( 3f );
+		await Task.DelaySeconds( 30f );
 		SoundPoint.StartSound();
 		await Task.DelaySeconds( 2f );
 		Playing = false;
