@@ -135,7 +135,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 31,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -147,7 +147,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 32,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -484,7 +484,35 @@
       "Name": "UI",
       "Position": "-4593.164,-8886.146,552.6333",
       "Enabled": true,
-      "Components": [],
+      "Components": [
+        {
+          "__type": "Sandbox.MainMenu",
+          "__guid": "8a4273d8-d9f5-423c-9742-e309310ca39e",
+          "MyStringValue": "Hello World!",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.ScreenPanel",
+          "__guid": "f662a7b6-a75b-4017-be42-329c37b2435a",
+          "AutoScreenScale": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Opacity": 1,
+          "Scale": 1,
+          "ScaleStrategy": "ConsistentHeight",
+          "TargetCamera": null,
+          "ZIndex": 100
+        }
+      ],
       "Children": []
     }
   ],

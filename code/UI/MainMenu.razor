@@ -1,0 +1,19 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    <div class="Logo"></div>
+    <button class="Button">Start Game</button>
+    <button class="Button">Credits</button>
+    <button class="Button">Quit</button>
+</root>
+
+@code
+{
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
