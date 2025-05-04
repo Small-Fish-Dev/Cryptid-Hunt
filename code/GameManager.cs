@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace CryptidHunt;
+﻿namespace CryptidHunt;
 
 public partial class GameManager : Component
 {
@@ -98,8 +96,18 @@ public partial class GameManager : Component
 
 		foreach ( var obj in EndingDisable )
 			obj.Enabled = false;
+	}
 
-		await Task.DelaySeconds( 30f );
+	public async void Credits()
+	{
+		Sound.Play( "creepy_radio" );
+		Sound.Play( "slam_flute" );
+
+		await Task.DelaySeconds( 6f );
+
+		GameUI.BlackScreen( 16f );
+
+		await Task.DelaySeconds( 8f );
 
 		Scene.LoadFromFile( MainMenu.ResourcePath );
 	}
