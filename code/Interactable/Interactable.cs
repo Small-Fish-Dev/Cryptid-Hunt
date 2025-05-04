@@ -18,6 +18,7 @@ public class Interactable : Component
 	public virtual void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;
+		if ( Locked ) return;
 
 		//player.Inventory?.Insert( Item, Amount );
 		Sound.Play( "pickup", WorldPosition );
