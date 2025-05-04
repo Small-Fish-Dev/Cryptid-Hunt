@@ -5,7 +5,6 @@
       "__guid": "fe8856ef-36ec-4333-934c-6a2cc9a68e02",
       "Flags": 0,
       "Name": "Map",
-      "Position": "-4069.601,-8834.878,1024",
       "Enabled": true,
       "Components": [
         {
@@ -42,7 +41,7 @@
       "__guid": "1f38b14e-010a-4b51-b71a-8b432ec7fef0",
       "Flags": 0,
       "Name": "Skybox",
-      "Position": "4570.663,6526.707,669.1204",
+      "Position": "8640.264,15361.58,-354.8796",
       "Tags": "skybox",
       "Enabled": true,
       "Components": [
@@ -135,7 +134,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 33,
+                "Id": 9,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -147,7 +146,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 34,
+                "Id": 10,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -178,7 +177,7 @@
       "__guid": "36c3998e-3d94-43df-885d-c8224bde3914",
       "Flags": 0,
       "Name": "Volumetric Fog",
-      "Position": "-4032,-8832,480",
+      "Position": "37.60107,2.87793,-544",
       "Enabled": true,
       "Components": [
         {
@@ -204,7 +203,7 @@
       "__guid": "3f9b6a30-1db2-4adf-a82e-274f8e9ef58c",
       "Flags": 0,
       "Name": "NewMap",
-      "Position": "149.3263,149.3264,-211.1794",
+      "Position": "4218.927,8984.204,-1235.179",
       "Rotation": "0,0,1,-0.00000004371139",
       "Enabled": true,
       "Components": [],
@@ -598,7 +597,7 @@
       "__guid": "4305a699-c1a1-454c-bccc-7545a6eab900",
       "Flags": 0,
       "Name": "Camera",
-      "Position": "-4608,-8832,544",
+      "Position": "-538.3989,2.87793,-480",
       "Tags": "maincamera",
       "Enabled": true,
       "Components": [
@@ -633,7 +632,7 @@
       "__guid": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
       "Flags": 0,
       "Name": "UI",
-      "Position": "-4593.164,-8886.146,552.6333",
+      "Position": "-523.563,-51.26855,-471.3667",
       "Enabled": true,
       "Components": [
         {
@@ -670,7 +669,7 @@
       "__guid": "3a979254-0c8c-4cab-951d-6c36c35a7412",
       "Flags": 0,
       "Name": "GameUI",
-      "Position": "-4593.164,-8886.146,552.6333",
+      "Position": "-523.563,-51.26855,-471.3667",
       "Enabled": true,
       "Components": [
         {
@@ -698,6 +697,17 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.Credits",
+          "__guid": "abbd63ba-ab52-4080-a200-683cbf06803b",
+          "MyStringValue": "Hello World!",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": []
@@ -706,7 +716,7 @@
       "__guid": "ae2e07e4-f57e-4f21-8aeb-72176762d9ed",
       "Flags": 0,
       "Name": "Sound Point",
-      "Position": "-5023.822,-7275.92,1135.35",
+      "Position": "-954.2207,1558.958,111.35",
       "Enabled": true,
       "Components": [
         {
