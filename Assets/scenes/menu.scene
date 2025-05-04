@@ -134,7 +134,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 9,
+                "Id": 23,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -146,7 +146,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 10,
+                "Id": 24,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -654,6 +654,12 @@
         {
           "__type": "CryptidHunt.MainMenu",
           "__guid": "bed0e469-dcfd-4c1b-b5ca-773a98044abd",
+          "Credits": {
+            "_type": "component",
+            "component_id": "1a42d2b8-ead7-47e0-b128-9c0aa889c39a",
+            "go": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
+            "component_type": "Credits"
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -661,47 +667,17 @@
           "OnComponentStart": null,
           "OnComponentUpdate": null,
           "StartScene": "scenes/world.scene"
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "3a979254-0c8c-4cab-951d-6c36c35a7412",
-      "Flags": 0,
-      "Name": "GameUI",
-      "Position": "-523.563,-51.26855,-471.3667",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.ScreenPanel",
-          "__guid": "b11b6788-d743-4eac-8e2f-d10789f713af",
-          "AutoScreenScale": true,
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Opacity": 1,
-          "Scale": 1,
-          "ScaleStrategy": "ConsistentHeight",
-          "TargetCamera": null,
-          "ZIndex": 100
         },
         {
-          "__type": "CryptidHunt.GameUI",
-          "__guid": "9b09dd65-bf0c-465c-b23a-6231b12eec9a",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null
-        },
-        {
-          "__type": "Sandbox.Credits",
-          "__guid": "abbd63ba-ab52-4080-a200-683cbf06803b",
-          "MyStringValue": "Hello World!",
+          "__type": "CryptidHunt.Credits",
+          "__guid": "1a42d2b8-ead7-47e0-b128-9c0aa889c39a",
+          "__enabled": false,
+          "MainMenu": {
+            "_type": "component",
+            "component_id": "bed0e469-dcfd-4c1b-b5ca-773a98044abd",
+            "go": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
+            "component_type": "MainMenu"
+          },
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,

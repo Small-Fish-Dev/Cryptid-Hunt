@@ -1,0 +1,48 @@
+﻿@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+    <div class="container"><div class="tweet"></div></div>
+    <div class="containerWide">
+        <div class="names">
+            <label class="gameTitle">CREDITS</label>
+            <label class="subTitle">Game by SmallFish</label>
+            <label class="nameCredit"> ubre: Lead</label>
+            <label class="nameCredit"> Wheatley: Level Design (Map)</label>
+            <label class="nameCredit"> rndtrash: Flickr API (Computer Sequence)</label>
+            <label class="nameCredit"> ceitine: Gameplay Programmer</label>
+            <label class="nameCredit"> Luke: Modeller (Items)</label>
+            <label class="nameCredit"> Grodbert: Modeller (Creatures)</label>
+        </div>
+        <div class="modelViewContainer">
+            <div class="previousModelPreview">
+                <label class="PreviousModelPreviewTitle">❮</label>
+            </div>
+            <div class="modelPreviewer"></div>
+            <div class="nextModelPreview">
+                <label class="NextModelPreviewTitle">❯</label>
+            </div>
+        </div>
+        <button class="mainMenuButton" onclick=@ToMainMenu>[Main Menu]</button>
+    </div>
+    <div class="container"><div class="forest"></div></div>
+</root>
+
+@code
+{
+    [Property] public MainMenu MainMenu { get; set; }
+
+    public void ToMainMenu()
+    {
+        Sound.Play("button_click");
+        MainMenu.Enabled = true;
+        Enabled = false;
+    }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
