@@ -24,6 +24,9 @@ public partial class GameManager : Component
 	[Property]
 	public List<GameObject> EndingDisable { get; set; }
 
+	[Property]
+	public Credits CreditScreen { get; set; }
+
 	SoundHandle _windSoundHandle;
 	public bool ReadInitialNote { get; set; } = false;
 
@@ -105,11 +108,11 @@ public partial class GameManager : Component
 
 		await Task.DelaySeconds( 6f );
 
-		GameUI.BlackScreen( 16f );
-
-		await Task.DelaySeconds( 8f );
-
-		Scene.LoadFromFile( MainMenu.ResourcePath );
+		GameUI.BlackScreen( 6f );
+		await Task.DelaySeconds( 3f );
+		Player.Instance.LockInputs = true;
+		await Task.DelaySeconds( 3f );
+		CreditScreen.Enabled = true;
 	}
 
 	[ConCmd( "end_game" )]

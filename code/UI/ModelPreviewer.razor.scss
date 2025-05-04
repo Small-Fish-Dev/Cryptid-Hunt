@@ -9,6 +9,7 @@ ModelPreviewer {
     text-align: center;
     color: white;
     cursor: default;
+    z-index: 2;
 
     .modelPreviewButton {
         width: 20%;

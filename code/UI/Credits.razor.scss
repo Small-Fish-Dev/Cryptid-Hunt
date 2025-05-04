@@ -11,6 +11,16 @@ Credits {
 	align-content: stretch;
 	cursor: default;
 	pointer-events: all;
+	z-index: 3;
+	transition: all 2.5s ease-in;
+
+	&:intro {
+		opacity: 0;
+	}
+
+	&:outro {
+		opacity: 0;
+	}
 
 	.container {
 		width: 30%;
