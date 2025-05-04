@@ -39,8 +39,16 @@ public sealed class Shotgun : Item
 
 			_bulletHoles.Add( bullet, 30f );
 
-			if ( !shootTrace.GameObject.IsValid() || !shootTrace.GameObject.Components.TryGet<Polewik>( out var polewik, FindMode.EverythingInSelfAndDescendants ) )
-				continue;
+			if ( !shootTrace.GameObject.IsValid() ) continue;
+
+			bullet.SetParent( shootTrace.GameObject );
+
+			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out var polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
+
+			var closestBone = polewik.GameObject.Children.OrderBy( x => x.WorldPosition.Distance( bullet.WorldPosition ) ).FirstOrDefault();
+
+			if ( closestBone.IsValid() )
+				bullet.SetParent( closestBone );
 
 			polewik.HP -= 100;
 		}

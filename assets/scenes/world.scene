@@ -6548,7 +6548,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
-          "Scale": "91.34318,50,115.1828",
+          "Scale": "91.34318,76.32001,115.1828",
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
