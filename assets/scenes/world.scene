@@ -6310,6 +6310,10 @@
             "go": "3071f095-4b8e-4855-87fa-27523d662708",
             "component_type": "NavMeshAgent"
           },
+          "BloodParticle": {
+            "_type": "gameobject",
+            "prefab": "prefabs/particles/big_blood.prefab"
+          },
           "Camera": {
             "_type": "gameobject",
             "go": "a2bec710-65e6-4a00-8924-d3c92c7d6091"
@@ -6472,7 +6476,11 @@
               "_type": "gameobject",
               "go": "ca48beec-dc77-442a-b1e3-d6dd3b4023b1"
             }
-          ]
+          ],
+          "SpitPrefab": {
+            "_type": "gameobject",
+            "prefab": "prefabs/particles/spit.prefab"
+          }
         },
         {
           "__type": "Sandbox.NavMeshAgent",

@@ -22,6 +22,12 @@ public partial class Polewik : Component
 	[Property]
 	public GameObject Camera { get; set; }
 
+	[Property]
+	public GameObject SpitPrefab { get; set; }
+
+	[Property]
+	public GameObject BloodParticle { get; set; }
+
 	public bool Alive { get; set; } = true;
 
 	public float JumpscareDistance => 120f;
@@ -260,6 +266,9 @@ public partial class Polewik : Component
 			{
 				if ( damage >= 10f && CurrentState != PolewikState.Pain && CurrentState != PolewikState.Fleeing )
 					CurrentState = PolewikState.Pain;
+
+				if ( damage > 0f )
+					BloodParticle.Clone( WorldPosition + Vector3.Up * 30f, WorldRotation );
 			}
 		}
 	}
