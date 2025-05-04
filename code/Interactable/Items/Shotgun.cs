@@ -18,6 +18,8 @@ public sealed class Shotgun : Item
 		if ( firstAmmo.Amount <= 0 )
 			firstAmmo.DestroyGameObject();
 
+		var damageDealt = 0f;
+		Polewik polewik = null;
 		for ( int i = 0; i < 10; i++ )
 		{
 			var rotation = player.Camera.WorldRotation;
@@ -43,15 +45,18 @@ public sealed class Shotgun : Item
 
 			bullet.SetParent( shootTrace.GameObject );
 
-			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out var polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
+			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
 
 			var closestBone = polewik.GameObject.Children.OrderBy( x => x.WorldPosition.Distance( bullet.WorldPosition ) ).FirstOrDefault();
 
 			if ( closestBone.IsValid() )
 				bullet.SetParent( closestBone );
 
-			polewik.HP -= 100;
+			damageDealt += 1.5f;
 		}
+
+		if ( polewik != null )
+			polewik.HP -= damageDealt;
 
 		Player.Instance.NextInteraction = 1f;
 		Player.Instance.AddCameraShake( 0.3f, 20f );
