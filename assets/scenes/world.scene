@@ -2320,6 +2320,33 @@
               "Children": []
             },
             {
+              "__guid": "e1510118-d38e-4968-b063-a57804ae67f4",
+              "Flags": 0,
+              "Name": "light_point (2)",
+              "Position": "-2702.326,-1379.826,-366.8206",
+              "Rotation": "0,0,0.7071068,-0.7071068",
+              "Tags": "light_point,light",
+              "Components": [
+                {
+                  "__type": "Sandbox.PointLight",
+                  "__guid": "2e5c8522-9b07-40d5-995d-eb90fdde7b06",
+                  "Attenuation": 1,
+                  "FogMode": "Disabled",
+                  "FogStrength": 1,
+                  "LightColor": "0.04811,0.05116,0.03284,1",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Radius": 324.64005,
+                  "Shadows": false
+                }
+              ],
+              "Children": []
+            },
+            {
               "__guid": "d49633f9-f628-45fd-835d-6f3fc36567d3",
               "Flags": 0,
               "Name": "Spot Light",
@@ -2653,7 +2680,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "e1122c48-8b8b-4cd7-a70d-3f968fae4af5",
+                  "component_id": "c4edb10b-81d2-45f6-b5ad-eaaf5ad09a53",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -2995,7 +3022,66 @@
               "__PrefabVariables": {
                 "Text": "Great job on your first assignment,\nwe have sent you the payment, that should cover the window;\nSpeaking of, your next assignment starts now.\n\nLook outside your window",
                 "Bloody Print": false,
-                "On Interact": null
+                "On Interact": {
+                  "__version": 9,
+                  "__guid": "2b352cd9-75c0-4b86-a7f4-70406979de0e",
+                  "__changeId": 10,
+                  "UserData": {
+                    "Title": "On Interact",
+                    "ReferencedComponentTypes": []
+                  },
+                  "Variables": [],
+                  "Nodes": [
+                    {
+                      "Id": 0,
+                      "Type": "input"
+                    },
+                    {
+                      "Id": 2,
+                      "Type": "scene.ref",
+                      "UserData": {
+                        "Position": "24,96"
+                      }
+                    },
+                    {
+                      "Id": 3,
+                      "Type": "property",
+                      "Properties": {
+                        "_name": "Enabled",
+                        "_type": "Sandbox.GameObject"
+                      },
+                      "UserData": {
+                        "Position": "264,96"
+                      }
+                    }
+                  ],
+                  "Links": [
+                    {
+                      "SrcId": 0,
+                      "SrcName": "_signal",
+                      "DstId": 3,
+                      "DstName": "_signal"
+                    },
+                    {
+                      "SrcId": 2,
+                      "SrcName": "_result",
+                      "DstId": 3,
+                      "DstName": "_target"
+                    },
+                    {
+                      "Id": 4,
+                      "Value": true,
+                      "DstId": 3,
+                      "DstName": "_value"
+                    }
+                  ],
+                  "Defaults": {
+                    "$2.gameobject": {
+                      "_type": "gameobject",
+                      "go": "e9b916f2-e17d-4a8b-86d1-861ca7189165"
+                    }
+                  }
+                }
               }
             },
             {
@@ -6929,7 +7015,7 @@
             "_type": "gameobject",
             "go": "afafca3c-2a1c-4a81-8599-02e46b6c8364"
           },
-          "EndingObjects": [
+          "EndingDisable": [
             {
               "_type": "gameobject",
               "go": "af040528-467a-4a33-86e3-68e5fc4dd054"
@@ -6940,13 +7026,32 @@
             },
             {
               "_type": "gameobject",
+              "go": "0a4bfd17-f280-4ebf-a5af-4a662e4cb875"
+            },
+            {
+              "_type": "gameobject",
+              "go": "36c3998e-3d94-43df-885d-c8224bde3914"
+            }
+          ],
+          "EndingEnable": [
+            {
+              "_type": "gameobject",
               "go": "1f73cbb3-31c2-469d-8bef-636bb044f172"
             },
             {
               "_type": "gameobject",
               "go": "a56779a6-2b64-4164-9517-1fee14d2f617"
+            },
+            {
+              "_type": "gameobject",
+              "go": "e1510118-d38e-4968-b063-a57804ae67f4"
+            },
+            {
+              "_type": "gameobject",
+              "go": "2cbba9c9-18f7-488f-9dfa-e3f192f9b22d"
             }
           ],
+          "MainMenu": "scenes/menu.scene",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -7641,7 +7746,7 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "cdbf410b-e6a2-424b-8c9a-fd8edd5f5357",
-              "Center": "-3.533972,-1.606318,14.86068",
+              "Center": "-6.897886,-1.606318,14.86068",
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -7654,7 +7759,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
-              "Scale": "12.5868,25.4092,16.42472",
+              "Scale": "5.858971,25.4092,16.42472",
               "Static": false,
               "Surface": null,
               "SurfaceVelocity": "0,0,0"
@@ -7751,9 +7856,10 @@
       "__guid": "a56779a6-2b64-4164-9517-1fee14d2f617",
       "Flags": 0,
       "Name": "Cardboard",
-      "Position": "-2439.997,-1225.216,-621.3182",
+      "Position": "-2439.749,-1227,-616.5299",
       "Rotation": "-0.4868865,-0.4868864,0.5127782,0.5127782",
-      "Scale": "2.2,2.2,2.2",
+      "Scale": "2.5,2.5,2.5",
+      "Enabled": true,
       "Components": [
         {
           "__type": "Sandbox.ModelCollider",
@@ -7819,145 +7925,212 @@
       "Children": []
     },
     {
-      "__guid": "12ebf2e7-3c36-4692-92ce-322336d9e408",
+      "__guid": "e9b916f2-e17d-4a8b-86d1-861ca7189165",
       "Flags": 0,
-      "Name": "GreenLight",
-      "Position": "-2337.115,-1288.001,-588",
-      "Rotation": "0,0,0.9659258,0.2588192",
-      "Tags": "light_spot,light",
+      "Name": "BrainStuff",
+      "Position": "-2402.489,-1007.104,-710.0861",
       "Enabled": true,
       "Components": [
         {
-          "__type": "Sandbox.SpotLight",
-          "__guid": "c20bd92f-e59f-4a7a-b1cf-91f98fc9167c",
-          "Attenuation": 0.07,
-          "ConeInner": 15,
-          "ConeOuter": 45,
-          "Cookie": null,
-          "FogMode": "Enabled",
-          "FogStrength": 2,
-          "LightColor": "0,1,0.16667,1",
+          "__type": "CryptidHunt.GlowingLight",
+          "__guid": "58c68be8-3a20-446b-be91-05eea4e6d3b9",
+          "Color": "0,1,0.16667,1",
+          "Lights": [
+            {
+              "_type": "component",
+              "component_id": "c20bd92f-e59f-4a7a-b1cf-91f98fc9167c",
+              "go": "12ebf2e7-3c36-4692-92ce-322336d9e408",
+              "component_type": "SpotLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "80be6d55-0660-4446-bd82-8476ab2f64bb",
+              "go": "c669d122-8ad1-4c6d-a391-789f812b0417",
+              "component_type": "SpotLight"
+            },
+            {
+              "_type": "component",
+              "component_id": "89fba85b-15db-4115-a866-082f5958e86b",
+              "go": "f0261a6d-03d8-4f78-a8b6-7b326696d510",
+              "component_type": "SpotLight"
+            }
+          ],
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 785.43994,
-          "Shadows": true
+          "OnComponentUpdate": null
         }
       ],
-      "Children": []
-    },
-    {
-      "__guid": "c669d122-8ad1-4c6d-a391-789f812b0417",
-      "Flags": 0,
-      "Name": "GreenLight (1)",
-      "Position": "-2256.013,-1187.039,-545.8862",
-      "Rotation": "-0.1260786,-0.03378263,0.9576624,-0.2566046",
-      "Tags": "light_spot,light",
-      "Enabled": true,
-      "Components": [
+      "Children": [
         {
-          "__type": "Sandbox.SpotLight",
-          "__guid": "80be6d55-0660-4446-bd82-8476ab2f64bb",
-          "Attenuation": 0.07,
-          "ConeInner": 15,
-          "ConeOuter": 45,
-          "Cookie": null,
-          "FogMode": "Enabled",
-          "FogStrength": 1,
-          "LightColor": "0,1,0.16667,1",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Radius": 785.43994,
-          "Shadows": true
+          "__guid": "12ebf2e7-3c36-4692-92ce-322336d9e408",
+          "Flags": 0,
+          "Name": "GreenLight",
+          "Position": "65.37378,-280.8969,122.0861",
+          "Rotation": "0,0,0.9659258,0.2588192",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "c20bd92f-e59f-4a7a-b1cf-91f98fc9167c",
+              "Attenuation": 0.07,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 2,
+              "LightColor": "0,1,0.16667,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 785.43994,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "c669d122-8ad1-4c6d-a391-789f812b0417",
+          "Flags": 0,
+          "Name": "GreenLight (1)",
+          "Position": "146.4758,-179.9348,164.1998",
+          "Rotation": "-0.1260786,-0.03378263,0.9576624,-0.2566046",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "80be6d55-0660-4446-bd82-8476ab2f64bb",
+              "Attenuation": 0.07,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Enabled",
+              "FogStrength": 1,
+              "LightColor": "0,1,0.16667,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 785.43994,
+              "Shadows": true
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "f0261a6d-03d8-4f78-a8b6-7b326696d510",
+          "Flags": 0,
+          "Name": "GreenLight (2)",
+          "Position": "-24.81421,-135.6449,39.28168",
+          "Rotation": "-0.113039,0.06526311,0.4957228,-0.8586164",
+          "Tags": "light_spot,light",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SpotLight",
+              "__guid": "89fba85b-15db-4115-a866-082f5958e86b",
+              "Attenuation": 0.07,
+              "ConeInner": 15,
+              "ConeOuter": 45,
+              "Cookie": null,
+              "FogMode": "Disabled",
+              "FogStrength": 1,
+              "LightColor": "0,1,0.16667,1",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Radius": 785.43994,
+              "Shadows": false
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "b5a2dc80-c7d6-4892-a6e4-784f7a526b41",
+          "Flags": 0,
+          "Name": "brain",
+          "Position": "153.3767,-262.0278,30.08618",
+          "Rotation": "0,0,0.9914449,0.1305261",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "9aa34682-53fe-493c-88c5-e19f281f391a",
+              "AnimationGraph": null,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": null,
+              "CreateAttachments": false,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/brain/brain.vmdl",
+              "Morphs": {},
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Parameters": {
+                "bools": {},
+                "ints": {},
+                "floats": {},
+                "vectors": {},
+                "rotations": {}
+              },
+              "PlaybackRate": 1,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Sequence": {
+                "Name": null,
+                "Looping": true
+              },
+              "Tint": "1,1,1,1",
+              "UseAnimGraph": true
+            }
+          ],
+          "Children": []
         }
-      ],
-      "Children": []
+      ]
     },
     {
-      "__guid": "f0261a6d-03d8-4f78-a8b6-7b326696d510",
+      "__guid": "2cbba9c9-18f7-488f-9dfa-e3f192f9b22d",
       "Flags": 0,
-      "Name": "GreenLight (2)",
-      "Position": "-2427.303,-1142.749,-670.8044",
-      "Rotation": "-0.113039,0.06526311,0.4957228,-0.8586164",
-      "Tags": "light_spot,light",
-      "Enabled": true,
+      "Name": "Volumetric Fog",
+      "Position": "-2338,-1245,-607",
       "Components": [
         {
-          "__type": "Sandbox.SpotLight",
-          "__guid": "89fba85b-15db-4115-a866-082f5958e86b",
-          "Attenuation": 0.07,
-          "ConeInner": 15,
-          "ConeOuter": 45,
-          "Cookie": null,
-          "FogMode": "Disabled",
-          "FogStrength": 1,
-          "LightColor": "0,1,0.16667,1",
+          "__type": "Sandbox.VolumetricFogVolume",
+          "__guid": "240afd2a-d327-4f8b-82e2-403aeb9f85b5",
+          "Bounds": {
+            "Mins": "-500,-500,-500",
+            "Maxs": "500,500,500"
+          },
+          "FalloffExponent": 1,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Radius": 785.43994,
-          "Shadows": false
-        }
-      ],
-      "Children": []
-    },
-    {
-      "__guid": "b5a2dc80-c7d6-4892-a6e4-784f7a526b41",
-      "Flags": 0,
-      "Name": "brain",
-      "Position": "-2249.112,-1269.132,-679.9999",
-      "Rotation": "0,0,0.9914449,0.1305261",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SkinnedModelRenderer",
-          "__guid": "9aa34682-53fe-493c-88c5-e19f281f391a",
-          "AnimationGraph": null,
-          "BodyGroups": 18446744073709551615,
-          "BoneMergeTarget": null,
-          "CreateAttachments": false,
-          "CreateBoneObjects": false,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
-          "Model": "models/brain/brain.vmdl",
-          "Morphs": {},
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "Parameters": {
-            "bools": {},
-            "ints": {},
-            "floats": {},
-            "vectors": {},
-            "rotations": {}
-          },
-          "PlaybackRate": 1,
-          "RenderOptions": {
-            "GameLayer": true,
-            "OverlayLayer": false,
-            "BloomLayer": false,
-            "AfterUILayer": false
-          },
-          "RenderType": "On",
-          "Sequence": {
-            "Name": null,
-            "Looping": true
-          },
-          "Tint": "1,1,1,1",
-          "UseAnimGraph": true
+          "Strength": 5
         }
       ],
       "Children": []
