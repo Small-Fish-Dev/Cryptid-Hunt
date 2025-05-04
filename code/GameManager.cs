@@ -7,6 +7,9 @@ public partial class GameManager : Component
 	public static GameManager Instance { get; private set; }
 
 	[Property]
+	public SceneFile MainMenu { get; set; }
+
+	[Property]
 	public SoundEvent WindSound { get; set; }
 
 	[Property]
@@ -19,7 +22,9 @@ public partial class GameManager : Component
 	public GameObject Screen { get; set; }
 
 	[Property]
-	public List<GameObject> EndingObjects { get; set; }
+	public List<GameObject> EndingEnable { get; set; }
+	[Property]
+	public List<GameObject> EndingDisable { get; set; }
 
 	SoundHandle _windSoundHandle;
 	public bool ReadInitialNote { get; set; } = false;
@@ -80,7 +85,7 @@ public partial class GameManager : Component
 		}
 	}
 
-	public void EndGame()
+	public async void EndGame()
 	{
 		Player.Instance.WorldTransform = EndGameRespawn.WorldTransform;
 		Player.Instance.Controller.EyeAngles = EndGameRespawn.WorldRotation;
@@ -88,9 +93,20 @@ public partial class GameManager : Component
 		Screen.Enabled = false;
 		Computer.Enabled = false;
 
-		foreach ( var obj in EndingObjects )
-		{
-			obj.Enabled = !obj.Enabled;
-		}
+		foreach ( var obj in EndingEnable )
+			obj.Enabled = true;
+
+		foreach ( var obj in EndingDisable )
+			obj.Enabled = false;
+
+		await Task.DelaySeconds( 30f );
+
+		Scene.LoadFromFile( MainMenu.ResourcePath );
+	}
+
+	[ConCmd( "end_game" )]
+	public static void EndGameCommand()
+	{
+		GameManager.Instance.EndGame();
 	}
 }
