@@ -22,7 +22,7 @@ public partial class Polewik : Component
 	[Property]
 	public GameObject Camera { get; set; }
 
-	public float Health { get; set; } = 100f;
+	public bool Alive { get; set; } = true;
 
 	public float JumpscareDistance => 120f;
 	public float DetectDistance => 1400f;
@@ -245,6 +245,8 @@ public partial class Polewik : Component
 		get => _hp;
 		set
 		{
+			if ( !Alive ) return;
+
 			var damage = _hp - value;
 			_hp = value;
 
@@ -252,10 +254,13 @@ public partial class Polewik : Component
 			{
 				RagdollModel();
 				Sound.Play( "pain", WorldPosition );
+				Alive = false;
 			}
-
-			if ( damage >= 10f && CurrentState != PolewikState.Pain && CurrentState != PolewikState.Fleeing )
-				CurrentState = PolewikState.Pain;
+			else
+			{
+				if ( damage >= 10f && CurrentState != PolewikState.Pain && CurrentState != PolewikState.Fleeing )
+					CurrentState = PolewikState.Pain;
+			}
 		}
 	}
 
@@ -278,6 +283,8 @@ public partial class Polewik : Component
 
 	protected override void OnFixedUpdate()
 	{
+		if ( HP <= 0f ) return;
+
 		ComputeAnimation();
 		Agent.MaxSpeed = CurrentSpeed;
 
@@ -454,8 +461,7 @@ public partial class Polewik : Component
 		ragdoll.Renderer = ModelRenderer;
 		ragdoll.Model = ModelRenderer.Model;
 
+		Agent.Velocity = Vector3.Zero;
 		Agent.Enabled = false;
 	}
-
-
 }

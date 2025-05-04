@@ -38,6 +38,11 @@ public sealed class Shotgun : Item
 			bullet.WorldRotation = bulletRotation;
 
 			_bulletHoles.Add( bullet, 30f );
+
+			if ( !shootTrace.GameObject.IsValid() || !shootTrace.GameObject.Components.TryGet<Polewik>( out var polewik, FindMode.EverythingInSelfAndDescendants ) )
+				continue;
+
+			polewik.HP -= 100;
 		}
 
 		Player.Instance.NextInteraction = 1f;

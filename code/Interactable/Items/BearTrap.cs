@@ -35,7 +35,7 @@ public sealed class BearTrap : Item, Component.ITriggerListener
 		if ( !Active ) return;
 		if ( !other.Components.TryGet<Polewik>( out var polewik, FindMode.EnabledInSelf ) ) return;
 
-		polewik.Health -= 10f;
+		polewik.HP -= 10f;
 		Sound.Play( "beartrap_trigger", WorldPosition );
 		GameObject.Destroy();
 	}
