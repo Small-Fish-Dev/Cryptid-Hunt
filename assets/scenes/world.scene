@@ -2680,7 +2680,7 @@
               "__PrefabVariables": {
                 "Loot": {
                   "_type": "component",
-                  "component_id": "c4edb10b-81d2-45f6-b5ad-eaaf5ad09a53",
+                  "component_id": "671d13e1-495e-48a7-a3b8-839a0e014e0c",
                   "go": "0893d84b-9dc3-42f7-9fbb-bc1b38703716",
                   "component_type": "Shotgun"
                 }
@@ -3025,7 +3025,7 @@
                 "On Interact": {
                   "__version": 9,
                   "__guid": "2b352cd9-75c0-4b86-a7f4-70406979de0e",
-                  "__changeId": 10,
+                  "__changeId": 31,
                   "UserData": {
                     "Title": "On Interact",
                     "ReferencedComponentTypes": []
@@ -3053,6 +3053,24 @@
                       "UserData": {
                         "Position": "264,96"
                       }
+                    },
+                    {
+                      "Id": 6,
+                      "Type": "scene.ref",
+                      "UserData": {
+                        "Position": "-36,264"
+                      }
+                    },
+                    {
+                      "Id": 10,
+                      "Type": "property",
+                      "Properties": {
+                        "_name": "Locked",
+                        "_type": "CryptidHunt.Interactable"
+                      },
+                      "UserData": {
+                        "Position": "168,312"
+                      }
                     }
                   ],
                   "Links": [
@@ -3069,9 +3087,27 @@
                       "DstName": "_target"
                     },
                     {
-                      "Id": 4,
+                      "Id": 11,
                       "Value": true,
                       "DstId": 3,
+                      "DstName": "_value"
+                    },
+                    {
+                      "SrcId": 0,
+                      "SrcName": "_signal",
+                      "DstId": 10,
+                      "DstName": "_signal"
+                    },
+                    {
+                      "SrcId": 6,
+                      "SrcName": "_result",
+                      "DstId": 10,
+                      "DstName": "_target"
+                    },
+                    {
+                      "Id": 12,
+                      "Value": false,
+                      "DstId": 10,
                       "DstName": "_value"
                     }
                   ],
@@ -3079,6 +3115,12 @@
                     "$2.gameobject": {
                       "_type": "gameobject",
                       "go": "e9b916f2-e17d-4a8b-86d1-861ca7189165"
+                    },
+                    "$6.component": {
+                      "_type": "component",
+                      "component_id": "af7e570f-5f50-4843-bb32-e6ed6b5e3ecb",
+                      "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
+                      "component_type": "Interactable"
                     }
                   }
                 }
@@ -7859,7 +7901,7 @@
       "Position": "-2439.749,-1227,-616.5299",
       "Rotation": "-0.4868865,-0.4868864,0.5127782,0.5127782",
       "Scale": "2.5,2.5,2.5",
-      "Enabled": true,
+      "Tags": "board",
       "Components": [
         {
           "__type": "Sandbox.ModelCollider",
@@ -7920,6 +7962,189 @@
           },
           "Tint": "1,1,1,1",
           "UseAnimGraph": true
+        },
+        {
+          "__type": "CryptidHunt.Interactable",
+          "__guid": "af7e570f-5f50-4843-bb32-e6ed6b5e3ecb",
+          "InteractDescription": "Open",
+          "Locked": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnInteract": {
+            "__version": 9,
+            "__guid": "28eb301d-3a0a-4be8-9d5b-83319c26a596",
+            "__changeId": 47,
+            "UserData": {
+              "Title": "On Interact",
+              "ReferencedComponentTypes": []
+            },
+            "Variables": [],
+            "Nodes": [
+              {
+                "Id": 0,
+                "Type": "input"
+              },
+              {
+                "Id": 2,
+                "Type": "scene.ref",
+                "UserData": {
+                  "Position": "-12,204"
+                }
+              },
+              {
+                "Id": 3,
+                "Type": "call",
+                "Properties": {
+                  "_isStatic": false,
+                  "_name": "Destroy",
+                  "_type": "Sandbox.Component"
+                },
+                "UserData": {
+                  "Position": "720,204"
+                }
+              },
+              {
+                "Id": 8,
+                "Type": "scene.ref",
+                "UserData": {
+                  "Position": "60,84"
+                }
+              },
+              {
+                "Id": 9,
+                "Type": "property",
+                "Properties": {
+                  "_name": "Enabled",
+                  "_type": "Sandbox.Component"
+                },
+                "UserData": {
+                  "Position": "228,132"
+                }
+              },
+              {
+                "Id": 17,
+                "Type": "scene.ref",
+                "UserData": {
+                  "Position": "60,336"
+                }
+              },
+              {
+                "Id": 18,
+                "Type": "property",
+                "Properties": {
+                  "_name": "Enabled",
+                  "_type": "Sandbox.Component"
+                },
+                "UserData": {
+                  "Position": "264,360"
+                }
+              }
+            ],
+            "Links": [
+              {
+                "SrcId": 18,
+                "SrcName": "_signal",
+                "DstId": 3,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 2,
+                "SrcName": "_result",
+                "DstId": 3,
+                "DstName": "_target"
+              },
+              {
+                "SrcId": 0,
+                "SrcName": "_signal",
+                "DstId": 9,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 8,
+                "SrcName": "_result",
+                "DstId": 9,
+                "DstName": "_target"
+              },
+              {
+                "Id": 19,
+                "Value": true,
+                "DstId": 9,
+                "DstName": "_value"
+              },
+              {
+                "SrcId": 9,
+                "SrcName": "_signal",
+                "DstId": 18,
+                "DstName": "_signal"
+              },
+              {
+                "SrcId": 17,
+                "SrcName": "_result",
+                "DstId": 18,
+                "DstName": "_target"
+              },
+              {
+                "Id": 20,
+                "Value": false,
+                "DstId": 18,
+                "DstName": "_value"
+              }
+            ],
+            "Defaults": {
+              "$2.component": {
+                "_type": "component",
+                "component_id": "af7e570f-5f50-4843-bb32-e6ed6b5e3ecb",
+                "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
+                "component_type": "Interactable"
+              },
+              "$8.component": {
+                "_type": "component",
+                "component_id": "6b7d2012-4bf9-469e-afd5-b0084d3552ac",
+                "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
+                "component_type": "ModelPhysics"
+              },
+              "$17.component": {
+                "_type": "component",
+                "component_id": "9b57ca52-7065-4a8d-ab39-d9b52b540d7c",
+                "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
+                "component_type": "ModelCollider"
+              }
+            }
+          },
+          "PromptOffset2D": "0,0",
+          "PromptOffset3D": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.ModelPhysics",
+          "__guid": "6b7d2012-4bf9-469e-afd5-b0084d3552ac",
+          "__enabled": false,
+          "Locking": {
+            "X": false,
+            "Y": false,
+            "Z": false,
+            "Pitch": false,
+            "Yaw": false,
+            "Roll": false
+          },
+          "Model": "models/bedroom/cardboard/cardboard.vmdl",
+          "MotionEnabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "8b5801fa-27f5-46c0-b920-a62d1344db11",
+            "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "RigidbodyFlags": 0
         }
       ],
       "Children": []
@@ -7929,7 +8154,6 @@
       "Flags": 0,
       "Name": "BrainStuff",
       "Position": "-2402.489,-1007.104,-710.0861",
-      "Enabled": true,
       "Components": [
         {
           "__type": "CryptidHunt.GlowingLight",
@@ -8061,8 +8285,8 @@
           "__guid": "b5a2dc80-c7d6-4892-a6e4-784f7a526b41",
           "Flags": 0,
           "Name": "brain",
-          "Position": "153.3767,-262.0278,30.08618",
-          "Rotation": "0,0,0.9914449,0.1305261",
+          "Position": "118.489,-216.896,30.08618",
+          "Rotation": "0,0,1,-0.00000008940697",
           "Enabled": true,
           "Components": [
             {
