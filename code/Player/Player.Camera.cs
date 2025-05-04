@@ -1,4 +1,5 @@
 ﻿using Sandbox.Services;
+using static Sandbox.Services.Inventory;
 
 namespace CryptidHunt;
 
@@ -16,11 +17,15 @@ public partial class Player
 
 	float _walkBob;
 	Vector3 _cameraOffset;
+	public Vector3 CameraOffsetShake;
 
 	public void SetupCamera()
 	{
 		if ( Holding.IsValid() )
+		{
 			Holding.Model.Enabled = !LockInputs;
+			Holding.LocalPosition = Holding.ViewModelOffset - CameraOffsetShake / 2f;
+		}
 
 		var speed = Controller.Velocity.WithZ( 0f ).Length / 220f;
 
@@ -42,6 +47,8 @@ public partial class Player
 			CameraOffset = _cameraOffset + Vector3.Left * sideOffset + Vector3.Up * upOffset;
 		else
 			CameraOffset = Vector3.Left * sideOffset + Vector3.Up * upOffset;
+
+		CameraOffsetShake = Vector3.Left * sideOffset + Vector3.Up * upOffset;
 
 		if ( !LockInputs )
 		{
