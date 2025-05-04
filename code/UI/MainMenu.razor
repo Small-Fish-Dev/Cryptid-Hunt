@@ -6,7 +6,7 @@
 <root>
     <div class="Logo"></div>
     <button class="Button" onclick=@Start >Start Game</button>
-    <button class="Button">Credits</button>
+    <button class="Button" onclick=@ToCredits>Credits</button>
     <button class="Button" onclick=@Quit>Quit</button>
 </root>
 
@@ -40,6 +40,15 @@
         GameUI.BlackScreen();
         await GameTask.DelaySeconds(2.5f);
         Game.Close();
+    }
+
+    [Property] public Credits Credits { get; set; }
+
+    public void ToCredits()
+    {
+        Sound.Play("button_click");
+        Credits.Enabled = true;
+        Enabled = false;
     }
 	/// <summary>
 	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
