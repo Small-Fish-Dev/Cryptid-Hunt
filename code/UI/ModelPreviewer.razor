@@ -4,7 +4,7 @@
 
 <root>
     <button class="modelPreviewButton" onclick=@Previous>❮</button>
-    <div class="modelPreviewerer">
+    <div class="modelPreviewerer" style="background-image: url(@CurrentPreview.Path)">
         <div class="modelInfo">@CurrentPreview.Name - @CurrentPreview.Author</div>
     </div>
     <button class="modelPreviewButton" onclick=@Next>❯</button>
@@ -23,6 +23,20 @@
 
         public static ModelPreview[] All => new ModelPreview[]
         {
+            new ModelPreview { Name = "Polewik", Path = "ui/icons/polewiki.png", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
+            new ModelPreview { Name = "Ammo Pack", Path = "ui/icons/ammoi.png", Author = "Luke", Rotation = new Angles( 20, 45, 0 ), Offset = new Vector3( 0, 0, -15 ), Zoom = 1.5f },
+            new ModelPreview { Name = "Bear Trap", Path = "ui/icons/beartrapi.png", Author = "Luke", Rotation = new Angles( 35, 45, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 1.5f },
+            new ModelPreview { Name = "Locked Chest", Path = "ui/icons/chesti.png", Author = "Luke", Rotation = new Angles( 0, -60, -20 ), Offset = new Vector3( 0, 0, -15 ), Zoom = 1.2f },
+            new ModelPreview { Name = "Crowbar", Path = "ui/icons/crowbari.png", Author = "Luke", Rotation = new Angles( 15, 45, 60 ), Offset = new Vector3( 0, -30, 10 ), Zoom = 2f },
+            new ModelPreview { Name = "Key", Path = "ui/icons/keyi.png", Author = "Luke", Rotation = new Angles( 0, 30, 180 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 4f },
+            new ModelPreview { Name = "Lock", Path = "ui/icons/locki.png", Author = "Luke", Rotation = new Angles( 0, 235, 0 ), Offset = new Vector3( 0, 0, 15 ), Zoom = 5f },
+            new ModelPreview { Name = "Medkit", Path = "ui/icons/medkiti.png", Author = "Luke", Rotation = new Angles( -20, 225, 0 ), Offset = new Vector3( 0, 0, -10 ), Zoom = 1.8f },
+            new ModelPreview { Name = "Bed", Path = "ui/icons/bedi.png", Author = "Luke", Rotation = new Angles( -20, 0, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
+            new ModelPreview { Name = "Page", Path = "ui/icons/pagei.png", Author = "Luke", Rotation = new Angles( 60, 20, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 2.6f },
+            new ModelPreview { Name = "Sign", Path = "ui/icons/signi.png", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f },
+            new ModelPreview { Name = "Palos Verdes Brain", Path = "ui/icons/braini.png", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
+
+            /*
             new ModelPreview { Name = "Polewik", Path = "models/polewik/polewik.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
             new ModelPreview { Name = "Ammo Pack", Path = "models/items/ammo.vmdl", Author = "Luke", Rotation = new Angles( 20, 45, 0 ), Offset = new Vector3( 0, 0, -15 ), Zoom = 1.5f },
             new ModelPreview { Name = "Bear Trap", Path = "models/items/beartrap.vmdl", Author = "Luke", Rotation = new Angles( 35, 45, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 1.5f },
@@ -35,16 +49,7 @@
             new ModelPreview { Name = "Page", Path = "models/items/page.vmdl", Author = "Luke", Rotation = new Angles( 60, 20, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 2.6f },
             new ModelPreview { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f },
             new ModelPreview { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
-            /*
-            ["models/placeholders/placeholder_key.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_beartrap.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_crowbar.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_shotgun.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_medkit.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_page.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_ammo.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_locked_door.vmdl"] = "Placeholder (ubre)",
-            ["models/placeholders/placeholder_locked_chest.vmdl"] = "Placeholder (ubre)"*/
+            */
         };
 
     }
