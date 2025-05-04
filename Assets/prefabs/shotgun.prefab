@@ -60,6 +60,12 @@
         "Description": "A way to fight back. Needs ammo.",
         "Icon": "ui/icons/shotguni.png",
         "InteractDescription": "Take",
+        "Light": {
+          "_type": "component",
+          "component_id": "bc4e9549-9e50-4e33-befd-c38b8a363bfc",
+          "go": "be501c0f-93dc-4efe-9d41-1247c27b7e2c",
+          "component_type": "PointLight"
+        },
         "Locked": false,
         "MaxAmount": 1,
         "Model": {
@@ -85,7 +91,36 @@
         "Weight": 3.8
       }
     ],
-    "Children": [],
+    "Children": [
+      {
+        "__guid": "be501c0f-93dc-4efe-9d41-1247c27b7e2c",
+        "Flags": 0,
+        "Name": "Point Light",
+        "Position": "5.646256,-44.05298,16.78481",
+        "Tags": "light_point,light",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.PointLight",
+            "__guid": "bc4e9549-9e50-4e33-befd-c38b8a363bfc",
+            "__enabled": false,
+            "Attenuation": 4.48,
+            "FogMode": "Disabled",
+            "FogStrength": 1,
+            "LightColor": "1.83829,2,0.61395,1",
+            "OnComponentDestroy": null,
+            "OnComponentDisabled": null,
+            "OnComponentEnabled": null,
+            "OnComponentFixedUpdate": null,
+            "OnComponentStart": null,
+            "OnComponentUpdate": null,
+            "Radius": 1000,
+            "Shadows": true
+          }
+        ],
+        "Children": []
+      }
+    ],
     "__variables": [],
     "__properties": {
       "NetworkInterpolation": true,

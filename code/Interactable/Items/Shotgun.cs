@@ -4,6 +4,8 @@ public sealed class Shotgun : Item
 {
 	[Property]
 	public GameObject BulletHolePrefab { get; set; }
+	[Property]
+	public Light Light { get; set; }
 
 	Dictionary<GameObject, TimeUntil> _bulletHoles = new();
 
@@ -39,6 +41,15 @@ public sealed class Shotgun : Item
 		}
 
 		Player.Instance.NextInteraction = 1f;
+		Player.Instance.AddCameraShake( 0.3f, 20f );
+		Sound.Play( "shotgun_fire", player.Camera.WorldPosition );
+
+		Task.RunInThreadAsync( async () =>
+		{
+			Light.Enabled = true;
+			await Task.DelaySeconds( 0.05f );
+			Light.Enabled = false;
+		} );
 	}
 
 	TimeUntil _nextBulletCullCheck;
