@@ -134,7 +134,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 23,
+                "Id": 29,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -146,7 +146,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 24,
+                "Id": 30,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -678,6 +678,7 @@
             "go": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
             "component_type": "MainMenu"
           },
+          "MainMenuFile": null,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,

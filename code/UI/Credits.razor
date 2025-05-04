@@ -25,12 +25,22 @@
 @code
 {
     [Property] public MainMenu MainMenu { get; set; }
+    [Property] public SceneFile MainMenuFile { get; set; }
 
     public void ToMainMenu()
     {
         Sound.Play("button_click");
-        MainMenu.Enabled = true;
-        Enabled = false;
+
+        if ( MainMenuFile != null )
+        {
+            Scene.LoadFromFile(MainMenuFile.ResourcePath);
+            Enabled = false;
+        }
+        else
+        {
+            MainMenu.Enabled = true;
+            Enabled = false;
+        }
     }
 
 	/// <summary>
