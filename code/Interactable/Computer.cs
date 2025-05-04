@@ -6,6 +6,9 @@ namespace CryptidHunt;
 public partial class Computer : Interactable
 {
 	[Property]
+	public GameObject Light { get; set; }
+
+	[Property]
 	public GameObject Camera { get; set; }
 	[Property]
 	public SoundPointComponent SoundPoint { get; set; }
@@ -51,6 +54,7 @@ public partial class Computer : Interactable
 			Playing = false;
 			Camera.Enabled = false;
 			Player.Instance.LockInputs = false;
+			Light.Enabled = true;
 		}
 	}
 
@@ -70,6 +74,7 @@ public partial class Computer : Interactable
 		computer.Playing = false;
 		computer.Started = true;
 		computer.Camera.Enabled = false;
+		computer.Light.Enabled = true;
 		Player.Instance.LockInputs = false;
 
 		var screen = Game.ActiveScene.Components.Get<ComputerScreen>( FindMode.EverythingInSelfAndDescendants );
