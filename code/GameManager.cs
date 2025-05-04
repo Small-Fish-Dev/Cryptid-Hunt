@@ -86,13 +86,17 @@ public partial class GameManager : Component
 		}
 	}
 
-	public async void EndGame()
+	public void EndGame()
 	{
 		Player.Instance.WorldTransform = EndGameRespawn.WorldTransform;
 		Player.Instance.Controller.EyeAngles = EndGameRespawn.WorldRotation;
 		Player.Instance.ChangeHolding( null );
 		Screen.Enabled = false;
 		Computer.Enabled = false;
+
+		var transferDoor = Scene.Components.Get<SceneTransferDoor>();
+		if ( transferDoor.IsValid() )
+			transferDoor.Enabled = false;
 
 		foreach ( var obj in EndingEnable )
 			obj.Enabled = true;
