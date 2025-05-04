@@ -6920,12 +6920,44 @@
         {
           "__type": "CryptidHunt.GameManager",
           "__guid": "75113e0e-754a-411f-a4f1-25aac6834322",
+          "Computer": {
+            "_type": "component",
+            "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
+            "go": "280b1949-6f9e-4fa3-b496-799cd970659d",
+            "component_type": "Computer"
+          },
+          "EndGameRespawn": {
+            "_type": "gameobject",
+            "go": "afafca3c-2a1c-4a81-8599-02e46b6c8364"
+          },
+          "EndingObjects": [
+            {
+              "_type": "gameobject",
+              "go": "af040528-467a-4a33-86e3-68e5fc4dd054"
+            },
+            {
+              "_type": "gameobject",
+              "go": "baeec906-84bf-47f0-9f44-a91105ca0eda"
+            },
+            {
+              "_type": "gameobject",
+              "go": "1f73cbb3-31c2-469d-8bef-636bb044f172"
+            },
+            {
+              "_type": "gameobject",
+              "go": "a56779a6-2b64-4164-9517-1fee14d2f617"
+            }
+          ],
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "Screen": {
+            "_type": "gameobject",
+            "go": "bd01783c-0c17-4441-af15-e658fe62fe56"
+          },
           "WindSound": "sounds/ambient/ambient_wind_loop.sound"
         }
       ],
@@ -6942,6 +6974,28 @@
         {
           "__type": "Sandbox.SpawnPoint",
           "__guid": "1ad6e299-0074-4b82-8bac-1bf765ad9cd6",
+          "Color": "0.8902,0.31765,0.05098,1",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "afafca3c-2a1c-4a81-8599-02e46b6c8364",
+      "Flags": 0,
+      "Name": "Spawn (1)",
+      "Position": "-2508.992,-1180.396,-691.2721",
+      "Rotation": "0,0,0.8290376,0.5591928",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SpawnPoint",
+          "__guid": "30ef3e01-e63b-44d0-9e3a-38f584532e6d",
           "Color": "0.8902,0.31765,0.05098,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -7689,6 +7743,77 @@
       "Enabled": true,
       "__Prefab": "prefabs/ammo.prefab",
       "__PrefabVariables": {}
+    },
+    {
+      "__guid": "a56779a6-2b64-4164-9517-1fee14d2f617",
+      "Flags": 0,
+      "Name": "Cardboard",
+      "Position": "-2439.997,-1225.216,-621.3182",
+      "Rotation": "-0.4868865,-0.4868864,0.5127782,0.5127782",
+      "Scale": "2.2,2.2,2.2",
+      "Components": [
+        {
+          "__type": "Sandbox.ModelCollider",
+          "__guid": "9b57ca52-7065-4a8d-ab39-d9b52b540d7c",
+          "Friction": null,
+          "IsTrigger": false,
+          "Model": "models/bedroom/cardboard/cardboard.vmdl",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "OnObjectTriggerEnter": null,
+          "OnObjectTriggerExit": null,
+          "OnTriggerEnter": null,
+          "OnTriggerExit": null,
+          "Static": false,
+          "Surface": null,
+          "SurfaceVelocity": "0,0,0"
+        },
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "8b5801fa-27f5-46c0-b920-a62d1344db11",
+          "AnimationGraph": null,
+          "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
+          "CreateAttachments": false,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/bedroom/cardboard/cardboard.vmdl",
+          "Morphs": {},
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
+          "RenderOptions": {
+            "GameLayer": true,
+            "OverlayLayer": false,
+            "BloomLayer": false,
+            "AfterUILayer": false
+          },
+          "RenderType": "On",
+          "Sequence": {
+            "Name": null,
+            "Looping": true
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
+        }
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {

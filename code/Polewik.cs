@@ -465,7 +465,7 @@ public partial class Polewik : Component
 			CurrentPathId = (CurrentPathId + 1) % PatrolPath.Count;
 	}
 
-	public void RagdollModel()
+	public async void RagdollModel()
 	{
 		if ( !ModelRenderer.IsValid() ) return;
 
@@ -475,5 +475,11 @@ public partial class Polewik : Component
 
 		Agent.Velocity = Vector3.Zero;
 		Agent.Enabled = false;
+
+		await Task.DelayRealtimeSeconds( 5f );
+		GameUI.BlackScreen();
+		await Task.DelayRealtimeSeconds( 2.5f );
+
+		GameManager.Instance.EndGame();
 	}
 }

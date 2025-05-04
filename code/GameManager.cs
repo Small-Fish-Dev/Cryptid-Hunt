@@ -8,6 +8,19 @@ public partial class GameManager : Component
 
 	[Property]
 	public SoundEvent WindSound { get; set; }
+
+	[Property]
+	public GameObject EndGameRespawn { get; set; }
+
+	[Property]
+	public Interactable Computer { get; set; }
+
+	[Property]
+	public GameObject Screen { get; set; }
+
+	[Property]
+	public List<GameObject> EndingObjects { get; set; }
+
 	SoundHandle _windSoundHandle;
 	public bool ReadInitialNote { get; set; } = false;
 
@@ -64,6 +77,20 @@ public partial class GameManager : Component
 				var targetVolume = isInside ? 1f : 3f;
 				_windSoundHandle.Volume = MathX.Lerp( _windSoundHandle.Volume, targetVolume, Time.Delta * 20f );
 			}
+		}
+	}
+
+	public void EndGame()
+	{
+		Player.Instance.WorldTransform = EndGameRespawn.WorldTransform;
+		Player.Instance.Controller.EyeAngles = EndGameRespawn.WorldRotation;
+		Player.Instance.ChangeHolding( null );
+		Screen.Enabled = false;
+		Computer.Enabled = false;
+
+		foreach ( var obj in EndingObjects )
+		{
+			obj.Enabled = !obj.Enabled;
 		}
 	}
 }

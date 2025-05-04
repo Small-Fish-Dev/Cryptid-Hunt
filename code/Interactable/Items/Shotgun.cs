@@ -11,7 +11,7 @@ public sealed class Shotgun : Item
 
 	public override void Attack( Player player )
 	{
-		var firstAmmo = player.Items.FirstOrDefault( x => x.Title == "Ammo" ); // LOL
+		var firstAmmo = player.Items.FirstOrDefault( x => x.Title == "Ammo" && x.Amount > 0 ); // LOL
 		var ammoLeft = firstAmmo?.Amount ?? 0;
 		if ( ammoLeft <= 0 ) return;
 		firstAmmo.Amount--;
@@ -23,10 +23,10 @@ public sealed class Shotgun : Item
 		for ( int i = 0; i < 10; i++ )
 		{
 			var rotation = player.Camera.WorldRotation;
-			rotation *= Rotation.FromYaw( Game.Random.Float( -5f, 5f ) );
-			rotation *= Rotation.FromPitch( Game.Random.Float( -5f, 5f ) );
+			rotation *= Rotation.FromYaw( Game.Random.Float( -7f, 7f ) );
+			rotation *= Rotation.FromPitch( Game.Random.Float( -7f, 7f ) );
 
-			var shootTrace = Scene.Trace.Ray( player.Camera.WorldPosition, player.Camera.WorldPosition + rotation.Forward * 1000f )
+			var shootTrace = Scene.Trace.Ray( player.Camera.WorldPosition, player.Camera.WorldPosition + rotation.Forward * 1500f )
 				.Radius( 5f )
 				.IgnoreGameObjectHierarchy( player.GameObject )
 				.Run();
@@ -47,7 +47,7 @@ public sealed class Shotgun : Item
 
 			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
 
-			damageDealt += 1.5f;
+			damageDealt += 100f; // TODO: 1
 		}
 
 		if ( polewik != null )
