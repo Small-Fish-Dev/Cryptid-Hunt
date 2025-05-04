@@ -47,11 +47,6 @@ public sealed class Shotgun : Item
 
 			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
 
-			var closestBone = polewik.GameObject.Children.OrderBy( x => x.WorldPosition.Distance( bullet.WorldPosition ) ).FirstOrDefault();
-
-			if ( closestBone.IsValid() )
-				bullet.SetParent( closestBone );
-
 			damageDealt += 1.5f;
 		}
 

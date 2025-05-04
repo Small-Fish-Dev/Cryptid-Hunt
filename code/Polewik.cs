@@ -197,6 +197,9 @@ public partial class Polewik : Component
 				Player.Instance.LockInputs = true;
 
 				ModelRenderer.Set( "attack", true );
+				var mouth = ModelRenderer.GetAttachmentObject( "mouth" );
+				var spit = SpitPrefab.Clone( mouth.WorldPosition, mouth.WorldRotation );
+				spit.SetParent( mouth );
 
 				Sound.Play( "jumpscare", WorldPosition );
 

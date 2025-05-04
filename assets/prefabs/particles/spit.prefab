@@ -67,7 +67,7 @@
         "FollowerPrefabChance": 1,
         "FollowerPrefabKill": true,
         "Force": true,
-        "ForceDirection": "0,0,-10",
+        "ForceDirection": "0,0,-20",
         "ForceScale": 1,
         "ForceSpace": "World",
         "Friction": 1,
@@ -166,7 +166,7 @@
           "Type": "CurveRange",
           "Evaluation": "Life",
           "CurveA": {
-            "rangey": "0,50",
+            "rangey": "0,20",
             "frames": [
               {
                 "x": 0,
@@ -192,7 +192,7 @@
             ]
           },
           "CurveB": {
-            "rangey": "0,50",
+            "rangey": "0,20",
             "frames": [
               {
                 "x": 0,
@@ -291,7 +291,7 @@
       {
         "__type": "Sandbox.ParticleConeEmitter",
         "__guid": "a9ba83c6-3b7c-4407-9eca-6a40ca7f8d28",
-        "Burst": 5,
+        "Burst": 7,
         "CenterBias": 0,
         "CenterBiasVelocity": 0,
         "ConeAngle": 23.699978,
@@ -299,7 +299,7 @@
         "ConeNear": 4.839996,
         "Delay": 0,
         "DestroyOnEnd": true,
-        "Duration": 3,
+        "Duration": 2,
         "InVolume": false,
         "Loop": false,
         "OnComponentDestroy": null,
