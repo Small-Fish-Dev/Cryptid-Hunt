@@ -264,6 +264,18 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null
+        },
+        {
+          "__type": "Sandbox.PauseScreen",
+          "__guid": "6d3e6790-84e6-4d4f-9585-0fc9d498925e",
+          "__enabled": false,
+          "MainMenu": "scenes/menu.scene",
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
         }
       ],
       "Children": [
@@ -663,7 +675,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 35,
+                "Id": 7,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -675,7 +687,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 36,
+                "Id": 8,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -4944,7 +4956,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 69,
+                    "Id": 27,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -4962,7 +4974,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 70,
+                    "Id": 28,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -4980,7 +4992,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 71,
+                    "Id": 29,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -11494,7 +11506,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 61,
+                "Id": 33,
                 "Value": true,
                 "DstId": 9,
                 "DstName": "_value"
@@ -11512,7 +11524,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 62,
+                "Id": 34,
                 "Value": false,
                 "DstId": 18,
                 "DstName": "_value"

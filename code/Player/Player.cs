@@ -99,6 +99,7 @@ public partial class Player : Component
 		{
 			PauseScreen.Paused = !PauseScreen.Paused;
 			PauseScreen.Instance.Enabled = PauseScreen.Paused;
+			Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
 		}
 	}
 
