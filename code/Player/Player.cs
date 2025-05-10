@@ -18,7 +18,54 @@ public partial class Player : Component
 	public TimeSince LastRan { get; set; } = 0f;
 	public TimeSince LastInteraction { get; set; } = 0f;
 	public bool LockInputs { get; set; } = false;
-	public int HP { get; set; } = 3;
+	private int _hp = 3;
+	[Property]
+	public int HP
+	{
+		get => _hp;
+		set
+		{
+			if ( value <= 0 )
+			{
+				_hp = 0;
+				Dead = true;
+			}
+			else
+			{
+				_hp = value;
+			}
+		}
+	}
+	private bool _dead = false;
+	public bool Dead
+	{
+		get => _dead;
+		set
+		{
+			if ( value )
+			{
+				_dead = true;
+				LockInputs = true;
+				Controller.UseInputControls = false;
+				Controller.WishVelocity = 0f;
+
+				var colliders = Camera.Components.GetAll<Collider>( FindMode.EverythingInSelfAndDescendants );
+				foreach ( var collider in colliders )
+					collider.Enabled = true;
+
+				var rigidbodies = Camera.Components.GetAll<Rigidbody>( FindMode.EverythingInSelfAndDescendants );
+				foreach ( var rigidbody in rigidbodies )
+					rigidbody.Enabled = true;
+
+				Camera.GameObject.SetParent( null );
+			}
+			else
+			{
+				_dead = false;
+				LockInputs = false;
+			}
+		}
+	}
 
 	protected override void OnStart()
 	{
@@ -38,6 +85,7 @@ public partial class Player : Component
 	protected override void OnFixedUpdate()
 	{
 		if ( !Controller.IsValid() ) return;
+		if ( Dead ) return;
 
 		if ( !LockInputs && Input.Down( "Run" ) && Stamina > 0 && (Running || LastRan >= 1f) )
 			Running = true;
@@ -112,6 +160,7 @@ public partial class Player : Component
 
 	protected override void OnUpdate()
 	{
+		if ( Dead ) return;
 		SetupCamera();
 	}
 

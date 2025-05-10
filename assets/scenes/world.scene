@@ -83,6 +83,7 @@
             "go": "20508266-df9e-4ac4-9319-5ec6094c7675",
             "component_type": "SpotLight"
           },
+          "HP": 3,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -434,6 +435,84 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "UseCameraDirection": true
+            },
+            {
+              "__type": "Sandbox.HullCollider",
+              "__guid": "ee90cc11-d790-487f-9592-6e68d4b60410",
+              "__enabled": false,
+              "BoxSize": "50,50,50",
+              "Center": "0,0,0",
+              "Friction": null,
+              "Height": 22.239998,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Points": [],
+              "Radius": 0,
+              "Radius2": 12.960009,
+              "Slices": 4,
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0",
+              "Type": "Cone"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "281bb245-721f-4acc-945f-405d22857edc",
+              "__enabled": false,
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "22.84,1.559999,21.88",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "f513f681-0105-45bd-8cdb-9db3b9f3c7b5",
+              "__enabled": false,
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
             }
           ],
           "Children": [
@@ -583,7 +662,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 9,
+                "Id": 31,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -595,7 +674,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 10,
+                "Id": 32,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -4864,7 +4943,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 30,
+                    "Id": 63,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -4882,7 +4961,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 31,
+                    "Id": 64,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -4900,7 +4979,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 32,
+                    "Id": 65,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -9599,7 +9678,7 @@
         {
           "__guid": "809205b1-8bc7-4037-b1b8-97b80e17c629",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 4,
           "Name": "hip",
           "Position": "-34.38818,0,62.8774",
           "Rotation": "0.06605953,-0.06605861,-0.7040144,0.7040142",
@@ -9615,7 +9694,7 @@
             {
               "__guid": "218896d8-3eb9-440a-b998-7b782d068def",
               "__version": 1,
-              "Flags": 0,
+              "Flags": 4,
               "Name": "spine1",
               "Position": "-0.00002044822,12.98704,-0.00001525879",
               "Rotation": "-0.05196422,0.0000003477208,-0.00000003375682,0.9986489",
@@ -9631,7 +9710,7 @@
                 {
                   "__guid": "3168cabf-9508-40c2-af2d-5df1f505d522",
                   "__version": 1,
-                  "Flags": 0,
+                  "Flags": 4,
                   "Name": "spine2",
                   "Position": "-0.000001907349,11.71968,-0.00004130602",
                   "Rotation": "0.04575021,0.00000001346229,0.00000004545513,0.9989529",
@@ -9647,7 +9726,7 @@
                     {
                       "__guid": "55823d6f-50d9-4ccd-8b41-44219898b442",
                       "__version": 1,
-                      "Flags": 0,
+                      "Flags": 4,
                       "Name": "chest",
                       "Position": "-0.000002384186,11.2007,-0.00005018711",
                       "Rotation": "0.0275534,-0.0000003566707,0.00000001845783,0.9996204",
@@ -9663,7 +9742,7 @@
                         {
                           "__guid": "bff286f3-28d4-4dfd-9e66-a6daf0c2dafa",
                           "__version": 1,
-                          "Flags": 0,
+                          "Flags": 4,
                           "Name": "neck",
                           "Position": "-0.00003975636,18.99086,-0.000007629395",
                           "Rotation": "0.003710253,0.0000002457704,0.0000000003206135,0.9999932",
@@ -9679,7 +9758,7 @@
                             {
                               "__guid": "2ac474fa-6be1-4f40-84dd-0593f715f5d5",
                               "__version": 1,
-                              "Flags": 0,
+                              "Flags": 4,
                               "Name": "head",
                               "Position": "-0.00000333786,10.1243,-0.00007641315",
                               "Rotation": "-0.118325,-0.0000003855497,-0.00000004801556,0.9929749",
@@ -9698,7 +9777,7 @@
                         {
                           "__guid": "beee664f-d15c-4001-8ff5-3ec996a10d42",
                           "__version": 1,
-                          "Flags": 0,
+                          "Flags": 4,
                           "Name": "clavicle_L",
                           "Position": "-0.00005297767,18.99082,-0.000007629395",
                           "Rotation": "-0.1774695,-0.1088091,0.8338444,0.5112422",
@@ -9714,7 +9793,7 @@
                             {
                               "__guid": "aa457574-d9c0-4400-9288-b22b28c9c45a",
                               "__version": 1,
-                              "Flags": 0,
+                              "Flags": 4,
                               "Name": "upperarm_L",
                               "Position": "0.0001959801,23.49518,-0.00002640486",
                               "Rotation": "-0.3016708,0.7403677,-0.3989697,0.4490808",
@@ -9730,7 +9809,7 @@
                                 {
                                   "__guid": "179b9bc5-caeb-4dd9-9f6f-0e3548ecaeef",
                                   "__version": 1,
-                                  "Flags": 0,
+                                  "Flags": 4,
                                   "Name": "arm_L",
                                   "Position": "0.00003242493,36.94154,0.00006103516",
                                   "Rotation": "0.3071226,0.005221969,0.02213671,0.9513981",
@@ -9746,7 +9825,7 @@
                                     {
                                       "__guid": "f29f9c05-8b38-4901-9de9-6315aed4f8aa",
                                       "__version": 1,
-                                      "Flags": 0,
+                                      "Flags": 4,
                                       "Name": "paw_L",
                                       "Position": "-0.00003147125,25.59804,-0.0002675056",
                                       "Rotation": "0.4395087,-0.02721976,-0.0175064,0.8976551",
@@ -9762,7 +9841,7 @@
                                         {
                                           "__guid": "061656c6-a00a-48cf-b39f-80e32e6a054b",
                                           "__version": 1,
-                                          "Flags": 0,
+                                          "Flags": 4,
                                           "Name": "claws_L",
                                           "Position": "-0.000004291534,9.584235,-0.00001853704",
                                           "Rotation": "0.005693009,-0.0000009557144,-0.000000034499,0.9999838",
@@ -9787,7 +9866,7 @@
                         {
                           "__guid": "7b50a25f-4e60-4c29-9ad0-4a5f73dd1b2a",
                           "__version": 1,
-                          "Flags": 0,
+                          "Flags": 4,
                           "Name": "clavicle_R",
                           "Position": "-0.00002436744,18.99081,-0.00002288818",
                           "Rotation": "-0.177469,0.1088085,-0.8338447,0.5112421",
@@ -9803,7 +9882,7 @@
                             {
                               "__guid": "2f95e033-5dca-4b79-92a1-81b7b4456205",
                               "__version": 1,
-                              "Flags": 0,
+                              "Flags": 4,
                               "Name": "upperarm_R",
                               "Position": "-0.0002174377,23.49519,-0.00003385544",
                               "Rotation": "0.3016709,0.740368,-0.3989693,-0.4490805",
@@ -9819,7 +9898,7 @@
                                 {
                                   "__guid": "27ceafe2-d861-420b-9211-b0d8a1c2052b",
                                   "__version": 1,
-                                  "Flags": 0,
+                                  "Flags": 4,
                                   "Name": "arm_R",
                                   "Position": "0.00001239777,36.94154,0.0001211166",
                                   "Rotation": "0.3071226,-0.005221773,-0.02213672,0.9513981",
@@ -9835,7 +9914,7 @@
                                     {
                                       "__guid": "a3e302d0-4526-4c48-b455-861a1e55cae9",
                                       "__version": 1,
-                                      "Flags": 0,
+                                      "Flags": 4,
                                       "Name": "paw_R",
                                       "Position": "0.00005531311,25.59826,0.000210762",
                                       "Rotation": "0.439509,0.02721956,0.01750594,0.8976549",
@@ -9851,7 +9930,7 @@
                                         {
                                           "__guid": "75f46347-04bc-440f-97b7-4addb9de4550",
                                           "__version": 1,
-                                          "Flags": 0,
+                                          "Flags": 4,
                                           "Name": "claws_R",
                                           "Position": "-0.00000667572,9.58424,-0.00004212558",
                                           "Rotation": "0.005692924,0.0000008308335,0.0000000161194,0.9999838",
@@ -9882,7 +9961,7 @@
             {
               "__guid": "602e0ed4-d458-445b-bb2b-4b3a13c65ba3",
               "__version": 1,
-              "Flags": 0,
+              "Flags": 4,
               "Name": "thigh_L",
               "Position": "-13.62255,-6.807794,-8.984666",
               "Rotation": "-0.7622982,0.0004997257,0.0004035852,0.6472256",
@@ -9898,7 +9977,7 @@
                 {
                   "__guid": "2a0d4274-0552-4349-bff7-ac6bd63d153c",
                   "__version": 1,
-                  "Flags": 0,
+                  "Flags": 4,
                   "Name": "shin_L",
                   "Position": "-0.0001912117,26.81688,0.00005817413",
                   "Rotation": "-0.08707822,0.0003472754,-0.005506921,0.9961862",
@@ -9914,7 +9993,7 @@
                     {
                       "__guid": "b6904055-0ac2-467d-9509-c490b26fa55f",
                       "__version": 1,
-                      "Flags": 0,
+                      "Flags": 4,
                       "Name": "foot_L",
                       "Position": "0.00001907349,22.44371,0.00004577637",
                       "Rotation": "0.7057812,-0.05689286,0.05742868,0.7038025",
@@ -9930,7 +10009,7 @@
                         {
                           "__guid": "1d47d556-e0fc-47a3-8516-d7e3bb5bc310",
                           "__version": 1,
-                          "Flags": 0,
+                          "Flags": 4,
                           "Name": "toes_L",
                           "Position": "-0.0002069473,10.82057,-0.00003511459",
                           "Rotation": "-0.03334762,-0.01190578,-0.0001089326,0.999373",
@@ -9953,7 +10032,7 @@
             {
               "__guid": "163eff76-11b5-4a9e-a127-242657ec1309",
               "__version": 1,
-              "Flags": 0,
+              "Flags": 4,
               "Name": "thigh_R",
               "Position": "13.62257,-6.807793,-8.984669",
               "Rotation": "-0.7622983,-0.000500254,-0.0004045445,0.6472254",
@@ -9969,7 +10048,7 @@
                 {
                   "__guid": "276bd870-eb6b-454e-9610-4ec9564e28a6",
                   "__version": 1,
-                  "Flags": 0,
+                  "Flags": 4,
                   "Name": "shin_R",
                   "Position": "0.0002083778,26.81689,0.00006532669",
                   "Rotation": "-0.08707824,-0.0003472458,0.005506894,0.9961862",
@@ -9985,7 +10064,7 @@
                     {
                       "__guid": "fc55749f-7e06-478d-88a5-7ba61582fb71",
                       "__version": 1,
-                      "Flags": 0,
+                      "Flags": 4,
                       "Name": "foot_R",
                       "Position": "0.00002098083,22.44373,0.00002288818",
                       "Rotation": "0.7057813,0.0568928,-0.05742822,0.7038026",
@@ -10001,7 +10080,7 @@
                         {
                           "__guid": "d2530fab-3b8f-46da-ac54-98b6082e3798",
                           "__version": 1,
-                          "Flags": 0,
+                          "Flags": 4,
                           "Name": "toes_R",
                           "Position": "0.000207901,10.82057,-0.00004703552",
                           "Rotation": "-0.03334763,0.01190578,0.000108899,0.9993729",
@@ -10026,7 +10105,7 @@
         {
           "__guid": "a2bec710-65e6-4a00-8924-d3c92c7d6091",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 4,
           "Name": "camera",
           "Position": "0.000003514907,0.000004295996,13.10452",
           "Rotation": "0.4999998,0.4999998,0.4999998,0.5000005",
@@ -10043,10 +10122,10 @@
         {
           "__guid": "d51cf77f-7e69-4de1-aa4f-5d20176d2447",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "mouth",
-          "Position": "50.43604,0,59.96824",
-          "Rotation": "0.0000005238133,-0.0000009192203,0.0000001490116,1",
+          "Position": "50.43599,0.000397364,59.96824",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -10060,9 +10139,9 @@
         {
           "__guid": "e2244ab9-5922-47f9-ba25-749419aa490a",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "paw_L",
-          "Position": "21.41162,21.25,3.135456",
+          "Position": "21.41149,21.24982,3.135448",
           "Rotation": "-0.04108228,0.04108062,-0.7059126,0.7059122",
           "Scale": "1,1,1",
           "Tags": "",
@@ -10077,11 +10156,11 @@
         {
           "__guid": "95337744-3f78-4ed8-b874-6e6827aba02a",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "paw_R",
-          "Position": "21.41211,-21.25,3.135448",
+          "Position": "21.41141,-21.24977,3.135445",
           "Rotation": "-0.04108078,0.04108283,-0.7059126,0.7059121",
-          "Scale": "0.9999998,0.9999998,0.9999998",
+          "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
           "NetworkMode": 2,
@@ -10094,11 +10173,11 @@
         {
           "__guid": "b2bcf1d3-a228-44c8-8196-9e37f45e9997",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "foot_L",
-          "Position": "-42.11475,13.44092,3.784113",
+          "Position": "-42.1146,13.44048,3.784115",
           "Rotation": "-0.05103527,0.05329299,-0.6461681,0.7596197",
-          "Scale": "0.9999998,0.9999998,0.9999998",
+          "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
           "NetworkMode": 2,
@@ -10111,9 +10190,9 @@
         {
           "__guid": "9777d244-b069-4874-82bb-915348bf0325",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "foot_R",
-          "Position": "-42.11475,-13.44092,3.784067",
+          "Position": "-42.1147,-13.44044,3.784065",
           "Rotation": "-0.05329274,0.05103588,-0.7596199,0.6461679",
           "Scale": "1,1,1",
           "Tags": "",
@@ -10128,7 +10207,7 @@
         {
           "__guid": "b71b8806-be39-4da6-95fe-f7f33839ae85",
           "__version": 1,
-          "Flags": 0,
+          "Flags": 8,
           "Name": "center",
           "Position": "0,0,42",
           "Rotation": "0,0,0,1",
@@ -10851,32 +10930,11 @@
                   "Points": [],
                   "Radius": 0,
                   "Radius2": 12.960009,
-                  "Slices": 16,
+                  "Slices": 4,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0",
                   "Type": "Cone"
-                },
-                {
-                  "__type": "Sandbox.BoxCollider",
-                  "__guid": "6d851860-22ae-4824-8ff1-87d83f269bfa",
-                  "Center": "0.4890022,0,6.000001",
-                  "Friction": null,
-                  "IsTrigger": false,
-                  "OnComponentDestroy": null,
-                  "OnComponentDisabled": null,
-                  "OnComponentEnabled": null,
-                  "OnComponentFixedUpdate": null,
-                  "OnComponentStart": null,
-                  "OnComponentUpdate": null,
-                  "OnObjectTriggerEnter": null,
-                  "OnObjectTriggerExit": null,
-                  "OnTriggerEnter": null,
-                  "OnTriggerExit": null,
-                  "Scale": "24.82828,1.280003,20",
-                  "Static": false,
-                  "Surface": null,
-                  "SurfaceVelocity": "0,0,0"
                 },
                 {
                   "__type": "Sandbox.Rigidbody",
@@ -10905,6 +10963,27 @@
                   "OverrideMassCenter": false,
                   "RigidbodyFlags": 0,
                   "StartAsleep": false
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "42990535-4a49-4f77-89bd-69371be726e1",
+                  "Center": "0,0,0",
+                  "Friction": null,
+                  "IsTrigger": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "22.84,1.559999,21.88",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
                 }
               ],
               "Children": []
@@ -11414,7 +11493,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 35,
+                "Id": 57,
                 "Value": true,
                 "DstId": 9,
                 "DstName": "_value"
@@ -11432,7 +11511,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 36,
+                "Id": 58,
                 "Value": false,
                 "DstId": 18,
                 "DstName": "_value"
