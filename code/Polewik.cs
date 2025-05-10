@@ -238,10 +238,10 @@ public partial class Polewik : Component
 		{ PolewikState.Stalking, 200f },
 		{ PolewikState.Following, 450f },
 		{ PolewikState.Attacking, 1800f },
-		{ PolewikState.Fleeing, 600f },
+		{ PolewikState.Fleeing, 700f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 450f },
+		{ PolewikState.AttackPersistent, 430f },
 		{ PolewikState.Jumpscare, 0f }
 
 	};
