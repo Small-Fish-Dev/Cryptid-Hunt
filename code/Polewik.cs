@@ -395,7 +395,9 @@ public partial class Polewik : Component
 
 		if ( CurrentState == PolewikState.Fleeing && PatrolPath != null )
 		{
-			NavigateTo( TargetPosition );
+			TargetPosition = FurthestNode.WorldPosition;
+			NavigateTo( FurthestNode.WorldPosition );
+			CurrentPathId = PatrolPath.IndexOf( FurthestNode );
 		}
 	}
 
