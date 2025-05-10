@@ -10,6 +10,9 @@ public partial class Player : Component
 	[Property]
 	public CameraComponent Camera { get; set; }
 
+	[Property]
+	public SceneFile Menu { get; set; }
+
 	public Interactable InteractingWith { get; set; }
 
 	public float RunSpeed { get; set; }
@@ -46,18 +49,8 @@ public partial class Player : Component
 			{
 				_dead = true;
 				LockInputs = true;
-				Controller.UseInputControls = false;
-				Controller.WishVelocity = 0f;
+				Death();
 
-				var colliders = Camera.Components.GetAll<Collider>( FindMode.EverythingInSelfAndDescendants );
-				foreach ( var collider in colliders )
-					collider.Enabled = true;
-
-				var rigidbodies = Camera.Components.GetAll<Rigidbody>( FindMode.EverythingInSelfAndDescendants );
-				foreach ( var rigidbody in rigidbodies )
-					rigidbody.Enabled = true;
-
-				Camera.GameObject.SetParent( null );
 			}
 			else
 			{
@@ -65,6 +58,30 @@ public partial class Player : Component
 				LockInputs = false;
 			}
 		}
+	}
+
+	private async void Death()
+	{
+		Controller.UseInputControls = false;
+		Controller.WishVelocity = 0f;
+
+		var colliders = Camera.Components.GetAll<Collider>( FindMode.EverythingInSelfAndDescendants );
+		foreach ( var collider in colliders )
+			collider.Enabled = true;
+
+		var rigidbodies = Camera.Components.GetAll<Rigidbody>( FindMode.EverythingInSelfAndDescendants );
+		foreach ( var rigidbody in rigidbodies )
+			rigidbody.Enabled = true;
+
+		Camera.GameObject.SetParent( null );
+
+		await Task.DelaySeconds( 2f );
+
+		GameUI.BlackScreen();
+
+		await Task.DelaySeconds( 5f );
+
+		Scene.LoadFromFile( Menu.ResourcePath );
 	}
 
 	protected override void OnStart()

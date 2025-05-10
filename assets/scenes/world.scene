@@ -84,6 +84,7 @@
             "component_type": "SpotLight"
           },
           "HP": 3,
+          "Menu": "scenes/menu.scene",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -662,7 +663,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 31,
+                "Id": 35,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -674,7 +675,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 32,
+                "Id": 36,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -4943,7 +4944,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 63,
+                    "Id": 69,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -4961,7 +4962,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 64,
+                    "Id": 70,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -4979,7 +4980,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 65,
+                    "Id": 71,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -11493,7 +11494,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 57,
+                "Id": 61,
                 "Value": true,
                 "DstId": 9,
                 "DstName": "_value"
@@ -11511,7 +11512,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 58,
+                "Id": 62,
                 "Value": false,
                 "DstId": 18,
                 "DstName": "_value"
