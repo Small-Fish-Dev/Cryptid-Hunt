@@ -24,8 +24,8 @@ public sealed class Shotgun : Item
 		for ( int i = 0; i < 10; i++ )
 		{
 			var rotation = player.Camera.WorldRotation;
-			rotation *= Rotation.FromYaw( Game.Random.Float( -7f, 7f ) );
-			rotation *= Rotation.FromPitch( Game.Random.Float( -7f, 7f ) );
+			rotation *= Rotation.FromYaw( Game.Random.Float( -9f, 9f ) );
+			rotation *= Rotation.FromPitch( Game.Random.Float( -9f, 9f ) );
 
 			var shootTrace = Scene.Trace.Ray( player.Camera.WorldPosition, player.Camera.WorldPosition + rotation.Forward * 1500f )
 				.Radius( 5f )
