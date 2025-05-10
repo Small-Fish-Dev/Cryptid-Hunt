@@ -12,6 +12,7 @@ DarknessSlider {
     background-image: url("ui/darkness-background.png");
     background-size: cover;
     cursor: default;
+    pointer-events: all;
 
     .cover {
         position: absolute;
@@ -79,22 +80,6 @@ DarknessSlider {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .slider {
-            height: 50px;
-            width: 50%;
-            background-color: rgba( 255, 255, 255, 0.02);
-            border-radius: 50px;
-            pointer-events: all;
-            cursor: pointer;
-
-            .sliderFull {
-                background-color: white;
-                height: 100%;
-                width: 50%;
-                border-radius: 50px;
-            }
-        }
 
         .okay {
             display: flex;

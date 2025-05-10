@@ -1,0 +1,46 @@
+@using Sandbox;
+@using Sandbox.UI;
+
+@namespace CryptidHunt
+
+<root>
+    <div class="sliderFull"></div>
+</root>
+
+@code
+{
+    [Property]
+    public ComputerScreen Screen { get; set; }
+    public float Opacity { get; set; } = 0.5f;
+    public bool IsDragging { get; set; } = false;
+    public bool MouseDown { get; set; } = false;
+
+
+    protected override void OnMouseDown(MousePanelEvent e)
+    {
+        base.OnMouseDown(e);
+        MouseDown = true;
+    }
+
+    protected override void OnMouseUp(MousePanelEvent e)
+    {
+        base.OnMouseUp(e);
+        MouseDown = false;
+        IsDragging = false;
+    }
+
+    public void Dragging()
+    {
+        IsDragging = true;
+    }
+
+    public void Okay()
+    {
+        Log.Info("okay");
+    }
+
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
