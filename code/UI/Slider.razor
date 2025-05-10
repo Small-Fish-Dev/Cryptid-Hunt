@@ -4,40 +4,39 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="sliderFull"></div>
+    <div class="sliderFull" style="width: @((Fraction*100))%"></div>
 </root>
 
 @code
 {
     [Property]
     public ComputerScreen Screen { get; set; }
-    public float Opacity { get; set; } = 0.5f;
+    public float Fraction { get; set; } = 0.5f;
     public bool IsDragging { get; set; } = false;
-    public bool MouseDown { get; set; } = false;
 
+    public override void Tick()
+    {
+        base.Tick();
+
+        if (IsDragging)
+            Fraction = MathX.Clamp( MousePosition.x / (Box.Right - Box.Left), 0f, 1f );
+
+        DarknessSlider.Opacity = Fraction;
+    }
 
     protected override void OnMouseDown(MousePanelEvent e)
     {
         base.OnMouseDown(e);
-        MouseDown = true;
+        IsDragging = true;
     }
 
     protected override void OnMouseUp(MousePanelEvent e)
     {
         base.OnMouseUp(e);
-        MouseDown = false;
         IsDragging = false;
     }
 
-    public void Dragging()
-    {
-        IsDragging = true;
-    }
 
-    public void Okay()
-    {
-        Log.Info("okay");
-    }
 
     /// <summary>
     /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt

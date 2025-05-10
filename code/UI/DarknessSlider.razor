@@ -6,12 +6,12 @@
 <root>
     <div class="instructions"></div>
     <div class="tests">
-        <div class="imageTest" style="opacity: @(1f/255f)"></div>
-        <div class="imageTest" style="opacity: @(20f/255f)"></div>
-        <div class="imageTest" style="opacity: @(100f/255f)"></div>
+        <div class="imageTest" style="opacity: @(80f/255f); background-color: rgb(22,22,22)"></div>
+        <div class="imageTest" style="opacity: @(150f/255f); background-color: rgb(90,90,90)"></div>
+        <div class="imageTest" style="opacity: @(220f/255f); background-color: rgb(140,140,140)"></div>
     </div>
-    <div class="cover" style="opacity: @(Time.Now / 10 % 0.5 + 0.49)"></div>
-    <div class="instructionsText">Drag the slider until the image on the left disappears</div>
+    <div class="cover" style="opacity: @(Opacity * 0.5f + 0.49f)"></div>
+    <div class="instructionsText">Drag the slider until the square on the left is barely visible</div>
     <div class="sliderContainer">
         <Slider></Slider>
         <button class="okay" onclick=@Okay>CONFIRM</button>
@@ -23,17 +23,19 @@
     [Property]
     public ComputerScreen Screen { get; set; }
     public static DarknessSlider Instance { get; private set; }
-    public float Opacity { get; set; } = 0.5f;
+    public static float Opacity { get; set; } = 0.5f;
 
     protected override void OnStart()
     {
         base.OnStart();
         Instance = this;
+        Screen.Enabled = false;
     }
 
     public void Okay()
     {
-        Log.Info("okay");
+        Enabled = false;
+        Screen.Enabled = true;
     }
 
     /// <summary>
