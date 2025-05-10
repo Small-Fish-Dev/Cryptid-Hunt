@@ -143,9 +143,9 @@ public partial class Polewik : Component
 				Heartbeart?.Stop();
 				_lastAttack = 0f;
 
-				TargetPosition = NearestNode.WorldPosition;
-				NavigateTo( NearestNode.WorldPosition );
-				CurrentPathId = PatrolPath.IndexOf( NearestNode );
+				TargetPosition = FurthestNode.WorldPosition;
+				NavigateTo( FurthestNode.WorldPosition );
+				CurrentPathId = PatrolPath.IndexOf( FurthestNode );
 
 				GameTask.RunInThreadAsync( async () =>
 				{
