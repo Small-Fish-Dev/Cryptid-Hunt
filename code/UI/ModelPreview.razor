@@ -1,0 +1,23 @@
+@using Sandbox;
+@using Sandbox.UI;
+@namespace CryptidHunt
+
+<root>
+</root>
+
+@code
+{
+    ScenePanel scenePanel;
+
+    public override void Tick()
+    {
+        base.Tick();
+
+        if (scenePanel == null )
+        {
+            scenePanel = new ScenePanel("scenes/viewer.scene");
+            AddChild(scenePanel);
+            scenePanel.SetClass("view", true);
+        }
+    }
+}
