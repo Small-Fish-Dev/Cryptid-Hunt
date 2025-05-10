@@ -10,7 +10,7 @@
         <div class="imageTest" style="opacity: @(150f/255f); background-color: rgb(90,90,90)"></div>
         <div class="imageTest" style="opacity: @(220f/255f); background-color: rgb(140,140,140)"></div>
     </div>
-    <div class="cover" style="opacity: @(Opacity * 0.5f + 0.49f)"></div>
+    <div class="cover" style="opacity: @(0.99f - ( Opacity * 0.5f ))"></div>
     <div class="instructionsText">Drag the slider until the square on the left is barely visible</div>
     <div class="sliderContainer">
         <Slider></Slider>
@@ -36,6 +36,9 @@
     {
         Enabled = false;
         Screen.Enabled = true;
+
+        foreach ( var color in Scene.Components.GetAll<ColorAdjustments>( FindMode.EverythingInSelfAndDescendants) )
+            color.Brightness = MathX.Remap(Opacity, 0f, 1f, 0.1f, 2f);
     }
 
     /// <summary>

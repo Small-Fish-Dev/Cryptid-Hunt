@@ -11177,6 +11177,20 @@
                 "go": "bd01783c-0c17-4441-af15-e658fe62fe56",
                 "component_type": "ComputerScreen"
               }
+            },
+            {
+              "__type": "Sandbox.ColorAdjustments",
+              "__guid": "4d003ea7-63cc-4f06-abba-a8dd22bb0274",
+              "Brightness": 1,
+              "Contrast": 1,
+              "HueRotate": 0,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Saturation": 1
             }
           ],
           "Children": []
