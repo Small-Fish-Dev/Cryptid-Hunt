@@ -37,8 +37,8 @@
           "RenderTags": "",
           "TargetEye": "None",
           "Viewport": "0,0,1,1",
-          "ZFar": 10000,
-          "ZNear": 10
+          "ZFar": 1000,
+          "ZNear": 1
         }
       ],
       "Children": []
