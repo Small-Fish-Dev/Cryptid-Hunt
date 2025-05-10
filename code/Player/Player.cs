@@ -94,6 +94,12 @@ public partial class Player : Component
 			Controller.RunSpeed = Controller.WalkSpeed;
 			_cameraOffset = CameraOffset;
 		}
+
+		if ( Input.EscapePressed )
+		{
+			PauseScreen.Paused = !PauseScreen.Paused;
+			PauseScreen.Instance.Enabled = PauseScreen.Paused;
+		}
 	}
 
 	public TimeUntil NextInteraction { get; set; }

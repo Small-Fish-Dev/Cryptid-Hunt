@@ -1,0 +1,27 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    <div class="button">MAIN MENU</div>
+    <div class="button">QUIT GAME</div>
+    <div class="paused">[PAUSED]</div>
+</root>
+
+@code
+{
+    public static bool Paused { get; set; } = false;
+    public static PauseScreen Instance { get; private set; }
+
+    protected override void OnStart()
+    {
+        base.OnStart();
+        Instance = this;
+    }
+
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
