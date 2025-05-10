@@ -59,19 +59,31 @@
       "OwnerTransfer": 1,
       "Components": [
         {
-          "__type": "Sandbox.ModelRenderer",
+          "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "3a2f60b0-dbd9-45b4-83d1-c5c960f0c57f",
+          "AnimationGraph": null,
           "BodyGroups": 18446744073709551615,
+          "BoneMergeTarget": null,
           "CreateAttachments": false,
+          "CreateBoneObjects": false,
           "MaterialGroup": null,
           "MaterialOverride": null,
           "Model": "models/items/medkit.vmdl",
+          "Morphs": {},
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "Parameters": {
+            "bools": {},
+            "ints": {},
+            "floats": {},
+            "vectors": {},
+            "rotations": {}
+          },
+          "PlaybackRate": 1,
           "RenderOptions": {
             "GameLayer": true,
             "OverlayLayer": false,
@@ -79,7 +91,13 @@
             "AfterUILayer": false
           },
           "RenderType": "On",
-          "Tint": "1,1,1,1"
+          "Sequence": {
+            "Name": null,
+            "Looping": true,
+            "Blending": false
+          },
+          "Tint": "1,1,1,1",
+          "UseAnimGraph": true
         }
       ],
       "Children": []
