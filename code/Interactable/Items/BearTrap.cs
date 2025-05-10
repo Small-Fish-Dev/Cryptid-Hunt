@@ -1,4 +1,5 @@
 using System;
+using static Sandbox.Services.Inventory;
 
 namespace CryptidHunt;
 
@@ -26,6 +27,8 @@ public sealed class BearTrap : Item, Component.ITriggerListener
 		GameObject.Enabled = true;
 		WorldPosition = trace.EndPosition - trace.Normal * 5f;
 		WorldRotation = Rotation.LookAt( trace.Normal ) * Rotation.FromPitch( 90f );
+		if ( Components.TryGet<BoxCollider>( out var collider, FindMode.EverythingInSelfAndDescendants ) )
+			collider.Enabled = true;
 		player.Remove( this );
 		Sound.Play( "beartrap_set", WorldPosition );
 	}
