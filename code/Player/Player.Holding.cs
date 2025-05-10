@@ -18,6 +18,9 @@ public partial class Player
 			item.LocalPosition = item.ViewModelOffset;
 			item.LocalRotation = item.ViewModelRotation;
 			item.GameObject.Enabled = true;
+
+			if ( item.Components.TryGet<BoxCollider>( out var collider, FindMode.EverythingInSelfAndDescendants ) )
+				collider.Enabled = false;
 		}
 
 		Holding = item;
