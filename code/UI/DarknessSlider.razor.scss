@@ -11,6 +11,7 @@ DarknessSlider {
     flex-direction: column;
     background-image: url("ui/darkness-background.png");
     background-size: cover;
+    cursor: default;
 
     .cover {
         position: absolute;
@@ -20,6 +21,7 @@ DarknessSlider {
         bottom: 0;
         background-color: black;
         opacity: 0.9;
+        cursor: default;
     }
 
     .instructions {
@@ -30,6 +32,7 @@ DarknessSlider {
         align-items: center;
         color: white;
         margin: 20px;
+        cursor: default;
     }
 
     .instructionsText {
@@ -42,6 +45,7 @@ DarknessSlider {
         align-items: center;
         color: white;
         margin: 20px;
+        cursor: default;
 
         .label {
             align-items: center;
@@ -60,6 +64,7 @@ DarknessSlider {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        cursor: default;
 
         .imageTest {
             height: 300px;
@@ -71,5 +76,44 @@ DarknessSlider {
     .sliderContainer {
         height: 34%;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slider {
+            height: 50px;
+            width: 50%;
+            background-color: rgba( 255, 255, 255, 0.02);
+            border-radius: 50px;
+            pointer-events: all;
+            cursor: pointer;
+
+            .sliderFull {
+                background-color: white;
+                height: 100%;
+                width: 50%;
+                border-radius: 50px;
+            }
+        }
+
+        .okay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin: 50px;
+            pointer-events: all;
+            cursor: pointer;
+
+            .label {
+                align-items: center;
+                justify-content: center;
+                align-content: stretch;
+                text-align: center;
+                font-family: Neucha;
+                font-size: 8vmin;
+                text-shadow: 0px 0px 4px rgba(black, 1);
+            }
+        }
     }
 }
