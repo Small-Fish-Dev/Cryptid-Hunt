@@ -14,7 +14,9 @@
             </div>
         </div>
 
-        <img class="view" src="@Item.Icon">
+        <div class="view">
+            <ModelPreview ModelPath=@Item?.Model.Model.ResourcePath></ModelPreview>
+        </div>
 
         @if ( Item.Useable )
         {
