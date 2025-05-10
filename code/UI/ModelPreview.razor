@@ -8,6 +8,10 @@
 @code
 {
     ScenePanel scenePanel;
+    bool dragging = false;
+    Vector2 dragPosition;
+    Rotation startRotation;
+    public ModelRenderer Model => scenePanel.RenderScene.Components.GetAll<ModelRenderer>().FirstOrDefault();
 
     public override void Tick()
     {
@@ -18,6 +22,31 @@
             scenePanel = new ScenePanel("scenes/viewer.scene");
             AddChild(scenePanel);
             scenePanel.SetClass("view", true);
+        }
+
+        if ( dragging )
+        {
+            var difference = MousePosition - dragPosition;
+            Model.WorldRotation = startRotation * Rotation.FromYaw(difference.x) * Rotation.FromPitch(-difference.y);
+        }
+    }
+
+    public override void OnButtonEvent(ButtonEvent e)
+    {
+        base.OnButtonEvent(e);
+
+        if ( e.Button == "mouseleft" )
+        {
+            if ( e.Pressed )
+            {
+                dragging = true;
+                startRotation = Model.WorldRotation;
+                dragPosition = MousePosition;
+            }
+            else
+            {
+                dragging = false;
+            }
         }
     }
 }

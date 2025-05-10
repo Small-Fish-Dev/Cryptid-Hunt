@@ -3,11 +3,18 @@
   "GameObjects": [
     {
       "__guid": "68b5870b-0ec9-4846-82b6-ba5e3ab3a7a8",
+      "__version": 1,
       "Flags": 0,
       "Name": "Camera",
       "Position": "-100,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
       "Tags": "maincamera",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.CameraComponent",
@@ -38,10 +45,18 @@
     },
     {
       "__guid": "27d0fd65-c585-41b7-9a6d-38e5c7b46e28",
+      "__version": 1,
       "Flags": 0,
       "Name": "Item",
+      "Position": "0,0,0",
       "Rotation": "0,-0.258819,0,0.9659258",
+      "Scale": "1,1,1",
+      "Tags": "",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.ModelRenderer",
@@ -71,10 +86,18 @@
     },
     {
       "__guid": "1a3bd086-c4e3-4c62-80e7-8bd67e328f62",
+      "__version": 1,
       "Flags": 0,
       "Name": "Environment",
+      "Position": "0,0,0",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
       "Tags": "skybox",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.AmbientLight",
@@ -92,12 +115,18 @@
     },
     {
       "__guid": "2efeac80-09dc-4a63-a981-c7c3cede4298",
+      "__version": 1,
       "Flags": 0,
       "Name": "Cold Light",
       "Position": "-126.8445,70.42174,-7.131355",
       "Rotation": "-0.03316737,-0.0991268,-0.2321665,0.9670432",
+      "Scale": "1,1,1",
       "Tags": "light_spot,light",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SpotLight",
@@ -123,12 +152,18 @@
     },
     {
       "__guid": "008238ed-0b12-4cca-9926-eece88d86ba2",
+      "__version": 1,
       "Flags": 0,
       "Name": "Warm Light",
       "Position": "-123.8396,-63.91038,20.3417",
       "Rotation": "-0.1366399,0.09753837,0.2811446,0.9448671",
+      "Scale": "1,1,1",
       "Tags": "light_spot,light",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SpotLight",
@@ -154,12 +189,18 @@
     },
     {
       "__guid": "2532b91b-ca13-4422-bae8-c37016d289ac",
+      "__version": 1,
       "Flags": 0,
       "Name": "White Light",
       "Position": "102.1363,-7.906303,90.40615",
       "Rotation": "-0.4540629,0.1781352,0.8588293,0.1565469",
+      "Scale": "1,1,1",
       "Tags": "light_spot,light",
       "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
       "Components": [
         {
           "__type": "Sandbox.SpotLight",
@@ -185,26 +226,19 @@
     },
     {
       "__guid": "a980d40d-c0b9-4fa2-9a11-62a27f7a5991",
+      "__version": 1,
       "Flags": 0,
       "Name": "Cubemap",
       "Position": "-64.44518,-42.95643,60.78955",
+      "Rotation": "0,0,0,1",
+      "Scale": "1,1,1",
       "Tags": "skybox",
       "Enabled": true,
-      "Components": [
-        {
-          "__type": "Sandbox.SkyBox2D",
-          "__guid": "b6877d5c-7745-4b08-881a-c716b8c29731",
-          "OnComponentDestroy": null,
-          "OnComponentDisabled": null,
-          "OnComponentEnabled": null,
-          "OnComponentFixedUpdate": null,
-          "OnComponentStart": null,
-          "OnComponentUpdate": null,
-          "SkyIndirectLighting": false,
-          "SkyMaterial": "materials/skybox/skybox_day_01.vmat",
-          "Tint": "1,1,1,1"
-        }
-      ],
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "NetworkOrphaned": 0,
+      "OwnerTransfer": 1,
+      "Components": [],
       "Children": []
     }
   ],
@@ -226,9 +260,9 @@
       "IncludedBodies": ""
     }
   },
-  "ResourceVersion": 2,
+  "ResourceVersion": 3,
   "Title": null,
   "Description": null,
   "__references": [],
-  "__version": 2
+  "__version": 3
 }
