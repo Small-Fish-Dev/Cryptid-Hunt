@@ -1,0 +1,23 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+    <div class="empty_bar" style="opacity: @(MathX.Remap( Distance, 200f, 1200f, 1f, 0f))">
+        <div class="full_bar" style="width: @Health%"></div>
+    </div>
+</root>
+
+@code
+{
+    [Property]
+    public Polewik Polewik { get; set; }
+    public float Health => Polewik.HP;
+    public float Distance => Polewik.WorldPosition.Distance(Scene.Camera.WorldPosition);
+
+	/// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine(Health, Distance, Time.Now);
+}
