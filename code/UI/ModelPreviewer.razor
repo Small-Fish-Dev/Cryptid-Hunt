@@ -5,7 +5,7 @@
 <root>
     <button class="modelPreviewButton" onclick=@Previous>❮</button>
     <div class="modelPreviewerer">
-        <ModelPreview></ModelPreview>
+        <ModelPreview Offset=@CurrentPreview.Offset></ModelPreview>
         <div class="modelInfo">@CurrentPreview.Name - @CurrentPreview.Author</div>
     </div>
     <button class="modelPreviewButton" onclick=@Next>❯</button>
@@ -24,20 +24,19 @@
 
         public static ModelPreviewPreset[] All => new ModelPreviewPreset[]
         {
-            new ModelPreviewPreset { Name = "Polewik", Path = "models/polewik/polewik.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
-            new ModelPreviewPreset { Name = "Ammo Pack", Path = "models/items/ammo.vmdl", Author = "Luke", Rotation = new Angles( 20, 45, 0 ), Offset = new Vector3( 0, 0, -15 ), Zoom = 1.5f },
+            new ModelPreviewPreset { Name = "Polewik", Path = "models/polewik/polewik.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( -20, 0, 0 ), Zoom = 0.5f },
+            new ModelPreviewPreset { Name = "Ammo Pack", Path = "models/items/ammo.vmdl", Author = "Luke", Rotation = new Angles( 20, 45, 0 ), Offset = new Vector3( -15, 0, 0 ), Zoom = 1.5f },
             new ModelPreviewPreset { Name = "Bear Trap", Path = "models/items/beartrap.vmdl", Author = "Luke", Rotation = new Angles( 35, 45, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 1.5f },
-            new ModelPreviewPreset { Name = "Locked Chest", Path = "models/items/chest.vmdl", Author = "Luke", Rotation = new Angles( 0, -60, -20 ), Offset = new Vector3( 0, 0, -15 ), Zoom = 1.2f },
-            new ModelPreviewPreset { Name = "Crowbar", Path = "models/items/crowbar.vmdl", Author = "Luke", Rotation = new Angles( 15, 45, 60 ), Offset = new Vector3( 0, -30, 10 ), Zoom = 2f },
+            new ModelPreviewPreset { Name = "Locked Chest", Path = "models/items/chest.vmdl", Author = "Luke", Rotation = new Angles( 0, -60, -20 ), Offset = new Vector3( -15, 0, 0 ), Zoom = 1.2f },
+            new ModelPreviewPreset { Name = "Crowbar", Path = "models/items/crowbar.vmdl", Author = "Luke", Rotation = new Angles( 15, 45, 60 ), Offset = new Vector3( 10, 0, 0 ), Zoom = 2f },
             new ModelPreviewPreset { Name = "Key", Path = "models/items/key.vmdl", Author = "Luke", Rotation = new Angles( 0, 30, 180 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 4f },
-            new ModelPreviewPreset { Name = "Lock", Path = "models/items/lock.vmdl", Author = "Luke", Rotation = new Angles( 0, 235, 0 ), Offset = new Vector3( 0, 0, 15 ), Zoom = 5f },
-            new ModelPreviewPreset { Name = "Medkit", Path = "models/items/medkit.vmdl", Author = "Luke", Rotation = new Angles( -20, 225, 0 ), Offset = new Vector3( 0, 0, -10 ), Zoom = 1.8f },
-            new ModelPreviewPreset { Name = "Bed", Path = "models/items/bed.vmdl", Author = "Luke", Rotation = new Angles( -20, 0, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
+            new ModelPreviewPreset { Name = "Lock", Path = "models/items/lock.vmdl", Author = "Luke", Rotation = new Angles( 0, 235, 0 ), Offset = new Vector3( 15, 0, 0 ), Zoom = 5f },
+            new ModelPreviewPreset { Name = "Medkit", Path = "models/items/medkit.vmdl", Author = "Luke", Rotation = new Angles( -20, 225, 0 ), Offset = new Vector3( -10, 0, 0 ), Zoom = 1.8f },
+            new ModelPreviewPreset { Name = "Bed", Path = "models/items/bed.vmdl", Author = "Luke", Rotation = new Angles( -20, 0, 0 ), Offset = new Vector3( -20, 0, 0 ), Zoom = 0.5f },
             new ModelPreviewPreset { Name = "Page", Path = "models/items/page.vmdl", Author = "Luke", Rotation = new Angles( 60, 20, 0 ), Offset = new Vector3( 0, 0, 0 ), Zoom = 2.6f },
-            new ModelPreviewPreset { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( 0, 0, -25 ), Zoom = 0.7f },
-            new ModelPreviewPreset { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( 0, 0, -20 ), Zoom = 0.5f },
+            new ModelPreviewPreset { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 ), Offset = new Vector3( -25, 0, 0 ), Zoom = 0.7f },
+            new ModelPreviewPreset { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), Offset = new Vector3( -20, 0, 0 ), Zoom = 0.5f },
         };
-
     }
 
     public int CurrentSelected = 0;
