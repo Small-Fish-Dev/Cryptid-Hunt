@@ -11140,6 +11140,43 @@
               "Viewport": "0,0,1,1",
               "ZFar": 100,
               "ZNear": 10
+            },
+            {
+              "__type": "Sandbox.ScreenPanel",
+              "__guid": "cb99b058-af0a-4350-b854-c0366616558e",
+              "AutoScreenScale": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Opacity": 1,
+              "Scale": 1,
+              "ScaleStrategy": "ConsistentHeight",
+              "TargetCamera": {
+                "_type": "component",
+                "component_id": "103de64a-e500-4501-b202-3f7009ceff9c",
+                "go": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549",
+                "component_type": "CameraComponent"
+              },
+              "ZIndex": 100
+            },
+            {
+              "__type": "CryptidHunt.DarknessSlider",
+              "__guid": "b05553cf-610b-4d10-ae51-57ca7ef57205",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Screen": {
+                "_type": "component",
+                "component_id": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
+                "go": "bd01783c-0c17-4441-af15-e658fe62fe56",
+                "component_type": "ComputerScreen"
+              }
             }
           ],
           "Children": []

@@ -1,0 +1,27 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace CryptidHunt
+
+<root>
+    <div class="instructions"></div>
+    <div class="tests">
+        <div class="imageTest" style="opacity: @(1f/255f)"></div>
+        <div class="imageTest" style="opacity: @(20f/255f)"></div>
+        <div class="imageTest" style="opacity: @(100f/255f)"></div>
+    </div>
+    <div class="cover" style="opacity: @(Time.Now / 10 % 0.5 + 0.49)"></div>
+    <div class="instructionsText">Drag the slider until the image on the left disappears</div>
+    <div class="sliderContainer"></div>
+</root>
+
+@code
+{
+    [Property]
+    public ComputerScreen Screen { get; set; }
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+}
