@@ -18,7 +18,7 @@
             <ModelPreview ModelPath=@Item?.Model.Model.ResourcePath></ModelPreview>
         </div>
 
-        @if ( Item.Useable )
+        @if ( Item?.Useable ?? false)
         {
             <div class="buttonContainer">
                 <div class="button" @onclick=@(() => Item.Use( Player.Instance ))>
@@ -31,7 +31,7 @@
 
 @code
 {
-    public Item Item => Inventory.Instance.SelectedItem;
+    public Item Item => Inventory.Instance?.SelectedItem;
     public ScenePanel SceneView { get; set; }
 
     public override void Tick()
