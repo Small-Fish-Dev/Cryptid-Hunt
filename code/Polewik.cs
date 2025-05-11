@@ -116,6 +116,7 @@ public partial class Polewik : Component
 
 				Task.RunInThreadAsync( async () =>
 				{
+					await Task.MainThread();
 					ModelRenderer.Set( "growl", true );
 					await Task.DelaySeconds( 0.1f );
 					ModelRenderer.Set( "growl", false );
@@ -125,13 +126,12 @@ public partial class Polewik : Component
 
 			}
 
-			Log.Info( $"WE ARE NOW {value}" );
-
 			if ( value == PolewikState.Yell )
 			{
 				Heartbeart?.Stop();
 				GameTask.RunInThreadAsync( async () =>
 				{
+					await Task.MainThread();
 					await Task.DelaySeconds( 0.5f );
 
 					Player.Instance.AddCameraShake( 4f, 5f );
@@ -141,7 +141,6 @@ public partial class Polewik : Component
 					ModelRenderer.Set( "howl", true );
 					Sound.Play( "howl_far", WorldPosition );
 					await Task.DelaySeconds( 4.5f );
-					Log.Info( $"Got after the thingies" );
 					CurrentState = PolewikState.AttackPersistent;
 				} );
 			}
@@ -157,6 +156,7 @@ public partial class Polewik : Component
 
 				GameTask.RunInThreadAsync( async () =>
 				{
+					await Task.MainThread();
 					await GameTask.DelaySeconds( Game.Random.Float( 3f, 6f ) );
 					CurrentState = PolewikState.Patrolling;
 				} );
@@ -184,6 +184,7 @@ public partial class Polewik : Component
 
 				GameTask.RunInThreadAsync( async () =>
 				{
+					await Task.MainThread();
 					await GameTask.DelaySeconds( 0.05f );
 					ModelRenderer.Set( "leap", false );
 					await GameTask.DelaySeconds( 0.9f );
@@ -215,6 +216,7 @@ public partial class Polewik : Component
 
 				GameTask.RunInThreadAsync( async () =>
 				{
+					await Task.MainThread();
 					await GameTask.DelaySeconds( 1.2f );
 
 					Player.Instance.HP -= 1;
