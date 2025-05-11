@@ -17,7 +17,7 @@
     <div class="bottomContainer">
             <div class="itemContainer">
                 <div class="slotContainer">
-                    @for (int i = 0; i < Items.Length; i++)
+                    @for (int i = 0; i < Items?.Length; i++)
                     {
                         var item = Items[i];
                         <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
