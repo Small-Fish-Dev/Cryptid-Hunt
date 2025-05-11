@@ -300,6 +300,10 @@ public partial class Polewik : Component
 	{
 		if ( ModelRenderer.IsValid() )
 			ModelRenderer.OnFootstepEvent += OnFootstepEvent;
+
+		_startedStalking = 0f;
+		_startedFollowing = 0f;
+		_lastAttack = 0f;
 	}
 
 	protected override void OnFixedUpdate()
