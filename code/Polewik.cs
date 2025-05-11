@@ -28,6 +28,8 @@ public partial class Polewik : Component
 	[Property]
 	public GameObject BloodParticle { get; set; }
 
+	public TimeSince LastDamage { get; set; } = -10f;
+
 	public bool Alive { get; set; } = true;
 
 	public float JumpscareDistance => 120f;
@@ -258,6 +260,8 @@ public partial class Polewik : Component
 
 			var damage = _hp - value;
 			_hp = value;
+
+			LastDamage = 0f;
 
 			if ( HP <= 0 )
 			{

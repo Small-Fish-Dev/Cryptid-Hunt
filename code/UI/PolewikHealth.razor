@@ -4,7 +4,7 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="empty_bar" style="opacity: @(MathX.Remap( Distance, 200f, 1200f, 1f, 0f))">
+    <div class="empty_bar" style="opacity: @(LastDamage <= 10f ? MathX.Remap( Distance, 200f, 1200f, 1f, 0f) : 0f)">
         <div class="full_bar" style="width: @Health%"></div>
     </div>
 </root>
@@ -14,6 +14,7 @@
     [Property]
     public Polewik Polewik { get; set; }
     public float Health => Polewik.HP;
+    public TimeSince LastDamage => Polewik.LastDamage;
     public float Distance => Polewik.WorldPosition.Distance(Scene.Camera.WorldPosition);
 
 	/// <summary>
