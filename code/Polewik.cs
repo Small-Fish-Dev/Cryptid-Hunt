@@ -125,20 +125,23 @@ public partial class Polewik : Component
 
 			}
 
+			Log.Info( $"WE ARE NOW {value}" );
+
 			if ( value == PolewikState.Yell )
 			{
 				Heartbeart?.Stop();
 				GameTask.RunInThreadAsync( async () =>
 				{
-					await Task.DelayRealtimeSeconds( 0.5f );
+					await Task.DelaySeconds( 0.5f );
 
 					Player.Instance.AddCameraShake( 4f, 5f );
 
-					await Task.DelayRealtimeSeconds( 1f );
+					await Task.DelaySeconds( 1f );
 
 					ModelRenderer.Set( "howl", true );
 					Sound.Play( "howl_far", WorldPosition );
-					await Task.DelayRealtimeSeconds( 4.5f );
+					await Task.DelaySeconds( 4.5f );
+					Log.Info( $"Got after the thingies" );
 					CurrentState = PolewikState.AttackPersistent;
 				} );
 			}
@@ -335,10 +338,17 @@ public partial class Polewik : Component
 			NavigateTo( TargetPosition );
 
 			if ( _lastAttack >= WaitUntilNextAttack && Player.Instance.WorldPosition.Distance( WorldPosition ) <= DetectDistance )
+			{
+				_lastAttack = 0f;
 				CurrentState = PolewikState.Stalking;
+			}
 
 			if ( _lastAttack >= AttackAfterStalling )
+			{
+				_lastAttack = 0f;
 				CurrentState = PolewikState.Yell;
+				Log.Info( $"I GOTTA YELL!!" );
+			}
 
 			Agent.UpdateRotation = true;
 		}
