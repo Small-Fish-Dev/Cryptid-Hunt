@@ -38,9 +38,9 @@ public partial class Polewik : Component
 	public float AttackDistance => 500f;
 	public float GiveUpDistance => 3600f;
 	public float GiveUpAfter => 25f;
-	public float AttackAfterStalking => 8f;
+	public float AttackAfterStalking => 15f;
 	public float AttackAfterStalling => 90f;
-	public float WaitUntilNextAttack => 20f;
+	public float WaitUntilNextAttack => 30f;
 
 	[Property]
 	public SoundEvent HeartbeatSound { get; set; }
