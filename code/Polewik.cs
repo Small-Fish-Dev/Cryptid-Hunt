@@ -46,6 +46,9 @@ public partial class Polewik : Component
 	public SoundEvent HeartbeatSound { get; set; }
 	public SoundHandle Heartbeart { get; set; }
 
+	public Vector3 StuckPosition;
+	public TimeSince LastStuck;
+
 	public Vector3? FirstInterceptPoint()
 	{
 		var posA = Player.Instance.WorldPosition;
@@ -280,7 +283,6 @@ public partial class Polewik : Component
 		}
 	}
 
-	TimeSince _lastCalculatedPath;
 	TimeSince _startedStalking;
 	TimeSince _startedFollowing;
 	TimeSince _lastAttack;
@@ -311,8 +313,22 @@ public partial class Polewik : Component
 		DebugOverlay.Sphere( Position, AttackDistance, Color.Orange );
 		DebugOverlay.Sphere( Position, GiveUpDistance, Color.Blue );*/
 
-		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain )
+		if ( CurrentState != PolewikState.Idle && CurrentState != PolewikState.Pain && CurrentState != PolewikState.Jumpscare )
+		{
 			ComputePath();
+
+			if ( StuckPosition.Distance( WorldPosition ) > 100f )
+			{
+				StuckPosition = WorldPosition;
+				LastStuck = 0f;
+			}
+
+			if ( LastStuck >= 5f )
+			{
+				LastStuck = 0f;
+				WorldPosition = TargetPosition;
+			}
+		}
 
 		if ( CurrentState == PolewikState.Patrolling )
 		{
