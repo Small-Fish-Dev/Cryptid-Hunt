@@ -81,6 +81,7 @@ public partial class Player : Component
 
 		await Task.DelaySeconds( 5f );
 
+		await Task.MainThread();
 		Scene.LoadFromFile( Menu.ResourcePath );
 	}
 
