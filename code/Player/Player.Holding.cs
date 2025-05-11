@@ -19,8 +19,8 @@ public partial class Player
 			item.LocalRotation = item.ViewModelRotation;
 			item.GameObject.Enabled = true;
 
-			if ( item.Components.TryGet<BoxCollider>( out var collider, FindMode.EverythingInSelfAndDescendants ) )
-				collider.Enabled = false;
+			foreach ( var collider in item.Components.GetAll<BoxCollider>( FindMode.EverythingInSelfAndDescendants ) )
+				collider.Enabled = true;
 		}
 
 		Holding = item;
