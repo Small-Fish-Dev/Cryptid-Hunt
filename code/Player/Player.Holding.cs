@@ -20,7 +20,7 @@ public partial class Player
 			item.GameObject.Enabled = true;
 
 			foreach ( var collider in item.Components.GetAll<BoxCollider>( FindMode.EverythingInSelfAndDescendants ) )
-				collider.Enabled = true;
+				collider.Enabled = false;
 		}
 
 		Holding = item;
