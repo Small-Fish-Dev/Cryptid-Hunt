@@ -71,6 +71,7 @@ public sealed class Shotgun : Item
 	protected override void OnFixedUpdate()
 	{
 		if ( !_nextBulletCullCheck ) return;
+		_nextBulletCullCheck = 1f;
 
 		foreach ( var bullet in _bulletHoles.ToList() )
 		{
