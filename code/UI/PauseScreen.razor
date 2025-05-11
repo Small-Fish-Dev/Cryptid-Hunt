@@ -18,9 +18,9 @@
     public static bool Paused { get; set; } = false;
     public static PauseScreen Instance { get; private set; }
 
-    protected override void OnStart()
+    protected override void OnAwake()
     {
-        base.OnStart();
+        base.OnAwake();
         Instance = this;
     }
 

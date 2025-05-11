@@ -37,6 +37,19 @@ public partial class GameManager : Component
 
 	TimeUntil _nextInsideCheck;
 
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		if ( Input.EscapePressed )
+		{
+			Input.EscapePressed = false;
+			PauseScreen.Paused = !PauseScreen.Paused;
+			PauseScreen.Instance.Enabled = PauseScreen.Paused;
+			Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
+		}
+	}
+
 	protected override void OnFixedUpdate()
 	{
 		if ( !_windSoundHandle.IsValid() || !_windSoundHandle.IsPlaying )

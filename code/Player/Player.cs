@@ -1,3 +1,5 @@
+using Sandbox.UI;
+
 namespace CryptidHunt;
 
 public partial class Player : Component
@@ -94,13 +96,6 @@ public partial class Player : Component
 			RunSpeed = Controller.RunSpeed;
 			Controller.RunSpeed = Controller.WalkSpeed;
 			_cameraOffset = CameraOffset;
-		}
-
-		if ( Input.EscapePressed )
-		{
-			PauseScreen.Paused = !PauseScreen.Paused;
-			PauseScreen.Instance.Enabled = PauseScreen.Paused;
-			Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
 		}
 	}
 
