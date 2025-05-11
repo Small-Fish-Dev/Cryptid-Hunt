@@ -28,7 +28,7 @@ public partial class Polewik : Component
 	[Property]
 	public GameObject BloodParticle { get; set; }
 
-	public TimeSince LastDamage { get; set; } = -10f;
+	public TimeSince LastDamage { get; set; } = 10f;
 
 	public bool Alive { get; set; } = true;
 
