@@ -226,7 +226,7 @@ public partial class Player : Component
 		if ( !Controller.IsValid() ) return;
 		if ( LockInputs ) return;
 
-		if ( Controller.IsClimbing && _nextFootstep )
+		if ( Controller.IsClimbing && _nextFootstep && MathF.Abs( Controller.Velocity.z ) >= 10f )
 		{
 			_nextFootstep = 0.3f;
 			Sound.Play( "footstep-metal", WorldPosition ).Volume *= 7;
