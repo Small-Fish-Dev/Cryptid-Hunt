@@ -15,17 +15,17 @@
         </div>
     </div>
     <div class="bottomContainer">
-            <div class="itemContainer">
-                <div class="slotContainer">
-                    @for (int i = 0; i < Items?.Length; i++)
-                    {
-                        var item = Items[i];
-                        <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
-                    }
-                </div>
+        <div class="itemContainer">
+            <div class="slotContainer">
+                @for (int i = 0; i < Items?.Length; i++)
+                {
+                    var item = Items[i];
+                    <Slot class="@(item.IsValid() ? "hasItem" : "") + @(SelectedItem == item ? "selected" : "")" Item="@item" />
+                }
             </div>
-            <ItemView></ItemView>
         </div>
+        <ItemView></ItemView>
+    </div>
 </root>
 
 @code
@@ -45,7 +45,13 @@
 
     protected override void OnUpdate()
     {
-        Show = !Player.Instance.LockInputs && Input.Down( "Inventory" );
+        if (!Player.Instance.LockInputs)
+        {
+            if (Input.Pressed("Inventory"))
+                Show = !Show;
+        }
+        else
+            Show = false;
 
         Panel.Style.Opacity = Show ? 1f : 0f;
 
