@@ -107,10 +107,11 @@ public partial class Player : Component
 		if ( !Controller.IsValid() ) return;
 		if ( Dead ) return;
 
-		if ( !LockInputs && Input.Down( "Run" ) && Stamina > 0 && (Running || LastRan >= 1f) )
+		if ( !LockInputs && Stamina > 0 && (Input.Pressed( "Run" ) || Input.Down( "Run" ) && (Running || LastRan >= 1f)) )
 			Running = true;
 		else
 			Running = false;
+
 
 		if ( Running )
 		{
