@@ -155,6 +155,7 @@ public partial class Player : Component
 
 		InteractTrace = Scene.Trace.Ray( Camera.WorldPosition, Camera.WorldPosition + Camera.WorldRotation.Forward * 150f )
 			.Radius( 5f )
+			.WithoutTags( "playerclip" )
 			.IgnoreGameObjectHierarchy( GameObject )
 			.Run();
 
