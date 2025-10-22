@@ -143,7 +143,7 @@ public partial class Polewik : Component
 
 					ModelRenderer.Set( "howl", true );
 					var howl = Sound.Play( "howl_far", WorldPosition );
-					howl.Volume *= _firstYell ? 1f : 0.5f;
+					howl.Volume *= _firstYell ? 1f : 0.2f;
 					_firstYell = false;
 					await Task.DelaySeconds( 4.5f );
 					CurrentState = PolewikState.AttackPersistent;
