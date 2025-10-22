@@ -9,7 +9,7 @@ public sealed class Shotgun : Item
 
 	public override void Attack( Player player )
 	{
-		var firstAmmo = player.Items.FirstOrDefault( x => x.Title == "Ammo" && x.Amount > 0 ); // LOL
+		var firstAmmo = player.Items.FirstOrDefault( x => x.IsValid() && x.Title == "Ammo" && x.Amount > 0 ); // LOL
 		if ( firstAmmo == null ) return;
 		var ammoLeft = firstAmmo?.Amount ?? 0;
 		if ( ammoLeft <= 0 ) return;
@@ -57,6 +57,7 @@ public sealed class Shotgun : Item
 
 		Task.RunInThreadAsync( async () =>
 		{
+			await Task.MainThread();
 			Light.Enabled = true;
 			await Task.DelaySeconds( 0.05f );
 			Light.Enabled = false;
