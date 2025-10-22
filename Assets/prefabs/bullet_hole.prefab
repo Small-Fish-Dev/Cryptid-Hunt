@@ -1,114 +1,79 @@
 {
   "RootObject": {
     "__guid": "52ca5c0a-c81a-4e08-8152-49b037ce56cb",
+    "__version": 1,
     "Flags": 0,
     "Name": "bullet_hole",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "Sandbox.Decal",
         "__guid": "c92eb3fe-87b2-4328-8e28-c9d73e96fc2f",
-        "__version": 1,
+        "__enabled": true,
+        "__version": 3,
         "AttenuationAngle": 0.46,
-        "ColorTexture": {
-          "$compiler": "texture",
-          "$source": "imagefile",
-          "data": {
-            "FilePath": "materials/decals/concrete/max/bullethole_concrete_3_ao.tiff",
-            "MaxSize": 4096,
-            "ConvertHeightToNormals": false,
-            "NormalScale": 1,
-            "Rotate": 0,
-            "FlipVertical": false,
-            "FlipHorizontal": false,
-            "Padding": {
-              "Size": "0,0",
-              "EdgeSize": "0,0"
-            },
-            "Sharpen": 0,
-            "InvertColor": false,
-            "Blur": 0,
-            "Brightness": 1,
-            "Contrast": 1,
-            "Saturation": 1,
-            "Hue": 0,
-            "Colorize": false,
-            "TargetColor": "0,1,0,1",
-            "CacheToDisk": true
+        "ColorMix": 1,
+        "ColorTint": {
+          "Type": "Constant",
+          "Evaluation": "Life",
+          "GradientA": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
           },
-          "compiled": "textures/generated/imagefile/4c01aa5cd9849ae1.vtex"
-        },
-        "ColorTint": "255,255,255,255",
-        "NormalTexture": {
-          "$compiler": "texture",
-          "$source": "imagefile",
-          "data": {
-            "FilePath": "materials/decals/concrete/max/bullethole_concrete_3_normal.tiff",
-            "MaxSize": 4096,
-            "ConvertHeightToNormals": false,
-            "NormalScale": 1,
-            "Rotate": 0,
-            "FlipVertical": false,
-            "FlipHorizontal": false,
-            "Padding": {
-              "Size": "0,0",
-              "EdgeSize": "0,0"
-            },
-            "Sharpen": 0,
-            "InvertColor": false,
-            "Blur": 0,
-            "Brightness": 1,
-            "Contrast": 1,
-            "Saturation": 1,
-            "Hue": 0,
-            "Colorize": false,
-            "TargetColor": "0,1,0,1",
-            "CacheToDisk": true
+          "GradientB": {
+            "blend": "Linear",
+            "color": [
+              {
+                "t": 0.5,
+                "c": "1,1,1,1"
+              }
+            ],
+            "alpha": []
           },
-          "compiled": "textures/generated/imagefile/c708d2eb7d50452e.vtex"
+          "ConstantA": "1,1,1,1",
+          "ConstantB": "1,1,1,1"
         },
+        "Decals": [
+          "decals/bullet.decal"
+        ],
+        "Depth": 16,
+        "LifeTime": 300,
+        "Looped": false,
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
         "OnComponentEnabled": null,
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
-        "RMOTexture": {
-          "$compiler": "texture",
-          "$source": "imagefile",
-          "data": {
-            "FilePath": "materials/decals/concrete/max/bullethole_concrete_3_height.tiff",
-            "MaxSize": 4096,
-            "ConvertHeightToNormals": false,
-            "NormalScale": 1,
-            "Rotate": 0,
-            "FlipVertical": false,
-            "FlipHorizontal": false,
-            "Padding": {
-              "Size": "0,0",
-              "EdgeSize": "0,0"
-            },
-            "Sharpen": 0,
-            "InvertColor": false,
-            "Blur": 0,
-            "Brightness": 1,
-            "Contrast": 1,
-            "Saturation": 1,
-            "Hue": 0,
-            "Colorize": false,
-            "TargetColor": "0,1,0,1",
-            "CacheToDisk": true
-          },
-          "compiled": "textures/generated/imagefile/e072eced99f55a49.vtex"
+        "Parallax": 1,
+        "Rotation": {
+          "Type": "Range",
+          "Evaluation": "Seed",
+          "Constants": "0,360,0,0"
         },
+        "Scale": 1,
         "SequenceId": 0,
         "SheetSequence": false,
-        "Size": "10,5,5",
-        "SortLayer": 0
+        "Size": "1,1",
+        "SortLayer": 0,
+        "Transient": false
       }
     ],
     "Children": [],
-    "__variables": [],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
@@ -126,13 +91,14 @@
         "ExcludedBodies": "",
         "IncludedBodies": ""
       }
-    }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
-  "ResourceVersion": 1,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

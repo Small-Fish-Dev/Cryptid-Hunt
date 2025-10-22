@@ -7,8 +7,6 @@ public sealed class Shotgun : Item
 	[Property]
 	public Light Light { get; set; }
 
-	Dictionary<GameObject, TimeUntil> _bulletHoles = new();
-
 	public override void Attack( Player player )
 	{
 		var firstAmmo = player.Items.FirstOrDefault( x => x.Title == "Ammo" && x.Amount > 0 ); // LOL
@@ -41,8 +39,6 @@ public sealed class Shotgun : Item
 			bulletRotation *= Rotation.FromAxis( bulletRotation.Right, Game.Random.Float( -90f, 90f ) );
 			bullet.WorldRotation = bulletRotation;
 
-			_bulletHoles.Add( bullet, 30f );
-
 			if ( !shootTrace.GameObject.IsValid() ) continue;
 
 			bullet.SetParent( shootTrace.GameObject );
@@ -65,19 +61,5 @@ public sealed class Shotgun : Item
 			await Task.DelaySeconds( 0.05f );
 			Light.Enabled = false;
 		} );
-	}
-
-	TimeUntil _nextBulletCullCheck;
-
-	protected override void OnFixedUpdate()
-	{
-		if ( !_nextBulletCullCheck ) return;
-		_nextBulletCullCheck = 1f;
-
-		foreach ( var bullet in _bulletHoles.ToList() )
-		{
-			if ( !bullet.Value ) continue;
-			bullet.Key.Destroy();
-		}
 	}
 }
