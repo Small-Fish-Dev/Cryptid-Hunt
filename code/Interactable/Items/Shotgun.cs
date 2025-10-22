@@ -48,7 +48,7 @@ public sealed class Shotgun : Item
 
 			if ( !shootTrace.GameObject.Components.TryGet<Polewik>( out polewik, FindMode.EverythingInSelfAndDescendants ) ) continue;
 
-			damageDealt += 100f; // TODO: 1
+			damageDealt += 1f;
 		}
 
 		if ( polewik != null )
