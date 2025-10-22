@@ -48,6 +48,7 @@ public partial class Polewik : Component
 
 	public Vector3 StuckPosition;
 	public TimeSince LastStuck;
+	private bool _firstYell = true;
 
 	public Vector3? FirstInterceptPoint()
 	{
@@ -110,6 +111,8 @@ public partial class Polewik : Component
 			if ( value == PolewikState.Pain )
 			{
 				Heartbeart?.Stop();
+				Agent.Stop();
+				Agent.Velocity = 0f;
 				_lastAttack = 0f;
 
 				Sound.Play( "pain", WorldPosition );
@@ -139,7 +142,9 @@ public partial class Polewik : Component
 					await Task.DelaySeconds( 1f );
 
 					ModelRenderer.Set( "howl", true );
-					Sound.Play( "howl_far", WorldPosition );
+					var howl = Sound.Play( "howl_far", WorldPosition );
+					howl.Volume *= _firstYell ? 1f : 0.5f;
+					_firstYell = false;
 					await Task.DelaySeconds( 4.5f );
 					CurrentState = PolewikState.AttackPersistent;
 				} );
@@ -246,12 +251,12 @@ public partial class Polewik : Component
 		{ PolewikState.Idle, 0f },
 		{ PolewikState.Patrolling, 350f },
 		{ PolewikState.Stalking, 200f },
-		{ PolewikState.Following, 450f },
+		{ PolewikState.Following, 420f },
 		{ PolewikState.Attacking, 1800f },
 		{ PolewikState.Fleeing, 700f },
 		{ PolewikState.Pain, 0f },
 		{ PolewikState.Yell, 0f },
-		{ PolewikState.AttackPersistent, 430f },
+		{ PolewikState.AttackPersistent, 410f },
 		{ PolewikState.Jumpscare, 0f }
 
 	};
@@ -353,7 +358,6 @@ public partial class Polewik : Component
 			{
 				_lastAttack = 0f;
 				CurrentState = PolewikState.Yell;
-				Log.Info( $"I GOTTA YELL!!" );
 			}
 
 			Agent.UpdateRotation = true;
