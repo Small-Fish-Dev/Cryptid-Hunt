@@ -23,29 +23,19 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
 @code
 {
     [Property]
-    public GameObject TargetCamera { get; set; }
+    public CameraComponent TargetCamera { get; set; }
     [Property]
     public Computer Computer { get; set; }
     public TextEntry Input { get; set; }
     public bool Started = false;
     public int FrameRate = 30;
 
-    public static SceneCamera Camera { get; private set; }
     private static Texture _renderTarget;
     private RealTimeUntil _nextRender;
 
     protected override void OnStart()
     {
         base.OnStart();
-
-        Camera?.Dispose();
-        Camera = new()
-            {
-                World = Scene?.SceneWorld,
-                Size = 512,
-                ZFar = 1000f,
-                BackgroundColor = new Color32(43, 43, 37).ToColor()
-            };
 
         _renderTarget = Texture.CreateRenderTarget()
             .WithSize(new Vector2(512f, 512f * 0.6f))
@@ -60,15 +50,12 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
     {
         base.OnUpdate();
 
-        if (Camera == null || !_nextRender)
+        if (!TargetCamera.IsValid() || !_nextRender)
             return;
 
         FrameRate = Computer.Playing ? 15 : 5;
 
-        Camera.Position = TargetCamera.WorldPosition;
-        Camera.Rotation = TargetCamera.WorldRotation;
-
-        Graphics.RenderToTexture(Camera, _renderTarget);
+        TargetCamera.RenderToTexture( _renderTarget);
         _nextRender = 1f / FrameRate;
 
         Panel.Style.BackgroundImage = _renderTarget;
