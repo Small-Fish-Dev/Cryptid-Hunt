@@ -61,7 +61,7 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         Panel.Style.BackgroundImage = _renderTarget;
 
         if ( !Started )
-            Input.Focus();
+            Input?.Focus();
     }
 
     private void Submit()
@@ -90,12 +90,12 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
 
     public void Open()
     {
-        Input.Focus();
+        Input?.Focus();
     }
 
     public void Close()
     {
-        Input.Blur();
+        Input?.Blur();
         Input.Text = string.Empty;
         //Input.Label.SetCaretPosition(0);
     }
