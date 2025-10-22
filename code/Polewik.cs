@@ -293,14 +293,16 @@ public partial class Polewik : Component
 		}
 	}
 
+	private BBox _towerZone = BBox.FromPoints( new List<Vector3>() { new Vector3( 2868f, 5616f, 612f ), new Vector3( 2436f, 5932f, 132f ) } ); // too lazy...
+
 	TimeSince _startedStalking;
 	TimeSince _startedFollowing;
 	TimeSince _lastAttack;
 	public GameObject ClosestNodeTo( Vector3 pos ) => PatrolPath.OrderBy( x => x.WorldPosition.Distance( pos ) ).FirstOrDefault();
 	public GameObject NearestNode => ClosestNodeTo( WorldPosition );
 	public GameObject FurthestNode => PatrolPath.OrderBy( x => x.WorldPosition.Distance( WorldPosition ) ).LastOrDefault();
-	public bool WithinAttackRange => Player.Instance.WorldPosition.Distance( WorldPosition ) <= AttackDistance && Math.Abs( Player.Instance.WorldPosition.z - WorldPosition.z ) <= 200f;
-	public bool OutsideDistance => Player.Instance.WorldPosition.Distance( WorldPosition ) >= GiveUpDistance || Math.Abs( Player.Instance.WorldPosition.z - WorldPosition.z ) > 200f;
+	public bool WithinAttackRange => !_towerZone.Contains( Player.Instance.WorldPosition ) && Player.Instance.WorldPosition.Distance( WorldPosition ) <= AttackDistance && Math.Abs( Player.Instance.WorldPosition.z - WorldPosition.z ) <= 200f;
+	public bool OutsideDistance => _towerZone.Contains( Player.Instance.WorldPosition ) || Player.Instance.WorldPosition.Distance( WorldPosition ) >= GiveUpDistance || Math.Abs( Player.Instance.WorldPosition.z - WorldPosition.z ) > 200f;
 	public bool OutsidePersistentDistance => Player.Instance.WorldPosition.Distance( WorldPosition ) >= GiveUpDistance * 4f || Math.Abs( Player.Instance.WorldPosition.z - WorldPosition.z ) > 200f;
 
 	protected override void OnStart()
