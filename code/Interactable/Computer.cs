@@ -36,7 +36,7 @@ public partial class Computer : Interactable
 	{
 		if ( Fear != null )
 		{
-			NextBot.SpriteRenderer.Texture = Fear;
+			NextBot.SpriteRenderer.Sprite = Sprite.FromTexture( Fear );
 		}
 
 		MusicHanlder.Volume = Playing ? 0.2f : 0f;

@@ -68,8 +68,8 @@ public static partial class Flickr
 		return default;
 	}
 
-	private static async Task<Texture> GetFallback() => await Texture.LoadAsync( FileSystem.Mounted,
-		LocalFallbacks[Random.Shared.Int( 0, LocalFallbacks.Length - 1 )] );
+	private static async Task<Texture> GetFallback() => await Texture.LoadFromFileSystemAsync(
+		LocalFallbacks[Random.Shared.Int( 0, LocalFallbacks.Length - 1 )], FileSystem.Mounted );
 
 	public static async Task<Texture> Get( string fear )
 	{
