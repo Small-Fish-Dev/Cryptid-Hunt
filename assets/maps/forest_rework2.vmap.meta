@@ -142,7 +142,8 @@
         "rust.wooden_crate_c#25344",
         "rust.wooden_crate_e#25357",
         "rustextended.glass_shattered#43280",
-        "rustextended.rock_flat#43360"
+        "rustextended.rock_flat#43360",
+        "rustextended.cable#43218"
       ],
       "Mounts": null,
       "IsStandaloneOnly": false,
