@@ -19,6 +19,7 @@
         {
           "__type": "Sandbox.MapInstance",
           "__guid": "07168f32-4cba-4f42-8ece-ea1090e0d759",
+          "__enabled": true,
           "__version": 1,
           "EnableCollision": true,
           "MapName": "maps/forest_rework2.vmap",
@@ -36,6 +37,7 @@
         {
           "__type": "MyComponent",
           "__guid": "753929e7-7cbd-44c0-add4-68437cb5b035",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -64,6 +66,7 @@
         {
           "__type": "CryptidHunt.Player",
           "__guid": "4f9d6164-f878-4bf2-a0a0-3177d6ea9269",
+          "__enabled": true,
           "Camera": {
             "_type": "component",
             "component_id": "8450246d-7549-439e-a53b-179e886daeac",
@@ -95,6 +98,7 @@
         {
           "__type": "Sandbox.PlayerController",
           "__guid": "a4f1f02e-e565-4de3-82a8-4e3e233f968c",
+          "__enabled": true,
           "AccelerationTime": 0.2,
           "AimStrengthBody": 1,
           "AimStrengthEyes": 1,
@@ -160,6 +164,7 @@
         {
           "__type": "Sandbox.Rigidbody",
           "__guid": "e9284027-b659-4354-8bc9-0acf87cd6844",
+          "__enabled": true,
           "AngularDamping": 1,
           "Gravity": true,
           "LinearDamping": 0.1,
@@ -187,6 +192,7 @@
         {
           "__type": "Sandbox.Movement.MoveModeWalk",
           "__guid": "d8ab3b43-0b36-4b7f-ab4d-030649fb8eae",
+          "__enabled": true,
           "GroundAngle": 60,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -201,6 +207,7 @@
         {
           "__type": "Sandbox.Movement.MoveModeLadder",
           "__guid": "331d1206-b9b9-4fd1-bdea-90bf19370f19",
+          "__enabled": true,
           "ClimbableTags": "ladder",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -214,6 +221,7 @@
         {
           "__type": "Sandbox.ScreenPanel",
           "__guid": "270de388-54ce-4056-833b-3c7c2025b57a",
+          "__enabled": true,
           "AutoScreenScale": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -235,6 +243,7 @@
         {
           "__type": "CryptidHunt.GameUI",
           "__guid": "0a38f28e-8fc4-435c-a1c9-d34d0002a00d",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -245,6 +254,7 @@
         {
           "__type": "CryptidHunt.Inventory",
           "__guid": "c8a402b9-ad44-4ff9-a3d8-a0fbf2ad5683",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -297,6 +307,8 @@
             {
               "__type": "Sandbox.CapsuleCollider",
               "__guid": "9eb9a494-9437-4123-93f8-e5b32a7e668d",
+              "__enabled": true,
+              "Elasticity": null,
               "End": "0,0,55.79899",
               "Friction": 0,
               "IsTrigger": false,
@@ -311,6 +323,7 @@
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
               "Radius": 24.748737,
+              "RollingResistance": null,
               "Start": "0,0,47.25126",
               "Static": false,
               "Surface": null,
@@ -319,7 +332,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "b6496c85-b578-409a-93ef-89c9c7c072cd",
+              "__enabled": true,
               "Center": "0,0,18",
+              "Elasticity": null,
               "Friction": 0,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -332,6 +347,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "35,35,36",
               "Static": false,
               "Surface": null,
@@ -358,8 +374,10 @@
             {
               "__type": "Sandbox.CameraComponent",
               "__guid": "8450246d-7549-439e-a53b-179e886daeac",
+              "__enabled": true,
               "BackgroundColor": "0.33333,0.46275,0.52157,1",
               "ClearFlags": "All",
+              "EnablePostProcessing": true,
               "FieldOfView": 90,
               "FovAxis": "Horizontal",
               "IsMainCamera": true,
@@ -371,9 +389,11 @@
               "OnComponentUpdate": null,
               "Orthographic": false,
               "OrthographicHeight": 1204,
+              "PostProcessAnchor": null,
               "Priority": 1,
               "RenderExcludeTags": "",
               "RenderTags": "",
+              "RenderTexture": null,
               "TargetEye": "None",
               "Viewport": "0,0,1,1",
               "ZFar": 4000,
@@ -382,6 +402,7 @@
             {
               "__type": "Sandbox.Vignette",
               "__guid": "e919ce3b-31ad-4ea7-9f90-039166eb6ca4",
+              "__enabled": true,
               "Center": "0.5,0.5",
               "Color": "0,0,0,1",
               "Intensity": 0.74,
@@ -397,6 +418,7 @@
             {
               "__type": "Sandbox.FilmGrain",
               "__guid": "89b4000c-65f9-4376-88ce-12d596705e1a",
+              "__enabled": true,
               "Intensity": 0.005,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -409,6 +431,8 @@
             {
               "__type": "Sandbox.ColorAdjustments",
               "__guid": "e4e257c6-5f7c-4347-b7cd-f92f5cb867a1",
+              "__enabled": true,
+              "Blend": 1,
               "Brightness": 1,
               "Contrast": 1,
               "HueRotate": 0,
@@ -423,6 +447,7 @@
             {
               "__type": "Sandbox.Tonemapping",
               "__guid": "b9d76511-3aa2-479a-afbb-e26c206dfd3a",
+              "__enabled": true,
               "__version": 3,
               "AutoExposureEnabled": true,
               "ExposureCompensation": 0,
@@ -441,6 +466,7 @@
             {
               "__type": "Sandbox.AudioListener",
               "__guid": "cf6ac791-fccf-4970-8444-6fa1f5a34190",
+              "__enabled": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -455,6 +481,7 @@
               "__enabled": false,
               "BoxSize": "50,50,50",
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "Height": 22.239998,
               "IsTrigger": false,
@@ -471,6 +498,7 @@
               "Points": [],
               "Radius": 0,
               "Radius2": 12.960009,
+              "RollingResistance": null,
               "Slices": 4,
               "Static": false,
               "Surface": null,
@@ -482,6 +510,7 @@
               "__guid": "281bb245-721f-4acc-945f-405d22857edc",
               "__enabled": false,
               "Center": "0,0,0",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -494,6 +523,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "22.84,1.559999,21.88",
               "Static": false,
               "Surface": null,
@@ -589,6 +619,7 @@
         {
           "__type": "Sandbox.SkyBox2D",
           "__guid": "e5cf1bfd-2b20-49ed-9ac0-fd9bfcd4de4c",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -602,6 +633,7 @@
         {
           "__type": "Sandbox.AmbientLight",
           "__guid": "812e3729-7bb6-4b24-8f37-66c562eaaa1c",
+          "__enabled": true,
           "Color": "0.01722,0.01696,0.03256,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -613,6 +645,7 @@
         {
           "__type": "Sandbox.ActionGraphs.ActionsInvoker",
           "__guid": "50603970-4805-4e4d-92f0-f2664cb0a688",
+          "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -675,7 +708,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 15,
+                "Id": 33,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -687,7 +720,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 16,
+                "Id": 34,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -732,6 +765,7 @@
         {
           "__type": "Sandbox.VolumetricFogVolume",
           "__guid": "79560fdc-6a53-4053-841d-eb86c5eb10ea",
+          "__enabled": true,
           "Bounds": {
             "Mins": "-12000,-7131.199,-1500",
             "Maxs": "12000,8678.723,1500"
@@ -782,6 +816,7 @@
             {
               "__type": "CryptidHunt.ChurchLight",
               "__guid": "8525ffe7-5367-45a7-9ebb-65b7c5ec5342",
+              "__enabled": true,
               "Color": "30,0,0,1",
               "Lights": [
                 {
@@ -824,6 +859,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "65df82b1-58df-4573-a721-60b129d238c4",
+                  "__enabled": true,
                   "Attenuation": 0,
                   "ConeInner": 90,
                   "ConeOuter": 27,
@@ -861,6 +897,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "5f251dd0-4ee4-4c9a-8e5e-86df2103c153",
+                  "__enabled": true,
                   "Attenuation": 0,
                   "ConeInner": 0,
                   "ConeOuter": 25.56,
@@ -1240,6 +1277,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "db8e2e91-95f6-4bd0-85da-c398522264ec",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1277,6 +1315,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "9b591294-6d11-405c-b4fa-0da958462d0b",
+                  "__enabled": true,
                   "Attenuation": 3.96,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1314,6 +1353,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "ca607b51-6683-4af5-8043-687d2b587844",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1351,6 +1391,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "d717db4b-59e0-4f51-abaa-3a0becdca2d0",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -1385,6 +1426,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "73dba6fa-3004-4f23-9231-518352dfa083",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1419,6 +1461,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "fc73b8e6-199c-458a-8585-de4d02219f06",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1453,6 +1496,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "9734162f-7b3b-4468-8097-4d404bab5113",
+                  "__enabled": true,
                   "Attenuation": 0.33,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1487,6 +1531,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "bb324109-8339-4d45-88a0-c1db160cb9dc",
+                  "__enabled": true,
                   "Attenuation": 0.45,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1521,6 +1566,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "eb3f8fe6-982f-44b6-a559-56b4dc936a50",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -1555,6 +1601,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "5e6a0b1a-d914-4ab6-a6fc-c6c93f26a19f",
+                  "__enabled": true,
                   "Attenuation": 0.3,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -1589,6 +1636,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "f4179320-afd3-42a1-82cc-23260cb92209",
+                  "__enabled": true,
                   "Attenuation": 0.15,
                   "ConeInner": 15,
                   "ConeOuter": 51.55,
@@ -1626,6 +1674,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "904762df-578e-4172-aa14-9ea74d989478",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "WithoutShadows",
                   "FogStrength": 1,
@@ -1660,6 +1709,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "d1692a60-8a5a-4f01-9193-28fdf16eacc0",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -1694,6 +1744,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "bd896993-9142-4e8c-bf17-3281e3ee71e4",
+                  "__enabled": true,
                   "Attenuation": 5.64,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1728,6 +1779,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "c2e3d0a2-2dc6-41e8-9bce-508c66bf6f3b",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1765,6 +1817,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "e7c2a6b2-2c29-4a1d-806c-5464af7eb7f5",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -1799,6 +1852,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "9522d5cb-e8b7-4213-8276-d6800288bab7",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1836,6 +1890,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "209a6f4f-51dd-44e9-a832-7cfa150b2917",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1873,6 +1928,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "7c4ffd52-4ba5-420e-897a-c8e6082d8cdb",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "ConeInner": 15,
                   "ConeOuter": 45,
@@ -1910,6 +1966,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "a07b8736-2d25-4435-b1db-451f21ed5a84",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1944,6 +2001,7 @@
                 {
                   "__type": "Sandbox.PointLight",
                   "__guid": "2e5c8522-9b07-40d5-995d-eb90fdde7b06",
+                  "__enabled": true,
                   "Attenuation": 1,
                   "FogMode": "Disabled",
                   "FogStrength": 1,
@@ -1978,6 +2036,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "7338e631-f04a-4465-8bd2-d86c77a17987",
+                  "__enabled": true,
                   "Attenuation": 7.31,
                   "ConeInner": 0,
                   "ConeOuter": 30,
@@ -2015,6 +2074,7 @@
                 {
                   "__type": "Sandbox.SpotLight",
                   "__guid": "99886287-638e-45bb-b1bb-07a5d66f7e86",
+                  "__enabled": true,
                   "Attenuation": 7.31,
                   "ConeInner": 0,
                   "ConeOuter": 30,
@@ -3085,13 +3145,16 @@
             {
               "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "22197502-17ae-4c40-9d33-eb950f46f09f",
+              "__enabled": true,
               "AnimationGraph": null,
               "BodyGroups": 18446744073709551615,
               "BoneMergeTarget": null,
               "CreateAttachments": false,
               "CreateBoneObjects": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/enemies/gatorkid/gatorkid.vmdl",
               "Morphs": {},
               "OnComponentDestroy": null,
@@ -3144,7 +3207,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "1eba678e-5c6d-4fbf-a150-193dd98ce07c",
+              "__enabled": true,
               "Center": "3.341505,-0.345439,233.9598",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": true,
               "OnComponentDestroy": null,
@@ -3157,6 +3222,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "8.826654,25,343.935",
               "Static": false,
               "Surface": null,
@@ -3165,7 +3231,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "503ab255-f82a-4b3b-a8ce-698bc808a237",
+              "__enabled": true,
               "Center": "8.861503,-0.345439,118.8249",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -3178,6 +3246,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "3.146655,21,563.9137",
               "Static": false,
               "Surface": null,
@@ -3186,7 +3255,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "0abb1420-7ee6-4ea4-b013-fbeb494cb801",
+              "__enabled": true,
               "Center": "3.341505,-0.345439,9.87983",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": true,
               "OnComponentDestroy": null,
@@ -3307,7 +3378,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 39,
+                    "Id": 66,
                     "Value": false,
                     "DstId": 20,
                     "DstName": "_value"
@@ -3325,7 +3396,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 40,
+                    "Id": 67,
                     "Value": "0,-400,200",
                     "DstId": 22,
                     "DstName": "velocity"
@@ -3343,7 +3414,7 @@
                     "DstName": "_target"
                   },
                   {
-                    "Id": 41,
+                    "Id": 68,
                     "Value": false,
                     "DstId": 26,
                     "DstName": "_value"
@@ -3359,6 +3430,7 @@
                 }
               },
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "50,50,5.680007",
               "Static": false,
               "Surface": null,
@@ -3913,7 +3985,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "6527aad9-50ca-452f-b481-2001b23da47a",
+                  "__enabled": true,
                   "Center": "346.4105,0,-49.60214",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -3926,6 +4000,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1534.823,500,599.2047",
                   "Static": false,
                   "Surface": null,
@@ -3934,6 +4009,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "af337000-90af-458d-8e91-7ad19798e369",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -3963,7 +4039,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "48c60a4e-ad82-4001-bcc4-dd11b9a3c4fb",
+                  "__enabled": true,
                   "Center": "346.4105,0,-49.60214",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -3976,6 +4054,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1534.823,500,599.2047",
                   "Static": false,
                   "Surface": null,
@@ -3984,6 +4063,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "543608b1-851a-42c8-8621-ed8aba8931a4",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4013,7 +4093,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "7b0e3bff-4c49-4e30-a4d0-8404f7a883a8",
+                  "__enabled": true,
                   "Center": "346.4105,0,-49.60214",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4026,6 +4108,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1534.823,500,599.2047",
                   "Static": false,
                   "Surface": null,
@@ -4034,6 +4117,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "bdb58f17-bb52-4f3c-85b0-93352644f39a",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4063,7 +4147,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "6d7f33d2-5ea8-4e28-822c-460230d241ba",
+                  "__enabled": true,
                   "Center": "346.4105,0,-49.60214",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4076,6 +4162,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1534.823,500,599.2047",
                   "Static": false,
                   "Surface": null,
@@ -4084,6 +4171,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "b8726b60-99db-4ef9-b8a1-34fd8bb1f318",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4113,7 +4201,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "e32fb111-ddf8-4ee5-82be-e0a344690984",
+                  "__enabled": true,
                   "Center": "156.5604,-90.061,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4126,6 +4216,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1304.539,680.122,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4134,6 +4225,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "80711a69-8a2d-4998-81bb-6ce9433054a0",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4163,7 +4255,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "f6cc6686-f1fd-449c-84f2-29cd5919c1bc",
+                  "__enabled": true,
                   "Center": "156.5604,-90.061,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4176,6 +4270,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1304.539,680.122,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4184,6 +4279,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "7e13bb70-e27c-42d7-b4f9-bc4f0ce03283",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4213,7 +4309,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "93163130-3127-4862-92c5-abad03e15f00",
+                  "__enabled": true,
                   "Center": "156.5604,-90.061,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4226,6 +4324,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1304.539,680.122,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4234,6 +4333,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "fb0de624-302a-44fe-8768-beb86d2677cf",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4263,7 +4363,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "c219960d-0ad1-4181-bd20-869d42100e72",
+                  "__enabled": true,
                   "Center": "156.5604,60.06192,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4276,6 +4378,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1304.539,980.3679,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4284,6 +4387,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "5db15dd1-859a-40c6-bb5b-a098550946c1",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4313,7 +4417,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "d083ec25-9fa3-4eef-a734-65dd73740957",
+                  "__enabled": true,
                   "Center": "809.4291,60.06192,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4326,6 +4432,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "2610.277,980.3679,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4334,6 +4441,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "f58e3d3e-aec0-4c1c-b7b9-d454ec05f35f",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4363,7 +4471,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "ea2e5b61-7343-4b98-b369-a07d0c3a7a4c",
+                  "__enabled": true,
                   "Center": "156.5604,60.06192,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4376,6 +4486,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1304.539,980.3679,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4384,6 +4495,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "61692731-ff4f-44f1-a273-5f72ad3f7ef6",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4413,7 +4525,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "71fd18c3-df52-45f5-9c30-16b714e372d2",
+                  "__enabled": true,
                   "Center": "211.2169,150.8064,173.2882",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4426,6 +4540,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1195.226,512.6591,443.3737",
                   "Static": false,
                   "Surface": null,
@@ -4434,6 +4549,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "d78c85dc-fa5a-4e63-9af3-2612a7f5bdb2",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -4463,7 +4579,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "4292ac95-3aa6-40b1-80d1-e2afeeb38272",
+                  "__enabled": true,
                   "Center": "18.41703,-15.07815,12.54826",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -4476,6 +4594,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "136.8341,233.9842,155.1756",
                   "Static": false,
                   "Surface": null,
@@ -4484,6 +4603,7 @@
                 {
                   "__type": "CryptidHunt.MySoundCue",
                   "__guid": "f8485d18-798d-4522-bd9b-3d65e640fde7",
+                  "__enabled": true,
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
                   "OnComponentEnabled": null,
@@ -5145,7 +5265,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "7aa8763c-218e-40a7-bca1-171f9850d75a",
+              "__enabled": true,
               "Center": "628.4463,-320.3541,148.9808",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": true,
               "OnComponentDestroy": null,
@@ -5158,6 +5280,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "4705.009,4003.152,879.0507",
               "Static": false,
               "Surface": null,
@@ -5166,6 +5289,7 @@
             {
               "__type": "CryptidHunt.ScriptedEventTrigger",
               "__guid": "daadbc76-e27b-4978-b60b-3162264d9330",
+              "__enabled": true,
               "LockInputs": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -5253,7 +5377,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "fb26d4f3-5103-464b-a2e0-e8c3d2f92ce0",
+                  "__enabled": true,
                   "Center": "-105.5702,59.90523,-180.191",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5266,6 +5392,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1788.859,565.0456,639.6179",
                   "Static": false,
                   "Surface": null,
@@ -5274,6 +5401,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "aba80289-f5f2-4423-b2f6-6333950e03bb",
+                  "__enabled": true,
                   "AreaName": "The Church",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5303,7 +5431,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "4c176081-5531-4acf-a472-8a23fe018b5f",
+                  "__enabled": true,
                   "Center": "113.1189,126.0429,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5316,6 +5446,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1226.238,1252.086,2000",
                   "Static": false,
                   "Surface": null,
@@ -5324,6 +5455,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "1e3907cf-25be-418e-a311-ba9b82b15898",
+                  "__enabled": true,
                   "AreaName": "The Tower",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5353,7 +5485,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "17b313aa-f85c-4ee2-8401-f64598f01b68",
+                  "__enabled": true,
                   "Center": "0,0,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5366,6 +5500,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "500,500,500",
                   "Static": false,
                   "Surface": null,
@@ -5374,6 +5509,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "6a14fe11-52a1-49ce-8b38-d76a88c2b9a5",
+                  "__enabled": true,
                   "AreaName": "The Sewer?",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5403,7 +5539,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "26dd07a0-f860-4791-a77b-3ca71770d4db",
+                  "__enabled": true,
                   "Center": "170.6401,-520.907,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5416,6 +5554,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "4485.952,2545.986,1000",
                   "Static": false,
                   "Surface": null,
@@ -5424,6 +5563,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "a1289d8d-4163-47f3-b18b-7301ceb6e9e3",
+                  "__enabled": true,
                   "AreaName": "The Pond",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5453,7 +5593,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "b098af9f-5855-405c-a361-2791501172d8",
+                  "__enabled": true,
                   "Center": "-187.4428,57.18195,28.41061",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5466,6 +5608,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1374.886,1114.364,943.1788",
                   "Static": false,
                   "Surface": null,
@@ -5474,6 +5617,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "0986afa8-b7ce-4a98-95af-2a3d33781a36",
+                  "__enabled": true,
                   "AreaName": "The Shed",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5503,7 +5647,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "fab69c66-80a6-4f20-a0aa-3c044d25e31c",
+                  "__enabled": true,
                   "Center": "122.9626,4251.69,171.9885",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5516,6 +5662,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "1954.258,9503.38,1343.977",
                   "Static": false,
                   "Surface": null,
@@ -5524,6 +5671,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "d2b6d9db-cdc8-40f7-b8b3-1d37837bb5d6",
+                  "__enabled": true,
                   "AreaName": "The Cave",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5553,7 +5701,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "89fd6196-37ff-429e-9117-0b3852360c8b",
+                  "__enabled": true,
                   "Center": "-1976.902,-1064.206,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5566,6 +5716,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "5401.318,4128.413,1000",
                   "Static": false,
                   "Surface": null,
@@ -5574,6 +5725,7 @@
                 {
                   "__type": "CryptidHunt.DiscoverableArea",
                   "__guid": "fd830d84-42c4-45d2-a239-3d9937d90bca",
+                  "__enabled": true,
                   "AreaName": "The Forest",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5621,7 +5773,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "f6c03b19-9ff5-4571-aad3-f2670639deba",
+                  "__enabled": true,
                   "Center": "0,-2327.564,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5634,6 +5788,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "500,5542.664,500",
                   "Static": false,
                   "Surface": null,
@@ -5642,6 +5797,7 @@
                 {
                   "__type": "CryptidHunt.InputScreenHint",
                   "__guid": "839cf02c-949d-4563-84fb-6fa6782e172e",
+                  "__enabled": true,
                   "ButtonHint": "Run",
                   "Hint": " to run.",
                   "OnComponentDestroy": null,
@@ -5672,7 +5828,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "e49657bb-7da6-41d5-bff5-c2762a12b2f6",
+                  "__enabled": true,
                   "Center": "0,0,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5685,6 +5843,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "500,500,500",
                   "Static": false,
                   "Surface": null,
@@ -5693,6 +5852,7 @@
                 {
                   "__type": "CryptidHunt.InputScreenHint",
                   "__guid": "68b80ed0-e5ce-4321-8ad9-79f4c28ed9ab",
+                  "__enabled": true,
                   "ButtonHint": "Inventory",
                   "Hint": "to open your backpack and equip items.",
                   "OnComponentDestroy": null,
@@ -5723,7 +5883,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "5cef1c43-70da-4e2d-b8e5-109317b11cc6",
+                  "__enabled": true,
                   "Center": "0,-8.61985,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5736,6 +5898,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "200,182.7603,200",
                   "Static": false,
                   "Surface": null,
@@ -5744,6 +5907,7 @@
                 {
                   "__type": "CryptidHunt.InputScreenHint",
                   "__guid": "8b8f93fd-c2f8-4b40-8408-49601272f28a",
+                  "__enabled": true,
                   "ButtonHint": "Use",
                   "Hint": "to interact with items.",
                   "OnComponentDestroy": null,
@@ -5774,7 +5938,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "0cb0f38d-cc1c-44cc-925f-01d53acfc3e8",
+                  "__enabled": true,
                   "Center": "0,0,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": true,
                   "OnComponentDestroy": null,
@@ -5787,6 +5953,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "500,500,500",
                   "Static": false,
                   "Surface": null,
@@ -5795,6 +5962,7 @@
                 {
                   "__type": "CryptidHunt.InputScreenHint",
                   "__guid": "c7e440c5-b732-496b-9d08-f240ddd6a4b1",
+                  "__enabled": true,
                   "ButtonHint": "Attack1",
                   "Hint": "to use equipped item.",
                   "OnComponentDestroy": null,
@@ -5843,10 +6011,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "28c4bb91-a2ae-4c23-9ee5-d66c32528442",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5866,6 +6037,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "0bea9e78-01a4-4864-b583-a0067781921e",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -5879,6 +6052,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -5904,10 +6078,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "748f60ca-deea-4dbf-b5ab-2b71131ce054",
+                  "__enabled": true,
                   "BodyGroups": 5632,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5927,6 +6104,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "f0f489a3-c9ea-46fb-a6c0-04ab52c4c4e1",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -5940,6 +6119,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -5965,10 +6145,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "07b583e9-3f98-454d-8bd0-a0ded0c10b79",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -5988,6 +6171,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "e77d80ec-ee4b-4c56-9377-b16818365de5",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6001,6 +6186,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6026,10 +6212,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "1b6f7883-c815-4230-869e-fdf32dc3de3e",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6049,6 +6238,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "fbd8c7cc-d8ca-4ba4-a3eb-ab67dba9a084",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6062,6 +6253,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6087,10 +6279,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "5e3cc353-a8a0-4454-9e34-298106c9d034",
+                  "__enabled": true,
                   "BodyGroups": 5632,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6110,6 +6305,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "ef42c8e5-367b-430d-b1e7-0a04a4763993",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6123,6 +6320,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6148,10 +6346,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "d6c0565b-f08c-4918-a0cd-32c00591dce2",
+                  "__enabled": true,
                   "BodyGroups": 3073,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6171,6 +6372,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "88860058-1eb4-4cdb-91be-bc10b6df3843",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6184,6 +6387,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6209,10 +6413,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "048731d7-d402-4c59-830e-93891dad2594",
+                  "__enabled": true,
                   "BodyGroups": 5632,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6232,6 +6439,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "2db99419-0762-48a0-8584-d57d44b617ca",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6245,6 +6454,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6270,10 +6480,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "a05e3f34-9cb5-4a32-8fc4-fd4a29fdbe7f",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6293,6 +6506,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "6e9fe89b-b8b2-4a1a-8c49-cd0bf807cc63",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6306,6 +6521,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6331,10 +6547,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "27e9cb43-0a88-4e50-bcc2-81ed7bfc86fd",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6354,6 +6573,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "b2640f27-17d1-4688-ac1c-7980204959c6",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6367,6 +6588,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6392,10 +6614,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "f4ed34b7-a18b-4df3-8842-3012d578ee13",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6415,6 +6640,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "8488a659-135d-4446-b11e-ba5862172f3b",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6428,6 +6655,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6453,10 +6681,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "e9afc4e5-7674-4f9b-9ea0-5cbf7b9cd5d8",
+                  "__enabled": true,
                   "BodyGroups": 3073,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6476,6 +6707,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "511c411a-0956-4c11-8faf-43274289aedb",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6489,6 +6722,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6514,10 +6748,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "7624bd3b-e871-45d9-8248-540559b224a0",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6537,6 +6774,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "76e62bfe-49b7-4fbc-a5b1-bb55a28315e6",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6550,6 +6789,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6575,10 +6815,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "4dccbf8b-1d92-4171-9242-02b75d37a6aa",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6598,6 +6841,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "b185f839-ac82-4108-baa3-22979807557d",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6611,6 +6856,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6636,10 +6882,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "5c889a96-8d9c-4974-8c0d-747a2b84dca4",
+                  "__enabled": true,
                   "BodyGroups": 5632,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6659,6 +6908,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "c5e5adc3-6671-4305-a74c-0cc5ca73a96e",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6672,6 +6923,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6697,10 +6949,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "50e29b27-13ec-4698-9123-254f807cb092",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6720,6 +6975,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "82adb3a8-dcfd-49e3-8e00-e7acbfb72861",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6733,6 +6990,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6758,10 +7016,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "06d6ef8b-1b8c-4001-89b3-0106370af7ed",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6781,6 +7042,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "6dfa4ac0-dbe0-445c-bbd3-2f899fc4ccd8",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6794,6 +7057,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6819,10 +7083,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "455c688e-fba7-4378-b957-fdafb9a7a524",
+                  "__enabled": true,
                   "BodyGroups": 3073,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6842,6 +7109,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "ac876193-8f16-489d-a38f-cdc1d8294630",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6855,6 +7124,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6880,10 +7150,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "39132021-faf6-49a6-974f-1603bef3e778",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6903,6 +7176,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "1dfee2af-10de-46b5-8454-178478705256",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6916,6 +7191,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -6941,10 +7217,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "17460137-9106-4ba4-9a1a-2bd0b905cc3f",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -6964,6 +7243,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "4f780563-7e8a-46e0-8e8b-1711e1882c55",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -6977,6 +7258,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7002,10 +7284,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "b5da9d75-da4c-4a4b-97f3-171718d898fc",
+                  "__enabled": true,
                   "BodyGroups": 3073,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7025,6 +7310,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "a7ec42e0-3f6e-4731-91cc-745bcac4ca3b",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7038,6 +7325,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7063,10 +7351,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "361e93dc-1a36-4340-be68-8d69ca791c49",
+                  "__enabled": true,
                   "BodyGroups": 3136,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7086,6 +7377,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "a6b472ef-bd0e-4d83-8429-0c4d2ee03c09",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7099,6 +7392,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7124,10 +7418,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "9076ef19-0c19-454e-85fa-ad6a3250e708",
+                  "__enabled": true,
                   "BodyGroups": 3073,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7147,6 +7444,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "d8edfb16-3f29-4835-86e4-95fa2c901a8d",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7160,6 +7459,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7185,10 +7485,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "604297b1-4ed2-4cc9-8d9b-291ac23dc280",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7208,6 +7511,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "c79c532d-58dc-43b1-96e0-7f7734f41377",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7221,6 +7526,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7246,10 +7552,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "a5afa09f-7530-483a-bb3f-37b0c9a1fefa",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7269,6 +7578,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "6d887f38-ef56-4691-a448-c3c71860f072",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7282,6 +7593,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7307,10 +7619,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "36b9de8e-2de2-4ff4-b810-195f0cd8c660",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7330,6 +7645,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "a7b6ab53-cc29-4207-ace4-73956b66cbad",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7343,6 +7660,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7368,10 +7686,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "32ca930c-6d11-4bee-95fd-1b415e00a020",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7391,6 +7712,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "5684ee15-049a-4612-a51a-a9cab4f26755",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7404,6 +7727,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7429,10 +7753,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "3d10de62-577b-4308-8c64-6fd273fd7920",
+                  "__enabled": true,
                   "BodyGroups": 5632,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7452,6 +7779,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "3a6ad366-32a3-4986-b0c7-2d23ca761928",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7465,6 +7794,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7490,10 +7820,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "d9b537da-cd11-4b6a-b485-624e5fc283a7",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7513,6 +7846,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "ca207824-a7ff-4ddf-b1c1-e535fb6bbc62",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7526,6 +7861,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7551,10 +7887,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "526dbe35-1b09-4d3e-aa9a-bb912b3f27dc",
+                  "__enabled": true,
                   "BodyGroups": 5128,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7574,6 +7913,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "19820f68-d92e-4734-b6a5-25d59fd578f9",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7587,6 +7928,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7612,10 +7954,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "2c3b735e-084b-4742-a2de-5d113b2d8aff",
+                  "__enabled": true,
                   "BodyGroups": 5122,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7635,6 +7980,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "bda5bba4-d375-4a39-849c-2f04685f0a6c",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7648,6 +7995,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7673,10 +8021,13 @@
                 {
                   "__type": "Sandbox.ModelRenderer",
                   "__guid": "da6e1904-415e-4459-9ac2-3964f0e25a03",
+                  "__enabled": true,
                   "BodyGroups": 5248,
                   "CreateAttachments": false,
+                  "LodOverride": null,
                   "MaterialGroup": null,
                   "MaterialOverride": null,
+                  "Materials": null,
                   "Model": "models/items/sign.vmdl",
                   "OnComponentDestroy": null,
                   "OnComponentDisabled": null,
@@ -7696,6 +8047,8 @@
                 {
                   "__type": "Sandbox.ModelCollider",
                   "__guid": "86af18ee-8e36-4f5e-86d4-409045cceefa",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "Model": "models/items/sign.vmdl",
@@ -7709,6 +8062,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Static": false,
                   "Surface": null,
                   "SurfaceVelocity": "0,0,0"
@@ -7736,10 +8090,13 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "9cbcfd6f-b492-4bec-8baf-8394d411f0d9",
+              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/placeholders/placeholder_cinder.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -7779,6 +8136,7 @@
         {
           "__type": "CryptidHunt.Polewik",
           "__guid": "5f3a83b1-f4df-44b8-8f01-6e4573dd2bc8",
+          "__enabled": true,
           "Agent": {
             "_type": "component",
             "component_id": "be780f98-54fa-4405-a45a-182e37a8dd1b",
@@ -7888,6 +8246,7 @@
         {
           "__type": "Sandbox.NavMeshAgent",
           "__guid": "be780f98-54fa-4405-a45a-182e37a8dd1b",
+          "__enabled": true,
           "Acceleration": 10000,
           "AutoTraverseLinks": true,
           "Height": 64,
@@ -7906,13 +8265,16 @@
         {
           "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "9fbaa53f-0acb-46a6-a4fb-f785e552ba11",
+          "__enabled": true,
           "AnimationGraph": null,
           "BodyGroups": 18446744073709551615,
           "BoneMergeTarget": null,
           "CreateAttachments": true,
           "CreateBoneObjects": true,
+          "LodOverride": null,
           "MaterialGroup": null,
           "MaterialOverride": null,
+          "Materials": null,
           "Model": "models/polewik/polewik.vmdl",
           "Morphs": {},
           "OnComponentDestroy": null,
@@ -7947,7 +8309,9 @@
         {
           "__type": "Sandbox.BoxCollider",
           "__guid": "058a4741-dec9-49be-9868-4d77007c7fee",
+          "__enabled": true,
           "Center": "-4.110416,0,32.59138",
+          "Elasticity": null,
           "Friction": null,
           "IsTrigger": false,
           "OnComponentDestroy": null,
@@ -7960,6 +8324,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
+          "RollingResistance": null,
           "Scale": "91.34318,76.32001,115.1828",
           "Static": false,
           "Surface": null,
@@ -7972,8 +8337,8 @@
           "__version": 1,
           "Flags": 4,
           "Name": "hip",
-          "Position": "-34.38818,0,62.8774",
-          "Rotation": "0.06605953,-0.06605861,-0.7040144,0.7040142",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -7988,8 +8353,8 @@
               "__version": 1,
               "Flags": 4,
               "Name": "spine1",
-              "Position": "-0.00002044822,12.98704,-0.00001525879",
-              "Rotation": "-0.05196422,0.0000003477208,-0.00000003375682,0.9986489",
+              "Position": "0,0,0",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -8004,8 +8369,8 @@
                   "__version": 1,
                   "Flags": 4,
                   "Name": "spine2",
-                  "Position": "-0.000001907349,11.71968,-0.00004130602",
-                  "Rotation": "0.04575021,0.00000001346229,0.00000004545513,0.9989529",
+                  "Position": "0,0,0",
+                  "Rotation": "0,0,0,1",
                   "Scale": "1,1,1",
                   "Tags": "",
                   "Enabled": true,
@@ -8020,8 +8385,8 @@
                       "__version": 1,
                       "Flags": 4,
                       "Name": "chest",
-                      "Position": "-0.000002384186,11.2007,-0.00005018711",
-                      "Rotation": "0.0275534,-0.0000003566707,0.00000001845783,0.9996204",
+                      "Position": "0,0,0",
+                      "Rotation": "0,0,0,1",
                       "Scale": "1,1,1",
                       "Tags": "",
                       "Enabled": true,
@@ -8036,8 +8401,8 @@
                           "__version": 1,
                           "Flags": 4,
                           "Name": "neck",
-                          "Position": "-0.00003975636,18.99086,-0.000007629395",
-                          "Rotation": "0.003710253,0.0000002457704,0.0000000003206135,0.9999932",
+                          "Position": "0,0,0",
+                          "Rotation": "0,0,0,1",
                           "Scale": "1,1,1",
                           "Tags": "",
                           "Enabled": true,
@@ -8052,8 +8417,8 @@
                               "__version": 1,
                               "Flags": 4,
                               "Name": "head",
-                              "Position": "-0.00000333786,10.1243,-0.00007641315",
-                              "Rotation": "-0.118325,-0.0000003855497,-0.00000004801556,0.9929749",
+                              "Position": "0,0,0",
+                              "Rotation": "0,0,0,1",
                               "Scale": "1,1,1",
                               "Tags": "",
                               "Enabled": true,
@@ -8071,8 +8436,8 @@
                           "__version": 1,
                           "Flags": 4,
                           "Name": "clavicle_L",
-                          "Position": "-0.00005297767,18.99082,-0.000007629395",
-                          "Rotation": "-0.1774695,-0.1088091,0.8338444,0.5112422",
+                          "Position": "0,0,0",
+                          "Rotation": "0,0,0,1",
                           "Scale": "1,1,1",
                           "Tags": "",
                           "Enabled": true,
@@ -8087,8 +8452,8 @@
                               "__version": 1,
                               "Flags": 4,
                               "Name": "upperarm_L",
-                              "Position": "0.0001959801,23.49518,-0.00002640486",
-                              "Rotation": "-0.3016708,0.7403677,-0.3989697,0.4490808",
+                              "Position": "0,0,0",
+                              "Rotation": "0,0,0,1",
                               "Scale": "1,1,1",
                               "Tags": "",
                               "Enabled": true,
@@ -8103,8 +8468,8 @@
                                   "__version": 1,
                                   "Flags": 4,
                                   "Name": "arm_L",
-                                  "Position": "0.00003242493,36.94154,0.00006103516",
-                                  "Rotation": "0.3071226,0.005221969,0.02213671,0.9513981",
+                                  "Position": "0,0,0",
+                                  "Rotation": "0,0,0,1",
                                   "Scale": "1,1,1",
                                   "Tags": "",
                                   "Enabled": true,
@@ -8119,8 +8484,8 @@
                                       "__version": 1,
                                       "Flags": 4,
                                       "Name": "paw_L",
-                                      "Position": "-0.00003147125,25.59804,-0.0002675056",
-                                      "Rotation": "0.4395087,-0.02721976,-0.0175064,0.8976551",
+                                      "Position": "0,0,0",
+                                      "Rotation": "0,0,0,1",
                                       "Scale": "1,1,1",
                                       "Tags": "",
                                       "Enabled": true,
@@ -8135,8 +8500,8 @@
                                           "__version": 1,
                                           "Flags": 4,
                                           "Name": "claws_L",
-                                          "Position": "-0.000004291534,9.584235,-0.00001853704",
-                                          "Rotation": "0.005693009,-0.0000009557144,-0.000000034499,0.9999838",
+                                          "Position": "0,0,0",
+                                          "Rotation": "0,0,0,1",
                                           "Scale": "1,1,1",
                                           "Tags": "",
                                           "Enabled": true,
@@ -8160,8 +8525,8 @@
                           "__version": 1,
                           "Flags": 4,
                           "Name": "clavicle_R",
-                          "Position": "-0.00002436744,18.99081,-0.00002288818",
-                          "Rotation": "-0.177469,0.1088085,-0.8338447,0.5112421",
+                          "Position": "0,0,0",
+                          "Rotation": "0,0,0,1",
                           "Scale": "1,1,1",
                           "Tags": "",
                           "Enabled": true,
@@ -8176,8 +8541,8 @@
                               "__version": 1,
                               "Flags": 4,
                               "Name": "upperarm_R",
-                              "Position": "-0.0002174377,23.49519,-0.00003385544",
-                              "Rotation": "0.3016709,0.740368,-0.3989693,-0.4490805",
+                              "Position": "0,0,0",
+                              "Rotation": "0,0,0,1",
                               "Scale": "1,1,1",
                               "Tags": "",
                               "Enabled": true,
@@ -8192,8 +8557,8 @@
                                   "__version": 1,
                                   "Flags": 4,
                                   "Name": "arm_R",
-                                  "Position": "0.00001239777,36.94154,0.0001211166",
-                                  "Rotation": "0.3071226,-0.005221773,-0.02213672,0.9513981",
+                                  "Position": "0,0,0",
+                                  "Rotation": "0,0,0,1",
                                   "Scale": "1,1,1",
                                   "Tags": "",
                                   "Enabled": true,
@@ -8208,8 +8573,8 @@
                                       "__version": 1,
                                       "Flags": 4,
                                       "Name": "paw_R",
-                                      "Position": "0.00005531311,25.59826,0.000210762",
-                                      "Rotation": "0.439509,0.02721956,0.01750594,0.8976549",
+                                      "Position": "0,0,0",
+                                      "Rotation": "0,0,0,1",
                                       "Scale": "1,1,1",
                                       "Tags": "",
                                       "Enabled": true,
@@ -8224,8 +8589,8 @@
                                           "__version": 1,
                                           "Flags": 4,
                                           "Name": "claws_R",
-                                          "Position": "-0.00000667572,9.58424,-0.00004212558",
-                                          "Rotation": "0.005692924,0.0000008308335,0.0000000161194,0.9999838",
+                                          "Position": "0,0,0",
+                                          "Rotation": "0,0,0,1",
                                           "Scale": "1,1,1",
                                           "Tags": "",
                                           "Enabled": true,
@@ -8255,8 +8620,8 @@
               "__version": 1,
               "Flags": 4,
               "Name": "thigh_L",
-              "Position": "-13.62255,-6.807794,-8.984666",
-              "Rotation": "-0.7622982,0.0004997257,0.0004035852,0.6472256",
+              "Position": "0,0,0",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -8271,8 +8636,8 @@
                   "__version": 1,
                   "Flags": 4,
                   "Name": "shin_L",
-                  "Position": "-0.0001912117,26.81688,0.00005817413",
-                  "Rotation": "-0.08707822,0.0003472754,-0.005506921,0.9961862",
+                  "Position": "0,0,0",
+                  "Rotation": "0,0,0,1",
                   "Scale": "1,1,1",
                   "Tags": "",
                   "Enabled": true,
@@ -8287,8 +8652,8 @@
                       "__version": 1,
                       "Flags": 4,
                       "Name": "foot_L",
-                      "Position": "0.00001907349,22.44371,0.00004577637",
-                      "Rotation": "0.7057812,-0.05689286,0.05742868,0.7038025",
+                      "Position": "0,0,0",
+                      "Rotation": "0,0,0,1",
                       "Scale": "1,1,1",
                       "Tags": "",
                       "Enabled": true,
@@ -8303,8 +8668,8 @@
                           "__version": 1,
                           "Flags": 4,
                           "Name": "toes_L",
-                          "Position": "-0.0002069473,10.82057,-0.00003511459",
-                          "Rotation": "-0.03334762,-0.01190578,-0.0001089326,0.999373",
+                          "Position": "0,0,0",
+                          "Rotation": "0,0,0,1",
                           "Scale": "1,1,1",
                           "Tags": "",
                           "Enabled": true,
@@ -8326,8 +8691,8 @@
               "__version": 1,
               "Flags": 4,
               "Name": "thigh_R",
-              "Position": "13.62257,-6.807793,-8.984669",
-              "Rotation": "-0.7622983,-0.000500254,-0.0004045445,0.6472254",
+              "Position": "0,0,0",
+              "Rotation": "0,0,0,1",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -8342,8 +8707,8 @@
                   "__version": 1,
                   "Flags": 4,
                   "Name": "shin_R",
-                  "Position": "0.0002083778,26.81689,0.00006532669",
-                  "Rotation": "-0.08707824,-0.0003472458,0.005506894,0.9961862",
+                  "Position": "0,0,0",
+                  "Rotation": "0,0,0,1",
                   "Scale": "1,1,1",
                   "Tags": "",
                   "Enabled": true,
@@ -8358,8 +8723,8 @@
                       "__version": 1,
                       "Flags": 4,
                       "Name": "foot_R",
-                      "Position": "0.00002098083,22.44373,0.00002288818",
-                      "Rotation": "0.7057813,0.0568928,-0.05742822,0.7038026",
+                      "Position": "0,0,0",
+                      "Rotation": "0,0,0,1",
                       "Scale": "1,1,1",
                       "Tags": "",
                       "Enabled": true,
@@ -8374,8 +8739,8 @@
                           "__version": 1,
                           "Flags": 4,
                           "Name": "toes_R",
-                          "Position": "0.000207901,10.82057,-0.00004703552",
-                          "Rotation": "-0.03334763,0.01190578,0.000108899,0.9993729",
+                          "Position": "0,0,0",
+                          "Rotation": "0,0,0,1",
                           "Scale": "1,1,1",
                           "Tags": "",
                           "Enabled": true,
@@ -8399,8 +8764,8 @@
           "__version": 1,
           "Flags": 4,
           "Name": "camera",
-          "Position": "0.000003514907,0.000004295996,13.10452",
-          "Rotation": "0.4999998,0.4999998,0.4999998,0.5000005",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -8416,7 +8781,7 @@
           "__version": 1,
           "Flags": 8,
           "Name": "mouth",
-          "Position": "50.43599,0.000397364,59.96824",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -8433,8 +8798,8 @@
           "__version": 1,
           "Flags": 8,
           "Name": "paw_L",
-          "Position": "21.41149,21.24982,3.135448",
-          "Rotation": "-0.04108228,0.04108062,-0.7059126,0.7059122",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -8450,8 +8815,8 @@
           "__version": 1,
           "Flags": 8,
           "Name": "paw_R",
-          "Position": "21.41141,-21.24977,3.135445",
-          "Rotation": "-0.04108078,0.04108283,-0.7059126,0.7059121",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -8467,8 +8832,8 @@
           "__version": 1,
           "Flags": 8,
           "Name": "foot_L",
-          "Position": "-42.1146,13.44048,3.784115",
-          "Rotation": "-0.05103527,0.05329299,-0.6461681,0.7596197",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -8484,8 +8849,8 @@
           "__version": 1,
           "Flags": 8,
           "Name": "foot_R",
-          "Position": "-42.1147,-13.44044,3.784065",
-          "Rotation": "-0.05329274,0.05103588,-0.7596199,0.6461679",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
           "Enabled": true,
@@ -8501,7 +8866,7 @@
           "__version": 1,
           "Flags": 8,
           "Name": "center",
-          "Position": "0,0,42",
+          "Position": "0,0,0",
           "Rotation": "0,0,0,1",
           "Scale": "1,1,1",
           "Tags": "",
@@ -8531,6 +8896,7 @@
             {
               "__type": "Sandbox.WorldPanel",
               "__guid": "c4cc5004-0ed7-46c3-8d42-6c10f14efea9",
+              "__enabled": true,
               "HorizontalAlign": "Center",
               "InteractionRange": 1000,
               "LookAtCamera": false,
@@ -8553,6 +8919,7 @@
             {
               "__type": "CryptidHunt.PolewikHealth",
               "__guid": "04b2ac81-7859-4e2b-bda1-49b48c2023ea",
+              "__enabled": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -8646,6 +9013,7 @@
         {
           "__type": "CryptidHunt.GameManager",
           "__guid": "75113e0e-754a-411f-a4f1-25aac6834322",
+          "__enabled": true,
           "Computer": {
             "_type": "component",
             "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
@@ -8732,6 +9100,7 @@
         {
           "__type": "Sandbox.SpawnPoint",
           "__guid": "1ad6e299-0074-4b82-8bac-1bf765ad9cd6",
+          "__enabled": true,
           "Color": "0.8902,0.31765,0.05098,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -8761,6 +9130,7 @@
         {
           "__type": "Sandbox.SpawnPoint",
           "__guid": "30ef3e01-e63b-44d0-9e3a-38f584532e6d",
+          "__enabled": true,
           "Color": "0.8902,0.31765,0.05098,1",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
@@ -8790,6 +9160,7 @@
         {
           "__type": "Sandbox.SoundPointComponent",
           "__guid": "9dbbbf76-26e4-4811-8b4e-79c6f9a62720",
+          "__enabled": true,
           "Distance": 512,
           "DistanceAttenuation": false,
           "DistanceAttenuationOverride": false,
@@ -8872,6 +9243,7 @@
             {
               "__type": "Sandbox.SpawnPoint",
               "__guid": "fdd2cbd3-dc8f-471c-b4eb-091f24a65d11",
+              "__enabled": true,
               "Color": "0.8902,0.31765,0.05098,1",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -8901,6 +9273,7 @@
             {
               "__type": "Sandbox.SpawnPoint",
               "__guid": "0386b4f6-1ea5-4c60-9da0-ee2674c4f205",
+              "__enabled": true,
               "Color": "0.8902,0.31765,0.05098,1",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -8930,6 +9303,7 @@
             {
               "__type": "Sandbox.SpawnPoint",
               "__guid": "d5f30928-346f-4721-925e-b0252b8fd3f7",
+              "__enabled": true,
               "Color": "0.8902,0.31765,0.05098,1",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -8959,6 +9333,7 @@
             {
               "__type": "Sandbox.SpawnPoint",
               "__guid": "bbcc9591-262f-4921-80ef-cf1247331a60",
+              "__enabled": true,
               "Color": "0.8902,0.31765,0.05098,1",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -8988,6 +9363,7 @@
             {
               "__type": "CryptidHunt.NextBotPlayer",
               "__guid": "d00bb352-0e6c-46d4-8d96-ad678770e756",
+              "__enabled": true,
               "Camera": {
                 "_type": "gameobject",
                 "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e"
@@ -9020,6 +9396,7 @@
             {
               "__type": "Sandbox.PlayerController",
               "__guid": "d5f29820-8dcc-43d3-ac80-eb2a4bd51f23",
+              "__enabled": true,
               "AccelerationTime": 0,
               "AimStrengthBody": 1,
               "AimStrengthEyes": 1,
@@ -9085,6 +9462,7 @@
             {
               "__type": "Sandbox.Rigidbody",
               "__guid": "7181d5e7-66f8-4c07-b670-41908c806ae5",
+              "__enabled": true,
               "AngularDamping": 1,
               "Gravity": true,
               "LinearDamping": 0.1,
@@ -9112,6 +9490,7 @@
             {
               "__type": "Sandbox.Movement.MoveModeWalk",
               "__guid": "bd6a37a5-72a3-4a24-8d76-516399282c1f",
+              "__enabled": true,
               "GroundAngle": 45,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -9143,6 +9522,8 @@
                 {
                   "__type": "Sandbox.CapsuleCollider",
                   "__guid": "d4430ac9-ae9e-4c09-915f-cd48ae419ff1",
+                  "__enabled": true,
+                  "Elasticity": null,
                   "End": "0,0,45.05097",
                   "Friction": 0,
                   "IsTrigger": false,
@@ -9157,6 +9538,7 @@
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
                   "Radius": 11.313708,
+                  "RollingResistance": null,
                   "Start": "0,0,60.68629",
                   "Static": false,
                   "Surface": null,
@@ -9165,7 +9547,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "26cfe6bb-8ce2-4deb-a2cd-aac8e5888416",
+                  "__enabled": true,
                   "Center": "0,0,18",
+                  "Elasticity": null,
                   "Friction": 0,
                   "IsTrigger": false,
                   "OnComponentDestroy": null,
@@ -9178,6 +9562,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "16,16,36",
                   "Static": false,
                   "Surface": null,
@@ -9202,10 +9587,40 @@
               "OwnerTransfer": 1,
               "Components": [
                 {
+                  "__type": "Sandbox.CameraComponent",
+                  "__guid": "b24a76ef-4b69-4f14-9ae4-fc055e2ac986",
+                  "__enabled": true,
+                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                  "ClearFlags": "All",
+                  "EnablePostProcessing": true,
+                  "FieldOfView": 60,
+                  "FovAxis": "Horizontal",
+                  "IsMainCamera": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Orthographic": false,
+                  "OrthographicHeight": 1204,
+                  "PostProcessAnchor": null,
+                  "Priority": 0,
+                  "RenderExcludeTags": "",
+                  "RenderTags": "",
+                  "RenderTexture": null,
+                  "TargetEye": "None",
+                  "Viewport": "0,0,1,1",
+                  "ZFar": 2000,
+                  "ZNear": 1
+                },
+                {
                   "__type": "Sandbox.HullCollider",
                   "__guid": "4d92972e-817a-4d7c-8602-83ab0b680064",
+                  "__enabled": true,
                   "BoxSize": "50,50,50",
                   "Center": "0,0,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "Height": 22.239998,
                   "IsTrigger": false,
@@ -9222,6 +9637,7 @@
                   "Points": [],
                   "Radius": 0,
                   "Radius2": 12.960009,
+                  "RollingResistance": null,
                   "Slices": 4,
                   "Static": false,
                   "Surface": null,
@@ -9259,7 +9675,9 @@
                 {
                   "__type": "Sandbox.BoxCollider",
                   "__guid": "42990535-4a49-4f77-89bd-69371be726e1",
+                  "__enabled": true,
                   "Center": "0,0,0",
+                  "Elasticity": null,
                   "Friction": null,
                   "IsTrigger": false,
                   "OnComponentDestroy": null,
@@ -9272,6 +9690,7 @@
                   "OnObjectTriggerExit": null,
                   "OnTriggerEnter": null,
                   "OnTriggerExit": null,
+                  "RollingResistance": null,
                   "Scale": "22.84,1.559999,21.88",
                   "Static": false,
                   "Surface": null,
@@ -9298,36 +9717,9 @@
           "OwnerTransfer": 1,
           "Components": [
             {
-              "__type": "Sandbox.SpriteRenderer",
-              "__guid": "49fefefc-e882-4dc3-9db7-d6d111546f34",
-              "Additive": false,
-              "CastShadows": true,
-              "Color": "0.31188,0.06176,0.06176,1",
-              "DepthFeather": 0,
-              "FlipHorizontal": false,
-              "FlipVertical": false,
-              "FogStrength": 1,
-              "Lighting": false,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Opaque": true,
-              "Pivot": "0.5,0",
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "Size": "100,100",
-              "Texture": "materials/particles/shapes/heart1.vtex"
-            },
-            {
               "__type": "NextBot",
               "__guid": "e038d55b-ce64-413d-829d-a9278ab491cf",
+              "__enabled": true,
               "Agent": {
                 "_type": "component",
                 "component_id": "9aed6d07-265d-4fa8-be28-d82563f1dc6a",
@@ -9349,8 +9741,8 @@
               "ScarySound": "sounds/scary/creepy_sound.sound",
               "SpriteRenderer": {
                 "_type": "component",
-                "component_id": "49fefefc-e882-4dc3-9db7-d6d111546f34",
-                "go": "37026854-8dde-420c-abad-bc83990ed9c6",
+                "component_id": "5beda95a-e226-4221-8632-423a2e47332c",
+                "go": "fb41e386-40b3-4926-ae69-2ff094d0d0f2",
                 "component_type": "SpriteRenderer"
               },
               "Target": {
@@ -9363,6 +9755,7 @@
             {
               "__type": "Sandbox.NavMeshAgent",
               "__guid": "9aed6d07-265d-4fa8-be28-d82563f1dc6a",
+              "__enabled": true,
               "Acceleration": 800,
               "AutoTraverseLinks": true,
               "Height": 64,
@@ -9379,7 +9772,84 @@
               "UpdateRotation": false
             }
           ],
-          "Children": []
+          "Children": [
+            {
+              "__guid": "fb41e386-40b3-4926-ae69-2ff094d0d0f2",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Sprite",
+              "Position": "0,0,50",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [
+                {
+                  "__type": "Sandbox.SpriteRenderer",
+                  "__guid": "5beda95a-e226-4221-8632-423a2e47332c",
+                  "__enabled": true,
+                  "__version": 2,
+                  "Additive": false,
+                  "Billboard": "Always",
+                  "Color": "0.31188,0.06176,0.06176,1",
+                  "DepthFeather": 0,
+                  "FlipHorizontal": false,
+                  "FlipVertical": false,
+                  "FogStrength": 1,
+                  "IsSorted": false,
+                  "Lighting": false,
+                  "OnAnimationEnd": null,
+                  "OnAnimationStart": null,
+                  "OnBroadcastMessage": null,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Opaque": true,
+                  "PlaybackSpeed": 1,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "Shadows": false,
+                  "Size": "100,100",
+                  "Sprite": {
+                    "$compiler": "embed",
+                    "$source": null,
+                    "data": {
+                      "Animations": [
+                        {
+                          "Name": "Default",
+                          "FrameRate": 15,
+                          "Origin": "0.5,0.5",
+                          "LoopMode": "Loop",
+                          "Frames": [
+                            {
+                              "Texture": "materials/particles/shapes/heart1.vtex",
+                              "BroadcastMessages": []
+                            }
+                          ]
+                        }
+                      ],
+                      "__references": null
+                    },
+                    "compiled": null
+                  },
+                  "StartingAnimationName": "Default",
+                  "TextureFilter": "Bilinear"
+                }
+              ],
+              "Children": []
+            }
+          ]
         },
         {
           "__guid": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549",
@@ -9399,8 +9869,10 @@
             {
               "__type": "Sandbox.CameraComponent",
               "__guid": "103de64a-e500-4501-b202-3f7009ceff9c",
+              "__enabled": true,
               "BackgroundColor": "0.33333,0.46275,0.52157,1",
               "ClearFlags": "All",
+              "EnablePostProcessing": true,
               "FieldOfView": 61.92,
               "FovAxis": "Horizontal",
               "IsMainCamera": false,
@@ -9412,9 +9884,11 @@
               "OnComponentUpdate": null,
               "Orthographic": false,
               "OrthographicHeight": 1204,
+              "PostProcessAnchor": null,
               "Priority": 2,
               "RenderExcludeTags": "",
               "RenderTags": "",
+              "RenderTexture": null,
               "TargetEye": "None",
               "Viewport": "0,0,1,1",
               "ZFar": 100,
@@ -9423,6 +9897,7 @@
             {
               "__type": "Sandbox.ScreenPanel",
               "__guid": "cb99b058-af0a-4350-b854-c0366616558e",
+              "__enabled": true,
               "AutoScreenScale": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -9444,6 +9919,7 @@
             {
               "__type": "CryptidHunt.DarknessSlider",
               "__guid": "b05553cf-610b-4d10-ae51-57ca7ef57205",
+              "__enabled": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -9460,6 +9936,8 @@
             {
               "__type": "Sandbox.ColorAdjustments",
               "__guid": "4d003ea7-63cc-4f06-abba-a8dd22bb0274",
+              "__enabled": true,
+              "Blend": 1,
               "Brightness": 1,
               "Contrast": 1,
               "HueRotate": 0,
@@ -9492,6 +9970,7 @@
             {
               "__type": "CryptidHunt.Computer",
               "__guid": "8901eac7-281e-486d-8a74-7ee484e0cab3",
+              "__enabled": true,
               "Camera": {
                 "_type": "gameobject",
                 "go": "e70f0ad6-a73a-4474-a3cb-2ffa4ff0d549"
@@ -9527,10 +10006,13 @@
             {
               "__type": "Sandbox.ModelRenderer",
               "__guid": "f68bbf7e-585b-4b00-8f57-1dda67c27eef",
+              "__enabled": true,
               "BodyGroups": 18446744073709551615,
               "CreateAttachments": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/bedroom/computer/computer.vmdl",
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
@@ -9550,7 +10032,9 @@
             {
               "__type": "Sandbox.BoxCollider",
               "__guid": "cdbf410b-e6a2-424b-8c9a-fd8edd5f5357",
+              "__enabled": true,
               "Center": "-6.897886,-1.606318,14.86068",
+              "Elasticity": null,
               "Friction": null,
               "IsTrigger": false,
               "OnComponentDestroy": null,
@@ -9563,6 +10047,7 @@
               "OnObjectTriggerExit": null,
               "OnTriggerEnter": null,
               "OnTriggerExit": null,
+              "RollingResistance": null,
               "Scale": "5.858971,25.4092,16.42472",
               "Static": false,
               "Surface": null,
@@ -9588,6 +10073,7 @@
                 {
                   "__type": "Sandbox.WorldPanel",
                   "__guid": "992a4183-3124-49cd-84b1-99625243047f",
+                  "__enabled": true,
                   "HorizontalAlign": "Center",
                   "InteractionRange": 1000,
                   "LookAtCamera": false,
@@ -9610,6 +10096,7 @@
                 {
                   "__type": "CryptidHunt.ComputerScreen",
                   "__guid": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
+                  "__enabled": true,
                   "Computer": {
                     "_type": "component",
                     "component_id": "8901eac7-281e-486d-8a74-7ee484e0cab3",
@@ -9623,8 +10110,10 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "TargetCamera": {
-                    "_type": "gameobject",
-                    "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e"
+                    "_type": "component",
+                    "component_id": "b24a76ef-4b69-4f14-9ae4-fc055e2ac986",
+                    "go": "dd85e5df-2606-4d3e-8753-9e1034f2720e",
+                    "component_type": "CameraComponent"
                   }
                 }
               ],
@@ -9652,6 +10141,8 @@
         {
           "__type": "Sandbox.ModelCollider",
           "__guid": "9b57ca52-7065-4a8d-ab39-d9b52b540d7c",
+          "__enabled": true,
+          "Elasticity": null,
           "Friction": null,
           "IsTrigger": false,
           "Model": "models/bedroom/cardboard/cardboard.vmdl",
@@ -9665,6 +10156,7 @@
           "OnObjectTriggerExit": null,
           "OnTriggerEnter": null,
           "OnTriggerExit": null,
+          "RollingResistance": null,
           "Static": false,
           "Surface": null,
           "SurfaceVelocity": "0,0,0"
@@ -9672,13 +10164,16 @@
         {
           "__type": "Sandbox.SkinnedModelRenderer",
           "__guid": "8b5801fa-27f5-46c0-b920-a62d1344db11",
+          "__enabled": true,
           "AnimationGraph": null,
           "BodyGroups": 18446744073709551615,
           "BoneMergeTarget": null,
           "CreateAttachments": false,
           "CreateBoneObjects": false,
+          "LodOverride": null,
           "MaterialGroup": null,
           "MaterialOverride": null,
+          "Materials": null,
           "Model": "models/bedroom/cardboard/cardboard.vmdl",
           "Morphs": {},
           "OnComponentDestroy": null,
@@ -9713,6 +10208,7 @@
         {
           "__type": "CryptidHunt.Interactable",
           "__guid": "af7e570f-5f50-4843-bb32-e6ed6b5e3ecb",
+          "__enabled": true,
           "InteractDescription": "Open",
           "Locked": true,
           "OnComponentDestroy": null,
@@ -9836,7 +10332,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 41,
+                "Id": 59,
                 "Value": true,
                 "DstId": 9,
                 "DstName": "_value"
@@ -9854,7 +10350,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 42,
+                "Id": 60,
                 "Value": false,
                 "DstId": 18,
                 "DstName": "_value"
@@ -9906,6 +10402,9 @@
           "__type": "Sandbox.ModelPhysics",
           "__guid": "6b7d2012-4bf9-469e-afd5-b0084d3552ac",
           "__enabled": false,
+          "Bodies": [],
+          "IgnoreRoot": false,
+          "Joints": [],
           "Locking": {
             "X": false,
             "Y": false,
@@ -9922,13 +10421,15 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
+          "PhysicsWereCreated": false,
           "Renderer": {
             "_type": "component",
             "component_id": "8b5801fa-27f5-46c0-b920-a62d1344db11",
             "go": "a56779a6-2b64-4164-9517-1fee14d2f617",
             "component_type": "SkinnedModelRenderer"
           },
-          "RigidbodyFlags": 0
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
         }
       ],
       "Children": []
@@ -9951,6 +10452,7 @@
         {
           "__type": "CryptidHunt.GlowingLight",
           "__guid": "58c68be8-3a20-446b-be91-05eea4e6d3b9",
+          "__enabled": true,
           "Color": "0,1,0.16667,1",
           "Lights": [
             {
@@ -9999,6 +10501,7 @@
             {
               "__type": "Sandbox.SpotLight",
               "__guid": "c20bd92f-e59f-4a7a-b1cf-91f98fc9167c",
+              "__enabled": true,
               "Attenuation": 0.07,
               "ConeInner": 15,
               "ConeOuter": 45,
@@ -10036,6 +10539,7 @@
             {
               "__type": "Sandbox.SpotLight",
               "__guid": "80be6d55-0660-4446-bd82-8476ab2f64bb",
+              "__enabled": true,
               "Attenuation": 0.07,
               "ConeInner": 15,
               "ConeOuter": 45,
@@ -10073,6 +10577,7 @@
             {
               "__type": "Sandbox.SpotLight",
               "__guid": "89fba85b-15db-4115-a866-082f5958e86b",
+              "__enabled": true,
               "Attenuation": 0.07,
               "ConeInner": 15,
               "ConeOuter": 45,
@@ -10110,13 +10615,16 @@
             {
               "__type": "Sandbox.SkinnedModelRenderer",
               "__guid": "9aa34682-53fe-493c-88c5-e19f281f391a",
+              "__enabled": true,
               "AnimationGraph": null,
               "BodyGroups": 18446744073709551615,
               "BoneMergeTarget": null,
               "CreateAttachments": false,
               "CreateBoneObjects": false,
+              "LodOverride": null,
               "MaterialGroup": null,
               "MaterialOverride": null,
+              "Materials": null,
               "Model": "models/brain/brain.vmdl",
               "Morphs": {},
               "OnComponentDestroy": null,
@@ -10171,6 +10679,7 @@
         {
           "__type": "Sandbox.VolumetricFogVolume",
           "__guid": "240afd2a-d327-4f8b-82e2-403aeb9f85b5",
+          "__enabled": true,
           "Bounds": {
             "Mins": "-500,-500,-500",
             "Maxs": "500,500,500"
