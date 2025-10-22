@@ -29,6 +29,7 @@ public sealed class Shotgun : Item
 
 			var shootTrace = Scene.Trace.Ray( player.Camera.WorldPosition, player.Camera.WorldPosition + rotation.Forward * 1500f )
 				.Radius( 5f )
+				.WithoutTags( "playerclip" )
 				.IgnoreGameObjectHierarchy( player.GameObject )
 				.Run();
 
