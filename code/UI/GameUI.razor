@@ -4,7 +4,7 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="ItemPrompt" style="display: @(Interactable.IsValid() ? "flex" : "none" )">
+    <div class="ItemPrompt" style="display: @(Interactable.IsValid() && Interactable.Active ? "flex" : "none")">
         <div class="itemContainer" style="left:@(ItemPromptPosition.x)px; top:@(ItemPromptPosition.y)px">
             <div class="image" style="background-image: url(@((Interactable?.Locked ?? false) ? "ui/lock.png" : "ui/hand.png"))"></div>
             <div class="promptContainer">
@@ -31,8 +31,8 @@
         base.OnUpdate();
         Interactable = Player.Instance?.InteractingWith;
 
-        if (Interactable.IsValid())
-            ItemPromptPosition = ( Scene.Camera.PointToScreenPixels( Interactable.WorldTransform.PointToWorld(Interactable.PromptOffset3D ) ) + Interactable.PromptOffset2D ) * Panel.ScaleFromScreen;
+        if (Interactable.IsValid() && Interactable.Active)
+            ItemPromptPosition = (Scene.Camera.PointToScreenPixels(Interactable.WorldTransform.PointToWorld(Interactable.PromptOffset3D)) + Interactable.PromptOffset2D) * Panel.ScaleFromScreen;
     }
 
     public static void OpenNote( string text, bool handprint = false )
