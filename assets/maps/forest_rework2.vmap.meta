@@ -15,7 +15,6 @@
       "Resources": null,
       "PackageReferences": [],
       "EditorReferences": [
-        "exorealms.17c1531bdc5c7b13#41168",
         "facepunch.beech_bush_large#60666",
         "facepunch.beech_bush_medium_wall_corner#60668",
         "facepunch.beech_bush_medium_wall#60667",
@@ -37,7 +36,6 @@
         "facepunch.glass_c#70691",
         "facepunch.grass_clump_a#47110",
         "facepunch.grass_clump_b#29063",
-        "facepunch.grass_mud_blend_01a#47043",
         "facepunch.industrial_strip_light#93958",
         "facepunch.metal_bare_a_hs#28944",
         "facepunch.metal_brushed#85422",
