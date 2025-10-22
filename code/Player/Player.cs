@@ -205,7 +205,7 @@ public partial class Player : Component
 	{
 		if ( HP <= 0f || LockInputs ) return;
 
-		var breathTime = Running ? 1f : 1.5f;
+		var breathTime = Running ? 1.5f : 2.5f;
 
 		if ( _lastBreath >= breathTime )
 		{
@@ -213,7 +213,7 @@ public partial class Player : Component
 			_lastBreath = 0f;
 
 			var sound = Sound.Play( _breatheIn ? "breathe_in" : "breathe_out", WorldPosition );
-			sound.Volume *= Running ? 10f : 5f;
+			sound.Volume *= Running ? 8f : 3f;
 			sound.Pitch *= Running ? 1.1f : 1f;
 
 		}
