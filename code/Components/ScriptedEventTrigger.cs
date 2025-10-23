@@ -52,6 +52,7 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 
 		GameTask.RunInThreadAsync( async () =>
 		{
+			await Task.MainThread();
 			await Task.DelayRealtimeSeconds( Transition.ValueRange.y + StayDuration );
 
 			player.LockInputs = false;
