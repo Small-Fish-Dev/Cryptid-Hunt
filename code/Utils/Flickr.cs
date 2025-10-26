@@ -101,8 +101,8 @@ public static partial class Flickr
 
 		var item = Random.Shared.FromList( feedItems );
 		Log.Info( $"Chose one with the following tags: {item.Tags}" );
-				return item.Media.FirstOrDefault().Value;
-			}
+		return item.Media.FirstOrDefault().Value;
+	}
 
 	private static async Task<Texture> GetFallback() => await Texture.LoadFromFileSystemAsync(
 		LocalFallbacks[Random.Shared.Int( 0, LocalFallbacks.Length - 1 )], FileSystem.Mounted );
