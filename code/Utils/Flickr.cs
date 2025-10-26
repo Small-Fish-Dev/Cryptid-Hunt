@@ -21,10 +21,23 @@ public static partial class Flickr
 	{
 		"nsfw",
 		"erotic",
-		"sexy",
+		"sex",
 		"nude",
+		"naked",
 		"porn",
-		"gore"
+		"gore",
+		"dick",
+		"penis",
+		"pussy",
+		"webcam",
+		"masturb", // includes "masturbation"
+		"fetish",
+		"kink",
+		"mature",
+		"erection",
+		"bdsm",
+		"boobs",
+		"tits"
 	};
 
 	public static readonly int ResponsePrefixLength = "jsonFlickrFeed(".Length;
@@ -52,9 +65,9 @@ public static partial class Flickr
 	private static async Task<string> GetUrl( string fear )
 	{
 		fear = Regex.Replace( fear.Trim(), @"\s+", " " );
-		var safeFear = HttpUtility.UrlEncode( fear );
 		// rndtrash: feeds accept a comma separated list of tags. Comment the next line if the results are actually worse.
-		safeFear = safeFear.Replace( "%20", "," );
+		fear = fear.Replace( " ", "," );
+		var safeFear = HttpUtility.UrlEncode( fear );
 
 		string jsonString;
 		try
@@ -79,38 +92,17 @@ public static partial class Flickr
 			return null;
 		}
 
-		if ( feed.Items.Length == 0 )
+		var feedItems = feed.Items.Where( item => !TagStopList.Any( tag => item.Tags.Contains( tag ) ) ).ToList();
+		if ( feedItems.Count == 0 )
 		{
+			// Oh. It's all porn. Bailing out!
 			return null;
 		}
 
-		var attempts = 0;
-		while ( attempts < 5 )
-		{
-			var imageN = Random.Shared.Int( 0, Math.Min( 10, feed.Items.Length ) - 1 );
-			var item = feed.Items[imageN];
-
-			var isNsfw = false;
-			foreach ( var tag in TagStopList )
-			{
-				if ( item.Tags.Contains( tag ) )
-				{
-					isNsfw = true;
-					break;
-				}
-			}
-
-			if ( !isNsfw )
-			{
+		var item = Random.Shared.FromList( feedItems );
+		Log.Info( $"Chose one with the following tags: {item.Tags}" );
 				return item.Media.FirstOrDefault().Value;
 			}
-
-			attempts++;
-		}
-
-		// Oh. It's all porn. Bailing out!
-		return null;
-	}
 
 	private static async Task<Texture> GetFallback() => await Texture.LoadFromFileSystemAsync(
 		LocalFallbacks[Random.Shared.Int( 0, LocalFallbacks.Length - 1 )], FileSystem.Mounted );
