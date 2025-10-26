@@ -793,6 +793,7 @@
             "go": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
             "component_type": "Credits"
           },
+          "MenuScene": "scenes/menu.scene",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,

@@ -27,9 +27,9 @@ public class Settings
 	public bool BeatenTheGame => _settings.BeatenTheGame;
 	public float? Darkness => _settings.Darkness;
 
-	public SettingsSchema DefaultSettings => new() { BeatenTheGame = false, Darkness = 0.5f };
+	public SettingsSchema DefaultSettings => new() { BeatenTheGame = false, Darkness = null };
 
-	private readonly SettingsSchema _settings;
+	private SettingsSchema _settings;
 
 	public Settings()
 	{
@@ -61,7 +61,11 @@ public class Settings
 		FileSystem.Data.WriteJson( SETTINGS_FILE, _settings );
 	}
 
-	public void Reset() => Change( settings => settings = DefaultSettings );
+	public void Reset()
+	{
+		_settings = DefaultSettings;
+		Save();
+	}
 
 	[ConCmd( "debug_beat_the_game" )]
 	static void DebugBeatTheGame()
