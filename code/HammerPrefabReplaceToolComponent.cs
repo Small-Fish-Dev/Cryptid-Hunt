@@ -2,7 +2,7 @@
 using System;
 using System.Text.Json.Serialization;
 
-public sealed class MyComponent : Component
+public sealed class HammerPrefabReplaceToolComponent : Component
 {
 	[Property]
 	[JsonIgnore]

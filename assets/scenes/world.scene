@@ -35,7 +35,7 @@
           "UseMapFromLaunch": false
         },
         {
-          "__type": "MyComponent",
+          "__type": "HammerPrefabReplaceToolComponent",
           "__guid": "753929e7-7cbd-44c0-add4-68437cb5b035",
           "__enabled": true,
           "OnComponentDestroy": null,
