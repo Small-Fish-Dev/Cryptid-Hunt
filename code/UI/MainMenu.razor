@@ -78,8 +78,8 @@
         Credits.Enabled = true;
         Enabled = false;
     }
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
     protected override int BuildHash() => System.HashCode.Combine(Time.Now);
 }
