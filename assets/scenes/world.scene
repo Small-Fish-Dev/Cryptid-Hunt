@@ -9917,23 +9917,6 @@
               "ZIndex": 100
             },
             {
-              "__type": "CryptidHunt.DarknessSlider",
-              "__guid": "b05553cf-610b-4d10-ae51-57ca7ef57205",
-              "__enabled": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Screen": {
-                "_type": "component",
-                "component_id": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
-                "go": "bd01783c-0c17-4441-af15-e658fe62fe56",
-                "component_type": "ComputerScreen"
-              }
-            },
-            {
               "__type": "Sandbox.ColorAdjustments",
               "__guid": "4d003ea7-63cc-4f06-abba-a8dd22bb0274",
               "__enabled": true,

@@ -33,6 +33,10 @@ public partial class GameManager : Component
 	protected override void OnStart()
 	{
 		Instance = this;
+
+		var darkness = (Settings.Instance.Darkness ?? 0f).Remap( 0f, 1f, 0.5f, 2.5f );
+		foreach ( var color in Scene.Components.GetAll<ColorAdjustments>( FindMode.EverythingInSelfAndDescendants ) )
+			color.Brightness = darkness;
 	}
 
 	TimeUntil _nextInsideCheck;
