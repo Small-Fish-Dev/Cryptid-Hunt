@@ -1,17 +1,29 @@
 {
   "RootObject": {
     "__guid": "1146d3f5-8005-400f-9c98-19e6496e035f",
+    "__version": 1,
     "Flags": 0,
     "Name": "shotgun",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
+        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
+        "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/items/shotgun.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -31,7 +43,9 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "2c00b058-ed22-4975-81ba-e7c7c5b00bbe",
+        "__enabled": true,
         "Center": "0.01233268,0.7363052,7.027711",
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -44,6 +58,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Scale": "2.893417,70.73567,13.28003",
         "Static": false,
         "Surface": null,
@@ -52,12 +67,14 @@
       {
         "__type": "CryptidHunt.Shotgun",
         "__guid": "d63cc682-3be9-471f-a29e-ddefd20e844c",
+        "__enabled": true,
         "Amount": 1,
         "BulletHolePrefab": {
           "_type": "gameobject",
           "prefab": "prefabs/bullet_hole.prefab"
         },
         "Description": "A way to fight back. Needs ammo.",
+        "DropSound": "sounds/items/drops/shotgun_drop.vsnd",
         "Icon": "ui/icons/shotguni.png",
         "InteractDescription": "Take",
         "Light": {
@@ -94,11 +111,18 @@
     "Children": [
       {
         "__guid": "be501c0f-93dc-4efe-9d41-1247c27b7e2c",
+        "__version": 1,
         "Flags": 0,
         "Name": "Point Light",
         "Position": "5.646256,-44.05298,16.78481",
+        "Rotation": "0,0,0,1",
+        "Scale": "1,1,1",
         "Tags": "light_point,light",
         "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "NetworkOrphaned": 0,
+        "OwnerTransfer": 1,
         "Components": [
           {
             "__type": "Sandbox.PointLight",
@@ -121,7 +145,6 @@
         "Children": []
       }
     ],
-    "__variables": [],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
@@ -139,13 +162,14 @@
         "ExcludedBodies": "",
         "IncludedBodies": ""
       }
-    }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
-  "ResourceVersion": 1,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

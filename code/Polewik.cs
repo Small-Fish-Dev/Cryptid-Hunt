@@ -224,6 +224,7 @@ public partial class Polewik : Component
 					await Task.MainThread();
 					await GameTask.DelaySeconds( 1.2f );
 
+					Player.Instance.ChangeHolding(null, true);
 					Player.Instance.HP -= 1;
 
 					await GameTask.DelaySeconds( 1f );
