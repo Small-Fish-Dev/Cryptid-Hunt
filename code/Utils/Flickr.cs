@@ -100,8 +100,9 @@ public static partial class Flickr
 		}
 
 		var item = Random.Shared.FromList( feedItems );
-		Log.Info( $"Chose one with the following tags: {item.Tags}" );
-		return item.Media.FirstOrDefault().Value;
+		var url = item.Media.FirstOrDefault().Value;
+		Log.Info( $"Chose one with the following tags: {item.Tags} ({url})" );
+		return url;
 	}
 
 	private static async Task<Texture> GetFallback() => await Texture.LoadFromFileSystemAsync(
