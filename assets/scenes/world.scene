@@ -5350,6 +5350,28 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
+              "PolewikSpawnPoints": [
+                {
+                  "SpawnPoint": {
+                    "_type": "gameobject",
+                    "go": "4b749da0-5fb7-429a-ba4c-797b835fb132"
+                  },
+                  "CameraTarget": {
+                    "_type": "gameobject",
+                    "go": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647"
+                  }
+                },
+                {
+                  "SpawnPoint": {
+                    "_type": "gameobject",
+                    "go": "8bc12aa1-059b-4ce6-b43d-2898ded89ea8"
+                  },
+                  "CameraTarget": {
+                    "_type": "gameobject",
+                    "go": "6cf1ef8d-3e87-4cf0-90db-90d7493add2c"
+                  }
+                }
+              ],
               "StayDuration": 2,
               "TargetTransform": {
                 "_type": "gameobject",
@@ -5381,9 +5403,78 @@
               "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
               "__version": 1,
               "Flags": 0,
-              "Name": "Camera Target",
+              "Name": "Camera Target 1",
               "Position": "-846,-21.66699,-24",
               "Rotation": "-0.04361936,-0.0000000383055,0.9990482,-0.0000008773406",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6cf1ef8d-3e87-4cf0-90db-90d7493add2c",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Camera Target 2",
+              "Position": "1089.508,-51.70459,-21.67339",
+              "Rotation": "-0.000000000000003562891,0.04361936,0.0000000000000001555591,0.9990482",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "94ce0e43-3bc3-44c2-8bad-fa6435f6f636",
+          "__version": 1,
+          "Flags": 0,
+          "Name": "Polewik Spawn Points",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "4b749da0-5fb7-429a-ba4c-797b835fb132",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Polewik Spawn 1",
+              "Position": "-4313.326,7890.674,224.1794",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8bc12aa1-059b-4ce6-b43d-2898ded89ea8",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Polewik Spawn 2",
+              "Position": "-1366.926,7822.728,224.1805",
+              "Rotation": "-0,0,-1,-0.00000004371139",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
