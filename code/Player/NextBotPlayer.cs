@@ -15,6 +15,8 @@ public partial class NextBotPlayer : Component
 	public Rigidbody CameraBody { get; set; }
 
 	public bool Alive { get; set; } = false;
+	const int INITIAL_ATTEMPTS = 2;
+	public int Attempts { get; set; }
 
 	protected override void OnStart()
 	{
@@ -32,6 +34,11 @@ public partial class NextBotPlayer : Component
 
 		if ( Computer.Started && Alive )
 		{
+			if ( Attempts <= 0 )
+			{
+				Attempts = INITIAL_ATTEMPTS;
+			}
+
 			Controller.UseInputControls = Computer.Playing;
 			Camera.WorldRotation = Controller.EyeAngles;
 			Camera.LocalPosition = Vector3.Up * 64f;
@@ -51,7 +58,13 @@ public partial class NextBotPlayer : Component
 		CameraBody.Enabled = true;
 
 		await Task.DelaySeconds( 4f );
+
 		Respawn();
+		Attempts--;
+		if ( Attempts <= 0 )
+		{
+			Computer.Started = false;
+		}
 	}
 
 	public void Respawn()

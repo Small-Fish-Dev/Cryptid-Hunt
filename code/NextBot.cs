@@ -1,5 +1,4 @@
 using CryptidHunt;
-using Sandbox;
 
 public sealed class NextBot : Component
 {
@@ -31,7 +30,7 @@ public sealed class NextBot : Component
 				Target.Die();
 		}
 
-		if ( _nextSound && Computer.Playing )
+		if ( _nextSound && Computer.Playing && Computer.Started )
 		{
 			Sound.Play( ScarySound, WorldPosition ).Volume = MathX.Remap( distance, 100f, 1000f, 2f, 0.1f );
 			_nextSound = 1f;

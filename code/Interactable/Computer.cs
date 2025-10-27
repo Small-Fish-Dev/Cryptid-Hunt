@@ -1,7 +1,4 @@
-﻿using Sandbox;
-using System.Numerics;
-
-namespace CryptidHunt;
+﻿namespace CryptidHunt;
 
 public partial class Computer : Interactable
 {
@@ -21,6 +18,7 @@ public partial class Computer : Interactable
 
 	public bool Playing { get; set; } = true;
 	public bool Started = false;
+	public bool HadWindowBreak = false;
 	public override string InteractDescription => Playing ? "Quit" : "Play";
 
 	protected override void OnStart()
@@ -42,13 +40,30 @@ public partial class Computer : Interactable
 		MusicHanlder.Volume = Playing ? 0.2f : 0f;
 	}
 
-	public async void StopGame()
+	public async void StopGameSequence()
 	{
+		if ( HadWindowBreak )
+		{
+			return;
+		}
+
 		await Task.DelaySeconds( 25f );
 		if ( Playing )
 			SoundPoint.StartSound();
+		HadWindowBreak = true;
 		await Task.DelaySeconds( 2f );
 
+		if ( Playing )
+		{
+			Playing = false;
+			Camera.Enabled = false;
+			Player.Instance.LockInputs = false;
+			Light.Enabled = true;
+		}
+	}
+
+	public void StopGame()
+	{
 		if ( Playing )
 		{
 			Playing = false;
@@ -78,7 +93,6 @@ public partial class Computer : Interactable
 		Player.Instance.LockInputs = false;
 
 		var screen = Game.ActiveScene.Components.Get<ComputerScreen>( FindMode.EverythingInSelfAndDescendants );
-		screen.Started = true;
 		screen.Input.Blur();
 	}
 }

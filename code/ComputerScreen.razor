@@ -4,31 +4,68 @@
 @namespace CryptidHunt
 
 <root>
-    <div class="blackScreen" style="opacity: @(Started ? 0 : 0.9)"></div>
-    <div class="textContainer" style="opacity: @(Started ? 0 : 1)">
-<div class="text">WELCOME TO THE NEXTBOT
+    <div class="blackScreen" style="opacity: @(Computer.Started ? 0 : 0.9)"></div>
+    @if (Computer.Started)
+    {
+        <div class="monkeybar">FPS: @FrameRate</div>
+    }
+    else
+    {
+        <div class="textContainer">
+            <div class="text">
+WELCOME TO THE NEXTBOT
 PERSONALISED!
-WHAT OR WHO DO YOU FEAR THE MOST?...</div>
-<div class="smallText">(PRESS MOUSE1 TO FOCUS)</div>
-    </div>
-    <TextEntry	@ref=Input 
-    onsubmit=@Submit 
-    onblur=@Close
-    Placeholder=@($"ENTER TO SEND") 
-    MaxLength=@(20)
-    style="opacity: @(Started ? 0 : 1)"/>
-        <div class="monkeyBar" style="opacity: @(Started ? 1 : 0)">MADE BY MONKEY BAR</div>
+WHAT OR WHO DO YOU FEAR THE MOST?...
+            </div>
+            <div class="smallText" style="flex-direction: column">
+                <label>(PRESS MOUSE1 TO FOCUS)</label>
+                <label>(PRESS ENTER TO SEND)</label>
+            </div>
+        </div>
+        <TextEntry @ref=Input
+                   onsubmit=@Submit
+                   onblur=@Close
+                   Placeholder="For example, @(Random.Shared.FromArray(ExampleFears))"
+                   MaxLength=@(20) />
+        <div class="monkeyBar">MADE BY MONKEY BAR</div>
+    }
 </root>
 
 @code
 {
+    public static readonly string[] ExampleFears = [
+        "colonoscopy",
+        "clowns",
+        "grass",
+        "aliens",
+        "clowns",
+        "heights",
+        "bears",
+        "drink and drive",
+        "martians",
+        "wendigo",
+        "night",
+        "vampires",
+        "wolves",
+        "dark basement",
+        "broccoli",
+        "ghosts",
+        "skeletons",
+        "ghouls",
+        "cemetery",
+        "dark castle",
+        "peanuts"
+    ];
+
     [Property]
     public CameraComponent TargetCamera { get; set; }
     [Property]
     public Computer Computer { get; set; }
     public TextEntry Input { get; set; }
-    public bool Started = false;
-    public int FrameRate = 30;
+    public string ExampleFear { get; set; }
+    public int FrameRate = 15;
+
+    TimeUntil _fpsReroll = 1;
 
     private static Texture _renderTarget;
     private RealTimeUntil _nextRender;
@@ -53,14 +90,19 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         if (!TargetCamera.IsValid() || !_nextRender)
             return;
 
-        FrameRate = Computer.Playing ? 15 : 5;
+        if (_fpsReroll)
+        {
+            FrameRate = Random.Shared.Int(10, 15);
+            _fpsReroll = Random.Shared.Float(0.5f, 2f);
+        }
+        var frameRate = Computer.Playing ? FrameRate : 5;
 
-        TargetCamera.RenderToTexture( _renderTarget);
-        _nextRender = 1f / FrameRate;
+        TargetCamera.RenderToTexture(_renderTarget);
+        _nextRender = 1f / frameRate;
 
         Panel.Style.BackgroundImage = _renderTarget;
 
-        if ( !Started )
+        if (Computer.Playing && !Computer.Started)
             Input?.Focus();
     }
 
@@ -74,16 +116,12 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
         if (string.IsNullOrWhiteSpace(message))
             return;
 
-        Started = true;
         Computer.Started = true;
-        Computer.StopGame();
+        Computer.StopGameSequence();
         SetFear(message);
-
-        //Player.Local.LastMessage = message;
-        //Player.Local.Talk(null);
     }
 
-    async void SetFear( string fear )
+    async void SetFear(string fear)
     {
         Computer.Fear = await Flickr.Get(fear);
     }
@@ -97,8 +135,7 @@ WHAT OR WHO DO YOU FEAR THE MOST?...</div>
     {
         Input?.Blur();
         Input.Text = string.Empty;
-        //Input.Label.SetCaretPosition(0);
     }
 
-    protected override int BuildHash() => System.HashCode.Combine(Time.Now);
+    protected override int BuildHash() => System.HashCode.Combine(Computer.Started, Computer.Started ? FrameRate : 0);
 }
