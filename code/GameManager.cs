@@ -29,6 +29,7 @@ public partial class GameManager : Component
 
 	SoundHandle _windSoundHandle;
 	public bool ReadInitialNote { get; set; } = false;
+	public Func<bool> EscapeOverride { get; set; }
 
 	protected override void OnStart()
 	{
@@ -48,9 +49,12 @@ public partial class GameManager : Component
 		if ( Input.EscapePressed )
 		{
 			Input.EscapePressed = false;
-			PauseScreen.Paused = !PauseScreen.Paused;
-			PauseScreen.Instance.Enabled = PauseScreen.Paused;
-			Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
+			if ( EscapeOverride == null || !EscapeOverride.Invoke() )
+			{
+				PauseScreen.Paused = !PauseScreen.Paused;
+				PauseScreen.Instance.Enabled = PauseScreen.Paused;
+				Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
+			}
 		}
 	}
 
