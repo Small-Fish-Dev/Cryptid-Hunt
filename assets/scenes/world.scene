@@ -3124,6 +3124,48 @@
                 "87146c74-616e-472f-9694-61f59c30d0fd": "2a631be9-0b55-4bfb-a15b-812a833bef53",
                 "2c00b058-ed22-4975-81ba-e7c7c5b00bbe": "c4e83c92-f738-4676-84fa-4a37bcb1fa2e"
               }
+            },
+            {
+              "__guid": "84b239fd-15c1-4711-8f09-a0a1e49e2faa",
+              "__version": 1,
+              "__Prefab": "prefabs/medkit.prefab",
+              "__PrefabInstancePatch": {
+                "AddedObjects": [],
+                "RemovedObjects": [],
+                "PropertyOverrides": [
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Name",
+                    "Value": "medkit (2)"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Position",
+                    "Value": "1455.38,9577.34,459.0103"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Rotation",
+                    "Value": "-0.1947677,0.2953338,0.4861608,0.7990568"
+                  }
+                ],
+                "MovedObjects": []
+              },
+              "__PrefabIdToInstanceId": {
+                "1146d3f5-8005-400f-9c98-19e6496e035f": "84b239fd-15c1-4711-8f09-a0a1e49e2faa",
+                "d2f8e772-554d-4885-ac5e-5f8b6268e6d3": "001c1e2e-2f4f-4a5e-9ad3-2d7debd15317",
+                "87146c74-616e-472f-9694-61f59c30d0fd": "7fe27f76-b627-4092-b4bc-aabd1dd9fa30",
+                "2c00b058-ed22-4975-81ba-e7c7c5b00bbe": "f4927bcb-8194-4eca-9f04-187e8648cff4"
+              }
             }
           ]
         },
@@ -4611,6 +4653,17 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Sound": "sounds/items/metal_bar.sound"
+                },
+                {
+                  "__type": "CryptidHunt.PolewikTrigger",
+                  "__guid": "63d5d08e-58b3-4d39-910b-ca492684ca65",
+                  "__enabled": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
                 }
               ],
               "Children": []
@@ -10203,7 +10256,7 @@
           "OnInteract": {
             "__version": 9,
             "__guid": "28eb301d-3a0a-4be8-9d5b-83319c26a596",
-            "__changeId": 82,
+            "__changeId": 84,
             "UserData": {
               "Title": "On Interact",
               "ReferencedComponentTypes": []
