@@ -8310,7 +8310,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Radius": 16,
+          "Radius": 32,
           "Separation": 0.25,
           "UpdatePosition": true,
           "UpdateRotation": true
