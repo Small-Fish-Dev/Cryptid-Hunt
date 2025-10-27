@@ -124,6 +124,8 @@ public partial class GameManager : Component
 
 	public async void Credits()
 	{
+		Settings.Instance.Change( s => s.BeatenTheGame = true );
+
 		Sound.Play( "creepy_radio" );
 		Sound.Play( "slam_flute" );
 
