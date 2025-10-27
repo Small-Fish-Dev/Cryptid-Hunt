@@ -8,7 +8,7 @@
     <div class="containerWide">
         <div class="names">
             <label class="gameTitle">CREDITS</label>
-            <label class="subTitle">Game by SmallFish</label>
+            <label class="subTitle">Game by Small Fish</label>
             <label class="nameCredit"> ubre: Lead</label>
             <label class="nameCredit"> Wheatley: Level Design (Map)</label>
             <label class="nameCredit"> rndtrash: Flickr API + Fixes</label>
@@ -17,6 +17,7 @@
             <label class="nameCredit"> Grodbert: Modeller (Creatures)</label>
         </div>
         <ModelPreviewer></ModelPreviewer>
+        <button class="mainMenuButton" onclick=@(() => new WebPanel() { Url = "https://sbox.game/fish", Parent = this.Panel })>[More games by Small Fish]</button>
         <button class="mainMenuButton" onclick=@ToMainMenu>[Main Menu]</button>
     </div>
     <div class="container"><div class="forest"></div></div>
@@ -40,9 +41,4 @@
             Enabled = false;
         }
     }
-
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
 }
