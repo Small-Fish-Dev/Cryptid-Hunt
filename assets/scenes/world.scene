@@ -35,7 +35,7 @@
           "UseMapFromLaunch": false
         },
         {
-          "__type": "MyComponent",
+          "__type": "HammerPrefabReplaceToolComponent",
           "__guid": "753929e7-7cbd-44c0-add4-68437cb5b035",
           "__enabled": true,
           "OnComponentDestroy": null,
@@ -3124,6 +3124,48 @@
                 "87146c74-616e-472f-9694-61f59c30d0fd": "2a631be9-0b55-4bfb-a15b-812a833bef53",
                 "2c00b058-ed22-4975-81ba-e7c7c5b00bbe": "c4e83c92-f738-4676-84fa-4a37bcb1fa2e"
               }
+            },
+            {
+              "__guid": "84b239fd-15c1-4711-8f09-a0a1e49e2faa",
+              "__version": 1,
+              "__Prefab": "prefabs/medkit.prefab",
+              "__PrefabInstancePatch": {
+                "AddedObjects": [],
+                "RemovedObjects": [],
+                "PropertyOverrides": [
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Name",
+                    "Value": "medkit (2)"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Position",
+                    "Value": "1455.38,9577.34,459.0103"
+                  },
+                  {
+                    "Target": {
+                      "Type": "GameObject",
+                      "IdValue": "1146d3f5-8005-400f-9c98-19e6496e035f"
+                    },
+                    "Property": "Rotation",
+                    "Value": "-0.1947677,0.2953338,0.4861608,0.7990568"
+                  }
+                ],
+                "MovedObjects": []
+              },
+              "__PrefabIdToInstanceId": {
+                "1146d3f5-8005-400f-9c98-19e6496e035f": "84b239fd-15c1-4711-8f09-a0a1e49e2faa",
+                "d2f8e772-554d-4885-ac5e-5f8b6268e6d3": "001c1e2e-2f4f-4a5e-9ad3-2d7debd15317",
+                "87146c74-616e-472f-9694-61f59c30d0fd": "7fe27f76-b627-4092-b4bc-aabd1dd9fa30",
+                "2c00b058-ed22-4975-81ba-e7c7c5b00bbe": "f4927bcb-8194-4eca-9f04-187e8648cff4"
+              }
             }
           ]
         },
@@ -4611,6 +4653,17 @@
                   "OnComponentStart": null,
                   "OnComponentUpdate": null,
                   "Sound": "sounds/items/metal_bar.sound"
+                },
+                {
+                  "__type": "CryptidHunt.PolewikTrigger",
+                  "__guid": "63d5d08e-58b3-4d39-910b-ca492684ca65",
+                  "__enabled": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null
                 }
               ],
               "Children": []
@@ -5297,6 +5350,28 @@
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
+              "PolewikSpawnPoints": [
+                {
+                  "SpawnPoint": {
+                    "_type": "gameobject",
+                    "go": "4b749da0-5fb7-429a-ba4c-797b835fb132"
+                  },
+                  "CameraTarget": {
+                    "_type": "gameobject",
+                    "go": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647"
+                  }
+                },
+                {
+                  "SpawnPoint": {
+                    "_type": "gameobject",
+                    "go": "8bc12aa1-059b-4ce6-b43d-2898ded89ea8"
+                  },
+                  "CameraTarget": {
+                    "_type": "gameobject",
+                    "go": "6cf1ef8d-3e87-4cf0-90db-90d7493add2c"
+                  }
+                }
+              ],
               "StayDuration": 2,
               "TargetTransform": {
                 "_type": "gameobject",
@@ -5328,9 +5403,78 @@
               "__guid": "0ba58d9b-4dbb-49d9-abd2-e529c8ad1647",
               "__version": 1,
               "Flags": 0,
-              "Name": "Camera Target",
+              "Name": "Camera Target 1",
               "Position": "-846,-21.66699,-24",
               "Rotation": "-0.04361936,-0.0000000383055,0.9990482,-0.0000008773406",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "6cf1ef8d-3e87-4cf0-90db-90d7493add2c",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Camera Target 2",
+              "Position": "1089.508,-51.70459,-21.67339",
+              "Rotation": "-0.000000000000003562891,0.04361936,0.0000000000000001555591,0.9990482",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            }
+          ]
+        },
+        {
+          "__guid": "94ce0e43-3bc3-44c2-8bad-fa6435f6f636",
+          "__version": 1,
+          "Flags": 0,
+          "Name": "Polewik Spawn Points",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0,1",
+          "Scale": "1,1,1",
+          "Tags": "",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "NetworkOrphaned": 0,
+          "OwnerTransfer": 1,
+          "Components": [],
+          "Children": [
+            {
+              "__guid": "4b749da0-5fb7-429a-ba4c-797b835fb132",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Polewik Spawn 1",
+              "Position": "-4313.326,7890.674,224.1794",
+              "Rotation": "0,0,0,1",
+              "Scale": "1,1,1",
+              "Tags": "",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "NetworkOrphaned": 0,
+              "OwnerTransfer": 1,
+              "Components": [],
+              "Children": []
+            },
+            {
+              "__guid": "8bc12aa1-059b-4ce6-b43d-2898ded89ea8",
+              "__version": 1,
+              "Flags": 0,
+              "Name": "Polewik Spawn 2",
+              "Position": "-1366.926,7822.728,224.1805",
+              "Rotation": "-0,0,-1,-0.00000004371139",
               "Scale": "1,1,1",
               "Tags": "",
               "Enabled": true,
@@ -8260,7 +8404,7 @@
           "OnComponentFixedUpdate": null,
           "OnComponentStart": null,
           "OnComponentUpdate": null,
-          "Radius": 16,
+          "Radius": 32,
           "Separation": 0.25,
           "UpdatePosition": true,
           "UpdateRotation": true
@@ -9923,23 +10067,6 @@
               "ZIndex": 100
             },
             {
-              "__type": "CryptidHunt.DarknessSlider",
-              "__guid": "b05553cf-610b-4d10-ae51-57ca7ef57205",
-              "__enabled": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Screen": {
-                "_type": "component",
-                "component_id": "bf6b1f53-1a8a-4819-b119-a1ca8e24d4bc",
-                "go": "bd01783c-0c17-4441-af15-e658fe62fe56",
-                "component_type": "ComputerScreen"
-              }
-            },
-            {
               "__type": "Sandbox.ColorAdjustments",
               "__guid": "4d003ea7-63cc-4f06-abba-a8dd22bb0274",
               "__enabled": true,
@@ -10226,7 +10353,7 @@
           "OnInteract": {
             "__version": 9,
             "__guid": "28eb301d-3a0a-4be8-9d5b-83319c26a596",
-            "__changeId": 82,
+            "__changeId": 84,
             "UserData": {
               "Title": "On Interact",
               "ReferencedComponentTypes": []

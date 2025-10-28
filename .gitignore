@@ -6,6 +6,8 @@
 .vs/*
 .vscode/*
 *.csproj
+*.sln
+*.slnx
 obj
 bin
 Properties/*

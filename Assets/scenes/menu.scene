@@ -108,7 +108,7 @@
                 "DstName": "_target"
               },
               {
-                "Id": 7,
+                "Id": 9,
                 "Value": false,
                 "DstId": 3,
                 "DstName": "_value"
@@ -120,7 +120,7 @@
                 "DstName": "_signal"
               },
               {
-                "Id": 8,
+                "Id": 10,
                 "Value": 5,
                 "DstId": 6,
                 "DstName": "seconds"
@@ -793,6 +793,7 @@
             "go": "2e117d0a-763a-43ea-8f2d-f07bba465ed7",
             "component_type": "Credits"
           },
+          "MenuScene": "scenes/menu.scene",
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,
           "OnComponentEnabled": null,
@@ -822,6 +823,17 @@
         {
           "__type": "CryptidHunt.GameUI",
           "__guid": "518a67f0-bcef-4367-b2ba-78de8a9e0721",
+          "__enabled": true,
+          "OnComponentDestroy": null,
+          "OnComponentDisabled": null,
+          "OnComponentEnabled": null,
+          "OnComponentFixedUpdate": null,
+          "OnComponentStart": null,
+          "OnComponentUpdate": null
+        },
+        {
+          "__type": "CryptidHunt.DarknessSlider",
+          "__guid": "a1b638d3-2927-4248-8aac-3326c8c28a8e",
           "__enabled": true,
           "OnComponentDestroy": null,
           "OnComponentDisabled": null,

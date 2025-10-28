@@ -1,8 +1,5 @@
-﻿using Sandbox;
-using Sandbox.Internal;
-using Sandbox.TextureLoader;
-using System.Linq.Expressions;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -20,6 +17,29 @@ public static partial class Flickr
 		"ui/fallbacks/snowball2.png",
 	};
 
+	public static readonly string[] TagStopList =
+	{
+		"nsfw",
+		"erotic",
+		"sex",
+		"nude",
+		"naked",
+		"porn",
+		"gore",
+		"dick",
+		"penis",
+		"pussy",
+		"webcam",
+		"masturb", // includes "masturbation"
+		"fetish",
+		"kink",
+		"mature",
+		"erection",
+		"bdsm",
+		"boobs",
+		"tits"
+	};
+
 	public static readonly int ResponsePrefixLength = "jsonFlickrFeed(".Length;
 	public static readonly int ResponsePostfixLength = ")".Length;
 
@@ -34,6 +54,8 @@ public static partial class Flickr
 		{
 			[JsonPropertyName( "media" )]
 			public Dictionary<string, string> Media { get; set; }
+			[JsonPropertyName( "tags" )]
+			public string Tags { get; set; }
 		}
 
 		[JsonPropertyName( "items" )]
@@ -42,7 +64,21 @@ public static partial class Flickr
 
 	private static async Task<string> GetUrl( string fear )
 	{
-		var jsonString = await Http.RequestStringAsync( $"https://www.flickr.com/services/feeds/photos_public.gne?format=json&tags={HttpUtility.UrlEncode( fear )}" );
+		fear = Regex.Replace( fear.Trim(), @"\s+", " " );
+		// rndtrash: feeds accept a comma separated list of tags. Comment the next line if the results are actually worse.
+		fear = fear.Replace( " ", "," );
+		var safeFear = HttpUtility.UrlEncode( fear );
+
+		string jsonString;
+		try
+		{
+			jsonString = await Http.RequestStringAsync( $"https://www.flickr.com/services/feeds/photos_public.gne?format=json&tags={safeFear}" );
+		}
+		catch ( Exception ex )
+		{
+			Log.Error( $"Got an exception while reaching out to Flickr API! ({ex})" );
+			return null;
+		}
 		jsonString = jsonString.Substring( ResponsePrefixLength, jsonString.Length - ResponsePrefixLength - ResponsePostfixLength );
 
 		FlickPublicFeed feed;
@@ -53,19 +89,20 @@ public static partial class Flickr
 		catch ( Exception ex )
 		{
 			Log.Error( $"Got an exception while parsing Flickr JSON! ({ex}, the JSON in question: {jsonString})" );
-			return default;
+			return null;
 		}
 
-		if ( feed.Items.Length == 0 )
-			return default;
+		var feedItems = feed.Items.Where( item => !TagStopList.Any( tag => item.Tags.Contains( tag ) ) ).ToList();
+		if ( feedItems.Count == 0 )
+		{
+			// Oh. It's all porn. Bailing out!
+			return null;
+		}
 
-		var imageN = Random.Shared.Int( 0, Math.Min( 4, feed.Items.Length ) - 1 );
-		var imageUrl = feed.Items[imageN].Media.FirstOrDefault().Value;
-
-		if ( imageUrl != default )
-			return imageUrl;
-
-		return default;
+		var item = Random.Shared.FromList( feedItems );
+		var url = item.Media.FirstOrDefault().Value;
+		Log.Info( $"Chose one with the following tags: {item.Tags} ({url})" );
+		return url;
 	}
 
 	private static async Task<Texture> GetFallback() => await Texture.LoadFromFileSystemAsync(
@@ -74,7 +111,7 @@ public static partial class Flickr
 	public static async Task<Texture> Get( string fear )
 	{
 		var url = await GetUrl( fear );
-		if ( url == default ) // got an empty url
+		if ( url == null ) // got an empty url
 			return await GetFallback();
 
 		var image = Texture.Load( url );

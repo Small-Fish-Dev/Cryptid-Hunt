@@ -5,23 +5,40 @@
 
 <root>
     <div class="Logo"></div>
-    <button class="Button" onclick=@Start >Start Game</button>
+    <button class="Button" onclick=@Start>Start Game</button>
     <button class="Button" onclick=@ToCredits>Credits</button>
     <button class="Button" onclick=@Quit>Quit</button>
+
+    <div class="reset">
+        @if (ResetDialogOpen)
+        {
+            <label class="text">Are you sure?</label>
+            <div class="row">
+                <button class="Button red" onclick=@ResetSettings>YES</button>
+                <button class="Button" onclick=@( () => ResetDialogOpen = false )>NO</button>
+            </div>
+        }
+        else
+        {
+            <button class="Button red" onclick=@( () => ResetDialogOpen = true )>Reset Settings</button>
+        }
+    </div>
 </root>
 
 @code
 {
     [Property]
     public SceneFile StartScene { get; set; }
+    [Property]
+    public SceneFile MenuScene { get; set; }
 
     public bool Transitioning { get; set; } = false;
+    public bool ResetDialogOpen { get; set; } = false;
 
     public async void Start()
     {
         if (Transitioning) return;
 
-        Sound.Play("button_click");
         Transitioning = true;
 
         GameUI.BlackScreen();
@@ -30,11 +47,23 @@
         Scene.LoadFromFile(StartScene.ResourcePath);
     }
 
+    public async void ResetSettings()
+    {
+        if (Transitioning) return;
+
+        Transitioning = true;
+
+        GameUI.BlackScreen();
+        await GameTask.DelaySeconds(2.5f);
+
+        Settings.Instance.Reset();
+        Scene.LoadFromFile(MenuScene.ResourcePath);
+    }
+
     public async void Quit()
     {
         if (Transitioning) return;
 
-        Sound.Play("button_click");
         Transitioning = true;
 
         GameUI.BlackScreen();
@@ -46,12 +75,11 @@
 
     public void ToCredits()
     {
-        Sound.Play("button_click");
         Credits.Enabled = true;
         Enabled = false;
     }
-	/// <summary>
-	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
-	/// </summary>
-	protected override int BuildHash() => System.HashCode.Combine( Time.Now );
+    /// <summary>
+    /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+    /// </summary>
+    protected override int BuildHash() => System.HashCode.Combine(Time.Now);
 }

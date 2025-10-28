@@ -5,8 +5,16 @@
 <root>
     <button class="modelPreviewButton" onclick=@Previous>❮</button>
     <div class="modelPreviewerer">
-        <ModelPreview ModelPath=@CurrentPreview.Path></ModelPreview>
-        <div class="modelInfo">@CurrentPreview.Name - @CurrentPreview.Author</div>
+        @if (CanSeeAsset)
+        {
+            <ModelPreview ModelPath=@CurrentPreview.Path @ref=ModelPreviewRef></ModelPreview>
+        }
+        else
+        {
+            ModelPreviewRef = null;
+            <div class="secret">[LOCKED]</div>
+        }
+        <div class="modelInfo">@(CanSeeAsset? CurrentPreview.Name: "???") - @CurrentPreview.Author</div>
     </div>
     <button class="modelPreviewButton" onclick=@Next>❯</button>
 </root>
@@ -19,10 +27,15 @@
         public string Path;
         public string Author;
         public Angles Rotation;
+        public bool IsSecret = false;
+
+        public ModelPreviewPreset()
+        {
+        }
 
         public static ModelPreviewPreset[] All => new ModelPreviewPreset[]
         {
-            new ModelPreviewPreset { Name = "Polewik", Path = "models/polewik/polewik.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ) },
+            new ModelPreviewPreset { Name = "Polewik", Path = "models/polewik/polewik.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), IsSecret = true },
             new ModelPreviewPreset { Name = "Ammo Pack", Path = "models/items/ammo.vmdl", Author = "Luke", Rotation = new Angles( 20, 45, 0 ) },
             new ModelPreviewPreset { Name = "Bear Trap", Path = "models/items/beartrap.vmdl", Author = "Luke", Rotation = new Angles( 35, 45, 0 ) },
             new ModelPreviewPreset { Name = "Locked Chest", Path = "models/items/chest.vmdl", Author = "Luke", Rotation = new Angles( 0, -60, -20 ) },
@@ -33,12 +46,16 @@
             new ModelPreviewPreset { Name = "Bed", Path = "models/items/bed.vmdl", Author = "Luke", Rotation = new Angles( -20, 0, 0 )},
             new ModelPreviewPreset { Name = "Page", Path = "models/items/page.vmdl", Author = "Luke", Rotation = new Angles( 60, 20, 0 ) },
             new ModelPreviewPreset { Name = "Sign", Path = "models/items/sign.vmdl", Author = "Luke", Rotation = new Angles( 0, 90, 0 )},
-            new ModelPreviewPreset { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ) },
+            new ModelPreviewPreset { Name = "Palos Verdes Brain", Path = "models/brain/brain.vmdl", Author = "Grodbert", Rotation = new Angles( 20, 10, 0 ), IsSecret = true },
         };
     }
 
     public int CurrentSelected = 0;
     public ModelPreviewPreset CurrentPreview => ModelPreviewPreset.All[CurrentSelected];
+
+    public ModelPreview ModelPreviewRef;
+
+    public bool CanSeeAsset => !CurrentPreview.IsSecret || Settings.Instance.BeatenTheGame;
 
     public void Previous()
     {
@@ -46,18 +63,28 @@
         if (CurrentSelected <= -1)
             CurrentSelected = ModelPreviewPreset.All.Count() - 1;
 
-        Sound.Play("button_click");
+        ApplyAsset();
     }
 
     public void Next()
     {
         CurrentSelected = (CurrentSelected + 1) % ModelPreviewPreset.All.Count();
-        Sound.Play("button_click");
+        ApplyAsset();
     }
 
+    private void ApplyAsset()
+    {
+        if (!ModelPreviewRef.IsValid())
+        {
+            return;
+        }
 
-	/// <summary>
+        // TODO: rndtrash: the intended preview angles don't look right
+        // ModelPreviewRef.Renderer.WorldRotation = CurrentPreview.Rotation;
+    }
+
+    /// <summary>
     /// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
     /// </summary>
-    protected override int BuildHash() => System.HashCode.Combine(CurrentSelected);
+    protected override int BuildHash() => System.HashCode.Combine(CurrentSelected, Settings.Instance.BeatenTheGame);
 }

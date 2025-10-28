@@ -1,15 +1,26 @@
 {
   "RootObject": {
     "__guid": "1146d3f5-8005-400f-9c98-19e6496e035f",
+    "__version": 1,
     "Flags": 0,
     "Name": "crowbar",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
+    "Tags": "",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "CryptidHunt.Crowbar",
         "__guid": "166bc436-98b0-4f77-8afb-4614af72eb6d",
+        "__enabled": true,
         "Amount": 1,
         "Description": "To open rusty doors and the likes.",
+        "DropSound": "sounds/items/drops/crowbar_drop.vsnd",
         "Icon": "ui/icons/crowbari.png",
         "InteractDescription": "Take Crowbar",
         "Locked": false,
@@ -26,6 +37,7 @@
         "OnComponentFixedUpdate": null,
         "OnComponentStart": null,
         "OnComponentUpdate": null,
+        "OnInteract": null,
         "PromptOffset2D": "0,0",
         "PromptOffset3D": "0,0,0",
         "Title": "Crowbar",
@@ -38,10 +50,13 @@
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "87146c74-616e-472f-9694-61f59c30d0fd",
+        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
+        "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/items/crowbar.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -61,7 +76,9 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "2c00b058-ed22-4975-81ba-e7c7c5b00bbe",
+        "__enabled": true,
         "Center": "13.75551,1.717767,0.4191902",
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -74,6 +91,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Scale": "41.63419,5.064107,2.099545",
         "Static": false,
         "Surface": null,
@@ -81,7 +99,6 @@
       }
     ],
     "Children": [],
-    "__variables": [],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
@@ -99,13 +116,14 @@
         "ExcludedBodies": "",
         "IncludedBodies": ""
       }
-    }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
-  "ResourceVersion": 1,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

@@ -34,10 +34,10 @@ public partial class SceneTransferDoor : Interactable
 			Sound.Play( "chest_locked", WorldPosition );
 		else
 		{
-			NextScene();
 			Sound.Play( "door_open", WorldPosition );
 			Open = true;
 			_degrees = 25f;
+			NextScene();
 		}
 
 		player.AddCameraShake( 0.3f, 8f );
@@ -48,6 +48,7 @@ public partial class SceneTransferDoor : Interactable
 		GameUI.BlackScreen();
 		Player.Instance.LockInputs = true;
 		await Task.DelaySeconds( 2.5f );
+		_degrees = 0;
 		Player.Instance.LockInputs = false;
 		Player.Instance.WorldPosition = SpawnPoint.WorldPosition;
 		Player.Instance.Controller.EyeAngles = SpawnPoint.WorldRotation;

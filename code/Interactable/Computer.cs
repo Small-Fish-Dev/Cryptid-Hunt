@@ -1,7 +1,4 @@
-﻿using Sandbox;
-using System.Numerics;
-
-namespace CryptidHunt;
+﻿namespace CryptidHunt;
 
 public partial class Computer : Interactable
 {
@@ -21,13 +18,14 @@ public partial class Computer : Interactable
 
 	public bool Playing { get; set; } = true;
 	public bool Started = false;
+	public bool HadWindowBreak = false;
 	public override string InteractDescription => Playing ? "Quit" : "Play";
 
 	protected override void OnStart()
 	{
 		base.OnStart();
-		Camera.Enabled = true;
-		Player.Instance.LockInputs = true;
+
+		StartGame();
 
 		MusicHanlder = Sound.Play( Music );
 	}
@@ -42,43 +40,75 @@ public partial class Computer : Interactable
 		MusicHanlder.Volume = Playing ? 0.2f : 0f;
 	}
 
-	public async void StopGame()
+	public async void StopGameSequence()
 	{
+		if ( HadWindowBreak )
+		{
+			return;
+		}
+
 		await Task.DelaySeconds( 25f );
 		if ( Playing )
 			SoundPoint.StartSound();
+		HadWindowBreak = true;
 		await Task.DelaySeconds( 2f );
 
-		if ( Playing )
-		{
-			Playing = false;
-			Camera.Enabled = false;
-			Player.Instance.LockInputs = false;
-			Light.Enabled = true;
-		}
+		StopGame();
+	}
+
+	public void StopGame()
+	{
+		Playing = false;
+		Camera.Enabled = false;
+		Player.Instance.LockInputs = false;
+		Light.Enabled = true;
+		GameManager.Instance.EscapeOverride = null;
+	}
+
+	public void StartGame()
+	{
+		Playing = true;
+		Camera.Enabled = true;
+		Player.Instance.LockInputs = true;
+		GameManager.Instance.EscapeOverride = () =>
+			{
+				if ( !Playing )
+				{
+					GameManager.Instance.EscapeOverride = null;
+					return false;
+				}
+
+				// Don't let the player escape early
+				if ( HadWindowBreak )
+				{
+					StopGame();
+				}
+				return true;
+			};
 	}
 
 	public override void Interact( Player player )
 	{
 		if ( !player.IsValid() ) return;
 
-		Playing = !Playing;
-		Camera.Enabled = Playing;
-		Player.Instance.LockInputs = Playing;
+		if ( Playing )
+		{
+			StopGame();
+		}
+		else
+		{
+			StartGame();
+		}
 	}
 
 	[ConCmd( "skip_nextbot" )]
 	public static void SkipNextbot()
 	{
 		var computer = Game.ActiveScene.Components.Get<Computer>( FindMode.EverythingInSelfAndDescendants );
-		computer.Playing = false;
+		computer.StopGame();
 		computer.Started = true;
-		computer.Camera.Enabled = false;
-		computer.Light.Enabled = true;
-		Player.Instance.LockInputs = false;
 
 		var screen = Game.ActiveScene.Components.Get<ComputerScreen>( FindMode.EverythingInSelfAndDescendants );
-		screen.Started = true;
 		screen.Input.Blur();
 	}
 }

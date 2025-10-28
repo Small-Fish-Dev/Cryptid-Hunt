@@ -1,3 +1,5 @@
+@import '/UI/Style.scss';
+
 ModelPreviewer {
     width: 80%;
     height: 40%;
@@ -41,6 +43,12 @@ ModelPreviewer {
         background-position: center;
         background-size: 100% 100%;
         background-repeat: no-repeat;
+
+        .secret {
+            font-size: 5vmin;
+            height: 100%;
+            align-items: center;
+        }
 
         .modelInfo {
             font-size: 3.2vmin;

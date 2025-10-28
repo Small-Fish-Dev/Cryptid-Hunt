@@ -1,9 +1,11 @@
+@import '/UI/Style.scss';
+
 MainMenu {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 100%;
-	width: 100%;
+	right: 0;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -21,8 +23,17 @@ MainMenu {
 		margin: 100px;
 	}
 
+	label.text {
+		text-align: center;
+		font-family: Neucha;
+		font-size: 60px;
+		color: rgb(240, 240, 240);
+		text-stroke: 5px rgb(30, 30, 30);
+		text-shadow: 0px 0px 8px rgba(black, 1);
+	}
+
 	.Button {
-		height: 10%;
+		height: 10vh;
 		aspect-ratio: 4;
 		display: flex;
 		flex-direction: column;
@@ -35,5 +46,25 @@ MainMenu {
 		text-stroke: 5px rgb(30, 30, 30);
 		cursor: pointer;
 		text-shadow: 0px 0px 8px rgba(black, 1);
+
+		&.red {
+			color: rgb(240, 150, 150) !important;
+			text-stroke: 5px rgb(30, 20, 20) !important;
+			text-shadow: 0px 0px 8px rgba(red, 0.2);
+		}
+	}
+
+	div.reset {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+
+		.row {
+			flex-direction: row;
+			flex-wrap: nowrap;
+		}
 	}
 }

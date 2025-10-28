@@ -29,10 +29,15 @@ public partial class GameManager : Component
 
 	SoundHandle _windSoundHandle;
 	public bool ReadInitialNote { get; set; } = false;
+	public Func<bool> EscapeOverride { get; set; }
 
 	protected override void OnStart()
 	{
 		Instance = this;
+
+		var darkness = (Settings.Instance.Darkness ?? 0f).Remap( 0f, 1f, 0.5f, 2.5f );
+		foreach ( var color in Scene.Components.GetAll<ColorAdjustments>( FindMode.EverythingInSelfAndDescendants ) )
+			color.Brightness = darkness;
 	}
 
 	TimeUntil _nextInsideCheck;
@@ -44,9 +49,12 @@ public partial class GameManager : Component
 		if ( Input.EscapePressed )
 		{
 			Input.EscapePressed = false;
-			PauseScreen.Paused = !PauseScreen.Paused;
-			PauseScreen.Instance.Enabled = PauseScreen.Paused;
-			Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
+			if ( EscapeOverride == null || !EscapeOverride.Invoke() )
+			{
+				PauseScreen.Paused = !PauseScreen.Paused;
+				PauseScreen.Instance.Enabled = PauseScreen.Paused;
+				Scene.TimeScale = PauseScreen.Paused ? 0f : 1f;
+			}
 		}
 	}
 
@@ -120,6 +128,8 @@ public partial class GameManager : Component
 
 	public async void Credits()
 	{
+		Settings.Instance.Change( s => s.BeatenTheGame = true );
+
 		Sound.Play( "creepy_radio" );
 		Sound.Play( "slam_flute" );
 

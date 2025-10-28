@@ -1,16 +1,26 @@
 {
   "RootObject": {
     "__guid": "81755197-78ae-44f0-8d01-6a46546b91d8",
+    "__version": 1,
     "Flags": 0,
     "Name": "bear trap",
+    "Position": "0,0,0",
+    "Rotation": "0,0,0,1",
+    "Scale": "1,1,1",
     "Tags": "trap",
     "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "NetworkOrphaned": 0,
+    "OwnerTransfer": 1,
     "Components": [
       {
         "__type": "CryptidHunt.BearTrap",
         "__guid": "e3e5e35c-8f88-49fc-af04-6d06218a9380",
+        "__enabled": true,
         "Amount": 1,
         "Description": "Also works on bear-like animals.",
+        "DropSound": "sounds/items/drops/beartrap_drop.vsnd",
         "Icon": "ui/icons/beartrapi.png",
         "InteractDescription": "Take Bear Trap",
         "Locked": false,
@@ -40,10 +50,13 @@
       {
         "__type": "Sandbox.ModelRenderer",
         "__guid": "2c2278b0-b1d6-4963-b419-b7db96781d2e",
+        "__enabled": true,
         "BodyGroups": 18446744073709551615,
         "CreateAttachments": false,
+        "LodOverride": null,
         "MaterialGroup": null,
         "MaterialOverride": null,
+        "Materials": null,
         "Model": "models/items/beartrap.vmdl",
         "OnComponentDestroy": null,
         "OnComponentDisabled": null,
@@ -63,7 +76,9 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "ce093f5e-809b-4cdc-adc3-4c995114e1b8",
+        "__enabled": true,
         "Center": "0.504631,0.5901852,1.856133",
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": false,
         "OnComponentDestroy": null,
@@ -76,6 +91,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Scale": "35.02894,49.32107,3.906743",
         "Static": false,
         "Surface": null,
@@ -84,7 +100,9 @@
       {
         "__type": "Sandbox.BoxCollider",
         "__guid": "3f1e3dcc-7d97-4dc1-8d85-355d8b76b623",
+        "__enabled": true,
         "Center": "0,0,20.24",
+        "Elasticity": null,
         "Friction": null,
         "IsTrigger": true,
         "OnComponentDestroy": null,
@@ -97,6 +115,7 @@
         "OnObjectTriggerExit": null,
         "OnTriggerEnter": null,
         "OnTriggerExit": null,
+        "RollingResistance": null,
         "Scale": "70,70,9.765",
         "Static": false,
         "Surface": null,
@@ -104,7 +123,6 @@
       }
     ],
     "Children": [],
-    "__variables": [],
     "__properties": {
       "NetworkInterpolation": true,
       "TimeScale": 1,
@@ -122,13 +140,14 @@
         "ExcludedBodies": "",
         "IncludedBodies": ""
       }
-    }
+    },
+    "__variables": []
   },
+  "ResourceVersion": 2,
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
   "DontBreakAsTemplate": false,
-  "ResourceVersion": 1,
   "__references": [],
-  "__version": 1
+  "__version": 2
 }

@@ -1,7 +1,4 @@
-﻿using Sandbox.UI;
-using System.Text.Json.Serialization;
-
-namespace CryptidHunt;
+﻿namespace CryptidHunt;
 
 public partial class Item : Interactable
 {
@@ -48,6 +45,10 @@ public partial class Item : Interactable
 	[Property]
 	[Category( "Other" )]
 	public Rotation ViewModelRotation { get; set; }
+
+	[Property]
+	[Category( "Other" )]
+	public SoundFile DropSound { get; set; }
 
 	public override void Interact( Player player )
 	{

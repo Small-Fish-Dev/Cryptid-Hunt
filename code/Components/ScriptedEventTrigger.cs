@@ -2,11 +2,20 @@
 
 public partial class ScriptedEventTrigger : Component, Component.ITriggerListener
 {
+	public class PolewikTarget
+	{
+		public GameObject SpawnPoint { get; set; }
+		public GameObject CameraTarget { get; set; }
+	}
+
 	/// <summary>
 	/// The position and rotation the camera will move to
 	/// </summary>
 	[Property]
 	public GameObject TargetTransform { get; set; }
+
+	[Property]
+	public PolewikTarget[] PolewikSpawnPoints { get; set; } = [];
 
 	[Property]
 	public Curve Transition { get; set; }
@@ -41,9 +50,22 @@ public partial class ScriptedEventTrigger : Component, Component.ITriggerListene
 		_startRotation = player.Camera.WorldRotation;
 		player.LockInputs = LockInputs;
 
+		var farthestSpawnPoint = PolewikSpawnPoints.Aggregate( ( i1, i2 ) =>
+			i1.SpawnPoint.WorldPosition.DistanceSquared( player.WorldPosition ) > i2.SpawnPoint.WorldPosition.DistanceSquared( player.WorldPosition ) ? i1 : i2 );
+		if ( farthestSpawnPoint.CameraTarget.IsValid() )
+		{
+			TargetTransform = farthestSpawnPoint.CameraTarget;
+		}
+
 		var polewick = Scene.Components.Get<Polewik>( FindMode.EverythingInSelfAndDescendants );
 		if ( polewick.IsValid() )
 		{
+			if ( farthestSpawnPoint.SpawnPoint.IsValid() )
+			{
+				polewick.WorldPosition = farthestSpawnPoint.SpawnPoint.WorldPosition;
+				polewick.WorldRotation = farthestSpawnPoint.SpawnPoint.WorldRotation;
+			}
+
 			polewick.GameObject.Enabled = true;
 			polewick.CurrentState = PolewikState.Yell;
 		}
