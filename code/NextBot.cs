@@ -22,13 +22,19 @@ public sealed class NextBot : Component
 	TimeUntil _nextSound = 0f;
 	protected override void OnFixedUpdate()
 	{
+		if ( !Target.IsValid() || !Agent.IsValid() )
+			return;
 		var distance = WorldPosition.Distance( Target.WorldPosition );
-		if ( Computer.IsValid() && Computer.Started )
+		if ( Computer.IsValid() && Computer.Started)
 		{
 			Agent.MoveTo( Target.WorldPosition );
 
 			if ( distance <= 70f )
 				Target.Die();
+
+			var speed = MathX.Remap( distance, 500f, 3000f, 400f, 2000f );
+			Agent.MaxSpeed = speed;
+			Agent.Acceleration = speed * 4f;
 		}
 
 		if ( _nextSound && Computer.Playing )
